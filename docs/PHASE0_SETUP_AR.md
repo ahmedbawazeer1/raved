@@ -6,16 +6,17 @@
 3. بجانب مستودع `raved` اضغط **Import**. (إن لم يظهر: **Adjust GitHub App Permissions** واسمح لـ Vercel بالوصول إلى `raved`).
 4. لا تغيّر أي إعداد، واضغط **Deploy**. بعد دقيقتين يظهر رابط مثل `raved-xxxx.vercel.app`.
 
-## 2. نسخ مفاتيح Supabase
+## 2. ربط Supabase بـ Vercel تلقائياً (بلا نسخ مفاتيح)
 1. ادخل [supabase.com/dashboard](https://supabase.com/dashboard) وافتح مشروع `raved`.
-2. من القائمة الجانبية: **Project Settings** (رمز الترس) ثم **Data API**: انسخ **Project URL**.
-3. ثم **API Keys**:
-   - انسخ **Publishable key** (يبدأ بـ `sb_publishable_`). إن لم تجده، انسخ **anon public** من تبويب Legacy.
-   - اضغط **Reveal** بجانب **Secret key** (يبدأ بـ `sb_secret_`) وانسخه. إن لم تجده، انسخ **service_role** من تبويب Legacy. **هذا المفتاح سري جداً.**
+2. من القائمة الجانبية: **Project Settings** (رمز الترس) ← **Integrations**.
+3. في قسم **Vercel Integration** اضغط **Install Vercel Integration** (أو **Connect**)، ووافق في النافذة التي تفتح.
+4. اختر مشروع Vercel `raved` ثم **Connect project**. Supabase يضع المفاتيح في Vercel بنفسه.
+5. ارجع إلى Vercel ← مشروع `raved` ← تبويب **Deployments** ← اضغط **⋯** بجانب آخر نشر ← **Redeploy**.
 
-## 3. إضافة المفاتيح في Vercel
-1. في Vercel افتح مشروع `raved` ← **Settings** ← **Environment Variables**.
-2. أضف ثلاثة متغيرات، واترك كل البيئات مختارة:
+### طريقة بديلة يدوية (فقط إن لم تنجح الطريقة السابقة)
+1. في Supabase: **Project Settings** ← **Data API**: انسخ **Project URL**.
+2. ثم **API Keys**: انسخ **Publishable key**، واضغط **Reveal** بجانب **Secret key** وانسخه. **هذا المفتاح سري جداً.**
+3. في Vercel ← مشروع `raved` ← **Settings** ← **Environment Variables**، أضف:
 
 | Key | Value |
 | --- | --- |
@@ -23,7 +24,7 @@
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Publishable key |
 | `SUPABASE_SECRET_KEY` | Secret key |
 
-3. اضغط **Save**، ثم من تبويب **Deployments** اضغط **⋯** بجانب آخر نشر ← **Redeploy**.
+4. **Save** ثم **Redeploy** كما في الخطوة 5 أعلاه.
 
 > لا تلصق هذه المفاتيح في أي محادثة أو ملف في GitHub.
 
