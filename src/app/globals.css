@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+/* Raved design tokens (see CLAUDE.md → UI rules). Light theme only. */
+@theme {
+  --color-background: #f5f7f6;
+  --color-foreground: #12201d;
+  --color-card: #ffffff;
+  --color-card-foreground: #12201d;
+
+  --color-primary: #0e6e5c;
+  --color-primary-hover: #0a5446;
+  --color-primary-tint: #e3f2ee;
+  --color-primary-foreground: #ffffff;
+
+  --color-accent: #f5a524;
+  --color-accent-hover: #e0951c;
+  --color-accent-foreground: #12201d;
+
+  --color-muted: #eef2f1;
+  --color-muted-foreground: #4b5b57;
+  --color-subtle: #34433f;
+
+  --color-border: #e2e8e6;
+  --color-input: #cfd8d5;
+  --color-ring: #0e6e5c;
+
+  --color-ai: #6941c6;
+  --color-ai-tint: #f4ebff;
+  --color-success: #087443;
+  --color-success-tint: #e3f6ec;
+  --color-warning: #8a5a00;
+  --color-warning-tint: #fff4d6;
+  --color-destructive: #b42318;
+  --color-destructive-tint: #fee4e2;
+  --color-info: #1849a9;
+  --color-info-tint: #eff4ff;
+
+  --font-sans: var(--font-arabic), system-ui, sans-serif;
+  --font-en: var(--font-inter), system-ui, sans-serif;
+
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--color-primary);
+  }
+
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  summary {
+    cursor: pointer;
+  }
+}
