@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — اختبار أساسيات CSS</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:12px;font:600 16px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.muted{color:#4B5B57}
+.mono{font-family:Inter,system-ui,sans-serif;font-weight:600}
+.opt{display:flex;align-items:center;gap:14px;min-height:60px;padding:12px 18px;border-radius:14px;cursor:pointer;font:500 16px 'IBM Plex Sans Arabic',sans-serif;text-align:right;width:100%;color:#12201D}
+.key{width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+</style>
+</helmet>
+<div style="width:100%;min-height:900px;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E2E8E6;min-height:68px;padding:10px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <a href="Curriculum.dc.html" class="btn btn-s" style="min-height:44px;padding:0 14px">إنهاء لاحقاً</a>
+    <div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:6px">
+      <p style="font-weight:700">اختبار الوحدة 5: At the shops</p>
+      <div style="display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:4px;max-width:420px" aria-label="السؤال 4 من 10">
+        <span style="height:6px;border-radius:99px;background:#0E6E5C"></span><span style="height:6px;border-radius:99px;background:#0E6E5C"></span><span style="height:6px;border-radius:99px;background:#0E6E5C"></span><span style="height:6px;border-radius:99px;background:#F5A524"></span><span style="height:6px;border-radius:99px;background:#E2E8E6"></span><span style="height:6px;border-radius:99px;background:#E2E8E6"></span><span style="height:6px;border-radius:99px;background:#E2E8E6"></span><span style="height:6px;border-radius:99px;background:#E2E8E6"></span><span style="height:6px;border-radius:99px;background:#E2E8E6"></span><span style="height:6px;border-radius:99px;background:#E2E8E6"></span>
+      </div>
+    </div>
+    <span style="display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>08:42</span>
+  </header>
+  <main style="width:100%;max-width:760px;margin:0 auto;padding:40px 24px 64px;display:flex;flex-direction:column;gap:24px">
+    <p class="muted" style="font-size:14px;font-weight:600">السؤال 4 من 10</p>
+    <h1 style="font-size:26px;font-weight:700;line-height:1.6">اختر الكلمة الصحيحة: <span dir="ltr" style="unicode-bidi:isolate">How ___ apples do you need?</span></h1>
+    <div role="radiogroup" aria-label="الخيارات" style="display:flex;flex-direction:column;gap:12px">
+      <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+        <button class="opt" type="button" role="radio" aria-checked="{{ o.checked }}" onClick="{{ o.pick }}" style="{{ o.style }}"><span class="key" style="{{ o.keyStyle }}">{{ o.key }}</span><span class="mono" dir="ltr">{{ o.text }}</span></button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ showRight }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:18px;border-radius:14px;background:#E3F6EC;display:flex;gap:12px;align-items:flex-start" role="status">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#087443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>
+        <div><p style="font-weight:700;color:#087443">إجابة صحيحة</p><p style="font-size:15px;line-height:1.8;margin-top:4px">apples اسم معدود بالجمع، لذلك نستخدم How many.</p></div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ showWrong }}" hint-placeholder-val="{{ false }}">
+      <div style="padding:18px;border-radius:14px;background:#FEE4E2;display:flex;gap:12px;align-items:flex-start" role="status">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#B42318" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9 9l6 6M15 9l-6 6"></path></svg>
+        <div><p style="font-weight:700;color:#B42318">ليست الإجابة الصحيحة</p><p style="font-size:15px;line-height:1.8;margin-top:4px">هل التفاح يُعدّ؟ راجع جدول درس How much / How many ثم جرّب مرة أخرى.</p></div>
+      </div>
+    </sc-if>
+    <div style="display:flex;justify-content:space-between;gap:12px">
+      <button class="btn btn-s" type="button">تخطَّ السؤال</button>
+      <button class="btn btn-p" type="button" onClick="{{ check }}" style="{{ checkStyle }}">{{ checkLabel }}</button>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: 'b', checked: false };
+  }
+  renderVals() {
+    const picked = this.state.picked;
+    const checked = this.state.checked;
+    const raw = [
+      { id: 'a', key: 'أ', text: 'much' },
+      { id: 'b', key: 'ب', text: 'many' },
+      { id: 'c', key: 'ج', text: 'a lot' },
+      { id: 'd', key: 'د', text: 'any' }
+    ];
+    const options = raw.map((o) => {
+      const on = picked === o.id;
+      let style = 'background:#fff;border:1px solid #CFD8D5';
+      let keyStyle = 'background:#EEF2F1;color:#34433F';
+      if (on && !checked) { style = 'background:#E3F2EE;border:2px solid #0E6E5C'; keyStyle = 'background:#0E6E5C;color:#fff'; }
+      if (checked && o.id === 'b') { style = 'background:#E3F6EC;border:2px solid #087443'; keyStyle = 'background:#087443;color:#fff'; }
+      if (checked && on && o.id !== 'b') { style = 'background:#FEE4E2;border:2px solid #B42318'; keyStyle = 'background:#B42318;color:#fff'; }
+      return { ...o, checked: on ? 'true' : 'false', style, keyStyle, pick: () => this.setState({ picked: o.id, checked: false }) };
+    });
+    return {
+      options,
+      showRight: checked && picked === 'b',
+      showWrong: checked && picked !== 'b',
+      checkLabel: checked ? 'السؤال التالي' : 'تحقق من الإجابة',
+      checkStyle: picked ? '' : 'opacity:.45',
+      check: () => this.setState({ checked: !checked ? true : false })
+    };
+  }
+}
+</script>
+</body>
+</html>

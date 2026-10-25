@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — تسجيل الدخول على الموبايل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#fff;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border-radius:12px;font:600 16px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.muted{color:#4B5B57}
+.label{font-size:14px;font-weight:600;color:#2B3A36}
+.input{width:100%;height:52px;border:1px solid #CFD8D5;border-radius:12px;padding:0 14px;font:400 16px 'IBM Plex Sans Arabic',sans-serif;color:#12201D;background:#fff}
+</style>
+</helmet>
+<div style="width:390px;height:844px;overflow:hidden;background:#fff;display:flex;flex-direction:column">
+  <div style="background:#0E6E5C;height:240px;display:flex;align-items:center;justify-content:center;border-end-start-radius:32px;border-end-end-radius:32px;flex:none">
+    <img src="assets/raved-logo-green-white.svg" alt="شعار رفد" style="height:120px;width:auto">
+  </div>
+  <main style="padding:32px 20px;display:flex;flex-direction:column;gap:24px;flex:1">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <h1 style="font-size:26px;font-weight:700">أهلاً بعودتك</h1>
+      <p class="muted" style="font-size:15px">سجّل دخولك لتكمل من حيث توقفت.</p>
+    </div>
+    <form style="display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <label class="label" for="em">البريد الإلكتروني</label>
+        <input class="input" id="em" type="email" dir="ltr" style="text-align:right" placeholder="name@example.com" autocomplete="email">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <label class="label" for="pw">كلمة المرور</label>
+        <input class="input" id="pw" type="password" autocomplete="current-password">
+        <a href="ForgotM.dc.html" style="font-size:14px;font-weight:600;align-self:flex-start;min-height:32px;display:inline-flex;align-items:center">نسيت كلمة المرور؟</a>
+      </div>
+      <button class="btn btn-p" type="button">تسجيل الدخول</button>
+    </form>
+    <p class="muted" style="font-size:15px;text-align:center;margin-top:auto">ليس لديك حساب؟ <a href="SignupM.dc.html" style="font-weight:600">أنشئ حساباً</a></p>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raved.app/schema/unit.schema.json",
+  "title": "Raved unit package",
+  "type": "object",
+  "required": [
+    "path",
+    "code",
+    "version",
+    "level",
+    "position",
+    "title",
+    "topic",
+    "grammar_point",
+    "can_do",
+    "vocab",
+    "lessons",
+    "quiz"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "path": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*$",
+      "description": "path slug, e.g. english"
+    },
+    "code": {
+      "type": "string",
+      "pattern": "^[A-Z0-9]+-[0-9]{2}$"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "level": {
+      "type": "string",
+      "description": "level code of the path, e.g. A1, A2, B1, B2, IELTS, TOEFL, DET"
+    },
+    "position": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title": {
+      "type": "string",
+      "minLength": 2
+    },
+    "topic": {
+      "type": "string"
+    },
+    "grammar_point": {
+      "type": "string"
+    },
+    "can_do": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 4,
+      "description": "Arabic CEFR can-do statements"
+    },
+    "vocab": {
+      "type": "array",
+      "minItems": 8,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "word",
+          "part_of_speech",
+          "meaning_ar",
+          "example_en"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "word": {
+            "type": "string"
+          },
+          "ipa": {
+            "type": "string"
+          },
+          "part_of_speech": {
+            "enum": [
+              "noun",
+              "verb",
+              "adjective",
+              "adverb",
+              "phrase",
+              "other"
+            ]
+          },
+          "meaning_ar": {
+            "type": "string"
+          },
+          "example_en": {
+            "type": "string"
+          },
+          "example_ar": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lessons": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "position",
+          "skill",
+          "title",
+          "est_minutes",
+          "blocks"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "position": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "skill": {
+            "enum": [
+              "vocab",
+              "grammar",
+              "listening",
+              "reading",
+              "speaking",
+              "writing",
+              "review"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "est_minutes": {
+            "type": "integer",
+            "minimum": 3,
+            "maximum": 60
+          },
+          "blocks": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "$ref": "#/$defs/block"
+            }
+          },
+          "speaking_task": {
+            "$ref": "#/$defs/speakingTask"
+          },
+          "writing_task": {
+            "$ref": "#/$defs/writingTask"
+          }
+        }
+      }
+    },
+    "quiz": {
+      "type": "object",
+      "required": [
+        "questions"
+      ],
+      "properties": {
+        "pass_percent": {
+          "type": "integer",
+          "default": 70
+        },
+        "questions": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "$ref": "#/$defs/question"
+          }
+        }
+      }
+    },
+    "context_note": {
+      "type": "string",
+      "description": "optional note on local (Yemeni) context used in the unit"
+    }
+  },
+  "$defs": {
+    "block": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "text",
+            "video",
+            "reading",
+            "audio",
+            "table",
+            "exercise"
+          ]
+        },
+        "markdown_ar": {
+          "type": "string",
+          "description": "for type=text"
+        },
+        "youtube_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{11}$"
+        },
+        "video_title": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "channel_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "duration_sec": {
+          "type": "integer"
+        },
+        "start_sec": {
+          "type": "integer"
+        },
+        "end_sec": {
+          "type": "integer"
+        },
+        "needs_check": {
+          "type": "boolean"
+        },
+        "text_en": {
+          "type": "string",
+          "description": "for type=reading or audio (read by TTS)"
+        },
+        "word_count": {
+          "type": "integer"
+        },
+        "headers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rows": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "exercise": {
+          "$ref": "#/$defs/question"
+        },
+        "approx_size_mb": {
+          "type": "number",
+          "description": "for video blocks: approximate data cost shown to the student"
+        },
+        "optional": {
+          "type": "boolean",
+          "description": "true for video blocks: lesson must be complete without them"
+        }
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "kind",
+        "prompt",
+        "answer",
+        "explanation_ar"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "skill": {
+          "enum": [
+            "vocab",
+            "grammar",
+            "listening",
+            "reading"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "mcq",
+            "fill_blank",
+            "true_false",
+            "order_words"
+          ]
+        },
+        "prompt": {
+          "type": "string"
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 2,
+          "maxItems": 5
+        },
+        "answer": {
+          "description": "index for mcq/true_false, string for fill_blank, array for order_words"
+        },
+        "explanation_ar": {
+          "type": "string"
+        }
+      }
+    },
+    "speakingTask": {
+      "type": "object",
+      "required": [
+        "prompt_en",
+        "prep_seconds",
+        "max_seconds"
+      ],
+      "properties": {
+        "prompt_en": {
+          "type": "string"
+        },
+        "helpful_phrases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "prep_seconds": {
+          "type": "integer"
+        },
+        "max_seconds": {
+          "type": "integer"
+        },
+        "rubric_focus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "writingTask": {
+      "type": "object",
+      "required": [
+        "prompt_en",
+        "min_words",
+        "max_words"
+      ],
+      "properties": {
+        "prompt_en": {
+          "type": "string"
+        },
+        "min_words": {
+          "type": "integer"
+        },
+        "max_words": {
+          "type": "integer"
+        },
+        "rubric_focus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

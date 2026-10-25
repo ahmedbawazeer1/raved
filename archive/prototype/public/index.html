@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة رفد</title>
+    
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- React Quill CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/react-quill@2.0.0/dist/quill.snow.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Tajawal', 'sans-serif'],
+            },
+            colors: {
+              primary: {
+                light: '#4B7BE5',
+                DEFAULT: '#34568B',
+                dark: '#2A446E',
+              },
+              secondary: '#FFC107',
+            },
+            animation: {
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'pulse-medium': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) 0.2s infinite',
+              'pulse-slow': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) 0.4s infinite',
+            }
+          }
+        }
+      }
+    </script>
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.3",
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.22.0",
+        "react-quill": "https://aistudiocdn.com/react-quill@^2.0.0",
+        "react-select": "https://aistudiocdn.com/react-select@^5.8.0",
+        "@dnd-kit/core": "https://aistudiocdn.com/@dnd-kit/core@^6.1.0",
+        "@dnd-kit/sortable": "https://aistudiocdn.com/@dnd-kit/sortable@^8.0.0"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="../src/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — اختبار تحديد المستوى</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:12px;font:600 16px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.muted{color:#4B5B57}
+.en{font-family:'Inter',system-ui,sans-serif;direction:ltr;unicode-bidi:isolate}
+.opt{display:flex;align-items:center;gap:14px;min-height:58px;padding:12px 18px;border-radius:14px;border:1px solid #CFD8D5;background:#fff;font:500 17px 'Inter',sans-serif;cursor:pointer;width:100%;color:#12201D;direction:ltr;text-align:left}
+.k{width:30px;height:30px;border-radius:9px;background:#EEF2F1;color:#34433F;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.sk{display:flex;align-items:center;gap:8px;font-size:14px;padding:8px 12px;border-radius:10px}
+</style>
+</helmet>
+<div style="width:100%;min-height:950px;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E2E8E6;min-height:68px;padding:10px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <img src="assets/raved-logo-green.svg" alt="شعار رفد" style="height:44px;width:auto">
+    <div style="flex:1;min-width:220px;display:flex;flex-direction:column;gap:6px">
+      <p style="font-weight:700">اختبار تحديد المستوى</p>
+      <div style="height:6px;border-radius:99px;background:#E2E8E6;max-width:420px;overflow:hidden"><span style="display:block;height:100%;width:55%;background:#0E6E5C"></span></div>
+    </div>
+    <span class="muted" style="font-size:14px">نحو 9 دقائق متبقية</span>
+  </header>
+  <div style="display:flex;flex-wrap:wrap;gap:24px;padding:32px 24px;max-width:1200px;width:100%;margin:0 auto;align-items:flex-start">
+    <main class="card" style="flex:999 1 520px;min-width:0;padding:32px;display:flex;flex-direction:column;gap:22px">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:999px;background:#EFF4FF;color:#1849A9;font-size:13px;font-weight:600">الاستماع · السؤال 18</span>
+        <span class="muted" style="font-size:13px">استمع للمقطع مرتين كحد أقصى</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px;padding:18px;border-radius:14px;background:#F5F7F6">
+        <button aria-label="تشغيل المقطع الصوتي" style="width:56px;height:56px;border-radius:999px;border:0;background:#0E6E5C;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button>
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+          <div style="height:6px;border-radius:99px;background:#CFD8D5;overflow:hidden"><span style="display:block;height:100%;width:0%;background:#0E6E5C"></span></div>
+          <div style="display:flex;justify-content:space-between" class="muted"><span style="font-size:12px">0:00</span><span style="font-size:12px">0:24</span></div>
+        </div>
+        <span class="muted" style="font-size:13px">مرتان متبقيتان</span>
+      </div>
+      <h1 class="en" style="font-size:24px;font-weight:600;line-height:1.5;text-align:left">Why is the woman calling the store?</h1>
+      <div role="radiogroup" aria-label="الخيارات" style="display:flex;flex-direction:column;gap:12px">
+        <button class="opt" role="radio" aria-checked="false"><span class="k">A</span>To ask about opening hours</button>
+        <button class="opt" role="radio" aria-checked="true" style="border:2px solid #0E6E5C;background:#E3F2EE"><span class="k" style="background:#0E6E5C;color:#fff">B</span>To return a jacket that is too small</button>
+        <button class="opt" role="radio" aria-checked="false"><span class="k">C</span>To order a new jacket online</button>
+        <button class="opt" role="radio" aria-checked="false"><span class="k">D</span>To complain about the price</button>
+      </div>
+      <div style="display:flex;justify-content:space-between;gap:12px">
+        <button class="btn btn-s" type="button">لا أعرف</button>
+        <button class="btn btn-p" type="button">التالي</button>
+      </div>
+    </main>
+    <aside style="flex:1 1 280px;max-width:340px;display:flex;flex-direction:column;gap:16px" aria-label="أقسام الاختبار">
+      <section class="card" style="padding:20px;display:flex;flex-direction:column;gap:6px">
+        <h2 style="font-size:16px;font-weight:700;margin-bottom:6px">الأقسام</h2>
+        <div class="sk" style="background:#E3F6EC;color:#087443"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg>المفردات</div>
+        <div class="sk" style="background:#E3F6EC;color:#087443"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg>القواعد</div>
+        <div class="sk" style="background:#E3F6EC;color:#087443"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg>القراءة</div>
+        <div class="sk" style="background:#0E6E5C;color:#fff;font-weight:600"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>الاستماع</div>
+        <div class="sk muted">جملة مكتوبة وجملة منطوقة (اختياري)</div>
+      </section>
+      <section style="padding:18px;border-radius:16px;background:#FFF4D6;display:flex;flex-direction:column;gap:6px">
+        <p style="font-weight:700;color:#8A5A00">لا يوجد نجاح أو رسوب</p>
+        <p style="font-size:14px;line-height:1.8">الأسئلة تصعب أو تسهل حسب إجاباتك، والهدف أن نعرف من أين تبدأ. إذا لم تعرف الإجابة اضغط "لا أعرف" بدل التخمين.</p>
+      </section>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":950}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

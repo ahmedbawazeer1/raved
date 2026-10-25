@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — المساعد الذكي على الموبايل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;font:600 15px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-a{background:#F5A524;color:#12201D}.btn-a:hover{background:#E0951C;color:#12201D}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.btn-d{background:#fff;color:#B42318;border:1px solid #F4C7C3}
+.muted{color:#4B5B57}
+.en{font-family:'Inter',system-ui,sans-serif;direction:ltr;unicode-bidi:isolate}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.c-ok{background:#E3F6EC;color:#087443}.c-warn{background:#FFF4D6;color:#8A5A00}.c-bad{background:#FEE4E2;color:#B42318}.c-pri{background:#E3F2EE;color:#0A5446}.c-mut{background:#EEF2F1;color:#34433F}.c-ai{background:#F4EBFF;color:#6941C6}.c-info{background:#EFF4FF;color:#1849A9}
+.bar{height:8px;border-radius:99px;background:#E2E8E6;overflow:hidden}
+.bar span{display:block;height:100%;background:#0E6E5C;border-radius:99px}
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #EEF2F1;font-size:14px}
+.row:last-child{border-bottom:0}
+.label{font-weight:600;font-size:14px}
+.input{width:100%;min-height:48px;padding:0 14px;border:1px solid #CFD8D5;border-radius:12px;background:#fff;font:400 15px 'IBM Plex Sans Arabic',sans-serif;color:#12201D}
+.field{display:flex;flex-direction:column;gap:8px}
+.opt{position:relative;display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 14px;border:1px solid #CFD8D5;border-radius:12px;background:#fff;font-weight:500;font-size:15px}
+.opt.on{border:2px solid #0E6E5C;background:#E3F2EE}
+.dot{width:20px;height:20px;border-radius:999px;border:2px solid #9AA8A4;flex:none}
+.opt.on .dot{border:6px solid #0E6E5C}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{text-align:start;font-weight:600;color:#4B5B57;font-size:13px;padding:10px 12px;border-bottom:1px solid #E2E8E6}
+.tbl td{padding:12px;border-bottom:1px solid #EEF2F1;vertical-align:middle}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;border-radius:12px;color:#34433F;text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{background:#F5F7F6;color:#12201D}
+.nav a.on{background:#E3F2EE;color:#0A5446;font-weight:600}
+.nav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+.anav{display:flex;flex-direction:column;gap:2px}
+.anav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;border-radius:12px;color:#C9D4D1;text-decoration:none;font-weight:500;font-size:15px}
+.anav a:hover{background:#1C2E2A;color:#fff}
+.anav a.on{background:#0E6E5C;color:#fff;font-weight:600}
+.anav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+.kpi{padding:18px;display:flex;flex-direction:column;gap:4px}
+.tabs{position:absolute;inset-inline:0;bottom:0;height:76px;background:#fff;border-top:1px solid #E2E8E6;display:flex;justify-content:space-around;padding-top:8px}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#4B5B57;text-decoration:none;min-width:60px;min-height:48px}
+.tab.on{color:#0E6E5C}
+.top{display:flex;align-items:center;gap:8px;padding:8px 8px 10px;background:#fff;border-bottom:1px solid #E2E8E6}
+.back{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#12201D;flex:none}
+.ai{border-color:#DCCBF7}
+.pill{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;background:#F4EBFF;color:#6941C6;font-size:12px;font-weight:600}
+.net{display:flex;align-items:center;gap:8px;padding:8px 14px;background:#FFF4D6;color:#5C3D00;font-size:13px;font-weight:500}
+.sw{width:44px;height:26px;border-radius:99px;background:#CFD8D5;position:relative;flex:none}
+.sw::after{content:'';position:absolute;top:3px;inset-inline-start:3px;width:20px;height:20px;border-radius:99px;background:#fff}
+.sw.on{background:#0E6E5C}.sw.on::after{inset-inline-start:21px}
+</style>
+</helmet>
+<div style="width:390px;height:844px;overflow:hidden;background:#F5F7F6;position:relative;display:flex;flex-direction:column;">
+<header class="top"><a class="back" href="LessonM.dc.html" aria-label="رجوع"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a><div style="flex:1;min-width:0"><p class="muted" style="font-size:12px">عن درس: استماع في السوق</p><p style="font-weight:700;font-size:16px">المساعد</p></div></header>
+<main style="padding:14px 16px;display:flex;flex-direction:column;gap:12px;flex:1">
+  <div style="align-self:flex-start;max-width:85%;padding:12px 14px;border-radius:14px 14px 14px 4px;background:#E3F2EE;font-size:14px;line-height:1.8">ما الفرق بين <span class="en">How much</span> و <span class="en">How many</span>؟</div>
+  <div style="align-self:flex-end;max-width:90%;padding:12px 14px;border-radius:14px 14px 4px 14px;background:#fff;border:1px solid #DCCBF7;font-size:14px;line-height:1.9"><span class="pill" style="margin-bottom:6px">المساعد</span><br>نستخدم <b class="en">How many</b> مع الأشياء التي تُعدّ مثل <span class="en">apples</span>، و <b class="en">How much</b> مع ما لا يُعدّ مثل <span class="en">water</span>، ومع السعر: <span class="en">How much is it?</span></div>
+  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="chip c-mut" style="height:32px">أعطني مثالاً آخر</span><span class="chip c-mut" style="height:32px">اشرح بطريقة أبسط</span></div>
+  <p class="muted" style="font-size:12px;margin-top:auto">12 سؤالاً متبقياً اليوم · يحتاج اتصالاً · يجيب عن الدرس فقط</p>
+</main>
+<footer style="padding:10px 12px 18px;background:#fff;border-top:1px solid #E2E8E6;display:flex;gap:8px"><input class="input" placeholder="اكتب سؤالك بالعربية" style="flex:1"><button class="btn btn-p" type="button" aria-label="إرسال">إرسال</button></footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

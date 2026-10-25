@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — الاختبار على الموبايل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 20px;border-radius:12px;font:600 16px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.muted{color:#4B5B57}
+.mono{font-family:Inter,system-ui,sans-serif;font-weight:600}
+.opt{display:flex;align-items:center;gap:12px;min-height:56px;padding:10px 14px;border-radius:14px;cursor:pointer;font:500 15px 'IBM Plex Sans Arabic',sans-serif;width:100%;color:#12201D;text-align:right}
+.key{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+</style>
+</helmet>
+<div style="width:390px;height:844px;overflow:hidden;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E2E8E6;padding:8px 8px 12px;display:flex;flex-direction:column;gap:8px;flex:none">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <a href="CurriculumM.dc.html" aria-label="إغلاق الاختبار" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#12201D"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg></a>
+      <p style="font-weight:700;font-size:15px">السؤال 4 من 10</p>
+      <span style="width:60px;font-weight:600;font-size:14px;display:flex;align-items:center;gap:4px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>08:42</span>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;padding:0 10px" aria-hidden="true">
+      <span style="height:5px;border-radius:99px;background:#0E6E5C"></span><span style="height:5px;border-radius:99px;background:#0E6E5C"></span><span style="height:5px;border-radius:99px;background:#0E6E5C"></span><span style="height:5px;border-radius:99px;background:#F5A524"></span><span style="height:5px;border-radius:99px;background:#E2E8E6"></span><span style="height:5px;border-radius:99px;background:#E2E8E6"></span><span style="height:5px;border-radius:99px;background:#E2E8E6"></span><span style="height:5px;border-radius:99px;background:#E2E8E6"></span><span style="height:5px;border-radius:99px;background:#E2E8E6"></span><span style="height:5px;border-radius:99px;background:#E2E8E6"></span>
+    </div>
+  </header>
+  <main style="padding:24px 16px;display:flex;flex-direction:column;gap:18px;flex:1">
+    <h1 style="font-size:20px;font-weight:700;line-height:1.7">اختر الكلمة الصحيحة: <span dir="ltr" style="unicode-bidi:isolate">How ___ apples do you need?</span></h1>
+    <div role="radiogroup" aria-label="الخيارات" style="display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ options }}" as="o" hint-placeholder-count="4">
+        <button class="opt" type="button" role="radio" aria-checked="{{ o.checked }}" onClick="{{ o.pick }}" style="{{ o.style }}"><span class="key" style="{{ o.keyStyle }}">{{ o.key }}</span><span class="mono" dir="ltr">{{ o.text }}</span></button>
+      </sc-for>
+    </div>
+    <sc-if value="{{ showRight }}" hint-placeholder-val="{{ false }}">
+      <div role="status" style="padding:14px;border-radius:14px;background:#E3F6EC"><p style="font-weight:700;color:#087443">إجابة صحيحة</p><p style="font-size:14px;line-height:1.8;margin-top:4px">apples معدودة، فنستخدم How many.</p></div>
+    </sc-if>
+    <sc-if value="{{ showWrong }}" hint-placeholder-val="{{ false }}">
+      <div role="status" style="padding:14px;border-radius:14px;background:#FEE4E2"><p style="font-weight:700;color:#B42318">ليست الإجابة الصحيحة</p><p style="font-size:14px;line-height:1.8;margin-top:4px">هل التفاح يُعدّ؟ جرّب مرة أخرى.</p></div>
+    </sc-if>
+  </main>
+  <footer style="padding:12px 16px 20px;background:#fff;border-top:1px solid #E2E8E6;flex:none">
+    <button class="btn btn-p" type="button" onClick="{{ check }}" style="width:100%">{{ checkLabel }}</button>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { picked: null, checked: false };
+  }
+  renderVals() {
+    const picked = this.state.picked;
+    const checked = this.state.checked;
+    const raw = [
+      { id: 'a', key: 'أ', text: 'much' },
+      { id: 'b', key: 'ب', text: 'many' },
+      { id: 'c', key: 'ج', text: 'a lot' },
+      { id: 'd', key: 'د', text: 'any' }
+    ];
+    const options = raw.map((o) => {
+      const on = picked === o.id;
+      let style = 'background:#fff;border:1px solid #CFD8D5';
+      let keyStyle = 'background:#EEF2F1;color:#34433F';
+      if (on && !checked) { style = 'background:#E3F2EE;border:2px solid #0E6E5C'; keyStyle = 'background:#0E6E5C;color:#fff'; }
+      if (checked && o.id === 'b') { style = 'background:#E3F6EC;border:2px solid #087443'; keyStyle = 'background:#087443;color:#fff'; }
+      if (checked && on && o.id !== 'b') { style = 'background:#FEE4E2;border:2px solid #B42318'; keyStyle = 'background:#B42318;color:#fff'; }
+      return { ...o, checked: on ? 'true' : 'false', style, keyStyle, pick: () => this.setState({ picked: o.id, checked: false }) };
+    });
+    return {
+      options,
+      showRight: checked && picked === 'b',
+      showWrong: checked && picked !== 'b',
+      checkLabel: checked ? 'السؤال التالي' : 'تحقق من الإجابة',
+      check: () => { if (picked) this.setState({ checked: !checked }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

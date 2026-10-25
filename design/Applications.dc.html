@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — طلبات الالتحاق</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;font:600 15px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.btn-d{background:#fff;color:#B42318;border:1px solid #FDA29B}
+.muted{color:#4B5B57}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.anav{display:flex;flex-direction:column;gap:2px}
+.anav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:12px;color:#C9D4D1;text-decoration:none;font-weight:500;font-size:15px}
+.anav a:hover{background:#1C2E2A;color:#fff}
+.anav a.on{background:#0E6E5C;color:#fff;font-weight:600}
+.badge{margin-inline-start:auto;min-width:24px;height:22px;padding:0 7px;border-radius:999px;background:#F5A524;color:#12201D;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+.row{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid #EEF2F1;text-decoration:none;color:#12201D}
+.row:hover{background:#F9FBFA;color:#12201D}
+.av{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:700;flex:none}
+.sel{height:44px;border:1px solid #CFD8D5;border-radius:12px;padding:0 12px;font:500 14px 'IBM Plex Sans Arabic',sans-serif;background:#fff;color:#12201D}
+.kv{display:flex;flex-direction:column;gap:2px}
+.anav{display:flex;flex-direction:column;gap:2px}.anav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+</style>
+</helmet>
+<div style="width:100%;min-height:1000px;display:flex;flex-wrap:wrap;background:#F5F7F6">
+  <aside style="flex:1 1 240px;max-width:260px;background:#12201D;padding:20px 14px;display:flex;flex-direction:column;gap:24px" aria-label="قائمة الإدارة">
+    <div style="display:flex;align-items:center;gap:10px;padding:0 8px"><img src="assets/raved-logo-green-white.svg" alt="شعار رفد" style="height:48px;width:auto"><span class="chip" style="background:#1C2E2A;color:#F5A524">الإدارة</span></div>
+    <nav class="anav" aria-label="تنقل الإدارة"><a href="AdminHome.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>الرئيسية</a><a class="on" aria-current="page" href="Applications.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h5l2 3h4l2-3h5"></path><path d="M5 5h14l2 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z"></path></svg>طلبات الالتحاق<span class="b">14</span></a><a href="AdminPaths.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"></path><path d="M9 4v14M15 6v14"></path></svg>المسارات</a><a href="ContentImport.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"></path><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path></svg>المحتوى<span class="b">6</span></a><a href="Students.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7"></path><path d="M18 14a6.5 6.5 0 0 1 3.5 6"></path></svg>الطلاب</a><a href="AIReview.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7 4.7 1.8-4.7 1.8L12 16l-1.8-4.7-4.7-1.8 4.7-1.8z"></path></svg>مراجعة الذكاء الاصطناعي</a><a href="Reports.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></svg>التقارير والبلاغات<span class="b">2</span></a><a href="AdminSettings.dc.html"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path></svg>الإعدادات</a></nav>
+  </aside>
+
+  <main style="flex:999 1 560px;min-width:0;padding:28px 32px 56px;display:flex;flex-direction:column;gap:20px">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+      <h1 style="font-size:28px;font-weight:700">طلبات الالتحاق</h1>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <label style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" for="f1">الحالة</label><select class="sel" id="f1"><option>قيد المراجعة (14)</option></select>
+        <label style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" for="f2">المسار</label><select class="sel" id="f2"><option>كل المسارات</option></select>
+        <label style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)" for="f3">المحافظة</label><select class="sel" id="f3"><option>كل المحافظات</option></select>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+      <section class="card" style="flex:1 1 320px;max-width:420px;overflow:hidden" aria-label="قائمة الطلبات">
+        <a class="row" href="Applications.dc.html" style="background:#E3F2EE;border-inline-start:4px solid #0E6E5C"><span class="av" style="width:40px;height:40px;background:#0E6E5C;color:#fff">م</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:15px">محمد أحمد علي</p><p class="muted" style="font-size:13px"><span dir="ltr">IELTS</span> · تعز</p></div><span class="muted" style="font-size:12px">منذ يومين</span></a>
+        <a class="row" href="Applications.dc.html"><span class="av" style="width:40px;height:40px;background:#EFF4FF;color:#1849A9">ف</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:15px">فاطمة حسن</p><p class="muted" style="font-size:13px"><span dir="ltr">TOEFL</span> · أمانة العاصمة</p></div><span class="muted" style="font-size:12px">منذ يوم</span></a>
+        <a class="row" href="Applications.dc.html"><span class="av" style="width:40px;height:40px;background:#FFF4D6;color:#8A5A00">ك</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:15px">كريم سامي</p><p class="muted" style="font-size:13px">تحليل البيانات · الإسكندرية</p></div><span class="chip" style="background:#FEE4E2;color:#B42318">بلا توصية</span></a>
+        <a class="row" href="Applications.dc.html"><span class="av" style="width:40px;height:40px;background:#F4EBFF;color:#6941C6">ل</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:15px">ليلى مصطفى</p><p class="muted" style="font-size:13px">لم يقرر · حضرموت</p></div><span class="muted" style="font-size:12px">منذ 5 ساعات</span></a>
+        <a class="row" href="Applications.dc.html" style="border-bottom:0"><span class="av" style="width:40px;height:40px;background:#EEF2F1;color:#34433F">ع</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:15px">عبدالرحمن طارق</p><p class="muted" style="font-size:13px"><span dir="ltr">IELTS</span> · عدن</p></div><span class="muted" style="font-size:12px">منذ ساعة</span></a>
+        <p class="muted" style="font-size:13px;padding:12px 16px;background:#F5F7F6">+ 9 طلبات أخرى</p>
+      </section>
+
+      <section class="card" style="flex:999 1 460px;min-width:0;padding:24px;display:flex;flex-direction:column;gap:20px" aria-label="تفاصيل الطلب">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+          <div style="display:flex;gap:14px;align-items:center"><span class="av" style="width:52px;height:52px;background:#0E6E5C;color:#fff;font-size:20px">م</span><div><h2 style="font-size:20px;font-weight:700">محمد أحمد علي</h2><p class="muted" style="font-size:14px">قدّم منذ يومين · البريد مؤكد</p></div></div>
+          <span class="chip" style="background:#FFF4D6;color:#8A5A00">قيد المراجعة</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;padding:16px;border-radius:12px;background:#F5F7F6">
+          <div class="kv"><span class="muted" style="font-size:12px">المسار المطلوب</span><span style="font-weight:600">تطوير الويب</span></div>
+          <div class="kv"><span class="muted" style="font-size:12px">الصف</span><span style="font-weight:600">الثاني الثانوي</span></div>
+          <div class="kv"><span class="muted" style="font-size:12px">المدرسة</span><span style="font-weight:600">[اسم المدرسة]</span></div>
+          <div class="kv"><span class="muted" style="font-size:12px">المحافظة</span><span style="font-weight:600">تعز · المظفر</span></div>
+          <div class="kv"><span class="muted" style="font-size:12px">العمر</span><span style="font-weight:600">16 سنة</span></div>
+          <div class="kv"><span class="muted" style="font-size:12px">موافقة ولي الأمر</span><span style="font-weight:600;color:#087443">نعم</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px"><p style="font-weight:600;font-size:14px">لماذا يريد هذا المسار</p><p style="font-size:15px;line-height:1.8">"أحب أصمم مواقع، وعايز أعمل موقع لمحل والدي."</p></div>
+        <div style="border:1px solid #E2E8E6;border-radius:12px;overflow:hidden">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#F5F7F6;border-bottom:1px solid #E2E8E6"><span style="font-weight:600;font-size:14px">توصية-أ.محمود.pdf</span><a href="Applications.dc.html" style="font-size:13px;min-height:36px;display:inline-flex;align-items:center">فتح في نافذة جديدة</a></div>
+          <div style="height:200px;background:#fff;display:flex;flex-direction:column;gap:10px;padding:20px 28px" aria-label="معاينة ملف التوصية">
+            <span style="height:10px;width:40%;background:#E2E8E6;border-radius:4px"></span><span style="height:8px;width:90%;background:#EEF2F1;border-radius:4px"></span><span style="height:8px;width:85%;background:#EEF2F1;border-radius:4px"></span><span style="height:8px;width:88%;background:#EEF2F1;border-radius:4px"></span><span style="height:8px;width:60%;background:#EEF2F1;border-radius:4px"></span>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;padding-top:8px;border-top:1px solid #EEF2F1">
+          <div style="display:flex;flex-direction:column;gap:6px;flex:1 1 200px"><label for="coh" style="font-size:13px;font-weight:600">إضافته إلى دفعة</label><select class="sel" id="coh"><option>الإنجليزي — [اسم الدفعة]</option></select></div>
+          <button class="btn btn-p" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg>قبول</button>
+          <button class="btn btn-s" type="button">طلب تعديل</button>
+          <button class="btn btn-d" type="button">رفض</button>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

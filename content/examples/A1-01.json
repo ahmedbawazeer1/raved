@@ -1,0 +1,233 @@
+{
+  "path": "english",
+  "code": "A1-01",
+  "version": 1,
+  "level": "A1",
+  "position": 1,
+  "title": "Hello!",
+  "topic": "التعارف في أول يوم دراسي في مدرسة بتعز",
+  "grammar_point": "verb to be (am / is / are)",
+  "can_do": [
+    "أعرّف نفسي باسمي وعمري ومدينتي",
+    "أحيّي شخصاً وأسأله عن اسمه"
+  ],
+  "vocab": [
+    {
+      "id": "A1-01-v1",
+      "word": "hello",
+      "ipa": "/həˈləʊ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "مرحباً",
+      "example_en": "Hello, I'm Youssef."
+    },
+    {
+      "id": "A1-01-v2",
+      "word": "name",
+      "ipa": "/neɪm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "اسم",
+      "example_en": "What's your name?"
+    },
+    {
+      "id": "A1-01-v3",
+      "word": "student",
+      "ipa": "/ˈstjuːdənt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "طالب",
+      "example_en": "I am a student."
+    },
+    {
+      "id": "A1-01-v4",
+      "word": "years old",
+      "part_of_speech": "phrase",
+      "meaning_ar": "من العمر (سنة)",
+      "example_en": "I'm fifteen years old."
+    },
+    {
+      "id": "A1-01-v5",
+      "word": "from",
+      "part_of_speech": "other",
+      "meaning_ar": "من",
+      "example_en": "I'm from Taiz."
+    },
+    {
+      "id": "A1-01-v6",
+      "word": "friend",
+      "ipa": "/frend/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صديق",
+      "example_en": "She is my friend."
+    },
+    {
+      "id": "A1-01-v7",
+      "word": "nice to meet you",
+      "part_of_speech": "phrase",
+      "meaning_ar": "تشرفت بمعرفتك",
+      "example_en": "Nice to meet you, Mona."
+    },
+    {
+      "id": "A1-01-v8",
+      "word": "class",
+      "ipa": "/klɑːs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "فصل",
+      "example_en": "We are in the same class."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-01-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "am / is / are",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في الإنجليزية نحتاج فعل **be** في جمل مثل «أنا طالب». نستخدم **am** مع I، و **is** مع he و she و it، و **are** مع you و we و they."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الضمير",
+            "الفعل",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "I",
+              "am",
+              "I am a student."
+            ],
+            [
+              "he / she / it",
+              "is",
+              "She is my friend."
+            ],
+            [
+              "you / we / they",
+              "are",
+              "We are in class 1."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e1",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "They ___ my friends.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": 2,
+            "explanation_ar": "مع they نستخدم are."
+          }
+        },
+        {
+          "type": "video",
+          "youtube_id": "AAAAAAAAAAA",
+          "video_title": "[to be found by Claude]",
+          "channel": "[channel]",
+          "channel_url": "https://www.youtube.com/",
+          "optional": true,
+          "approx_size_mb": 6,
+          "needs_check": true
+        }
+      ]
+    },
+    {
+      "id": "A1-01-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "عرّف نفسك",
+      "est_minutes": 10,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تخيل أنك في أول يوم دراسي. عرّف نفسك لزميل جديد."
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Introduce yourself to a new classmate: your name, age, and city.",
+        "helpful_phrases": [
+          "Hello, I'm…",
+          "I'm … years old.",
+          "I'm from…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 45,
+        "rubric_focus": [
+          "verb to be"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-01-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "I ___ from Aden.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "answer": 0,
+        "explanation_ar": "مع I نستخدم am."
+      },
+      {
+        "id": "A1-01-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "She ___ fifteen years old.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع she نستخدم is."
+      },
+      {
+        "id": "A1-01-q3",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "«تشرفت بمعرفتك» بالإنجليزية:",
+        "options": [
+          "See you",
+          "Nice to meet you",
+          "Good night"
+        ],
+        "answer": 1,
+        "explanation_ar": "Nice to meet you تقال عند أول لقاء."
+      },
+      {
+        "id": "A1-01-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "We ___ in the same class.",
+        "answer": "are",
+        "explanation_ar": "مع we نستخدم are."
+      },
+      {
+        "id": "A1-01-q5",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: name / your / what's",
+        "answer": [
+          "what's",
+          "your",
+          "name"
+        ],
+        "explanation_ar": "السؤال يبدأ بكلمة الاستفهام what."
+      }
+    ]
+  }
+}

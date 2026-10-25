@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — مراجعة مسودة المسار</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;font:600 15px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.btn-ai{background:#F4EBFF;color:#6941C6;border:1px solid #DCCBF7}
+.muted{color:#4B5B57}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.bar{height:6px;border-radius:99px;background:#E2E8E6;overflow:hidden}
+.bar span{display:block;height:100%;background:#0E6E5C;border-radius:99px}
+.tree a{display:flex;align-items:center;gap:10px;min-height:42px;padding:4px 12px;border-radius:10px;text-decoration:none;color:#12201D;font-size:14px}
+.tree a:hover{background:#F5F7F6;color:#12201D}
+.alt{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #E2E8E6;border-radius:12px}
+.score{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;flex:none}
+.q{padding:12px 14px;border-radius:12px;background:#F5F7F6;font-size:14px;line-height:1.8}
+</style>
+</helmet>
+<div style="width:100%;min-height:1200px;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#12201D;color:#fff;padding:12px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+    <a href="AdminHome.dc.html" aria-label="رجوع إلى لوحة الإدارة"><img src="../assets/raved-logo-green-white.svg" alt="رفد" style="height:40px;width:auto"></a>
+    <div style="flex:1;min-width:240px;display:flex;flex-direction:column;gap:6px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><p style="font-weight:700;font-size:17px">مراجعة: تحليل البيانات بلغة Python</p><span class="chip" style="background:#F4EBFF;color:#6941C6">مسودة من منشئ المسارات</span></div>
+      <div style="display:flex;align-items:center;gap:10px;max-width:420px"><div class="bar" style="flex:1;background:#2A3D38"><span style="width:43%;background:#F5A524"></span></div><span style="font-size:13px;color:#C9D4D1">اعتمدت 12 من 28 درساً</span></div>
+    </div>
+    <a class="btn btn-s" href="PathReview.dc.html" style="background:transparent;color:#fff;border-color:#3A4F4A">معاينة كطالب</a>
+    <button class="btn btn-p" type="button" disabled="" style="opacity:.5;cursor:not-allowed" aria-describedby="pubhint">نشر المسار</button>
+    <span id="pubhint" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">يتفعل بعد اعتماد كل الدروس</span>
+  </header>
+
+  <div style="display:flex;flex-wrap:wrap;gap:20px;padding:20px;align-items:flex-start">
+    <nav class="card tree" style="flex:1 1 250px;max-width:290px;padding:12px 8px" aria-label="هيكل المسار">
+      <p style="font-weight:700;font-size:14px;padding:6px 12px">المستوى 1: أساسيات Python</p>
+      <a href="PathReview.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#087443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>ما هي البرمجة؟</a>
+      <a href="PathReview.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#087443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg>تثبيت Python</a>
+      <a href="PathReview.dc.html" aria-current="page" style="background:#F4EBFF;font-weight:600;color:#3E2A7A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6941C6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4l2 2"></path></svg>المتغيرات وأنواع البيانات</a>
+      <a href="PathReview.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B42318" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5M12 16h.01"></path></svg>القوائم<span class="chip" style="background:#FEE4E2;color:#B42318;margin-inline-start:auto">إعادة توليد</span></a>
+      <a href="PathReview.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA8A4" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle></svg>الشروط</a>
+      <a href="PathReview.dc.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9AA8A4" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>مشروع المستوى 1</a>
+      <p style="font-weight:700;font-size:14px;padding:12px 12px 6px">المستوى 2: مكتبة Pandas</p>
+      <p class="muted" style="font-size:13px;padding:0 12px">10 دروس بانتظار المراجعة</p>
+      <p style="font-weight:700;font-size:14px;padding:12px 12px 6px">المستوى 3: الرسوم البيانية</p>
+      <p class="muted" style="font-size:13px;padding:0 12px">9 دروس بانتظار المراجعة</p>
+    </nav>
+
+    <main style="flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:16px">
+      <section class="card" style="padding:22px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+          <div><p class="muted" style="font-size:13px">المستوى 1 · الدرس 3</p><h1 style="font-size:22px;font-weight:700">المتغيرات وأنواع البيانات</h1></div>
+          <span class="chip" style="background:#FFF4D6;color:#8A5A00">بانتظار اعتمادك</span>
+        </div>
+        <p style="font-size:15px;line-height:1.8"><span style="font-weight:600">الهدف:</span> أن ينشئ الطالب متغيرات من 4 أنواع ويعرف متى يستخدم كل نوع.</p>
+        <div style="display:flex;gap:14px;align-items:center;padding:14px;border-radius:12px;border:2px solid #0E6E5C;background:#F9FBFA">
+          <div style="width:120px;aspect-ratio:16/9;border-radius:8px;background:#12201D;display:flex;align-items:center;justify-content:center;flex:none"><svg width="22" height="22" viewBox="0 0 24 24" fill="#F5A524" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></div>
+          <div style="flex:1;min-width:0"><p style="font-weight:600;font-size:15px">[عنوان الفيديو المختار]</p><p class="muted" style="font-size:13px">قناة [اسم القناة] · عربي · من 03:20 إلى 17:45</p></div>
+          <span class="score" style="background:#E3F6EC;color:#087443">88</span>
+        </div>
+        <details>
+          <summary style="cursor:pointer;font-size:14px;font-weight:600;color:#6941C6;min-height:36px;display:flex;align-items:center">لماذا اختاره الوكيل؟</summary>
+          <ul class="muted" style="margin:6px 0 0;padding-inline-start:20px;font-size:14px;line-height:1.9">
+            <li>يغطي الأنواع الأربعة المطلوبة بأمثلة عملية.</li>
+            <li>عربي بلهجة واضحة، ومدته مناسبة (14 دقيقة).</li>
+            <li>نشر في [سنة النشر]، والإصدار المستخدم من Python حديث.</li>
+          </ul>
+        </details>
+      </section>
+
+      <section class="card" style="padding:22px;display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;justify-content:space-between;align-items:center"><h2 style="font-size:17px;font-weight:700">الشرح المكتوب</h2><button class="btn btn-s" type="button" style="min-height:36px;padding:0 12px;font-size:13px">تعديل</button></div>
+        <p style="font-size:15px;line-height:1.9">المتغير صندوق له اسم نحفظ فيه قيمة. في Python لا نحتاج أن نحدد نوع الصندوق مسبقاً، فاللغة تعرفه من القيمة نفسها.</p>
+        <pre dir="ltr" style="margin:0;background:#12201D;color:#E3F2EE;padding:14px;border-radius:12px;font:14px/1.8 'JetBrains Mono',monospace;text-align:left">name = "Mona"      # str
+age = 16           # int
+height = 1.62      # float
+is_student = True  # bool</pre>
+      </section>
+
+      <section class="card" style="padding:22px;display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-size:17px;font-weight:700">أسئلة الاختبار القصير <span class="muted" style="font-size:13px;font-weight:400">· 3 أسئلة من محتوى الفيديو</span></h2>
+        <div class="q">1. ما نوع القيمة <span dir="ltr" style="font-family:'JetBrains Mono',monospace">16</span>؟ <span style="color:#087443;font-weight:600">← int</span></div>
+        <div class="q">2. أي متغير يحفظ قيمة صح أو خطأ؟ <span style="color:#087443;font-weight:600">← is_student</span></div>
+        <div class="q">3. هل يجب تحديد نوع المتغير قبل استخدامه في Python؟ <span style="color:#087443;font-weight:600">← لا</span></div>
+      </section>
+    </main>
+
+    <aside style="flex:1 1 260px;max-width:310px;display:flex;flex-direction:column;gap:16px" aria-label="قرار المراجعة">
+      <section class="card" style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <button class="btn btn-p" type="button" style="min-height:52px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg>اعتماد الدرس والتالي</button>
+        <label for="note" style="font-size:13px;font-weight:600;margin-top:6px">ملاحظة لإعادة التوليد</label>
+        <textarea id="note" rows="3" style="border:1px solid #CFD8D5;border-radius:12px;padding:10px 12px;font:400 14px 'IBM Plex Sans Arabic',sans-serif;resize:vertical" placeholder="مثال: أضف مثالاً عن درجات الطلاب"></textarea>
+        <button class="btn btn-ai" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.9-3M4 4v4h4M4 13a8 8 0 0 0 14.9 3M20 20v-4h-4"></path></svg>إعادة توليد هذا الدرس</button>
+      </section>
+      <section class="card" style="padding:18px;display:flex;flex-direction:column;gap:10px">
+        <h2 style="font-size:15px;font-weight:700">مصادر بديلة</h2>
+        <div class="alt"><span class="score" style="background:#E3F6EC;color:#087443">81</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:13px">[عنوان فيديو بديل]</p><p class="muted" style="font-size:12px">عربي · 11 د</p></div><button class="btn btn-s" type="button" style="min-height:36px;padding:0 10px;font-size:13px">استبدال</button></div>
+        <div class="alt"><span class="score" style="background:#FFF4D6;color:#8A5A00">74</span><div style="flex:1;min-width:0"><p style="font-weight:600;font-size:13px">[صفحة توثيق]</p><p class="muted" style="font-size:12px">إنجليزي · مقال</p></div><button class="btn btn-s" type="button" style="min-height:36px;padding:0 10px;font-size:13px">استبدال</button></div>
+        <button class="btn btn-s" type="button" style="font-size:13px">أضف رابطاً يدوياً</button>
+      </section>
+    </aside>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

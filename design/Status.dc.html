@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — حالة الطلب</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;font:600 15px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-a{background:#F5A524;color:#12201D}.btn-a:hover{background:#E0951C;color:#12201D}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.btn-d{background:#fff;color:#B42318;border:1px solid #F4C7C3}
+.muted{color:#4B5B57}
+.en{font-family:'Inter',system-ui,sans-serif;direction:ltr;unicode-bidi:isolate}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.c-ok{background:#E3F6EC;color:#087443}.c-warn{background:#FFF4D6;color:#8A5A00}.c-bad{background:#FEE4E2;color:#B42318}.c-pri{background:#E3F2EE;color:#0A5446}.c-mut{background:#EEF2F1;color:#34433F}.c-ai{background:#F4EBFF;color:#6941C6}.c-info{background:#EFF4FF;color:#1849A9}
+.bar{height:8px;border-radius:99px;background:#E2E8E6;overflow:hidden}
+.bar span{display:block;height:100%;background:#0E6E5C;border-radius:99px}
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #EEF2F1;font-size:14px}
+.row:last-child{border-bottom:0}
+.label{font-weight:600;font-size:14px}
+.input{width:100%;min-height:48px;padding:0 14px;border:1px solid #CFD8D5;border-radius:12px;background:#fff;font:400 15px 'IBM Plex Sans Arabic',sans-serif;color:#12201D}
+.field{display:flex;flex-direction:column;gap:8px}
+.opt{position:relative;display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 14px;border:1px solid #CFD8D5;border-radius:12px;background:#fff;font-weight:500;font-size:15px}
+.opt.on{border:2px solid #0E6E5C;background:#E3F2EE}
+.dot{width:20px;height:20px;border-radius:999px;border:2px solid #9AA8A4;flex:none}
+.opt.on .dot{border:6px solid #0E6E5C}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{text-align:start;font-weight:600;color:#4B5B57;font-size:13px;padding:10px 12px;border-bottom:1px solid #E2E8E6}
+.tbl td{padding:12px;border-bottom:1px solid #EEF2F1;vertical-align:middle}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;border-radius:12px;color:#34433F;text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{background:#F5F7F6;color:#12201D}
+.nav a.on{background:#E3F2EE;color:#0A5446;font-weight:600}
+.nav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+.anav{display:flex;flex-direction:column;gap:2px}
+.anav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;border-radius:12px;color:#C9D4D1;text-decoration:none;font-weight:500;font-size:15px}
+.anav a:hover{background:#1C2E2A;color:#fff}
+.anav a.on{background:#0E6E5C;color:#fff;font-weight:600}
+.anav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+.kpi{padding:18px;display:flex;flex-direction:column;gap:4px}
+.tabs{position:absolute;inset-inline:0;bottom:0;height:76px;background:#fff;border-top:1px solid #E2E8E6;display:flex;justify-content:space-around;padding-top:8px}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#4B5B57;text-decoration:none;min-width:60px;min-height:48px}
+.tab.on{color:#0E6E5C}
+.top{display:flex;align-items:center;gap:8px;padding:8px 8px 10px;background:#fff;border-bottom:1px solid #E2E8E6}
+.back{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#12201D;flex:none}
+.ai{border-color:#DCCBF7}
+.pill{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;background:#F4EBFF;color:#6941C6;font-size:12px;font-weight:600}
+.net{display:flex;align-items:center;gap:8px;padding:8px 14px;background:#FFF4D6;color:#5C3D00;font-size:13px;font-weight:500}
+.sw{width:44px;height:26px;border-radius:99px;background:#CFD8D5;position:relative;flex:none}
+.sw::after{content:'';position:absolute;top:3px;inset-inline-start:3px;width:20px;height:20px;border-radius:99px;background:#fff}
+.sw.on{background:#0E6E5C}.sw.on::after{inset-inline-start:21px}
+</style>
+</helmet>
+<div style="width:100%;min-height:950px;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E2E8E6">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;min-height:76px">
+      <a href="Landing.dc.html" aria-label="رفد — الرئيسية"><img src="assets/raved-logo-green.svg" alt="شعار رفد" style="height:48px;width:auto"></a>
+      <nav aria-label="القائمة الرئيسية" style="display:flex;gap:28px;flex-wrap:wrap"><a href="Paths.dc.html" style="color:#34433F;text-decoration:none;font-weight:500">المسارات</a><a href="PathPublic.dc.html" style="color:#34433F;text-decoration:none;font-weight:500">الإنجليزي</a><a href="Landing.dc.html" style="color:#34433F;text-decoration:none;font-weight:500">الأسئلة الشائعة</a></nav>
+      
+    </div>
+  </header>
+  <div style="flex:1"><section style="padding:56px 24px;display:flex;justify-content:center"><div style="width:100%;max-width:520px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center"><span style="width:72px;height:72px;border-radius:999px;background:#FFF4D6;color:#8A5A00;display:flex;align-items:center;justify-content:center"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+      <h1 style="font-size:24px;font-weight:700">طلبك قيد المراجعة</h1>
+      <p class="muted" style="font-size:15px;line-height:1.9">شكراً يا يوسف. نراجع الطلبات خلال 3 أيام عادةً، وسنرسل لك القرار بالبريد وداخل المنصة.</p>
+      <div class="card" style="width:100%;padding:6px 16px;text-align:start"><div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#087443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg><span style="flex:1">إنشاء الحساب</span></div><div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#087443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg><span style="flex:1">البيانات والهدف والموافقات</span></div><div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#087443" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path></svg><span style="flex:1">توصية المعلم</span></div><div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0E6E5C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5v7l5.5-3.5z"></path></svg><span style="flex:1;font-weight:600">مراجعة الطلب</span><span class="chip c-warn">الآن</span></div><div class="row"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9AA8A4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle></svg><span style="flex:1">اختبار تحديد المستوى</span></div></div>
+      <a class="btn btn-p" href="PlacementTest.dc.html" style="width:100%">جرّب اختبار المستوى الآن</a>
+      <p class="muted" style="font-size:13px">تستطيع أداء اختبار المستوى قبل القبول، ونحفظ نتيجته.</p></div></section></div>
+  
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":950}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

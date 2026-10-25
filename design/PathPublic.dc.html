@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — مسار الإنجليزي</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;font:600 15px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-a{background:#F5A524;color:#12201D}.btn-a:hover{background:#E0951C;color:#12201D}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}.btn-s:hover{background:#F5F7F6;color:#12201D}
+.btn-d{background:#fff;color:#B42318;border:1px solid #F4C7C3}
+.muted{color:#4B5B57}
+.en{font-family:'Inter',system-ui,sans-serif;direction:ltr;unicode-bidi:isolate}
+.chip{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.c-ok{background:#E3F6EC;color:#087443}.c-warn{background:#FFF4D6;color:#8A5A00}.c-bad{background:#FEE4E2;color:#B42318}.c-pri{background:#E3F2EE;color:#0A5446}.c-mut{background:#EEF2F1;color:#34433F}.c-ai{background:#F4EBFF;color:#6941C6}.c-info{background:#EFF4FF;color:#1849A9}
+.bar{height:8px;border-radius:99px;background:#E2E8E6;overflow:hidden}
+.bar span{display:block;height:100%;background:#0E6E5C;border-radius:99px}
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #EEF2F1;font-size:14px}
+.row:last-child{border-bottom:0}
+.label{font-weight:600;font-size:14px}
+.input{width:100%;min-height:48px;padding:0 14px;border:1px solid #CFD8D5;border-radius:12px;background:#fff;font:400 15px 'IBM Plex Sans Arabic',sans-serif;color:#12201D}
+.field{display:flex;flex-direction:column;gap:8px}
+.opt{position:relative;display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 14px;border:1px solid #CFD8D5;border-radius:12px;background:#fff;font-weight:500;font-size:15px}
+.opt.on{border:2px solid #0E6E5C;background:#E3F2EE}
+.dot{width:20px;height:20px;border-radius:999px;border:2px solid #9AA8A4;flex:none}
+.opt.on .dot{border:6px solid #0E6E5C}
+.tbl{width:100%;border-collapse:collapse;font-size:14px}
+.tbl th{text-align:start;font-weight:600;color:#4B5B57;font-size:13px;padding:10px 12px;border-bottom:1px solid #E2E8E6}
+.tbl td{padding:12px;border-bottom:1px solid #EEF2F1;vertical-align:middle}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;border-radius:12px;color:#34433F;text-decoration:none;font-weight:500;font-size:15px}
+.nav a:hover{background:#F5F7F6;color:#12201D}
+.nav a.on{background:#E3F2EE;color:#0A5446;font-weight:600}
+.nav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+.anav{display:flex;flex-direction:column;gap:2px}
+.anav a{display:flex;align-items:center;gap:12px;min-height:44px;padding:0 14px;border-radius:12px;color:#C9D4D1;text-decoration:none;font-weight:500;font-size:15px}
+.anav a:hover{background:#1C2E2A;color:#fff}
+.anav a.on{background:#0E6E5C;color:#fff;font-weight:600}
+.anav .b{margin-inline-start:auto;font-size:12px;font-weight:700;background:#F5A524;color:#12201D;border-radius:999px;padding:0 8px;line-height:20px}
+.kpi{padding:18px;display:flex;flex-direction:column;gap:4px}
+.tabs{position:absolute;inset-inline:0;bottom:0;height:76px;background:#fff;border-top:1px solid #E2E8E6;display:flex;justify-content:space-around;padding-top:8px}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#4B5B57;text-decoration:none;min-width:60px;min-height:48px}
+.tab.on{color:#0E6E5C}
+.top{display:flex;align-items:center;gap:8px;padding:8px 8px 10px;background:#fff;border-bottom:1px solid #E2E8E6}
+.back{width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#12201D;flex:none}
+.ai{border-color:#DCCBF7}
+.pill{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;background:#F4EBFF;color:#6941C6;font-size:12px;font-weight:600}
+.net{display:flex;align-items:center;gap:8px;padding:8px 14px;background:#FFF4D6;color:#5C3D00;font-size:13px;font-weight:500}
+.sw{width:44px;height:26px;border-radius:99px;background:#CFD8D5;position:relative;flex:none}
+.sw::after{content:'';position:absolute;top:3px;inset-inline-start:3px;width:20px;height:20px;border-radius:99px;background:#fff}
+.sw.on{background:#0E6E5C}.sw.on::after{inset-inline-start:21px}
+</style>
+</helmet>
+<div style="width:100%;min-height:1650px;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E2E8E6">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;min-height:76px">
+      <a href="Landing.dc.html" aria-label="رفد — الرئيسية"><img src="assets/raved-logo-green.svg" alt="شعار رفد" style="height:48px;width:auto"></a>
+      <nav aria-label="القائمة الرئيسية" style="display:flex;gap:28px;flex-wrap:wrap"><a href="Paths.dc.html" style="color:#34433F;text-decoration:none;font-weight:500">المسارات</a><a href="PathPublic.dc.html" style="color:#34433F;text-decoration:none;font-weight:500">الإنجليزي</a><a href="Landing.dc.html" style="color:#34433F;text-decoration:none;font-weight:500">الأسئلة الشائعة</a></nav>
+      <div style="display:flex;gap:12px"><a class="btn btn-s" href="Login.dc.html">تسجيل الدخول</a><a class="btn btn-a" href="Signup.dc.html">ابدأ مجاناً</a></div>
+    </div>
+  </header>
+  <div style="flex:1">
+  <section style="background:#0E6E5C;color:#fff;padding:52px 0"><div class="wrap" style="display:flex;flex-direction:column;gap:14px">
+    <a href="Paths.dc.html" style="color:#CDE7E0;text-decoration:none;font-size:14px">المسارات / الإنجليزي</a>
+    <h1 style="font-size:40px;font-weight:700">الإنجليزية: من الصفر إلى الشهادة</h1>
+    <p style="font-size:18px;line-height:1.9;color:#E3F2EE;max-width:760px">4 مستويات من <span class="en">A1</span> إلى <span class="en">B2</span>، ثم تدريب على امتحانك الدولي. ابدأ في الأول الثانوي بمعدل 25 دقيقة يومياً لتكون جاهزاً عند التخرج.</p>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;font-size:15px"><span style="display:flex;gap:8px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>25 دقيقة يومياً</span><span style="display:flex;gap:8px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4z"></path><path d="M20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"></path></svg>68 وحدة</span><span style="display:flex;gap:8px;align-items:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5"></path><path d="M4 19h16"></path></svg>كل وحدة قابلة للتنزيل</span></div>
+    <div style="display:flex;gap:12px;margin-top:6px"><a class="btn btn-a" href="Signup.dc.html">ابدأ واختبر مستواك</a></div>
+  </div></section>
+  <section class="wrap" style="padding-top:44px;display:flex;flex-direction:column;gap:18px"><h2 style="font-size:24px;font-weight:700">المستويات</h2><div style="display:flex;gap:14px;flex-wrap:wrap"><div class="card" style="flex:1 1 220px;padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between"><span class="en" style="font-size:26px;font-weight:700;color:#0E6E5C">A1</span><span class="muted" style="font-size:13px">12 وحدة</span></div><p style="font-weight:700">البداية</p><p class="muted" style="font-size:14px;line-height:1.7">التحية، الأرقام، الأسرة، يومك</p></div><div class="card" style="flex:1 1 220px;padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between"><span class="en" style="font-size:26px;font-weight:700;color:#0E6E5C">A2</span><span class="muted" style="font-size:13px">16 وحدة</span></div><p style="font-weight:700">الحياة اليومية</p><p class="muted" style="font-size:14px;line-height:1.7">التسوق، الطرق، الماضي والخطط</p></div><div class="card" style="flex:1 1 220px;padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between"><span class="en" style="font-size:26px;font-weight:700;color:#0E6E5C">B1</span><span class="muted" style="font-size:13px">20 وحدة</span></div><p style="font-weight:700">الاستقلال</p><p class="muted" style="font-size:14px;line-height:1.7">آراء، قصص، رسائل، فهم الفيديو</p></div><div class="card" style="flex:1 1 220px;padding:20px;display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between"><span class="en" style="font-size:26px;font-weight:700;color:#0E6E5C">B2</span><span class="muted" style="font-size:13px">20 وحدة</span></div><p style="font-weight:700">الجاهزية</p><p class="muted" style="font-size:14px;line-height:1.7">نقاش، مقالات، محاضرات قصيرة</p></div></div></section>
+  <section class="wrap" style="padding-top:36px;display:flex;gap:22px;flex-wrap:wrap;align-items:flex-start">
+    <div class="card" style="flex:3 1 460px;padding:8px 22px 14px"><h2 style="font-size:19px;font-weight:700;padding:14px 0 4px">وحدات المستوى <span class="en">A1</span></h2><div class="row"><span class="muted en" style="width:22px">1</span><span class="en" style="flex:1">Hello!</span><span class="muted" style="font-size:13px">7 دروس · 1.4MB</span></div><div class="row"><span class="muted en" style="width:22px">2</span><span class="en" style="flex:1">Numbers and time</span><span class="muted" style="font-size:13px">7 دروس · 1.4MB</span></div><div class="row"><span class="muted en" style="width:22px">3</span><span class="en" style="flex:1">My family</span><span class="muted" style="font-size:13px">7 دروس · 1.4MB</span></div><div class="row"><span class="muted en" style="width:22px">4</span><span class="en" style="flex:1">My school day</span><span class="muted" style="font-size:13px">7 دروس · 1.4MB</span></div><div class="row"><span class="muted en" style="width:22px">5</span><span class="en" style="flex:1">Food and drinks</span><span class="muted" style="font-size:13px">7 دروس · 1.4MB</span></div><div class="row"><span class="muted en" style="width:22px">6</span><span class="en" style="flex:1">My home</span><span class="muted" style="font-size:13px">7 دروس · 1.4MB</span></div></div>
+    <div class="card" style="flex:2 1 320px;padding:22px;display:flex;flex-direction:column;gap:10px"><h2 style="font-size:19px;font-weight:700">كل وحدة فيها</h2><p class="muted" style="line-height:1.9">مفردات بنطقها · قاعدة بشرح عربي · استماع · قراءة · مهمة محادثة · مهمة كتابة · اختبار. والفيديو اختياري.</p></div>
+  </section>
+  <section style="background:#12201D;color:#fff;padding:44px 0;margin-top:44px"><div class="wrap" style="display:flex;flex-direction:column;gap:16px"><h2 style="font-size:24px;font-weight:700">الامتحانات التي نجهزك لها من اليمن</h2><div style="display:flex;gap:12px;flex-wrap:wrap"><div style="flex:1 1 200px;padding:18px;border-radius:14px;background:#1C2E2A"><p class="en" style="font-weight:700">IELTS</p><p style="font-size:13px;color:#C9D4D1;margin-top:6px">صنعاء · المجلس الثقافي البريطاني</p><p style="font-size:13px;color:#9FB2AD;margin-top:4px">مطلوب لكثير من المنح</p></div><div style="flex:1 1 200px;padding:18px;border-radius:14px;background:#1C2E2A"><p class="en" style="font-weight:700">TOEFL iBT</p><p style="font-size:13px;color:#C9D4D1;margin-top:6px">من البيت (Home Edition) أو مركز</p><p style="font-size:13px;color:#9FB2AD;margin-top:4px">مطلوب غالباً لأمريكا</p></div><div style="flex:1 1 200px;padding:18px;border-radius:14px;background:#1C2E2A"><p class="en" style="font-weight:700">Duolingo</p><p style="font-size:13px;color:#C9D4D1;margin-top:6px">من البيت · تحقق من الدفع</p><p style="font-size:13px;color:#9FB2AD;margin-top:4px">الأرخص إن قبلته جامعتك</p></div></div><p style="font-size:13px;color:#9FB2AD">اختر حسب ما تطلبه الجامعة أو المنحة. الرسوم وطرق الدفع تتغير، ونحدّثها في المنصة.</p></div></section>
+</div>
+  <footer style="background:#fff;border-top:1px solid #E2E8E6;padding:28px 0"><div class="wrap" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center"><img src="assets/raved-logo-green.svg" alt="شعار رفد" style="height:40px;width:auto"><p class="muted" style="font-size:14px">رفد — منصة تعليمية مجانية لطلاب اليمن · <a href="Legal.dc.html">الخصوصية</a> · <a href="Legal.dc.html">الشروط</a> · <a href="Verify.dc.html">تحقق من شهادة</a></p></div></footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1650}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

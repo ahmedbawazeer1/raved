@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — لوحة الإدارة على الموبايل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.muted{color:#4B5B57}
+.chip{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;border-radius:999px;font-size:11px;font-weight:600;white-space:nowrap}
+.tabs{position:absolute;inset-inline:0;bottom:0;height:76px;background:#fff;border-top:1px solid #E2E8E6;display:flex;justify-content:space-around;padding-top:8px}
+.tab{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:11px;font-weight:600;color:#4B5B57;text-decoration:none;min-width:60px;min-height:48px;position:relative}
+.tab.on{color:#0E6E5C}
+.dotb{position:absolute;top:-4px;inset-inline-end:10px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#F5A524;color:#12201D;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.kpi{padding:14px;display:flex;flex-direction:column;gap:2px}
+.todo{display:flex;align-items:center;gap:10px;min-height:56px;padding:8px 14px;border-bottom:1px solid #EEF2F1;text-decoration:none;color:#12201D;font-size:14px}
+</style>
+</helmet>
+<div style="width:390px;height:844px;overflow:hidden;background:#F5F7F6;position:relative">
+  <header style="background:#12201D;padding:14px 16px 20px;display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:10px"><img src="assets/raved-logo-green-white.svg" alt="رفد" style="height:40px;width:auto"><span class="chip" style="background:#1C2E2A;color:#F5A524">الإدارة</span></div>
+    <button aria-label="الإشعارات" style="width:44px;height:44px;border-radius:12px;border:0;background:#1C2E2A;color:#fff;display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 8 3 8H3s3-1 3-8"></path><path d="M10 21h4"></path></svg></button>
+  </header>
+  <main style="padding:16px 16px 96px;display:flex;flex-direction:column;gap:14px">
+    <h1 style="font-size:20px;font-weight:700">صباح الخير</h1>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+      <a href="ApplicationReviewM.dc.html" class="card kpi" style="text-decoration:none;color:#12201D"><span class="muted" style="font-size:12px">طلبات جديدة</span><span style="font-size:26px;font-weight:700">14</span></a>
+      <a href="AdminHomeM.dc.html" class="card kpi" style="text-decoration:none;color:#12201D"><span class="muted" style="font-size:12px">وحدات للمراجعة</span><span style="font-size:26px;font-weight:700">6</span></a>
+      <div class="card kpi"><span class="muted" style="font-size:12px">طلاب نشطون</span><span style="font-size:26px;font-weight:700">[عدد]</span></div>
+      <div class="card kpi"><span class="muted" style="font-size:12px">متوقفون 7 أيام</span><span style="font-size:26px;font-weight:700;color:#B42318">6</span></div>
+    </div>
+    <section class="card" style="overflow:hidden">
+      <h2 style="font-size:15px;font-weight:700;padding:14px 14px 4px">يحتاج انتباهك</h2>
+      <a class="todo" href="AdminHomeM.dc.html"><span class="chip" style="background:#F4EBFF;color:#6941C6">مسودة</span><span style="flex:1">خريطة مستوى B1 جاهزة</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+      <a class="todo" href="AdminHomeM.dc.html"><span class="chip" style="background:#FEE4E2;color:#B42318">روابط</span><span style="flex:1">فيديوهان غير متاحين</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+      <a class="todo" href="AdminHomeM.dc.html" style="border-bottom:0"><span class="chip" style="background:#FEE4E2;color:#B42318">إشراف</span><span style="flex:1">منشوران عليهما بلاغات</span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg></a>
+    </section>
+  </main>
+  <nav class="tabs" aria-label="تنقل الإدارة"><a class="tab on" href="AdminHomeM.dc.html" aria-current="page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"></path></svg>الرئيسية</a><a class="tab" href="ApplicationReviewM.dc.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13h5l2 3h4l2-3h5"></path><path d="M5 5h14l2 8v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-6z"></path></svg>الطلبات</a><a class="tab" href="StudentsM.dc.html"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7"></path><path d="M18 14a6.5 6.5 0 0 1 3.5 6"></path></svg>الطلاب</a><a class="tab on" href="AdminHomeM.dc.html" aria-current="page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"></path><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path></svg>المحتوى</a></nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

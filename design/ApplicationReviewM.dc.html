@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>رفد — مراجعة طلب التحاق على الموبايل</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0;background:#F5F7F6;font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;color:#12201D}
+*{box-sizing:border-box}
+h1,h2,h3,h4,p{margin:0}
+a{color:#0E6E5C}a:hover{color:#0A5446}
+.card{background:#fff;border:1px solid #E2E8E6;border-radius:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 16px;border-radius:12px;font:600 15px/1 'IBM Plex Sans Arabic',sans-serif;border:0;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-p{background:#0E6E5C;color:#fff}.btn-p:hover{background:#0A5446;color:#fff}
+.btn-s{background:#fff;color:#12201D;border:1px solid #CFD8D5}
+.btn-d{background:#fff;color:#B42318;border:1px solid #FDA29B}
+.muted{color:#4B5B57}
+.kv{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #EEF2F1;font-size:14px}
+</style>
+</helmet>
+<div style="width:390px;height:844px;overflow:hidden;background:#F5F7F6;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E2E8E6;padding:6px 8px;display:flex;align-items:center;gap:6px;flex:none">
+    <a href="AdminHomeM.dc.html" aria-label="رجوع إلى الطلبات" style="width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#12201D"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg></a>
+    <p style="font-weight:700;flex:1">طلب 1 من 14</p>
+    <a href="ApplicationReviewM.dc.html" style="font-size:14px;font-weight:600;min-height:44px;display:inline-flex;align-items:center;padding:0 8px">تخطَّ</a>
+  </header>
+  <main style="padding:16px;display:flex;flex-direction:column;gap:12px;flex:1;overflow:hidden">
+    <div style="display:flex;gap:12px;align-items:center">
+      <span style="width:52px;height:52px;border-radius:999px;background:#0E6E5C;color:#fff;font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center">م</span>
+      <div><h1 style="font-size:19px;font-weight:700">محمد أحمد علي</h1><p class="muted" style="font-size:13px">16 سنة · تعز · قدّم منذ يومين</p></div>
+    </div>
+    <section class="card" style="padding:4px 16px">
+      <div class="kv"><span class="muted">المسار</span><span style="font-weight:600">الإنجليزي · هدف IELTS</span></div>
+      <div class="kv"><span class="muted">الصف</span><span style="font-weight:600">الثاني الثانوي · علمي</span></div>
+      <div class="kv"><span class="muted">المدرسة</span><span style="font-weight:600">[اسم المدرسة]</span></div>
+      <div class="kv" style="border-bottom:0"><span class="muted">موافقة ولي الأمر</span><span style="font-weight:600;color:#087443">نعم</span></div>
+    </section>
+    <section class="card" style="padding:14px 16px;display:flex;flex-direction:column;gap:6px">
+      <p class="muted" style="font-size:12px;font-weight:600">لماذا يريد الشهادة</p>
+      <p style="font-size:14px;line-height:1.8">"أريد منحة للدراسة في الخارج، وأحتاج شهادة IELTS."</p>
+    </section>
+    <a href="ApplicationReviewM.dc.html" class="card" style="padding:14px 16px;display:flex;align-items:center;gap:12px;text-decoration:none;color:#12201D">
+      <span style="width:40px;height:40px;border-radius:10px;background:#FEE4E2;color:#B42318;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center">PDF</span>
+      <span style="flex:1;font-weight:600;font-size:14px">عرض التوصية</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4B5B57" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+    </a>
+  </main>
+  <footer style="background:#fff;border-top:1px solid #E2E8E6;padding:12px 16px 20px;display:flex;flex-direction:column;gap:10px;flex:none">
+    <button class="btn btn-p" type="button"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"></path></svg>قبول الطلب</button>
+    <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+      <button class="btn btn-s" type="button">طلب تعديل</button>
+      <button class="btn btn-d" type="button">رفض</button>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
