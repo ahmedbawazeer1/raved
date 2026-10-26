@@ -4,10 +4,13 @@
 -- units.source_package (unused, publicly readable) must stay empty forever.
 alter table public.units add constraint units_source_package_unused check (source_package is null);
 
+-- Blocks are stored with their lesson (always read together); removed lessons/words are archived, not deleted.
 alter table public.lessons
   add column if not exists item_key text,
   add column if not exists speaking_task jsonb,
-  add column if not exists writing_task jsonb;
+  add column if not exists writing_task jsonb,
+  add column if not exists blocks jsonb not null default '[]'::jsonb,
+  add column if not exists archived boolean not null default false;
 create unique index if not exists lessons_unit_item_key on public.lessons (unit_id, item_key);
 
 create table public.unit_packages (
@@ -33,6 +36,7 @@ create table public.vocab_items (
   meaning_ar text not null,
   example_en text not null,
   example_ar text,
+  archived boolean not null default false,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   unique (unit_id, item_key)
@@ -51,20 +55,12 @@ create table public.quizzes (
 create unique index quizzes_one_per_unit on public.quizzes (unit_id) where kind = 'unit';
 
 -- Answers never leave the server: students have no SELECT on this table (see get_quiz()).
-create table public.quiz_questions (
-  id uuid primary key default gen_random_uuid(),
-  quiz_id uuid not null references public.quizzes (id) on delete cascade,
-  item_key text not null,
-  position smallint not null,
-  skill text,
-  kind text not null check (kind in ('mcq', 'fill_blank', 'true_false', 'order_words')),
-  prompt text not null,
-  options jsonb,
-  answer jsonb not null,
-  explanation_ar text not null,
+-- questions: [{id, kind, skill, prompt, options, answer, explanation_ar}] in order.
+create table public.quiz_keys (
+  quiz_id uuid primary key references public.quizzes (id) on delete cascade,
+  questions jsonb not null default '[]'::jsonb,
   created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now(),
-  unique (quiz_id, item_key)
+  updated_at timestamptz not null default now()
 );
 
 create table public.quiz_attempts (
@@ -115,7 +111,7 @@ do $$
 declare
   t text;
 begin
-  foreach t in array array['unit_packages', 'vocab_items', 'quizzes', 'quiz_questions', 'quiz_attempts', 'lesson_progress', 'reports'] loop
+  foreach t in array array['unit_packages', 'vocab_items', 'quizzes', 'quiz_keys', 'quiz_attempts', 'lesson_progress', 'reports'] loop
     execute format('create trigger set_updated_at before update on public.%I for each row execute function private.set_updated_at()', t);
     execute format('alter table public.%I enable row level security', t);
   end loop;
@@ -155,7 +151,11 @@ create policy unit_packages_admin on public.unit_packages for all to authenticat
   using ((select public.is_admin())) with check ((select public.is_admin()));
 
 create policy vocab_items_read on public.vocab_items for select to authenticated
-  using ((select public.is_admin()) or ((select public.is_active_member()) and private.unit_is_live(unit_id)));
+  using ((select public.is_admin()) or (not archived and (select public.is_active_member()) and private.unit_is_live(unit_id)));
+
+-- Archived lessons are hidden from students (restrictive: combined with the phase 1 read policy).
+create policy lessons_hide_archived on public.lessons as restrictive for select to authenticated
+  using (not archived or (select public.is_admin()));
 create policy vocab_items_admin on public.vocab_items for all to authenticated
   using ((select public.is_admin())) with check ((select public.is_admin()));
 
@@ -164,7 +164,7 @@ create policy quizzes_read on public.quizzes for select to authenticated
 create policy quizzes_admin on public.quizzes for all to authenticated
   using ((select public.is_admin())) with check ((select public.is_admin()));
 
-create policy quiz_questions_admin on public.quiz_questions for all to authenticated
+create policy quiz_keys_admin on public.quiz_keys for all to authenticated
   using ((select public.is_admin())) with check ((select public.is_admin()));
 
 -- Attempts are created only by submit_quiz(); students read their own.
@@ -202,13 +202,9 @@ declare
   v_unit_id uuid;
   v_quiz_id uuid;
   v_lesson jsonb;
-  v_lesson_id uuid;
-  v_block jsonb;
   v_vocab jsonb;
-  v_q jsonb;
   v_i integer;
   v_size integer := octet_length(p_package::text);
-  v_lesson_keys text[] := array[]::text[];
 begin
   if not (private.is_backend_caller() or public.is_admin()) then
     raise exception 'forbidden' using errcode = '42501';
@@ -238,59 +234,47 @@ begin
   insert into public.unit_packages (unit_id, version, package, size_bytes, imported_by)
   values (v_unit_id, (p_package ->> 'version')::integer, p_package, v_size, (select auth.uid()));
 
-  -- Lessons (upsert by package id), blocks replaced. Park old positions first so reordering never clashes.
-  update public.lessons set position = -100 - position where unit_id = v_unit_id;
+  -- Lessons: upsert by package id (ids stay stable, so progress survives). Lessons missing from the
+  -- package are archived. Park positions first (unique negatives) so reordering never clashes.
+  update public.lessons l
+     set position = -s.rn, archived = true
+    from (select id, row_number() over (order by id) as rn from public.lessons where unit_id = v_unit_id) s
+   where l.id = s.id;
   for v_lesson in select * from jsonb_array_elements(p_package -> 'lessons') loop
-    v_lesson_keys := v_lesson_keys || (v_lesson ->> 'id');
-    insert into public.lessons (unit_id, item_key, position, skill, title, est_minutes, speaking_task, writing_task, review_status, review_note)
+    insert into public.lessons (unit_id, item_key, position, skill, title, est_minutes, speaking_task, writing_task, blocks, archived, review_status, review_note)
     values (
       v_unit_id, v_lesson ->> 'id', (v_lesson ->> 'position')::smallint, v_lesson ->> 'skill', v_lesson ->> 'title',
-      (v_lesson ->> 'est_minutes')::smallint, v_lesson -> 'speaking_task', v_lesson -> 'writing_task', 'pending', null
+      (v_lesson ->> 'est_minutes')::smallint, v_lesson -> 'speaking_task', v_lesson -> 'writing_task',
+      coalesce(v_lesson -> 'blocks', '[]'::jsonb), false, 'pending', null
     )
     on conflict (unit_id, item_key) do update
       set position = excluded.position, skill = excluded.skill, title = excluded.title, est_minutes = excluded.est_minutes,
-          speaking_task = excluded.speaking_task, writing_task = excluded.writing_task,
-          review_status = 'pending', review_note = null
-    returning id into v_lesson_id;
-
-    delete from public.lesson_blocks where lesson_id = v_lesson_id;
-    v_i := 0;
-    for v_block in select * from jsonb_array_elements(v_lesson -> 'blocks') loop
-      v_i := v_i + 1;
-      insert into public.lesson_blocks (lesson_id, type, position, data)
-      values (v_lesson_id, v_block ->> 'type', v_i, v_block - 'type');
-    end loop;
+          speaking_task = excluded.speaking_task, writing_task = excluded.writing_task, blocks = excluded.blocks,
+          archived = false, review_status = 'pending', review_note = null;
   end loop;
-  delete from public.lessons where unit_id = v_unit_id and not (item_key = any (v_lesson_keys));
 
-  -- Vocabulary (upsert by package id).
+  -- Vocabulary: upsert by package id; words missing from the package are archived.
+  update public.vocab_items set archived = true where unit_id = v_unit_id;
   v_i := 0;
   for v_vocab in select * from jsonb_array_elements(p_package -> 'vocab') loop
     v_i := v_i + 1;
-    insert into public.vocab_items (unit_id, item_key, position, word, ipa, part_of_speech, meaning_ar, example_en, example_ar)
+    insert into public.vocab_items (unit_id, item_key, position, word, ipa, part_of_speech, meaning_ar, example_en, example_ar, archived)
     values (v_unit_id, v_vocab ->> 'id', v_i, v_vocab ->> 'word', v_vocab ->> 'ipa', v_vocab ->> 'part_of_speech',
-            v_vocab ->> 'meaning_ar', v_vocab ->> 'example_en', v_vocab ->> 'example_ar')
+            v_vocab ->> 'meaning_ar', v_vocab ->> 'example_en', v_vocab ->> 'example_ar', false)
     on conflict (unit_id, item_key) do update
       set position = excluded.position, word = excluded.word, ipa = excluded.ipa, part_of_speech = excluded.part_of_speech,
-          meaning_ar = excluded.meaning_ar, example_en = excluded.example_en, example_ar = excluded.example_ar;
+          meaning_ar = excluded.meaning_ar, example_en = excluded.example_en, example_ar = excluded.example_ar, archived = false;
   end loop;
-  delete from public.vocab_items
-   where unit_id = v_unit_id
-     and not (item_key in (select v ->> 'id' from jsonb_array_elements(p_package -> 'vocab') v));
 
-  -- Unit quiz: questions replaced (attempts keep their own copy of results).
+  -- Unit quiz: the answer key is replaced as a whole (attempts keep their own copy of results).
   insert into public.quizzes (unit_id, kind, pass_percent)
   values (v_unit_id, 'unit', coalesce((p_package #>> '{quiz,pass_percent}')::smallint, 70))
   on conflict (unit_id) where kind = 'unit' do update set pass_percent = excluded.pass_percent
   returning id into v_quiz_id;
 
-  delete from public.quiz_questions where quiz_id = v_quiz_id;
-  v_i := 0;
-  for v_q in select * from jsonb_array_elements(p_package #> '{quiz,questions}') loop
-    v_i := v_i + 1;
-    insert into public.quiz_questions (quiz_id, item_key, position, skill, kind, prompt, options, answer, explanation_ar)
-    values (v_quiz_id, v_q ->> 'id', v_i, v_q ->> 'skill', v_q ->> 'kind', v_q ->> 'prompt', v_q -> 'options', v_q -> 'answer', v_q ->> 'explanation_ar');
-  end loop;
+  insert into public.quiz_keys (quiz_id, questions)
+  values (v_quiz_id, coalesce(p_package #> '{quiz,questions}', '[]'::jsonb))
+  on conflict (quiz_id) do update set questions = excluded.questions;
 
   return v_unit_id;
 end;
@@ -307,10 +291,10 @@ begin
   if not (private.is_backend_caller() or public.is_admin()) then
     raise exception 'forbidden' using errcode = '42501';
   end if;
-  if exists (select 1 from public.lessons where unit_id = p_unit_id and review_status <> 'approved') then
+  if exists (select 1 from public.lessons where unit_id = p_unit_id and not archived and review_status <> 'approved') then
     raise exception 'lessons_not_approved' using errcode = 'P0001';
   end if;
-  if not exists (select 1 from public.lessons where unit_id = p_unit_id) then
+  if not exists (select 1 from public.lessons where unit_id = p_unit_id and not archived) then
     raise exception 'unit_empty' using errcode = 'P0001';
   end if;
   update public.units set status = 'published' where id = p_unit_id;
@@ -345,17 +329,18 @@ begin
     'questions', coalesce((
       select jsonb_agg(
         jsonb_build_object(
-          'id', q.item_key,
-          'kind', q.kind,
-          'skill', q.skill,
-          'prompt', q.prompt,
-          'options', q.options,
+          'id', q ->> 'id',
+          'kind', q ->> 'kind',
+          'skill', q ->> 'skill',
+          'prompt', q ->> 'prompt',
+          'options', q -> 'options',
           -- order_words: give the words (stably shuffled), never their order
-          'words', case when q.kind = 'order_words' then (
-            select jsonb_agg(w order by md5(w || q.id::text)) from jsonb_array_elements_text(q.answer) w
+          'words', case when q ->> 'kind' = 'order_words' then (
+            select jsonb_agg(w order by md5(w || (q ->> 'id'))) from jsonb_array_elements_text(q -> 'answer') w
           ) end
-        ) order by q.position)
-      from public.quiz_questions q where q.quiz_id = v_quiz.id
+        ) order by ord)
+      from public.quiz_keys k, jsonb_array_elements(k.questions) with ordinality as t(q, ord)
+      where k.quiz_id = v_quiz.id
     ), '[]'::jsonb)
   );
 end;
@@ -386,7 +371,7 @@ as $$
 declare
   v_uid uuid := (select auth.uid());
   v_quiz public.quizzes;
-  v_q public.quiz_questions;
+  v_q jsonb;
   v_given jsonb;
   v_ok boolean;
   v_results jsonb := '[]'::jsonb;
@@ -413,17 +398,20 @@ begin
     raise exception 'forbidden' using errcode = '42501';
   end if;
 
-  for v_q in select * from public.quiz_questions where quiz_id = p_quiz_id order by position loop
+  for v_q in
+    select q from public.quiz_keys k, jsonb_array_elements(k.questions) with ordinality as t(q, ord)
+     where k.quiz_id = p_quiz_id order by ord
+  loop
     v_total := v_total + 1;
-    v_given := coalesce(p_answers, '{}'::jsonb) -> v_q.item_key;
-    v_ok := case v_q.kind
-      when 'mcq' then jsonb_typeof(v_given) = 'number' and v_given = v_q.answer
-      when 'true_false' then jsonb_typeof(v_given) = 'number' and v_given = v_q.answer
+    v_given := coalesce(p_answers, '{}'::jsonb) -> (v_q ->> 'id');
+    v_ok := case v_q ->> 'kind'
+      when 'mcq' then jsonb_typeof(v_given) = 'number' and v_given = v_q -> 'answer'
+      when 'true_false' then jsonb_typeof(v_given) = 'number' and v_given = v_q -> 'answer'
       when 'fill_blank' then jsonb_typeof(v_given) = 'string'
-        and private.normalize_answer(v_given #>> '{}') = private.normalize_answer(v_q.answer #>> '{}')
+        and private.normalize_answer(v_given #>> '{}') = private.normalize_answer(v_q ->> 'answer')
       when 'order_words' then jsonb_typeof(v_given) = 'array'
         and (select string_agg(private.normalize_answer(x), ' ') from jsonb_array_elements_text(v_given) x)
-          = (select string_agg(private.normalize_answer(x), ' ') from jsonb_array_elements_text(v_q.answer) x)
+          = (select string_agg(private.normalize_answer(x), ' ') from jsonb_array_elements_text(v_q -> 'answer') x)
       else false
     end;
     v_ok := coalesce(v_ok, false);
@@ -431,8 +419,9 @@ begin
       v_correct := v_correct + 1;
     end if;
     v_results := v_results || jsonb_build_array(jsonb_build_object(
-      'id', v_q.item_key, 'kind', v_q.kind, 'skill', v_q.skill, 'prompt', v_q.prompt, 'options', v_q.options,
-      'given', v_given, 'answer', v_q.answer, 'correct', v_ok, 'explanation_ar', v_q.explanation_ar
+      'id', v_q ->> 'id', 'kind', v_q ->> 'kind', 'skill', v_q ->> 'skill', 'prompt', v_q ->> 'prompt',
+      'options', v_q -> 'options', 'given', v_given, 'answer', v_q -> 'answer', 'correct', v_ok,
+      'explanation_ar', v_q ->> 'explanation_ar'
     ));
   end loop;
 

@@ -22,9 +22,9 @@ select set_config('request.jwt.claims', json_build_object('sub', :'ad')::text, t
 select public.import_unit_package(:'pkg'::jsonb) as unit_id \gset
 select tests.ok((select status from public.units where id = :'unit_id') = 'review', 'imported unit waits for review');
 select tests.ok((select count(*) from public.lessons where unit_id = :'unit_id') = 2, 'lessons imported');
-select tests.ok((select count(*) from public.lesson_blocks b join public.lessons l on l.id = b.lesson_id where l.unit_id = :'unit_id') = 5, 'blocks imported');
+select tests.ok((select sum(jsonb_array_length(blocks)) from public.lessons where unit_id = :'unit_id') = 5, 'blocks imported');
 select tests.ok((select count(*) from public.vocab_items where unit_id = :'unit_id') = 8, 'vocab imported');
-select tests.ok((select count(*) from public.quiz_questions q join public.quizzes z on z.id = q.quiz_id where z.unit_id = :'unit_id') = 5, 'quiz imported');
+select tests.ok((select jsonb_array_length(k.questions) from public.quiz_keys k join public.quizzes z on z.id = k.quiz_id where z.unit_id = :'unit_id') = 5, 'quiz imported');
 select tests.throws(format('select public.publish_unit(%L)', :'unit_id'), 'cannot publish before every lesson is approved');
 update public.lessons set review_status = 'approved' where unit_id = :'unit_id';
 select public.publish_unit(:'unit_id');
@@ -35,17 +35,26 @@ select id as quiz_id from public.quizzes where unit_id = :'unit_id' \gset
 select l.id as lesson_id from public.lessons l where l.unit_id = :'unit_id' order by position limit 1 \gset
 
 -- re-import keeps lesson ids (progress survives) and handles reordering
-update public.lesson_progress set status = 'started' where false;
 select tests.ok(public.import_unit_package(jsonb_set(:'pkg'::jsonb, '{version}', '2')) = :'unit_id'::uuid, 're-import updates the same unit');
 select tests.ok((select id from public.lessons l where l.unit_id = :'unit_id' order by position limit 1) = :'lesson_id'::uuid, 'lesson id stable across re-import');
 select tests.ok((select status from public.units where id = :'unit_id') = 'published', 're-import keeps a published unit published');
 select tests.ok((select version from public.units where id = :'unit_id') = 2, 'version bumped');
 update public.lessons set review_status = 'approved' where unit_id = :'unit_id';
 
+-- re-import with one lesson removed and one word removed: archived, never deleted
+select public.import_unit_package(
+  jsonb_set(jsonb_set(jsonb_set(:'pkg'::jsonb, '{version}', '3'), '{lessons}', (:'pkg'::jsonb -> 'lessons') - 1), '{vocab}', (:'pkg'::jsonb -> 'vocab') - 7)
+);
+select tests.ok((select count(*) from public.lessons where unit_id = :'unit_id' and archived) = 1, 'removed lesson is archived');
+select tests.ok((select count(*) from public.vocab_items where unit_id = :'unit_id' and archived) = 1, 'removed word is archived');
+select public.import_unit_package(:'pkg'::jsonb);
+select tests.ok((select count(*) from public.lessons where unit_id = :'unit_id' and not archived) = 2, 'lesson comes back on re-import');
+update public.lessons set review_status = 'approved' where unit_id = :'unit_id';
+
 -- active student
 set local role authenticated;
 select set_config('request.jwt.claims', json_build_object('sub', :'st')::text, true);
-select tests.ok(tests.count('select * from public.quiz_questions') = 0, 'student cannot read quiz questions (answers)');
+select tests.ok(tests.count('select * from public.quiz_keys') = 0, 'student cannot read quiz answer keys');
 select tests.ok(tests.count('select * from public.unit_packages') = 0, 'student cannot read raw packages');
 select tests.ok(public.get_quiz(:'quiz_id') -> 'questions' -> 0 ? 'prompt', 'get_quiz returns prompts');
 select tests.ok(not (public.get_quiz(:'quiz_id')::text like '%"answer"%'), 'get_quiz never returns answers');
