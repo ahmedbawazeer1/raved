@@ -1,7 +1,8 @@
 -- Phase 2: content import/review, vocabulary, quizzes (server-graded), lesson progress, reports.
 
--- Full packages are admin-only (they contain quiz answers), so they live outside `units`.
-alter table public.units drop column if exists source_package;
+-- Full packages are admin-only (they contain quiz answers), so they live in unit_packages.
+-- units.source_package (unused, publicly readable) must stay empty forever.
+alter table public.units add constraint units_source_package_unused check (source_package is null);
 
 alter table public.lessons
   add column if not exists item_key text,
