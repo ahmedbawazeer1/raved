@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, Lock, PlayCircle } from "lucide-react";
+import { CheckCircle2, Circle, Lock, PlayCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
@@ -78,12 +78,15 @@ export default async function CurriculumPage({ params, searchParams }: PageProps
                 <CheckCircle2 className="size-5 text-success" aria-label="مكتملة" />
               ) : u.state === "now" ? (
                 <PlayCircle className="size-5 text-primary" aria-label="الحالية" />
+              ) : u.state === "open" ? (
+                <Circle className="size-5 text-[#9AA8A4]" aria-label="مفتوحة للمراجعة" />
               ) : (
                 <Lock className="size-5 text-[#9AA8A4]" aria-label="مقفلة" />
               )}
               <En className="w-6 text-muted-foreground">{u.position}</En>
               <En className={cn("flex-1", u.state === "now" && "font-semibold")}>{u.title}</En>
               {u.state === "now" && <Badge>الآن</Badge>}
+              {u.state === "open" && <Badge tone="muted">مراجعة اختيارية</Badge>}
             </>
           );
           return u.state === "locked" ? (

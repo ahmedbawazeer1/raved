@@ -46,4 +46,8 @@ export default async function globalSetup() {
   // Fresh progress for every run.
   await admin.from("lesson_progress").delete().eq("student_id", user!.id);
   await admin.from("quiz_attempts").delete().eq("student_id", user!.id);
+  await admin.from("vocab_reviews").delete().eq("student_id", user!.id);
+  await admin.from("placement_attempts").delete().eq("student_id", user!.id);
+  await admin.from("skill_estimates").delete().eq("student_id", user!.id);
+  await admin.from("enrollments").update({ start_unit_id: null }).eq("student_id", user!.id);
 }

@@ -78,10 +78,16 @@ export const getCurriculum = cache(async (userId: string, pathId: string): Promi
   ]);
   const completedLessonIds = new Set((progress ?? []).map((p) => p.lesson_id));
   const passedQuizIds = new Set((attempts ?? []).map((a) => a.quiz_id));
+  const { data: enrollment } = await supabase
+    .from("enrollments")
+    .select("start_unit_id")
+    .eq("student_id", userId)
+    .eq("path_id", pathId)
+    .maybeSingle();
 
   return {
     levels: (levels ?? []).map(({ id, code, title, position }) => ({ id, code, title, position })),
-    units: buildCurriculum(units, { completedLessonIds, passedQuizIds }),
+    units: buildCurriculum(units, { completedLessonIds, passedQuizIds, startUnitId: enrollment?.start_unit_id }),
     completedLessonIds,
     passedQuizIds,
   };

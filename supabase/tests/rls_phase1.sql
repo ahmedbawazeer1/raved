@@ -114,7 +114,7 @@ reset role;
 set local role authenticated;
 select set_config('request.jwt.claims', json_build_object('sub', :'ad', 'role', 'authenticated')::text, true);
 select tests.ok((public.review_application(:'app1', 'approved') ->> 'decision') = 'approved', 'admin approves');
-select tests.ok(tests.count('select * from public.audit_log') = 2, 'decisions are logged');
+select tests.ok(tests.count('select * from public.audit_log where action like ''application.%''') = 2, 'decisions are logged');
 update public.paths set status = 'published', published_at = now() where id = :'web';
 select tests.ok(cardinality(public.notify_path_waitlist(:'web')) = 2, 'waitlist emails returned (visitor + student)');
 select tests.ok(cardinality(public.notify_path_waitlist(:'web')) = 0, 'waitlist notified only once');

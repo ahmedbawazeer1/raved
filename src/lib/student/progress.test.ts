@@ -26,6 +26,21 @@ describe("buildCurriculum", () => {
     ]);
   });
 
+  it("starts at the placement unit; earlier units stay open for review", () => {
+    const c = buildCurriculum([unit("u1", 1), unit("u2", 2), unit("u3", 3)], {
+      completedLessonIds: new Set(),
+      passedQuizIds: new Set(),
+      startUnitId: "u2",
+    });
+    expect(c.map((u) => u.state)).toEqual(["open", "now", "locked"]);
+    expect(nextStep(c, { completedLessonIds: new Set(), passedQuizIds: new Set() })).toMatchObject({ kind: "lesson", lessonId: "u2-l1" });
+  });
+
+  it("ignores an unknown start unit", () => {
+    const c = buildCurriculum([unit("u1", 1)], { completedLessonIds: new Set(), passedQuizIds: new Set(), startUnitId: "gone" });
+    expect(c[0].state).toBe("now");
+  });
+
   it("orders by level then unit", () => {
     const c = buildCurriculum([unit("b", 1, 2), unit("a", 2, 1)], { completedLessonIds: new Set(), passedQuizIds: new Set() });
     expect(c.map((u) => u.id)).toEqual(["a", "b"]);

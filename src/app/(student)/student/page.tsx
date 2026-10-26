@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Bell, CheckCircle2, Circle, PlayCircle } from "lucide-react";
+import { Bell, CheckCircle2, Circle, Layers, PlayCircle, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -8,9 +8,11 @@ import { En } from "@/components/en";
 import { MixedText } from "@/components/mixed-text";
 import { ProgressBar } from "@/components/student/progress-bar";
 import { requireActiveStudent } from "@/lib/auth/session";
+import { parseFeatures } from "@/lib/paths/features";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
 import { nextStep } from "@/lib/student/progress";
 import { createClient } from "@/lib/supabase/server";
+import { getVocabDeck } from "@/lib/vocab/queries";
 
 export const metadata: Metadata = { title: "اليوم" };
 
@@ -30,6 +32,23 @@ export default async function TodayPage() {
     .select("id", { count: "exact", head: true })
     .eq("student_id", userId)
     .is("read_at", null);
+
+  const features = parseFeatures(path?.features);
+  const [{ data: placement }, deck] = await Promise.all([
+    path && features.placement
+      ? supabase
+          .from("placement_attempts")
+          .select("status")
+          .eq("student_id", userId)
+          .eq("path_id", path.id)
+          .order("created_at", { ascending: false })
+          .limit(1)
+          .maybeSingle()
+      : Promise.resolve({ data: null }),
+    path && features.vocab ? getVocabDeck(userId, path.id) : Promise.resolve(null),
+  ]);
+  const placementCard = path && features.placement && placement?.status !== "completed";
+  const vocabToday = deck ? deck.cards.length : 0;
 
   const unit = step.kind === "lesson" || step.kind === "quiz" ? step.unit : null;
   const lessons = unit ? [...unit.lessons].sort((a, b) => a.position - b.position) : [];
@@ -53,6 +72,21 @@ export default async function TodayPage() {
           {Boolean(unread) && <span className="absolute end-2 top-2 size-2.5 rounded-full bg-accent" />}
         </Link>
       </header>
+
+      {placementCard && (
+        <Card className="flex items-center gap-3 border-accent p-4">
+          <Target className="size-8 flex-none text-accent" aria-hidden="true" />
+          <div className="flex-1">
+            <p className="font-bold">{placement ? "أكمل اختبار المستوى" : "حدّد مستواك أولاً"}</p>
+            <p className="text-[13px] text-muted-foreground">
+              {placement ? "تكمل من نفس السؤال." : "20 دقيقة تقريباً، لتبدأ من الوحدة المناسبة لك."}
+            </p>
+          </div>
+          <Button asChild size="sm" variant="accent">
+            <Link href="/placement">{placement ? "أكمل" : "ابدأ"}</Link>
+          </Button>
+        </Card>
+      )}
 
       {step.kind === "empty" && (
         <Card className="p-5">
@@ -124,6 +158,20 @@ export default async function TodayPage() {
             )}
           </Card>
         </>
+      )}
+
+      {vocabToday > 0 && (
+        <Link
+          href="/student/vocab"
+          className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3 text-foreground no-underline hover:text-foreground"
+        >
+          <Layers className="size-6 flex-none text-primary" aria-hidden="true" />
+          <span className="flex-1">
+            <span className="block font-semibold">مراجعة المفردات</span>
+            <span className="block text-[13px] text-muted-foreground">{vocabToday} كلمة اليوم · تعمل بلا إنترنت</span>
+          </span>
+          <Badge>{vocabToday}</Badge>
+        </Link>
       )}
 
       {path && (

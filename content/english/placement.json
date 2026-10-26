@@ -1,0 +1,369 @@
+{
+  "path": "english",
+  "version": 1,
+  "questions": [
+    {
+      "id": "a1-v1",
+      "level": "A1",
+      "skill": "vocab",
+      "prompt": "ما معنى الكلمة؟",
+      "text": "brother",
+      "options": ["أخ", "أب", "صديق"],
+      "answer": 0
+    },
+    {
+      "id": "a1-v2",
+      "level": "A1",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة المناسبة.",
+      "text": "We eat ___ at 1 o'clock.",
+      "options": ["breakfast", "lunch", "bed"],
+      "answer": 1
+    },
+    {
+      "id": "a1-g1",
+      "level": "A1",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "My name ___ Ali.",
+      "options": ["am", "are", "is"],
+      "answer": 2
+    },
+    {
+      "id": "a1-g2",
+      "level": "A1",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "They ___ students at Al-Thawra School.",
+      "options": ["are", "is", "be"],
+      "answer": 0
+    },
+    {
+      "id": "a1-r1",
+      "level": "A1",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: من أين سلمى؟",
+      "text": "Hello! I'm Salma. I'm from Taiz. I'm sixteen years old.",
+      "options": ["Sana'a", "Taiz", "Aden"],
+      "answer": 1
+    },
+    {
+      "id": "a1-r2",
+      "level": "A1",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: ماذا يشرب أحمد في الصباح؟",
+      "text": "Ahmed gets up at six. He drinks tea with milk and goes to school.",
+      "options": ["Coffee", "Water", "Tea with milk"],
+      "answer": 2
+    },
+    {
+      "id": "a1-l1",
+      "level": "A1",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: كم عمر الطالب؟",
+      "listen": "Hi, my name is Omar. I am fifteen years old.",
+      "options": ["Fifteen", "Fifty", "Five"],
+      "answer": 0
+    },
+    {
+      "id": "a1-l2",
+      "level": "A1",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: ماذا تريد المرأة؟",
+      "listen": "Can I have two kilos of tomatoes, please?",
+      "options": ["Potatoes", "Tomatoes", "Bananas"],
+      "answer": 1
+    },
+
+    {
+      "id": "a2-v1",
+      "level": "A2",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة المناسبة.",
+      "text": "Can I have the ___, please? I want to see the price.",
+      "options": ["receipt", "ticket", "letter"],
+      "answer": 0
+    },
+    {
+      "id": "a2-v2",
+      "level": "A2",
+      "skill": "vocab",
+      "prompt": "ما عكس الكلمة؟",
+      "text": "cheap",
+      "options": ["small", "expensive", "new"],
+      "answer": 1
+    },
+    {
+      "id": "a2-v3",
+      "level": "A2",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة المناسبة.",
+      "text": "Turn ___ at the mosque, and the pharmacy is on your right.",
+      "options": ["up", "off", "left"],
+      "answer": 2
+    },
+    {
+      "id": "a2-g1",
+      "level": "A2",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "Yesterday we ___ to Al-Mukalla by bus.",
+      "options": ["go", "went", "going"],
+      "answer": 1
+    },
+    {
+      "id": "a2-g2",
+      "level": "A2",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "My sister usually ___ her homework after Asr.",
+      "options": ["does", "do", "doing"],
+      "answer": 0
+    },
+    {
+      "id": "a2-g3",
+      "level": "A2",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "Sana'a is ___ than Aden in winter.",
+      "options": ["cold", "colder", "coldest"],
+      "answer": 1
+    },
+    {
+      "id": "a2-r1",
+      "level": "A2",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: لماذا لم تذهب مريم إلى المدرسة؟",
+      "text": "Dear Teacher, Mariam could not come to school on Sunday because she had a fever. She is better now. — Mariam's mother",
+      "options": ["She was ill.", "She travelled.", "She was late."],
+      "answer": 0
+    },
+    {
+      "id": "a2-r2",
+      "level": "A2",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: متى يغلق المحل يوم الجمعة؟",
+      "text": "Al-Saeed Bookshop. Open Saturday to Thursday, 8 am to 9 pm. Friday: 4 pm to 10 pm.",
+      "options": ["9 pm", "4 pm", "10 pm"],
+      "answer": 2
+    },
+    {
+      "id": "a2-r3",
+      "level": "A2",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: ماذا سيفعل خالد في الإجازة؟",
+      "text": "Khaled is very happy. Next week the holiday starts, and he is going to visit his grandparents in Ibb. He wants to help them on their farm.",
+      "options": ["Study for exams", "Visit his grandparents", "Work in a shop"],
+      "answer": 1
+    },
+    {
+      "id": "a2-l1",
+      "level": "A2",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: أين ستلتقي سارة بصديقتها؟",
+      "listen": "Hi Huda, it's Sara. Let's meet in front of the school at four o'clock, not at the library. See you!",
+      "options": ["At the library", "In front of the school", "At the market"],
+      "answer": 1
+    },
+    {
+      "id": "a2-l2",
+      "level": "A2",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: كم سعر الحقيبة الآن؟",
+      "listen": "This bag was eight thousand, but today there is a discount. It's only six thousand.",
+      "options": ["Six thousand", "Eight thousand", "Sixteen thousand"],
+      "answer": 0
+    },
+    {
+      "id": "a2-l3",
+      "level": "A2",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: ماذا فعل المتحدث في عطلة نهاية الأسبوع؟",
+      "listen": "Last weekend I didn't go out. I stayed at home and watched a football match with my cousins.",
+      "options": ["He played football.", "He went to the market.", "He watched a match at home."],
+      "answer": 2
+    },
+
+    {
+      "id": "b1-v1",
+      "level": "B1",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة الأقرب في المعنى.",
+      "text": "The road was closed, so we had to find another ___.",
+      "options": ["route", "rule", "rest"],
+      "answer": 0
+    },
+    {
+      "id": "b1-v2",
+      "level": "B1",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة المناسبة.",
+      "text": "Water is very ___ in our village, so we use it carefully.",
+      "options": ["heavy", "scarce", "loud"],
+      "answer": 1
+    },
+    {
+      "id": "b1-v3",
+      "level": "B1",
+      "skill": "vocab",
+      "prompt": "اختر العبارة المناسبة.",
+      "text": "I'm sorry I'm late. My bus ___ on the way.",
+      "options": ["broke up", "broke out", "broke down"],
+      "answer": 2
+    },
+    {
+      "id": "b1-g1",
+      "level": "B1",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "I ___ English for two years now.",
+      "options": ["have studied", "study", "am study"],
+      "answer": 0
+    },
+    {
+      "id": "b1-g2",
+      "level": "B1",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "If it rains tomorrow, we ___ the trip to Shibam.",
+      "options": ["cancelled", "will cancel", "would cancelled"],
+      "answer": 1
+    },
+    {
+      "id": "b1-g3",
+      "level": "B1",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "The coffee ___ in Yemen is famous all over the world.",
+      "options": ["grows", "is growing them", "grown"],
+      "answer": 2
+    },
+    {
+      "id": "b1-r1",
+      "level": "B1",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: ما الفكرة الرئيسية؟",
+      "text": "Many students in our school now use their phones to study. They download lessons when there is electricity and internet, and then they study later, even when the power is off.",
+      "options": ["Students study offline with downloaded lessons.", "Phones are not allowed at school.", "The internet is always fast."],
+      "answer": 0
+    },
+    {
+      "id": "b1-r2",
+      "level": "B1",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: لماذا كتب يوسف الرسالة؟",
+      "text": "Hi Nabil, thanks for inviting me to your brother's wedding on Thursday. I'd love to come, but I have an exam on Saturday and I need to study. I hope we can meet next week. — Yousef",
+      "options": ["To accept an invitation", "To refuse an invitation politely", "To invite Nabil to a wedding"],
+      "answer": 1
+    },
+    {
+      "id": "b1-r3",
+      "level": "B1",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: ما الذي تقوله الكاتبة عن جزيرة سقطرى؟",
+      "text": "Socotra is an island in the Arabian Sea. About a third of its plants grow nowhere else on Earth, which is why scientists from many countries come to study them.",
+      "options": ["It is the biggest island in the world.", "Few scientists are interested in it.", "Many of its plants are unique."],
+      "answer": 2
+    },
+    {
+      "id": "b1-l1",
+      "level": "B1",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: ما المشكلة؟",
+      "listen": "Good morning. I bought this phone charger here yesterday, but it doesn't work. Could I change it for a new one, please?",
+      "options": ["The charger doesn't work.", "The phone is too expensive.", "The shop is closed."],
+      "answer": 0
+    },
+    {
+      "id": "b1-l2",
+      "level": "B1",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: ماذا تنصح المعلمة الطلاب؟",
+      "listen": "Don't try to learn fifty new words in one night. It's much better to review ten words every day, and say them out loud.",
+      "options": ["Learn many words in one night", "Review a few words every day", "Write the words only once"],
+      "answer": 1
+    },
+    {
+      "id": "b1-l3",
+      "level": "B1",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: متى سيصل الضيوف؟",
+      "listen": "Our guests were going to arrive at noon, but their car had a problem near Dhamar, so now they'll get here in the evening, after Maghrib.",
+      "options": ["At noon", "In the morning", "In the evening"],
+      "answer": 2
+    },
+
+    {
+      "id": "b2-v1",
+      "level": "B2",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة الأنسب.",
+      "text": "The new water project had a significant ___ on families in the valley.",
+      "options": ["impact", "income", "instance"],
+      "answer": 0
+    },
+    {
+      "id": "b2-v2",
+      "level": "B2",
+      "skill": "vocab",
+      "prompt": "اختر الكلمة الأقرب في المعنى إلى reluctant.",
+      "text": "He was reluctant to speak in front of the whole class.",
+      "options": ["eager", "unwilling", "proud"],
+      "answer": 1
+    },
+    {
+      "id": "b2-g1",
+      "level": "B2",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "If I had known about the scholarship earlier, I ___ for it.",
+      "options": ["would apply", "will have applied", "would have applied"],
+      "answer": 2
+    },
+    {
+      "id": "b2-g2",
+      "level": "B2",
+      "skill": "grammar",
+      "prompt": "أكمل الجملة.",
+      "text": "Not only ___ the exam, but she also got the highest mark in Hadramout.",
+      "options": ["did she pass", "she passed", "she did pass"],
+      "answer": 0
+    },
+    {
+      "id": "b2-r1",
+      "level": "B2",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: ماذا يقصد الكاتب؟",
+      "text": "While solar panels are expensive to install, many families argue that the cost is justified, since they no longer depend on an unreliable supply of electricity.",
+      "options": ["Solar panels are too expensive to be useful.", "The benefits of solar panels are worth the cost.", "Electricity is now reliable for most families."],
+      "answer": 1
+    },
+    {
+      "id": "b2-r2",
+      "level": "B2",
+      "skill": "reading",
+      "prompt": "اقرأ ثم أجب: ما الذي يمكن استنتاجه؟",
+      "text": "The old houses of Shibam, built of mud brick, have stood for centuries. However, heavy rains in recent years have damaged several of them, and local builders are now working to repair them using traditional methods.",
+      "options": ["The houses were built recently with modern materials.", "Rain has never been a problem for Shibam.", "Traditional skills are still needed to protect the city."],
+      "answer": 2
+    },
+    {
+      "id": "b2-l1",
+      "level": "B2",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: ما رأي المتحدثة؟",
+      "listen": "Some people say online courses can never replace a real classroom. I partly agree, but for students in remote areas, a good online course is often the only realistic option, so we should make them better rather than criticise them.",
+      "options": ["Online courses should be improved, not dismissed.", "Online courses are always better than classrooms.", "Students in remote areas don't need courses."],
+      "answer": 0
+    },
+    {
+      "id": "b2-l2",
+      "level": "B2",
+      "skill": "listening",
+      "prompt": "استمع ثم أجب: لماذا تأجّل الاجتماع؟",
+      "listen": "I'm afraid we'll have to postpone the meeting. Most of the committee members won't be able to attend because of the exams, so we'll reschedule it for the following week.",
+      "options": ["The room was not available.", "Most members can't attend.", "The exams were cancelled."],
+      "answer": 1
+    }
+  ]
+}

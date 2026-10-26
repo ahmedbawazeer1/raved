@@ -1,54 +1,30 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
+import { speak, useEnglishVoice, useSpeechSupported } from "@/lib/tts";
 
 const RATES = [0.8, 1, 0.6] as const;
 
-/** Listening text read aloud by the phone's own voice (speechSynthesis): no data used, works offline. */
-const noopSubscribe = () => () => {};
-function subscribeVoices(onChange: () => void) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) return () => {};
-  window.speechSynthesis.addEventListener?.("voiceschanged", onChange);
-  return () => window.speechSynthesis.removeEventListener?.("voiceschanged", onChange);
-}
-function englishVoiceSnapshot(): boolean {
-  if (!("speechSynthesis" in window)) return false;
-  const voices = window.speechSynthesis.getVoices();
-  // Some browsers load voices lazily: assume available until the list says otherwise.
-  return voices.length === 0 || voices.some((v) => v.lang.toLowerCase().startsWith("en"));
-}
-
 export function AudioBlock({ text }: { text: string }) {
-  const supported = useSyncExternalStore(noopSubscribe, () => "speechSynthesis" in window, () => null);
-  const hasEnglishVoice = useSyncExternalStore(subscribeVoices, englishVoiceSnapshot, () => true);
+  const supported = useSpeechSupported();
+  const hasEnglishVoice = useEnglishVoice();
   const [playing, setPlaying] = useState(false);
   const [rate, setRate] = useState<(typeof RATES)[number]>(0.8);
   const [showText, setShowText] = useState(false);
-  const utterance = useRef<SpeechSynthesisUtterance | null>(null);
 
   // Stop speaking when the student leaves the lesson.
   useEffect(() => () => window.speechSynthesis?.cancel(), []);
 
   function toggle() {
-    const synth = window.speechSynthesis;
     if (playing) {
-      synth.cancel();
+      window.speechSynthesis.cancel();
       setPlaying(false);
       return;
     }
-    const u = new SpeechSynthesisUtterance(text);
-    u.lang = "en-US";
-    u.rate = rate;
-    const voice = synth.getVoices().find((v) => v.lang.toLowerCase().startsWith("en"));
-    if (voice) u.voice = voice;
-    u.onend = () => setPlaying(false);
-    u.onerror = () => setPlaying(false);
-    utterance.current = u;
-    synth.cancel();
-    synth.speak(u);
+    speak(text, { rate, onEnd: () => setPlaying(false) });
     setPlaying(true);
   }
 
