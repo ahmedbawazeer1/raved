@@ -1,70 +1,136 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Bell, BookOpen } from "lucide-react";
-import { Card } from "@/components/ui/card";
+import { Bell, CheckCircle2, Circle, PlayCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { SiteHeaderMinimal } from "@/components/site/site-header-minimal";
+import { Card } from "@/components/ui/card";
+import { En } from "@/components/en";
+import { MixedText } from "@/components/mixed-text";
+import { ProgressBar } from "@/components/student/progress-bar";
 import { requireActiveStudent } from "@/lib/auth/session";
+import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
+import { nextStep } from "@/lib/student/progress";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata: Metadata = { title: "اليوم" };
 
-export default async function StudentHomePage() {
+function greeting(): string {
+  const hour = Number(new Intl.DateTimeFormat("en-GB", { hour: "numeric", hour12: false, timeZone: "Asia/Aden" }).format(new Date()));
+  return hour < 12 ? "صباح الخير" : "مساء الخير";
+}
+
+export default async function TodayPage() {
   const { profile, userId } = await requireActiveStudent();
+  const path = await getPrimaryPath(userId);
+  const curriculum = path ? await getCurriculum(userId, path.id) : null;
+  const step = curriculum ? nextStep(curriculum.units, curriculum) : { kind: "empty" as const };
   const supabase = await createClient();
-  const [{ data: enrollment }, { data: notifications }] = await Promise.all([
-    supabase.from("enrollments").select("paths(title, slug), levels(code, title)").eq("student_id", userId).eq("is_primary", true).maybeSingle(),
-    supabase.from("notifications").select("id, title, body, created_at, read_at").eq("student_id", userId).order("created_at", { ascending: false }).limit(5),
-  ]);
-  const firstName = profile.full_name.split(" ")[0];
+  const { count: unread } = await supabase
+    .from("notifications")
+    .select("id", { count: "exact", head: true })
+    .eq("student_id", userId)
+    .is("read_at", null);
+
+  const unit = step.kind === "lesson" || step.kind === "quiz" ? step.unit : null;
+  const lessons = unit ? [...unit.lessons].sort((a, b) => a.position - b.position) : [];
+  const done = unit ? unit.lessonsDone : 0;
+  const href =
+    step.kind === "lesson" ? `/student/learn/${step.lessonId}` : step.kind === "quiz" ? `/student/quiz/${step.quizId}` : null;
 
   return (
-    <>
-      <SiteHeaderMinimal
-        action={
-          <form action="/auth/signout" method="post">
-            <Button type="submit" variant="secondary" size="sm">
-              خروج
-            </Button>
-          </form>
-        }
-      />
-      <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-6">
-        <h1 className="text-2xl font-bold">أهلاً {firstName}، تم قبولك في رفد 🎉</h1>
-        <Card className="flex items-start gap-3 p-5">
-          <span className="flex size-11 flex-none items-center justify-center rounded-xl bg-primary text-white">
-            <BookOpen className="size-5" aria-hidden="true" />
-          </span>
-          <div className="flex flex-col gap-1">
-            <p className="font-bold">{enrollment?.paths?.title ?? "مسارك"}</p>
-            {enrollment?.levels && (
-              <p className="text-sm text-muted-foreground">
-                تبدأ من المستوى <span className="font-en">{enrollment.levels.code}</span> · {enrollment.levels.title}
-              </p>
-            )}
-            <p className="mt-1 text-sm leading-relaxed">الدروس وجلسة اليوم تُفتح قريباً. سنبلغك هنا عندما تجهز أول وحدة.</p>
-          </div>
-        </Card>
-
-        <Card className="p-5">
-          <h2 className="mb-2 flex items-center gap-2 font-bold">
-            <Bell className="size-5 text-primary" aria-hidden="true" /> الإشعارات
-          </h2>
-          {(notifications ?? []).length === 0 ? (
-            <p className="text-sm text-muted-foreground">لا توجد إشعارات بعد.</p>
-          ) : (
-            notifications!.map((n) => (
-              <div key={n.id} className="border-b border-muted py-3 last:border-b-0">
-                <p className="font-semibold">{n.title}</p>
-                {n.body && <p className="text-sm text-muted-foreground">{n.body}</p>}
-              </div>
-            ))
-          )}
-        </Card>
-        <Link href="/paths" className="text-sm">
-          تصفّح المسارات ←
+    <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
+      <header className="flex items-center justify-between">
+        <div>
+          <p className="text-sm text-muted-foreground">{greeting()}</p>
+          <h1 className="text-2xl font-bold">{profile.full_name.split(" ")[0]}</h1>
+        </div>
+        <Link
+          href="/student/settings#notifications"
+          aria-label={unread ? `الإشعارات، ${unread} جديدة` : "الإشعارات"}
+          className="relative flex size-11 items-center justify-center rounded-full bg-card text-foreground"
+        >
+          <Bell className="size-5" aria-hidden="true" />
+          {Boolean(unread) && <span className="absolute end-2 top-2 size-2.5 rounded-full bg-accent" />}
         </Link>
-      </main>
-    </>
+      </header>
+
+      {step.kind === "empty" && (
+        <Card className="p-5">
+          <p className="font-bold">الدروس قيد الإعداد</p>
+          <p className="mt-1 text-sm leading-relaxed text-muted-foreground">سننشر أول وحدة قريباً، وسنبلغك هنا عندما تجهز.</p>
+        </Card>
+      )}
+
+      {step.kind === "finished" && (
+        <Card className="p-5">
+          <p className="font-bold">أنهيت كل الوحدات المنشورة 🎉</p>
+          <p className="mt-1 text-sm text-muted-foreground">وحدات جديدة في الطريق. راجع ما تعلمته حتى ذلك الحين.</p>
+        </Card>
+      )}
+
+      {unit && href && (
+        <>
+          <section className="flex flex-col gap-3 rounded-2xl bg-primary p-5 text-white">
+            <p className="text-sm text-primary-tint">
+              جلسة اليوم · {profile.daily_goal_minutes} دقيقة
+            </p>
+            <h2 className="text-xl font-bold">
+              الوحدة {unit.position}: <En>{unit.title}</En>
+            </h2>
+            <div className="flex items-center gap-3 [&_[role=progressbar]]:bg-white/25 [&_[role=progressbar]>span]:bg-accent">
+              <ProgressBar value={done} max={lessons.length} label="تقدم الوحدة" />
+              <span className="text-sm text-primary-tint">
+                {done} من {lessons.length}
+              </span>
+            </div>
+            <Button asChild variant="accent" size="lg">
+              <Link href={href}>{done === 0 ? "ابدأ جلسة اليوم" : "أكمل جلسة اليوم"}</Link>
+            </Button>
+          </section>
+
+          <Card className="px-4 py-1.5">
+            {lessons.map((l) => {
+              const isDone = curriculum!.completedLessonIds.has(l.id);
+              const isNow = step.kind === "lesson" && step.lessonId === l.id;
+              return (
+                <Link
+                  key={l.id}
+                  href={`/student/learn/${l.id}`}
+                  className="flex min-h-12 items-center gap-3 border-b border-muted py-2.5 text-sm text-foreground no-underline last:border-b-0 hover:text-foreground"
+                >
+                  {isDone ? (
+                    <CheckCircle2 className="size-5 text-success" aria-label="مكتمل" />
+                  ) : isNow ? (
+                    <PlayCircle className="size-5 text-primary" aria-label="الآن" />
+                  ) : (
+                    <Circle className="size-5 text-[#9AA8A4]" aria-hidden="true" />
+                  )}
+                  <span className={`flex-1 ${isDone ? "text-muted-foreground" : isNow ? "font-semibold" : ""}`}>
+                    <MixedText text={l.title} />
+                  </span>
+                  {isNow && <Badge>الآن</Badge>}
+                </Link>
+              );
+            })}
+            {unit.quizId && (
+              <Link
+                href={`/student/quiz/${unit.quizId}`}
+                className="flex min-h-12 items-center gap-3 py-2.5 text-sm text-foreground no-underline hover:text-foreground"
+              >
+                {step.kind === "quiz" ? <PlayCircle className="size-5 text-primary" aria-label="الآن" /> : <Circle className="size-5 text-[#9AA8A4]" aria-hidden="true" />}
+                <span className={`flex-1 ${step.kind === "quiz" ? "font-semibold" : ""}`}>اختبار الوحدة</span>
+                {step.kind === "quiz" && <Badge>الآن</Badge>}
+              </Link>
+            )}
+          </Card>
+        </>
+      )}
+
+      {path && (
+        <Link href={`/student/${path.slug}`} className="text-sm">
+          كل الوحدات ←
+        </Link>
+      )}
+    </main>
   );
 }

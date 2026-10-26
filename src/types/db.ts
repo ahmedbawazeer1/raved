@@ -312,42 +312,111 @@ export type Database = {
           },
         ]
       }
+      lesson_progress: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          id: string
+          lesson_id: string
+          rating: string | null
+          status: string
+          student_id: string
+          synced_at: string | null
+          updated_at: string
+          video_position_sec: number | null
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          lesson_id: string
+          rating?: string | null
+          status?: string
+          student_id: string
+          synced_at?: string | null
+          updated_at?: string
+          video_position_sec?: number | null
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          id?: string
+          lesson_id?: string
+          rating?: string | null
+          status?: string
+          student_id?: string
+          synced_at?: string | null
+          updated_at?: string
+          video_position_sec?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "lesson_progress_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "lesson_progress_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       lessons: {
         Row: {
+          archived: boolean
+          blocks: Json
           created_at: string
           est_minutes: number | null
           id: string
+          item_key: string | null
           position: number
           review_note: string | null
           review_status: string
           skill: string
+          speaking_task: Json | null
           title: string
           unit_id: string
           updated_at: string
+          writing_task: Json | null
         }
         Insert: {
+          archived?: boolean
+          blocks?: Json
           created_at?: string
           est_minutes?: number | null
           id?: string
+          item_key?: string | null
           position: number
           review_note?: string | null
           review_status?: string
           skill: string
+          speaking_task?: Json | null
           title: string
           unit_id: string
           updated_at?: string
+          writing_task?: Json | null
         }
         Update: {
+          archived?: boolean
+          blocks?: Json
           created_at?: string
           est_minutes?: number | null
           id?: string
+          item_key?: string | null
           position?: number
           review_note?: string | null
           review_status?: string
           skill?: string
+          speaking_task?: Json | null
           title?: string
           unit_id?: string
           updated_at?: string
+          writing_task?: Json | null
         }
         Relationships: [
           {
@@ -630,6 +699,194 @@ export type Database = {
           },
         ]
       }
+      quiz_attempts: {
+        Row: {
+          answers: Json
+          client_created_at: string | null
+          client_id: string | null
+          correct: number
+          created_at: string
+          id: string
+          passed: boolean
+          quiz_id: string
+          results: Json
+          score: number
+          student_id: string
+          submitted_offline: boolean
+          total: number
+          updated_at: string
+        }
+        Insert: {
+          answers: Json
+          client_created_at?: string | null
+          client_id?: string | null
+          correct: number
+          created_at?: string
+          id?: string
+          passed: boolean
+          quiz_id: string
+          results: Json
+          score: number
+          student_id: string
+          submitted_offline?: boolean
+          total: number
+          updated_at?: string
+        }
+        Update: {
+          answers?: Json
+          client_created_at?: string | null
+          client_id?: string | null
+          correct?: number
+          created_at?: string
+          id?: string
+          passed?: boolean
+          quiz_id?: string
+          results?: Json
+          score?: number
+          student_id?: string
+          submitted_offline?: boolean
+          total?: number
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "quiz_attempts_quiz_id_fkey"
+            columns: ["quiz_id"]
+            isOneToOne: false
+            referencedRelation: "quizzes"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "quiz_attempts_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      quiz_keys: {
+        Row: {
+          created_at: string
+          questions: Json
+          quiz_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          questions?: Json
+          quiz_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          questions?: Json
+          quiz_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "quiz_keys_quiz_id_fkey"
+            columns: ["quiz_id"]
+            isOneToOne: true
+            referencedRelation: "quizzes"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      quizzes: {
+        Row: {
+          created_at: string
+          id: string
+          kind: string
+          level_id: string | null
+          pass_percent: number
+          unit_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          kind?: string
+          level_id?: string | null
+          pass_percent?: number
+          unit_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          kind?: string
+          level_id?: string | null
+          pass_percent?: number
+          unit_id?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "quizzes_level_id_fkey"
+            columns: ["level_id"]
+            isOneToOne: false
+            referencedRelation: "levels"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "quizzes_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      reports: {
+        Row: {
+          created_at: string
+          id: string
+          kind: string
+          lesson_id: string | null
+          note: string | null
+          status: string
+          student_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          kind: string
+          lesson_id?: string | null
+          note?: string | null
+          status?: string
+          student_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          kind?: string
+          lesson_id?: string | null
+          note?: string | null
+          status?: string
+          student_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reports_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reports_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       settings: {
         Row: {
           created_at: string
@@ -696,6 +953,54 @@ export type Database = {
         }
         Relationships: []
       }
+      unit_packages: {
+        Row: {
+          created_at: string
+          id: string
+          imported_by: string | null
+          package: Json
+          size_bytes: number
+          unit_id: string
+          updated_at: string
+          version: number
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          imported_by?: string | null
+          package: Json
+          size_bytes: number
+          unit_id: string
+          updated_at?: string
+          version: number
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          imported_by?: string | null
+          package?: Json
+          size_bytes?: number
+          unit_id?: string
+          updated_at?: string
+          version?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "unit_packages_imported_by_fkey"
+            columns: ["imported_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "unit_packages_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       units: {
         Row: {
           can_do: string
@@ -755,20 +1060,89 @@ export type Database = {
           },
         ]
       }
+      vocab_items: {
+        Row: {
+          archived: boolean
+          created_at: string
+          example_ar: string | null
+          example_en: string
+          id: string
+          ipa: string | null
+          item_key: string
+          meaning_ar: string
+          part_of_speech: string
+          position: number
+          unit_id: string
+          updated_at: string
+          word: string
+        }
+        Insert: {
+          archived?: boolean
+          created_at?: string
+          example_ar?: string | null
+          example_en: string
+          id?: string
+          ipa?: string | null
+          item_key: string
+          meaning_ar: string
+          part_of_speech: string
+          position: number
+          unit_id: string
+          updated_at?: string
+          word: string
+        }
+        Update: {
+          archived?: boolean
+          created_at?: string
+          example_ar?: string | null
+          example_en?: string
+          id?: string
+          ipa?: string | null
+          item_key?: string
+          meaning_ar?: string
+          part_of_speech?: string
+          position?: number
+          unit_id?: string
+          updated_at?: string
+          word?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "vocab_items_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
+      get_quiz: { Args: { p_quiz_id: string }; Returns: Json }
+      import_unit_package: { Args: { p_package: Json }; Returns: string }
       is_active_member: { Args: never; Returns: boolean }
       is_admin: { Args: never; Returns: boolean }
       notify_path_waitlist: { Args: { p_path_id: string }; Returns: string[] }
+      publish_unit: { Args: { p_unit_id: string }; Returns: undefined }
       review_application: {
         Args: { p_application_id: string; p_decision: string; p_note?: string }
         Returns: Json
       }
       submit_application: {
         Args: { p_guardian_consent: boolean; p_privacy_consent: boolean }
+        Returns: string
+      }
+      submit_quiz: {
+        Args: {
+          p_answers: Json
+          p_client_created_at?: string
+          p_client_id?: string
+          p_offline?: boolean
+          p_quiz_id: string
+        }
         Returns: string
       }
     }
@@ -863,3 +1237,43 @@ export type TablesUpdate<
       ? U
       : never
     : never
+
+export type Enums<
+  DefaultSchemaEnumNameOrOptions extends
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof DatabaseWithoutInternals },
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never) = never,
+> = DefaultSchemaEnumNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof DatabaseWithoutInternals },
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never) = never,
+> = PublicCompositeTypeNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+
+export const Constants = {
+  public: {
+    Enums: {},
+  },
+} as const

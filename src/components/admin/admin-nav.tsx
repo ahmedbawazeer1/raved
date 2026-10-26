@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileCheck2, Home, Route, Settings } from "lucide-react";
+import { FileCheck2, FileJson, Home, Route, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { href: "/admin", label: "الرئيسية", icon: Home, exact: true },
   { href: "/admin/applications", label: "طلبات الالتحاق", icon: FileCheck2, badgeKey: "applications" as const },
   { href: "/admin/paths", label: "المسارات", icon: Route },
+  { href: "/admin/content", label: "المحتوى", icon: FileJson },
   { href: "/admin/settings", label: "الإعدادات", icon: Settings },
 ];
 

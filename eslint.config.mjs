@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "archive/**",
     "design/**",
     "public/sw.js",
+    "playwright-report/**",
+    "test-results/**",
   ]),
 ]);
 
