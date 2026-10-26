@@ -1,9 +1,20 @@
+import Link from "next/link";
+import { Mic, PenLine } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
 import type { PackageLesson } from "@/lib/content/types";
 
-/** Speaking / writing task description. AI evaluation arrives in phase 5. */
-export function TaskPreview({ speaking, writing }: { speaking?: PackageLesson["speaking_task"] | null; writing?: PackageLesson["writing_task"] | null }) {
+/** Speaking / writing task of the lesson, with a link to do it (evaluated by AI). */
+export function TaskPreview({
+  lessonId,
+  speaking,
+  writing,
+}: {
+  lessonId: string;
+  speaking?: PackageLesson["speaking_task"] | null;
+  writing?: PackageLesson["writing_task"] | null;
+}) {
   if (!speaking && !writing) return null;
   return (
     <Card className="flex flex-col gap-2 border-ai-tint p-4">
@@ -25,9 +36,12 @@ export function TaskPreview({ speaking, writing }: { speaking?: PackageLesson["s
           من {writing.min_words} إلى {writing.max_words} كلمة.
         </p>
       )}
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        التقييم الآلي {speaking ? "للمحادثة" : "للكتابة"} يُفتح قريباً. تدرّب الآن {speaking ? "بصوت عالٍ" : "على ورقة"}، ثم أكمل الدرس.
-      </p>
+      <Button asChild variant="secondary" className="self-start">
+        <Link href={`/student/practice/${speaking ? "speaking" : "writing"}/${lessonId}`}>
+          {speaking ? <Mic className="size-4" aria-hidden="true" /> : <PenLine className="size-4" aria-hidden="true" />}
+          {speaking ? "سجّل إجابتك واحصل على تقييم" : "اكتب واحصل على تصحيح"}
+        </Link>
+      </Button>
     </Card>
   );
 }

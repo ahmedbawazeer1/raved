@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { createClient } from "@/lib/supabase/server";
+import { quotaStatus } from "@/lib/ai/limits";
 
 export default async function AdminHomePage() {
   const supabase = await createClient();
@@ -10,6 +11,8 @@ export default async function AdminHomePage() {
     supabase.from("paths").select("id", { count: "exact", head: true }).eq("status", "published"),
     supabase.from("path_waitlist").select("id", { count: "exact", head: true }).is("notified_at", null),
   ]);
+
+  const quotas = (await quotaStatus()).filter((q) => q.alert);
 
   const kpis = [
     { label: "طلبات تنتظر المراجعة", value: pending.count ?? 0, href: "/admin/applications" },
@@ -21,6 +24,11 @@ export default async function AdminHomePage() {
   return (
     <div className="flex flex-col gap-5">
       <h1 className="text-[28px] font-bold">الرئيسية</h1>
+      {quotas.map((q) => (
+        <Link key={q.provider} href="/admin/ai-review" className="rounded-2xl bg-warning-tint p-4 text-sm font-semibold text-[#5C3D00] no-underline">
+          تنبيه: استُهلك {q.percent}% من الحصة المجانية اليومية لـ <span className="font-en">{q.provider}</span> ({q.requests} من {q.quota} طلب). قد يتوقف التقييم الآلي قبل نهاية اليوم.
+        </Link>
+      ))}
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         {kpis.map((k) => {
           const body = (

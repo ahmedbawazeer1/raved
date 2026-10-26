@@ -4,7 +4,7 @@
  */
 import { openDB, type DBSchema, type IDBPDatabase } from "idb";
 
-export type QueueKind = "vocab_review";
+export type QueueKind = "vocab_review" | "writing_submit";
 
 export interface QueueItem<T = unknown> {
   id: string;

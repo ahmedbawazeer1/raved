@@ -50,4 +50,7 @@ export default async function globalSetup() {
   await admin.from("placement_attempts").delete().eq("student_id", user!.id);
   await admin.from("skill_estimates").delete().eq("student_id", user!.id);
   await admin.from("enrollments").update({ start_unit_id: null }).eq("student_id", user!.id);
+  await admin.from("writing_submissions").delete().eq("student_id", user!.id);
+  await admin.from("speaking_attempts").delete().eq("student_id", user!.id);
+  await admin.from("ai_usage").delete().eq("student_id", user!.id);
 }

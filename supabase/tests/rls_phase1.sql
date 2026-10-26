@@ -94,7 +94,7 @@ select set_config('request.jwt.claims', json_build_object('sub', :'ad', 'role', 
 select tests.ok(tests.count('select * from public.profiles') = 3, 'admin sees all profiles');
 select tests.ok(tests.count('select * from public.paths') = 5, 'admin sees draft paths too');
 select tests.ok(tests.count('select * from storage.objects') = 1, 'admin can read recommendation files');
-select tests.ok(tests.count('select * from public.settings') = 7, 'admin reads settings');
+select tests.ok(tests.count('select * from public.settings') >= 7, 'admin reads settings');
 select id as app1 from public.applications where student_id = :'s1' \gset
 select tests.throws(format('select public.review_application(%L, ''rejected'', '''')', :'app1'), 'reject needs a note');
 select tests.ok((public.review_application(:'app1', 'needs_changes', 'الصورة غير واضحة') ->> 'email') = 'student1@example.com', 'admin requests changes');

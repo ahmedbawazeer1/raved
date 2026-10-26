@@ -7,7 +7,7 @@ import { buildDeck, type Deck, type DeckReview, type DeckWord } from "./deck";
  * Words the student has met: those of every unit in which they completed at least one
  * lesson, on their primary path. RLS limits it to their own progress and live units.
  */
-export const getVocabDeck = cache(async (userId: string, pathId: string): Promise<Deck> => {
+export const getLearnedWords = cache(async (userId: string, pathId: string): Promise<DeckWord[]> => {
   const supabase = await createClient();
   const { data: progress } = await supabase
     .from("lesson_progress")
@@ -15,7 +15,7 @@ export const getVocabDeck = cache(async (userId: string, pathId: string): Promis
     .eq("student_id", userId)
     .eq("status", "completed");
   const unitIds = [...new Set((progress ?? []).map((p) => p.lessons?.unit_id).filter((id): id is string => Boolean(id)))];
-  if (!unitIds.length) return buildDeck([], [], new Date());
+  if (!unitIds.length) return [];
 
   const { data: items } = await supabase
     .from("vocab_items")
@@ -34,8 +34,13 @@ export const getVocabDeck = cache(async (userId: string, pathId: string): Promis
     exampleAr: v.example_ar,
     order: v.units.levels.position * 1_000_000 + v.units.position * 1_000 + v.position,
   }));
-  if (!words.length) return buildDeck([], [], new Date());
+  return words;
+});
 
+export const getVocabDeck = cache(async (userId: string, pathId: string): Promise<Deck> => {
+  const words = await getLearnedWords(userId, pathId);
+  if (!words.length) return buildDeck([], [], new Date());
+  const supabase = await createClient();
   const { data: rows } = await supabase
     .from("vocab_reviews")
     .select("vocab_item_id, due_at, ease, interval_days, repetitions, lapses")

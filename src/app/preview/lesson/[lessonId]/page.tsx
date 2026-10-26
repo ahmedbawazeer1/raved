@@ -16,7 +16,7 @@ export default async function LessonPreviewPage({ params }: PageProps<"/preview/
   const supabase = await createClient();
   const { data: lesson } = await supabase
     .from("lessons")
-    .select("title, blocks, speaking_task, writing_task")
+    .select("id, title, blocks, speaking_task, writing_task")
     .eq("id", lessonId)
     .maybeSingle();
   if (!lesson) notFound();
@@ -31,6 +31,7 @@ export default async function LessonPreviewPage({ params }: PageProps<"/preview/
       <main className="flex flex-col gap-4 px-4 py-5">
         <LessonBlocks blocks={(lesson.blocks ?? []) as unknown as LessonBlock[]} />
         <TaskPreview
+          lessonId={lesson.id}
           speaking={lesson.speaking_task as PackageLesson["speaking_task"] | null}
           writing={lesson.writing_task as PackageLesson["writing_task"] | null}
         />

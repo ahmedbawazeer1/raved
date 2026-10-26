@@ -95,7 +95,7 @@ export default async function PlacementResultPage() {
               تبدأ من الوحدة {unit.position} في <En>{unit.levels?.code ?? overall}</En>: <MixedText text={unit.title} />.
             </>
           ) : (
-            <>تبدأ من أول وحدة في <En>{overall}</En> عندما تُنشر، وسنبلغك.</>
+            <>تبدأ من أول وحدة في <En>{overall}</En> عندما تُنشر، وحتى ذلك الحين تدرس الوحدات المتاحة.</>
           )}
           {attempt.eta_months ? (
             <>

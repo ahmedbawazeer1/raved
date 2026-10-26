@@ -74,6 +74,8 @@ jobs:
       - run: npm run build
       - run: npx playwright install --with-deps chromium --no-shell
       - run: npm run test:e2e
+        env:
+          RAVED_AI_FAKE: "1"
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
