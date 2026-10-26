@@ -76,7 +76,7 @@ export function AssistantChat({ lessonId, initialRemaining }: { lessonId: string
         <p className="text-xs text-muted-foreground">{remaining} سؤالاً متبقياً اليوم · يحتاج اتصالاً · يجيب عن الدرس فقط</p>
       </main>
       <form
-        className="sticky bottom-0 border-t border-border bg-card px-4 py-3"
+        className="sticky bottom-[68px] border-t border-border bg-card px-4 py-3 md:bottom-0"
         onSubmit={(e) => {
           e.preventDefault();
           send(input);

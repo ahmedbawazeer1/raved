@@ -18,7 +18,7 @@ export default async function AssistantPage(props: PageProps<"/student/learn/[le
   const today = await remainingToday(userId);
 
   return (
-    <div className="flex min-h-dvh flex-col bg-background">
+    <div className="flex min-h-[calc(100dvh-68px)] flex-col bg-background md:min-h-dvh">
       <PracticeHeader backHref={`/student/learn/${lesson.id}`} overline={`عن درس: ${lesson.title}`} title="المساعد" />
       {aiConfigured() ? (
         <AssistantChat lessonId={lesson.id} initialRemaining={today.remaining.assistant} />

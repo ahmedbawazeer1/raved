@@ -141,7 +141,7 @@ export default async function WritingResultPage(props: PageProps<"/student/pract
           </>
         )}
       </main>
-      <footer className="sticky bottom-[76px] border-t border-border bg-card px-4 py-3 md:bottom-0">
+      <footer className="sticky bottom-[68px] border-t border-border bg-card px-4 py-3 md:bottom-0">
         <div className="mx-auto flex max-w-[640px] gap-2">
           <Button asChild variant="secondary" className="flex-1">
             <Link href="/student/practice">إلى التدريب</Link>

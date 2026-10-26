@@ -81,7 +81,7 @@ export function QuizRunner({ quizId, questions, closeHref }: { quizId: string; q
         {error && <Alert tone="error">{error}</Alert>}
       </main>
 
-      <footer className="sticky bottom-0 border-t border-border bg-card px-4 pt-3 pb-5">
+      <footer className="sticky bottom-[68px] border-t border-border bg-card px-4 pt-3 pb-5 md:bottom-0">
         <div className="mx-auto flex max-w-[640px] gap-2.5">
           {index > 0 && (
             <Button type="button" variant="secondary" className="min-h-13" disabled={pending} onClick={() => setIndex(index - 1)}>
