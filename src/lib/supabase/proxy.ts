@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 import type { Database } from "@/types/db";
 
-const PROTECTED_PREFIXES = ["/student", "/admin", "/apply"];
+const PROTECTED_PREFIXES = ["/student", "/admin", "/apply", "/preview"];
 const PUBLIC_EXCEPTIONS = ["/apply/recommendation-template"];
 
 function isProtected(pathname: string): boolean {

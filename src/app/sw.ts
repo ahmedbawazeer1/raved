@@ -16,7 +16,7 @@ const neverCache: RuntimeCaching[] = [
   {
     matcher: ({ url, sameOrigin }) =>
       sameOrigin &&
-      ["/admin", "/api/", "/auth/", "/apply", "/login", "/signup", "/forgot", "/reset-password"].some((p) =>
+      ["/admin", "/preview/", "/api/", "/auth/", "/apply", "/login", "/signup", "/forgot", "/reset-password"].some((p) =>
         url.pathname.startsWith(p),
       ),
     handler: new NetworkOnly(),
