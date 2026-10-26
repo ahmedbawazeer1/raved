@@ -27,7 +27,8 @@ const serwist = new Serwist({
   precacheEntries: self.__SW_MANIFEST,
   skipWaiting: true,
   clientsClaim: true,
-  navigationPreload: true,
+  // No navigation preload: it bypasses the worker when offline and made the fallback flaky.
+  navigationPreload: false,
   runtimeCaching: [...neverCache, ...defaultCache],
   fallbacks: {
     entries: [
