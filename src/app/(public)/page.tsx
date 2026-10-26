@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
-import { PathIcon } from "@/components/site/path-icon";
-import { getPublicPaths } from "@/lib/paths/catalog";
+import { PathCard } from "@/components/paths/path-card";
+import { getPublicPaths } from "@/lib/paths/queries";
 
 const features = [
   {
@@ -42,8 +42,10 @@ const faqs = [
   { q: "متى تُفتح المسارات الأخرى؟", a: "بعد استقرار مسار الإنجليزي. اضغط «أبلغني» على المسار الذي يهمك." },
 ];
 
-export default function HomePage() {
-  const paths = getPublicPaths();
+export const revalidate = 300;
+
+export default async function HomePage() {
+  const paths = await getPublicPaths();
   const featured = paths.find((p) => p.status === "published");
   const others = paths.filter((p) => p !== featured);
 
@@ -113,64 +115,9 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="flex flex-col gap-2.5 md:flex-row md:flex-wrap md:gap-4">
-            {featured && (
-              <Link
-                href={`/paths/${featured.slug}`}
-                className="flex gap-3 rounded-2xl border-2 border-primary bg-card p-4 text-foreground no-underline hover:text-foreground md:flex-[2_1_420px] md:flex-col md:p-[26px]"
-              >
-                <div className="flex shrink-0 items-center justify-between">
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-primary text-white md:size-[52px] md:rounded-[14px]">
-                    <PathIcon name={featured.icon} className="size-[22px] md:size-[26px]" />
-                  </span>
-                  <Badge tone="warning" className="hidden md:inline-flex">
-                    المسار الأهم الآن
-                  </Badge>
-                </div>
-                <div className="flex flex-1 flex-col gap-1 md:gap-3">
-                  <p className="font-bold md:text-[22px]">{featured.title}</p>
-                  <p className="hidden text-[15px] leading-[1.8] text-muted-foreground md:block">
-                    <En>{featured.summary}</En>
-                  </p>
-                  {featured.levels && (
-                    <div className="hidden flex-wrap gap-1.5 md:flex">
-                      {featured.levels.map((l) => (
-                        <Badge key={l}>
-                          <En>{l}</En>
-                        </Badge>
-                      ))}
-                      <Badge tone="warning">مسار الامتحان</Badge>
-                    </div>
-                  )}
-                  <p className="text-[13px] text-muted-foreground md:mt-auto md:text-sm md:font-semibold md:text-primary">
-                    {featured.duration} <span className="hidden md:inline">←</span>
-                  </p>
-                </div>
-                <Badge tone="warning" className="md:hidden">
-                  متاح
-                </Badge>
-              </Link>
-            )}
+            {featured && <PathCard path={featured} featured />}
             {others.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/paths/${p.slug}`}
-                className="flex items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3.5 text-foreground no-underline hover:text-foreground md:flex-[1_1_240px] md:flex-col md:items-stretch md:gap-2.5 md:p-[22px]"
-              >
-                <div className="flex shrink-0 items-center justify-between">
-                  <span className="flex size-10 items-center justify-center rounded-xl bg-muted text-subtle md:size-11">
-                    <PathIcon name={p.icon} className="size-5 md:size-[22px]" />
-                  </span>
-                  <Badge tone="muted" className="hidden md:inline-flex">
-                    قريباً
-                  </Badge>
-                </div>
-                <p className="flex-1 text-[15px] font-semibold md:flex-none md:text-[17px] md:font-bold">{p.title}</p>
-                <p className="hidden text-sm leading-[1.7] text-muted-foreground md:block">{p.summary}</p>
-                <p className="hidden text-[13px] text-muted-foreground md:mt-auto md:block">أبلغني عند الإطلاق</p>
-                <Badge tone="muted" className="md:hidden">
-                  قريباً
-                </Badge>
-              </Link>
+              <PathCard key={p.id} path={p} />
             ))}
           </div>
         </div>
