@@ -1,5 +1,6 @@
 import "server-only";
 import { createClient } from "@supabase/supabase-js";
+import type { Database } from "@/types/db";
 import { getSupabasePublicEnv } from "./env";
 
 /**
@@ -13,7 +14,7 @@ export function createAdminClient() {
   if (!secretKey) {
     throw new Error("Supabase is not configured: SUPABASE_SECRET_KEY (or SUPABASE_SERVICE_ROLE_KEY) is missing");
   }
-  return createClient(url, secretKey, {
+  return createClient<Database>(url, secretKey, {
     auth: { persistSession: false, autoRefreshToken: false },
   });
 }

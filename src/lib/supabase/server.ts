@@ -1,14 +1,17 @@
 import "server-only";
 import { cookies } from "next/headers";
 import { createServerClient } from "@supabase/ssr";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
+import type { Database } from "@/types/db";
 import { getSupabasePublicEnv } from "./env";
 
 /** Supabase client for Server Components, Route Handlers and Server Actions. Respects RLS as the signed-in user. */
 export async function createClient() {
-  const { url, publishableKey } = getSupabasePublicEnv();
+  // Read cookies first: it marks the page as per-request (never prerendered at build time).
   const cookieStore = await cookies();
+  const { url, publishableKey } = getSupabasePublicEnv();
 
-  return createServerClient(url, publishableKey, {
+  return createServerClient<Database>(url, publishableKey, {
     cookies: {
       getAll() {
         return cookieStore.getAll();
@@ -24,5 +27,13 @@ export async function createClient() {
         }
       },
     },
+  });
+}
+
+/** Cookie-less client for public, cacheable reads (anon role, RLS applies). */
+export function createPublicClient() {
+  const { url, publishableKey } = getSupabasePublicEnv();
+  return createSupabaseClient<Database>(url, publishableKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
   });
 }

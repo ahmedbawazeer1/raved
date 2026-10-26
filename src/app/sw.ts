@@ -11,12 +11,14 @@ declare global {
 
 declare const self: ServiceWorkerGlobalScope;
 
-// docs/OFFLINE.md: never cache admin pages, auth or AI/API calls.
+// docs/OFFLINE.md: never cache admin pages, auth, onboarding (personal data) or AI/API calls.
 const neverCache: RuntimeCaching[] = [
   {
     matcher: ({ url, sameOrigin }) =>
       sameOrigin &&
-      (url.pathname.startsWith("/admin") || url.pathname.startsWith("/api/") || url.pathname.startsWith("/auth/")),
+      ["/admin", "/api/", "/auth/", "/apply", "/login", "/signup", "/forgot", "/reset-password"].some((p) =>
+        url.pathname.startsWith(p),
+      ),
     handler: new NetworkOnly(),
   },
 ];
