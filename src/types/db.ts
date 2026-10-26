@@ -314,6 +314,11 @@ export type Database = {
       }
       lessons: {
         Row: {
+          archived: boolean
+          blocks: Json
+          item_key: string | null
+          speaking_task: Json | null
+          writing_task: Json | null
           created_at: string
           est_minutes: number | null
           id: string
@@ -326,6 +331,11 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          archived?: boolean
+          blocks?: Json
+          item_key?: string | null
+          speaking_task?: Json | null
+          writing_task?: Json | null
           created_at?: string
           est_minutes?: number | null
           id?: string
@@ -338,6 +348,11 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          archived?: boolean
+          blocks?: Json
+          item_key?: string | null
+          speaking_task?: Json | null
+          writing_task?: Json | null
           created_at?: string
           est_minutes?: number | null
           id?: string
@@ -630,6 +645,284 @@ export type Database = {
           },
         ]
       }
+      lesson_progress: {
+        Row: {
+          id: string
+          student_id: string
+          lesson_id: string
+          status: string
+          video_position_sec: number | null
+          completed_at: string | null
+          rating: string | null
+          synced_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          student_id: string
+          lesson_id: string
+          status?: string
+          video_position_sec?: number | null
+          completed_at?: string | null
+          rating?: string | null
+          synced_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          student_id?: string
+          lesson_id?: string
+          status?: string
+          video_position_sec?: number | null
+          completed_at?: string | null
+          rating?: string | null
+          synced_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      quiz_attempts: {
+        Row: {
+          id: string
+          student_id: string
+          quiz_id: string
+          answers: Json
+          results: Json
+          correct: number
+          total: number
+          score: number
+          passed: boolean
+          submitted_offline: boolean
+          client_id: string | null
+          client_created_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          student_id: string
+          quiz_id: string
+          answers: Json
+          results: Json
+          correct: number
+          total: number
+          score: number
+          passed: boolean
+          submitted_offline?: boolean
+          client_id?: string | null
+          client_created_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          student_id?: string
+          quiz_id?: string
+          answers?: Json
+          results?: Json
+          correct?: number
+          total?: number
+          score?: number
+          passed?: boolean
+          submitted_offline?: boolean
+          client_id?: string | null
+          client_created_at?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      quiz_keys: {
+        Row: {
+          quiz_id: string
+          questions: Json
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          quiz_id: string
+          questions?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          quiz_id?: string
+          questions?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      quizzes: {
+        Row: {
+          id: string
+          unit_id: string | null
+          level_id: string | null
+          kind: string
+          pass_percent: number
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          unit_id?: string | null
+          level_id?: string | null
+          kind?: string
+          pass_percent?: number
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          unit_id?: string | null
+          level_id?: string | null
+          kind?: string
+          pass_percent?: number
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "quizzes_unit_id_fkey"
+            columns: ["unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      reports: {
+        Row: {
+          id: string
+          student_id: string
+          lesson_id: string | null
+          kind: string
+          note: string | null
+          status: string
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          student_id: string
+          lesson_id?: string | null
+          kind: string
+          note?: string | null
+          status?: string
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          student_id?: string
+          lesson_id?: string | null
+          kind?: string
+          note?: string | null
+          status?: string
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "reports_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "reports_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      unit_packages: {
+        Row: {
+          id: string
+          unit_id: string
+          version: number
+          package: Json
+          size_bytes: number
+          imported_by: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          unit_id: string
+          version: number
+          package: Json
+          size_bytes: number
+          imported_by?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          unit_id?: string
+          version?: number
+          package?: Json
+          size_bytes?: number
+          imported_by?: string | null
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      vocab_items: {
+        Row: {
+          id: string
+          unit_id: string
+          item_key: string
+          position: number
+          word: string
+          ipa: string | null
+          part_of_speech: string
+          meaning_ar: string
+          example_en: string
+          example_ar: string | null
+          archived: boolean
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          unit_id: string
+          item_key: string
+          position: number
+          word: string
+          ipa?: string | null
+          part_of_speech: string
+          meaning_ar: string
+          example_en: string
+          example_ar?: string | null
+          archived?: boolean
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          unit_id?: string
+          item_key?: string
+          position?: number
+          word?: string
+          ipa?: string | null
+          part_of_speech?: string
+          meaning_ar?: string
+          example_en?: string
+          example_ar?: string | null
+          archived?: boolean
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       settings: {
         Row: {
           created_at: string
@@ -766,6 +1059,19 @@ export type Database = {
       review_application: {
         Args: { p_application_id: string; p_decision: string; p_note?: string }
         Returns: Json
+      }
+      get_quiz: { Args: { p_quiz_id: string }; Returns: Json }
+      import_unit_package: { Args: { p_package: Json }; Returns: string }
+      publish_unit: { Args: { p_unit_id: string }; Returns: undefined }
+      submit_quiz: {
+        Args: {
+          p_quiz_id: string
+          p_answers: Json
+          p_client_id?: string
+          p_client_created_at?: string
+          p_offline?: boolean
+        }
+        Returns: string
       }
       submit_application: {
         Args: { p_guardian_consent: boolean; p_privacy_consent: boolean }

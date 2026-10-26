@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
+import { MixedText } from "@/components/mixed-text";
 import { PathIcon } from "@/components/site/path-icon";
 import { WaitlistForm } from "@/components/paths/waitlist-form";
 import { getExams, getPublicPath, getPublicPaths, getPublishedUnits } from "@/lib/paths/queries";
@@ -23,16 +24,6 @@ export default async function PathPage({ params }: PageProps<"/paths/[slug]">) {
   const path = await getPublicPath(slug);
   if (!path) notFound();
   return path.status === "published" ? <PublishedPath slug={slug} /> : <SoonPath slug={slug} />;
-}
-
-/** Mixed Arabic text with Latin codes (e.g. "A1 إلى B2"): Latin runs rendered LTR. */
-function MixedText({ text }: { text: string }) {
-  const parts = text.split(/([A-Za-z][A-Za-z0-9+\-/ ]*[A-Za-z0-9+])/g);
-  return (
-    <>
-      {parts.map((part, i) => (i % 2 === 1 ? <En key={i}>{part}</En> : part))}
-    </>
-  );
 }
 
 async function PublishedPath({ slug }: { slug: string }) {
