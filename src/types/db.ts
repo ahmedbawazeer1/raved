@@ -151,6 +151,7 @@ export type Database = {
           id: string
           is_primary: boolean
           path_id: string
+          start_unit_id: string | null
           started_at: string
           student_id: string
           target: Json
@@ -162,6 +163,7 @@ export type Database = {
           id?: string
           is_primary?: boolean
           path_id: string
+          start_unit_id?: string | null
           started_at?: string
           student_id: string
           target?: Json
@@ -173,6 +175,7 @@ export type Database = {
           id?: string
           is_primary?: boolean
           path_id?: string
+          start_unit_id?: string | null
           started_at?: string
           student_id?: string
           target?: Json
@@ -191,6 +194,13 @@ export type Database = {
             columns: ["path_id"]
             isOneToOne: false
             referencedRelation: "paths"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "enrollments_start_unit_id_fkey"
+            columns: ["start_unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
             referencedColumns: ["id"]
           },
           {
@@ -618,6 +628,126 @@ export type Database = {
         }
         Relationships: []
       }
+      placement_attempts: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          eta_months: number | null
+          id: string
+          overall_level: string | null
+          path_id: string
+          skill_levels: Json | null
+          start_unit_id: string | null
+          started_at: string
+          state: Json
+          status: string
+          student_id: string
+          updated_at: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          eta_months?: number | null
+          id?: string
+          overall_level?: string | null
+          path_id: string
+          skill_levels?: Json | null
+          start_unit_id?: string | null
+          started_at?: string
+          state: Json
+          status?: string
+          student_id: string
+          updated_at?: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          eta_months?: number | null
+          id?: string
+          overall_level?: string | null
+          path_id?: string
+          skill_levels?: Json | null
+          start_unit_id?: string | null
+          started_at?: string
+          state?: Json
+          status?: string
+          student_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "placement_attempts_path_id_fkey"
+            columns: ["path_id"]
+            isOneToOne: false
+            referencedRelation: "paths"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "placement_attempts_start_unit_id_fkey"
+            columns: ["start_unit_id"]
+            isOneToOne: false
+            referencedRelation: "units"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "placement_attempts_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      placement_questions: {
+        Row: {
+          answer: number
+          archived: boolean
+          created_at: string
+          id: string
+          item: Json
+          item_key: string
+          level: string
+          path_id: string
+          position: number
+          skill: string
+          updated_at: string
+        }
+        Insert: {
+          answer: number
+          archived?: boolean
+          created_at?: string
+          id?: string
+          item: Json
+          item_key: string
+          level: string
+          path_id: string
+          position: number
+          skill: string
+          updated_at?: string
+        }
+        Update: {
+          answer?: number
+          archived?: boolean
+          created_at?: string
+          id?: string
+          item?: Json
+          item_key?: string
+          level?: string
+          path_id?: string
+          position?: number
+          skill?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "placement_questions_path_id_fkey"
+            columns: ["path_id"]
+            isOneToOne: false
+            referencedRelation: "paths"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           birth_date: string | null
@@ -908,6 +1038,51 @@ export type Database = {
         }
         Relationships: []
       }
+      skill_estimates: {
+        Row: {
+          created_at: string
+          level: string
+          path_id: string
+          skill: string
+          source: string
+          student_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          level: string
+          path_id: string
+          skill: string
+          source: string
+          student_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          level?: string
+          path_id?: string
+          skill?: string
+          source?: string
+          student_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "skill_estimates_path_id_fkey"
+            columns: ["path_id"]
+            isOneToOne: false
+            referencedRelation: "paths"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "skill_estimates_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       sources: {
         Row: {
           channel: string
@@ -1116,12 +1291,79 @@ export type Database = {
           },
         ]
       }
+      vocab_reviews: {
+        Row: {
+          created_at: string
+          due_at: string
+          ease: number
+          id: string
+          interval_days: number
+          lapses: number
+          last_result: string | null
+          last_reviewed_at: string | null
+          repetitions: number
+          review_count: number
+          student_id: string
+          updated_at: string
+          vocab_item_id: string
+        }
+        Insert: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          id?: string
+          interval_days?: number
+          lapses?: number
+          last_result?: string | null
+          last_reviewed_at?: string | null
+          repetitions?: number
+          review_count?: number
+          student_id: string
+          updated_at?: string
+          vocab_item_id: string
+        }
+        Update: {
+          created_at?: string
+          due_at?: string
+          ease?: number
+          id?: string
+          interval_days?: number
+          lapses?: number
+          last_result?: string | null
+          last_reviewed_at?: string | null
+          repetitions?: number
+          review_count?: number
+          student_id?: string
+          updated_at?: string
+          vocab_item_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "vocab_reviews_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "vocab_reviews_vocab_item_id_fkey"
+            columns: ["vocab_item_id"]
+            isOneToOne: false
+            referencedRelation: "vocab_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
       get_quiz: { Args: { p_quiz_id: string }; Returns: Json }
+      import_placement_bank: {
+        Args: { p_bank: Json; p_path_slug: string }
+        Returns: number
+      }
       import_unit_package: { Args: { p_package: Json }; Returns: string }
       is_active_member: { Args: never; Returns: boolean }
       is_admin: { Args: never; Returns: boolean }

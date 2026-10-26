@@ -14,6 +14,8 @@ export interface UnitInput {
 export interface ProgressInput {
   completedLessonIds: Set<string>;
   passedQuizIds: Set<string>;
+  /** Set by the placement test: earlier units stay "open" (optional review), not required. */
+  startUnitId?: string | null;
 }
 
 export type UnitState = "done" | "now" | "open" | "locked";
@@ -26,16 +28,19 @@ export interface UnitView extends UnitInput {
 
 /**
  * Orders units (level, then unit) and assigns states: units whose quiz is passed are "done",
- * the first unfinished unit is "now", the ones after it are "locked".
+ * the first unfinished unit (from the placement start unit on) is "now", the ones after it
+ * are "locked", and unfinished ones before the start unit are "open".
  */
 export function buildCurriculum(units: UnitInput[], progress: ProgressInput): UnitView[] {
   const ordered = [...units].sort((a, b) => a.levelPosition - b.levelPosition || a.position - b.position);
+  const startIndex = Math.max(0, ordered.findIndex((u) => u.id === progress.startUnitId));
   let foundNow = false;
-  return ordered.map((u) => {
+  return ordered.map((u, i) => {
     const lessonsDone = u.lessons.filter((l) => progress.completedLessonIds.has(l.id)).length;
     const quizPassed = u.quizId ? progress.passedQuizIds.has(u.quizId) : lessonsDone === u.lessons.length && u.lessons.length > 0;
     let state: UnitState;
     if (quizPassed) state = "done";
+    else if (i < startIndex) state = "open";
     else if (!foundNow) {
       state = "now";
       foundNow = true;

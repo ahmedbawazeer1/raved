@@ -1,12 +1,8 @@
 import { expect, test } from "@playwright/test";
-import { STUDENT } from "./fixtures";
+import { login } from "./fixtures";
 
 test("a student completes today's lessons and passes the unit quiz", async ({ page }) => {
-  await page.goto("/login");
-  await page.getByLabel("البريد الإلكتروني").fill(STUDENT.email);
-  await page.getByLabel("كلمة المرور").fill(STUDENT.password);
-  await page.getByRole("button", { name: "تسجيل الدخول" }).click();
-  await expect(page).toHaveURL(/\/student$/);
+  await login(page);
 
   // Today's session → first lesson (grammar).
   await page.getByRole("link", { name: "ابدأ جلسة اليوم" }).click();
