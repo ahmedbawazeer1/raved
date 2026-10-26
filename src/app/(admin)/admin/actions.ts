@@ -181,3 +181,59 @@ export async function saveSettings(_prev: AdminFormState, formData: FormData): P
   revalidatePath("/admin/settings");
   return { ok: true, message: "حُفظت الإعدادات." };
 }
+
+// ---------------------------------------------------------------------------
+// AI: daily limits per student, pause switch, provider quota; human review
+// ---------------------------------------------------------------------------
+const limit = z.coerce.number().int().min(0).max(100);
+
+export async function saveAiSettings(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const parsed = z
+    .object({
+      speaking: limit,
+      writing: limit,
+      assistant: limit,
+      quota: z.coerce.number().int().min(1).max(1_000_000),
+      alert: z.coerce.number().int().min(1).max(100),
+    })
+    .safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return { error: "تحقق من الأرقام: الحدود من 0 إلى 100، ونسبة التنبيه من 1 إلى 100." };
+  const { speaking, writing, assistant, quota, alert } = parsed.data;
+  const paused = formData.get("paused") === "on";
+
+  const supabase = await createClient();
+  const { error } = await supabase.from("settings").upsert([
+    { key: "ai_limits", value: { speaking, writing, assistant } },
+    { key: "ai_paused", value: paused },
+    { key: "ai_daily_quota", value: { groq: quota } },
+    { key: "quota_alert_percent", value: alert },
+  ]);
+  if (error) return { error: "تعذر الحفظ. حاول مرة أخرى." };
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "settings.ai", target: "ai", data: { speaking, writing, assistant, quota, alert, paused } });
+  revalidatePath("/admin/settings");
+  revalidatePath("/admin/ai-review");
+  return { ok: true, message: "حُفظت إعدادات الذكاء الاصطناعي." };
+}
+
+export async function reviewAiAttempt(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const parsed = z
+    .object({ attempt_type: z.enum(["speaking", "writing"]), attempt_id: z.uuid(), agrees: z.enum(["yes", "no"]), note: z.string().max(1000).optional() })
+    .safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return { error: "حدث خطأ." };
+  const supabase = await createClient();
+  const { error } = await supabase.from("ai_reviews").upsert(
+    {
+      attempt_type: parsed.data.attempt_type,
+      attempt_id: parsed.data.attempt_id,
+      reviewer_id: userId,
+      agrees: parsed.data.agrees === "yes",
+      note: parsed.data.note?.trim() || null,
+    },
+    { onConflict: "attempt_type,attempt_id,reviewer_id" },
+  );
+  if (error) return { error: "تعذر الحفظ." };
+  revalidatePath("/admin/ai-review");
+  return { ok: true, message: "حُفظ رأيك." };
+}

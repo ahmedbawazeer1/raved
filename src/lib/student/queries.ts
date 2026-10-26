@@ -78,16 +78,23 @@ export const getCurriculum = cache(async (userId: string, pathId: string): Promi
   ]);
   const completedLessonIds = new Set((progress ?? []).map((p) => p.lesson_id));
   const passedQuizIds = new Set((attempts ?? []).map((a) => a.quiz_id));
+  // Start from the student's level (set by the placement test), looked up on every visit so
+  // that units published later at that level take over from the fallback start.
   const { data: enrollment } = await supabase
     .from("enrollments")
-    .select("start_unit_id")
+    .select("levels!enrollments_current_level_id_fkey(position)")
     .eq("student_id", userId)
     .eq("path_id", pathId)
     .maybeSingle();
+  const levelPosition = enrollment?.levels?.position ?? 0;
+  const startUnitId =
+    [...units]
+      .sort((a, b) => a.levelPosition - b.levelPosition || a.position - b.position)
+      .find((u) => u.levelPosition >= levelPosition)?.id ?? null;
 
   return {
     levels: (levels ?? []).map(({ id, code, title, position }) => ({ id, code, title, position })),
-    units: buildCurriculum(units, { completedLessonIds, passedQuizIds, startUnitId: enrollment?.start_unit_id }),
+    units: buildCurriculum(units, { completedLessonIds, passedQuizIds, startUnitId }),
     completedLessonIds,
     passedQuizIds,
   };

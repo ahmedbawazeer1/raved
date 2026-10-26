@@ -137,7 +137,15 @@
           "approx_size_mb": 6,
           "needs_check": true
         }
-      ]
+      ],
+      "writing_task": {
+        "prompt_en": "Write about you and your family in 4–6 sentences. Use am, is and are.",
+        "min_words": 25,
+        "max_words": 60,
+        "rubric_focus": [
+          "verb to be"
+        ]
+      }
     },
     {
       "id": "A1-01-l5",

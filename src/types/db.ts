@@ -15,6 +15,100 @@ export type Database = {
   }
   public: {
     Tables: {
+      ai_reviews: {
+        Row: {
+          agrees: boolean
+          attempt_id: string
+          attempt_type: string
+          created_at: string
+          id: string
+          note: string | null
+          reviewer_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          agrees: boolean
+          attempt_id: string
+          attempt_type: string
+          created_at?: string
+          id?: string
+          note?: string | null
+          reviewer_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          agrees?: boolean
+          attempt_id?: string
+          attempt_type?: string
+          created_at?: string
+          id?: string
+          note?: string | null
+          reviewer_id?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_reviews_reviewer_id_fkey"
+            columns: ["reviewer_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      ai_usage: {
+        Row: {
+          created_at: string
+          day: string
+          error: string | null
+          feature: string
+          id: number
+          input_tokens: number | null
+          model: string
+          ok: boolean
+          output_tokens: number | null
+          provider: string
+          student_id: string | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          day?: string
+          error?: string | null
+          feature: string
+          id?: never
+          input_tokens?: number | null
+          model: string
+          ok: boolean
+          output_tokens?: number | null
+          provider: string
+          student_id?: string | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          day?: string
+          error?: string | null
+          feature?: string
+          id?: never
+          input_tokens?: number | null
+          model?: string
+          ok?: boolean
+          output_tokens?: number | null
+          provider?: string
+          student_id?: string | null
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "ai_usage_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       applications: {
         Row: {
           created_at: string
@@ -1128,6 +1222,78 @@ export type Database = {
         }
         Relationships: []
       }
+      speaking_attempts: {
+        Row: {
+          created_at: string
+          duration_sec: number
+          estimated_cefr: string | null
+          feedback: Json | null
+          id: string
+          lesson_id: string
+          model: string | null
+          prompt_en: string
+          prompt_version: string | null
+          provider: string | null
+          scores: Json | null
+          status: string
+          student_id: string
+          transcript: string
+          transcription: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          duration_sec: number
+          estimated_cefr?: string | null
+          feedback?: Json | null
+          id?: string
+          lesson_id: string
+          model?: string | null
+          prompt_en: string
+          prompt_version?: string | null
+          provider?: string | null
+          scores?: Json | null
+          status?: string
+          student_id: string
+          transcript: string
+          transcription?: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          duration_sec?: number
+          estimated_cefr?: string | null
+          feedback?: Json | null
+          id?: string
+          lesson_id?: string
+          model?: string | null
+          prompt_en?: string
+          prompt_version?: string | null
+          provider?: string | null
+          scores?: Json | null
+          status?: string
+          student_id?: string
+          transcript?: string
+          transcription?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "speaking_attempts_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "speaking_attempts_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       unit_packages: {
         Row: {
           created_at: string
@@ -1350,6 +1516,94 @@ export type Database = {
             columns: ["vocab_item_id"]
             isOneToOne: false
             referencedRelation: "vocab_items"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      writing_submissions: {
+        Row: {
+          client_id: string | null
+          created_at: string
+          estimated_cefr: string | null
+          evaluated_at: string | null
+          feedback: Json | null
+          id: string
+          lesson_id: string
+          model: string | null
+          parent_id: string | null
+          prompt_en: string
+          prompt_version: string | null
+          provider: string | null
+          scores: Json | null
+          status: string
+          student_id: string
+          text: string
+          updated_at: string
+          version: number
+          word_count: number
+        }
+        Insert: {
+          client_id?: string | null
+          created_at?: string
+          estimated_cefr?: string | null
+          evaluated_at?: string | null
+          feedback?: Json | null
+          id?: string
+          lesson_id: string
+          model?: string | null
+          parent_id?: string | null
+          prompt_en: string
+          prompt_version?: string | null
+          provider?: string | null
+          scores?: Json | null
+          status?: string
+          student_id: string
+          text: string
+          updated_at?: string
+          version?: number
+          word_count: number
+        }
+        Update: {
+          client_id?: string | null
+          created_at?: string
+          estimated_cefr?: string | null
+          evaluated_at?: string | null
+          feedback?: Json | null
+          id?: string
+          lesson_id?: string
+          model?: string | null
+          parent_id?: string | null
+          prompt_en?: string
+          prompt_version?: string | null
+          provider?: string | null
+          scores?: Json | null
+          status?: string
+          student_id?: string
+          text?: string
+          updated_at?: string
+          version?: number
+          word_count?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "writing_submissions_lesson_id_fkey"
+            columns: ["lesson_id"]
+            isOneToOne: false
+            referencedRelation: "lessons"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "writing_submissions_parent_id_fkey"
+            columns: ["parent_id"]
+            isOneToOne: false
+            referencedRelation: "writing_submissions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "writing_submissions_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
         ]

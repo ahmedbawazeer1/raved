@@ -13,6 +13,10 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/admin/content": ["./content/**/*.json"],
   },
+  experimental: {
+    // Whisper fallback uploads up to ~90 s of speech (transcribed, then discarded).
+    serverActions: { bodySizeLimit: "4mb" },
+  },
   turbopack: {
     rules: {
       "*.css": {
