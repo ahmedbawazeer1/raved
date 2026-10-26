@@ -10,6 +10,8 @@ test("airplane mode shows the offline page instead of a browser error", async ({
 
   await context.setOffline(true);
   await page.goto("/paths").catch(() => undefined);
+  // Helps diagnose CI failures: which page did the browser end up on?
+  test.info().annotations.push({ type: "offline-url", description: page.url() });
   await expect(page.getByRole("heading", { name: "لا يوجد اتصال بالإنترنت" })).toBeVisible();
 
   // Pages already visited still open from the cache.

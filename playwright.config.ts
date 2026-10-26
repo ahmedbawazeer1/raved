@@ -16,6 +16,8 @@ export default defineConfig({
     baseURL: "http://127.0.0.1:3000",
     locale: "ar",
     trace: "retain-on-failure",
+    // Full Chromium (new headless), not the reduced headless shell: it handles service workers like real Chrome.
+    channel: process.env.PW_CHROMIUM_PATH ? undefined : "chromium",
     launchOptions: process.env.PW_CHROMIUM_PATH ? { executablePath: process.env.PW_CHROMIUM_PATH } : undefined,
   },
   webServer: {
