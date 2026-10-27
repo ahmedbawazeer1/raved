@@ -27,3 +27,16 @@ describe("lenient AI output schemas", () => {
     expect(speakingSchema.safeParse({ scores: { task: 4, fluency: 3, grammar: 3, vocabulary: 3 } }).success).toBe(false);
   });
 });
+
+describe("prompts name every key the schema needs", () => {
+  it("lists the exact JSON keys in the system prompts", async () => {
+    const { WRITING_SYSTEM } = await import("./writing");
+    const { SPEAKING_SYSTEM } = await import("./speaking");
+    for (const key of ["scores", "task_achievement", "coherence", "estimated_cefr", "errors", "\"text\"", "correction", "explanation_ar", "strengths_ar", "next_step_ar"]) {
+      expect(WRITING_SYSTEM).toContain(key);
+    }
+    for (const key of ["scores", "fluency", "estimated_cefr", "corrections", "wrong", "right", "tip_ar", "improved_version"]) {
+      expect(SPEAKING_SYSTEM).toContain(key);
+    }
+  });
+});

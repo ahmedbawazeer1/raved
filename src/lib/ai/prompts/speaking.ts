@@ -2,7 +2,7 @@ import { z } from "zod";
 import { atMost, cefr, score, text } from "./shared";
 
 /** docs/AI_PROMPTS.md §1. Bump the version whenever the prompt or schema changes. */
-export const SPEAKING_PROMPT_VERSION = "speaking-v1";
+export const SPEAKING_PROMPT_VERSION = "speaking-v2";
 
 export const SPEAKING_SYSTEM = `You are an experienced, kind English teacher evaluating a short spoken answer by an Arabic-speaking secondary-school student in Yemen.
 You receive: the task, the student's CEFR level, the unit grammar focus, and an automatic transcript of their speech (it may contain transcription errors; do not punish obvious transcription mistakes).
@@ -14,7 +14,10 @@ Then give:
 - tip_ar: one actionable tip in Arabic for next time, with one English example
 - improved_version: the student's answer rewritten correctly at their level + one step higher (max 80 words)
 Never mention that you are an AI. Never invent content the student did not say. Never comment on the student's identity.
-Return ONLY JSON matching the schema.`;
+Return ONLY JSON matching the schema.
+
+JSON schema (use exactly these keys):
+{"scores":{"task":1-5,"fluency":1-5,"grammar":1-5,"vocabulary":1-5},"estimated_cefr":"A1|A1+|A2|A2+|B1|B1+|B2|B2+","strengths_ar":"جملة واحدة","corrections":[{"wrong":"what the student said","right":"correct form","explanation_ar":"شرح قصير"}],"tip_ar":"نصيحة مع مثال إنجليزي","improved_version":"improved answer in English"}`;
 
 export function speakingUserMessage(v: { prompt: string; level: string; grammarPoint: string; transcript: string; seconds: number }): string {
   return `TASK: ${v.prompt}
