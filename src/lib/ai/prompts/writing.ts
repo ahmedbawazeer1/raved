@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CEFR_ESTIMATES } from "./shared";
+import { atMost, cefr, flag, score, text } from "./shared";
 
 /** docs/AI_PROMPTS.md §2. Bump the version whenever the prompt or schema changes. */
 export const WRITING_PROMPT_VERSION = "writing-v1";
@@ -18,14 +18,11 @@ WORD LIMITS: ${v.minWords}-${v.maxWords}
 TEXT: """${v.text}"""`;
 }
 
-const score = z.number().int().min(1).max(5);
 export const writingSchema = z.object({
   scores: z.object({ task_achievement: score, coherence: score, vocabulary: score, grammar: score }),
-  estimated_cefr: z.enum(CEFR_ESTIMATES),
-  errors: z
-    .array(z.object({ text: z.string(), correction: z.string(), explanation_ar: z.string().max(200), optional: z.boolean().default(false) }))
-    .max(6),
-  strengths_ar: z.string().max(200),
-  next_step_ar: z.string().max(200),
+  estimated_cefr: cefr,
+  errors: atMost(z.object({ text: z.string(), correction: z.string(), explanation_ar: text(200), optional: flag }), 6),
+  strengths_ar: text(200),
+  next_step_ar: text(200),
 });
-export type WritingFeedback = z.infer<typeof writingSchema>;
+export type WritingFeedback = z.output<typeof writingSchema>;

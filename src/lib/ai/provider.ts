@@ -42,6 +42,11 @@ async function availableModels(): Promise<string[] | null> {
   }
 }
 
+/** Reasoning models (gpt-oss) think before answering: keep that short to save tokens and time. */
+function providerOptionsFor(model: string) {
+  return model.startsWith("openai/gpt-oss") ? { groq: { reasoningEffort: "low" } } : undefined;
+}
+
 async function modelFor(task: ModelTask): Promise<string> {
   return chooseModel(task, await availableModels(), OVERRIDES[task]);
 }
@@ -93,7 +98,7 @@ export async function evaluateJson<T>(v: {
   feature: "speaking" | "writing";
   system: string;
   prompt: string;
-  schema: z.ZodType<T>;
+  schema: z.ZodType<T, unknown>;
   fake: () => T;
 }): Promise<AiResult<T>> {
   if (fakeAiEnabled()) {
@@ -107,6 +112,7 @@ export async function evaluateJson<T>(v: {
     prompt: v.prompt,
     temperature: 0.2,
     schema: v.schema,
+    providerOptions: providerOptionsFor(model),
     onCall: (call) => log(v.studentId, v.feature, "groq", model, call),
   });
   return { data, provider: "groq", model };
@@ -128,6 +134,7 @@ export async function assistantReply(v: {
     prompt: "",
     messages: v.messages,
     temperature: 0.5,
+    providerOptions: providerOptionsFor(model),
     onCall: (call) => log(v.studentId, "assistant", "groq", model, call),
   });
   return { data, provider: "groq", model };

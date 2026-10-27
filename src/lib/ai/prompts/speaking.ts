@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CEFR_ESTIMATES } from "./shared";
+import { atMost, cefr, score, text } from "./shared";
 
 /** docs/AI_PROMPTS.md §1. Bump the version whenever the prompt or schema changes. */
 export const SPEAKING_PROMPT_VERSION = "speaking-v1";
@@ -24,13 +24,12 @@ TRANSCRIPT: """${v.transcript}"""
 DURATION_SECONDS: ${v.seconds}`;
 }
 
-const score = z.number().int().min(1).max(5);
 export const speakingSchema = z.object({
   scores: z.object({ task: score, fluency: score, grammar: score, vocabulary: score }),
-  estimated_cefr: z.enum(CEFR_ESTIMATES),
-  strengths_ar: z.string().max(200),
-  corrections: z.array(z.object({ wrong: z.string(), right: z.string(), explanation_ar: z.string().max(200) })).max(2),
-  tip_ar: z.string().max(250),
-  improved_version: z.string().max(600),
+  estimated_cefr: cefr,
+  strengths_ar: text(200),
+  corrections: atMost(z.object({ wrong: z.string(), right: z.string(), explanation_ar: text(200) }), 2),
+  tip_ar: text(250),
+  improved_version: text(600),
 });
-export type SpeakingFeedback = z.infer<typeof speakingSchema>;
+export type SpeakingFeedback = z.output<typeof speakingSchema>;
