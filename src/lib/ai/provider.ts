@@ -5,6 +5,7 @@ import { createAdminClient } from "@/lib/supabase/admin";
 import { AiError } from "./errors";
 import { generateJson, generatePlainText, transcribeAudio, type CallRecord } from "./generate";
 import { getAiSettings, remainingToday, type LimitedFeature } from "./limits";
+import { chooseModel, type ModelTask } from "./models";
 
 /**
  * The only door to AI providers. Student text goes to Groq only (CLAUDE.md: Gemini's free
@@ -13,11 +14,37 @@ import { getAiSettings, remainingToday, type LimitedFeature } from "./limits";
  */
 type Feature = LimitedFeature | "transcription";
 
-const MODELS = {
-  evaluation: process.env.GROQ_EVAL_MODEL || "llama-3.3-70b-versatile",
-  assistant: process.env.GROQ_ASSISTANT_MODEL || "llama-3.1-8b-instant",
-  transcription: process.env.GROQ_TRANSCRIBE_MODEL || "whisper-large-v3-turbo",
+const OVERRIDES: Record<ModelTask, string | undefined> = {
+  evaluation: process.env.GROQ_EVAL_MODEL,
+  assistant: process.env.GROQ_ASSISTANT_MODEL,
+  transcription: process.env.GROQ_TRANSCRIBE_MODEL,
 };
+
+let modelList: { at: number; ids: string[] } | null = null;
+const MODEL_LIST_TTL_MS = 60 * 60 * 1000;
+
+/** Groq's current models (cached for an hour), so retired models are skipped automatically. */
+async function availableModels(): Promise<string[] | null> {
+  if (modelList && Date.now() - modelList.at < MODEL_LIST_TTL_MS) return modelList.ids;
+  try {
+    const res = await fetch("https://api.groq.com/openai/v1/models", {
+      headers: { Authorization: `Bearer ${process.env.GROQ_API_KEY}` },
+      cache: "no-store",
+      signal: AbortSignal.timeout(5000),
+    });
+    if (!res.ok) return modelList?.ids ?? null;
+    const body = (await res.json()) as { data?: { id: string; active?: boolean }[] };
+    const ids = (body.data ?? []).filter((m) => m.active !== false).map((m) => m.id);
+    modelList = { at: Date.now(), ids };
+    return ids;
+  } catch {
+    return modelList?.ids ?? null;
+  }
+}
+
+async function modelFor(task: ModelTask): Promise<string> {
+  return chooseModel(task, await availableModels(), OVERRIDES[task]);
+}
 
 /** Deterministic answers for end-to-end tests (never on Vercel). */
 export function fakeAiEnabled(): boolean {
@@ -73,7 +100,7 @@ export async function evaluateJson<T>(v: {
     await log(v.studentId, v.feature, "fake", "fake", { ok: true });
     return { data: v.schema.parse(v.fake()), provider: "fake", model: "fake" };
   }
-  const model = MODELS.evaluation;
+  const model = await modelFor("evaluation");
   const data = await generateJson({
     model: groq()(model),
     system: v.system,
@@ -94,7 +121,7 @@ export async function assistantReply(v: {
     await log(v.studentId, "assistant", "fake", "fake", { ok: true });
     return { data: "هذا مثال على إجابة المساعد: نستخدم am مع I، مثل: I am a student.", provider: "fake", model: "fake" };
   }
-  const model = MODELS.assistant;
+  const model = await modelFor("assistant");
   const data = await generatePlainText({
     model: groq()(model),
     system: v.system,
@@ -109,6 +136,6 @@ export async function assistantReply(v: {
 /** Whisper fallback when the browser cannot transcribe. The audio is not stored anywhere. */
 export async function transcribeSpeech(studentId: string, audio: Uint8Array): Promise<string> {
   if (fakeAiEnabled()) return "Hello. I am from Aden. I like football.";
-  const model = MODELS.transcription;
+  const model = await modelFor("transcription");
   return transcribeAudio({ model: groq().transcription(model), audio, onCall: (call) => log(studentId, "transcription", "groq", model, call) });
 }
