@@ -3,5 +3,14 @@
   "framework": "nextjs",
   "installCommand": "npm ci",
   "buildCommand": "npm run build",
-  "crons": [{ "path": "/api/cron/purge-recommendations", "schedule": "17 3 * * *" }]
+  "crons": [
+    {
+      "path": "/api/cron/purge-recommendations",
+      "schedule": "17 3 * * *"
+    },
+    {
+      "path": "/api/cron/check-videos",
+      "schedule": "41 2 * * 6"
+    }
+  ]
 }

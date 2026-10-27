@@ -77,3 +77,10 @@ export async function submitQuiz(quizId: string, answers: Record<string, unknown
   revalidatePath("/student", "layout");
   redirect(`/student/quiz/${parsedQuiz.data}/result?attempt=${attemptId}`);
 }
+
+export async function markAllNotificationsRead(): Promise<void> {
+  const { userId } = await requireActiveStudent();
+  const supabase = await createClient();
+  await supabase.from("notifications").update({ read_at: new Date().toISOString() }).eq("student_id", userId).is("read_at", null);
+  revalidatePath("/student", "layout");
+}

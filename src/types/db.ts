@@ -238,6 +238,61 @@ export type Database = {
           },
         ]
       }
+      certificates: {
+        Row: {
+          code: string
+          created_at: string
+          id: string
+          issued_at: string
+          level_id: string
+          path_id: string
+          student_id: string
+          updated_at: string
+        }
+        Insert: {
+          code?: string
+          created_at?: string
+          id?: string
+          issued_at?: string
+          level_id: string
+          path_id: string
+          student_id: string
+          updated_at?: string
+        }
+        Update: {
+          code?: string
+          created_at?: string
+          id?: string
+          issued_at?: string
+          level_id?: string
+          path_id?: string
+          student_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "certificates_level_id_fkey"
+            columns: ["level_id"]
+            isOneToOne: false
+            referencedRelation: "levels"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "certificates_path_id_fkey"
+            columns: ["path_id"]
+            isOneToOne: false
+            referencedRelation: "paths"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "certificates_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       enrollments: {
         Row: {
           created_at: string
@@ -1613,6 +1668,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      claim_certificates: { Args: never; Returns: number }
       get_quiz: { Args: { p_quiz_id: string }; Returns: Json }
       import_placement_bank: {
         Args: { p_bank: Json; p_path_slug: string }
@@ -1641,6 +1697,7 @@ export type Database = {
         }
         Returns: string
       }
+      verify_certificate: { Args: { p_code: string }; Returns: Json }
     }
     Enums: {
       [_ in never]: never

@@ -64,7 +64,7 @@ export default async function TodayPage() {
           <h1 className="text-2xl font-bold">{profile.full_name.split(" ")[0]}</h1>
         </div>
         <Link
-          href="/student/settings#notifications"
+          href="/student/notifications"
           aria-label={unread ? `الإشعارات، ${unread} جديدة` : "الإشعارات"}
           className="relative flex size-11 items-center justify-center rounded-full bg-card text-foreground"
         >
