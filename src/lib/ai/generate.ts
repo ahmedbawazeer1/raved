@@ -5,7 +5,7 @@
 import { APICallError, generateText, Output, transcribe, type LanguageModel, type TranscriptionModel } from "ai";
 import type { z } from "zod";
 import { AiError } from "./errors";
-import { JSON_RETRY } from "./prompts/shared";
+import { JSON_RETRY, schemaIssues } from "./prompts/shared";
 
 export interface CallRecord {
   ok: boolean;
@@ -20,6 +20,8 @@ export interface GenerateOptions {
   prompt: string;
   temperature: number;
   maxOutputTokens?: number;
+  /** Provider-specific settings, e.g. { groq: { reasoningEffort: "low" } }. */
+  providerOptions?: Record<string, Record<string, string>>;
   /** Called once per provider call, for ai_usage logging. */
   onCall?: (call: CallRecord) => Promise<void> | void;
 }
@@ -49,7 +51,7 @@ export function describeError(e: unknown): string {
  * Asks for JSON and validates it; on invalid JSON retries once with "Return only valid JSON
  * matching the schema" (docs/AI_PROMPTS.md). Throws AiError("invalid") after that.
  */
-export async function generateJson<T>(options: GenerateOptions & { schema: z.ZodType<T> }): Promise<T> {
+export async function generateJson<T>(options: GenerateOptions & { schema: z.ZodType<T, unknown> }): Promise<T> {
   for (let attempt = 0; attempt < 2; attempt++) {
     let output: unknown;
     try {
@@ -58,16 +60,17 @@ export async function generateJson<T>(options: GenerateOptions & { schema: z.Zod
         system: options.system,
         prompt: attempt === 0 ? options.prompt : `${options.prompt}\n\n${JSON_RETRY}`,
         temperature: options.temperature,
-        // Arabic explanations take many tokens; a cut-off answer is invalid JSON.
-        maxOutputTokens: options.maxOutputTokens ?? 1500,
+        // Arabic explanations (and reasoning models' thinking) take many tokens; a cut-off answer is invalid JSON.
+        maxOutputTokens: options.maxOutputTokens ?? 3000,
         maxRetries: 1,
         output: Output.json(),
+        providerOptions: options.providerOptions,
       });
       output = result.output;
       const parsed = options.schema.safeParse(output);
       await options.onCall?.({
         ok: parsed.success,
-        error: parsed.success ? undefined : "invalid_json",
+        error: parsed.success ? undefined : `invalid_json: ${schemaIssues(parsed.error)}`,
         inputTokens: result.usage.inputTokens,
         outputTokens: result.usage.outputTokens,
       });
@@ -91,7 +94,8 @@ export async function generatePlainText(options: GenerateOptions & { messages?: 
       system: options.system,
       ...(options.messages ? { messages: options.messages } : { prompt: options.prompt }),
       temperature: options.temperature,
-      maxOutputTokens: options.maxOutputTokens ?? 600,
+      maxOutputTokens: options.maxOutputTokens ?? 1500,
+      providerOptions: options.providerOptions,
       maxRetries: 1,
     });
     const text = result.text.trim();

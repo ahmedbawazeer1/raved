@@ -79,7 +79,7 @@ describe("generateJson with Groq JSON mode", () => {
     const calls: CallRecord[] = [];
     expect(await generateJson({ model, system: "s", prompt: "p", temperature: 0.2, schema, onCall: (c) => void calls.push(c) })).toEqual({ score: 5 });
     expect(calls.map((c) => c.ok)).toEqual([false, true]);
-    expect(model.doGenerateCalls[0].maxOutputTokens).toBe(1500);
+    expect(model.doGenerateCalls[0].maxOutputTokens).toBe(3000);
   });
 });
 
