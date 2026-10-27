@@ -28,7 +28,7 @@ export default async function globalSetup() {
   const { data: a1 } = await admin.from("levels").select("id").eq("path_id", english!.id).eq("code", "A1").single();
   const { error: profileError } = await admin
     .from("profiles")
-    .update({ status: "active", full_name: STUDENT.name, primary_path_id: english!.id })
+    .update({ status: "active", full_name: STUDENT.name, primary_path_id: english!.id, daily_goal_minutes: 25 })
     .eq("id", user!.id);
   if (profileError) throw profileError;
   await admin
@@ -53,4 +53,5 @@ export default async function globalSetup() {
   await admin.from("writing_submissions").delete().eq("student_id", user!.id);
   await admin.from("speaking_attempts").delete().eq("student_id", user!.id);
   await admin.from("ai_usage").delete().eq("student_id", user!.id);
+  await admin.from("certificates").delete().eq("student_id", user!.id);
 }

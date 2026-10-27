@@ -2,15 +2,17 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileCheck2, FileJson, Home, Route, Settings, Sparkles } from "lucide-react";
+import { BarChart3, FileCheck2, FileJson, Home, Route, Settings, Sparkles, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { href: "/admin", label: "الرئيسية", icon: Home, exact: true },
   { href: "/admin/applications", label: "طلبات الالتحاق", icon: FileCheck2, badgeKey: "applications" as const },
+  { href: "/admin/students", label: "الطلاب", icon: Users },
   { href: "/admin/paths", label: "المسارات", icon: Route },
   { href: "/admin/content", label: "المحتوى", icon: FileJson },
   { href: "/admin/ai-review", label: "مراجعة التقييم الآلي", icon: Sparkles },
+  { href: "/admin/reports", label: "التقارير والبلاغات", icon: BarChart3 },
   { href: "/admin/settings", label: "الإعدادات", icon: Settings },
 ];
 

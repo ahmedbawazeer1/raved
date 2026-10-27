@@ -237,3 +237,85 @@ export async function reviewAiAttempt(_prev: AdminFormState, formData: FormData)
   revalidatePath("/admin/ai-review");
   return { ok: true, message: "حُفظ رأيك." };
 }
+
+// ---------------------------------------------------------------------------
+// Students: phone reveal (logged), suspend / reactivate
+// ---------------------------------------------------------------------------
+export async function revealStudentPhone(studentId: string): Promise<{ phone?: string; error?: string }> {
+  const { userId } = await requireAdmin();
+  if (!z.uuid().safeParse(studentId).success) return { error: "حدث خطأ." };
+  const supabase = await createClient();
+  const { data } = await supabase.from("profiles").select("phone").eq("id", studentId).maybeSingle();
+  if (!data?.phone) return { error: "لا يوجد رقم." };
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "student.phone_reveal", target: studentId, data: {} });
+  return { phone: data.phone };
+}
+
+export async function setStudentStatus(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const parsed = z.object({ student_id: z.uuid(), status: z.enum(["active", "suspended"]) }).safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return { error: "حدث خطأ." };
+  const supabase = await createClient();
+  const { error } = await supabase.from("profiles").update({ status: parsed.data.status }).eq("id", parsed.data.student_id).eq("role", "student");
+  if (error) return { error: "تعذر الحفظ." };
+  await supabase.from("audit_log").insert({
+    actor_id: userId,
+    action: `student.${parsed.data.status === "suspended" ? "suspend" : "reactivate"}`,
+    target: parsed.data.student_id,
+    data: {},
+  });
+  revalidatePath(`/admin/students/${parsed.data.student_id}`);
+  return { ok: true, message: parsed.data.status === "suspended" ? "أُوقف الحساب." : "أُعيد تفعيل الحساب." };
+}
+
+export async function resolveReport(formData: FormData): Promise<void> {
+  const { userId } = await requireAdmin();
+  const id = z.uuid().safeParse(formData.get("report_id"));
+  if (!id.success) return;
+  const supabase = await createClient();
+  await supabase.from("reports").update({ status: "resolved" }).eq("id", id.data);
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "report.resolve", target: id.data, data: {} });
+  revalidatePath("/admin/reports");
+}
+
+// ---------------------------------------------------------------------------
+// Exams info (from Yemen) and general defaults
+// ---------------------------------------------------------------------------
+const examText = (max: number) => z.string().trim().max(max, "النص طويل جداً");
+
+export async function saveExam(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const parsed = z
+    .object({
+      code: z.string().regex(/^[a-z]{2,10}$/),
+      availability_ye: examText(500),
+      locations: examText(500),
+      fee_note: examText(300),
+      payment_note: examText(300),
+      official_practice_url: z.union([z.literal(""), z.url({ protocol: /^https$/ })]),
+    })
+    .safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return { error: "تحقق من الحقول (الرابط يبدأ بـ https)." };
+  const { code, official_practice_url, ...rest } = parsed.data;
+  const supabase = await createClient();
+  const { error } = await supabase
+    .from("exams")
+    .update({ ...rest, official_practice_url: official_practice_url || null, verified_at: new Date().toISOString() })
+    .eq("code", code);
+  if (error) return { error: "تعذر الحفظ." };
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "exam.update", target: code, data: {} });
+  revalidatePath("/admin/settings");
+  revalidatePath("/student/progress");
+  return { ok: true, message: "حُفظت معلومات الامتحان، وسُجّل تاريخ التحقق اليوم." };
+}
+
+export async function saveDefaults(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const dataSaver = formData.get("data_saver_default") === "on";
+  const supabase = await createClient();
+  const { error } = await supabase.from("settings").upsert({ key: "data_saver_default", value: dataSaver });
+  if (error) return { error: "تعذر الحفظ." };
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "settings.defaults", target: "data_saver_default", data: { dataSaver } });
+  revalidatePath("/admin/settings");
+  return { ok: true, message: "حُفظت الإعدادات." };
+}
