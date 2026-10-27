@@ -34,6 +34,17 @@ function toAiError(e: unknown): AiError {
   return new AiError("unavailable", e instanceof Error ? e.message : String(e));
 }
 
+function isJsonRejected(e: unknown): boolean {
+  return APICallError.isInstance(e) && e.statusCode === 400 && /json_validate_failed/i.test(`${e.message} ${e.responseBody ?? ""}`);
+}
+
+/** Provider error for the ai_usage log: kind, HTTP status and the provider's message (no student text). */
+export function describeError(e: unknown): string {
+  const err = toAiError(e);
+  const status = APICallError.isInstance(e) ? ` ${e.statusCode ?? ""}` : "";
+  return `${err.kind}${status}: ${err.message}`.replace(/\s+/g, " ").slice(0, 300);
+}
+
 /**
  * Asks for JSON and validates it; on invalid JSON retries once with "Return only valid JSON
  * matching the schema" (docs/AI_PROMPTS.md). Throws AiError("invalid") after that.
@@ -47,7 +58,8 @@ export async function generateJson<T>(options: GenerateOptions & { schema: z.Zod
         system: options.system,
         prompt: attempt === 0 ? options.prompt : `${options.prompt}\n\n${JSON_RETRY}`,
         temperature: options.temperature,
-        maxOutputTokens: options.maxOutputTokens ?? 700,
+        // Arabic explanations take many tokens; a cut-off answer is invalid JSON.
+        maxOutputTokens: options.maxOutputTokens ?? 1500,
         maxRetries: 1,
         output: Output.json(),
       });
@@ -62,9 +74,10 @@ export async function generateJson<T>(options: GenerateOptions & { schema: z.Zod
       if (parsed.success) return parsed.data;
     } catch (e) {
       const err = toAiError(e);
-      // Unparseable text is "invalid" (retry); provider errors stop here.
-      const unparseable = !APICallError.isInstance(e) && !(e instanceof AiError);
-      await options.onCall?.({ ok: false, error: unparseable ? "invalid_json" : err.kind });
+      // Unparseable text is "invalid" (retry); provider errors stop here. Groq's JSON mode
+      // rejects malformed or cut-off JSON itself with a 400 "json_validate_failed".
+      const unparseable = (!APICallError.isInstance(e) && !(e instanceof AiError)) || isJsonRejected(e);
+      await options.onCall?.({ ok: false, error: unparseable ? `invalid_json${APICallError.isInstance(e) ? " (rejected by provider)" : ""}` : describeError(e) });
       if (!unparseable) throw err;
     }
   }
@@ -87,7 +100,7 @@ export async function generatePlainText(options: GenerateOptions & { messages?: 
     return text;
   } catch (e) {
     const err = toAiError(e);
-    if (!(e instanceof AiError)) await options.onCall?.({ ok: false, error: err.kind });
+    if (!(e instanceof AiError)) await options.onCall?.({ ok: false, error: describeError(e) });
     throw err;
   }
 }
@@ -104,7 +117,7 @@ export async function transcribeAudio(options: {
     return result.text.trim();
   } catch (e) {
     const err = toAiError(e);
-    await options.onCall?.({ ok: false, error: err.kind });
+    await options.onCall?.({ ok: false, error: describeError(e) });
     throw err;
   }
 }

@@ -48,10 +48,38 @@ describe("generateJson", () => {
         throw new APICallError({ message: "Too many requests", url: "https://api.groq.com", requestBodyValues: {}, statusCode: 429, isRetryable: false });
       },
     });
-    const err = await generateJson({ model, system: "s", prompt: "p", temperature: 0.2, schema }).catch((e) => e);
+    const calls: CallRecord[] = [];
+    const err = await generateJson({ model, system: "s", prompt: "p", temperature: 0.2, schema, onCall: (c) => void calls.push(c) }).catch((e) => e);
     expect(err).toBeInstanceOf(AiError);
     expect(err.kind).toBe("rate_limited");
     expect(n).toBe(1);
+    // The log keeps the provider's reason, so failures can be diagnosed.
+    expect(calls[0].error).toBe("rate_limited 429: Too many requests");
+  });
+});
+
+describe("generateJson with Groq JSON mode", () => {
+  it("retries when the provider rejects cut-off JSON (400 json_validate_failed)", async () => {
+    let n = 0;
+    const model = new MockLanguageModelV4({
+      doGenerate: async () => {
+        n++;
+        if (n === 1)
+          throw new APICallError({
+            message: "Failed to generate JSON",
+            url: "https://api.groq.com",
+            requestBodyValues: {},
+            statusCode: 400,
+            responseBody: '{"error":{"code":"json_validate_failed"}}',
+            isRetryable: false,
+          });
+        return reply('{"score":5}');
+      },
+    });
+    const calls: CallRecord[] = [];
+    expect(await generateJson({ model, system: "s", prompt: "p", temperature: 0.2, schema, onCall: (c) => void calls.push(c) })).toEqual({ score: 5 });
+    expect(calls.map((c) => c.ok)).toEqual([false, true]);
+    expect(model.doGenerateCalls[0].maxOutputTokens).toBe(1500);
   });
 });
 
