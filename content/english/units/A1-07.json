@@ -1,0 +1,830 @@
+{
+  "path": "english",
+  "code": "A1-07",
+  "version": 1,
+  "level": "A1",
+  "position": 7,
+  "title": "Food",
+  "topic": "الأكل اليمني: السلتة وبنت الصحن والمندي",
+  "grammar_point": "countable / uncountable nouns + some / any + like / don't like",
+  "can_do": [
+    "أعبّر عما أحب وما لا أحب من الطعام",
+    "أطلب طعاماً وشراباً بأدب في مطعم",
+    "أفهم نصاً قصيراً عن الأكلات"
+  ],
+  "vocab": [
+    {
+      "id": "A1-07-v1",
+      "word": "rice",
+      "ipa": "/raɪs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "أرز",
+      "example_en": "We eat rice and chicken on Friday."
+    },
+    {
+      "id": "A1-07-v2",
+      "word": "chicken",
+      "ipa": "/ˈtʃɪkɪn/",
+      "part_of_speech": "noun",
+      "meaning_ar": "دجاج",
+      "example_en": "I like grilled chicken."
+    },
+    {
+      "id": "A1-07-v3",
+      "word": "meat",
+      "ipa": "/miːt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "لحم",
+      "example_en": "My mother cooks meat with rice."
+    },
+    {
+      "id": "A1-07-v4",
+      "word": "fish",
+      "ipa": "/fɪʃ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سمك",
+      "example_en": "People in Hodeidah eat a lot of fish."
+    },
+    {
+      "id": "A1-07-v5",
+      "word": "vegetables",
+      "ipa": "/ˈvedʒtəblz/",
+      "part_of_speech": "noun",
+      "meaning_ar": "خضروات",
+      "example_en": "Vegetables are good for you."
+    },
+    {
+      "id": "A1-07-v6",
+      "word": "egg",
+      "ipa": "/eɡ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "بيضة",
+      "example_en": "I have two eggs for breakfast."
+    },
+    {
+      "id": "A1-07-v7",
+      "word": "milk",
+      "ipa": "/mɪlk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "حليب",
+      "example_en": "Is there any milk in the kitchen?"
+    },
+    {
+      "id": "A1-07-v8",
+      "word": "water",
+      "ipa": "/ˈwɔːtə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ماء",
+      "example_en": "Can I have some water, please?"
+    },
+    {
+      "id": "A1-07-v9",
+      "word": "juice",
+      "ipa": "/dʒuːs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "عصير",
+      "example_en": "Mango juice is my favourite."
+    },
+    {
+      "id": "A1-07-v10",
+      "word": "sugar",
+      "ipa": "/ˈʃʊɡə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سكر",
+      "example_en": "I don't put sugar in my tea."
+    },
+    {
+      "id": "A1-07-v11",
+      "word": "delicious",
+      "ipa": "/dɪˈlɪʃəs/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "لذيذ",
+      "example_en": "Saltah is delicious."
+    },
+    {
+      "id": "A1-07-v12",
+      "word": "hungry",
+      "ipa": "/ˈhʌŋɡri/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "جائع",
+      "example_en": "I'm hungry. Let's have lunch."
+    },
+    {
+      "id": "A1-07-v13",
+      "word": "thirsty",
+      "ipa": "/ˈθɜːsti/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "عطشان",
+      "example_en": "I'm thirsty. I want some water."
+    },
+    {
+      "id": "A1-07-v14",
+      "word": "favourite",
+      "ipa": "/ˈfeɪvərɪt/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "المفضّل",
+      "example_en": "My favourite food is fish."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-07-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "الطعام والشراب",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "المطبخ اليمني غني: **السلتة**، **بنت الصحن**، **المندي**، **الفحسة**. تعلّم أسماء الطعام والشراب بالإنجليزية.\n\n**ملاحظة:** أسماء الأكلات اليمنية تبقى كما هي في الإنجليزية: saltah, bint al-sahn, mandi."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "rice",
+              "/raɪs/",
+              "أرز",
+              "We eat rice and chicken on Friday."
+            ],
+            [
+              "chicken",
+              "/ˈtʃɪkɪn/",
+              "دجاج",
+              "I like grilled chicken."
+            ],
+            [
+              "meat",
+              "/miːt/",
+              "لحم",
+              "My mother cooks meat with rice."
+            ],
+            [
+              "fish",
+              "/fɪʃ/",
+              "سمك",
+              "People in Hodeidah eat a lot of fish."
+            ],
+            [
+              "vegetables",
+              "/ˈvedʒtəblz/",
+              "خضروات",
+              "Vegetables are good for you."
+            ],
+            [
+              "egg",
+              "/eɡ/",
+              "بيضة",
+              "I have two eggs for breakfast."
+            ],
+            [
+              "milk",
+              "/mɪlk/",
+              "حليب",
+              "Is there any milk in the kitchen?"
+            ],
+            [
+              "water",
+              "/ˈwɔːtə/",
+              "ماء",
+              "Can I have some water, please?"
+            ],
+            [
+              "juice",
+              "/dʒuːs/",
+              "عصير",
+              "Mango juice is my favourite."
+            ],
+            [
+              "sugar",
+              "/ˈʃʊɡə/",
+              "سكر",
+              "I don't put sugar in my tea."
+            ],
+            [
+              "delicious",
+              "/dɪˈlɪʃəs/",
+              "لذيذ",
+              "Saltah is delicious."
+            ],
+            [
+              "hungry",
+              "/ˈhʌŋɡri/",
+              "جائع",
+              "I'm hungry. Let's have lunch."
+            ],
+            [
+              "thirsty",
+              "/ˈθɜːsti/",
+              "عطشان",
+              "I'm thirsty. I want some water."
+            ],
+            [
+              "favourite",
+              "/ˈfeɪvərɪt/",
+              "المفضّل",
+              "My favourite food is fish."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "rice. We eat rice and chicken on Friday.\nchicken. I like grilled chicken.\nmeat. My mother cooks meat with rice.\nfish. People in Hodeidah eat a lot of fish.\nvegetables. Vegetables are good for you.\negg. I have two eggs for breakfast.\nmilk. Is there any milk in the kitchen?\nwater. Can I have some water, please?\njuice. Mango juice is my favourite.\nsugar. I don't put sugar in my tea.\ndelicious. Saltah is delicious.\nhungry. I'm hungry. Let's have lunch.\nthirsty. I'm thirsty. I want some water.\nfavourite. My favourite food is fish."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "I want to drink. I'm ___.",
+            "options": [
+              "hungry",
+              "thirsty",
+              "delicious"
+            ],
+            "answer": 1,
+            "explanation_ar": "عندما نريد الشرب نكون thirsty (عطشان)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Which one is a drink?",
+            "options": [
+              "rice",
+              "juice",
+              "chicken"
+            ],
+            "answer": 1,
+            "explanation_ar": "juice (عصير) مشروب."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My ___ food is mandi. I love it! (المفضّل)",
+            "answer": "favourite",
+            "explanation_ar": "المفضّل = favourite."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-07-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "some / any + like",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**الأسماء المعدودة** نعدّها ولها جمع: an egg ← two eggs، a banana ← bananas.\n\n**الأسماء غير المعدودة** لا نعدّها ولا جمع لها: water, milk, rice, sugar, bread, meat. لا نقول «a water» ولا «two rices»."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "مع المعدود (جمع)",
+            "مع غير المعدود"
+          ],
+          "rows": [
+            [
+              "إثبات: some",
+              "There are some eggs.",
+              "There is some milk."
+            ],
+            [
+              "نفي: any",
+              "There aren't any eggs.",
+              "There isn't any milk."
+            ],
+            [
+              "سؤال: any",
+              "Are there any eggs?",
+              "Is there any milk?"
+            ],
+            [
+              "طلب مهذب: some",
+              "Can I have some dates?",
+              "Can I have some water, please?"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**التعبير عن الحب:** like / don't like + اسم:\n\n- I **like** fish. / I **don't like** eggs.\n- She **likes** rice. / He **doesn't like** milk.\n- **Do you like** saltah? — Yes, I do. / No, I don't."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "There is ___ water in the bottle.",
+            "options": [
+              "a",
+              "some",
+              "any"
+            ],
+            "answer": 1,
+            "explanation_ar": "water غير معدود، وفي الإثبات نستخدم some."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "There aren't ___ tomatoes in the kitchen.",
+            "options": [
+              "some",
+              "any",
+              "a"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النفي نستخدم any."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e6",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "Is there ___ sugar? I want some in my tea.",
+            "answer": "any",
+            "explanation_ar": "في السؤال نستخدم any."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e7",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "أي كلمة غير معدودة؟",
+            "options": [
+              "egg",
+              "rice",
+              "banana"
+            ],
+            "answer": 1,
+            "explanation_ar": "rice (أرز) غير معدود."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My sister ___ fish.",
+            "options": [
+              "like",
+              "likes",
+              "liking"
+            ],
+            "answer": 1,
+            "explanation_ar": "مع she (my sister) نقول likes."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: I / some / have / can / water",
+            "answer": [
+              "Can",
+              "I",
+              "have",
+              "some",
+              "water"
+            ],
+            "explanation_ar": "الطلب المهذب: Can I have some…?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-07-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "في المطعم",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**طارق** و**سامي** في مطعم شعبي. استمع إلى طلبهما."
+        },
+        {
+          "type": "audio",
+          "text_en": "Waiter: Good afternoon. What would you like?\nTariq: Can I have some saltah and some bread, please?\nWaiter: Of course. And for you?\nSami: I'm very hungry. Is there any fish today?\nWaiter: Sorry, there isn't any fish today. But there is some chicken mandi.\nSami: OK, chicken mandi with rice, please.\nWaiter: Anything to drink?\nTariq: Two mango juices, please. And some water.\nWaiter: And for dessert? Our bint al-sahn is delicious.\nSami: Yes, please! It's my favourite."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What does Tariq order?",
+            "options": [
+              "saltah and bread",
+              "fish",
+              "chicken mandi"
+            ],
+            "answer": 0,
+            "explanation_ar": "قال: Can I have some saltah and some bread."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e11",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "There is fish in the restaurant today.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال النادل: there isn't any fish today."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e12",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What do they drink?",
+            "options": [
+              "tea",
+              "mango juice and water",
+              "milk"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال طارق: Two mango juices… And some water."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-07-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "الطعام في اليمن",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ عن الأكلات اليمنية في مدن مختلفة، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Food in Yemen is different from city to city. In Sana'a, people love saltah. It is a hot soup with meat, vegetables and a special green sauce called hulba. People eat it with bread at lunch. In Aden and Hodeidah, there is a lot of fish. People eat fish with rice or with bread from the tannour. In Hadramout, mandi is very famous. It is rice with meat or chicken. And for dessert, many families make bint al-sahn. It is bread with honey and black seeds. Yemeni people drink a lot of tea with milk and sugar. Some people don't like sugar, so they drink it without sugar.",
+          "word_count": 108
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "When do people in Sana'a eat saltah?",
+            "options": [
+              "at breakfast",
+              "at lunch",
+              "at night"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: People eat it with bread at lunch."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where is mandi very famous?",
+            "options": [
+              "Hadramout",
+              "Aden",
+              "Hodeidah"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: In Hadramout, mandi is very famous."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e15",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "Bint al-sahn has honey in it.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: It is bread with honey and black seeds."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "In Aden, there is a lot of ___.",
+            "answer": "fish",
+            "explanation_ar": "في النص: In Aden and Hodeidah, there is a lot of fish."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-07-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "اطلب وجبتك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "أنت في مطعم. **اطلب وجبة ومشروباً**، واسأل هل يوجد طبق معين، ثم قل ما تحبه وما لا تحبه من الطعام."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "أريد…",
+              "Can I have some…, please?"
+            ],
+            [
+              "هل يوجد؟",
+              "Is there any…? / Are there any…?"
+            ],
+            [
+              "أحب / لا أحب",
+              "I like… / I don't like…"
+            ],
+            [
+              "طبقي المفضل",
+              "My favourite food is…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are in a restaurant. Order food and a drink, ask if there is a special dish, and say what food you like and don't like.",
+        "helpful_phrases": [
+          "Can I have some…, please?",
+          "Is there any…?",
+          "I like…",
+          "I don't like…",
+          "My favourite food is…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "some / any",
+          "countable and uncountable nouns",
+          "like / don't like"
+        ]
+      }
+    },
+    {
+      "id": "A1-07-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "طبقك المفضل",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن طبقك المفضل أو عن طعام عائلتك يوم الجمعة. اقرأ المثال أولاً.\n\n**تذكّر:** some في الإثبات، any في النفي والسؤال، و like / likes."
+        },
+        {
+          "type": "reading",
+          "text_en": "My favourite food is fahsa. It is a hot dish with meat and hulba. My mother makes it on Friday. We eat it with bread from the tannour. My father likes it with green chilli, but I don't like chilli. After lunch, we drink some tea with milk. My little brother doesn't like tea. He drinks juice.",
+          "word_count": 57
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write about your favourite food or your family's Friday lunch. Use some, any, like and don't like.",
+        "min_words": 40,
+        "max_words": 80,
+        "rubric_focus": [
+          "some / any",
+          "countable and uncountable nouns",
+          "like / likes"
+        ]
+      }
+    },
+    {
+      "id": "A1-07-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- المعدود: an egg, two eggs. غير المعدود: water, rice, milk, sugar, bread.\n- **some** في الإثبات والطلب، **any** في النفي والسؤال.\n- **like / likes / don't like / doesn't like** + اسم."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "Can I have ___ juice, please?",
+            "options": [
+              "any",
+              "some",
+              "a"
+            ],
+            "answer": 1,
+            "explanation_ar": "في الطلب المهذب نستخدم some."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "He ___ like vegetables.",
+            "options": [
+              "don't",
+              "doesn't",
+              "isn't"
+            ],
+            "answer": 1,
+            "explanation_ar": "النفي مع he: doesn't like."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e19",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "Are there ___ eggs in the fridge?",
+            "answer": "any",
+            "explanation_ar": "في السؤال نستخدم any."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-07-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "There is ___ milk in the cup.",
+        "options": [
+          "some",
+          "any",
+          "a"
+        ],
+        "answer": 0,
+        "explanation_ar": "غير معدود في الإثبات: some."
+      },
+      {
+        "id": "A1-07-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "There isn't ___ bread. Let's buy some.",
+        "options": [
+          "some",
+          "any",
+          "an"
+        ],
+        "answer": 1,
+        "explanation_ar": "في النفي: any."
+      },
+      {
+        "id": "A1-07-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "أي كلمة معدودة؟",
+        "options": [
+          "water",
+          "sugar",
+          "egg"
+        ],
+        "answer": 2,
+        "explanation_ar": "egg (بيضة) معدودة: two eggs."
+      },
+      {
+        "id": "A1-07-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "Do you like fish? — Yes, I ___.",
+        "answer": "do",
+        "explanation_ar": "الإجابة القصيرة: Yes, I do."
+      },
+      {
+        "id": "A1-07-q5",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "My father ___ saltah very much.",
+        "options": [
+          "like",
+          "likes",
+          "liking"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع he نقول likes."
+      },
+      {
+        "id": "A1-07-q6",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "It's lunch time and I want to eat. I'm very ___.",
+        "options": [
+          "thirsty",
+          "hungry",
+          "favourite"
+        ],
+        "answer": 1,
+        "explanation_ar": "من يريد الأكل يكون جائعاً hungry."
+      },
+      {
+        "id": "A1-07-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: any / is / there / rice",
+        "answer": [
+          "Is",
+          "there",
+          "any",
+          "rice"
+        ],
+        "explanation_ar": "السؤال: Is there any + غير المعدود؟"
+      },
+      {
+        "id": "A1-07-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "I want a water.",
+          "I want some water.",
+          "I want waters."
+        ],
+        "answer": 1,
+        "explanation_ar": "water غير معدود: some water."
+      },
+      {
+        "id": "A1-07-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «Huda likes fish but she doesn't like meat.» What doesn't Huda like?",
+        "options": [
+          "fish",
+          "meat",
+          "rice"
+        ],
+        "answer": 1,
+        "explanation_ar": "she doesn't like meat."
+      },
+      {
+        "id": "A1-07-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "This mandi is very good. It's ___! (لذيذ)",
+        "answer": "delicious",
+        "explanation_ar": "لذيذ = delicious."
+      }
+    ]
+  },
+  "context_note": "السلتة والحلبة في صنعاء، المندي في حضرموت، بنت الصحن، خبز التنور، الشاي بالحليب."
+}

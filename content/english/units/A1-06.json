@@ -1,0 +1,839 @@
+{
+  "path": "english",
+  "code": "A1-06",
+  "version": 1,
+  "level": "A1",
+  "position": 6,
+  "title": "Jobs",
+  "topic": "مهن الناس في عدن: الميناء والمستشفى والبحر",
+  "grammar_point": "present simple (he / she / it) + does / doesn't",
+  "can_do": [
+    "أتحدث عن مهنة شخص آخر ومكان عمله",
+    "أسأل عما يعمله شخص وأفهم الإجابة",
+    "أفهم نصاً قصيراً عن يوم عمل"
+  ],
+  "vocab": [
+    {
+      "id": "A1-06-v1",
+      "word": "job",
+      "ipa": "/dʒɒb/",
+      "part_of_speech": "noun",
+      "meaning_ar": "وظيفة / عمل",
+      "example_en": "What's your father's job?"
+    },
+    {
+      "id": "A1-06-v2",
+      "word": "doctor",
+      "ipa": "/ˈdɒktə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "طبيب",
+      "example_en": "The doctor works at the hospital."
+    },
+    {
+      "id": "A1-06-v3",
+      "word": "nurse",
+      "ipa": "/nɜːs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ممرض / ممرضة",
+      "example_en": "My aunt is a nurse."
+    },
+    {
+      "id": "A1-06-v4",
+      "word": "engineer",
+      "ipa": "/ˌendʒɪˈnɪə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مهندس",
+      "example_en": "He is an engineer at the port."
+    },
+    {
+      "id": "A1-06-v5",
+      "word": "fisherman",
+      "ipa": "/ˈfɪʃəmən/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صياد سمك",
+      "example_en": "The fisherman goes to sea at dawn."
+    },
+    {
+      "id": "A1-06-v6",
+      "word": "farmer",
+      "ipa": "/ˈfɑːmə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مزارع",
+      "example_en": "The farmer grows coffee."
+    },
+    {
+      "id": "A1-06-v7",
+      "word": "driver",
+      "ipa": "/ˈdraɪvə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سائق",
+      "example_en": "My uncle is a bus driver."
+    },
+    {
+      "id": "A1-06-v8",
+      "word": "shopkeeper",
+      "ipa": "/ˈʃɒpkiːpə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صاحب دكان",
+      "example_en": "The shopkeeper opens his shop at eight."
+    },
+    {
+      "id": "A1-06-v9",
+      "word": "work",
+      "ipa": "/wɜːk/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يعمل",
+      "example_en": "She works in a school."
+    },
+    {
+      "id": "A1-06-v10",
+      "word": "hospital",
+      "ipa": "/ˈhɒspɪtl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مستشفى",
+      "example_en": "There is a big hospital in Aden."
+    },
+    {
+      "id": "A1-06-v11",
+      "word": "office",
+      "ipa": "/ˈɒfɪs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مكتب",
+      "example_en": "My mother works in an office."
+    },
+    {
+      "id": "A1-06-v12",
+      "word": "port",
+      "ipa": "/pɔːt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ميناء",
+      "example_en": "Ships come to the port of Aden."
+    },
+    {
+      "id": "A1-06-v13",
+      "word": "teach",
+      "ipa": "/tiːtʃ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يدرّس / يعلّم",
+      "example_en": "Mr. Fuad teaches maths."
+    },
+    {
+      "id": "A1-06-v14",
+      "word": "sick",
+      "ipa": "/sɪk/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مريض",
+      "example_en": "The nurse helps sick people."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-06-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "المهن وأماكن العمل",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في **عدن** يعمل الناس في الميناء والمستشفيات والمكاتب والبحر. تعلّم أسماء المهن وأماكن العمل."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "job",
+              "/dʒɒb/",
+              "وظيفة / عمل",
+              "What's your father's job?"
+            ],
+            [
+              "doctor",
+              "/ˈdɒktə/",
+              "طبيب",
+              "The doctor works at the hospital."
+            ],
+            [
+              "nurse",
+              "/nɜːs/",
+              "ممرض / ممرضة",
+              "My aunt is a nurse."
+            ],
+            [
+              "engineer",
+              "/ˌendʒɪˈnɪə/",
+              "مهندس",
+              "He is an engineer at the port."
+            ],
+            [
+              "fisherman",
+              "/ˈfɪʃəmən/",
+              "صياد سمك",
+              "The fisherman goes to sea at dawn."
+            ],
+            [
+              "farmer",
+              "/ˈfɑːmə/",
+              "مزارع",
+              "The farmer grows coffee."
+            ],
+            [
+              "driver",
+              "/ˈdraɪvə/",
+              "سائق",
+              "My uncle is a bus driver."
+            ],
+            [
+              "shopkeeper",
+              "/ˈʃɒpkiːpə/",
+              "صاحب دكان",
+              "The shopkeeper opens his shop at eight."
+            ],
+            [
+              "work",
+              "/wɜːk/",
+              "يعمل",
+              "She works in a school."
+            ],
+            [
+              "hospital",
+              "/ˈhɒspɪtl/",
+              "مستشفى",
+              "There is a big hospital in Aden."
+            ],
+            [
+              "office",
+              "/ˈɒfɪs/",
+              "مكتب",
+              "My mother works in an office."
+            ],
+            [
+              "port",
+              "/pɔːt/",
+              "ميناء",
+              "Ships come to the port of Aden."
+            ],
+            [
+              "teach",
+              "/tiːtʃ/",
+              "يدرّس / يعلّم",
+              "Mr. Fuad teaches maths."
+            ],
+            [
+              "sick",
+              "/sɪk/",
+              "مريض",
+              "The nurse helps sick people."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "job. What's your father's job?\ndoctor. The doctor works at the hospital.\nnurse. My aunt is a nurse.\nengineer. He is an engineer at the port.\nfisherman. The fisherman goes to sea at dawn.\nfarmer. The farmer grows coffee.\ndriver. My uncle is a bus driver.\nshopkeeper. The shopkeeper opens his shop at eight.\nwork. She works in a school.\nhospital. There is a big hospital in Aden.\noffice. My mother works in an office.\nport. Ships come to the port of Aden.\nteach. Mr. Fuad teaches maths.\nsick. The nurse helps sick people."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**تذكّر:** قبل اسم المهنة نضع **a** أو **an**: «She is **a** nurse.» «He is **an** engineer.»"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "A ___ catches fish in the sea.",
+            "options": [
+              "farmer",
+              "fisherman",
+              "nurse"
+            ],
+            "answer": 1,
+            "explanation_ar": "صياد السمك fisherman."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Doctors and nurses work in a ___.",
+            "options": [
+              "port",
+              "hospital",
+              "shop"
+            ],
+            "answer": 1,
+            "explanation_ar": "الأطباء والممرضون في المستشفى hospital."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "He is ___ engineer.",
+            "answer": "an",
+            "explanation_ar": "engineer تبدأ بحرف علة فنستخدم an."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-06-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "he works / she doesn't work",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في الوحدة الماضية تعلمنا المضارع البسيط مع I و we و they. مع **he, she, it** (أو اسم شخص واحد) **نضيف s** إلى الفعل:\n\n- I work ← He **works**.\n- They teach ← She **teaches**.\n- I go ← He **goes**. / I do ← She **does**. / I have ← He **has**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "الصيغة",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "إثبات",
+              "he / she / it + فعل + s",
+              "My father works at the port."
+            ],
+            [
+              "نفي",
+              "doesn't + الفعل (بدون s)",
+              "She doesn't work on Friday."
+            ],
+            [
+              "سؤال",
+              "Does + الفاعل + الفعل (بدون s)؟",
+              "Does he drive a bus?"
+            ],
+            [
+              "إجابة",
+              "Yes, he does. / No, he doesn't.",
+              "Does she teach English? — Yes, she does."
+            ],
+            [
+              "سؤال بأداة",
+              "What / Where + does + …؟",
+              "Where does your mother work?"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**قواعد إضافة s:**\n\n- معظم الأفعال: **s** ← works, drives.\n- بعد s, sh, ch, x, o: **es** ← teaches, washes, goes, does.\n- ساكن + y: **ies** ← study ← studies.\n\n**مهم:** بعد **doesn't** و **Does** يرجع الفعل بدون s: «He doesn't **work**.» وليس «doesn't works»."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My uncle ___ a taxi in Aden.",
+            "options": [
+              "drive",
+              "drives",
+              "driving"
+            ],
+            "answer": 1,
+            "explanation_ar": "مع he (my uncle) نضيف s: drives."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "She ___ English at a school in Crater.",
+            "options": [
+              "teachs",
+              "teaches",
+              "teach"
+            ],
+            "answer": 1,
+            "explanation_ar": "بعد ch نضيف es: teaches."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e6",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "He ___ work on Fridays.",
+            "options": [
+              "don't",
+              "doesn't",
+              "isn't"
+            ],
+            "answer": 1,
+            "explanation_ar": "النفي مع he: doesn't + الفعل."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e7",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "___ your sister work in a hospital? — Yes, she does.",
+            "answer": "Does",
+            "explanation_ar": "السؤال مع she يبدأ بـ Does."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "اختر الجملة الصحيحة:",
+            "options": [
+              "She doesn't works here.",
+              "She doesn't work here.",
+              "She don't work here."
+            ],
+            "answer": 1,
+            "explanation_ar": "بعد doesn't يأتي الفعل بدون s."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: does / work / where / father / your",
+            "answer": [
+              "Where",
+              "does",
+              "your",
+              "father",
+              "work"
+            ],
+            "explanation_ar": "Where + does + الفاعل + الفعل؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-06-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "ماذا يعمل والداك؟",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**هدى** و**رشا** تتحدثان عن عمل والديهما. استمع وأجب."
+        },
+        {
+          "type": "audio",
+          "text_en": "Huda: What does your father do, Rasha?\nRasha: He's an engineer. He works at the port in Aden.\nHuda: Does he work every day?\nRasha: He works from Saturday to Thursday. He doesn't work on Friday.\nHuda: And your mother?\nRasha: She's a doctor. She works at the Republic Hospital. She helps sick children.\nHuda: That's a great job! My mother is a teacher. She teaches Arabic.\nRasha: And your father?\nHuda: He's a fisherman. He goes to sea very early, at four o'clock."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "Where does Rasha's father work?",
+            "options": [
+              "at the hospital",
+              "at the port",
+              "at a school"
+            ],
+            "answer": 1,
+            "explanation_ar": "قالت: He works at the port in Aden."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e11",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What is Rasha's mother's job?",
+            "options": [
+              "teacher",
+              "nurse",
+              "doctor"
+            ],
+            "answer": 2,
+            "explanation_ar": "قالت: She's a doctor."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e12",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda's father goes to sea at four o'clock.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "قالت: He goes to sea very early, at four o'clock."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-06-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "يوم صياد في عدن",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ عن **عبدالرحمن**، صياد من عدن، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Abdulrahman is fifty years old. He is a fisherman in Aden. He gets up at three thirty every morning. He doesn't have breakfast at home. He drinks tea on his boat. He goes to sea with his two sons. They catch fish until ten o'clock. Then they come back to the port and sell the fish at the fish market. Abdulrahman doesn't work in the afternoon. He sleeps after lunch. In the evening, he sits with his friends near the sea. He loves his job, but it is hard work.",
+          "word_count": 90
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "What time does Abdulrahman get up?",
+            "options": [
+              "3:30",
+              "10:00",
+              "4:00"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: He gets up at three thirty."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e14",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "He has breakfast at home.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: He doesn't have breakfast at home."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e15",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where do they sell the fish?",
+            "options": [
+              "on the boat",
+              "at the fish market",
+              "at home"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: sell the fish at the fish market."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "In the afternoon, he ___ after lunch.",
+            "answer": "sleeps",
+            "explanation_ar": "في النص: He sleeps after lunch."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-06-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "عمل أحد أقاربك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اختر شخصاً من عائلتك أو حيّك وتحدث عن عمله في 5 إلى 7 جمل: **ما مهنته؟ أين يعمل؟ متى يبدأ؟ ماذا يفعل؟** انتبه لإضافة **s** للفعل."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "مهنته",
+              "He's a… / She's a…"
+            ],
+            [
+              "مكان العمل",
+              "He works at / in…"
+            ],
+            [
+              "الوقت",
+              "She starts work at…"
+            ],
+            [
+              "لا يعمل",
+              "He doesn't work on…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Talk about the job of a person in your family or neighbourhood: what they do, where they work and their working day.",
+        "helpful_phrases": [
+          "My uncle is a…",
+          "He works at…",
+          "He starts work at…",
+          "She doesn't work on…",
+          "He likes his job because…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 75,
+        "rubric_focus": [
+          "present simple third person -s",
+          "jobs vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-06-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "اكتب عن مهنة",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن عمل شخص تعرفه. اقرأ المثال أولاً.\n\n**تذكّر:** works, teaches, goes, has… و doesn't + الفعل بدون s."
+        },
+        {
+          "type": "reading",
+          "text_en": "My aunt Samira is a nurse. She works at a hospital in Mukalla. She starts work at seven in the morning and she finishes at three. She helps the doctors and she gives medicine to sick people. She doesn't work on Fridays. She likes her job because she helps people.",
+          "word_count": 50
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write about the job of a person you know. Use the present simple with he or she (works, goes, doesn't).",
+        "min_words": 40,
+        "max_words": 80,
+        "rubric_focus": [
+          "present simple third person -s",
+          "doesn't",
+          "jobs vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-06-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- he / she / it + فعل + **s**: works, teaches, goes, has, studies.\n- النفي **doesn't** + الفعل بدون s.\n- السؤال **Does** he…? / **What does** she do?\n- المهن: doctor, nurse, engineer, farmer, fisherman, driver, shopkeeper."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My brother ___ at university.",
+            "options": [
+              "study",
+              "studys",
+              "studies"
+            ],
+            "answer": 2,
+            "explanation_ar": "ساكن + y ← ies: studies."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "What ___ your mother do? — She's a teacher.",
+            "options": [
+              "do",
+              "does",
+              "is"
+            ],
+            "answer": 1,
+            "explanation_ar": "مع your mother (she) نقول What does."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-e19",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "My father ___ a shop in the market. (have)",
+            "answer": "has",
+            "explanation_ar": "have مع he تصبح has."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-06-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "She ___ in a hospital.",
+        "options": [
+          "work",
+          "works",
+          "working"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع she نضيف s: works."
+      },
+      {
+        "id": "A1-06-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "He ___ to work by bus.",
+        "options": [
+          "go",
+          "gos",
+          "goes"
+        ],
+        "answer": 2,
+        "explanation_ar": "go مع he تصبح goes."
+      },
+      {
+        "id": "A1-06-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "My father ___ work on Friday.",
+        "options": [
+          "don't",
+          "doesn't",
+          "not"
+        ],
+        "answer": 1,
+        "explanation_ar": "النفي مع he: doesn't."
+      },
+      {
+        "id": "A1-06-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "___ he teach maths? — No, he doesn't.",
+        "answer": "Does",
+        "explanation_ar": "السؤال مع he يبدأ بـ Does."
+      },
+      {
+        "id": "A1-06-q5",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "A ___ grows vegetables and coffee.",
+        "options": [
+          "fisherman",
+          "farmer",
+          "doctor"
+        ],
+        "answer": 1,
+        "explanation_ar": "المزارع farmer يزرع."
+      },
+      {
+        "id": "A1-06-q6",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "Does she works here?",
+          "Does she work here?",
+          "Do she work here?"
+        ],
+        "answer": 1,
+        "explanation_ar": "بعد Does يأتي الفعل بدون s."
+      },
+      {
+        "id": "A1-06-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: does / what / do / your / brother",
+        "answer": [
+          "What",
+          "does",
+          "your",
+          "brother",
+          "do"
+        ],
+        "explanation_ar": "What + does + الفاعل + do؟ = ماذا يعمل؟"
+      },
+      {
+        "id": "A1-06-q8",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "Ships stop at the ___.",
+        "options": [
+          "office",
+          "port",
+          "hospital"
+        ],
+        "answer": 1,
+        "explanation_ar": "السفن ترسو في الميناء port."
+      },
+      {
+        "id": "A1-06-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «Ali is a driver. He drives a bus from Taiz to Aden.» What does Ali do?",
+        "options": [
+          "He's a driver.",
+          "He's a farmer.",
+          "He's a teacher."
+        ],
+        "answer": 0,
+        "explanation_ar": "في النص: Ali is a driver."
+      },
+      {
+        "id": "A1-06-q10",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "Mr. Fuad ___ English. (teach)",
+        "answer": "teaches",
+        "explanation_ar": "بعد ch نضيف es: teaches."
+      }
+    ]
+  },
+  "context_note": "ميناء عدن، مستشفى الجمهورية، الصيادون وسوق السمك، مدينة كريتر."
+}

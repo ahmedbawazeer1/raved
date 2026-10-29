@@ -1,0 +1,832 @@
+{
+  "path": "english",
+  "code": "A1-11",
+  "version": 1,
+  "level": "A1",
+  "position": 11,
+  "title": "Right Now",
+  "topic": "مكالمة ورسائل: ماذا يحدث الآن؟",
+  "grammar_point": "present continuous (am / is / are + -ing)",
+  "can_do": [
+    "أصف ما يحدث الآن حولي",
+    "أسأل شخصاً عما يفعله وأفهم إجابته في مكالمة",
+    "أفرّق بين ما أفعله عادة وما أفعله الآن"
+  ],
+  "vocab": [
+    {
+      "id": "A1-11-v1",
+      "word": "now",
+      "ipa": "/naʊ/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "الآن",
+      "example_en": "I'm studying now."
+    },
+    {
+      "id": "A1-11-v2",
+      "word": "at the moment",
+      "ipa": "/ət ðə ˈməʊmənt/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "في هذه اللحظة",
+      "example_en": "She's sleeping at the moment."
+    },
+    {
+      "id": "A1-11-v3",
+      "word": "phone call",
+      "ipa": "/fəʊn kɔːl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مكالمة هاتفية",
+      "example_en": "I'm on a phone call with my uncle."
+    },
+    {
+      "id": "A1-11-v4",
+      "word": "message",
+      "ipa": "/ˈmesɪdʒ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "رسالة",
+      "example_en": "I'm writing a message to my friend."
+    },
+    {
+      "id": "A1-11-v5",
+      "word": "wait",
+      "ipa": "/weɪt/",
+      "part_of_speech": "verb",
+      "meaning_ar": "ينتظر",
+      "example_en": "We're waiting for the bus."
+    },
+    {
+      "id": "A1-11-v6",
+      "word": "listen",
+      "ipa": "/ˈlɪsn/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يستمع",
+      "example_en": "Listen! The teacher is talking."
+    },
+    {
+      "id": "A1-11-v7",
+      "word": "watch",
+      "ipa": "/wɒtʃ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يشاهد",
+      "example_en": "They're watching a football match."
+    },
+    {
+      "id": "A1-11-v8",
+      "word": "study",
+      "ipa": "/ˈstʌdi/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يذاكر / يدرس",
+      "example_en": "My brother is studying for an exam."
+    },
+    {
+      "id": "A1-11-v9",
+      "word": "clean",
+      "ipa": "/kliːn/",
+      "part_of_speech": "verb",
+      "meaning_ar": "ينظّف",
+      "example_en": "My sisters are cleaning the house."
+    },
+    {
+      "id": "A1-11-v10",
+      "word": "sit",
+      "ipa": "/sɪt/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يجلس",
+      "example_en": "Grandfather is sitting in the living room."
+    },
+    {
+      "id": "A1-11-v11",
+      "word": "write",
+      "ipa": "/raɪt/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يكتب",
+      "example_en": "I'm writing my homework."
+    },
+    {
+      "id": "A1-11-v12",
+      "word": "visit",
+      "ipa": "/ˈvɪzɪt/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يزور",
+      "example_en": "We're visiting my aunt today."
+    },
+    {
+      "id": "A1-11-v13",
+      "word": "busy",
+      "ipa": "/ˈbɪzi/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مشغول",
+      "example_en": "Sorry, I'm busy right now."
+    },
+    {
+      "id": "A1-11-v14",
+      "word": "call back",
+      "ipa": "/kɔːl bæk/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يعاود الاتصال",
+      "example_en": "Can I call you back later?"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-11-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "ماذا يحدث الآن؟",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في هذه الوحدة نتعلم كيف نصف ما **يحدث الآن**، كما في المكالمات والرسائل. تعلّم الأفعال والعبارات."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "now",
+              "/naʊ/",
+              "الآن",
+              "I'm studying now."
+            ],
+            [
+              "at the moment",
+              "/ət ðə ˈməʊmənt/",
+              "في هذه اللحظة",
+              "She's sleeping at the moment."
+            ],
+            [
+              "phone call",
+              "/fəʊn kɔːl/",
+              "مكالمة هاتفية",
+              "I'm on a phone call with my uncle."
+            ],
+            [
+              "message",
+              "/ˈmesɪdʒ/",
+              "رسالة",
+              "I'm writing a message to my friend."
+            ],
+            [
+              "wait",
+              "/weɪt/",
+              "ينتظر",
+              "We're waiting for the bus."
+            ],
+            [
+              "listen",
+              "/ˈlɪsn/",
+              "يستمع",
+              "Listen! The teacher is talking."
+            ],
+            [
+              "watch",
+              "/wɒtʃ/",
+              "يشاهد",
+              "They're watching a football match."
+            ],
+            [
+              "study",
+              "/ˈstʌdi/",
+              "يذاكر / يدرس",
+              "My brother is studying for an exam."
+            ],
+            [
+              "clean",
+              "/kliːn/",
+              "ينظّف",
+              "My sisters are cleaning the house."
+            ],
+            [
+              "sit",
+              "/sɪt/",
+              "يجلس",
+              "Grandfather is sitting in the living room."
+            ],
+            [
+              "write",
+              "/raɪt/",
+              "يكتب",
+              "I'm writing my homework."
+            ],
+            [
+              "visit",
+              "/ˈvɪzɪt/",
+              "يزور",
+              "We're visiting my aunt today."
+            ],
+            [
+              "busy",
+              "/ˈbɪzi/",
+              "مشغول",
+              "Sorry, I'm busy right now."
+            ],
+            [
+              "call back",
+              "/kɔːl bæk/",
+              "يعاود الاتصال",
+              "Can I call you back later?"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "now. I'm studying now.\nat the moment. She's sleeping at the moment.\nphone call. I'm on a phone call with my uncle.\nmessage. I'm writing a message to my friend.\nwait. We're waiting for the bus.\nlisten. Listen! The teacher is talking.\nwatch. They're watching a football match.\nstudy. My brother is studying for an exam.\nclean. My sisters are cleaning the house.\nsit. Grandfather is sitting in the living room.\nwrite. I'm writing my homework.\nvisit. We're visiting my aunt today.\nbusy. Sorry, I'm busy right now.\ncall back. Can I call you back later?"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Sorry, I can't talk. I'm ___.",
+            "options": [
+              "busy",
+              "now",
+              "listen"
+            ],
+            "answer": 0,
+            "explanation_ar": "لا أستطيع الكلام لأني مشغول busy."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "We're at the bus stop. We're ___ for the bus.",
+            "options": [
+              "watching",
+              "waiting",
+              "cleaning"
+            ],
+            "answer": 1,
+            "explanation_ar": "ننتظر الباص = waiting for."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I'm busy. Can I call you ___ later?",
+            "answer": "back",
+            "explanation_ar": "call back = يعاود الاتصال."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-11-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "المضارع المستمر",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "نستخدم **المضارع المستمر (present continuous)** لشيء **يحدث الآن، في هذه اللحظة**.\n\n**التكوين:** am / is / are + الفعل + **ing**\n\n- I **am reading**. / She **is cooking**. / They **are playing**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "الصيغة",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "إثبات",
+              "am / is / are + فعل-ing",
+              "He's watching TV."
+            ],
+            [
+              "نفي",
+              "am not / isn't / aren't + فعل-ing",
+              "We aren't studying now."
+            ],
+            [
+              "سؤال",
+              "Am / Is / Are + الفاعل + فعل-ing؟",
+              "Are you listening?"
+            ],
+            [
+              "إجابة",
+              "Yes, I am. / No, she isn't.",
+              "Is it raining? — Yes, it is."
+            ],
+            [
+              "سؤال بأداة",
+              "What / Where + am / is / are + …؟",
+              "What are you doing?"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**قواعد إضافة ing:**\n\n- معظم الأفعال: read ← **reading**، watch ← **watching**.\n- ينتهي بـ e: نحذف e: write ← **writing**، make ← **making**.\n- ساكن + متحرك + ساكن (قصير): نضاعف الأخير: sit ← **sitting**، swim ← **swimming**، run ← **running**.\n\n**الفرق مع المضارع البسيط:**\n\n- I **study** every day. (عادة)\n- I **am studying** now. (الآن)"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "Shh! The baby ___.",
+            "options": [
+              "sleeps",
+              "is sleeping",
+              "sleeping"
+            ],
+            "answer": 1,
+            "explanation_ar": "يحدث الآن: is sleeping."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "They ___ football at the moment.",
+            "options": [
+              "are playing",
+              "is playing",
+              "playing"
+            ],
+            "answer": 0,
+            "explanation_ar": "مع they نستخدم are + playing."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e6",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "write + ing =",
+            "options": [
+              "writeing",
+              "writing",
+              "writting"
+            ],
+            "answer": 1,
+            "explanation_ar": "نحذف e ثم نضيف ing: writing."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e7",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "What ___ you doing? — I'm doing my homework.",
+            "answer": "are",
+            "explanation_ar": "مع you: What are you doing?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "I usually walk to school, but today I ___ the bus.",
+            "options": [
+              "take",
+              "am taking",
+              "takes"
+            ],
+            "answer": 1,
+            "explanation_ar": "today (الآن، استثناء): am taking."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: raining / it / is",
+            "answer": [
+              "Is",
+              "it",
+              "raining"
+            ],
+            "explanation_ar": "السؤال: Is + it + فعل-ing؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-11-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "مكالمة من السيارة",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**نوال** تتصل بصديقتها **رنا** وهي في الطريق إلى تعز. استمع: ماذا يفعل كل شخص الآن؟"
+        },
+        {
+          "type": "audio",
+          "text_en": "Nawal: Hello, Rana? It's Nawal. What are you doing?\nRana: Hi, Nawal! I'm studying for the English test. And you?\nNawal: I'm sitting in the car. We're going to Taiz to visit my grandmother.\nRana: Oh, nice! Is your brother with you?\nNawal: Yes. He's sitting next to me. He's playing a game on his phone.\nRana: And your mother?\nNawal: She's talking to my father. He's driving.\nRana: Sorry, Nawal, my mother is calling me. She's cooking and she needs help. Can I call you back later?\nNawal: Of course. Bye!"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What is Rana doing?",
+            "options": [
+              "She's cooking.",
+              "She's studying.",
+              "She's driving."
+            ],
+            "answer": 1,
+            "explanation_ar": "قالت رنا: I'm studying for the English test."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e11",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What is Nawal's brother doing?",
+            "options": [
+              "He's sleeping.",
+              "He's driving.",
+              "He's playing a game."
+            ],
+            "answer": 2,
+            "explanation_ar": "قالت: He's playing a game on his phone."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e12",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Nawal's mother is driving the car.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الأب هو الذي يقود: He's driving."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-11-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "ظهر الجمعة في سيئون",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ عن عائلة في **سيئون** يوم الجمعة: ماذا يفعل كل فرد الآن؟"
+        },
+        {
+          "type": "reading",
+          "text_en": "It is Friday afternoon at the Al-Saqqaf house in Seiyun. Everybody is at home. Grandfather is sitting in the living room. He is reading the Quran. Mother and Aunt Salma are in the kitchen. They are making lunch for the family. Huda is helping them. She is cutting vegetables. Father isn't at home now. He is buying bread from the bakery. The two boys, Omar and Saleh, are in the garden. They aren't playing football today. They are washing their father's car. And the cat? It is sleeping under the table. It is a quiet and happy afternoon.",
+          "word_count": 98
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "What is Grandfather doing?",
+            "options": [
+              "He's reading.",
+              "He's sleeping.",
+              "He's cooking."
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: He is reading the Quran."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where is Father?",
+            "options": [
+              "in the kitchen",
+              "at the bakery",
+              "in the garden"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: He is buying bread from the bakery."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e15",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "Omar and Saleh are playing football.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: They aren't playing football today. They are washing… the car."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "The cat is ___ under the table.",
+            "answer": "sleeping",
+            "explanation_ar": "في النص: It is sleeping under the table."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-11-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "ماذا يفعلون الآن؟",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تخيّل أن صديقك اتصل بك الآن ويسأل: **What are you doing?** صِف ما تفعله أنت، وما يفعله 3 أشخاص في بيتك **في هذه اللحظة**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "أنا",
+              "I'm …ing."
+            ],
+            [
+              "هو / هي",
+              "My mother is …ing."
+            ],
+            [
+              "هم",
+              "My brothers are …ing."
+            ],
+            [
+              "لا",
+              "My father isn't … now. He's…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "A friend calls you and asks «What are you doing?». Say what you are doing and what three people in your house are doing right now.",
+        "helpful_phrases": [
+          "I'm …ing.",
+          "My mother is …ing.",
+          "My brothers are …ing.",
+          "My father isn't … now.",
+          "Can I call you back later?"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "present continuous",
+          "-ing spelling"
+        ]
+      }
+    },
+    {
+      "id": "A1-11-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "رسالة: ماذا يحدث الآن؟",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب رسالة قصيرة (40 إلى 80 كلمة) لصديق تصف فيها **ما يحدث الآن** حولك: في البيت، أو المدرسة، أو الشارع. اقرأ المثال أولاً."
+        },
+        {
+          "type": "reading",
+          "text_en": "Hi Mohammed,\nI'm writing this message from my uncle's house in Ibb. It's raining now and it's cold. My cousins are watching a football match on TV. My uncle is drinking tea. My aunt isn't at home. She's visiting her sister. I'm not watching the match. I'm reading a book. What are you doing?\nAhmed",
+          "word_count": 55
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write a short message to a friend about what is happening around you right now. Use the present continuous.",
+        "min_words": 40,
+        "max_words": 80,
+        "rubric_focus": [
+          "present continuous",
+          "-ing spelling",
+          "now / at the moment"
+        ]
+      }
+    },
+    {
+      "id": "A1-11-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **am / is / are + فعل-ing** لما يحدث الآن.\n- الإملاء: writing (نحذف e)، sitting / swimming (نضاعف).\n- **What are you doing? / Is he sleeping?**\n- البسيط للعادة: I study every day. المستمر للآن: I'm studying now."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "sit + ing =",
+            "options": [
+              "siting",
+              "sitting",
+              "sitteing"
+            ],
+            "answer": 1,
+            "explanation_ar": "نضاعف t: sitting."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My father ___ at the moment. He's at the mosque.",
+            "options": [
+              "isn't working",
+              "doesn't work",
+              "not working"
+            ],
+            "answer": 0,
+            "explanation_ar": "النفي الآن: isn't working."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-e19",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "Listen! Somebody ___ knocking on the door.",
+            "answer": "is",
+            "explanation_ar": "somebody مفرد: is knocking."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-11-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "Look! The children ___ in the park.",
+        "options": [
+          "play",
+          "are playing",
+          "is playing"
+        ],
+        "answer": 1,
+        "explanation_ar": "Look! تعني الآن، والجمع are playing."
+      },
+      {
+        "id": "A1-11-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "I ___ a message now.",
+        "options": [
+          "am writing",
+          "write",
+          "is writing"
+        ],
+        "answer": 0,
+        "explanation_ar": "مع I الآن: am writing."
+      },
+      {
+        "id": "A1-11-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "swim + ing =",
+        "options": [
+          "swiming",
+          "swimming",
+          "swimeing"
+        ],
+        "answer": 1,
+        "explanation_ar": "نضاعف m: swimming."
+      },
+      {
+        "id": "A1-11-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "___ she sleeping? — No, she isn't.",
+        "answer": "Is",
+        "explanation_ar": "السؤال مع she: Is she…?"
+      },
+      {
+        "id": "A1-11-q5",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "We usually ___ TV in the evening.",
+        "options": [
+          "are watching",
+          "watch",
+          "watching"
+        ],
+        "answer": 1,
+        "explanation_ar": "usually = عادة، فنستخدم المضارع البسيط."
+      },
+      {
+        "id": "A1-11-q6",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "«في هذه اللحظة» بالإنجليزية:",
+        "options": [
+          "every day",
+          "at the moment",
+          "sometimes"
+        ],
+        "answer": 1,
+        "explanation_ar": "في هذه اللحظة = at the moment."
+      },
+      {
+        "id": "A1-11-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: doing / you / what / are",
+        "answer": [
+          "What",
+          "are",
+          "you",
+          "doing"
+        ],
+        "explanation_ar": "What + are + you + doing؟"
+      },
+      {
+        "id": "A1-11-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "They is waiting for the bus.",
+          "They are waiting for the bus.",
+          "They waiting for the bus."
+        ],
+        "answer": 1,
+        "explanation_ar": "مع they: are waiting."
+      },
+      {
+        "id": "A1-11-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «Ali is in the kitchen. He's making tea.» What is Ali doing?",
+        "options": [
+          "He's making tea.",
+          "He's sleeping.",
+          "He's studying."
+        ],
+        "answer": 0,
+        "explanation_ar": "He's making tea."
+      },
+      {
+        "id": "A1-11-q10",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "My mother ___ cooking now. She's at work. (لا)",
+        "answer": "isn't",
+        "explanation_ar": "النفي مع she: isn't + فعل-ing."
+      }
+    ]
+  },
+  "context_note": "ظهر الجمعة في بيت عائلي في سيئون، السفر بالسيارة إلى تعز لزيارة الجدة."
+}
