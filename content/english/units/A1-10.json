@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 10,
-  "title": "Weather",
-  "topic": "الطقس من صنعاء الباردة إلى عدن الحارة",
-  "grammar_point": "adverbs of frequency (always, usually, often, sometimes, never)",
+  "title": "Time",
+  "topic": "الوقت ويوم طالب حضرمي من الفجر إلى المساء",
+  "grammar_point": "present simple (I / you / we / they) + telling the time",
   "can_do": [
-    "أصف الطقس في مدينتي في الفصول المختلفة",
-    "أتحدث عن عاداتي وكم مرة أفعلها",
-    "أفهم نشرة طقس بسيطة"
+    "أصف روتيني اليومي",
+    "أسأل عن الوقت وأخبر به",
+    "أفهم وصفاً قصيراً ليوم شخص آخر"
   ],
   "vocab": [
     {
       "id": "A1-10-v1",
-      "word": "weather",
-      "ipa": "/ˈweðə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "الطقس",
-      "example_en": "What's the weather like in Aden?"
+      "word": "get up",
+      "ipa": "/ɡet ʌp/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يستيقظ / ينهض",
+      "example_en": "I get up at five o'clock."
     },
     {
       "id": "A1-10-v2",
-      "word": "hot",
-      "ipa": "/hɒt/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "حار",
-      "example_en": "It's very hot in summer."
+      "word": "pray",
+      "ipa": "/preɪ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يصلّي",
+      "example_en": "We pray the dawn prayer at home."
     },
     {
       "id": "A1-10-v3",
-      "word": "cold",
-      "ipa": "/kəʊld/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "بارد",
-      "example_en": "Sana'a is cold in winter."
+      "word": "have breakfast",
+      "ipa": "/hæv ˈbrekfəst/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يتناول الفطور",
+      "example_en": "I have breakfast with my family."
     },
     {
       "id": "A1-10-v4",
-      "word": "warm",
-      "ipa": "/wɔːm/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "دافئ",
-      "example_en": "It's warm in spring."
+      "word": "go to school",
+      "ipa": "/ɡəʊ tə skuːl/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يذهب إلى المدرسة",
+      "example_en": "We go to school by bus."
     },
     {
       "id": "A1-10-v5",
-      "word": "sunny",
-      "ipa": "/ˈsʌni/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "مشمس",
-      "example_en": "It's sunny today."
+      "word": "start",
+      "ipa": "/stɑːt/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يبدأ",
+      "example_en": "Lessons start at seven thirty."
     },
     {
       "id": "A1-10-v6",
-      "word": "rainy",
-      "ipa": "/ˈreɪni/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "ماطر",
-      "example_en": "August is rainy in Ibb."
+      "word": "finish",
+      "ipa": "/ˈfɪnɪʃ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "ينهي / ينتهي",
+      "example_en": "We finish school at one o'clock."
     },
     {
       "id": "A1-10-v7",
-      "word": "windy",
-      "ipa": "/ˈwɪndi/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "عاصف / فيه رياح",
-      "example_en": "It's windy near the sea."
+      "word": "have lunch",
+      "ipa": "/hæv lʌntʃ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يتناول الغداء",
+      "example_en": "I have lunch at two."
     },
     {
       "id": "A1-10-v8",
-      "word": "cloudy",
-      "ipa": "/ˈklaʊdi/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "غائم",
-      "example_en": "The sky is cloudy."
+      "word": "do homework",
+      "ipa": "/duː ˈhəʊmwɜːk/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يحل الواجب",
+      "example_en": "I do my homework in the afternoon."
     },
     {
       "id": "A1-10-v9",
-      "word": "summer",
-      "ipa": "/ˈsʌmə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "الصيف",
-      "example_en": "We visit our village in summer."
+      "word": "help",
+      "ipa": "/help/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يساعد",
+      "example_en": "I help my mother at home."
     },
     {
       "id": "A1-10-v10",
-      "word": "winter",
-      "ipa": "/ˈwɪntə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "الشتاء",
-      "example_en": "I wear a jacket in winter."
+      "word": "go to bed",
+      "ipa": "/ɡəʊ tə bed/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يذهب إلى النوم",
+      "example_en": "I go to bed at ten o'clock."
     },
     {
       "id": "A1-10-v11",
-      "word": "spring",
-      "ipa": "/sprɪŋ/",
+      "word": "morning",
+      "ipa": "/ˈmɔːnɪŋ/",
       "part_of_speech": "noun",
-      "meaning_ar": "الربيع",
-      "example_en": "The mountains are green in spring."
+      "meaning_ar": "صباح",
+      "example_en": "I study in the morning."
     },
     {
       "id": "A1-10-v12",
-      "word": "jacket",
-      "ipa": "/ˈdʒækɪt/",
+      "word": "afternoon",
+      "ipa": "/ˌɑːftəˈnuːn/",
       "part_of_speech": "noun",
-      "meaning_ar": "جاكيت / سترة",
-      "example_en": "Take your jacket. It's cold."
+      "meaning_ar": "بعد الظهر / العصر",
+      "example_en": "We play football in the afternoon."
     },
     {
       "id": "A1-10-v13",
-      "word": "umbrella",
-      "ipa": "/ʌmˈbrelə/",
+      "word": "evening",
+      "ipa": "/ˈiːvnɪŋ/",
       "part_of_speech": "noun",
-      "meaning_ar": "مظلة",
-      "example_en": "I always take an umbrella in August."
+      "meaning_ar": "مساء",
+      "example_en": "We watch TV in the evening."
     },
     {
       "id": "A1-10-v14",
-      "word": "degrees",
-      "ipa": "/dɪˈɡriːz/",
-      "part_of_speech": "noun",
-      "meaning_ar": "درجات (حرارة)",
-      "example_en": "It's thirty-five degrees today."
+      "word": "o'clock",
+      "ipa": "/əˈklɒk/",
+      "part_of_speech": "other",
+      "meaning_ar": "تماماً (للساعة)",
+      "example_en": "It's six o'clock."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-10-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "الطقس والفصول",
+      "title": "يومي من الفجر إلى المساء",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اليمن بلد متنوع: **صنعاء** باردة في الشتاء، و**عدن** و**الحديدة** حارتان أغلب السنة، و**إب** خضراء وماطرة في الصيف. تعلّم كلمات الطقس.\n\n**لاحظ:** كثير من صفات الطقس تأتي من الاسم + **y**: sun ← sunny، rain ← rainy، wind ← windy، cloud ← cloudy."
+          "markdown_ar": "كيف يمضي يومك؟ تعلّم أفعال الروتين اليومي، وأوقات اليوم: **morning** (الصباح)، **afternoon** (بعد الظهر)، **evening** (المساء)."
+        },
+        {
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "table",
@@ -148,94 +158,94 @@
           ],
           "rows": [
             [
-              "weather",
-              "/ˈweðə/",
-              "الطقس",
-              "What's the weather like in Aden?"
+              "get up",
+              "/ɡet ʌp/",
+              "يستيقظ / ينهض",
+              "I get up at five o'clock."
             ],
             [
-              "hot",
-              "/hɒt/",
-              "حار",
-              "It's very hot in summer."
+              "pray",
+              "/preɪ/",
+              "يصلّي",
+              "We pray the dawn prayer at home."
             ],
             [
-              "cold",
-              "/kəʊld/",
-              "بارد",
-              "Sana'a is cold in winter."
+              "have breakfast",
+              "/hæv ˈbrekfəst/",
+              "يتناول الفطور",
+              "I have breakfast with my family."
             ],
             [
-              "warm",
-              "/wɔːm/",
-              "دافئ",
-              "It's warm in spring."
+              "go to school",
+              "/ɡəʊ tə skuːl/",
+              "يذهب إلى المدرسة",
+              "We go to school by bus."
             ],
             [
-              "sunny",
-              "/ˈsʌni/",
-              "مشمس",
-              "It's sunny today."
+              "start",
+              "/stɑːt/",
+              "يبدأ",
+              "Lessons start at seven thirty."
             ],
             [
-              "rainy",
-              "/ˈreɪni/",
-              "ماطر",
-              "August is rainy in Ibb."
+              "finish",
+              "/ˈfɪnɪʃ/",
+              "ينهي / ينتهي",
+              "We finish school at one o'clock."
             ],
             [
-              "windy",
-              "/ˈwɪndi/",
-              "عاصف / فيه رياح",
-              "It's windy near the sea."
+              "have lunch",
+              "/hæv lʌntʃ/",
+              "يتناول الغداء",
+              "I have lunch at two."
             ],
             [
-              "cloudy",
-              "/ˈklaʊdi/",
-              "غائم",
-              "The sky is cloudy."
+              "do homework",
+              "/duː ˈhəʊmwɜːk/",
+              "يحل الواجب",
+              "I do my homework in the afternoon."
             ],
             [
-              "summer",
-              "/ˈsʌmə/",
-              "الصيف",
-              "We visit our village in summer."
+              "help",
+              "/help/",
+              "يساعد",
+              "I help my mother at home."
             ],
             [
-              "winter",
-              "/ˈwɪntə/",
-              "الشتاء",
-              "I wear a jacket in winter."
+              "go to bed",
+              "/ɡəʊ tə bed/",
+              "يذهب إلى النوم",
+              "I go to bed at ten o'clock."
             ],
             [
-              "spring",
-              "/sprɪŋ/",
-              "الربيع",
-              "The mountains are green in spring."
+              "morning",
+              "/ˈmɔːnɪŋ/",
+              "صباح",
+              "I study in the morning."
             ],
             [
-              "jacket",
-              "/ˈdʒækɪt/",
-              "جاكيت / سترة",
-              "Take your jacket. It's cold."
+              "afternoon",
+              "/ˌɑːftəˈnuːn/",
+              "بعد الظهر / العصر",
+              "We play football in the afternoon."
             ],
             [
-              "umbrella",
-              "/ʌmˈbrelə/",
-              "مظلة",
-              "I always take an umbrella in August."
+              "evening",
+              "/ˈiːvnɪŋ/",
+              "مساء",
+              "We watch TV in the evening."
             ],
             [
-              "degrees",
-              "/dɪˈɡriːz/",
-              "درجات (حرارة)",
-              "It's thirty-five degrees today."
+              "o'clock",
+              "/əˈklɒk/",
+              "تماماً (للساعة)",
+              "It's six o'clock."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "weather. What's the weather like in Aden?\nhot. It's very hot in summer.\ncold. Sana'a is cold in winter.\nwarm. It's warm in spring.\nsunny. It's sunny today.\nrainy. August is rainy in Ibb.\nwindy. It's windy near the sea.\ncloudy. The sky is cloudy.\nsummer. We visit our village in summer.\nwinter. I wear a jacket in winter.\nspring. The mountains are green in spring.\njacket. Take your jacket. It's cold.\numbrella. I always take an umbrella in August.\ndegrees. It's thirty-five degrees today."
+          "text_en": "get up. I get up at five o'clock.\npray. We pray the dawn prayer at home.\nhave breakfast. I have breakfast with my family.\ngo to school. We go to school by bus.\nstart. Lessons start at seven thirty.\nfinish. We finish school at one o'clock.\nhave lunch. I have lunch at two.\ndo homework. I do my homework in the afternoon.\nhelp. I help my mother at home.\ngo to bed. I go to bed at ten o'clock.\nmorning. I study in the morning.\nafternoon. We play football in the afternoon.\nevening. We watch TV in the evening.\no'clock. It's six o'clock."
         },
         {
           "type": "exercise",
@@ -243,14 +253,14 @@
             "id": "A1-10-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "The opposite of «hot» is:",
+            "prompt": "I ___ at ten o'clock at night. I'm tired.",
             "options": [
-              "warm",
-              "cold",
-              "sunny"
+              "get up",
+              "go to bed",
+              "have breakfast"
             ],
             "answer": 1,
-            "explanation_ar": "عكس حار hot هو بارد cold."
+            "explanation_ar": "في الليل نذهب للنوم: go to bed."
           }
         },
         {
@@ -259,14 +269,14 @@
             "id": "A1-10-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "It's raining. Take your ___.",
+            "prompt": "We eat ___ in the morning.",
             "options": [
-              "umbrella",
-              "jacket",
-              "degrees"
+              "lunch",
+              "breakfast",
+              "homework"
             ],
-            "answer": 0,
-            "explanation_ar": "مع المطر نأخذ المظلة umbrella."
+            "answer": 1,
+            "explanation_ar": "وجبة الصباح breakfast."
           }
         },
         {
@@ -275,9 +285,9 @@
             "id": "A1-10-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "There are a lot of clouds. It's ___.",
-            "answer": "cloudy",
-            "explanation_ar": "cloud + y = cloudy (غائم)."
+            "prompt": "I do my ___ after school. (الواجب)",
+            "answer": "homework",
+            "explanation_ar": "الواجب المدرسي = homework."
           }
         }
       ]
@@ -286,57 +296,61 @@
       "id": "A1-10-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "always / usually / sometimes / never",
+      "title": "المضارع البسيط + الوقت",
       "est_minutes": 30,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**ظروف التكرار** تقول **كم مرة** نفعل الشيء. نستخدمها مع المضارع البسيط."
+          "markdown_ar": "تعرّفنا على **المضارع البسيط** في الوحدة 5 مع he و she. في هذه الوحدة نستعمله لنحكي **يومنا نحن** مع الوقت.\n\nمع **I, you, we, they** نستخدم الفعل كما هو بدون إضافة: «I **get up** at six.» «We **go** to school.»"
+        },
+        {
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "table",
           "headers": [
-            "الكلمة",
-            "المعنى",
-            "النسبة",
+            "",
+            "الصيغة",
             "مثال"
           ],
           "rows": [
             [
-              "always",
-              "دائماً",
-              "100%",
-              "It's always hot in Aden in summer."
+              "إثبات",
+              "I / you / we / they + الفعل",
+              "They play football."
             ],
             [
-              "usually",
-              "عادةً",
-              "80%",
-              "I usually walk to school."
+              "نفي",
+              "don't (do not) + الفعل",
+              "I don't watch TV in the morning."
             ],
             [
-              "often",
-              "غالباً / كثيراً",
-              "60%",
-              "It often rains in Ibb in August."
+              "سؤال",
+              "Do + الفاعل + الفعل؟",
+              "Do you walk to school?"
             ],
             [
-              "sometimes",
-              "أحياناً",
-              "40%",
-              "It's sometimes windy in Mukalla."
+              "إجابة",
+              "Yes, I do. / No, I don't.",
+              "Do they live in Tarim? — Yes, they do."
             ],
             [
-              "never",
-              "أبداً / لا … أبداً",
-              "0%",
-              "It never snows in Aden."
+              "سؤال بأداة",
+              "What time / When + do + …؟",
+              "What time do you get up?"
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**مكانها في الجملة:**\n\n- **قبل** الفعل العادي: I **always** get up early. / She **never** drinks coffee.\n- **بعد** فعل be (am / is / are): It **is often** cold in Sana'a. / They **are never** late.\n\n**انتبه:** never معناها النفي، فلا نضع معها not: ✗ I don't never… ← ✓ I **never**…\n\n**السؤال عن الطقس:** What's the weather like today? ← It's sunny and hot. It's 30 degrees."
+          "markdown_ar": "**قول الوقت:**\n\n- **What time is it?** = كم الساعة؟\n- 6:00 = It's **six o'clock**.\n- 6:30 = It's **six thirty** (أو half past six).\n- 6:15 = It's **six fifteen** (أو quarter past six).\n- مع الوقت نستخدم **at**: at seven o'clock. ومع أجزاء اليوم **in**: in the morning, in the evening. لكن **at night**."
         },
         {
           "type": "exercise",
@@ -344,14 +358,14 @@
             "id": "A1-10-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "اختر الترتيب الصحيح:",
+            "prompt": "We ___ to school at seven o'clock.",
             "options": [
-              "I go always to school by bus.",
-              "I always go to school by bus.",
-              "Always I go to school by bus."
+              "go",
+              "goes",
+              "going"
             ],
-            "answer": 1,
-            "explanation_ar": "ظرف التكرار قبل الفعل العادي."
+            "answer": 0,
+            "explanation_ar": "مع we يبقى الفعل كما هو: go."
           }
         },
         {
@@ -360,14 +374,14 @@
             "id": "A1-10-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "اختر الترتيب الصحيح:",
+            "prompt": "I ___ drink coffee. I drink tea.",
             "options": [
-              "It is usually hot in Hodeidah.",
-              "It usually is hot in Hodeidah.",
-              "Usually it hot in Hodeidah."
+              "not",
+              "don't",
+              "doesn't"
             ],
-            "answer": 0,
-            "explanation_ar": "مع فعل be يأتي الظرف بعده: is usually."
+            "answer": 1,
+            "explanation_ar": "النفي مع I: don't + الفعل."
           }
         },
         {
@@ -375,15 +389,10 @@
           "exercise": {
             "id": "A1-10-e6",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "It ___ snows in Aden. (0%)",
-            "options": [
-              "always",
-              "sometimes",
-              "never"
-            ],
-            "answer": 2,
-            "explanation_ar": "0% = never."
+            "kind": "fill_blank",
+            "prompt": "___ you have breakfast at home? — Yes, I do.",
+            "answer": "Do",
+            "explanation_ar": "السؤال يبدأ بـ Do مع you."
           }
         },
         {
@@ -391,10 +400,15 @@
           "exercise": {
             "id": "A1-10-e7",
             "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "What's the weather ___ in Taiz today?",
-            "answer": "like",
-            "explanation_ar": "السؤال عن الطقس: What's the weather like…?"
+            "kind": "mcq",
+            "prompt": "I study ___ the evening.",
+            "options": [
+              "at",
+              "in",
+              "on"
+            ],
+            "answer": 1,
+            "explanation_ar": "مع أجزاء اليوم نستخدم in: in the evening."
           }
         },
         {
@@ -402,15 +416,32 @@
           "exercise": {
             "id": "A1-10-e8",
             "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات: sometimes / is / it / windy",
-            "answer": [
-              "It",
-              "is",
-              "sometimes",
-              "windy"
+            "kind": "mcq",
+            "prompt": "7:30 تُقرأ:",
+            "options": [
+              "seven thirteen",
+              "seven thirty",
+              "thirty seven"
             ],
-            "explanation_ar": "الظرف بعد is."
+            "answer": 1,
+            "explanation_ar": "7:30 = seven thirty."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: time / you / get up / what / do",
+            "answer": [
+              "What",
+              "time",
+              "do",
+              "you",
+              "get up"
+            ],
+            "explanation_ar": "What time + do + you + الفعل؟"
           }
         }
       ]
@@ -419,32 +450,26 @@
       "id": "A1-10-l3",
       "position": 3,
       "skill": "listening",
-      "title": "نشرة الطقس",
+      "title": "يوم مازن",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "استمع إلى **نشرة الطقس** لعدة مدن يمنية. ستسمع **it will be** ومعناها «سيكون»، ولا بأس إن لم تعرف القاعدة الآن؛ ركّز على كلمات الطقس والأرقام."
+          "markdown_ar": "استمع إلى **مازن** من **تريم** وهو يحكي عن يومه الدراسي. انتبه للأوقات."
+        },
+        {
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "audio",
-          "text_en": "Good evening. Here is the weather for tomorrow, Tuesday. In Sana'a, it will be sunny in the morning but cold at night, about eight degrees. Take a jacket. In Aden, it will be very hot, thirty-six degrees, and windy near the sea. In Ibb, it will be cloudy and rainy in the afternoon. Don't forget your umbrella. In Mukalla, it will be sunny and hot, thirty-four degrees. That's all for tonight. Good night."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e9",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "Where will it be rainy?",
-            "options": [
-              "Sana'a",
-              "Aden",
-              "Ibb"
-            ],
-            "answer": 2,
-            "explanation_ar": "قيل: In Ibb, it will be cloudy and rainy."
-          }
+          "text_en": "Hi, I'm Mazen. I'm from Tarim and I'm in the third grade. On school days, I get up at five o'clock. I pray and then I have breakfast with my family. We have bread, beans and tea. I walk to school with my cousin. Lessons start at seven thirty. We finish at one o'clock and I have lunch at home at two. In the afternoon, I do my homework and I help my father in his shop. In the evening, I read or I talk to my friends. I go to bed at ten o'clock. I don't stay up late."
         },
         {
           "type": "exercise",
@@ -452,14 +477,14 @@
             "id": "A1-10-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "How hot will it be in Aden?",
+            "prompt": "What time does Mazen get up?",
             "options": [
-              "8 degrees",
-              "34 degrees",
-              "36 degrees"
+              "five o'clock",
+              "seven thirty",
+              "ten o'clock"
             ],
-            "answer": 2,
-            "explanation_ar": "قيل: thirty-six degrees."
+            "answer": 0,
+            "explanation_ar": "قال: I get up at five o'clock."
           }
         },
         {
@@ -468,13 +493,29 @@
             "id": "A1-10-e11",
             "skill": "listening",
             "kind": "true_false",
-            "prompt": "It will be cold at night in Sana'a.",
+            "prompt": "Mazen goes to school by bus.",
             "options": [
               "True",
               "False"
             ],
-            "answer": 0,
-            "explanation_ar": "قيل: cold at night, about eight degrees."
+            "answer": 1,
+            "explanation_ar": "قال: I walk to school with my cousin."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e12",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What does Mazen do in the afternoon?",
+            "options": [
+              "He plays football.",
+              "He helps his father.",
+              "He goes to bed."
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: I help my father in his shop."
           }
         }
       ]
@@ -483,33 +524,27 @@
       "id": "A1-10-l4",
       "position": 4,
       "skill": "reading",
-      "title": "الطقس في صنعاء وعدن",
+      "title": "يوم في قرية قرب تريم",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ رسالة **غدير** عن الطقس في **صنعاء** وطقس ابنة عمها في **عدن**، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ عن يوم عائلة تعيش في قرية قرب **تريم**، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "reading",
-          "text_en": "Hello! My name is Ghadeer and I live in Sana'a. Sana'a is a city in the mountains, so the weather is different from Aden. In winter, it is usually sunny in the day, but it is very cold at night. Sometimes it is zero degrees! I always wear a jacket in the morning when I go to school. In summer, it is warm and it often rains in the afternoon. The rain is short but strong. My cousin lives in Aden. She says it is never cold there. In summer, it is always very hot and humid. She usually stays at home in the afternoon, and she goes to the beach in the evening.",
-          "word_count": 114
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e12",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What is the weather like in Sana'a in winter at night?",
-            "options": [
-              "very hot",
-              "very cold",
-              "rainy"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: it is very cold at night."
-          }
+          "text_en": "The Al-Kaff family live in a village near Tarim. Their day starts early. They get up at half past four. The father and the sons go to the mosque for the dawn prayer. Then they have breakfast together. The children walk to school. It is two kilometres from their house. In the afternoon, the girls help their mother, and the boys help their father on the date farm. They don't have a TV, but they have a radio. In the evening, they listen to the news and talk. They go to bed early, at nine o'clock, because they get up very early.",
+          "word_count": 102
         },
         {
           "type": "exercise",
@@ -517,14 +552,14 @@
             "id": "A1-10-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "When does it often rain in Sana'a?",
+            "prompt": "What time do they get up?",
             "options": [
-              "in winter mornings",
-              "in summer afternoons",
-              "never"
+              "4:30",
+              "5:30",
+              "9:00"
             ],
-            "answer": 1,
-            "explanation_ar": "في النص: In summer… it often rains in the afternoon."
+            "answer": 0,
+            "explanation_ar": "half past four = 4:30."
           }
         },
         {
@@ -533,13 +568,13 @@
             "id": "A1-10-e14",
             "skill": "reading",
             "kind": "true_false",
-            "prompt": "It is sometimes cold in Aden.",
+            "prompt": "The children go to school by car.",
             "options": [
               "True",
               "False"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: it is never cold there."
+            "explanation_ar": "المدرسة على بعد 2 كم، ويمشي الأطفال إليها (walk)."
           }
         },
         {
@@ -547,10 +582,26 @@
           "exercise": {
             "id": "A1-10-e15",
             "skill": "reading",
+            "kind": "mcq",
+            "prompt": "What do they do in the evening?",
+            "options": [
+              "They watch TV.",
+              "They listen to the radio.",
+              "They go to the market."
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: they listen to the news (على الراديو)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e16",
+            "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "Ghadeer always wears a ___ in the morning.",
-            "answer": "jacket",
-            "explanation_ar": "في النص: I always wear a jacket in the morning."
+            "prompt": "They go to bed at nine because they get up very ___.",
+            "answer": "early",
+            "explanation_ar": "في النص: because they get up very early."
           }
         }
       ]
@@ -559,12 +610,22 @@
       "id": "A1-10-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "طقس مدينتك",
+      "title": "احكِ عن يومك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "صِف طقس مدينتك في **الصيف والشتاء**، وقل ماذا تفعل عادة في كل فصل. استعمل always و usually و sometimes و never."
+          "markdown_ar": "احكِ عن يومك الدراسي من الصباح إلى المساء في 5 إلى 7 جمل. **اذكر الوقت** مع كل نشاط، واستعمل first و then."
+        },
+        {
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "table",
@@ -574,38 +635,39 @@
           ],
           "rows": [
             [
-              "الطقس",
-              "In summer, it's usually…"
+              "أستيقظ الساعة…",
+              "I get up at…"
             ],
             [
-              "الحرارة",
-              "It's about … degrees."
+              "ثم…",
+              "Then I…"
             ],
             [
-              "عاداتك",
-              "I always / sometimes / never…"
+              "بعد الظهر",
+              "In the afternoon, I…"
             ],
             [
-              "فصلي المفضل",
-              "My favourite season is… because…"
+              "لا أفعل",
+              "I don't…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Describe the weather in your city in summer and in winter, and say what you usually do in each season.",
+        "prompt_en": "Talk about your school day from morning to evening. Say the time for each activity.",
         "helpful_phrases": [
-          "In summer, it's usually…",
-          "In winter, it's sometimes…",
-          "It's about … degrees.",
-          "I always…",
-          "My favourite season is…"
+          "I get up at…",
+          "Then I…",
+          "Lessons start at…",
+          "In the afternoon, I…",
+          "I go to bed at…"
         ],
         "prep_seconds": 30,
-        "max_seconds": 60,
+        "max_seconds": 75,
         "rubric_focus": [
-          "adverbs of frequency",
-          "weather vocabulary"
+          "present simple (I)",
+          "telling the time",
+          "time expressions"
         ]
       }
     },
@@ -613,26 +675,37 @@
       "id": "A1-10-l6",
       "position": 6,
       "skill": "writing",
-      "title": "فصلك المفضل",
+      "title": "اكتب جدول يومك",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن فصلك المفضل وطقسه، وماذا تفعل فيه. اقرأ المثال أولاً.\n\n**تذكّر:** ظرف التكرار قبل الفعل العادي وبعد is / are."
+          "markdown_ar": "اكتب فقرة عن يومك (40 إلى 80 كلمة) مع الأوقات. اقرأ المثال أولاً.\n\n**تذكّر:** at + الساعة، in the morning / afternoon / evening، و don't للنفي."
+        },
+        {
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "reading",
-          "text_en": "My favourite season is winter in Hodeidah. It is never cold, but it is warm and nice. It is usually sunny. In summer, it is very hot and I always stay at home in the afternoon. But in winter, I often go to the beach with my family. We sometimes have fish for lunch near the sea.",
-          "word_count": 57
+          "text_en": "I get up at half past five. I pray and I have breakfast at six. I go to school by bus in Mukalla. Lessons start at seven fifteen. We finish at twelve thirty. I have lunch at home. In the afternoon, I do my homework and I play football with my friends. In the evening, I read. I don't watch TV a lot. I go to bed at ten.",
+          "word_count": 69
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about your favourite season: the weather and what you do. Use always, usually, often, sometimes and never.",
+        "prompt_en": "Write about your daily routine. Use the present simple and times (at six o'clock, in the morning).",
         "min_words": 40,
         "max_words": 80,
         "rubric_focus": [
-          "adverbs of frequency (position)",
-          "weather vocabulary"
+          "present simple (I / we)",
+          "telling the time",
+          "at / in"
         ]
       }
     },
@@ -645,38 +718,32 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- الطقس: hot, cold, warm, sunny, rainy, windy, cloudy.\n- الفصول: summer, winter, spring (و autumn للخريف).\n- **always > usually > often > sometimes > never**.\n- المكان: قبل الفعل العادي، وبعد am / is / are."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- المضارع البسيط مع I / you / we / they: الفعل كما هو.\n- النفي **don't**، والسؤال **Do…?**\n- **What time do you…?** ← **at** seven o'clock.\n- **in** the morning / afternoon / evening، و **at** night."
         },
         {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e16",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "She ___ late for school. She is a good student.",
-            "options": [
-              "is never",
-              "never is",
-              "never"
-            ],
-            "answer": 0,
-            "explanation_ar": "مع be: is never."
-          }
+          "type": "video",
+          "youtube_id": "q_bAo_n0pDU",
+          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 829,
+          "optional": true,
+          "approx_size_mb": 55
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-10-e17",
-            "skill": "vocab",
+            "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Which season is very hot in Aden?",
+            "prompt": "They ___ live in Seiyun. They live in Mukalla.",
             "options": [
-              "winter",
-              "summer",
-              "spring"
+              "don't",
+              "doesn't",
+              "aren't"
             ],
-            "answer": 1,
-            "explanation_ar": "الصيف summer حار جداً في عدن."
+            "answer": 0,
+            "explanation_ar": "النفي مع they: don't + الفعل."
           }
         },
         {
@@ -684,10 +751,26 @@
           "exercise": {
             "id": "A1-10-e18",
             "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "9:15 تُقرأ:",
+            "options": [
+              "nine fifty",
+              "nine fifteen",
+              "fifteen nine"
+            ],
+            "answer": 1,
+            "explanation_ar": "9:15 = nine fifteen."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e19",
+            "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "We ___ visit our grandfather on Fridays. (عادةً)",
-            "answer": "usually",
-            "explanation_ar": "عادةً = usually."
+            "prompt": "We sleep ___ night.",
+            "answer": "at",
+            "explanation_ar": "نقول at night."
           }
         }
       ]
@@ -700,123 +783,123 @@
         "id": "A1-10-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "I ___ to school by bus. (100%)",
+        "prompt": "I ___ up at six o'clock.",
         "options": [
-          "always go",
-          "go always",
-          "always goes"
+          "get",
+          "gets",
+          "getting"
         ],
         "answer": 0,
-        "explanation_ar": "always قبل الفعل، ومع I الفعل بدون s."
+        "explanation_ar": "مع I يبقى الفعل كما هو."
       },
       {
         "id": "A1-10-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "It ___ cold in Sana'a in winter.",
+        "prompt": "We ___ watch TV in the morning.",
         "options": [
-          "often is",
-          "is often",
-          "often"
+          "doesn't",
+          "don't",
+          "not"
         ],
         "answer": 1,
-        "explanation_ar": "مع is يأتي الظرف بعده."
+        "explanation_ar": "النفي مع we: don't."
       },
       {
         "id": "A1-10-q3",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "He ___ drinks coffee. He doesn't like it. (0%)",
-        "options": [
-          "always",
-          "usually",
-          "never"
-        ],
-        "answer": 2,
-        "explanation_ar": "0% = never."
+        "kind": "fill_blank",
+        "prompt": "___ they go to school by bus? — No, they don't.",
+        "answer": "Do",
+        "explanation_ar": "السؤال مع they يبدأ بـ Do."
       },
       {
         "id": "A1-10-q4",
         "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "What's the weather ___ in Ibb? — It's rainy.",
-        "answer": "like",
-        "explanation_ar": "What's the weather like?"
+        "kind": "mcq",
+        "prompt": "Lessons start ___ seven thirty.",
+        "options": [
+          "in",
+          "on",
+          "at"
+        ],
+        "answer": 2,
+        "explanation_ar": "مع الساعة نستخدم at."
       },
       {
         "id": "A1-10-q5",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "There is a lot of sun. It's ___.",
+        "prompt": "I do my homework ___ the afternoon.",
         "options": [
-          "rainy",
-          "sunny",
-          "cloudy"
+          "at",
+          "in",
+          "on"
         ],
         "answer": 1,
-        "explanation_ar": "sun + ny = sunny."
+        "explanation_ar": "مع أجزاء اليوم: in the afternoon."
       },
       {
         "id": "A1-10-q6",
         "skill": "vocab",
         "kind": "mcq",
-        "prompt": "It's raining. You need an ___.",
+        "prompt": "10:30 تُقرأ:",
         "options": [
-          "jacket",
-          "umbrella",
-          "summer"
+          "ten thirteen",
+          "ten thirty",
+          "thirty ten"
         ],
         "answer": 1,
-        "explanation_ar": "مع المطر: umbrella."
+        "explanation_ar": "10:30 = ten thirty أو half past ten."
       },
       {
         "id": "A1-10-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: drinks / she / tea / often",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: breakfast / you / have / do",
         "answer": [
-          "She",
-          "often",
-          "drinks",
-          "tea"
+          "Do",
+          "you",
+          "have",
+          "breakfast"
         ],
-        "explanation_ar": "الظرف قبل الفعل drinks."
+        "explanation_ar": "السؤال: Do + الفاعل + الفعل؟"
       },
       {
         "id": "A1-10-q8",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "The meal in the middle of the day is:",
         "options": [
-          "I don't never watch TV.",
-          "I never watch TV.",
-          "I watch never TV."
+          "breakfast",
+          "lunch",
+          "bed"
         ],
         "answer": 1,
-        "explanation_ar": "never وحدها تكفي للنفي وتأتي قبل الفعل."
+        "explanation_ar": "وجبة منتصف النهار lunch."
       },
       {
         "id": "A1-10-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «In Mukalla it's 35 degrees today. In Sana'a it's 15.» Where is it cold?",
+        "prompt": "Read: «I get up at 6, I go to school at 7 and I finish at 1.» When does the writer finish school?",
         "options": [
-          "Mukalla",
-          "Sana'a",
-          "both"
+          "at 6",
+          "at 7",
+          "at 1"
         ],
-        "answer": 1,
-        "explanation_ar": "15 درجة أبرد من 35."
+        "answer": 2,
+        "explanation_ar": "في الجملة: I finish at 1."
       },
       {
         "id": "A1-10-q10",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "The opposite of «cold» is ___.",
-        "answer": "hot",
-        "explanation_ar": "عكس بارد cold هو حار hot."
+        "prompt": "What time do you go to bed? — I ___ to bed at ten.",
+        "answer": "go",
+        "explanation_ar": "مع I: go to bed."
       }
     ]
   },
-  "context_note": "تنوّع طقس اليمن: برد صنعاء، حر عدن والحديدة والمكلا، أمطار إب في الصيف."
+  "context_note": "صلاة الفجر في تريم، الفطور العائلي (خبز وفول وشاي)، العمل في الدكان أو مزرعة النخيل بعد المدرسة."
 }

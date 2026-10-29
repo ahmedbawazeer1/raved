@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 3,
-  "title": "My School",
-  "topic": "الفصل والمدرسة في المكلا",
-  "grammar_point": "there is / there are + a / an + plural nouns",
+  "title": "My Family",
+  "topic": "عائلة حضرمية كبيرة في سيئون",
+  "grammar_point": "possessive adjectives (my, your, his, her, our, their) + possessive 's",
   "can_do": [
-    "أصف ما يوجد في فصلي ومدرستي",
-    "أسأل هل يوجد شيء في مكان ما وأفهم الإجابة",
-    "أفهم وصفاً قصيراً لمدرسة"
+    "أقدّم أفراد عائلتي بأسمائهم وأعمارهم",
+    "أسأل عن عائلة شخص آخر وأفهم إجابته",
+    "أفهم نصاً قصيراً عن عائلة"
   ],
   "vocab": [
     {
       "id": "A1-03-v1",
-      "word": "classroom",
-      "ipa": "/ˈklɑːsruːm/",
+      "word": "family",
+      "ipa": "/ˈfæməli/",
       "part_of_speech": "noun",
-      "meaning_ar": "فصل (غرفة الدراسة)",
-      "example_en": "Our classroom is big."
+      "meaning_ar": "عائلة",
+      "example_en": "My family is big."
     },
     {
       "id": "A1-03-v2",
-      "word": "desk",
-      "ipa": "/desk/",
+      "word": "father",
+      "ipa": "/ˈfɑːðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "طاولة الطالب / مكتب",
-      "example_en": "There is a book on my desk."
+      "meaning_ar": "أب",
+      "example_en": "My father is a date farmer."
     },
     {
       "id": "A1-03-v3",
-      "word": "chair",
-      "ipa": "/tʃeə/",
+      "word": "mother",
+      "ipa": "/ˈmʌðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "كرسي",
-      "example_en": "There are thirty chairs in the room."
+      "meaning_ar": "أم",
+      "example_en": "My mother is at home."
     },
     {
       "id": "A1-03-v4",
-      "word": "board",
-      "ipa": "/bɔːd/",
+      "word": "brother",
+      "ipa": "/ˈbrʌðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "سبورة",
-      "example_en": "The teacher writes on the board."
+      "meaning_ar": "أخ",
+      "example_en": "My brother is twelve."
     },
     {
       "id": "A1-03-v5",
-      "word": "book",
-      "ipa": "/bʊk/",
+      "word": "sister",
+      "ipa": "/ˈsɪstə/",
       "part_of_speech": "noun",
-      "meaning_ar": "كتاب",
-      "example_en": "This is my English book."
+      "meaning_ar": "أخت",
+      "example_en": "Her sister is a nurse."
     },
     {
       "id": "A1-03-v6",
-      "word": "notebook",
-      "ipa": "/ˈnəʊtbʊk/",
+      "word": "grandfather",
+      "ipa": "/ˈɡrænfɑːðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "دفتر",
-      "example_en": "I have a red notebook."
+      "meaning_ar": "جد",
+      "example_en": "My grandfather is from Seiyun."
     },
     {
       "id": "A1-03-v7",
-      "word": "pen",
-      "ipa": "/pen/",
+      "word": "grandmother",
+      "ipa": "/ˈɡrænmʌðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "قلم حبر",
-      "example_en": "Can I use your pen?"
+      "meaning_ar": "جدة",
+      "example_en": "Our grandmother is kind."
     },
     {
       "id": "A1-03-v8",
-      "word": "pencil",
-      "ipa": "/ˈpensl/",
+      "word": "uncle",
+      "ipa": "/ˈʌŋkl/",
       "part_of_speech": "noun",
-      "meaning_ar": "قلم رصاص",
-      "example_en": "There is a pencil in my bag."
+      "meaning_ar": "عم / خال",
+      "example_en": "My uncle is a driver."
     },
     {
       "id": "A1-03-v9",
-      "word": "bag",
-      "ipa": "/bæɡ/",
+      "word": "aunt",
+      "ipa": "/ɑːnt/",
       "part_of_speech": "noun",
-      "meaning_ar": "حقيبة",
-      "example_en": "My bag is heavy."
+      "meaning_ar": "عمة / خالة",
+      "example_en": "My aunt is a teacher."
     },
     {
       "id": "A1-03-v10",
-      "word": "window",
-      "ipa": "/ˈwɪndəʊ/",
+      "word": "cousin",
+      "ipa": "/ˈkʌzn/",
       "part_of_speech": "noun",
-      "meaning_ar": "نافذة",
-      "example_en": "There are four windows in our classroom."
+      "meaning_ar": "ابن/بنت العم أو الخال",
+      "example_en": "Khaled is my cousin."
     },
     {
       "id": "A1-03-v11",
-      "word": "door",
-      "ipa": "/dɔː/",
+      "word": "son",
+      "ipa": "/sʌn/",
       "part_of_speech": "noun",
-      "meaning_ar": "باب",
-      "example_en": "The door is open."
+      "meaning_ar": "ابن",
+      "example_en": "Ahmed is their son."
     },
     {
       "id": "A1-03-v12",
-      "word": "library",
-      "ipa": "/ˈlaɪbrəri/",
+      "word": "daughter",
+      "ipa": "/ˈdɔːtə/",
       "part_of_speech": "noun",
-      "meaning_ar": "مكتبة",
-      "example_en": "There is a small library in our school."
+      "meaning_ar": "ابنة",
+      "example_en": "Maha is their daughter."
     },
     {
       "id": "A1-03-v13",
-      "word": "playground",
-      "ipa": "/ˈpleɪɡraʊnd/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ساحة / ملعب المدرسة",
-      "example_en": "The students are in the playground."
+      "word": "young",
+      "ipa": "/jʌŋ/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "صغير السن",
+      "example_en": "My sister is young. She is six."
     },
     {
       "id": "A1-03-v14",
-      "word": "lab",
-      "ipa": "/læb/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مختبر / معمل",
-      "example_en": "There is a science lab in our school."
+      "word": "old",
+      "ipa": "/əʊld/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "كبير السن / قديم",
+      "example_en": "My grandfather is old."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-03-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "أشياء في المدرسة",
+      "title": "أفراد العائلة",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "انظر حولك في الفصل: ماذا ترى؟ تعلّم أسماء الأشياء والأماكن في المدرسة واستمع لنطقها."
+          "markdown_ar": "العائلة في حضرموت غالباً كبيرة: الأب والأم والإخوة والجد والجدة وأحياناً الأعمام في بيت واحد. تعلّم أسماءهم بالإنجليزية واستمع لنطقها."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "table",
@@ -148,94 +158,98 @@
           ],
           "rows": [
             [
-              "classroom",
-              "/ˈklɑːsruːm/",
-              "فصل (غرفة الدراسة)",
-              "Our classroom is big."
+              "family",
+              "/ˈfæməli/",
+              "عائلة",
+              "My family is big."
             ],
             [
-              "desk",
-              "/desk/",
-              "طاولة الطالب / مكتب",
-              "There is a book on my desk."
+              "father",
+              "/ˈfɑːðə/",
+              "أب",
+              "My father is a date farmer."
             ],
             [
-              "chair",
-              "/tʃeə/",
-              "كرسي",
-              "There are thirty chairs in the room."
+              "mother",
+              "/ˈmʌðə/",
+              "أم",
+              "My mother is at home."
             ],
             [
-              "board",
-              "/bɔːd/",
-              "سبورة",
-              "The teacher writes on the board."
+              "brother",
+              "/ˈbrʌðə/",
+              "أخ",
+              "My brother is twelve."
             ],
             [
-              "book",
-              "/bʊk/",
-              "كتاب",
-              "This is my English book."
+              "sister",
+              "/ˈsɪstə/",
+              "أخت",
+              "Her sister is a nurse."
             ],
             [
-              "notebook",
-              "/ˈnəʊtbʊk/",
-              "دفتر",
-              "I have a red notebook."
+              "grandfather",
+              "/ˈɡrænfɑːðə/",
+              "جد",
+              "My grandfather is from Seiyun."
             ],
             [
-              "pen",
-              "/pen/",
-              "قلم حبر",
-              "Can I use your pen?"
+              "grandmother",
+              "/ˈɡrænmʌðə/",
+              "جدة",
+              "Our grandmother is kind."
             ],
             [
-              "pencil",
-              "/ˈpensl/",
-              "قلم رصاص",
-              "There is a pencil in my bag."
+              "uncle",
+              "/ˈʌŋkl/",
+              "عم / خال",
+              "My uncle is a driver."
             ],
             [
-              "bag",
-              "/bæɡ/",
-              "حقيبة",
-              "My bag is heavy."
+              "aunt",
+              "/ɑːnt/",
+              "عمة / خالة",
+              "My aunt is a teacher."
             ],
             [
-              "window",
-              "/ˈwɪndəʊ/",
-              "نافذة",
-              "There are four windows in our classroom."
+              "cousin",
+              "/ˈkʌzn/",
+              "ابن/بنت العم أو الخال",
+              "Khaled is my cousin."
             ],
             [
-              "door",
-              "/dɔː/",
-              "باب",
-              "The door is open."
+              "son",
+              "/sʌn/",
+              "ابن",
+              "Ahmed is their son."
             ],
             [
-              "library",
-              "/ˈlaɪbrəri/",
-              "مكتبة",
-              "There is a small library in our school."
+              "daughter",
+              "/ˈdɔːtə/",
+              "ابنة",
+              "Maha is their daughter."
             ],
             [
-              "playground",
-              "/ˈpleɪɡraʊnd/",
-              "ساحة / ملعب المدرسة",
-              "The students are in the playground."
+              "young",
+              "/jʌŋ/",
+              "صغير السن",
+              "My sister is young. She is six."
             ],
             [
-              "lab",
-              "/læb/",
-              "مختبر / معمل",
-              "There is a science lab in our school."
+              "old",
+              "/əʊld/",
+              "كبير السن / قديم",
+              "My grandfather is old."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "classroom. Our classroom is big.\ndesk. There is a book on my desk.\nchair. There are thirty chairs in the room.\nboard. The teacher writes on the board.\nbook. This is my English book.\nnotebook. I have a red notebook.\npen. Can I use your pen?\npencil. There is a pencil in my bag.\nbag. My bag is heavy.\nwindow. There are four windows in our classroom.\ndoor. The door is open.\nlibrary. There is a small library in our school.\nplayground. The students are in the playground.\nlab. There is a science lab in our school."
+          "text_en": "family. My family is big.\nfather. My father is a date farmer.\nmother. My mother is at home.\nbrother. My brother is twelve.\nsister. Her sister is a nurse.\ngrandfather. My grandfather is from Seiyun.\ngrandmother. Our grandmother is kind.\nuncle. My uncle is a driver.\naunt. My aunt is a teacher.\ncousin. Khaled is my cousin.\nson. Ahmed is their son.\ndaughter. Maha is their daughter.\nyoung. My sister is young. She is six.\nold. My grandfather is old."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**ملاحظة:** في الإنجليزية كلمة واحدة **uncle** للعم والخال، و**aunt** للعمة والخالة، و**cousin** لأبناء العم والخال والعمة والخالة كلهم."
         },
         {
           "type": "exercise",
@@ -243,14 +257,14 @@
             "id": "A1-03-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "The teacher writes on the ___.",
+            "prompt": "My father's father is my ___.",
             "options": [
-              "door",
-              "board",
-              "bag"
+              "uncle",
+              "grandfather",
+              "brother"
             ],
             "answer": 1,
-            "explanation_ar": "المعلم يكتب على السبورة board."
+            "explanation_ar": "أبو الأب هو الجد grandfather."
           }
         },
         {
@@ -259,14 +273,14 @@
             "id": "A1-03-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "We read books in the ___.",
+            "prompt": "My mother's sister is my ___.",
             "options": [
-              "library",
-              "playground",
-              "window"
+              "aunt",
+              "cousin",
+              "daughter"
             ],
             "answer": 0,
-            "explanation_ar": "نقرأ الكتب في المكتبة library."
+            "explanation_ar": "أخت الأم هي الخالة aunt."
           }
         },
         {
@@ -275,9 +289,9 @@
             "id": "A1-03-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I write with a ___. (قلم رصاص)",
-            "answer": "pencil",
-            "explanation_ar": "قلم الرصاص = pencil."
+            "prompt": "My uncle's son is my ___.",
+            "answer": "cousin",
+            "explanation_ar": "ابن العم أو الخال هو cousin."
           }
         }
       ]
@@ -286,46 +300,71 @@
       "id": "A1-03-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "there is / there are",
+      "title": "my / your / his / her + 's",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نستخدم **there is** و **there are** لنقول إن شيئاً **موجود** في مكان («يوجد»).\n\n- **There is** + اسم مفرد: There is **a** board.\n- **There are** + اسم جمع: There are **thirty** chairs.\n- المختصر: **There's** a book."
+          "markdown_ar": "نستخدم **صفات الملكية** قبل الاسم لنقول لمن الشيء. هي لا تتغير مع المفرد أو الجمع: «my brother» و«my brothers»."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "table",
           "headers": [
-            "الحالة",
-            "المفرد",
-            "الجمع"
+            "الضمير",
+            "صفة الملكية",
+            "مثال"
           ],
           "rows": [
             [
-              "إثبات",
-              "There is a lab.",
-              "There are two labs."
+              "I",
+              "my",
+              "my father"
             ],
             [
-              "نفي",
-              "There isn't a library.",
-              "There aren't any windows."
+              "you",
+              "your",
+              "your sister"
             ],
             [
-              "سؤال",
-              "Is there a lab?",
-              "Are there any books?"
+              "he",
+              "his",
+              "his mother"
             ],
             [
-              "إجابة",
-              "Yes, there is. / No, there isn't.",
-              "Yes, there are. / No, there aren't."
+              "she",
+              "her",
+              "her brother"
+            ],
+            [
+              "it",
+              "its",
+              "its name"
+            ],
+            [
+              "we",
+              "our",
+              "our family"
+            ],
+            [
+              "they",
+              "their",
+              "their son"
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**a أم an؟** نستخدم **an** قبل الكلمة التي تبدأ بصوت حرف علة (a, e, i, o, u): **an** English book, **an** office. وغير ذلك **a**: **a** desk, **a** pen.\n\n**الجمع:** نضيف **s** غالباً: book ← books. وبعد s و sh و ch و x نضيف **es**: class ← classes. وبعض الكلمات شاذة: man ← men, woman ← women, child ← children."
+          "markdown_ar": "**ملكية الأسماء ('s):** نضيف **'s** بعد اسم الشخص: «**Ali's** sister» = أخت علي، «**my father's** car» = سيارة أبي.\n\n**انتبه:** his للمذكر و her للمؤنث، حسب صاحب الشيء وليس الشيء نفسه: «Ali and **his** mother».\n\n**تنبيه:** لا تخلط بين **his** (له) و **he's** (هو يكون = he is)."
         },
         {
           "type": "exercise",
@@ -333,14 +372,14 @@
             "id": "A1-03-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "There ___ a big window in our classroom.",
+            "prompt": "Maha is a student. ___ school is in Seiyun.",
             "options": [
-              "is",
-              "are",
-              "am"
+              "His",
+              "Her",
+              "Their"
             ],
-            "answer": 0,
-            "explanation_ar": "window مفرد فنستخدم there is."
+            "answer": 1,
+            "explanation_ar": "Maha مؤنث فنستخدم her."
           }
         },
         {
@@ -349,14 +388,14 @@
             "id": "A1-03-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "There ___ forty students in my class.",
+            "prompt": "We love ___ grandmother.",
             "options": [
-              "is",
-              "are",
-              "be"
+              "our",
+              "their",
+              "my"
             ],
-            "answer": 1,
-            "explanation_ar": "forty students جمع فنستخدم there are."
+            "answer": 0,
+            "explanation_ar": "مع we نستخدم our."
           }
         },
         {
@@ -364,15 +403,10 @@
           "exercise": {
             "id": "A1-03-e6",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "I have ___ English notebook.",
-            "options": [
-              "a",
-              "an",
-              "—"
-            ],
-            "answer": 1,
-            "explanation_ar": "English تبدأ بصوت حرف علة فنستخدم an."
+            "kind": "fill_blank",
+            "prompt": "Salem and ___ brother are in class two.",
+            "answer": "his",
+            "explanation_ar": "Salem مذكر فنستخدم his."
           }
         },
         {
@@ -380,10 +414,15 @@
           "exercise": {
             "id": "A1-03-e7",
             "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ there a library in your school? — Yes, there is.",
-            "answer": "Is",
-            "explanation_ar": "السؤال عن مفرد يبدأ بـ Is there."
+            "kind": "mcq",
+            "prompt": "«أخت أحمد» بالإنجليزية:",
+            "options": [
+              "Ahmed sister",
+              "Ahmed's sister",
+              "sister Ahmed's"
+            ],
+            "answer": 1,
+            "explanation_ar": "نضيف 's بعد اسم المالك: Ahmed's sister."
           }
         },
         {
@@ -391,15 +430,16 @@
           "exercise": {
             "id": "A1-03-e8",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "جمع كلمة class:",
-            "options": [
-              "classs",
-              "classes",
-              "class's"
+            "kind": "order_words",
+            "prompt": "رتب الكلمات (ابدأ بـ My): name / brother's / is / my / Omar",
+            "answer": [
+              "My",
+              "brother's",
+              "name",
+              "is",
+              "Omar"
             ],
-            "answer": 1,
-            "explanation_ar": "بعد s نضيف es: classes."
+            "explanation_ar": "My brother's name = اسم أخي، ثم is Omar."
           }
         }
       ]
@@ -408,30 +448,41 @@
       "id": "A1-03-l3",
       "position": 3,
       "skill": "listening",
-      "title": "مدرسة بلال الجديدة",
+      "title": "صورة عائلة لينا",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**بلال** انتقل إلى مدرسة جديدة في **المكلا**. استمع إلى حديثه مع صديقه **عمر**."
+          "markdown_ar": "**لينا** تُري صديقتها **ندى** صورة عائلتها. استمع للحوار وأجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "audio",
-          "text_en": "Omar: Hi, Bilal. How is your new school in Mukalla?\nBilal: It's great! It's big and it's near the sea.\nOmar: Is there a library?\nBilal: Yes, there is. There are a lot of books in English and Arabic.\nOmar: Are there any computers?\nBilal: Yes, there are ten computers in the lab. But there isn't a playground for football.\nOmar: Oh no! How many students are there in your class?\nBilal: There are thirty-five students."
+          "text_en": "Nada: Is this your family photo, Lina?\nLina: Yes, it is. This is my father. His name is Abdullah. He is a date farmer in Seiyun.\nNada: And who is this?\nLina: That's my mother, Fatima. She is a teacher.\nNada: Are these your brothers?\nLina: Yes. Their names are Yahya and Ali. Yahya is ten and Ali is seven.\nNada: And the old man?\nLina: He's my grandfather. He lives with us. His house is our house!\nNada: Your family is big and lovely."
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-03-e9",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "There is a library in Bilal's school.",
+            "kind": "mcq",
+            "prompt": "What is Lina's father's job?",
             "options": [
-              "True",
-              "False"
+              "teacher",
+              "farmer",
+              "driver"
             ],
-            "answer": 0,
-            "explanation_ar": "قال: Yes, there is."
+            "answer": 1,
+            "explanation_ar": "قالت: He is a date farmer in Seiyun."
           }
         },
         {
@@ -440,14 +491,14 @@
             "id": "A1-03-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "How many computers are there in the lab?",
+            "prompt": "How old is Ali?",
             "options": [
-              "five",
+              "seven",
               "ten",
-              "thirty-five"
+              "twelve"
             ],
-            "answer": 1,
-            "explanation_ar": "قال: there are ten computers in the lab."
+            "answer": 0,
+            "explanation_ar": "قالت: Ali is seven."
           }
         },
         {
@@ -456,13 +507,13 @@
             "id": "A1-03-e11",
             "skill": "listening",
             "kind": "true_false",
-            "prompt": "There is a football playground.",
+            "prompt": "Lina's grandfather lives with the family.",
             "options": [
               "True",
               "False"
             ],
-            "answer": 1,
-            "explanation_ar": "قال: there isn't a playground for football."
+            "answer": 0,
+            "explanation_ar": "قالت: He lives with us."
           }
         }
       ]
@@ -471,17 +522,27 @@
       "id": "A1-03-l4",
       "position": 4,
       "skill": "reading",
-      "title": "مدرسة الفجر",
+      "title": "عائلة الحداد",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ وصف طالب لمدرسته في **المكلا**، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ النص عن عائلة من مدينة **سيئون** في وادي حضرموت، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "reading",
-          "text_en": "Al-Fajr School is in Mukalla. It is an old school, but it is clean and nice. There are twelve classrooms and there is a big library. In my classroom, there are thirty desks and thirty chairs. There is a board and there are four windows. There isn't a computer in my classroom, but there is a computer lab on the first floor. There is a small playground. We play football there at break time. I like my school because my teachers are kind and my friends are there.",
-          "word_count": 88
+          "text_en": "This is the Al-Haddad family from Seiyun. Mr. Saeed Al-Haddad is the father. He is forty-five years old. His wife's name is Khadija. She is a nurse at the hospital. They have three children: two sons and one daughter. Their sons are Mohammed and Hassan. Mohammed is eighteen and Hassan is fourteen. Their daughter is Asma. She is nine. Mr. Saeed's mother lives with them. The children love their grandmother. On Fridays, their uncle and his family visit them. The cousins play together in the garden.",
+          "word_count": 86
         },
         {
           "type": "exercise",
@@ -489,14 +550,14 @@
             "id": "A1-03-e12",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "How many classrooms are there?",
+            "prompt": "What is Khadija's job?",
             "options": [
-              "four",
-              "twelve",
-              "thirty"
+              "teacher",
+              "nurse",
+              "farmer"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: There are twelve classrooms."
+            "explanation_ar": "في النص: She is a nurse at the hospital."
           }
         },
         {
@@ -504,14 +565,15 @@
           "exercise": {
             "id": "A1-03-e13",
             "skill": "reading",
-            "kind": "true_false",
-            "prompt": "There is a computer in the writer's classroom.",
+            "kind": "mcq",
+            "prompt": "How many children do Saeed and Khadija have?",
             "options": [
-              "True",
-              "False"
+              "two",
+              "three",
+              "four"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: There isn't a computer in my classroom."
+            "explanation_ar": "في النص: They have three children."
           }
         },
         {
@@ -519,15 +581,14 @@
           "exercise": {
             "id": "A1-03-e14",
             "skill": "reading",
-            "kind": "mcq",
-            "prompt": "Where is the computer lab?",
+            "kind": "true_false",
+            "prompt": "Asma is the oldest child.",
             "options": [
-              "on the first floor",
-              "in the playground",
-              "in the library"
+              "True",
+              "False"
             ],
-            "answer": 0,
-            "explanation_ar": "في النص: on the first floor."
+            "answer": 1,
+            "explanation_ar": "أكبرهم Mohammed (18)، أما Asma فعمرها 9."
           }
         },
         {
@@ -536,9 +597,9 @@
             "id": "A1-03-e15",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "The students play football in the ___.",
-            "answer": "playground",
-            "explanation_ar": "في النص: There is a small playground. We play football there."
+            "prompt": "Mr. Saeed's mother is the children's ___.",
+            "answer": "grandmother",
+            "explanation_ar": "أم الأب هي الجدة grandmother."
           }
         }
       ]
@@ -547,12 +608,22 @@
       "id": "A1-03-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "صف فصلك",
+      "title": "قدّم عائلتك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "صِف فصلك أو مدرستك لصديق في مدينة أخرى. قل ما **يوجد** وما **لا يوجد**، واستعمل there is و there are مع الأعداد."
+          "markdown_ar": "تخيّل أنك تُري صديقك صورة عائلتك. قدّم 3 أو 4 أفراد من عائلتك: **الاسم، العمر أو العمل**. استعمل my و his و her."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "table",
@@ -562,33 +633,38 @@
           ],
           "rows": [
             [
-              "يوجد (مفرد)",
-              "There is a…"
+              "هذا / هذه",
+              "This is my…"
             ],
             [
-              "يوجد (جمع)",
-              "There are … students / desks"
+              "اسمه / اسمها",
+              "His name is… / Her name is…"
             ],
             [
-              "لا يوجد",
-              "There isn't a… / There aren't any…"
+              "عمره",
+              "He's … years old."
+            ],
+            [
+              "عمله",
+              "She's a teacher."
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Describe your classroom or your school to a friend in another city. Say what there is and what there isn't.",
+        "prompt_en": "Show a photo of your family and introduce three or four family members: their names, ages or jobs.",
         "helpful_phrases": [
-          "In my classroom, there is…",
-          "There are … desks.",
-          "There isn't a…",
-          "My school is…"
+          "This is my…",
+          "His name is…",
+          "Her name is…",
+          "He's … years old.",
+          "She's a…"
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "there is / there are",
-          "school vocabulary"
+          "possessive adjectives",
+          "family vocabulary"
         ]
       }
     },
@@ -596,27 +672,37 @@
       "id": "A1-03-l6",
       "position": 6,
       "skill": "writing",
-      "title": "رسالة عن مدرستك",
+      "title": "اكتب عن عائلتك",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب رسالة قصيرة إلى صديق (30 إلى 70 كلمة) تصف فيها مدرستك. اقرأ المثال أولاً.\n\n**تذكّر:** there is + مفرد، there are + جمع، و a / an قبل المفرد."
+          "markdown_ar": "اكتب فقرة عن عائلتك (30 إلى 70 كلمة). اقرأ المثال أولاً.\n\n**تذكّر:** his للمذكر، her للمؤنث، their للجمع، و 's للملكية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "reading",
-          "text_en": "Hi Rami,\nMy school is in Seiyun. It is not very big. There are eight classrooms and there is a small library. There isn't a lab, but there is a computer room. There are forty students in my class. My teachers are very good.\nBye,\nNasser",
-          "word_count": 46
+          "text_en": "My name is Waleed. My family is from Tarim. My father's name is Ali. He is a driver. My mother is a housewife. I have two sisters. Their names are Noor and Huda. Noor is twelve and Huda is eight. My grandmother lives with us. Her name is Maryam.",
+          "word_count": 49
         }
       ],
       "writing_task": {
-        "prompt_en": "Write a short message to a friend about your school. Use there is, there are, there isn't and there aren't.",
+        "prompt_en": "Write about your family in 5–7 sentences. Use my, his, her, their and 's.",
         "min_words": 30,
         "max_words": 70,
         "rubric_focus": [
-          "there is / there are",
-          "a / an",
-          "plural nouns"
+          "possessive adjectives",
+          "possessive 's",
+          "family vocabulary"
         ]
       }
     },
@@ -629,7 +715,17 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **There is** + مفرد / **There are** + جمع.\n- **Is there…? Are there any…?**\n- **a** قبل الصوت الساكن، **an** قبل صوت حرف العلة.\n- الجمع: books, classes, children."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **my, your, his, her, its, our, their** قبل الاسم.\n- **'s** للملكية: Ali's brother.\n- أفراد العائلة: father, mother, brother, sister, grandfather, grandmother, uncle, aunt, cousin, son, daughter."
+        },
+        {
+          "type": "video",
+          "youtube_id": "S_deJPyvtfo",
+          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 738,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "exercise",
@@ -637,30 +733,30 @@
             "id": "A1-03-e16",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "___ there any students in the lab?",
+            "prompt": "Ahmed and Sami are brothers. ___ father is a doctor.",
             "options": [
-              "Is",
-              "Are",
-              "Am"
+              "His",
+              "Our",
+              "Their"
             ],
-            "answer": 1,
-            "explanation_ar": "students جمع فنستخدم Are there."
+            "answer": 2,
+            "explanation_ar": "Ahmed and Sami = they فنستخدم their."
           }
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-03-e17",
-            "skill": "grammar",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "There is ___ office near the library.",
+            "prompt": "My father's brother is my ___.",
             "options": [
-              "a",
-              "an",
-              "two"
+              "uncle",
+              "cousin",
+              "son"
             ],
-            "answer": 1,
-            "explanation_ar": "office تبدأ بحرف علة فنستخدم an."
+            "answer": 0,
+            "explanation_ar": "أخو الأب هو العم uncle."
           }
         },
         {
@@ -669,9 +765,9 @@
             "id": "A1-03-e18",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "There aren't ___ computers in my classroom.",
-            "answer": "any",
-            "explanation_ar": "في النفي مع الجمع نستخدم any."
+            "prompt": "Is this ___ book, Sara? — Yes, it's my book.",
+            "answer": "your",
+            "explanation_ar": "عند مخاطبة Sara نستخدم your."
           }
         }
       ]
@@ -682,89 +778,90 @@
     "questions": [
       {
         "id": "A1-03-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "There ___ a library in our school.",
+        "prompt": "My mother's mother is my ___.",
         "options": [
-          "is",
-          "are",
-          "am"
+          "aunt",
+          "grandmother",
+          "sister"
         ],
-        "answer": 0,
-        "explanation_ar": "library مفرد فنستخدم there is."
+        "answer": 1,
+        "explanation_ar": "أم الأم هي الجدة grandmother."
       },
       {
         "id": "A1-03-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "There ___ twenty desks in the classroom.",
+        "prompt": "Hassan is my friend. ___ sister is in my class.",
         "options": [
-          "is",
-          "are",
-          "isn't"
+          "Her",
+          "His",
+          "Its"
         ],
         "answer": 1,
-        "explanation_ar": "twenty desks جمع فنستخدم there are."
+        "explanation_ar": "Hassan مذكر فنستخدم his."
       },
       {
         "id": "A1-03-q3",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "I have ___ orange bag.",
+        "prompt": "Mona loves ___ mother.",
         "options": [
-          "a",
-          "an",
-          "—"
+          "his",
+          "her",
+          "their"
         ],
         "answer": 1,
-        "explanation_ar": "orange تبدأ بحرف علة فنستخدم an."
+        "explanation_ar": "Mona مؤنث فنستخدم her."
       },
       {
         "id": "A1-03-q4",
         "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "Are there any books on the desk? — Yes, there ___.",
-        "answer": "are",
-        "explanation_ar": "الإجابة القصيرة: Yes, there are."
+        "prompt": "We are from Seiyun. ___ house is near the market.",
+        "answer": "Our",
+        "explanation_ar": "مع we نستخدم our."
       },
       {
         "id": "A1-03-q5",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "We do science experiments in the ___.",
+        "prompt": "«كتاب أبي» بالإنجليزية:",
         "options": [
-          "lab",
-          "library",
-          "playground"
+          "my father book",
+          "my father's book",
+          "my book's father"
         ],
-        "answer": 0,
-        "explanation_ar": "التجارب العلمية في المختبر lab."
+        "answer": 1,
+        "explanation_ar": "نضيف 's بعد المالك: my father's book."
       },
       {
         "id": "A1-03-q6",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "جمع كلمة child:",
+        "prompt": "A girl is her parents' ___.",
         "options": [
-          "childs",
-          "childes",
-          "children"
+          "son",
+          "daughter",
+          "uncle"
         ],
-        "answer": 2,
-        "explanation_ar": "child جمعها شاذ: children."
+        "answer": 1,
+        "explanation_ar": "البنت بالنسبة لوالديها daughter."
       },
       {
         "id": "A1-03-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): a / there / board / is",
+        "prompt": "رتب الكلمات (ابدأ بـ Their): is / their / Tarim / in / house",
         "answer": [
-          "There",
+          "Their",
+          "house",
           "is",
-          "a",
-          "board"
+          "in",
+          "Tarim"
         ],
-        "explanation_ar": "There is + a + الاسم المفرد."
+        "explanation_ar": "Their house = بيتهم، ثم is in Tarim."
       },
       {
         "id": "A1-03-q8",
@@ -772,35 +869,35 @@
         "kind": "mcq",
         "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "There are a pen on the desk.",
-          "There is a pen on the desk.",
-          "There is pens on the desk."
+          "She is Ali sister.",
+          "She is Ali's sister.",
+          "She is sister's Ali."
         ],
         "answer": 1,
-        "explanation_ar": "a pen مفرد فنستخدم There is."
+        "explanation_ar": "الملكية: Ali's sister."
       },
       {
         "id": "A1-03-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «There are 3 windows and 1 door in the room.» How many windows are there?",
+        "prompt": "Read: «Salma has two brothers and no sisters.» How many brothers does Salma have?",
         "options": [
           "one",
-          "three",
-          "four"
+          "two",
+          "three"
         ],
         "answer": 1,
-        "explanation_ar": "3 windows = ثلاث نوافذ."
+        "explanation_ar": "two brothers = أخوان."
       },
       {
         "id": "A1-03-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "Open the ___, please. It's hot in the classroom. (نافذة)",
-        "answer": "window",
-        "explanation_ar": "النافذة = window."
+        "prompt": "My aunt's daughter is my ___.",
+        "answer": "cousin",
+        "explanation_ar": "بنت الخالة أو العمة cousin."
       }
     ]
   },
-  "context_note": "مدارس في المكلا وسيئون؛ مدرسة قرب البحر."
+  "context_note": "عائلة حضرمية ممتدة في سيئون يعيش معها الجد أو الجدة، وزيارة الأعمام يوم الجمعة."
 }

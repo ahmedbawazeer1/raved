@@ -4,126 +4,134 @@
   "version": 1,
   "level": "A1",
   "position": 7,
-  "title": "Food",
-  "topic": "الأكل اليمني: السلتة وبنت الصحن والمندي",
-  "grammar_point": "countable / uncountable nouns + some / any + like / don't like",
+  "title": "Opposites",
+  "topic": "صفات حضرموت: الساحل والوادي، شبام القديمة والمكلا الجديدة",
+  "grammar_point": "adjectives: position, no plural, opposites + very",
   "can_do": [
-    "أعبّر عما أحب وما لا أحب من الطعام",
-    "أطلب طعاماً وشراباً بأدب في مطعم",
-    "أفهم نصاً قصيراً عن الأكلات"
+    "أصف الأماكن والأشياء بصفات بسيطة",
+    "أستعمل الأضداد الشائعة وأضع الصفة في مكانها الصحيح",
+    "أفهم وصفاً قصيراً لمكان"
   ],
   "vocab": [
     {
       "id": "A1-07-v1",
-      "word": "rice",
-      "ipa": "/raɪs/",
-      "part_of_speech": "noun",
-      "meaning_ar": "أرز",
-      "example_en": "We eat rice and chicken on Friday."
+      "word": "big",
+      "ipa": "/bɪɡ/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "كبير",
+      "example_en": "Mukalla is a big city."
     },
     {
       "id": "A1-07-v2",
-      "word": "chicken",
-      "ipa": "/ˈtʃɪkɪn/",
-      "part_of_speech": "noun",
-      "meaning_ar": "دجاج",
-      "example_en": "I like grilled chicken."
+      "word": "small",
+      "ipa": "/smɔːl/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "صغير",
+      "example_en": "Our village is small."
     },
     {
       "id": "A1-07-v3",
-      "word": "meat",
-      "ipa": "/miːt/",
-      "part_of_speech": "noun",
-      "meaning_ar": "لحم",
-      "example_en": "My mother cooks meat with rice."
+      "word": "tall",
+      "ipa": "/tɔːl/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "طويل / عالٍ",
+      "example_en": "The houses in Shibam are tall."
     },
     {
       "id": "A1-07-v4",
-      "word": "fish",
-      "ipa": "/fɪʃ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سمك",
-      "example_en": "People in Hodeidah eat a lot of fish."
+      "word": "short",
+      "ipa": "/ʃɔːt/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "قصير",
+      "example_en": "My brother is short."
     },
     {
       "id": "A1-07-v5",
-      "word": "vegetables",
-      "ipa": "/ˈvedʒtəblz/",
-      "part_of_speech": "noun",
-      "meaning_ar": "خضروات",
-      "example_en": "Vegetables are good for you."
+      "word": "old",
+      "ipa": "/əʊld/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "قديم / كبير السن",
+      "example_en": "Shibam is a very old city."
     },
     {
       "id": "A1-07-v6",
-      "word": "egg",
-      "ipa": "/eɡ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "بيضة",
-      "example_en": "I have two eggs for breakfast."
+      "word": "new",
+      "ipa": "/njuː/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "جديد",
+      "example_en": "I have a new phone."
     },
     {
       "id": "A1-07-v7",
-      "word": "milk",
-      "ipa": "/mɪlk/",
-      "part_of_speech": "noun",
-      "meaning_ar": "حليب",
-      "example_en": "Is there any milk in the kitchen?"
+      "word": "hot",
+      "ipa": "/hɒt/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "حار",
+      "example_en": "Seiyun is hot in summer."
     },
     {
       "id": "A1-07-v8",
-      "word": "water",
-      "ipa": "/ˈwɔːtə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ماء",
-      "example_en": "Can I have some water, please?"
+      "word": "cold",
+      "ipa": "/kəʊld/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "بارد",
+      "example_en": "The water is cold."
     },
     {
       "id": "A1-07-v9",
-      "word": "juice",
-      "ipa": "/dʒuːs/",
-      "part_of_speech": "noun",
-      "meaning_ar": "عصير",
-      "example_en": "Mango juice is my favourite."
+      "word": "fast",
+      "ipa": "/fɑːst/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "سريع",
+      "example_en": "The bus is fast."
     },
     {
       "id": "A1-07-v10",
-      "word": "sugar",
-      "ipa": "/ˈʃʊɡə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سكر",
-      "example_en": "I don't put sugar in my tea."
+      "word": "slow",
+      "ipa": "/sləʊ/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "بطيء",
+      "example_en": "The turtle is slow."
     },
     {
       "id": "A1-07-v11",
-      "word": "delicious",
-      "ipa": "/dɪˈlɪʃəs/",
+      "word": "easy",
+      "ipa": "/ˈiːzi/",
       "part_of_speech": "adjective",
-      "meaning_ar": "لذيذ",
-      "example_en": "Saltah is delicious."
+      "meaning_ar": "سهل",
+      "example_en": "This lesson is easy."
     },
     {
       "id": "A1-07-v12",
-      "word": "hungry",
-      "ipa": "/ˈhʌŋɡri/",
+      "word": "difficult",
+      "ipa": "/ˈdɪfɪkəlt/",
       "part_of_speech": "adjective",
-      "meaning_ar": "جائع",
-      "example_en": "I'm hungry. Let's have lunch."
+      "meaning_ar": "صعب",
+      "example_en": "The test is difficult."
     },
     {
       "id": "A1-07-v13",
-      "word": "thirsty",
-      "ipa": "/ˈθɜːsti/",
+      "word": "clean",
+      "ipa": "/kliːn/",
       "part_of_speech": "adjective",
-      "meaning_ar": "عطشان",
-      "example_en": "I'm thirsty. I want some water."
+      "meaning_ar": "نظيف",
+      "example_en": "The beach is clean."
     },
     {
       "id": "A1-07-v14",
-      "word": "favourite",
-      "ipa": "/ˈfeɪvərɪt/",
+      "word": "dirty",
+      "ipa": "/ˈdɜːti/",
       "part_of_speech": "adjective",
-      "meaning_ar": "المفضّل",
-      "example_en": "My favourite food is fish."
+      "meaning_ar": "متّسخ",
+      "example_en": "My shoes are dirty."
+    },
+    {
+      "id": "A1-07-v15",
+      "word": "very",
+      "ipa": "/ˈveri/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "جداً",
+      "example_en": "The honey is very sweet."
     }
   ],
   "lessons": [
@@ -131,12 +139,22 @@
       "id": "A1-07-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "الطعام والشراب",
-      "est_minutes": 20,
+      "title": "الصفات وأضدادها",
+      "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "المطبخ اليمني غني: **السلتة**، **بنت الصحن**، **المندي**، **الفحسة**. تعلّم أسماء الطعام والشراب بالإنجليزية.\n\n**ملاحظة:** أسماء الأكلات اليمنية تبقى كما هي في الإنجليزية: saltah, bint al-sahn, mandi."
+          "markdown_ar": "أسهل طريقة لحفظ الصفات أن نحفظها **أزواجاً متضادة**: big / small، hot / cold، old / new. تعلّم الأزواج واستمع لنطقها."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
         },
         {
           "type": "table",
@@ -148,94 +166,137 @@
           ],
           "rows": [
             [
-              "rice",
-              "/raɪs/",
-              "أرز",
-              "We eat rice and chicken on Friday."
+              "big",
+              "/bɪɡ/",
+              "كبير",
+              "Mukalla is a big city."
             ],
             [
-              "chicken",
-              "/ˈtʃɪkɪn/",
-              "دجاج",
-              "I like grilled chicken."
+              "small",
+              "/smɔːl/",
+              "صغير",
+              "Our village is small."
             ],
             [
-              "meat",
-              "/miːt/",
-              "لحم",
-              "My mother cooks meat with rice."
+              "tall",
+              "/tɔːl/",
+              "طويل / عالٍ",
+              "The houses in Shibam are tall."
             ],
             [
-              "fish",
-              "/fɪʃ/",
-              "سمك",
-              "People in Hodeidah eat a lot of fish."
+              "short",
+              "/ʃɔːt/",
+              "قصير",
+              "My brother is short."
             ],
             [
-              "vegetables",
-              "/ˈvedʒtəblz/",
-              "خضروات",
-              "Vegetables are good for you."
+              "old",
+              "/əʊld/",
+              "قديم / كبير السن",
+              "Shibam is a very old city."
             ],
             [
-              "egg",
-              "/eɡ/",
-              "بيضة",
-              "I have two eggs for breakfast."
+              "new",
+              "/njuː/",
+              "جديد",
+              "I have a new phone."
             ],
             [
-              "milk",
-              "/mɪlk/",
-              "حليب",
-              "Is there any milk in the kitchen?"
+              "hot",
+              "/hɒt/",
+              "حار",
+              "Seiyun is hot in summer."
             ],
             [
-              "water",
-              "/ˈwɔːtə/",
-              "ماء",
-              "Can I have some water, please?"
+              "cold",
+              "/kəʊld/",
+              "بارد",
+              "The water is cold."
             ],
             [
-              "juice",
-              "/dʒuːs/",
-              "عصير",
-              "Mango juice is my favourite."
+              "fast",
+              "/fɑːst/",
+              "سريع",
+              "The bus is fast."
             ],
             [
-              "sugar",
-              "/ˈʃʊɡə/",
-              "سكر",
-              "I don't put sugar in my tea."
+              "slow",
+              "/sləʊ/",
+              "بطيء",
+              "The turtle is slow."
             ],
             [
-              "delicious",
-              "/dɪˈlɪʃəs/",
-              "لذيذ",
-              "Saltah is delicious."
+              "easy",
+              "/ˈiːzi/",
+              "سهل",
+              "This lesson is easy."
             ],
             [
-              "hungry",
-              "/ˈhʌŋɡri/",
-              "جائع",
-              "I'm hungry. Let's have lunch."
+              "difficult",
+              "/ˈdɪfɪkəlt/",
+              "صعب",
+              "The test is difficult."
             ],
             [
-              "thirsty",
-              "/ˈθɜːsti/",
-              "عطشان",
-              "I'm thirsty. I want some water."
+              "clean",
+              "/kliːn/",
+              "نظيف",
+              "The beach is clean."
             ],
             [
-              "favourite",
-              "/ˈfeɪvərɪt/",
-              "المفضّل",
-              "My favourite food is fish."
+              "dirty",
+              "/ˈdɜːti/",
+              "متّسخ",
+              "My shoes are dirty."
+            ],
+            [
+              "very",
+              "/ˈveri/",
+              "جداً",
+              "The honey is very sweet."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "rice. We eat rice and chicken on Friday.\nchicken. I like grilled chicken.\nmeat. My mother cooks meat with rice.\nfish. People in Hodeidah eat a lot of fish.\nvegetables. Vegetables are good for you.\negg. I have two eggs for breakfast.\nmilk. Is there any milk in the kitchen?\nwater. Can I have some water, please?\njuice. Mango juice is my favourite.\nsugar. I don't put sugar in my tea.\ndelicious. Saltah is delicious.\nhungry. I'm hungry. Let's have lunch.\nthirsty. I'm thirsty. I want some water.\nfavourite. My favourite food is fish."
+          "text_en": "big. Mukalla is a big city.\nsmall. Our village is small.\ntall. The houses in Shibam are tall.\nshort. My brother is short.\nold. Shibam is a very old city.\nnew. I have a new phone.\nhot. Seiyun is hot in summer.\ncold. The water is cold.\nfast. The bus is fast.\nslow. The turtle is slow.\neasy. This lesson is easy.\ndifficult. The test is difficult.\nclean. The beach is clean.\ndirty. My shoes are dirty.\nvery. The honey is very sweet."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الصفة",
+            "ضدها"
+          ],
+          "rows": [
+            [
+              "big",
+              "small"
+            ],
+            [
+              "tall",
+              "short"
+            ],
+            [
+              "old",
+              "new"
+            ],
+            [
+              "hot",
+              "cold"
+            ],
+            [
+              "fast",
+              "slow"
+            ],
+            [
+              "easy",
+              "difficult"
+            ],
+            [
+              "clean",
+              "dirty"
+            ]
+          ]
         },
         {
           "type": "exercise",
@@ -243,14 +304,14 @@
             "id": "A1-07-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "I want to drink. I'm ___.",
+            "prompt": "The opposite of «fast» is:",
             "options": [
-              "hungry",
-              "thirsty",
-              "delicious"
+              "slow",
+              "short",
+              "small"
             ],
-            "answer": 1,
-            "explanation_ar": "عندما نريد الشرب نكون thirsty (عطشان)."
+            "answer": 0,
+            "explanation_ar": "ضد سريع fast هو بطيء slow."
           }
         },
         {
@@ -259,14 +320,14 @@
             "id": "A1-07-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "Which one is a drink?",
+            "prompt": "The opposite of «easy» is:",
             "options": [
-              "rice",
-              "juice",
-              "chicken"
+              "dirty",
+              "difficult",
+              "cold"
             ],
             "answer": 1,
-            "explanation_ar": "juice (عصير) مشروب."
+            "explanation_ar": "ضد سهل easy هو صعب difficult."
           }
         },
         {
@@ -275,9 +336,9 @@
             "id": "A1-07-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "My ___ food is mandi. I love it! (المفضّل)",
-            "answer": "favourite",
-            "explanation_ar": "المفضّل = favourite."
+            "prompt": "The opposite of «new» is ___.",
+            "answer": "old",
+            "explanation_ar": "ضد جديد new هو قديم old."
           }
         }
       ]
@@ -286,46 +347,51 @@
       "id": "A1-07-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "some / any + like",
-      "est_minutes": 30,
+      "title": "مكان الصفة في الجملة",
+      "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**الأسماء المعدودة** نعدّها ولها جمع: an egg ← two eggs، a banana ← bananas.\n\n**الأسماء غير المعدودة** لا نعدّها ولا جمع لها: water, milk, rice, sugar, bread, meat. لا نقول «a water» ولا «two rices»."
+          "markdown_ar": "في العربية تأتي الصفة **بعد** الاسم: «بيت كبير». أما في الإنجليزية فتأتي **قبل** الاسم: «a **big** house».\n\nوتأتي الصفة أيضاً **بعد فعل be**: «The house **is big**.»\n\n**الصفة لا تتغير** مع الجمع ولا مع المؤنث: «**tall** houses» (وليس talls)، «She is **tall**.»"
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
         },
         {
           "type": "table",
           "headers": [
-            "",
-            "مع المعدود (جمع)",
-            "مع غير المعدود"
+            "العربية",
+            "الإنجليزية"
           ],
           "rows": [
             [
-              "إثبات: some",
-              "There are some eggs.",
-              "There is some milk."
+              "بيت قديم",
+              "an old house"
             ],
             [
-              "نفي: any",
-              "There aren't any eggs.",
-              "There isn't any milk."
+              "بيوت عالية",
+              "tall houses"
             ],
             [
-              "سؤال: any",
-              "Are there any eggs?",
-              "Is there any milk?"
+              "الماء بارد",
+              "The water is cold."
             ],
             [
-              "طلب مهذب: some",
-              "Can I have some dates?",
-              "Can I have some water, please?"
+              "الدرس سهل جداً",
+              "The lesson is very easy."
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**التعبير عن الحب:** like / don't like + اسم:\n\n- I **like** fish. / I **don't like** eggs.\n- She **likes** rice. / He **doesn't like** milk.\n- **Do you like** saltah? — Yes, I do. / No, I don't."
+          "markdown_ar": "**لاحظ:** قبل الصفة التي تبدأ بحرف علة نستخدم **an**: «an **old** city»، «an **easy** test».\n\n**very** تأتي قبل الصفة: «very hot»، «very old»."
         },
         {
           "type": "exercise",
@@ -333,14 +399,14 @@
             "id": "A1-07-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "There is ___ water in the bottle.",
+            "prompt": "«مدينة قديمة» بالإنجليزية:",
             "options": [
-              "a",
-              "some",
-              "any"
+              "a city old",
+              "an old city",
+              "a old city"
             ],
             "answer": 1,
-            "explanation_ar": "water غير معدود، وفي الإثبات نستخدم some."
+            "explanation_ar": "الصفة قبل الاسم، و old تبدأ بحرف علة: an old city."
           }
         },
         {
@@ -349,14 +415,14 @@
             "id": "A1-07-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "There aren't ___ tomatoes in the kitchen.",
+            "prompt": "اختر الجملة الصحيحة:",
             "options": [
-              "some",
-              "any",
-              "a"
+              "They are talls.",
+              "They are tall.",
+              "They tall are."
             ],
             "answer": 1,
-            "explanation_ar": "في النفي نستخدم any."
+            "explanation_ar": "الصفة لا تأخذ s في الجمع."
           }
         },
         {
@@ -364,10 +430,15 @@
           "exercise": {
             "id": "A1-07-e6",
             "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "Is there ___ sugar? I want some in my tea.",
-            "answer": "any",
-            "explanation_ar": "في السؤال نستخدم any."
+            "kind": "mcq",
+            "prompt": "The tea is ___.",
+            "options": [
+              "hot very",
+              "very hot",
+              "a very hot"
+            ],
+            "answer": 1,
+            "explanation_ar": "very قبل الصفة: very hot."
           }
         },
         {
@@ -375,15 +446,10 @@
           "exercise": {
             "id": "A1-07-e7",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "أي كلمة غير معدودة؟",
-            "options": [
-              "egg",
-              "rice",
-              "banana"
-            ],
-            "answer": 1,
-            "explanation_ar": "rice (أرز) غير معدود."
+            "kind": "fill_blank",
+            "prompt": "It's ___ easy test. (a / an)",
+            "answer": "an",
+            "explanation_ar": "easy تبدأ بحرف علة: an easy test."
           }
         },
         {
@@ -391,32 +457,16 @@
           "exercise": {
             "id": "A1-07-e8",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My sister ___ fish.",
-            "options": [
-              "like",
-              "likes",
-              "liking"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع she (my sister) نقول likes."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e9",
-            "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: I / some / have / can / water",
+            "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): house / is / a / big / this",
             "answer": [
-              "Can",
-              "I",
-              "have",
-              "some",
-              "water"
+              "This",
+              "is",
+              "a",
+              "big",
+              "house"
             ],
-            "explanation_ar": "الطلب المهذب: Can I have some…?"
+            "explanation_ar": "This is + a + الصفة + الاسم."
           }
         }
       ]
@@ -425,31 +475,56 @@
       "id": "A1-07-l3",
       "position": 3,
       "skill": "listening",
-      "title": "في المطعم",
+      "title": "صورة من شبام",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**طارق** و**سامي** في مطعم شعبي. استمع إلى طلبهما."
+          "markdown_ar": "**آمنة** تُري صديقتها **رغد** صورة لمدينة **شبام**. استمع وانتبه للصفات."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
         },
         {
           "type": "audio",
-          "text_en": "Waiter: Good afternoon. What would you like?\nTariq: Can I have some saltah and some bread, please?\nWaiter: Of course. And for you?\nSami: I'm very hungry. Is there any fish today?\nWaiter: Sorry, there isn't any fish today. But there is some chicken mandi.\nSami: OK, chicken mandi with rice, please.\nWaiter: Anything to drink?\nTariq: Two mango juices, please. And some water.\nWaiter: And for dessert? Our bint al-sahn is delicious.\nSami: Yes, please! It's my favourite."
+          "text_en": "Amna: Look at this photo, Raghad! It's Shibam.\nRaghad: Wow! The houses are very tall.\nAmna: Yes. They are old mud houses. Some houses are five hundred years old.\nRaghad: Is Shibam a big city?\nAmna: No, it isn't. It's small, but it's very famous.\nRaghad: Is it hot there?\nAmna: Yes, it's very hot in summer, but the nights in winter are cold.\nRaghad: I want to visit it. Is the road from Mukalla long?\nAmna: Yes, it's long. It's about five hours by car."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e9",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What are the houses in Shibam like?",
+            "options": [
+              "small and new",
+              "tall and old",
+              "short and new"
+            ],
+            "answer": 1,
+            "explanation_ar": "قالت: The houses are very tall… They are old mud houses."
+          }
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-07-e10",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What does Tariq order?",
+            "kind": "true_false",
+            "prompt": "Shibam is a big city.",
             "options": [
-              "saltah and bread",
-              "fish",
-              "chicken mandi"
+              "True",
+              "False"
             ],
-            "answer": 0,
-            "explanation_ar": "قال: Can I have some saltah and some bread."
+            "answer": 1,
+            "explanation_ar": "قالت: No, it isn't. It's small."
           }
         },
         {
@@ -457,30 +532,15 @@
           "exercise": {
             "id": "A1-07-e11",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "There is fish in the restaurant today.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال النادل: there isn't any fish today."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e12",
-            "skill": "listening",
             "kind": "mcq",
-            "prompt": "What do they drink?",
+            "prompt": "How long is the trip from Mukalla?",
             "options": [
-              "tea",
-              "mango juice and water",
-              "milk"
+              "about one hour",
+              "about five hours",
+              "about ten hours"
             ],
             "answer": 1,
-            "explanation_ar": "قال طارق: Two mango juices… And some water."
+            "explanation_ar": "قالت: It's about five hours by car."
           }
         }
       ]
@@ -489,17 +549,43 @@
       "id": "A1-07-l4",
       "position": 4,
       "skill": "reading",
-      "title": "الطعام في اليمن",
+      "title": "الساحل والوادي",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ عن الأكلات اليمنية في مدن مختلفة، ثم أجب عن الأسئلة."
+          "markdown_ar": "حضرموت قسمان مختلفان: **الساحل** و**الوادي**. اقرأ النص وانتبه للصفات، ثم أجب."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
         },
         {
           "type": "reading",
-          "text_en": "Food in Yemen is different from city to city. In Sana'a, people love saltah. It is a hot soup with meat, vegetables and a special green sauce called hulba. People eat it with bread at lunch. In Aden and Hodeidah, there is a lot of fish. People eat fish with rice or with bread from the tannour. In Hadramout, mandi is very famous. It is rice with meat or chicken. And for dessert, many families make bint al-sahn. It is bread with honey and black seeds. Yemeni people drink a lot of tea with milk and sugar. Some people don't like sugar, so they drink it without sugar.",
-          "word_count": 108
+          "text_en": "Hadramout is a big region in the east of Yemen. It has two very different parts: the coast and the valley. On the coast, there are cities like Mukalla and Al-Shihr. The weather there is hot and humid, and the sea is blue and beautiful. The valley is far from the sea. Seiyun, Shibam and Tarim are in the valley. The weather is dry. It is very hot in summer, but it is cold at night in winter. In the valley, there are old mud houses and tall palm trees. The streets in old Tarim are narrow and quiet. Mukalla is a busy city with new buildings and fast cars, but the valley is calm and slow.",
+          "word_count": 117
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e12",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "What is the weather like on the coast?",
+            "options": [
+              "dry and cold",
+              "hot and humid",
+              "cold and rainy"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: The weather there is hot and humid."
+          }
         },
         {
           "type": "exercise",
@@ -507,14 +593,14 @@
             "id": "A1-07-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "When do people in Sana'a eat saltah?",
+            "prompt": "Which city is in the valley?",
             "options": [
-              "at breakfast",
-              "at lunch",
-              "at night"
+              "Mukalla",
+              "Al-Shihr",
+              "Tarim"
             ],
-            "answer": 1,
-            "explanation_ar": "في النص: People eat it with bread at lunch."
+            "answer": 2,
+            "explanation_ar": "في النص: Seiyun, Shibam and Tarim are in the valley."
           }
         },
         {
@@ -522,15 +608,14 @@
           "exercise": {
             "id": "A1-07-e14",
             "skill": "reading",
-            "kind": "mcq",
-            "prompt": "Where is mandi very famous?",
+            "kind": "true_false",
+            "prompt": "The streets in old Tarim are wide and noisy.",
             "options": [
-              "Hadramout",
-              "Aden",
-              "Hodeidah"
+              "True",
+              "False"
             ],
-            "answer": 0,
-            "explanation_ar": "في النص: In Hadramout, mandi is very famous."
+            "answer": 1,
+            "explanation_ar": "في النص: The streets in old Tarim are narrow and quiet."
           }
         },
         {
@@ -538,25 +623,10 @@
           "exercise": {
             "id": "A1-07-e15",
             "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Bint al-sahn has honey in it.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: It is bread with honey and black seeds."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e16",
-            "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "In Aden, there is a lot of ___.",
-            "answer": "fish",
-            "explanation_ar": "في النص: In Aden and Hodeidah, there is a lot of fish."
+            "prompt": "Mukalla has new buildings and ___ cars.",
+            "answer": "fast",
+            "explanation_ar": "في النص: new buildings and fast cars."
           }
         }
       ]
@@ -565,12 +635,22 @@
       "id": "A1-07-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "اطلب وجبتك",
+      "title": "صِف مدينتك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "أنت في مطعم. **اطلب وجبة ومشروباً**، واسأل هل يوجد طبق معين، ثم قل ما تحبه وما لا تحبه من الطعام."
+          "markdown_ar": "صِف مدينتك أو قريتك في حضرموت بخمس صفات على الأقل: **هل هي كبيرة أم صغيرة؟ قديمة أم جديدة؟ كيف الطقس؟ كيف الشوارع والبيوت؟**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
         },
         {
           "type": "table",
@@ -580,39 +660,39 @@
           ],
           "rows": [
             [
-              "أريد…",
-              "Can I have some…, please?"
+              "مدينتي",
+              "My city is… / It isn't…"
             ],
             [
-              "هل يوجد؟",
-              "Is there any…? / Are there any…?"
+              "البيوت",
+              "The houses are…"
             ],
             [
-              "أحب / لا أحب",
-              "I like… / I don't like…"
+              "الطقس",
+              "The weather is very…"
             ],
             [
-              "طبقي المفضل",
-              "My favourite food is…"
+              "أحبها لأن",
+              "I like it because it's…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "You are in a restaurant. Order food and a drink, ask if there is a special dish, and say what food you like and don't like.",
+        "prompt_en": "Describe your city or village using at least five adjectives: size, old or new, weather, streets and houses.",
         "helpful_phrases": [
-          "Can I have some…, please?",
-          "Is there any…?",
-          "I like…",
-          "I don't like…",
-          "My favourite food is…"
+          "My city is…",
+          "It isn't…",
+          "The houses are very…",
+          "The weather is…",
+          "I like it because…"
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "some / any",
-          "countable and uncountable nouns",
-          "like / don't like"
+          "adjectives (position)",
+          "opposites",
+          "very"
         ]
       }
     },
@@ -620,27 +700,37 @@
       "id": "A1-07-l6",
       "position": 6,
       "skill": "writing",
-      "title": "طبقك المفضل",
+      "title": "قارن بين مكانين",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن طبقك المفضل أو عن طعام عائلتك يوم الجمعة. اقرأ المثال أولاً.\n\n**تذكّر:** some في الإثبات، any في النفي والسؤال، و like / likes."
+          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) تصف فيها مكانين في حضرموت باستعمال الصفات المتضادة. اقرأ المثال أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
         },
         {
           "type": "reading",
-          "text_en": "My favourite food is fahsa. It is a hot dish with meat and hulba. My mother makes it on Friday. We eat it with bread from the tannour. My father likes it with green chilli, but I don't like chilli. After lunch, we drink some tea with milk. My little brother doesn't like tea. He drinks juice.",
-          "word_count": 57
+          "text_en": "I live in Al-Shihr. It is a small and old city on the coast. The weather is hot and the sea is very beautiful. My grandmother lives in Tarim. Tarim is in the valley. It is quiet and the streets are narrow. The mosques are old and very beautiful. In winter, the nights in Tarim are cold, but in Al-Shihr they are warm.",
+          "word_count": 63
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about your favourite food or your family's Friday lunch. Use some, any, like and don't like.",
+        "prompt_en": "Describe two places in Hadramout. Use adjectives and opposites (big / small, old / new, hot / cold) and very.",
         "min_words": 40,
         "max_words": 80,
         "rubric_focus": [
-          "some / any",
-          "countable and uncountable nouns",
-          "like / likes"
+          "adjective position",
+          "opposites",
+          "a / an before adjectives"
         ]
       }
     },
@@ -653,7 +743,33 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- المعدود: an egg, two eggs. غير المعدود: water, rice, milk, sugar, bread.\n- **some** في الإثبات والطلب، **any** في النفي والسؤال.\n- **like / likes / don't like / doesn't like** + اسم."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- الصفة **قبل** الاسم: a tall house. و**بعد** be: The house is tall.\n- الصفة لا تأخذ s: tall houses.\n- **an** قبل الصفة التي تبدأ بحرف علة: an old city.\n- **very** + صفة: very hot.\n- الأضداد: big/small, tall/short, old/new, hot/cold, fast/slow, easy/difficult, clean/dirty."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gZBAXCRrl_U",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 991,
+          "optional": true,
+          "approx_size_mb": 66
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-e16",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "The opposite of «clean» is:",
+            "options": [
+              "dirty",
+              "cold",
+              "new"
+            ],
+            "answer": 0,
+            "explanation_ar": "ضد نظيف clean هو متّسخ dirty."
+          }
         },
         {
           "type": "exercise",
@@ -661,41 +777,25 @@
             "id": "A1-07-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Can I have ___ juice, please?",
+            "prompt": "«سيارات سريعة» بالإنجليزية:",
             "options": [
-              "any",
-              "some",
-              "a"
+              "fasts cars",
+              "fast cars",
+              "cars fast"
             ],
             "answer": 1,
-            "explanation_ar": "في الطلب المهذب نستخدم some."
+            "explanation_ar": "الصفة قبل الاسم ولا تأخذ s."
           }
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-07-e18",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "He ___ like vegetables.",
-            "options": [
-              "don't",
-              "doesn't",
-              "isn't"
-            ],
-            "answer": 1,
-            "explanation_ar": "النفي مع he: doesn't like."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e19",
-            "skill": "grammar",
+            "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Are there ___ eggs in the fridge?",
-            "answer": "any",
-            "explanation_ar": "في السؤال نستخدم any."
+            "prompt": "The opposite of «tall» is ___.",
+            "answer": "short",
+            "explanation_ar": "ضد طويل tall هو قصير short."
           }
         }
       ]
@@ -706,125 +806,126 @@
     "questions": [
       {
         "id": "A1-07-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "There is ___ milk in the cup.",
+        "prompt": "The opposite of «hot» is:",
         "options": [
-          "some",
-          "any",
-          "a"
+          "cold",
+          "old",
+          "slow"
         ],
         "answer": 0,
-        "explanation_ar": "غير معدود في الإثبات: some."
+        "explanation_ar": "ضد حار hot هو بارد cold."
       },
       {
         "id": "A1-07-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "There isn't ___ bread. Let's buy some.",
+        "prompt": "«بيت جديد» بالإنجليزية:",
         "options": [
-          "some",
-          "any",
-          "an"
+          "a house new",
+          "a new house",
+          "an new house"
         ],
         "answer": 1,
-        "explanation_ar": "في النفي: any."
+        "explanation_ar": "الصفة قبل الاسم، و new تبدأ بصوت ساكن: a new house."
       },
       {
         "id": "A1-07-q3",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "أي كلمة معدودة؟",
+        "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "water",
-          "sugar",
-          "egg"
+          "The palm trees are talls.",
+          "The palm trees are tall.",
+          "The palm trees tall are."
         ],
-        "answer": 2,
-        "explanation_ar": "egg (بيضة) معدودة: two eggs."
+        "answer": 1,
+        "explanation_ar": "الصفة لا تأخذ s."
       },
       {
         "id": "A1-07-q4",
         "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "Do you like fish? — Yes, I ___.",
-        "answer": "do",
-        "explanation_ar": "الإجابة القصيرة: Yes, I do."
+        "prompt": "Tarim is ___ old city. (a / an)",
+        "answer": "an",
+        "explanation_ar": "old تبدأ بحرف علة: an old city."
       },
       {
         "id": "A1-07-q5",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "My father ___ saltah very much.",
+        "prompt": "The test is ___.",
         "options": [
-          "like",
-          "likes",
-          "liking"
+          "difficult very",
+          "very difficult",
+          "a very difficult"
         ],
         "answer": 1,
-        "explanation_ar": "مع he نقول likes."
+        "explanation_ar": "very قبل الصفة."
       },
       {
         "id": "A1-07-q6",
         "skill": "vocab",
         "kind": "mcq",
-        "prompt": "It's lunch time and I want to eat. I'm very ___.",
+        "prompt": "The turtle isn't fast. It's ___.",
         "options": [
-          "thirsty",
-          "hungry",
-          "favourite"
+          "slow",
+          "short",
+          "small"
         ],
-        "answer": 1,
-        "explanation_ar": "من يريد الأكل يكون جائعاً hungry."
+        "answer": 0,
+        "explanation_ar": "ضد fast هو slow."
       },
       {
         "id": "A1-07-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: any / is / there / rice",
+        "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): is / a / city / Mukalla / big",
         "answer": [
-          "Is",
-          "there",
-          "any",
-          "rice"
+          "Mukalla",
+          "is",
+          "a",
+          "big",
+          "city"
         ],
-        "explanation_ar": "السؤال: Is there any + غير المعدود؟"
+        "explanation_ar": "الاسم + is + a + الصفة + city."
       },
       {
         "id": "A1-07-q8",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "This homework is not difficult. It's ___.",
         "options": [
-          "I want a water.",
-          "I want some water.",
-          "I want waters."
+          "easy",
+          "dirty",
+          "old"
         ],
-        "answer": 1,
-        "explanation_ar": "water غير معدود: some water."
+        "answer": 0,
+        "explanation_ar": "ضد difficult هو easy."
       },
       {
         "id": "A1-07-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «Huda likes fish but she doesn't like meat.» What doesn't Huda like?",
+        "prompt": "Read: «Seiyun is in the valley. It's hot and dry.» What is the weather like in Seiyun?",
         "options": [
-          "fish",
-          "meat",
-          "rice"
+          "cold and rainy",
+          "hot and dry",
+          "warm and humid"
         ],
         "answer": 1,
-        "explanation_ar": "she doesn't like meat."
+        "explanation_ar": "It's hot and dry."
       },
       {
         "id": "A1-07-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "This mandi is very good. It's ___! (لذيذ)",
-        "answer": "delicious",
-        "explanation_ar": "لذيذ = delicious."
+        "prompt": "My shoes aren't clean. They're ___.",
+        "answer": "dirty",
+        "explanation_ar": "ضد clean هو dirty."
       }
     ]
   },
-  "context_note": "السلتة والحلبة في صنعاء، المندي في حضرموت، بنت الصحن، خبز التنور، الشاي بالحليب."
+  "context_note": "شبام ذات البيوت الطينية العالية، الساحل والوادي، تريم وشوارعها الضيقة، المكلا والشحر."
 }

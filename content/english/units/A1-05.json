@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 5,
-  "title": "My Day",
-  "topic": "يوم طالب يمني من الفجر إلى المساء",
-  "grammar_point": "present simple (I / you / we / they) + telling the time",
+  "title": "At Work",
+  "topic": "مهن الناس في المكلا: الميناء والمستشفى والبحر",
+  "grammar_point": "present simple (he / she / it) + does / doesn't",
   "can_do": [
-    "أصف روتيني اليومي",
-    "أسأل عن الوقت وأخبر به",
-    "أفهم وصفاً قصيراً ليوم شخص آخر"
+    "أتحدث عن مهنة شخص آخر ومكان عمله",
+    "أسأل عما يعمله شخص وأفهم الإجابة",
+    "أفهم نصاً قصيراً عن يوم عمل"
   ],
   "vocab": [
     {
       "id": "A1-05-v1",
-      "word": "get up",
-      "ipa": "/ɡet ʌp/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يستيقظ / ينهض",
-      "example_en": "I get up at five o'clock."
+      "word": "job",
+      "ipa": "/dʒɒb/",
+      "part_of_speech": "noun",
+      "meaning_ar": "وظيفة / عمل",
+      "example_en": "What's your father's job?"
     },
     {
       "id": "A1-05-v2",
-      "word": "pray",
-      "ipa": "/preɪ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يصلّي",
-      "example_en": "We pray the dawn prayer at home."
+      "word": "doctor",
+      "ipa": "/ˈdɒktə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "طبيب",
+      "example_en": "The doctor works at the hospital."
     },
     {
       "id": "A1-05-v3",
-      "word": "have breakfast",
-      "ipa": "/hæv ˈbrekfəst/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يتناول الفطور",
-      "example_en": "I have breakfast with my family."
+      "word": "nurse",
+      "ipa": "/nɜːs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ممرض / ممرضة",
+      "example_en": "My aunt is a nurse."
     },
     {
       "id": "A1-05-v4",
-      "word": "go to school",
-      "ipa": "/ɡəʊ tə skuːl/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يذهب إلى المدرسة",
-      "example_en": "We go to school by bus."
+      "word": "engineer",
+      "ipa": "/ˌendʒɪˈnɪə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مهندس",
+      "example_en": "He is an engineer at the port."
     },
     {
       "id": "A1-05-v5",
-      "word": "start",
-      "ipa": "/stɑːt/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يبدأ",
-      "example_en": "Lessons start at seven thirty."
+      "word": "fisherman",
+      "ipa": "/ˈfɪʃəmən/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صياد سمك",
+      "example_en": "The fisherman goes to sea at dawn."
     },
     {
       "id": "A1-05-v6",
-      "word": "finish",
-      "ipa": "/ˈfɪnɪʃ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "ينهي / ينتهي",
-      "example_en": "We finish school at one o'clock."
+      "word": "farmer",
+      "ipa": "/ˈfɑːmə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مزارع",
+      "example_en": "The farmer grows dates in Wadi Hadramout."
     },
     {
       "id": "A1-05-v7",
-      "word": "have lunch",
-      "ipa": "/hæv lʌntʃ/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يتناول الغداء",
-      "example_en": "I have lunch at two."
+      "word": "driver",
+      "ipa": "/ˈdraɪvə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سائق",
+      "example_en": "My uncle is a bus driver."
     },
     {
       "id": "A1-05-v8",
-      "word": "do homework",
-      "ipa": "/duː ˈhəʊmwɜːk/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يحل الواجب",
-      "example_en": "I do my homework in the afternoon."
+      "word": "shopkeeper",
+      "ipa": "/ˈʃɒpkiːpə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صاحب دكان",
+      "example_en": "The shopkeeper opens his shop at eight."
     },
     {
       "id": "A1-05-v9",
-      "word": "help",
-      "ipa": "/help/",
+      "word": "work",
+      "ipa": "/wɜːk/",
       "part_of_speech": "verb",
-      "meaning_ar": "يساعد",
-      "example_en": "I help my mother at home."
+      "meaning_ar": "يعمل",
+      "example_en": "She works in a school."
     },
     {
       "id": "A1-05-v10",
-      "word": "go to bed",
-      "ipa": "/ɡəʊ tə bed/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يذهب إلى النوم",
-      "example_en": "I go to bed at ten o'clock."
+      "word": "hospital",
+      "ipa": "/ˈhɒspɪtl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مستشفى",
+      "example_en": "There is a big hospital in Mukalla."
     },
     {
       "id": "A1-05-v11",
-      "word": "morning",
-      "ipa": "/ˈmɔːnɪŋ/",
+      "word": "office",
+      "ipa": "/ˈɒfɪs/",
       "part_of_speech": "noun",
-      "meaning_ar": "صباح",
-      "example_en": "I study in the morning."
+      "meaning_ar": "مكتب",
+      "example_en": "My mother works in an office."
     },
     {
       "id": "A1-05-v12",
-      "word": "afternoon",
-      "ipa": "/ˌɑːftəˈnuːn/",
+      "word": "port",
+      "ipa": "/pɔːt/",
       "part_of_speech": "noun",
-      "meaning_ar": "بعد الظهر / العصر",
-      "example_en": "We play football in the afternoon."
+      "meaning_ar": "ميناء",
+      "example_en": "Ships come to the port of Mukalla."
     },
     {
       "id": "A1-05-v13",
-      "word": "evening",
-      "ipa": "/ˈiːvnɪŋ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مساء",
-      "example_en": "We watch TV in the evening."
+      "word": "teach",
+      "ipa": "/tiːtʃ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يدرّس / يعلّم",
+      "example_en": "Mr. Fuad teaches maths."
     },
     {
       "id": "A1-05-v14",
-      "word": "o'clock",
-      "ipa": "/əˈklɒk/",
-      "part_of_speech": "other",
-      "meaning_ar": "تماماً (للساعة)",
-      "example_en": "It's six o'clock."
+      "word": "sick",
+      "ipa": "/sɪk/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مريض",
+      "example_en": "The nurse helps sick people."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-05-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "يومي من الفجر إلى المساء",
+      "title": "المهن وأماكن العمل",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "كيف يمضي يومك؟ تعلّم أفعال الروتين اليومي، وأوقات اليوم: **morning** (الصباح)، **afternoon** (بعد الظهر)، **evening** (المساء)."
+          "markdown_ar": "في **المكلا** يعمل الناس في الميناء والمستشفيات والمكاتب والبحر، وفي الوادي يعمل كثيرون في الزراعة والنخيل. تعلّم أسماء المهن وأماكن العمل."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "table",
@@ -148,94 +158,98 @@
           ],
           "rows": [
             [
-              "get up",
-              "/ɡet ʌp/",
-              "يستيقظ / ينهض",
-              "I get up at five o'clock."
+              "job",
+              "/dʒɒb/",
+              "وظيفة / عمل",
+              "What's your father's job?"
             ],
             [
-              "pray",
-              "/preɪ/",
-              "يصلّي",
-              "We pray the dawn prayer at home."
+              "doctor",
+              "/ˈdɒktə/",
+              "طبيب",
+              "The doctor works at the hospital."
             ],
             [
-              "have breakfast",
-              "/hæv ˈbrekfəst/",
-              "يتناول الفطور",
-              "I have breakfast with my family."
+              "nurse",
+              "/nɜːs/",
+              "ممرض / ممرضة",
+              "My aunt is a nurse."
             ],
             [
-              "go to school",
-              "/ɡəʊ tə skuːl/",
-              "يذهب إلى المدرسة",
-              "We go to school by bus."
+              "engineer",
+              "/ˌendʒɪˈnɪə/",
+              "مهندس",
+              "He is an engineer at the port."
             ],
             [
-              "start",
-              "/stɑːt/",
-              "يبدأ",
-              "Lessons start at seven thirty."
+              "fisherman",
+              "/ˈfɪʃəmən/",
+              "صياد سمك",
+              "The fisherman goes to sea at dawn."
             ],
             [
-              "finish",
-              "/ˈfɪnɪʃ/",
-              "ينهي / ينتهي",
-              "We finish school at one o'clock."
+              "farmer",
+              "/ˈfɑːmə/",
+              "مزارع",
+              "The farmer grows dates in Wadi Hadramout."
             ],
             [
-              "have lunch",
-              "/hæv lʌntʃ/",
-              "يتناول الغداء",
-              "I have lunch at two."
+              "driver",
+              "/ˈdraɪvə/",
+              "سائق",
+              "My uncle is a bus driver."
             ],
             [
-              "do homework",
-              "/duː ˈhəʊmwɜːk/",
-              "يحل الواجب",
-              "I do my homework in the afternoon."
+              "shopkeeper",
+              "/ˈʃɒpkiːpə/",
+              "صاحب دكان",
+              "The shopkeeper opens his shop at eight."
             ],
             [
-              "help",
-              "/help/",
-              "يساعد",
-              "I help my mother at home."
+              "work",
+              "/wɜːk/",
+              "يعمل",
+              "She works in a school."
             ],
             [
-              "go to bed",
-              "/ɡəʊ tə bed/",
-              "يذهب إلى النوم",
-              "I go to bed at ten o'clock."
+              "hospital",
+              "/ˈhɒspɪtl/",
+              "مستشفى",
+              "There is a big hospital in Mukalla."
             ],
             [
-              "morning",
-              "/ˈmɔːnɪŋ/",
-              "صباح",
-              "I study in the morning."
+              "office",
+              "/ˈɒfɪs/",
+              "مكتب",
+              "My mother works in an office."
             ],
             [
-              "afternoon",
-              "/ˌɑːftəˈnuːn/",
-              "بعد الظهر / العصر",
-              "We play football in the afternoon."
+              "port",
+              "/pɔːt/",
+              "ميناء",
+              "Ships come to the port of Mukalla."
             ],
             [
-              "evening",
-              "/ˈiːvnɪŋ/",
-              "مساء",
-              "We watch TV in the evening."
+              "teach",
+              "/tiːtʃ/",
+              "يدرّس / يعلّم",
+              "Mr. Fuad teaches maths."
             ],
             [
-              "o'clock",
-              "/əˈklɒk/",
-              "تماماً (للساعة)",
-              "It's six o'clock."
+              "sick",
+              "/sɪk/",
+              "مريض",
+              "The nurse helps sick people."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "get up. I get up at five o'clock.\npray. We pray the dawn prayer at home.\nhave breakfast. I have breakfast with my family.\ngo to school. We go to school by bus.\nstart. Lessons start at seven thirty.\nfinish. We finish school at one o'clock.\nhave lunch. I have lunch at two.\ndo homework. I do my homework in the afternoon.\nhelp. I help my mother at home.\ngo to bed. I go to bed at ten o'clock.\nmorning. I study in the morning.\nafternoon. We play football in the afternoon.\nevening. We watch TV in the evening.\no'clock. It's six o'clock."
+          "text_en": "job. What's your father's job?\ndoctor. The doctor works at the hospital.\nnurse. My aunt is a nurse.\nengineer. He is an engineer at the port.\nfisherman. The fisherman goes to sea at dawn.\nfarmer. The farmer grows dates in Wadi Hadramout.\ndriver. My uncle is a bus driver.\nshopkeeper. The shopkeeper opens his shop at eight.\nwork. She works in a school.\nhospital. There is a big hospital in Mukalla.\noffice. My mother works in an office.\nport. Ships come to the port of Mukalla.\nteach. Mr. Fuad teaches maths.\nsick. The nurse helps sick people."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**تذكّر:** قبل اسم المهنة نضع **a** أو **an**: «She is **a** nurse.» «He is **an** engineer.»"
         },
         {
           "type": "exercise",
@@ -243,14 +257,14 @@
             "id": "A1-05-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "I ___ at ten o'clock at night. I'm tired.",
+            "prompt": "A ___ catches fish in the sea.",
             "options": [
-              "get up",
-              "go to bed",
-              "have breakfast"
+              "farmer",
+              "fisherman",
+              "nurse"
             ],
             "answer": 1,
-            "explanation_ar": "في الليل نذهب للنوم: go to bed."
+            "explanation_ar": "صياد السمك fisherman."
           }
         },
         {
@@ -259,14 +273,14 @@
             "id": "A1-05-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "We eat ___ in the morning.",
+            "prompt": "Doctors and nurses work in a ___.",
             "options": [
-              "lunch",
-              "breakfast",
-              "homework"
+              "port",
+              "hospital",
+              "shop"
             ],
             "answer": 1,
-            "explanation_ar": "وجبة الصباح breakfast."
+            "explanation_ar": "الأطباء والممرضون في المستشفى hospital."
           }
         },
         {
@@ -275,9 +289,9 @@
             "id": "A1-05-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I do my ___ after school. (الواجب)",
-            "answer": "homework",
-            "explanation_ar": "الواجب المدرسي = homework."
+            "prompt": "He is ___ engineer.",
+            "answer": "an",
+            "explanation_ar": "engineer تبدأ بحرف علة فنستخدم an."
           }
         }
       ]
@@ -286,12 +300,22 @@
       "id": "A1-05-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "المضارع البسيط + الوقت",
+      "title": "he works / she doesn't work",
       "est_minutes": 30,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نستخدم **المضارع البسيط (present simple)** للعادات والأشياء التي تتكرر كل يوم.\n\nمع **I, you, we, they** نستخدم الفعل كما هو بدون إضافة: «I **get up** at six.» «We **go** to school.»"
+          "markdown_ar": "نستخدم **المضارع البسيط (present simple)** للعمل اليومي والعادات. مع **I, you, we, they** يبقى الفعل كما هو: «I **work**». أما مع **he, she, it** (أو اسم شخص واحد) **فنضيف s** إلى الفعل:\n\n- I work ← He **works**.\n- They teach ← She **teaches**.\n- I go ← He **goes**. / I do ← She **does**. / I have ← He **has**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "table",
@@ -303,34 +327,34 @@
           "rows": [
             [
               "إثبات",
-              "I / you / we / they + الفعل",
-              "They play football."
+              "he / she / it + فعل + s",
+              "My father works at the port."
             ],
             [
               "نفي",
-              "don't (do not) + الفعل",
-              "I don't watch TV in the morning."
+              "doesn't + الفعل (بدون s)",
+              "She doesn't work on Friday."
             ],
             [
               "سؤال",
-              "Do + الفاعل + الفعل؟",
-              "Do you walk to school?"
+              "Does + الفاعل + الفعل (بدون s)؟",
+              "Does he drive a bus?"
             ],
             [
               "إجابة",
-              "Yes, I do. / No, I don't.",
-              "Do they live in Aden? — Yes, they do."
+              "Yes, he does. / No, he doesn't.",
+              "Does she teach English? — Yes, she does."
             ],
             [
               "سؤال بأداة",
-              "What time / When + do + …؟",
-              "What time do you get up?"
+              "What / Where + does + …؟",
+              "Where does your mother work?"
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**قول الوقت:**\n\n- **What time is it?** = كم الساعة؟\n- 6:00 = It's **six o'clock**.\n- 6:30 = It's **six thirty** (أو half past six).\n- 6:15 = It's **six fifteen** (أو quarter past six).\n- مع الوقت نستخدم **at**: at seven o'clock. ومع أجزاء اليوم **in**: in the morning, in the evening. لكن **at night**."
+          "markdown_ar": "**قواعد إضافة s:**\n\n- معظم الأفعال: **s** ← works, drives.\n- بعد s, sh, ch, x, o: **es** ← teaches, washes, goes, does.\n- ساكن + y: **ies** ← study ← studies.\n\n**مهم:** بعد **doesn't** و **Does** يرجع الفعل بدون s: «He doesn't **work**.» وليس «doesn't works»."
         },
         {
           "type": "exercise",
@@ -338,14 +362,14 @@
             "id": "A1-05-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "We ___ to school at seven o'clock.",
+            "prompt": "My uncle ___ a taxi in Mukalla.",
             "options": [
-              "go",
-              "goes",
-              "going"
+              "drive",
+              "drives",
+              "driving"
             ],
-            "answer": 0,
-            "explanation_ar": "مع we يبقى الفعل كما هو: go."
+            "answer": 1,
+            "explanation_ar": "مع he (my uncle) نضيف s: drives."
           }
         },
         {
@@ -354,14 +378,14 @@
             "id": "A1-05-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "I ___ drink coffee. I drink tea.",
+            "prompt": "She ___ English at a school in Al-Dees.",
             "options": [
-              "not",
-              "don't",
-              "doesn't"
+              "teachs",
+              "teaches",
+              "teach"
             ],
             "answer": 1,
-            "explanation_ar": "النفي مع I: don't + الفعل."
+            "explanation_ar": "بعد ch نضيف es: teaches."
           }
         },
         {
@@ -369,10 +393,15 @@
           "exercise": {
             "id": "A1-05-e6",
             "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ you have breakfast at home? — Yes, I do.",
-            "answer": "Do",
-            "explanation_ar": "السؤال يبدأ بـ Do مع you."
+            "kind": "mcq",
+            "prompt": "He ___ work on Fridays.",
+            "options": [
+              "don't",
+              "doesn't",
+              "isn't"
+            ],
+            "answer": 1,
+            "explanation_ar": "النفي مع he: doesn't + الفعل."
           }
         },
         {
@@ -380,15 +409,10 @@
           "exercise": {
             "id": "A1-05-e7",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "I study ___ the evening.",
-            "options": [
-              "at",
-              "in",
-              "on"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع أجزاء اليوم نستخدم in: in the evening."
+            "kind": "fill_blank",
+            "prompt": "___ your sister work in a hospital? — Yes, she does.",
+            "answer": "Does",
+            "explanation_ar": "السؤال مع she يبدأ بـ Does."
           }
         },
         {
@@ -397,14 +421,14 @@
             "id": "A1-05-e8",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "7:30 تُقرأ:",
+            "prompt": "اختر الجملة الصحيحة:",
             "options": [
-              "seven thirteen",
-              "seven thirty",
-              "thirty seven"
+              "She doesn't works here.",
+              "She doesn't work here.",
+              "She don't work here."
             ],
             "answer": 1,
-            "explanation_ar": "7:30 = seven thirty."
+            "explanation_ar": "بعد doesn't يأتي الفعل بدون s."
           }
         },
         {
@@ -413,15 +437,15 @@
             "id": "A1-05-e9",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: time / you / get up / what / do",
+            "prompt": "رتب الكلمات: does / work / where / father / your",
             "answer": [
-              "What",
-              "time",
-              "do",
-              "you",
-              "get up"
+              "Where",
+              "does",
+              "your",
+              "father",
+              "work"
             ],
-            "explanation_ar": "What time + do + you + الفعل؟"
+            "explanation_ar": "Where + does + الفاعل + الفعل؟"
           }
         }
       ]
@@ -430,16 +454,26 @@
       "id": "A1-05-l3",
       "position": 3,
       "skill": "listening",
-      "title": "يوم مازن",
+      "title": "ماذا يعمل والداك؟",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "استمع إلى **مازن** من **ذمار** وهو يحكي عن يومه الدراسي. انتبه للأوقات."
+          "markdown_ar": "**هدى** و**رشا** تتحدثان عن عمل والديهما. استمع وأجب."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "audio",
-          "text_en": "Hi, I'm Mazen. I'm from Dhamar and I'm in the third grade. On school days, I get up at five o'clock. I pray and then I have breakfast with my family. We have bread, beans and tea. I walk to school with my cousin. Lessons start at seven thirty. We finish at one o'clock and I have lunch at home at two. In the afternoon, I do my homework and I help my father in his shop. In the evening, I read or I talk to my friends. I go to bed at ten o'clock. I don't stay up late."
+          "text_en": "Huda: What does your father do, Rasha?\nRasha: He's an engineer. He works at the port in Mukalla.\nHuda: Does he work every day?\nRasha: He works from Saturday to Thursday. He doesn't work on Friday.\nHuda: And your mother?\nRasha: She's a doctor. She works at the Ibn Sina Hospital. She helps sick children.\nHuda: That's a great job! My mother is a teacher. She teaches Arabic.\nRasha: And your father?\nHuda: He's a fisherman. He goes to sea very early, at four o'clock."
         },
         {
           "type": "exercise",
@@ -447,14 +481,14 @@
             "id": "A1-05-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "What time does Mazen get up?",
+            "prompt": "Where does Rasha's father work?",
             "options": [
-              "five o'clock",
-              "seven thirty",
-              "ten o'clock"
+              "at the hospital",
+              "at the port",
+              "at a school"
             ],
-            "answer": 0,
-            "explanation_ar": "قال: I get up at five o'clock."
+            "answer": 1,
+            "explanation_ar": "قالت: He works at the port in Mukalla."
           }
         },
         {
@@ -462,14 +496,15 @@
           "exercise": {
             "id": "A1-05-e11",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Mazen goes to school by bus.",
+            "kind": "mcq",
+            "prompt": "What is Rasha's mother's job?",
             "options": [
-              "True",
-              "False"
+              "teacher",
+              "nurse",
+              "doctor"
             ],
-            "answer": 1,
-            "explanation_ar": "قال: I walk to school with my cousin."
+            "answer": 2,
+            "explanation_ar": "قالت: She's a doctor."
           }
         },
         {
@@ -477,15 +512,14 @@
           "exercise": {
             "id": "A1-05-e12",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What does Mazen do in the afternoon?",
+            "kind": "true_false",
+            "prompt": "Huda's father goes to sea at four o'clock.",
             "options": [
-              "He plays football.",
-              "He helps his father.",
-              "He goes to bed."
+              "True",
+              "False"
             ],
-            "answer": 1,
-            "explanation_ar": "قال: I help my father in his shop."
+            "answer": 0,
+            "explanation_ar": "قالت: He goes to sea very early, at four o'clock."
           }
         }
       ]
@@ -494,17 +528,27 @@
       "id": "A1-05-l4",
       "position": 4,
       "skill": "reading",
-      "title": "يوم في قرية قرب حجة",
+      "title": "يوم صياد في المكلا",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ عن يوم عائلة تعيش في قرية قرب **حجة**، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ عن **عبدالرحمن**، صياد من المكلا، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "reading",
-          "text_en": "The Al-Ansi family live in a village near Hajjah. Their day starts early. They get up at half past four. The father and the sons go to the mosque for the dawn prayer. Then they have breakfast together. The children walk to school. It is two kilometres from their house. In the afternoon, the girls help their mother, and the boys help their father on the farm. They don't have a TV, but they have a radio. In the evening, they listen to the news and talk. They go to bed early, at nine o'clock, because they get up very early.",
-          "word_count": 101
+          "text_en": "Abdulrahman is fifty years old. He is a fisherman in Mukalla. He gets up at three thirty every morning. He doesn't have breakfast at home. He drinks tea on his boat. He goes to sea with his two sons. They catch fish until ten o'clock. Then they come back to the port and sell the fish at the fish market. Abdulrahman doesn't work in the afternoon. He sleeps after lunch. In the evening, he sits with his friends near the sea. He loves his job, but it is hard work.",
+          "word_count": 90
         },
         {
           "type": "exercise",
@@ -512,14 +556,14 @@
             "id": "A1-05-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "What time do they get up?",
+            "prompt": "What time does Abdulrahman get up?",
             "options": [
-              "4:30",
-              "5:30",
-              "9:00"
+              "3:30",
+              "10:00",
+              "4:00"
             ],
             "answer": 0,
-            "explanation_ar": "half past four = 4:30."
+            "explanation_ar": "في النص: He gets up at three thirty."
           }
         },
         {
@@ -528,13 +572,13 @@
             "id": "A1-05-e14",
             "skill": "reading",
             "kind": "true_false",
-            "prompt": "The children go to school by car.",
+            "prompt": "He has breakfast at home.",
             "options": [
               "True",
               "False"
             ],
             "answer": 1,
-            "explanation_ar": "المدرسة على بعد 2 كم، ويمشي الأطفال إليها (walk)."
+            "explanation_ar": "في النص: He doesn't have breakfast at home."
           }
         },
         {
@@ -543,14 +587,14 @@
             "id": "A1-05-e15",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "What do they do in the evening?",
+            "prompt": "Where do they sell the fish?",
             "options": [
-              "They watch TV.",
-              "They listen to the radio.",
-              "They go to the market."
+              "on the boat",
+              "at the fish market",
+              "at home"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: they listen to the news (على الراديو)."
+            "explanation_ar": "في النص: sell the fish at the fish market."
           }
         },
         {
@@ -559,9 +603,9 @@
             "id": "A1-05-e16",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "They go to bed at nine because they get up very ___.",
-            "answer": "early",
-            "explanation_ar": "في النص: because they get up very early."
+            "prompt": "In the afternoon, he ___ after lunch.",
+            "answer": "sleeps",
+            "explanation_ar": "في النص: He sleeps after lunch."
           }
         }
       ]
@@ -570,12 +614,22 @@
       "id": "A1-05-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "احكِ عن يومك",
+      "title": "عمل أحد أقاربك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "احكِ عن يومك الدراسي من الصباح إلى المساء في 5 إلى 7 جمل. **اذكر الوقت** مع كل نشاط، واستعمل first و then."
+          "markdown_ar": "اختر شخصاً من عائلتك أو حيّك وتحدث عن عمله في 5 إلى 7 جمل: **ما مهنته؟ أين يعمل؟ متى يبدأ؟ ماذا يفعل؟** انتبه لإضافة **s** للفعل."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "table",
@@ -585,39 +639,38 @@
           ],
           "rows": [
             [
-              "أستيقظ الساعة…",
-              "I get up at…"
+              "مهنته",
+              "He's a… / She's a…"
             ],
             [
-              "ثم…",
-              "Then I…"
+              "مكان العمل",
+              "He works at / in…"
             ],
             [
-              "بعد الظهر",
-              "In the afternoon, I…"
+              "الوقت",
+              "She starts work at…"
             ],
             [
-              "لا أفعل",
-              "I don't…"
+              "لا يعمل",
+              "He doesn't work on…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Talk about your school day from morning to evening. Say the time for each activity.",
+        "prompt_en": "Talk about the job of a person in your family or neighbourhood: what they do, where they work and their working day.",
         "helpful_phrases": [
-          "I get up at…",
-          "Then I…",
-          "Lessons start at…",
-          "In the afternoon, I…",
-          "I go to bed at…"
+          "My uncle is a…",
+          "He works at…",
+          "He starts work at…",
+          "She doesn't work on…",
+          "He likes his job because…"
         ],
         "prep_seconds": 30,
         "max_seconds": 75,
         "rubric_focus": [
-          "present simple (I)",
-          "telling the time",
-          "time expressions"
+          "present simple third person -s",
+          "jobs vocabulary"
         ]
       }
     },
@@ -625,27 +678,37 @@
       "id": "A1-05-l6",
       "position": 6,
       "skill": "writing",
-      "title": "اكتب جدول يومك",
+      "title": "اكتب عن مهنة",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة عن يومك (40 إلى 80 كلمة) مع الأوقات. اقرأ المثال أولاً.\n\n**تذكّر:** at + الساعة، in the morning / afternoon / evening، و don't للنفي."
+          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن عمل شخص تعرفه. اقرأ المثال أولاً.\n\n**تذكّر:** works, teaches, goes, has… و doesn't + الفعل بدون s."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "reading",
-          "text_en": "I get up at half past five. I pray and I have breakfast at six. I go to school by bus. Lessons start at seven fifteen. We finish at twelve thirty. I have lunch at home. In the afternoon, I do my homework and I play football with my friends. In the evening, I read. I don't watch TV a lot. I go to bed at ten.",
-          "word_count": 67
+          "text_en": "My aunt Samira is a nurse. She works at a hospital in Seiyun. She starts work at seven in the morning and she finishes at three. She helps the doctors and she gives medicine to sick people. She doesn't work on Fridays. She likes her job because she helps people.",
+          "word_count": 50
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about your daily routine. Use the present simple and times (at six o'clock, in the morning).",
+        "prompt_en": "Write about the job of a person you know. Use the present simple with he or she (works, goes, doesn't).",
         "min_words": 40,
         "max_words": 80,
         "rubric_focus": [
-          "present simple (I / we)",
-          "telling the time",
-          "at / in"
+          "present simple third person -s",
+          "doesn't",
+          "jobs vocabulary"
         ]
       }
     },
@@ -658,7 +721,17 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- المضارع البسيط مع I / you / we / they: الفعل كما هو.\n- النفي **don't**، والسؤال **Do…?**\n- **What time do you…?** ← **at** seven o'clock.\n- **in** the morning / afternoon / evening، و **at** night."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- he / she / it + فعل + **s**: works, teaches, goes, has, studies.\n- النفي **doesn't** + الفعل بدون s.\n- السؤال **Does** he…? / **What does** she do?\n- المهن: doctor, nurse, engineer, farmer, fisherman, driver, shopkeeper."
+        },
+        {
+          "type": "video",
+          "youtube_id": "gBhK2m_CdQc",
+          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 733,
+          "optional": true,
+          "approx_size_mb": 49
         },
         {
           "type": "exercise",
@@ -666,14 +739,14 @@
             "id": "A1-05-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "They ___ live in Sana'a. They live in Aden.",
+            "prompt": "My brother ___ at university.",
             "options": [
-              "don't",
-              "doesn't",
-              "aren't"
+              "study",
+              "studys",
+              "studies"
             ],
-            "answer": 0,
-            "explanation_ar": "النفي مع they: don't + الفعل."
+            "answer": 2,
+            "explanation_ar": "ساكن + y ← ies: studies."
           }
         },
         {
@@ -682,14 +755,14 @@
             "id": "A1-05-e18",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "9:15 تُقرأ:",
+            "prompt": "What ___ your mother do? — She's a teacher.",
             "options": [
-              "nine fifty",
-              "nine fifteen",
-              "fifteen nine"
+              "do",
+              "does",
+              "is"
             ],
             "answer": 1,
-            "explanation_ar": "9:15 = nine fifteen."
+            "explanation_ar": "مع your mother (she) نقول What does."
           }
         },
         {
@@ -698,9 +771,9 @@
             "id": "A1-05-e19",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "We sleep ___ night.",
-            "answer": "at",
-            "explanation_ar": "نقول at night."
+            "prompt": "My father ___ a shop in the market. (have)",
+            "answer": "has",
+            "explanation_ar": "have مع he تصبح has."
           }
         }
       ]
@@ -713,123 +786,124 @@
         "id": "A1-05-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "I ___ up at six o'clock.",
+        "prompt": "She ___ in a hospital.",
         "options": [
-          "get",
-          "gets",
-          "getting"
+          "work",
+          "works",
+          "working"
         ],
-        "answer": 0,
-        "explanation_ar": "مع I يبقى الفعل كما هو."
+        "answer": 1,
+        "explanation_ar": "مع she نضيف s: works."
       },
       {
         "id": "A1-05-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "We ___ watch TV in the morning.",
+        "prompt": "He ___ to work by bus.",
         "options": [
-          "doesn't",
-          "don't",
-          "not"
+          "go",
+          "gos",
+          "goes"
         ],
-        "answer": 1,
-        "explanation_ar": "النفي مع we: don't."
+        "answer": 2,
+        "explanation_ar": "go مع he تصبح goes."
       },
       {
         "id": "A1-05-q3",
         "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "___ they go to school by bus? — No, they don't.",
-        "answer": "Do",
-        "explanation_ar": "السؤال مع they يبدأ بـ Do."
+        "kind": "mcq",
+        "prompt": "My father ___ work on Friday.",
+        "options": [
+          "don't",
+          "doesn't",
+          "not"
+        ],
+        "answer": 1,
+        "explanation_ar": "النفي مع he: doesn't."
       },
       {
         "id": "A1-05-q4",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "Lessons start ___ seven thirty.",
-        "options": [
-          "in",
-          "on",
-          "at"
-        ],
-        "answer": 2,
-        "explanation_ar": "مع الساعة نستخدم at."
+        "kind": "fill_blank",
+        "prompt": "___ he teach maths? — No, he doesn't.",
+        "answer": "Does",
+        "explanation_ar": "السؤال مع he يبدأ بـ Does."
       },
       {
         "id": "A1-05-q5",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "I do my homework ___ the afternoon.",
+        "prompt": "A ___ grows dates and vegetables.",
         "options": [
-          "at",
-          "in",
-          "on"
+          "fisherman",
+          "farmer",
+          "doctor"
         ],
         "answer": 1,
-        "explanation_ar": "مع أجزاء اليوم: in the afternoon."
+        "explanation_ar": "المزارع farmer يزرع."
       },
       {
         "id": "A1-05-q6",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "10:30 تُقرأ:",
+        "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "ten thirteen",
-          "ten thirty",
-          "thirty ten"
+          "Does she works here?",
+          "Does she work here?",
+          "Do she work here?"
         ],
         "answer": 1,
-        "explanation_ar": "10:30 = ten thirty أو half past ten."
+        "explanation_ar": "بعد Does يأتي الفعل بدون s."
       },
       {
         "id": "A1-05-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: breakfast / you / have / do",
+        "prompt": "رتب الكلمات: does / what / do / your / brother",
         "answer": [
-          "Do",
-          "you",
-          "have",
-          "breakfast"
+          "What",
+          "does",
+          "your",
+          "brother",
+          "do"
         ],
-        "explanation_ar": "السؤال: Do + الفاعل + الفعل؟"
+        "explanation_ar": "What + does + الفاعل + do؟ = ماذا يعمل؟"
       },
       {
         "id": "A1-05-q8",
         "skill": "vocab",
         "kind": "mcq",
-        "prompt": "The meal in the middle of the day is:",
+        "prompt": "Ships stop at the ___.",
         "options": [
-          "breakfast",
-          "lunch",
-          "bed"
+          "office",
+          "port",
+          "hospital"
         ],
         "answer": 1,
-        "explanation_ar": "وجبة منتصف النهار lunch."
+        "explanation_ar": "السفن ترسو في الميناء port."
       },
       {
         "id": "A1-05-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «I get up at 6, I go to school at 7 and I finish at 1.» When does the writer finish school?",
+        "prompt": "Read: «Ali is a driver. He drives a bus from Seiyun to Mukalla.» What does Ali do?",
         "options": [
-          "at 6",
-          "at 7",
-          "at 1"
+          "He's a driver.",
+          "He's a farmer.",
+          "He's a teacher."
         ],
-        "answer": 2,
-        "explanation_ar": "في الجملة: I finish at 1."
+        "answer": 0,
+        "explanation_ar": "في النص: Ali is a driver."
       },
       {
         "id": "A1-05-q10",
         "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "What time do you go to bed? — I ___ to bed at ten.",
-        "answer": "go",
-        "explanation_ar": "مع I: go to bed."
+        "prompt": "Mr. Fuad ___ English. (teach)",
+        "answer": "teaches",
+        "explanation_ar": "بعد ch نضيف es: teaches."
       }
     ]
   },
-  "context_note": "صلاة الفجر، الفطور العائلي (خبز وفول وشاي)، العمل في الدكان أو المزرعة بعد المدرسة."
+  "context_note": "ميناء المكلا، مستشفى ابن سينا، الصيادون وسوق السمك في المكلا، حي الديس."
 }

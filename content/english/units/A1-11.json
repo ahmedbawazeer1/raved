@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 11,
-  "title": "Right Now",
-  "topic": "مكالمة ورسائل: ماذا يحدث الآن؟",
-  "grammar_point": "present continuous (am / is / are + -ing)",
+  "title": "Dates",
+  "topic": "التواريخ ومواسم حضرموت: جني التمر وموسم عسل دوعن",
+  "grammar_point": "ordinal numbers + days and months + on / in / at",
   "can_do": [
-    "أصف ما يحدث الآن حولي",
-    "أسأل شخصاً عما يفعله وأفهم إجابته في مكالمة",
-    "أفرّق بين ما أفعله عادة وما أفعله الآن"
+    "أقول تاريخ اليوم ويوم ميلادي",
+    "أسأل عن موعد شيء وأفهم الإجابة",
+    "أفهم نصاً قصيراً عن مواسم السنة"
   ],
   "vocab": [
     {
       "id": "A1-11-v1",
-      "word": "now",
-      "ipa": "/naʊ/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "الآن",
-      "example_en": "I'm studying now."
+      "word": "date",
+      "ipa": "/deɪt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "تاريخ",
+      "example_en": "What's the date today?"
     },
     {
       "id": "A1-11-v2",
-      "word": "at the moment",
-      "ipa": "/ət ðə ˈməʊmənt/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "في هذه اللحظة",
-      "example_en": "She's sleeping at the moment."
+      "word": "day",
+      "ipa": "/deɪ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "يوم",
+      "example_en": "Friday is my favourite day."
     },
     {
       "id": "A1-11-v3",
-      "word": "phone call",
-      "ipa": "/fəʊn kɔːl/",
+      "word": "week",
+      "ipa": "/wiːk/",
       "part_of_speech": "noun",
-      "meaning_ar": "مكالمة هاتفية",
-      "example_en": "I'm on a phone call with my uncle."
+      "meaning_ar": "أسبوع",
+      "example_en": "There are seven days in a week."
     },
     {
       "id": "A1-11-v4",
-      "word": "message",
-      "ipa": "/ˈmesɪdʒ/",
+      "word": "month",
+      "ipa": "/mʌnθ/",
       "part_of_speech": "noun",
-      "meaning_ar": "رسالة",
-      "example_en": "I'm writing a message to my friend."
+      "meaning_ar": "شهر",
+      "example_en": "July is a hot month in Seiyun."
     },
     {
       "id": "A1-11-v5",
-      "word": "wait",
-      "ipa": "/weɪt/",
-      "part_of_speech": "verb",
-      "meaning_ar": "ينتظر",
-      "example_en": "We're waiting for the bus."
+      "word": "year",
+      "ipa": "/jɪə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سنة",
+      "example_en": "There are twelve months in a year."
     },
     {
       "id": "A1-11-v6",
-      "word": "listen",
-      "ipa": "/ˈlɪsn/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يستمع",
-      "example_en": "Listen! The teacher is talking."
+      "word": "birthday",
+      "ipa": "/ˈbɜːθdeɪ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "يوم الميلاد",
+      "example_en": "My birthday is on the fifth of May."
     },
     {
       "id": "A1-11-v7",
-      "word": "watch",
-      "ipa": "/wɒtʃ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يشاهد",
-      "example_en": "They're watching a football match."
+      "word": "today",
+      "ipa": "/təˈdeɪ/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "اليوم",
+      "example_en": "Today is Sunday."
     },
     {
       "id": "A1-11-v8",
-      "word": "study",
-      "ipa": "/ˈstʌdi/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يذاكر / يدرس",
-      "example_en": "My brother is studying for an exam."
+      "word": "tomorrow",
+      "ipa": "/təˈmɒrəʊ/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "غداً",
+      "example_en": "Tomorrow is a holiday."
     },
     {
       "id": "A1-11-v9",
-      "word": "clean",
-      "ipa": "/kliːn/",
-      "part_of_speech": "verb",
-      "meaning_ar": "ينظّف",
-      "example_en": "My sisters are cleaning the house."
+      "word": "holiday",
+      "ipa": "/ˈhɒlədeɪ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "عطلة / إجازة",
+      "example_en": "The summer holiday starts in June."
     },
     {
       "id": "A1-11-v10",
-      "word": "sit",
-      "ipa": "/sɪt/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يجلس",
-      "example_en": "Grandfather is sitting in the living room."
+      "word": "first",
+      "ipa": "/fɜːst/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "الأول",
+      "example_en": "January is the first month."
     },
     {
       "id": "A1-11-v11",
-      "word": "write",
-      "ipa": "/raɪt/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يكتب",
-      "example_en": "I'm writing my homework."
+      "word": "second",
+      "ipa": "/ˈsekənd/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "الثاني",
+      "example_en": "February is the second month."
     },
     {
       "id": "A1-11-v12",
-      "word": "visit",
-      "ipa": "/ˈvɪzɪt/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يزور",
-      "example_en": "We're visiting my aunt today."
+      "word": "third",
+      "ipa": "/θɜːd/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "الثالث",
+      "example_en": "My exam is on the third of June."
     },
     {
       "id": "A1-11-v13",
-      "word": "busy",
-      "ipa": "/ˈbɪzi/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "مشغول",
-      "example_en": "Sorry, I'm busy right now."
+      "word": "harvest",
+      "ipa": "/ˈhɑːvɪst/",
+      "part_of_speech": "noun",
+      "meaning_ar": "موسم الحصاد / الجني",
+      "example_en": "The date harvest is in summer."
     },
     {
       "id": "A1-11-v14",
-      "word": "call back",
-      "ipa": "/kɔːl bæk/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يعاود الاتصال",
-      "example_en": "Can I call you back later?"
+      "word": "season",
+      "ipa": "/ˈsiːzn/",
+      "part_of_speech": "noun",
+      "meaning_ar": "موسم / فصل",
+      "example_en": "Winter is the honey season in Doan."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-11-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "ماذا يحدث الآن؟",
-      "est_minutes": 20,
+      "title": "الأيام والشهور",
+      "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في هذه الوحدة نتعلم كيف نصف ما **يحدث الآن**، كما في المكالمات والرسائل. تعلّم الأفعال والعبارات."
+          "markdown_ar": "نتعلم في هذه الوحدة كيف نقول **التاريخ**: الأيام، والشهور، والأعداد الترتيبية (الأول، الثاني…). أسماء الأيام والشهور في الإنجليزية تُكتب دائماً **بحرف كبير**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "table",
@@ -148,94 +158,145 @@
           ],
           "rows": [
             [
-              "now",
-              "/naʊ/",
-              "الآن",
-              "I'm studying now."
+              "date",
+              "/deɪt/",
+              "تاريخ",
+              "What's the date today?"
             ],
             [
-              "at the moment",
-              "/ət ðə ˈməʊmənt/",
-              "في هذه اللحظة",
-              "She's sleeping at the moment."
+              "day",
+              "/deɪ/",
+              "يوم",
+              "Friday is my favourite day."
             ],
             [
-              "phone call",
-              "/fəʊn kɔːl/",
-              "مكالمة هاتفية",
-              "I'm on a phone call with my uncle."
+              "week",
+              "/wiːk/",
+              "أسبوع",
+              "There are seven days in a week."
             ],
             [
-              "message",
-              "/ˈmesɪdʒ/",
-              "رسالة",
-              "I'm writing a message to my friend."
+              "month",
+              "/mʌnθ/",
+              "شهر",
+              "July is a hot month in Seiyun."
             ],
             [
-              "wait",
-              "/weɪt/",
-              "ينتظر",
-              "We're waiting for the bus."
+              "year",
+              "/jɪə/",
+              "سنة",
+              "There are twelve months in a year."
             ],
             [
-              "listen",
-              "/ˈlɪsn/",
-              "يستمع",
-              "Listen! The teacher is talking."
+              "birthday",
+              "/ˈbɜːθdeɪ/",
+              "يوم الميلاد",
+              "My birthday is on the fifth of May."
             ],
             [
-              "watch",
-              "/wɒtʃ/",
-              "يشاهد",
-              "They're watching a football match."
+              "today",
+              "/təˈdeɪ/",
+              "اليوم",
+              "Today is Sunday."
             ],
             [
-              "study",
-              "/ˈstʌdi/",
-              "يذاكر / يدرس",
-              "My brother is studying for an exam."
+              "tomorrow",
+              "/təˈmɒrəʊ/",
+              "غداً",
+              "Tomorrow is a holiday."
             ],
             [
-              "clean",
-              "/kliːn/",
-              "ينظّف",
-              "My sisters are cleaning the house."
+              "holiday",
+              "/ˈhɒlədeɪ/",
+              "عطلة / إجازة",
+              "The summer holiday starts in June."
             ],
             [
-              "sit",
-              "/sɪt/",
-              "يجلس",
-              "Grandfather is sitting in the living room."
+              "first",
+              "/fɜːst/",
+              "الأول",
+              "January is the first month."
             ],
             [
-              "write",
-              "/raɪt/",
-              "يكتب",
-              "I'm writing my homework."
+              "second",
+              "/ˈsekənd/",
+              "الثاني",
+              "February is the second month."
             ],
             [
-              "visit",
-              "/ˈvɪzɪt/",
-              "يزور",
-              "We're visiting my aunt today."
+              "third",
+              "/θɜːd/",
+              "الثالث",
+              "My exam is on the third of June."
             ],
             [
-              "busy",
-              "/ˈbɪzi/",
-              "مشغول",
-              "Sorry, I'm busy right now."
+              "harvest",
+              "/ˈhɑːvɪst/",
+              "موسم الحصاد / الجني",
+              "The date harvest is in summer."
             ],
             [
-              "call back",
-              "/kɔːl bæk/",
-              "يعاود الاتصال",
-              "Can I call you back later?"
+              "season",
+              "/ˈsiːzn/",
+              "موسم / فصل",
+              "Winter is the honey season in Doan."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "now. I'm studying now.\nat the moment. She's sleeping at the moment.\nphone call. I'm on a phone call with my uncle.\nmessage. I'm writing a message to my friend.\nwait. We're waiting for the bus.\nlisten. Listen! The teacher is talking.\nwatch. They're watching a football match.\nstudy. My brother is studying for an exam.\nclean. My sisters are cleaning the house.\nsit. Grandfather is sitting in the living room.\nwrite. I'm writing my homework.\nvisit. We're visiting my aunt today.\nbusy. Sorry, I'm busy right now.\ncall back. Can I call you back later?"
+          "text_en": "date. What's the date today?\nday. Friday is my favourite day.\nweek. There are seven days in a week.\nmonth. July is a hot month in Seiyun.\nyear. There are twelve months in a year.\nbirthday. My birthday is on the fifth of May.\ntoday. Today is Sunday.\ntomorrow. Tomorrow is a holiday.\nholiday. The summer holiday starts in June.\nfirst. January is the first month.\nsecond. February is the second month.\nthird. My exam is on the third of June.\nharvest. The date harvest is in summer.\nseason. Winter is the honey season in Doan."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الشهر",
+            "بالإنجليزية",
+            "الشهر",
+            "بالإنجليزية"
+          ],
+          "rows": [
+            [
+              "1 يناير",
+              "January",
+              "7 يوليو",
+              "July"
+            ],
+            [
+              "2 فبراير",
+              "February",
+              "8 أغسطس",
+              "August"
+            ],
+            [
+              "3 مارس",
+              "March",
+              "9 سبتمبر",
+              "September"
+            ],
+            [
+              "4 أبريل",
+              "April",
+              "10 أكتوبر",
+              "October"
+            ],
+            [
+              "5 مايو",
+              "May",
+              "11 نوفمبر",
+              "November"
+            ],
+            [
+              "6 يونيو",
+              "June",
+              "12 ديسمبر",
+              "December"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "January, February, March, April, May, June, July, August, September, October, November, December. Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday."
         },
         {
           "type": "exercise",
@@ -243,14 +304,14 @@
             "id": "A1-11-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "Sorry, I can't talk. I'm ___.",
+            "prompt": "The first month of the year is:",
             "options": [
-              "busy",
-              "now",
-              "listen"
+              "June",
+              "January",
+              "July"
             ],
-            "answer": 0,
-            "explanation_ar": "لا أستطيع الكلام لأني مشغول busy."
+            "answer": 1,
+            "explanation_ar": "الشهر الأول January."
           }
         },
         {
@@ -259,14 +320,14 @@
             "id": "A1-11-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "We're at the bus stop. We're ___ for the bus.",
+            "prompt": "There are ___ days in a week.",
             "options": [
-              "watching",
-              "waiting",
-              "cleaning"
+              "five",
+              "seven",
+              "twelve"
             ],
             "answer": 1,
-            "explanation_ar": "ننتظر الباص = waiting for."
+            "explanation_ar": "في الأسبوع سبعة أيام."
           }
         },
         {
@@ -275,9 +336,9 @@
             "id": "A1-11-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I'm busy. Can I call you ___ later?",
-            "answer": "back",
-            "explanation_ar": "call back = يعاود الاتصال."
+            "prompt": "Today is Monday. ___ is Tuesday. (غداً)",
+            "answer": "Tomorrow",
+            "explanation_ar": "غداً = tomorrow."
           }
         }
       ]
@@ -286,51 +347,86 @@
       "id": "A1-11-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "المضارع المستمر",
+      "title": "الأعداد الترتيبية + in / on / at",
       "est_minutes": 30,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نستخدم **المضارع المستمر (present continuous)** لشيء **يحدث الآن، في هذه اللحظة**.\n\n**التكوين:** am / is / are + الفعل + **ing**\n\n- I **am reading**. / She **is cooking**. / They **are playing**."
+          "markdown_ar": "**الأعداد الترتيبية** نستخدمها للتاريخ: «the **fifth** of May» (الخامس من مايو)."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "table",
           "headers": [
-            "",
-            "الصيغة",
-            "مثال"
+            "العدد",
+            "الترتيبي",
+            "المختصر"
           ],
           "rows": [
             [
-              "إثبات",
-              "am / is / are + فعل-ing",
-              "He's watching TV."
+              "1",
+              "first",
+              "1st"
             ],
             [
-              "نفي",
-              "am not / isn't / aren't + فعل-ing",
-              "We aren't studying now."
+              "2",
+              "second",
+              "2nd"
             ],
             [
-              "سؤال",
-              "Am / Is / Are + الفاعل + فعل-ing؟",
-              "Are you listening?"
+              "3",
+              "third",
+              "3rd"
             ],
             [
-              "إجابة",
-              "Yes, I am. / No, she isn't.",
-              "Is it raining? — Yes, it is."
+              "4",
+              "fourth",
+              "4th"
             ],
             [
-              "سؤال بأداة",
-              "What / Where + am / is / are + …؟",
-              "What are you doing?"
+              "5",
+              "fifth",
+              "5th"
+            ],
+            [
+              "10",
+              "tenth",
+              "10th"
+            ],
+            [
+              "12",
+              "twelfth",
+              "12th"
+            ],
+            [
+              "20",
+              "twentieth",
+              "20th"
+            ],
+            [
+              "21",
+              "twenty-first",
+              "21st"
+            ],
+            [
+              "30",
+              "thirtieth",
+              "30th"
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**قواعد إضافة ing:**\n\n- معظم الأفعال: read ← **reading**، watch ← **watching**.\n- ينتهي بـ e: نحذف e: write ← **writing**، make ← **making**.\n- ساكن + متحرك + ساكن (قصير): نضاعف الأخير: sit ← **sitting**، swim ← **swimming**، run ← **running**.\n\n**الفرق مع المضارع البسيط:**\n\n- I **study** every day. (عادة)\n- I **am studying** now. (الآن)"
+          "markdown_ar": "**قاعدة:** معظمها نضيف **th**: four**th**، six**th**. والشاذ: **first, second, third**، و fifth، و twelfth.\n\n**حروف الزمن:**\n\n- **on** + يوم أو تاريخ: on Friday، on the fifth of May.\n- **in** + شهر أو سنة أو فصل: in July، in 2026، in winter.\n- **at** + ساعة: at 7 o'clock.\n\n**السؤال:** What's the date today? ← It's the tenth of March. / When is your birthday? ← It's on the second of April."
         },
         {
           "type": "exercise",
@@ -338,14 +434,14 @@
             "id": "A1-11-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Shh! The baby ___.",
+            "prompt": "My birthday is ___ June.",
             "options": [
-              "sleeps",
-              "is sleeping",
-              "sleeping"
+              "on",
+              "in",
+              "at"
             ],
             "answer": 1,
-            "explanation_ar": "يحدث الآن: is sleeping."
+            "explanation_ar": "مع الشهر: in June."
           }
         },
         {
@@ -354,14 +450,14 @@
             "id": "A1-11-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "They ___ football at the moment.",
+            "prompt": "The exam is ___ Sunday.",
             "options": [
-              "are playing",
-              "is playing",
-              "playing"
+              "on",
+              "in",
+              "at"
             ],
             "answer": 0,
-            "explanation_ar": "مع they نستخدم are + playing."
+            "explanation_ar": "مع اليوم: on Sunday."
           }
         },
         {
@@ -370,14 +466,14 @@
             "id": "A1-11-e6",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "write + ing =",
+            "prompt": "3rd تُقرأ:",
             "options": [
-              "writeing",
-              "writing",
-              "writting"
+              "three",
+              "third",
+              "thirth"
             ],
             "answer": 1,
-            "explanation_ar": "نحذف e ثم نضيف ing: writing."
+            "explanation_ar": "3rd = third."
           }
         },
         {
@@ -386,9 +482,9 @@
             "id": "A1-11-e7",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "What ___ you doing? — I'm doing my homework.",
-            "answer": "are",
-            "explanation_ar": "مع you: What are you doing?"
+            "prompt": "January is the ___ month. (الأول)",
+            "answer": "first",
+            "explanation_ar": "الأول = first."
           }
         },
         {
@@ -397,14 +493,14 @@
             "id": "A1-11-e8",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "I usually walk to school, but today I ___ the bus.",
+            "prompt": "«الخامس من مايو» بالإنجليزية:",
             "options": [
-              "take",
-              "am taking",
-              "takes"
+              "the five of May",
+              "the fifth of May",
+              "May the five"
             ],
             "answer": 1,
-            "explanation_ar": "today (الآن، استثناء): am taking."
+            "explanation_ar": "نستخدم العدد الترتيبي: the fifth of May."
           }
         },
         {
@@ -413,13 +509,14 @@
             "id": "A1-11-e9",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: raining / it / is",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: birthday / is / when / your",
             "answer": [
-              "Is",
-              "it",
-              "raining"
+              "When",
+              "is",
+              "your",
+              "birthday"
             ],
-            "explanation_ar": "السؤال: Is + it + فعل-ing؟"
+            "explanation_ar": "When + is + your birthday؟"
           }
         }
       ]
@@ -428,16 +525,26 @@
       "id": "A1-11-l3",
       "position": 3,
       "skill": "listening",
-      "title": "مكالمة من السيارة",
+      "title": "متى الاختبار؟",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**نوال** تتصل بصديقتها **رنا** وهي في الطريق إلى تعز. استمع: ماذا يفعل كل شخص الآن؟"
+          "markdown_ar": "المعلمة تسأل الطالبة **بشرى** عن التاريخ، وتخبر الفصل بموعد الاختبار. استمع وانتبه **للأرقام الترتيبية**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "audio",
-          "text_en": "Nawal: Hello, Rana? It's Nawal. What are you doing?\nRana: Hi, Nawal! I'm studying for the English test. And you?\nNawal: I'm sitting in the car. We're going to Taiz to visit my grandmother.\nRana: Oh, nice! Is your brother with you?\nNawal: Yes. He's sitting next to me. He's playing a game on his phone.\nRana: And your mother?\nNawal: She's talking to my father. He's driving.\nRana: Sorry, Nawal, my mother is calling me. She's cooking and she needs help. Can I call you back later?\nNawal: Of course. Bye!"
+          "text_en": "Teacher: Good morning, class. What's the date today?\nBushra: It's the twenty-first of October.\nTeacher: Very good. And what day is it?\nBushra: It's Tuesday.\nTeacher: Our English test is next week, on Monday, the twenty-seventh of October.\nBushra: Excuse me, teacher. When is the winter holiday?\nTeacher: It's in January. It starts on the fifteenth.\nBushra: And my birthday is on the second of January! Before the holiday.\nTeacher: Happy early birthday, Bushra!"
         },
         {
           "type": "exercise",
@@ -445,14 +552,14 @@
             "id": "A1-11-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "What is Rana doing?",
+            "prompt": "What's the date today?",
             "options": [
-              "She's cooking.",
-              "She's studying.",
-              "She's driving."
+              "the 21st of October",
+              "the 27th of October",
+              "the 2nd of January"
             ],
-            "answer": 1,
-            "explanation_ar": "قالت رنا: I'm studying for the English test."
+            "answer": 0,
+            "explanation_ar": "قالت بشرى: It's the twenty-first of October."
           }
         },
         {
@@ -461,14 +568,14 @@
             "id": "A1-11-e11",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "What is Nawal's brother doing?",
+            "prompt": "When is the English test?",
             "options": [
-              "He's sleeping.",
-              "He's driving.",
-              "He's playing a game."
+              "on Tuesday",
+              "on Monday",
+              "in January"
             ],
-            "answer": 2,
-            "explanation_ar": "قالت: He's playing a game on his phone."
+            "answer": 1,
+            "explanation_ar": "قالت المعلمة: on Monday, the twenty-seventh of October."
           }
         },
         {
@@ -477,13 +584,13 @@
             "id": "A1-11-e12",
             "skill": "listening",
             "kind": "true_false",
-            "prompt": "Nawal's mother is driving the car.",
+            "prompt": "Bushra's birthday is on the second of January.",
             "options": [
               "True",
               "False"
             ],
-            "answer": 1,
-            "explanation_ar": "الأب هو الذي يقود: He's driving."
+            "answer": 0,
+            "explanation_ar": "قالت: my birthday is on the second of January."
           }
         }
       ]
@@ -492,17 +599,27 @@
       "id": "A1-11-l4",
       "position": 4,
       "skill": "reading",
-      "title": "ظهر الجمعة في سيئون",
+      "title": "مواسم حضرموت",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ عن عائلة في **سيئون** يوم الجمعة: ماذا يفعل كل فرد الآن؟"
+          "markdown_ar": "اقرأ عن **مواسم السنة** في حضرموت: متى جني التمر؟ ومتى موسم العسل؟ ثم أجب."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "reading",
-          "text_en": "It is Friday afternoon at the Al-Saqqaf house in Seiyun. Everybody is at home. Grandfather is sitting in the living room. He is reading the Quran. Mother and Aunt Salma are in the kitchen. They are making lunch for the family. Huda is helping them. She is cutting vegetables. Father isn't at home now. He is buying bread from the bakery. The two boys, Omar and Saleh, are in the garden. They aren't playing football today. They are washing their father's car. And the cat? It is sleeping under the table. It is a quiet and happy afternoon.",
-          "word_count": 98
+          "text_en": "In Hadramout, every season has its work. In summer, in July and August, it is very hot in the valley. This is the date harvest. Farmers climb the palm trees and cut the dates. In autumn, in October and November, the beekeepers of Wadi Doan are very busy. The sidr trees have flowers, and the bees make the famous sidr honey. In winter, in December and January, the weather is cool in the valley. Many families visit their relatives. On the coast, from January to June, sea turtles come to Sharma beach. The school year usually starts in September and ends in June. The summer holiday is long, so many students help their families at work.",
+          "word_count": 116
         },
         {
           "type": "exercise",
@@ -510,14 +627,14 @@
             "id": "A1-11-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "What is Grandfather doing?",
+            "prompt": "When is the date harvest?",
             "options": [
-              "He's reading.",
-              "He's sleeping.",
-              "He's cooking."
+              "in July and August",
+              "in December and January",
+              "in October and November"
             ],
             "answer": 0,
-            "explanation_ar": "في النص: He is reading the Quran."
+            "explanation_ar": "في النص: In summer, in July and August… This is the date harvest."
           }
         },
         {
@@ -526,14 +643,14 @@
             "id": "A1-11-e14",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "Where is Father?",
+            "prompt": "When are the beekeepers very busy?",
             "options": [
-              "in the kitchen",
-              "at the bakery",
-              "in the garden"
+              "in summer",
+              "in autumn",
+              "in spring"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: He is buying bread from the bakery."
+            "explanation_ar": "في النص: In autumn, in October and November, the beekeepers… are very busy."
           }
         },
         {
@@ -542,13 +659,13 @@
             "id": "A1-11-e15",
             "skill": "reading",
             "kind": "true_false",
-            "prompt": "Omar and Saleh are playing football.",
+            "prompt": "The school year starts in June.",
             "options": [
               "True",
               "False"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: They aren't playing football today. They are washing… the car."
+            "explanation_ar": "في النص: starts in September and ends in June."
           }
         },
         {
@@ -557,9 +674,9 @@
             "id": "A1-11-e16",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "The cat is ___ under the table.",
-            "answer": "sleeping",
-            "explanation_ar": "في النص: It is sleeping under the table."
+            "prompt": "Sea turtles come to Sharma beach from January to ___.",
+            "answer": "June",
+            "explanation_ar": "في النص: from January to June."
           }
         }
       ]
@@ -568,12 +685,22 @@
       "id": "A1-11-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "ماذا يفعلون الآن؟",
+      "title": "تواريخ مهمة لك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "تخيّل أن صديقك اتصل بك الآن ويسأل: **What are you doing?** صِف ما تفعله أنت، وما يفعله 3 أشخاص في بيتك **في هذه اللحظة**."
+          "markdown_ar": "تحدث عن **تواريخ مهمة** لك: **تاريخ اليوم، يوم ميلادك، موعد الاختبارات، العطلة، وشهرك المفضل ولماذا.** استعمل on و in مع الأعداد الترتيبية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "table",
@@ -583,38 +710,39 @@
           ],
           "rows": [
             [
-              "أنا",
-              "I'm …ing."
+              "اليوم",
+              "Today is… It's the … of …"
             ],
             [
-              "هو / هي",
-              "My mother is …ing."
+              "ميلادي",
+              "My birthday is on the … of …"
             ],
             [
-              "هم",
-              "My brothers are …ing."
+              "العطلة",
+              "The holiday is in…"
             ],
             [
-              "لا",
-              "My father isn't … now. He's…"
+              "شهري المفضل",
+              "My favourite month is… because…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "A friend calls you and asks «What are you doing?». Say what you are doing and what three people in your house are doing right now.",
+        "prompt_en": "Talk about important dates for you: today's date, your birthday, your exams, the holiday and your favourite month.",
         "helpful_phrases": [
-          "I'm …ing.",
-          "My mother is …ing.",
-          "My brothers are …ing.",
-          "My father isn't … now.",
-          "Can I call you back later?"
+          "Today is…",
+          "It's the … of …",
+          "My birthday is on…",
+          "The holiday starts in…",
+          "My favourite month is…"
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "present continuous",
-          "-ing spelling"
+          "ordinal numbers",
+          "on / in with dates",
+          "days and months"
         ]
       }
     },
@@ -622,27 +750,37 @@
       "id": "A1-11-l6",
       "position": 6,
       "skill": "writing",
-      "title": "رسالة: ماذا يحدث الآن؟",
+      "title": "تقويمك الشخصي",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب رسالة قصيرة (40 إلى 80 كلمة) لصديق تصف فيها **ما يحدث الآن** حولك: في البيت، أو المدرسة، أو الشارع. اقرأ المثال أولاً."
+          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن تواريخ مهمة في سنتك. اقرأ المثال أولاً.\n\n**تذكّر:** on + يوم/تاريخ، in + شهر/فصل، والأيام والشهور بحرف كبير."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "reading",
-          "text_en": "Hi Mohammed,\nI'm writing this message from my uncle's house in Ibb. It's raining now and it's cold. My cousins are watching a football match on TV. My uncle is drinking tea. My aunt isn't at home. She's visiting her sister. I'm not watching the match. I'm reading a book. What are you doing?\nAhmed",
+          "text_en": "My name is Abeer. My birthday is on the ninth of March. My favourite month is November because it is the honey season in Doan, and my uncle gives us fresh honey. Our final exams are in June. The summer holiday starts on the twentieth of June. In August, we visit my grandmother in Shibam.",
           "word_count": 55
         }
       ],
       "writing_task": {
-        "prompt_en": "Write a short message to a friend about what is happening around you right now. Use the present continuous.",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write about important dates in your year: your birthday, exams, holidays and your favourite month. Use on, in and ordinal numbers.",
+        "min_words": 30,
+        "max_words": 70,
         "rubric_focus": [
-          "present continuous",
-          "-ing spelling",
-          "now / at the moment"
+          "ordinal numbers",
+          "on / in with dates",
+          "capital letters for days and months"
         ]
       }
     },
@@ -655,7 +793,17 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **am / is / are + فعل-ing** لما يحدث الآن.\n- الإملاء: writing (نحذف e)، sitting / swimming (نضاعف).\n- **What are you doing? / Is he sleeping?**\n- البسيط للعادة: I study every day. المستمر للآن: I'm studying now."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- الأعداد الترتيبية: first, second, third, fourth, fifth… twentieth, twenty-first.\n- **on** + يوم/تاريخ، **in** + شهر/سنة/فصل، **at** + ساعة.\n- **What's the date today? When is your birthday?**\n- الأيام والشهور بحرف كبير."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HIz-rb0lMAY",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 809,
+          "optional": true,
+          "approx_size_mb": 54
         },
         {
           "type": "exercise",
@@ -663,14 +811,14 @@
             "id": "A1-11-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "sit + ing =",
+            "prompt": "We visit our grandmother ___ Fridays.",
             "options": [
-              "siting",
-              "sitting",
-              "sitteing"
+              "in",
+              "on",
+              "at"
             ],
             "answer": 1,
-            "explanation_ar": "نضاعف t: sitting."
+            "explanation_ar": "مع الأيام: on."
           }
         },
         {
@@ -679,14 +827,14 @@
             "id": "A1-11-e18",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "My father ___ at the moment. He's at the mosque.",
+            "prompt": "12th تُقرأ:",
             "options": [
-              "isn't working",
-              "doesn't work",
-              "not working"
+              "twelveth",
+              "twelfth",
+              "twelve"
             ],
-            "answer": 0,
-            "explanation_ar": "النفي الآن: isn't working."
+            "answer": 1,
+            "explanation_ar": "12th = twelfth (شاذة)."
           }
         },
         {
@@ -695,9 +843,9 @@
             "id": "A1-11-e19",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "Listen! Somebody ___ knocking on the door.",
-            "answer": "is",
-            "explanation_ar": "somebody مفرد: is knocking."
+            "prompt": "The date harvest is ___ summer.",
+            "answer": "in",
+            "explanation_ar": "مع الفصول: in."
           }
         }
       ]
@@ -710,87 +858,87 @@
         "id": "A1-11-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "Look! The children ___ in the park.",
+        "prompt": "My birthday is ___ the tenth of April.",
         "options": [
-          "play",
-          "are playing",
-          "is playing"
+          "in",
+          "on",
+          "at"
         ],
         "answer": 1,
-        "explanation_ar": "Look! تعني الآن، والجمع are playing."
+        "explanation_ar": "مع التاريخ: on."
       },
       {
         "id": "A1-11-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "I ___ a message now.",
+        "prompt": "School starts ___ September.",
         "options": [
-          "am writing",
-          "write",
-          "is writing"
+          "in",
+          "on",
+          "at"
         ],
         "answer": 0,
-        "explanation_ar": "مع I الآن: am writing."
+        "explanation_ar": "مع الشهر: in."
       },
       {
         "id": "A1-11-q3",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "swim + ing =",
+        "prompt": "2nd تُقرأ:",
         "options": [
-          "swiming",
-          "swimming",
-          "swimeing"
+          "two",
+          "second",
+          "twoth"
         ],
         "answer": 1,
-        "explanation_ar": "نضاعف m: swimming."
+        "explanation_ar": "2nd = second."
       },
       {
         "id": "A1-11-q4",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "___ she sleeping? — No, she isn't.",
-        "answer": "Is",
-        "explanation_ar": "السؤال مع she: Is she…?"
+        "prompt": "The last month of the year is ___.",
+        "answer": "December",
+        "explanation_ar": "الشهر الأخير December."
       },
       {
         "id": "A1-11-q5",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "We usually ___ TV in the evening.",
+        "prompt": "Today is Thursday. Tomorrow is ___.",
         "options": [
-          "are watching",
-          "watch",
-          "watching"
+          "Wednesday",
+          "Friday",
+          "Saturday"
         ],
         "answer": 1,
-        "explanation_ar": "usually = عادة، فنستخدم المضارع البسيط."
+        "explanation_ar": "بعد الخميس الجمعة Friday."
       },
       {
         "id": "A1-11-q6",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "«في هذه اللحظة» بالإنجليزية:",
+        "prompt": "«الثالث من يونيو» بالإنجليزية:",
         "options": [
-          "every day",
-          "at the moment",
-          "sometimes"
+          "the three of June",
+          "the third of June",
+          "June three"
         ],
         "answer": 1,
-        "explanation_ar": "في هذه اللحظة = at the moment."
+        "explanation_ar": "العدد الترتيبي: the third of June."
       },
       {
         "id": "A1-11-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: doing / you / what / are",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: the / what's / today / date",
         "answer": [
-          "What",
-          "are",
-          "you",
-          "doing"
+          "What's",
+          "the",
+          "date",
+          "today"
         ],
-        "explanation_ar": "What + are + you + doing؟"
+        "explanation_ar": "What's the date today?"
       },
       {
         "id": "A1-11-q8",
@@ -798,35 +946,35 @@
         "kind": "mcq",
         "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "They is waiting for the bus.",
-          "They are waiting for the bus.",
-          "They waiting for the bus."
+          "My exam is in Monday.",
+          "My exam is on Monday.",
+          "My exam is at Monday."
         ],
         "answer": 1,
-        "explanation_ar": "مع they: are waiting."
+        "explanation_ar": "مع الأيام: on Monday."
       },
       {
         "id": "A1-11-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «Ali is in the kitchen. He's making tea.» What is Ali doing?",
+        "prompt": "Read: «The honey season in Doan is in October and November.» When is the honey season?",
         "options": [
-          "He's making tea.",
-          "He's sleeping.",
-          "He's studying."
+          "in summer",
+          "in October and November",
+          "in January"
         ],
-        "answer": 0,
-        "explanation_ar": "He's making tea."
+        "answer": 1,
+        "explanation_ar": "in October and November."
       },
       {
         "id": "A1-11-q10",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "My mother ___ cooking now. She's at work. (لا)",
-        "answer": "isn't",
-        "explanation_ar": "النفي مع she: isn't + فعل-ing."
+        "prompt": "There are twelve ___ in a year.",
+        "answer": "months",
+        "explanation_ar": "في السنة اثنا عشر شهراً months."
       }
     ]
   },
-  "context_note": "ظهر الجمعة في بيت عائلي في سيئون، السفر بالسيارة إلى تعز لزيارة الجدة."
+  "context_note": "جني التمر في الصيف، موسم عسل السدر في دوعن، سلاحف شرمة، العام الدراسي."
 }
