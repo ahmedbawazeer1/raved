@@ -206,7 +206,8 @@
             "reading",
             "audio",
             "table",
-            "exercise"
+            "exercise",
+            "game"
           ]
         },
         "markdown_ar": {
@@ -271,6 +272,28 @@
         "optional": {
           "type": "boolean",
           "description": "true for video blocks: lesson must be complete without them"
+        },
+        "id": {
+          "type": "string",
+          "description": "for type=game: stable id, e.g. A1-01-g1"
+        },
+        "game": {
+          "enum": [
+            "flashcards",
+            "match",
+            "listen",
+            "memory",
+            "speed",
+            "spell",
+            "swipe",
+            "dictation",
+            "pronounce"
+          ],
+          "description": "for type=game: which vocabulary game (plays the unit's vocab)"
+        },
+        "title_ar": {
+          "type": "string",
+          "description": "for type=game: optional Arabic title"
         }
       }
     },

@@ -16,10 +16,18 @@ export default async function LessonPreviewPage({ params }: PageProps<"/preview/
   const supabase = await createClient();
   const { data: lesson } = await supabase
     .from("lessons")
-    .select("id, title, blocks, speaking_task, writing_task")
+    .select("id, unit_id, title, blocks, speaking_task, writing_task")
     .eq("id", lessonId)
     .maybeSingle();
   if (!lesson) notFound();
+  // Games play the unit's words.
+  const { data: vocab } = await supabase
+    .from("vocab_items")
+    .select("item_key, word, meaning_ar, example_en")
+    .eq("unit_id", lesson.unit_id)
+    .eq("archived", false)
+    .order("position");
+  const words = (vocab ?? []).map((v) => ({ id: v.item_key, word: v.word, meaning: v.meaning_ar, example: v.example_en }));
 
   return (
     <div className="min-h-dvh bg-background">
@@ -29,7 +37,7 @@ export default async function LessonPreviewPage({ params }: PageProps<"/preview/
         </p>
       </header>
       <main className="flex flex-col gap-4 px-4 py-5">
-        <LessonBlocks blocks={(lesson.blocks ?? []) as unknown as LessonBlock[]} />
+        <LessonBlocks blocks={(lesson.blocks ?? []) as unknown as LessonBlock[]} words={words} />
         <TaskPreview
           lessonId={lesson.id}
           speaking={lesson.speaking_task as PackageLesson["speaking_task"] | null}

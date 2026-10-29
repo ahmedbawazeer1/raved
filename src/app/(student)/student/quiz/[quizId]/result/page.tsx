@@ -45,7 +45,7 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
   const { data: attempt } = await query.maybeSingle();
   if (!attempt) notFound();
 
-  const { data: quiz } = await supabase.from("quizzes").select("pass_percent, units(id, title, position, levels(paths(slug)))").eq("id", quizId).maybeSingle();
+  const { data: quiz } = await supabase.from("quizzes").select("pass_percent, units(id, title, position, stop_ar, levels(paths(slug)))").eq("id", quizId).maybeSingle();
   const unit = quiz?.units;
   const slug = unit?.levels?.paths?.slug ?? "";
   const unitHref = unit ? `/student/${slug}/unit/${unit.id}` : "/student";
@@ -67,6 +67,28 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
     <>
       <TopBar backHref={unitHref} title={<>نتيجة اختبار الوحدة {unit?.position ?? ""}</>} />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
+        <section aria-label="نتيجة المعركة" className="flex flex-col gap-2 rounded-2xl bg-foreground p-4 text-white">
+          <div className="flex items-center gap-3">
+            <span className="text-4xl motion-safe:animate-[boss-hit_0.6s_ease-in-out_3]" aria-hidden="true">
+              {attempt.passed ? "🏳️" : "🛡️"}
+            </span>
+            <div className="flex-1">
+              <p className="font-bold">
+                {attempt.passed ? `هزمت حارس ${unit?.stop_ar ?? "المحطة"}! ختم المحطة لك 🏅` : `حارس ${unit?.stop_ar ?? "المحطة"} صمد هذه المرة`}
+              </p>
+              <p className="text-xs text-white/70">
+                {attempt.correct} ضربات صحيحة من {attempt.total}
+              </p>
+            </div>
+          </div>
+          <div className="h-3 overflow-hidden rounded-full bg-white/20" role="img" aria-label={`صحة الحارس ${Math.max(0, 100 - attempt.score)}%`}>
+            <div
+              className="h-full rounded-full bg-destructive motion-safe:animate-[boss-hp_1.6s_ease-out_forwards]"
+              style={{ ["--hp" as string]: `${Math.max(0, 100 - attempt.score)}%`, width: `${Math.max(0, 100 - attempt.score)}%` }}
+            />
+          </div>
+        </section>
+
         <Card className="flex items-center gap-4 p-5">
           <En className={`text-4xl font-bold ${attempt.passed ? "text-success" : "text-warning"}`}>
             {attempt.correct}/{attempt.total}

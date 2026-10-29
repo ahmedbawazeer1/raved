@@ -6,12 +6,23 @@ import { Markdown } from "./markdown";
 import { AudioBlock } from "./audio-block";
 import { VideoBlock, type VideoStatus } from "./video-block";
 import { ExerciseBlock } from "./exercise-block";
+import { GameBlock } from "./game-block";
+import type { GameWord } from "@/lib/games/logic";
 
 /**
  * Renders a lesson's content blocks (student player and admin preview).
  * `videos` (student player only) makes videos mandatory and carries what the student already watched.
  */
-export function LessonBlocks({ blocks, videos }: { blocks: LessonBlock[]; videos?: Record<string, VideoStatus> }) {
+export function LessonBlocks({
+  blocks,
+  videos,
+  words = [],
+}: {
+  blocks: LessonBlock[];
+  videos?: Record<string, VideoStatus>;
+  /** The unit's vocabulary, played by game blocks. */
+  words?: GameWord[];
+}) {
   return (
     <div className="flex flex-col gap-4">
       {blocks.map((block, i) => {
@@ -66,6 +77,8 @@ export function LessonBlocks({ blocks, videos }: { blocks: LessonBlock[]; videos
             return <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} />;
           case "exercise":
             return block.exercise ? <ExerciseBlock key={i} exercise={block.exercise} /> : null;
+          case "game":
+            return block.id && block.game ? <GameBlock key={i} id={block.id} kind={block.game} title={block.title_ar} words={words} /> : null;
           default:
             return null;
         }

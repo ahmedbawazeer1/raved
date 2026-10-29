@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Headphones, Mic, PenLine } from "lucide-react";
+import { Gamepad2, Headphones, Mic, PenLine } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
@@ -50,6 +50,17 @@ export default async function PracticePage() {
         </p>
       </header>
       <WritingSyncNotice />
+
+      <Link
+        href="/student/practice/games"
+        className="flex min-h-16 items-center gap-3 rounded-2xl bg-primary p-4 text-white no-underline hover:bg-primary-hover hover:text-white"
+      >
+        <Gamepad2 className="size-7 flex-none" aria-hidden="true" />
+        <span className="flex-1">
+          <span className="block font-bold">ساحة الألعاب</span>
+          <span className="block text-sm text-primary-tint">سباق الدقيقة، الذاكرة، وصّل الأزواج… بالكلمات التي تعلمتها</span>
+        </span>
+      </Link>
 
       {visible.length === 0 && (
         <Card className="p-5 text-sm leading-relaxed text-muted-foreground">مهام المحادثة والكتابة تظهر هنا عندما تصل إلى دروسها.</Card>

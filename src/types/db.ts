@@ -1764,6 +1764,7 @@ export type Database = {
       my_quiz_open: { Args: { p_quiz_id: string }; Returns: boolean }
       notify_path_waitlist: { Args: { p_path_id: string }; Returns: string[] }
       publish_unit: { Args: { p_unit_id: string }; Returns: undefined }
+      record_game: { Args: { p_game: string }; Returns: number }
       record_video_watch: {
         Args: { p_watched_sec: number; p_youtube_id: string }
         Returns: Json

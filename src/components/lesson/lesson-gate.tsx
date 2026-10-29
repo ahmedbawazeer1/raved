@@ -68,7 +68,7 @@ export function LessonGate({
   const solvedCount = exerciseIds.filter((id) => solved.has(id)).length;
   const items: GateTask[] = [
     ...(videoRequired ? [{ label: "شاهد فيديو الدرس (80% على الأقل)", done: videoDone }] : []),
-    ...(exerciseIds.length ? [{ label: `حلّ كل التمارين (${solvedCount} من ${exerciseIds.length})`, done: solvedCount === exerciseIds.length }] : []),
+    ...(exerciseIds.length ? [{ label: `أنهِ كل التمارين والألعاب (${solvedCount} من ${exerciseIds.length})`, done: solvedCount === exerciseIds.length }] : []),
     ...tasks,
   ];
   const ready = items.every((i) => i.done);

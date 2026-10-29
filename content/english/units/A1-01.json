@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-01",
-  "version": 5,
+  "version": 6,
   "level": "A1",
   "position": 1,
   "title": "Hello!",
@@ -265,6 +265,26 @@
             "answer": "old",
             "explanation_ar": "نقول years old للتعبير عن العمر."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g1",
+          "game": "flashcards"
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g2",
+          "game": "match"
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g3",
+          "game": "listen"
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g4",
+          "game": "pronounce"
         }
       ]
     },
@@ -471,6 +491,11 @@
             "answer": 1,
             "explanation_ar": "الطالب الجديد هو Hamza، أما Ammar فهو زميل في الفصل."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g5",
+          "game": "dictation"
         }
       ]
     },
@@ -724,6 +749,26 @@
             "answer": "are",
             "explanation_ar": "مع we نستخدم are."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g6",
+          "game": "memory"
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g7",
+          "game": "swipe"
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g8",
+          "game": "spell"
+        },
+        {
+          "type": "game",
+          "id": "A1-01-g9",
+          "game": "speed"
         },
         {
           "type": "text",

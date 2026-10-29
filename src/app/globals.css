@@ -74,3 +74,27 @@
     cursor: pointer;
   }
 }
+
+/* End-of-unit battle: the guardian's health drops to what the score left (see quiz result). */
+@keyframes boss-hp {
+  from {
+    width: 100%;
+  }
+  to {
+    width: var(--hp);
+  }
+}
+@keyframes boss-hit {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px) rotate(-4deg);
+  }
+  40%,
+  80% {
+    transform: translateX(6px) rotate(4deg);
+  }
+}

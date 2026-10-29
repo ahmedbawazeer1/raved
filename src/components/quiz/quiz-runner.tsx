@@ -16,8 +16,12 @@ function newClientId(): string {
     : "10000000-1000-4000-8000-100000000000".replace(/[018]/g, (c) => (Number(c) ^ ((Math.random() * 16) >> (Number(c) / 4))).toString(16));
 }
 
-/** One question per screen; answers are graded on the server only after the last question. */
-export function QuizRunner({ quizId, questions, closeHref }: { quizId: string; questions: QuestionView[]; closeHref: string }) {
+/**
+ * One question per screen; answers are graded on the server only after the last question.
+ * Shown as a battle with the guardian of the journey stop: each answer charges the attack,
+ * and the result page shows the hits once the server has graded.
+ */
+export function QuizRunner({ quizId, questions, closeHref, stop }: { quizId: string; questions: QuestionView[]; closeHref: string; stop?: string | null }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [seconds, setSeconds] = useState(0);
@@ -74,6 +78,21 @@ export function QuizRunner({ quizId, questions, closeHref }: { quizId: string; q
       </header>
 
       <main className="mx-auto flex w-full max-w-[640px] flex-1 flex-col gap-5 px-4 py-6">
+        <div className="flex items-center gap-3 rounded-2xl bg-foreground p-3 text-white">
+          <span className="text-3xl" aria-hidden="true">
+            🛡️
+          </span>
+          <div className="flex flex-1 flex-col gap-1">
+            <p className="text-sm font-bold">معركة المحطة: تغلّب على حارس {stop ?? "الوحدة"}</p>
+            <div className="h-2 overflow-hidden rounded-full bg-white/20" aria-hidden="true">
+              <div
+                className="h-full rounded-full bg-accent transition-all"
+                style={{ width: `${(Object.values(answers).filter((a) => isAnswered(a)).length / questions.length) * 100}%` }}
+              />
+            </div>
+            <p className="text-xs text-white/70">كل إجابة تشحن ضربتك · النتيجة بعد التسليم</p>
+          </div>
+        </div>
         <h1 className="text-xl leading-relaxed font-bold">
           <MixedText text={q.prompt} />
         </h1>
