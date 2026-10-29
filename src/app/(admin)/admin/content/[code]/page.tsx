@@ -66,7 +66,7 @@ export default async function UnitReviewPage({ params, searchParams }: PageProps
           </h1>
           <p className="text-sm text-muted-foreground">
             {unit.levels?.paths?.title.split(":")[0]} · <En>{unit.levels?.code}</En> · الإصدار {unit.version}
-            {unit.package_size_bytes ? ` · ${formatBytes(unit.package_size_bytes)} بدون فيديو` : ""}
+            {unit.package_size_bytes ? ` · ${formatBytes(unit.package_size_bytes)} (حجم النص، والفيديو منفصل)` : ""}
           </p>
         </div>
         <div className="flex flex-wrap items-start gap-2.5">
