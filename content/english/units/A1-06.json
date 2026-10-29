@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 6,
-  "title": "Jobs",
-  "topic": "مهن الناس في عدن: الميناء والمستشفى والبحر",
-  "grammar_point": "present simple (he / she / it) + does / doesn't",
+  "title": "Animals",
+  "topic": "حيوانات حضرموت: الجمال والنحل وسلاحف شرمة",
+  "grammar_point": "have / has + plural nouns (regular and irregular)",
   "can_do": [
-    "أتحدث عن مهنة شخص آخر ومكان عمله",
-    "أسأل عما يعمله شخص وأفهم الإجابة",
-    "أفهم نصاً قصيراً عن يوم عمل"
+    "أسمّي حيوانات شائعة وأقول ما عند عائلتي منها",
+    "أسأل هل يملك شخص حيواناً وأفهم الإجابة",
+    "أفهم نصاً قصيراً عن حيوانات في حضرموت"
   ],
   "vocab": [
     {
       "id": "A1-06-v1",
-      "word": "job",
-      "ipa": "/dʒɒb/",
+      "word": "animal",
+      "ipa": "/ˈænɪml/",
       "part_of_speech": "noun",
-      "meaning_ar": "وظيفة / عمل",
-      "example_en": "What's your father's job?"
+      "meaning_ar": "حيوان",
+      "example_en": "The camel is a strong animal."
     },
     {
       "id": "A1-06-v2",
-      "word": "doctor",
-      "ipa": "/ˈdɒktə/",
+      "word": "camel",
+      "ipa": "/ˈkæml/",
       "part_of_speech": "noun",
-      "meaning_ar": "طبيب",
-      "example_en": "The doctor works at the hospital."
+      "meaning_ar": "جمل",
+      "example_en": "My grandfather has three camels."
     },
     {
       "id": "A1-06-v3",
-      "word": "nurse",
-      "ipa": "/nɜːs/",
+      "word": "goat",
+      "ipa": "/ɡəʊt/",
       "part_of_speech": "noun",
-      "meaning_ar": "ممرض / ممرضة",
-      "example_en": "My aunt is a nurse."
+      "meaning_ar": "ماعز",
+      "example_en": "We have five goats."
     },
     {
       "id": "A1-06-v4",
-      "word": "engineer",
-      "ipa": "/ˌendʒɪˈnɪə/",
+      "word": "sheep",
+      "ipa": "/ʃiːp/",
       "part_of_speech": "noun",
-      "meaning_ar": "مهندس",
-      "example_en": "He is an engineer at the port."
+      "meaning_ar": "خروف / غنم",
+      "example_en": "There are ten sheep on the farm."
     },
     {
       "id": "A1-06-v5",
-      "word": "fisherman",
-      "ipa": "/ˈfɪʃəmən/",
+      "word": "cow",
+      "ipa": "/kaʊ/",
       "part_of_speech": "noun",
-      "meaning_ar": "صياد سمك",
-      "example_en": "The fisherman goes to sea at dawn."
+      "meaning_ar": "بقرة",
+      "example_en": "Our cow gives us milk."
     },
     {
       "id": "A1-06-v6",
-      "word": "farmer",
-      "ipa": "/ˈfɑːmə/",
+      "word": "donkey",
+      "ipa": "/ˈdɒŋki/",
       "part_of_speech": "noun",
-      "meaning_ar": "مزارع",
-      "example_en": "The farmer grows coffee."
+      "meaning_ar": "حمار",
+      "example_en": "The donkey carries water."
     },
     {
       "id": "A1-06-v7",
-      "word": "driver",
-      "ipa": "/ˈdraɪvə/",
+      "word": "chicken",
+      "ipa": "/ˈtʃɪkɪn/",
       "part_of_speech": "noun",
-      "meaning_ar": "سائق",
-      "example_en": "My uncle is a bus driver."
+      "meaning_ar": "دجاجة",
+      "example_en": "We have six chickens."
     },
     {
       "id": "A1-06-v8",
-      "word": "shopkeeper",
-      "ipa": "/ˈʃɒpkiːpə/",
+      "word": "cat",
+      "ipa": "/kæt/",
       "part_of_speech": "noun",
-      "meaning_ar": "صاحب دكان",
-      "example_en": "The shopkeeper opens his shop at eight."
+      "meaning_ar": "قطة",
+      "example_en": "My cat is white."
     },
     {
       "id": "A1-06-v9",
-      "word": "work",
-      "ipa": "/wɜːk/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يعمل",
-      "example_en": "She works in a school."
+      "word": "bird",
+      "ipa": "/bɜːd/",
+      "part_of_speech": "noun",
+      "meaning_ar": "طائر",
+      "example_en": "There are many birds in the palm trees."
     },
     {
       "id": "A1-06-v10",
-      "word": "hospital",
-      "ipa": "/ˈhɒspɪtl/",
+      "word": "bee",
+      "ipa": "/biː/",
       "part_of_speech": "noun",
-      "meaning_ar": "مستشفى",
-      "example_en": "There is a big hospital in Aden."
+      "meaning_ar": "نحلة",
+      "example_en": "Bees make honey."
     },
     {
       "id": "A1-06-v11",
-      "word": "office",
-      "ipa": "/ˈɒfɪs/",
+      "word": "fish",
+      "ipa": "/fɪʃ/",
       "part_of_speech": "noun",
-      "meaning_ar": "مكتب",
-      "example_en": "My mother works in an office."
+      "meaning_ar": "سمكة / سمك",
+      "example_en": "The fishermen catch a lot of fish."
     },
     {
       "id": "A1-06-v12",
-      "word": "port",
-      "ipa": "/pɔːt/",
+      "word": "turtle",
+      "ipa": "/ˈtɜːtl/",
       "part_of_speech": "noun",
-      "meaning_ar": "ميناء",
-      "example_en": "Ships come to the port of Aden."
+      "meaning_ar": "سلحفاة",
+      "example_en": "Sea turtles come to the beach at Sharma."
     },
     {
       "id": "A1-06-v13",
-      "word": "teach",
-      "ipa": "/tiːtʃ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يدرّس / يعلّم",
-      "example_en": "Mr. Fuad teaches maths."
+      "word": "farm",
+      "ipa": "/fɑːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مزرعة",
+      "example_en": "My uncle has a farm in Wadi Hadramout."
     },
     {
       "id": "A1-06-v14",
-      "word": "sick",
-      "ipa": "/sɪk/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "مريض",
-      "example_en": "The nurse helps sick people."
+      "word": "have / has",
+      "ipa": "/hæv/ /hæz/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يملك / عنده",
+      "example_en": "She has a cat."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-06-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "المهن وأماكن العمل",
+      "title": "حيوانات حضرموت",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في **عدن** يعمل الناس في الميناء والمستشفيات والمكاتب والبحر. تعلّم أسماء المهن وأماكن العمل."
+          "markdown_ar": "في حضرموت حيوانات كثيرة: **الجمال** في الصحراء، و**الماعز والغنم** في القرى، و**النحل** في دوعن، و**السلاحف البحرية** التي تأتي إلى شاطئ **شرمة** لتضع بيضها. تعلّم أسماءها بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "table",
@@ -148,98 +158,94 @@
           ],
           "rows": [
             [
-              "job",
-              "/dʒɒb/",
-              "وظيفة / عمل",
-              "What's your father's job?"
+              "animal",
+              "/ˈænɪml/",
+              "حيوان",
+              "The camel is a strong animal."
             ],
             [
-              "doctor",
-              "/ˈdɒktə/",
-              "طبيب",
-              "The doctor works at the hospital."
+              "camel",
+              "/ˈkæml/",
+              "جمل",
+              "My grandfather has three camels."
             ],
             [
-              "nurse",
-              "/nɜːs/",
-              "ممرض / ممرضة",
-              "My aunt is a nurse."
+              "goat",
+              "/ɡəʊt/",
+              "ماعز",
+              "We have five goats."
             ],
             [
-              "engineer",
-              "/ˌendʒɪˈnɪə/",
-              "مهندس",
-              "He is an engineer at the port."
+              "sheep",
+              "/ʃiːp/",
+              "خروف / غنم",
+              "There are ten sheep on the farm."
             ],
             [
-              "fisherman",
-              "/ˈfɪʃəmən/",
-              "صياد سمك",
-              "The fisherman goes to sea at dawn."
+              "cow",
+              "/kaʊ/",
+              "بقرة",
+              "Our cow gives us milk."
             ],
             [
-              "farmer",
-              "/ˈfɑːmə/",
-              "مزارع",
-              "The farmer grows coffee."
+              "donkey",
+              "/ˈdɒŋki/",
+              "حمار",
+              "The donkey carries water."
             ],
             [
-              "driver",
-              "/ˈdraɪvə/",
-              "سائق",
-              "My uncle is a bus driver."
+              "chicken",
+              "/ˈtʃɪkɪn/",
+              "دجاجة",
+              "We have six chickens."
             ],
             [
-              "shopkeeper",
-              "/ˈʃɒpkiːpə/",
-              "صاحب دكان",
-              "The shopkeeper opens his shop at eight."
+              "cat",
+              "/kæt/",
+              "قطة",
+              "My cat is white."
             ],
             [
-              "work",
-              "/wɜːk/",
-              "يعمل",
-              "She works in a school."
+              "bird",
+              "/bɜːd/",
+              "طائر",
+              "There are many birds in the palm trees."
             ],
             [
-              "hospital",
-              "/ˈhɒspɪtl/",
-              "مستشفى",
-              "There is a big hospital in Aden."
+              "bee",
+              "/biː/",
+              "نحلة",
+              "Bees make honey."
             ],
             [
-              "office",
-              "/ˈɒfɪs/",
-              "مكتب",
-              "My mother works in an office."
+              "fish",
+              "/fɪʃ/",
+              "سمكة / سمك",
+              "The fishermen catch a lot of fish."
             ],
             [
-              "port",
-              "/pɔːt/",
-              "ميناء",
-              "Ships come to the port of Aden."
+              "turtle",
+              "/ˈtɜːtl/",
+              "سلحفاة",
+              "Sea turtles come to the beach at Sharma."
             ],
             [
-              "teach",
-              "/tiːtʃ/",
-              "يدرّس / يعلّم",
-              "Mr. Fuad teaches maths."
+              "farm",
+              "/fɑːm/",
+              "مزرعة",
+              "My uncle has a farm in Wadi Hadramout."
             ],
             [
-              "sick",
-              "/sɪk/",
-              "مريض",
-              "The nurse helps sick people."
+              "have / has",
+              "/hæv/ /hæz/",
+              "يملك / عنده",
+              "She has a cat."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "job. What's your father's job?\ndoctor. The doctor works at the hospital.\nnurse. My aunt is a nurse.\nengineer. He is an engineer at the port.\nfisherman. The fisherman goes to sea at dawn.\nfarmer. The farmer grows coffee.\ndriver. My uncle is a bus driver.\nshopkeeper. The shopkeeper opens his shop at eight.\nwork. She works in a school.\nhospital. There is a big hospital in Aden.\noffice. My mother works in an office.\nport. Ships come to the port of Aden.\nteach. Mr. Fuad teaches maths.\nsick. The nurse helps sick people."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**تذكّر:** قبل اسم المهنة نضع **a** أو **an**: «She is **a** nurse.» «He is **an** engineer.»"
+          "text_en": "animal. The camel is a strong animal.\ncamel. My grandfather has three camels.\ngoat. We have five goats.\nsheep. There are ten sheep on the farm.\ncow. Our cow gives us milk.\ndonkey. The donkey carries water.\nchicken. We have six chickens.\ncat. My cat is white.\nbird. There are many birds in the palm trees.\nbee. Bees make honey.\nfish. The fishermen catch a lot of fish.\nturtle. Sea turtles come to the beach at Sharma.\nfarm. My uncle has a farm in Wadi Hadramout.\nhave / has. She has a cat."
         },
         {
           "type": "exercise",
@@ -247,14 +253,14 @@
             "id": "A1-06-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "A ___ catches fish in the sea.",
+            "prompt": "___ make honey.",
             "options": [
-              "farmer",
-              "fisherman",
-              "nurse"
+              "Cats",
+              "Bees",
+              "Goats"
             ],
             "answer": 1,
-            "explanation_ar": "صياد السمك fisherman."
+            "explanation_ar": "النحل bees يصنع العسل."
           }
         },
         {
@@ -263,14 +269,14 @@
             "id": "A1-06-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "Doctors and nurses work in a ___.",
+            "prompt": "This animal lives in the desert and carries people. It's a ___.",
             "options": [
-              "port",
-              "hospital",
-              "shop"
+              "camel",
+              "fish",
+              "turtle"
             ],
-            "answer": 1,
-            "explanation_ar": "الأطباء والممرضون في المستشفى hospital."
+            "answer": 0,
+            "explanation_ar": "الجمل camel حيوان الصحراء."
           }
         },
         {
@@ -279,9 +285,9 @@
             "id": "A1-06-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "He is ___ engineer.",
-            "answer": "an",
-            "explanation_ar": "engineer تبدأ بحرف علة فنستخدم an."
+            "prompt": "The ___ gives us milk. (بقرة)",
+            "answer": "cow",
+            "explanation_ar": "البقرة = cow."
           }
         }
       ]
@@ -290,51 +296,62 @@
       "id": "A1-06-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "he works / she doesn't work",
+      "title": "have / has + الجمع",
       "est_minutes": 30,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في الوحدة الماضية تعلمنا المضارع البسيط مع I و we و they. مع **he, she, it** (أو اسم شخص واحد) **نضيف s** إلى الفعل:\n\n- I work ← He **works**.\n- They teach ← She **teaches**.\n- I go ← He **goes**. / I do ← She **does**. / I have ← He **has**."
+          "markdown_ar": "نستخدم **have** و **has** بمعنى «عنده / يملك»:\n\n- **I, you, we, they** + **have**: I **have** a cat. / They **have** goats.\n- **he, she, it** + **has**: He **has** a camel. / My aunt **has** a farm.\n\n**النفي:** don't have / doesn't have: «We **don't have** a cow.» «She **doesn't have** a cat.»\n\n**السؤال:** Do you have…? / Does he have…? ← Yes, I do. / No, he doesn't."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "table",
           "headers": [
-            "",
-            "الصيغة",
-            "مثال"
+            "المفرد",
+            "الجمع",
+            "ملاحظة"
           ],
           "rows": [
             [
-              "إثبات",
-              "he / she / it + فعل + s",
-              "My father works at the port."
+              "a camel",
+              "camels",
+              "نضيف s"
             ],
             [
-              "نفي",
-              "doesn't + الفعل (بدون s)",
-              "She doesn't work on Friday."
+              "a fox",
+              "foxes",
+              "بعد x و s و sh و ch نضيف es"
             ],
             [
-              "سؤال",
-              "Does + الفاعل + الفعل (بدون s)؟",
-              "Does he drive a bus?"
+              "a donkey",
+              "donkeys",
+              "متحرك + y ← ys"
             ],
             [
-              "إجابة",
-              "Yes, he does. / No, he doesn't.",
-              "Does she teach English? — Yes, she does."
+              "a sheep",
+              "sheep",
+              "لا يتغير"
             ],
             [
-              "سؤال بأداة",
-              "What / Where + does + …؟",
-              "Where does your mother work?"
+              "a fish",
+              "fish",
+              "لا يتغير عادة"
+            ],
+            [
+              "a mouse",
+              "mice",
+              "شاذ"
             ]
           ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**قواعد إضافة s:**\n\n- معظم الأفعال: **s** ← works, drives.\n- بعد s, sh, ch, x, o: **es** ← teaches, washes, goes, does.\n- ساكن + y: **ies** ← study ← studies.\n\n**مهم:** بعد **doesn't** و **Does** يرجع الفعل بدون s: «He doesn't **work**.» وليس «doesn't works»."
         },
         {
           "type": "exercise",
@@ -342,14 +359,14 @@
             "id": "A1-06-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "My uncle ___ a taxi in Aden.",
+            "prompt": "My grandfather ___ three camels.",
             "options": [
-              "drive",
-              "drives",
-              "driving"
+              "have",
+              "has",
+              "having"
             ],
             "answer": 1,
-            "explanation_ar": "مع he (my uncle) نضيف s: drives."
+            "explanation_ar": "مع he (my grandfather) نستخدم has."
           }
         },
         {
@@ -358,14 +375,14 @@
             "id": "A1-06-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "She ___ English at a school in Crater.",
+            "prompt": "We ___ a cat and two chickens.",
             "options": [
-              "teachs",
-              "teaches",
-              "teach"
+              "have",
+              "has",
+              "is"
             ],
-            "answer": 1,
-            "explanation_ar": "بعد ch نضيف es: teaches."
+            "answer": 0,
+            "explanation_ar": "مع we نستخدم have."
           }
         },
         {
@@ -374,14 +391,14 @@
             "id": "A1-06-e6",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "He ___ work on Fridays.",
+            "prompt": "جمع كلمة sheep:",
             "options": [
-              "don't",
-              "doesn't",
-              "isn't"
+              "sheeps",
+              "sheep",
+              "sheepes"
             ],
             "answer": 1,
-            "explanation_ar": "النفي مع he: doesn't + الفعل."
+            "explanation_ar": "sheep لا يتغير في الجمع."
           }
         },
         {
@@ -390,9 +407,9 @@
             "id": "A1-06-e7",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "___ your sister work in a hospital? — Yes, she does.",
-            "answer": "Does",
-            "explanation_ar": "السؤال مع she يبدأ بـ Does."
+            "prompt": "She ___ have a dog. (لا)",
+            "answer": "doesn't",
+            "explanation_ar": "النفي مع she: doesn't have."
           }
         },
         {
@@ -401,14 +418,14 @@
             "id": "A1-06-e8",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "اختر الجملة الصحيحة:",
+            "prompt": "___ you have a farm? — Yes, we do.",
             "options": [
-              "She doesn't works here.",
-              "She doesn't work here.",
-              "She don't work here."
+              "Do",
+              "Does",
+              "Are"
             ],
-            "answer": 1,
-            "explanation_ar": "بعد doesn't يأتي الفعل بدون s."
+            "answer": 0,
+            "explanation_ar": "السؤال مع you: Do you have…?"
           }
         },
         {
@@ -417,15 +434,15 @@
             "id": "A1-06-e9",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: does / work / where / father / your",
+            "prompt": "رتب الكلمات (ابدأ بـ My): has / my / uncle / goats / ten",
             "answer": [
-              "Where",
-              "does",
-              "your",
-              "father",
-              "work"
+              "My",
+              "uncle",
+              "has",
+              "ten",
+              "goats"
             ],
-            "explanation_ar": "Where + does + الفاعل + الفعل؟"
+            "explanation_ar": "الفاعل + has + العدد + الاسم الجمع."
           }
         }
       ]
@@ -434,16 +451,26 @@
       "id": "A1-06-l3",
       "position": 3,
       "skill": "listening",
-      "title": "ماذا يعمل والداك؟",
+      "title": "حيوانات ماجد ورامي",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**هدى** و**رشا** تتحدثان عن عمل والديهما. استمع وأجب."
+          "markdown_ar": "**ماجد** من قرية قرب سيئون، و**رامي** من المكلا. استمع إليهما يتحدثان عن حيواناتهما."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "audio",
-          "text_en": "Huda: What does your father do, Rasha?\nRasha: He's an engineer. He works at the port in Aden.\nHuda: Does he work every day?\nRasha: He works from Saturday to Thursday. He doesn't work on Friday.\nHuda: And your mother?\nRasha: She's a doctor. She works at the Republic Hospital. She helps sick children.\nHuda: That's a great job! My mother is a teacher. She teaches Arabic.\nRasha: And your father?\nHuda: He's a fisherman. He goes to sea very early, at four o'clock."
+          "text_en": "Rami: Do you have animals at home, Majed?\nMajed: Yes, we do. We live in a village near Seiyun. We have six goats and ten chickens.\nRami: Do you have a camel?\nMajed: No, we don't. But my grandfather has two camels. He lives in the desert near Thamud.\nRami: Wow! I live in Mukalla. We don't have goats, but we have a cat. Her name is Lulu.\nMajed: Do you go to the sea?\nRami: Yes. In spring, we sometimes see big turtles on the beach at Sharma.\nMajed: Turtles? That's amazing!"
         },
         {
           "type": "exercise",
@@ -451,14 +478,14 @@
             "id": "A1-06-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "Where does Rasha's father work?",
+            "prompt": "How many goats does Majed's family have?",
             "options": [
-              "at the hospital",
-              "at the port",
-              "at a school"
+              "two",
+              "six",
+              "ten"
             ],
             "answer": 1,
-            "explanation_ar": "قالت: He works at the port in Aden."
+            "explanation_ar": "قال: We have six goats and ten chickens."
           }
         },
         {
@@ -466,15 +493,14 @@
           "exercise": {
             "id": "A1-06-e11",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What is Rasha's mother's job?",
+            "kind": "true_false",
+            "prompt": "Majed's family has a camel.",
             "options": [
-              "teacher",
-              "nurse",
-              "doctor"
+              "True",
+              "False"
             ],
-            "answer": 2,
-            "explanation_ar": "قالت: She's a doctor."
+            "answer": 1,
+            "explanation_ar": "قال: No, we don't. جده هو الذي عنده جملان."
           }
         },
         {
@@ -482,14 +508,15 @@
           "exercise": {
             "id": "A1-06-e12",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Huda's father goes to sea at four o'clock.",
+            "kind": "mcq",
+            "prompt": "What animal does Rami have?",
             "options": [
-              "True",
-              "False"
+              "a goat",
+              "a cat",
+              "a camel"
             ],
-            "answer": 0,
-            "explanation_ar": "قالت: He goes to sea very early, at four o'clock."
+            "answer": 1,
+            "explanation_ar": "قال: we have a cat. Her name is Lulu."
           }
         }
       ]
@@ -498,17 +525,27 @@
       "id": "A1-06-l4",
       "position": 4,
       "skill": "reading",
-      "title": "يوم صياد في عدن",
+      "title": "سلاحف شاطئ شرمة",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ عن **عبدالرحمن**، صياد من عدن، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ عن **السلاحف البحرية** في شاطئ **شرمة** شرق المكلا، ثم أجب عن الأسئلة. ستجد أفعالاً جديدة؛ ركّز على المعلومات المطلوبة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "reading",
-          "text_en": "Abdulrahman is fifty years old. He is a fisherman in Aden. He gets up at three thirty every morning. He doesn't have breakfast at home. He drinks tea on his boat. He goes to sea with his two sons. They catch fish until ten o'clock. Then they come back to the port and sell the fish at the fish market. Abdulrahman doesn't work in the afternoon. He sleeps after lunch. In the evening, he sits with his friends near the sea. He loves his job, but it is hard work.",
-          "word_count": 90
+          "text_en": "Every year, between January and June, something special happens at Sharma beach, east of Mukalla. Big green sea turtles come out of the sea at night. Each turtle digs a hole in the sand and lays about one hundred eggs. Then she goes back to the sea. After two months, the baby turtles come out of the eggs and walk to the water. The baby turtles are very small and many animals eat them, like birds and crabs. Local people and volunteers protect the beach. They don't use lights near the turtles, and they don't touch the eggs. Sharma is one of the most important places for turtles in the Arabian Sea.",
+          "word_count": 112
         },
         {
           "type": "exercise",
@@ -516,14 +553,14 @@
             "id": "A1-06-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "What time does Abdulrahman get up?",
+            "prompt": "When do the turtles come out of the sea?",
             "options": [
-              "3:30",
-              "10:00",
-              "4:00"
+              "in the morning",
+              "at night",
+              "at lunch time"
             ],
-            "answer": 0,
-            "explanation_ar": "في النص: He gets up at three thirty."
+            "answer": 1,
+            "explanation_ar": "في النص: come out of the sea at night."
           }
         },
         {
@@ -531,14 +568,15 @@
           "exercise": {
             "id": "A1-06-e14",
             "skill": "reading",
-            "kind": "true_false",
-            "prompt": "He has breakfast at home.",
+            "kind": "mcq",
+            "prompt": "How many eggs does each turtle lay?",
             "options": [
-              "True",
-              "False"
+              "about ten",
+              "about one hundred",
+              "about one thousand"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: He doesn't have breakfast at home."
+            "explanation_ar": "في النص: lays about one hundred eggs."
           }
         },
         {
@@ -546,15 +584,14 @@
           "exercise": {
             "id": "A1-06-e15",
             "skill": "reading",
-            "kind": "mcq",
-            "prompt": "Where do they sell the fish?",
+            "kind": "true_false",
+            "prompt": "People use lights near the turtles.",
             "options": [
-              "on the boat",
-              "at the fish market",
-              "at home"
+              "True",
+              "False"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: sell the fish at the fish market."
+            "explanation_ar": "في النص: They don't use lights near the turtles."
           }
         },
         {
@@ -563,9 +600,9 @@
             "id": "A1-06-e16",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "In the afternoon, he ___ after lunch.",
-            "answer": "sleeps",
-            "explanation_ar": "في النص: He sleeps after lunch."
+            "prompt": "Birds and crabs eat the baby ___.",
+            "answer": "turtles",
+            "explanation_ar": "في النص: many animals eat them (the baby turtles)."
           }
         }
       ]
@@ -574,12 +611,22 @@
       "id": "A1-06-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "عمل أحد أقاربك",
+      "title": "حيوانات تعرفها",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اختر شخصاً من عائلتك أو حيّك وتحدث عن عمله في 5 إلى 7 جمل: **ما مهنته؟ أين يعمل؟ متى يبدأ؟ ماذا يفعل؟** انتبه لإضافة **s** للفعل."
+          "markdown_ar": "تحدث عن الحيوانات في بيتك أو قريتك أو عند أقاربك: **ماذا عندكم؟ كم عددها؟ ومن عنده جمال أو نحل؟** استعمل have و has والجمع."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "table",
@@ -589,38 +636,39 @@
           ],
           "rows": [
             [
-              "مهنته",
-              "He's a… / She's a…"
+              "عندنا",
+              "We have…"
             ],
             [
-              "مكان العمل",
-              "He works at / in…"
+              "ليس عندنا",
+              "We don't have…"
             ],
             [
-              "الوقت",
-              "She starts work at…"
+              "عنده",
+              "My uncle has…"
             ],
             [
-              "لا يعمل",
-              "He doesn't work on…"
+              "أحب",
+              "My favourite animal is the… because…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Talk about the job of a person in your family or neighbourhood: what they do, where they work and their working day.",
+        "prompt_en": "Talk about the animals in your home, village or your relatives' farm: what animals, how many, and your favourite animal.",
         "helpful_phrases": [
-          "My uncle is a…",
-          "He works at…",
-          "He starts work at…",
-          "She doesn't work on…",
-          "He likes his job because…"
+          "We have…",
+          "We don't have…",
+          "My grandfather has…",
+          "There are … goats.",
+          "My favourite animal is…"
         ],
         "prep_seconds": 30,
-        "max_seconds": 75,
+        "max_seconds": 60,
         "rubric_focus": [
-          "present simple third person -s",
-          "jobs vocabulary"
+          "have / has",
+          "plural nouns",
+          "animals vocabulary"
         ]
       }
     },
@@ -628,27 +676,36 @@
       "id": "A1-06-l6",
       "position": 6,
       "skill": "writing",
-      "title": "اكتب عن مهنة",
+      "title": "اكتب عن حيوان تحبه",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن عمل شخص تعرفه. اقرأ المثال أولاً.\n\n**تذكّر:** works, teaches, goes, has… و doesn't + الفعل بدون s."
+          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن الحيوانات عند عائلتك أو عن حيوانك المفضل. اقرأ المثال أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "reading",
-          "text_en": "My aunt Samira is a nurse. She works at a hospital in Mukalla. She starts work at seven in the morning and she finishes at three. She helps the doctors and she gives medicine to sick people. She doesn't work on Fridays. She likes her job because she helps people.",
+          "text_en": "My uncle Awadh has a farm in Wadi Doan. He has two cows, fifteen goats and a donkey. He also has a lot of bees. His bees make sidr honey. I love the camels, but my uncle doesn't have camels. My cousin has a white cat. Her name is Qamar.",
           "word_count": 50
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about the job of a person you know. Use the present simple with he or she (works, goes, doesn't).",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write about the animals in your family or your favourite animal. Use have, has, don't have and plural nouns.",
+        "min_words": 30,
+        "max_words": 70,
         "rubric_focus": [
-          "present simple third person -s",
-          "doesn't",
-          "jobs vocabulary"
+          "have / has",
+          "plural nouns"
         ]
       }
     },
@@ -661,7 +718,17 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- he / she / it + فعل + **s**: works, teaches, goes, has, studies.\n- النفي **doesn't** + الفعل بدون s.\n- السؤال **Does** he…? / **What does** she do?\n- المهن: doctor, nurse, engineer, farmer, fisherman, driver, shopkeeper."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **I / you / we / they have**، **he / she / it has**.\n- النفي **don't have / doesn't have**، والسؤال **Do you have…? Does she have…?**\n- الجمع: camels, foxes, donkeys، والشاذ: sheep, fish, mice."
+        },
+        {
+          "type": "video",
+          "youtube_id": "Th9S81mblxo",
+          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 502,
+          "optional": true,
+          "approx_size_mb": 33
         },
         {
           "type": "exercise",
@@ -669,14 +736,14 @@
             "id": "A1-06-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "My brother ___ at university.",
+            "prompt": "Does your uncle have bees? — Yes, he ___.",
             "options": [
-              "study",
-              "studys",
-              "studies"
+              "do",
+              "does",
+              "has"
             ],
-            "answer": 2,
-            "explanation_ar": "ساكن + y ← ies: studies."
+            "answer": 1,
+            "explanation_ar": "الإجابة القصيرة مع he: Yes, he does."
           }
         },
         {
@@ -685,14 +752,14 @@
             "id": "A1-06-e18",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "What ___ your mother do? — She's a teacher.",
+            "prompt": "جمع كلمة donkey:",
             "options": [
-              "do",
-              "does",
-              "is"
+              "donkies",
+              "donkeys",
+              "donkey"
             ],
             "answer": 1,
-            "explanation_ar": "مع your mother (she) نقول What does."
+            "explanation_ar": "متحرك + y ← ys: donkeys."
           }
         },
         {
@@ -701,9 +768,9 @@
             "id": "A1-06-e19",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "My father ___ a shop in the market. (have)",
-            "answer": "has",
-            "explanation_ar": "have مع he تصبح has."
+            "prompt": "They ___ two camels and a cow.",
+            "answer": "have",
+            "explanation_ar": "مع they نستخدم have."
           }
         }
       ]
@@ -716,124 +783,124 @@
         "id": "A1-06-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "She ___ in a hospital.",
+        "prompt": "She ___ a white cat.",
         "options": [
-          "work",
-          "works",
-          "working"
+          "have",
+          "has",
+          "is"
         ],
         "answer": 1,
-        "explanation_ar": "مع she نضيف s: works."
+        "explanation_ar": "مع she نستخدم has."
       },
       {
         "id": "A1-06-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "He ___ to work by bus.",
+        "prompt": "We ___ have a camel.",
         "options": [
-          "go",
-          "gos",
-          "goes"
+          "doesn't",
+          "don't",
+          "aren't"
         ],
-        "answer": 2,
-        "explanation_ar": "go مع he تصبح goes."
+        "answer": 1,
+        "explanation_ar": "النفي مع we: don't have."
       },
       {
         "id": "A1-06-q3",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "My father ___ work on Friday.",
+        "prompt": "Sea ___ lay their eggs at Sharma beach.",
         "options": [
-          "don't",
-          "doesn't",
-          "not"
+          "turtles",
+          "camels",
+          "goats"
         ],
-        "answer": 1,
-        "explanation_ar": "النفي مع he: doesn't."
+        "answer": 0,
+        "explanation_ar": "السلاحف البحرية sea turtles."
       },
       {
         "id": "A1-06-q4",
         "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "___ he teach maths? — No, he doesn't.",
+        "prompt": "___ he have goats? — No, he doesn't.",
         "answer": "Does",
-        "explanation_ar": "السؤال مع he يبدأ بـ Does."
+        "explanation_ar": "السؤال مع he: Does he have…?"
       },
       {
         "id": "A1-06-q5",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "A ___ grows vegetables and coffee.",
+        "prompt": "جمع كلمة fox:",
         "options": [
-          "fisherman",
-          "farmer",
-          "doctor"
+          "foxs",
+          "foxes",
+          "foxies"
         ],
         "answer": 1,
-        "explanation_ar": "المزارع farmer يزرع."
+        "explanation_ar": "بعد x نضيف es: foxes."
       },
       {
         "id": "A1-06-q6",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "This animal makes honey:",
         "options": [
-          "Does she works here?",
-          "Does she work here?",
-          "Do she work here?"
+          "bee",
+          "bird",
+          "cow"
         ],
-        "answer": 1,
-        "explanation_ar": "بعد Does يأتي الفعل بدون s."
+        "answer": 0,
+        "explanation_ar": "النحلة bee تصنع العسل."
       },
       {
         "id": "A1-06-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: does / what / do / your / brother",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: a / you / do / have / cat",
         "answer": [
-          "What",
-          "does",
-          "your",
-          "brother",
-          "do"
+          "Do",
+          "you",
+          "have",
+          "a",
+          "cat"
         ],
-        "explanation_ar": "What + does + الفاعل + do؟ = ماذا يعمل؟"
+        "explanation_ar": "Do + you + have + الاسم؟"
       },
       {
         "id": "A1-06-q8",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "Ships stop at the ___.",
+        "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "office",
-          "port",
-          "hospital"
+          "There are ten sheeps.",
+          "There are ten sheep.",
+          "There is ten sheep."
         ],
         "answer": 1,
-        "explanation_ar": "السفن ترسو في الميناء port."
+        "explanation_ar": "sheep لا يتغير في الجمع، ومع الجمع there are."
       },
       {
         "id": "A1-06-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «Ali is a driver. He drives a bus from Taiz to Aden.» What does Ali do?",
+        "prompt": "Read: «Salem has three goats and his sister has two cats.» How many cats does his sister have?",
         "options": [
-          "He's a driver.",
-          "He's a farmer.",
-          "He's a teacher."
+          "two",
+          "three",
+          "five"
         ],
         "answer": 0,
-        "explanation_ar": "في النص: Ali is a driver."
+        "explanation_ar": "his sister has two cats."
       },
       {
         "id": "A1-06-q10",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "Mr. Fuad ___ English. (teach)",
-        "answer": "teaches",
-        "explanation_ar": "بعد ch نضيف es: teaches."
+        "prompt": "The ___ carries water in the village. (حمار)",
+        "answer": "donkey",
+        "explanation_ar": "الحمار = donkey."
       }
     ]
   },
-  "context_note": "ميناء عدن، مستشفى الجمهورية، الصيادون وسوق السمك، مدينة كريتر."
+  "context_note": "السلاحف البحرية في شاطئ شرمة، جمال صحراء ثمود، نحل دوعن، مزارع وادي حضرموت."
 }

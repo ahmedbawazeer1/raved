@@ -5,7 +5,7 @@
   "level": "A1",
   "position": 1,
   "title": "Hello!",
-  "topic": "التعارف في أول يوم دراسي في مدرسة بتعز",
+  "topic": "التعارف في أول يوم دراسي في مدرسة بالمكلا",
   "grammar_point": "verb to be (am / is / are)",
   "can_do": [
     "أعرّف نفسي باسمي وعمري ومدينتي",
@@ -19,7 +19,7 @@
       "ipa": "/həˈləʊ/",
       "part_of_speech": "phrase",
       "meaning_ar": "مرحباً",
-      "example_en": "Hello, I'm Youssef."
+      "example_en": "Hello, I'm Salem."
     },
     {
       "id": "A1-01-v2",
@@ -51,7 +51,7 @@
       "ipa": "/frɒm/",
       "part_of_speech": "other",
       "meaning_ar": "من (مكان)",
-      "example_en": "I'm from Taiz."
+      "example_en": "I'm from Mukalla."
     },
     {
       "id": "A1-01-v6",
@@ -83,7 +83,7 @@
       "ipa": "/ˈtiːtʃə/",
       "part_of_speech": "noun",
       "meaning_ar": "معلّم / معلّمة",
-      "example_en": "Mr. Saleh is our teacher."
+      "example_en": "Mr. Bawazir is our teacher."
     },
     {
       "id": "A1-01-v10",
@@ -91,7 +91,7 @@
       "ipa": "/njuː/",
       "part_of_speech": "adjective",
       "meaning_ar": "جديد",
-      "example_en": "Ali is a new student."
+      "example_en": "Omar is a new student."
     },
     {
       "id": "A1-01-v11",
@@ -123,6 +123,16 @@
           "markdown_ar": "في هذه الوحدة نتعلم كيف **نعرّف أنفسنا** في أول يوم دراسي. اقرأ الكلمات، واضغط زر الاستماع لتسمع نطقها بصوت جهازك، ثم كررها بصوت مرتفع."
         },
         {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
+        },
+        {
           "type": "table",
           "headers": [
             "الكلمة",
@@ -135,7 +145,7 @@
               "hello",
               "/həˈləʊ/",
               "مرحباً",
-              "Hello, I'm Youssef."
+              "Hello, I'm Salem."
             ],
             [
               "name",
@@ -159,7 +169,7 @@
               "from",
               "/frɒm/",
               "من (مكان)",
-              "I'm from Taiz."
+              "I'm from Mukalla."
             ],
             [
               "friend",
@@ -183,13 +193,13 @@
               "teacher",
               "/ˈtiːtʃə/",
               "معلّم / معلّمة",
-              "Mr. Saleh is our teacher."
+              "Mr. Bawazir is our teacher."
             ],
             [
               "new",
               "/njuː/",
               "جديد",
-              "Ali is a new student."
+              "Omar is a new student."
             ],
             [
               "good morning",
@@ -207,7 +217,7 @@
         },
         {
           "type": "audio",
-          "text_en": "hello. Hello, I'm Youssef.\nname. What's your name?\nstudent. I am a student.\nyears old. I'm fifteen years old.\nfrom. I'm from Taiz.\nfriend. She is my friend.\nnice to meet you. Nice to meet you, Mona.\nclass. We are in the same class.\nteacher. Mr. Saleh is our teacher.\nnew. Ali is a new student.\ngood morning. Good morning, teacher!\ngoodbye. Goodbye, see you tomorrow."
+          "text_en": "hello. Hello, I'm Salem.\nname. What's your name?\nstudent. I am a student.\nyears old. I'm fifteen years old.\nfrom. I'm from Mukalla.\nfriend. She is my friend.\nnice to meet you. Nice to meet you, Mona.\nclass. We are in the same class.\nteacher. Mr. Bawazir is our teacher.\nnew. Omar is a new student.\ngood morning. Good morning, teacher!\ngoodbye. Goodbye, see you tomorrow."
         },
         {
           "type": "text",
@@ -235,7 +245,7 @@
             "id": "A1-01-e3",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "Mr. Saleh is our ___. He teaches English.",
+            "prompt": "Mr. Bawazir is our ___. He teaches English.",
             "options": [
               "student",
               "friend",
@@ -267,7 +277,17 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في العربية نقول «أنا طالب» بلا فعل. أما في الإنجليزية فنحتاج فعل **be** دائماً: «I **am** a student».\n\n- نستخدم **am** مع I فقط.\n- نستخدم **is** مع he و she و it (ومع اسم شخص واحد مثل Ali).\n- نستخدم **are** مع you و we و they."
+          "markdown_ar": "في العربية نقول «أنا طالب» بلا فعل. أما في الإنجليزية فنحتاج فعل **be** دائماً: «I **am** a student».\n\n- نستخدم **am** مع I فقط.\n- نستخدم **is** مع he و she و it (ومع اسم شخص واحد مثل Omar).\n- نستخدم **are** مع you و we و they."
+        },
+        {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
         },
         {
           "type": "table",
@@ -300,7 +320,7 @@
         },
         {
           "type": "text",
-          "markdown_ar": "**السؤال:** نقدّم الفعل على الضمير: «**Are** you a student?» ← «Yes, I am.»\n\n**النفي:** نضيف not بعد الفعل: «I am **not** from Aden.» / «She **is not** (isn't) a teacher.»"
+          "markdown_ar": "**السؤال:** نقدّم الفعل على الضمير: «**Are** you a student?» ← «Yes, I am.»\n\n**النفي:** نضيف not بعد الفعل: «I am **not** from Tarim.» / «She **is not** (isn't) a teacher.»"
         },
         {
           "type": "exercise",
@@ -324,14 +344,14 @@
             "id": "A1-01-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Ali ___ from Ibb.",
+            "prompt": "Omar ___ from Tarim.",
             "options": [
               "am",
               "is",
               "are"
             ],
             "answer": 1,
-            "explanation_ar": "Ali شخص واحد (he) فنستخدم is."
+            "explanation_ar": "Omar شخص واحد (he) فنستخدم is."
           }
         },
         {
@@ -367,13 +387,13 @@
             "id": "A1-01-e8",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: not / from / I / am / Aden",
+            "prompt": "رتب الكلمات: not / from / I / am / Tarim",
             "answer": [
               "I",
               "am",
               "not",
               "from",
-              "Aden"
+              "Tarim"
             ],
             "explanation_ar": "النفي: I am not ثم بقية الجملة."
           }
@@ -392,8 +412,18 @@
           "markdown_ar": "استمع إلى الحوار بين المعلم وطالب جديد اسمه **Hamza**. استمع مرتين: مرة لتفهم الفكرة العامة، ومرة لتجيب عن الأسئلة. يمكنك إظهار النص إذا احتجت."
         },
         {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
+        },
+        {
           "type": "audio",
-          "text_en": "Teacher: Good morning, class!\nStudents: Good morning, teacher!\nTeacher: We have a new student today. What's your name?\nHamza: My name is Hamza.\nTeacher: Nice to meet you, Hamza. Where are you from?\nHamza: I'm from Aden. My family is in Taiz now.\nTeacher: How old are you?\nHamza: I'm fifteen years old.\nTeacher: Welcome to class one, Hamza. This is Ammar. He is a good student.\nAmmar: Hello, Hamza. Nice to meet you."
+          "text_en": "Teacher: Good morning, class!\nStudents: Good morning, teacher!\nTeacher: We have a new student today. What's your name?\nHamza: My name is Hamza.\nTeacher: Nice to meet you, Hamza. Where are you from?\nHamza: I'm from Seiyun. My family is in Mukalla now.\nTeacher: How old are you?\nHamza: I'm fifteen years old.\nTeacher: Welcome to class one, Hamza. This is Ammar. He is a good student.\nAmmar: Hello, Hamza. Nice to meet you."
         },
         {
           "type": "exercise",
@@ -403,12 +433,12 @@
             "kind": "mcq",
             "prompt": "Where is Hamza from?",
             "options": [
-              "Taiz",
-              "Aden",
-              "Ibb"
+              "Mukalla",
+              "Seiyun",
+              "Tarim"
             ],
             "answer": 1,
-            "explanation_ar": "قال Hamza: I'm from Aden."
+            "explanation_ar": "قال Hamza: I'm from Seiyun."
           }
         },
         {
@@ -456,8 +486,18 @@
           "markdown_ar": "اقرأ النص الذي كتبته **ريم** عن نفسها، ثم أجب عن الأسئلة. لا تترجم كل كلمة؛ ابحث عن المعلومة المطلوبة."
         },
         {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
+        },
+        {
           "type": "reading",
-          "text_en": "My name is Reem. I am sixteen years old and I am from Taiz. I am a student at Al-Nour Secondary School. I am in the second grade. My best friend is Sara. She is from Taiz too. We are in the same class. Our English teacher is Ms. Amal. She is kind and her lessons are fun. Today is the first day of school. There are new students in our class. Their names are Huda and Afrah. They are from Hodeidah. Nice to meet you, Huda and Afrah!",
+          "text_en": "My name is Reem. I am sixteen years old and I am from Mukalla. I am a student at Al-Mukalla Secondary School. I am in the second grade. My best friend is Sara. She is from Mukalla too. We are in the same class. Our English teacher is Ms. Bamatraf. She is kind and her lessons are fun. Today is the first day of school. There are new students in our class. Their names are Huda and Afrah. They are from Shibam. Nice to meet you, Huda and Afrah!",
           "word_count": 89
         },
         {
@@ -499,12 +539,12 @@
             "kind": "mcq",
             "prompt": "Where are Huda and Afrah from?",
             "options": [
-              "Taiz",
-              "Aden",
-              "Hodeidah"
+              "Mukalla",
+              "Tarim",
+              "Shibam"
             ],
             "answer": 2,
-            "explanation_ar": "في النص: They are from Hodeidah."
+            "explanation_ar": "في النص: They are from Shibam."
           }
         },
         {
@@ -513,9 +553,9 @@
             "id": "A1-01-e15",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "Ms. Amal is Reem's English ___.",
+            "prompt": "Ms. Bamatraf is Reem's English ___.",
             "answer": "teacher",
-            "explanation_ar": "Ms. Amal هي معلمة الإنجليزي."
+            "explanation_ar": "Ms. Bamatraf هي معلمة الإنجليزي."
           }
         }
       ]
@@ -530,6 +570,16 @@
         {
           "type": "text",
           "markdown_ar": "تخيّل أنك في أول يوم دراسي، وأمامك زميل جديد. عرّف نفسك في 3 إلى 5 جمل: **اسمك، عمرك، مدينتك، فصلك**.\n\nاستعمل العبارات المساعدة، وتكلم ببطء ووضوح. لا بأس بالأخطاء، فالتقييم **تقديري** لمساعدتك."
+        },
+        {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
         },
         {
           "type": "table",
@@ -586,8 +636,18 @@
           "markdown_ar": "اكتب فقرة قصيرة عن نفسك (25 إلى 60 كلمة). اقرأ المثال أولاً، ثم اكتب فقرتك بمعلوماتك أنت.\n\n**تذكّر:** ابدأ الجملة بحرف كبير، وضع نقطة في آخرها، واستعمل am و is و are."
         },
         {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
+        },
+        {
           "type": "reading",
-          "text_en": "Hello! My name is Nabil. I am fifteen years old. I am from Sana'a. I am a student in the first grade. My friend is Fahd. He is from Sana'a too. We are in the same class.",
+          "text_en": "Hello! My name is Nabil. I am fifteen years old. I am from Seiyun. I am a student in the first grade. My friend is Fahd. He is from Seiyun too. We are in the same class.",
           "word_count": 37
         }
       ],
@@ -611,6 +671,16 @@
         {
           "type": "text",
           "markdown_ar": "قبل اختبار الوحدة، راجع أهم ما تعلمت:\n\n- **I am** / **he, she, it is** / **you, we, they are**\n- السؤال: **Are you…? Is she…?**\n- النفي: **I'm not… / She isn't…**\n- التعارف: **What's your name? Where are you from? How old are you?**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "77IK9T45kiU",
+          "video_title": "تعلم اللغة الإنجليزية من الصفر للمبتدئين — الحلقة 1",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 516,
+          "optional": true,
+          "approx_size_mb": 34
         },
         {
           "type": "exercise",
@@ -669,7 +739,7 @@
         "id": "A1-01-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "I ___ from Aden.",
+        "prompt": "I ___ from Mukalla.",
         "options": [
           "am",
           "is",
@@ -728,7 +798,7 @@
         "id": "A1-01-q6",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "Huda and Afrah ___ from Hodeidah.",
+        "prompt": "Huda and Afrah ___ from Shibam.",
         "options": [
           "am",
           "is",
@@ -767,7 +837,7 @@
         "id": "A1-01-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «My name is Salem. I'm sixteen. I'm from Marib.» How old is Salem?",
+        "prompt": "Read: «My name is Salem. I'm sixteen. I'm from Al-Shihr.» How old is Salem?",
         "options": [
           "15",
           "16",
@@ -786,5 +856,5 @@
       }
     ]
   },
-  "context_note": "أسماء ومدن يمنية: تعز، عدن، إب، الحديدة، صنعاء، مأرب."
+  "context_note": "مدن حضرمية: المكلا، سيئون، تريم، شبام، الشحر. وأسماء عائلات حضرمية مثل باوزير وبامطرف."
 }

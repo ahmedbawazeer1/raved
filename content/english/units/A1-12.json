@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 12,
-  "title": "Last Weekend",
-  "topic": "زيارة قرية الجد قرب تعز ورحلة إلى شبام",
-  "grammar_point": "past simple of be (was / were) + regular verbs (-ed)",
+  "title": "Sports",
+  "topic": "الرياضة والمهارات في حضرموت",
+  "grammar_point": "can / can't (ability, requests, permission)",
   "can_do": [
-    "أحكي عن عطلة أو زيارة في الماضي",
-    "أسأل عن مكان شخص في الماضي وأفهم الإجابة",
-    "أفهم قصة قصيرة عن رحلة"
+    "أتحدث عما أستطيع وما لا أستطيع فعله",
+    "أطلب طلباً مهذباً وأرد على طلب",
+    "أفهم نصاً قصيراً عن مهارات شخص"
   ],
   "vocab": [
     {
       "id": "A1-12-v1",
-      "word": "yesterday",
-      "ipa": "/ˈjestədeɪ/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "أمس",
-      "example_en": "I was at home yesterday."
+      "word": "swim",
+      "ipa": "/swɪm/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يسبح",
+      "example_en": "I can swim in the sea."
     },
     {
       "id": "A1-12-v2",
-      "word": "last weekend",
-      "ipa": "/lɑːst ˌwiːkˈend/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "عطلة الأسبوع الماضية",
-      "example_en": "We visited our village last weekend."
+      "word": "run",
+      "ipa": "/rʌn/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يركض",
+      "example_en": "He can run very fast."
     },
     {
       "id": "A1-12-v3",
-      "word": "ago",
-      "ipa": "/əˈɡəʊ/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "منذ / قبل (مدة)",
-      "example_en": "I was in Aden two weeks ago."
+      "word": "ride a bike",
+      "ipa": "/raɪd ə baɪk/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يركب دراجة",
+      "example_en": "My sister can ride a bike."
     },
     {
       "id": "A1-12-v4",
-      "word": "village",
-      "ipa": "/ˈvɪlɪdʒ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "قرية",
-      "example_en": "My grandfather's village is in the mountains."
+      "word": "play football",
+      "ipa": "/pleɪ ˈfʊtbɔːl/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يلعب كرة القدم",
+      "example_en": "We play football after school."
     },
     {
       "id": "A1-12-v5",
-      "word": "mountain",
-      "ipa": "/ˈmaʊntən/",
-      "part_of_speech": "noun",
-      "meaning_ar": "جبل",
-      "example_en": "We climbed the mountain in the morning."
+      "word": "draw",
+      "ipa": "/drɔː/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يرسم",
+      "example_en": "Can you draw a map of Yemen?"
     },
     {
       "id": "A1-12-v6",
-      "word": "trip",
-      "ipa": "/trɪp/",
-      "part_of_speech": "noun",
-      "meaning_ar": "رحلة",
-      "example_en": "The trip was long but nice."
+      "word": "cook",
+      "ipa": "/kʊk/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يطبخ",
+      "example_en": "My brother can cook rice."
     },
     {
       "id": "A1-12-v7",
-      "word": "arrive",
-      "ipa": "/əˈraɪv/",
+      "word": "speak",
+      "ipa": "/spiːk/",
       "part_of_speech": "verb",
-      "meaning_ar": "يصل",
-      "example_en": "We arrived at noon."
+      "meaning_ar": "يتكلم",
+      "example_en": "I can speak Arabic and a little English."
     },
     {
       "id": "A1-12-v8",
-      "word": "stay",
-      "ipa": "/steɪ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يبقى / يقيم",
-      "example_en": "We stayed with our grandparents."
+      "word": "send a message",
+      "ipa": "/send ə ˈmesɪdʒ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يرسل رسالة",
+      "example_en": "Can you send me a message?"
     },
     {
       "id": "A1-12-v9",
-      "word": "climb",
-      "ipa": "/klaɪm/",
+      "word": "call",
+      "ipa": "/kɔːl/",
       "part_of_speech": "verb",
-      "meaning_ar": "يتسلق / يصعد",
-      "example_en": "My cousins climbed the hill."
+      "meaning_ar": "يتصل",
+      "example_en": "Call me after school."
     },
     {
       "id": "A1-12-v10",
-      "word": "walk",
-      "ipa": "/wɔːk/",
+      "word": "charge",
+      "ipa": "/tʃɑːdʒ/",
       "part_of_speech": "verb",
-      "meaning_ar": "يمشي",
-      "example_en": "We walked to the old well."
+      "meaning_ar": "يشحن",
+      "example_en": "Can I charge my phone here?"
     },
     {
       "id": "A1-12-v11",
-      "word": "tired",
-      "ipa": "/ˈtaɪəd/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "متعب",
-      "example_en": "I was tired after the trip."
+      "word": "borrow",
+      "ipa": "/ˈbɒrəʊ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يستعير",
+      "example_en": "Can I borrow your pen?"
     },
     {
       "id": "A1-12-v12",
-      "word": "happy",
-      "ipa": "/ˈhæpi/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "سعيد",
-      "example_en": "My grandmother was very happy."
+      "word": "well",
+      "ipa": "/wel/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "جيداً",
+      "example_en": "She can draw very well."
     },
     {
       "id": "A1-12-v13",
-      "word": "Thursday",
-      "ipa": "/ˈθɜːzdeɪ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "الخميس",
-      "example_en": "We left on Thursday."
+      "word": "a little",
+      "ipa": "/ə ˈlɪtl/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "قليلاً",
+      "example_en": "I can speak English a little."
     },
     {
       "id": "A1-12-v14",
-      "word": "Friday",
-      "ipa": "/ˈfraɪdeɪ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "الجمعة",
-      "example_en": "On Friday, we prayed in the village mosque."
+      "word": "of course",
+      "ipa": "/əv kɔːs/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "طبعاً",
+      "example_en": "Can you help me? — Of course!"
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-12-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "عطلة في القرية",
+      "title": "المهارات والهاتف",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في آخر وحدة من **A1** نتعلم الحديث عن **الماضي**: أين كنا، وماذا فعلنا. تعلّم كلمات الزيارة والسفر وأيام الأسبوع.\n\n**أيام الأسبوع:** Saturday (السبت)، Sunday (الأحد)، Monday (الاثنين)، Tuesday (الثلاثاء)، Wednesday (الأربعاء)، Thursday (الخميس)، Friday (الجمعة). تُكتب دائماً بحرف كبير."
+          "markdown_ar": "ماذا تستطيع أن تفعل؟ تسبح في بحر المكلا؟ تلعب كرة القدم؟ تركب الدراجة؟ تعلّم أفعال الرياضة والمهارات، وكلمات **الهاتف المحمول** التي نستعملها كل يوم."
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "table",
@@ -148,98 +158,94 @@
           ],
           "rows": [
             [
-              "yesterday",
-              "/ˈjestədeɪ/",
-              "أمس",
-              "I was at home yesterday."
+              "swim",
+              "/swɪm/",
+              "يسبح",
+              "I can swim in the sea."
             ],
             [
-              "last weekend",
-              "/lɑːst ˌwiːkˈend/",
-              "عطلة الأسبوع الماضية",
-              "We visited our village last weekend."
+              "run",
+              "/rʌn/",
+              "يركض",
+              "He can run very fast."
             ],
             [
-              "ago",
-              "/əˈɡəʊ/",
-              "منذ / قبل (مدة)",
-              "I was in Aden two weeks ago."
+              "ride a bike",
+              "/raɪd ə baɪk/",
+              "يركب دراجة",
+              "My sister can ride a bike."
             ],
             [
-              "village",
-              "/ˈvɪlɪdʒ/",
-              "قرية",
-              "My grandfather's village is in the mountains."
+              "play football",
+              "/pleɪ ˈfʊtbɔːl/",
+              "يلعب كرة القدم",
+              "We play football after school."
             ],
             [
-              "mountain",
-              "/ˈmaʊntən/",
-              "جبل",
-              "We climbed the mountain in the morning."
+              "draw",
+              "/drɔː/",
+              "يرسم",
+              "Can you draw a map of Yemen?"
             ],
             [
-              "trip",
-              "/trɪp/",
-              "رحلة",
-              "The trip was long but nice."
+              "cook",
+              "/kʊk/",
+              "يطبخ",
+              "My brother can cook rice."
             ],
             [
-              "arrive",
-              "/əˈraɪv/",
-              "يصل",
-              "We arrived at noon."
+              "speak",
+              "/spiːk/",
+              "يتكلم",
+              "I can speak Arabic and a little English."
             ],
             [
-              "stay",
-              "/steɪ/",
-              "يبقى / يقيم",
-              "We stayed with our grandparents."
+              "send a message",
+              "/send ə ˈmesɪdʒ/",
+              "يرسل رسالة",
+              "Can you send me a message?"
             ],
             [
-              "climb",
-              "/klaɪm/",
-              "يتسلق / يصعد",
-              "My cousins climbed the hill."
+              "call",
+              "/kɔːl/",
+              "يتصل",
+              "Call me after school."
             ],
             [
-              "walk",
-              "/wɔːk/",
-              "يمشي",
-              "We walked to the old well."
+              "charge",
+              "/tʃɑːdʒ/",
+              "يشحن",
+              "Can I charge my phone here?"
             ],
             [
-              "tired",
-              "/ˈtaɪəd/",
-              "متعب",
-              "I was tired after the trip."
+              "borrow",
+              "/ˈbɒrəʊ/",
+              "يستعير",
+              "Can I borrow your pen?"
             ],
             [
-              "happy",
-              "/ˈhæpi/",
-              "سعيد",
-              "My grandmother was very happy."
+              "well",
+              "/wel/",
+              "جيداً",
+              "She can draw very well."
             ],
             [
-              "Thursday",
-              "/ˈθɜːzdeɪ/",
-              "الخميس",
-              "We left on Thursday."
+              "a little",
+              "/ə ˈlɪtl/",
+              "قليلاً",
+              "I can speak English a little."
             ],
             [
-              "Friday",
-              "/ˈfraɪdeɪ/",
-              "الجمعة",
-              "On Friday, we prayed in the village mosque."
+              "of course",
+              "/əv kɔːs/",
+              "طبعاً",
+              "Can you help me? — Of course!"
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "yesterday. I was at home yesterday.\nlast weekend. We visited our village last weekend.\nago. I was in Aden two weeks ago.\nvillage. My grandfather's village is in the mountains.\nmountain. We climbed the mountain in the morning.\ntrip. The trip was long but nice.\narrive. We arrived at noon.\nstay. We stayed with our grandparents.\nclimb. My cousins climbed the hill.\nwalk. We walked to the old well.\ntired. I was tired after the trip.\nhappy. My grandmother was very happy.\nThursday. We left on Thursday.\nFriday. On Friday, we prayed in the village mosque."
-        },
-        {
-          "type": "audio",
-          "text_en": "Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday."
+          "text_en": "swim. I can swim in the sea.\nrun. He can run very fast.\nride a bike. My sister can ride a bike.\nplay football. We play football after school.\ndraw. Can you draw a map of Yemen?\ncook. My brother can cook rice.\nspeak. I can speak Arabic and a little English.\nsend a message. Can you send me a message?\ncall. Call me after school.\ncharge. Can I charge my phone here?\nborrow. Can I borrow your pen?\nwell. She can draw very well.\na little. I can speak English a little.\nof course. Can you help me? — Of course!"
         },
         {
           "type": "exercise",
@@ -247,14 +253,14 @@
             "id": "A1-12-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "Today is Tuesday. Yesterday was ___.",
+            "prompt": "My phone battery is low. I need to ___ it.",
             "options": [
-              "Monday",
-              "Wednesday",
-              "Sunday"
+              "borrow",
+              "charge",
+              "draw"
             ],
-            "answer": 0,
-            "explanation_ar": "اليوم الثلاثاء، فأمس كان الاثنين Monday."
+            "answer": 1,
+            "explanation_ar": "البطارية ضعيفة فنحتاج أن نشحن charge."
           }
         },
         {
@@ -263,14 +269,14 @@
             "id": "A1-12-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "After a long trip, you are ___.",
+            "prompt": "Can I ___ your book? I'll give it back tomorrow.",
             "options": [
-              "tired",
-              "happy",
-              "hungry"
+              "borrow",
+              "cook",
+              "swim"
             ],
             "answer": 0,
-            "explanation_ar": "بعد رحلة طويلة نكون متعبين tired."
+            "explanation_ar": "نأخذ الشيء ونعيده = borrow (نستعير)."
           }
         },
         {
@@ -279,9 +285,9 @@
             "id": "A1-12-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I was in Sana'a three days ___. (منذ)",
-            "answer": "ago",
-            "explanation_ar": "مدة + ago = منذ."
+            "prompt": "Can you help me? — Of ___!",
+            "answer": "course",
+            "explanation_ar": "Of course = طبعاً."
           }
         }
       ]
@@ -290,39 +296,56 @@
       "id": "A1-12-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "was / were + الفعل الماضي (-ed)",
-      "est_minutes": 30,
+      "title": "can / can't",
+      "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**1) ماضي فعل be:** am / is ← **was**، و are ← **were**."
+          "markdown_ar": "**can** فعل مساعد سهل جداً: **لا يتغير** مع أي فاعل، ولا نضيف له s، ويأتي بعده الفعل **بدون to**.\n\nنستخدمه لـ:\n\n- **القدرة:** I **can** swim. / She **can't** (cannot) cook.\n- **الطلب المهذب:** **Can** I borrow your pen? / **Can** you help me, please?\n- **الإذن:** You **can** use my phone."
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "table",
           "headers": [
-            "الضمير",
-            "الماضي",
-            "النفي",
+            "",
+            "الصيغة",
             "مثال"
           ],
           "rows": [
             [
-              "I / he / she / it",
-              "was",
-              "wasn't",
-              "I was at home yesterday."
+              "إثبات",
+              "الفاعل + can + الفعل",
+              "He can ride a bike."
             ],
             [
-              "you / we / they",
-              "were",
-              "weren't",
-              "They weren't at school on Friday."
+              "نفي",
+              "الفاعل + can't + الفعل",
+              "We can't swim."
+            ],
+            [
+              "سؤال",
+              "Can + الفاعل + الفعل؟",
+              "Can you speak English?"
+            ],
+            [
+              "إجابة",
+              "Yes, I can. / No, I can't.",
+              "Can she draw? — Yes, she can."
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "السؤال: **Were** you at home? — Yes, I **was**. / **Was** it hot? — No, it **wasn't**.\n\n**2) الماضي البسيط للأفعال المنتظمة:** نضيف **ed** إلى الفعل، وهو **نفسه لكل الضمائر**:\n\n- I visit**ed** my uncle. / She play**ed** football. / They walk**ed** to the market.\n\n**الإملاء:**\n\n- ينتهي بـ e: نضيف d فقط: arrive ← **arrived**.\n- ساكن + y: ← **ied**: study ← **studied**.\n- متحرك + y: ← **yed**: stay ← **stayed**، play ← **played**.\n- قصير ينتهي بساكن: نضاعف: stop ← **stopped**.\n\n**كلمات الماضي:** yesterday, last week, last Friday, two days ago.\n\n**ملاحظة:** هناك أفعال **شاذة** في الماضي مثل go ← went. سنتعلمها في أول وحدة من **A2**."
+          "markdown_ar": "**أخطاء شائعة:**\n\n- ✗ He cans swim. ← ✓ He **can** swim.\n- ✗ I can to swim. ← ✓ I can **swim**.\n- ✗ She can swims. ← ✓ She can **swim**.\n\n**للرد على الطلب:** Yes, of course. / Sure. / Sorry, I can't."
         },
         {
           "type": "exercise",
@@ -330,14 +353,14 @@
             "id": "A1-12-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "I ___ in Aden last week.",
+            "prompt": "My sister ___ cook very well.",
             "options": [
-              "was",
-              "were",
-              "am"
+              "can",
+              "cans",
+              "can to"
             ],
             "answer": 0,
-            "explanation_ar": "مع I في الماضي: was."
+            "explanation_ar": "can لا يتغير مع she."
           }
         },
         {
@@ -346,14 +369,14 @@
             "id": "A1-12-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "My friends ___ at the wedding yesterday.",
+            "prompt": "I can ___ a bike.",
             "options": [
-              "was",
-              "were",
-              "are"
+              "ride",
+              "rides",
+              "to ride"
             ],
-            "answer": 1,
-            "explanation_ar": "مع الجمع في الماضي: were."
+            "answer": 0,
+            "explanation_ar": "بعد can يأتي الفعل بدون to وبدون s."
           }
         },
         {
@@ -362,9 +385,9 @@
             "id": "A1-12-e6",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "We ___ (visit) our grandmother last Friday.",
-            "answer": "visited",
-            "explanation_ar": "الماضي المنتظم: visit + ed."
+            "prompt": "___ you swim? — No, I can't.",
+            "answer": "Can",
+            "explanation_ar": "السؤال يبدأ بـ Can."
           }
         },
         {
@@ -373,14 +396,14 @@
             "id": "A1-12-e7",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "study في الماضي:",
+            "prompt": "«لا أستطيع الرسم» بالإنجليزية:",
             "options": [
-              "studyed",
-              "studied",
-              "studed"
+              "I don't can draw.",
+              "I can't draw.",
+              "I can draw not."
             ],
             "answer": 1,
-            "explanation_ar": "ساكن + y ← ied: studied."
+            "explanation_ar": "النفي: can't + الفعل."
           }
         },
         {
@@ -389,14 +412,14 @@
             "id": "A1-12-e8",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "___ you tired after the trip? — Yes, I was.",
+            "prompt": "أي جملة طلب مهذب؟",
             "options": [
-              "Was",
-              "Were",
-              "Did"
+              "Give me your phone.",
+              "Can I use your phone, please?",
+              "I use your phone."
             ],
             "answer": 1,
-            "explanation_ar": "السؤال مع you: Were you…?"
+            "explanation_ar": "الطلب المهذب: Can I…, please?"
           }
         },
         {
@@ -405,14 +428,14 @@
             "id": "A1-12-e9",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: at / she / school / wasn't",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: you / can / me / help",
             "answer": [
-              "She",
-              "wasn't",
-              "at",
-              "school"
+              "Can",
+              "you",
+              "help",
+              "me"
             ],
-            "explanation_ar": "الفاعل + wasn't + المكان."
+            "explanation_ar": "Can + الفاعل + الفعل؟"
           }
         }
       ]
@@ -421,31 +444,40 @@
       "id": "A1-12-l3",
       "position": 3,
       "skill": "listening",
-      "title": "زيارة قرية الجد",
+      "title": "فريق المدرسة",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "استمع إلى طالب يحكي عن **عطلة نهاية الأسبوع** في قرية جده قرب **تعز**. انتبه للأفعال المنتهية بـ **-ed**."
+          "markdown_ar": "المدرب يختار لاعبين لفريق مدرسة في المكلا. استمع إلى **زياد** و**أنور**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "audio",
-          "text_en": "Last weekend was great. On Thursday afternoon, my family and I travelled to my grandfather's village near Taiz. The trip was three hours long. We arrived in the evening and my grandparents were very happy. On Friday morning, my cousins and I climbed the mountain behind the village. The weather was cool and sunny. We walked for two hours and we watched the green fields from the top. After the Friday prayer, my grandmother cooked lunch for everybody. It was delicious. In the evening, we talked and listened to my grandfather's old stories. We returned home on Saturday. I was tired, but I was very happy."
+          "text_en": "Coach: OK, everyone. We need players for the school team. Ziad, can you play football?\nZiad: Yes, I can. I can run fast, but I can't kick the ball very well.\nCoach: That's OK. And you, Anwar?\nAnwar: I can't play football, sir. But I can swim very well. I swim in the sea in Mukalla every summer.\nCoach: Great. We have a swimming race next month. Can you come on Monday?\nAnwar: Yes, of course.\nCoach: Ziad, can you send me your phone number?\nZiad: Sure. I can send it on WhatsApp."
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-12-e10",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "When did the family travel?",
+            "kind": "true_false",
+            "prompt": "Ziad can kick the ball very well.",
             "options": [
-              "on Thursday",
-              "on Friday",
-              "on Saturday"
+              "True",
+              "False"
             ],
-            "answer": 0,
-            "explanation_ar": "قال: On Thursday afternoon… travelled."
+            "answer": 1,
+            "explanation_ar": "قال زياد: I can't kick the ball very well."
           }
         },
         {
@@ -454,14 +486,14 @@
             "id": "A1-12-e11",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "How long was the trip?",
+            "prompt": "What can Anwar do well?",
             "options": [
-              "one hour",
-              "two hours",
-              "three hours"
+              "play football",
+              "swim",
+              "draw"
             ],
-            "answer": 2,
-            "explanation_ar": "قال: The trip was three hours long."
+            "answer": 1,
+            "explanation_ar": "قال أنور: I can swim very well."
           }
         },
         {
@@ -469,14 +501,15 @@
           "exercise": {
             "id": "A1-12-e12",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "The weather on the mountain was hot and rainy.",
+            "kind": "mcq",
+            "prompt": "How can Ziad send his number?",
             "options": [
-              "True",
-              "False"
+              "on WhatsApp",
+              "by email",
+              "on paper"
             ],
-            "answer": 1,
-            "explanation_ar": "قال: The weather was cool and sunny."
+            "answer": 0,
+            "explanation_ar": "قال: I can send it on WhatsApp."
           }
         }
       ]
@@ -485,17 +518,27 @@
       "id": "A1-12-l4",
       "position": 4,
       "skill": "reading",
-      "title": "رحلة مدرسية إلى شبام",
+      "title": "مهارات يسرى",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ عن رحلة مدرسية إلى **شبام حضرموت**، المدينة ذات البيوت الطينية العالية، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ عن مهارات **يسرى** من سيئون، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "reading",
-          "text_en": "Last week was the end of the exams, so my school organised a trip to Shibam in Hadramout. We were forty students and three teachers. We started early, at six in the morning. Shibam is a very old city with tall mud buildings. People call it «the Manhattan of the desert». We walked in the narrow streets and we looked at the old houses. A guide talked to us about the history of the city. I wanted to take a lot of photos, but my phone battery was low! At lunch time, we stopped at a small restaurant and we tasted Hadrami honey. We weren't home until nine in the evening. It was a long day, but nobody was bored.",
-          "word_count": 120
+          "text_en": "Yousra is sixteen and she lives in Seiyun. She is a very good student and she has many skills. She can speak Arabic and English, and she can read a little French. She can draw very well. Her drawings of old Shibam houses are on the wall of her classroom. She can use a computer and she can make short videos on her phone. But Yousra can't swim, because Seiyun is far from the sea. She can't cook well, but she wants to learn. Her grandmother says, «Come on Friday. I can teach you how to make bint al-sahn.»",
+          "word_count": 99
         },
         {
           "type": "exercise",
@@ -503,14 +546,14 @@
             "id": "A1-12-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "How many students were on the trip?",
+            "prompt": "How many languages can Yousra speak?",
             "options": [
-              "three",
-              "forty",
-              "nine"
+              "one",
+              "two",
+              "three"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: We were forty students."
+            "explanation_ar": "تتكلم العربية والإنجليزية، وتقرأ قليلاً من الفرنسية."
           }
         },
         {
@@ -519,14 +562,14 @@
             "id": "A1-12-e14",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "Why didn't the writer take a lot of photos?",
+            "prompt": "What are her drawings of?",
             "options": [
-              "The phone battery was low.",
-              "It was raining.",
-              "The guide said no."
+              "the sea",
+              "old Shibam houses",
+              "her family"
             ],
-            "answer": 0,
-            "explanation_ar": "في النص: my phone battery was low."
+            "answer": 1,
+            "explanation_ar": "في النص: Her drawings of old Shibam houses."
           }
         },
         {
@@ -535,13 +578,13 @@
             "id": "A1-12-e15",
             "skill": "reading",
             "kind": "true_false",
-            "prompt": "The students were bored.",
+            "prompt": "Yousra can swim very well.",
             "options": [
               "True",
               "False"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: nobody was bored."
+            "explanation_ar": "في النص: Yousra can't swim."
           }
         },
         {
@@ -550,9 +593,9 @@
             "id": "A1-12-e16",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "At lunch time, they ___ Hadrami honey.",
-            "answer": "tasted",
-            "explanation_ar": "في النص: we tasted Hadrami honey."
+            "prompt": "Her grandmother can ___ her how to make bint al-sahn.",
+            "answer": "teach",
+            "explanation_ar": "في النص: I can teach you."
           }
         }
       ]
@@ -561,12 +604,22 @@
       "id": "A1-12-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "احكِ عن عطلتك",
+      "title": "ماذا تستطيع أن تفعل؟",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "احكِ عن **عطلة نهاية الأسبوع الماضية** أو زيارة قمت بها: **أين كنت؟ مع من؟ كيف كان الطقس؟ ماذا فعلت؟ كيف كان شعورك؟** استعمل was / were وأفعالاً منتظمة مثل visited, stayed, played, watched."
+          "markdown_ar": "تحدث عن مهاراتك في 5 إلى 7 جمل: **3 أشياء تستطيع فعلها، وشيئان لا تستطيع فعلهما، وشيء تريد أن تتعلمه.** ثم اطلب طلباً مهذباً من زميل."
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "table",
@@ -576,38 +629,38 @@
           ],
           "rows": [
             [
-              "كنت في…",
-              "Last weekend, I was in…"
+              "أستطيع",
+              "I can… very well."
             ],
             [
-              "كان الطقس",
-              "The weather was…"
+              "لا أستطيع",
+              "I can't…"
             ],
             [
-              "فعلت",
-              "I visited / played / watched…"
+              "قليلاً",
+              "I can… a little."
             ],
             [
-              "شعوري",
-              "I was happy / tired."
+              "طلب",
+              "Can you…, please? / Can I…?"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Talk about last weekend or a visit: where you were, who with, the weather, what you did and how you felt.",
+        "prompt_en": "Talk about your skills: three things you can do, two things you can't do, and one thing you want to learn. Then make a polite request.",
         "helpful_phrases": [
-          "Last weekend, I was…",
-          "The weather was…",
-          "We visited…",
-          "We stayed…",
-          "I was very happy because…"
+          "I can… very well.",
+          "I can… a little.",
+          "I can't…",
+          "I want to learn…",
+          "Can you…, please?"
         ],
         "prep_seconds": 30,
-        "max_seconds": 75,
+        "max_seconds": 60,
         "rubric_focus": [
-          "was / were",
-          "past simple regular verbs"
+          "can / can't",
+          "polite requests"
         ]
       }
     },
@@ -615,27 +668,36 @@
       "id": "A1-12-l6",
       "position": 6,
       "skill": "writing",
-      "title": "يوم لا تنساه",
+      "title": "رسالة تطلب فيها مساعدة",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة (50 إلى 90 كلمة) عن يوم جميل في الماضي. اقرأ المثال أولاً.\n\n**تذكّر:** was / were، والأفعال المنتظمة + ed، وكلمات الماضي: yesterday, last…, … ago."
+          "markdown_ar": "اكتب رسالة قصيرة (40 إلى 80 كلمة) إلى صديق: **قل ما تستطيع وما لا تستطيع فعله في مشروع مدرسي، واطلب منه المساعدة.** اقرأ المثال أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "reading",
-          "text_en": "Two months ago, my family and I visited my aunt in Mukalla. We travelled by bus and the trip was long. My aunt's house was near the sea. In the morning, we walked on the beach and my brothers played football. In the afternoon, it was very hot, so we stayed at home. We watched a film and we talked a lot. I was sad when we returned home.",
-          "word_count": 69
+          "text_en": "Hi Fares,\nWe have a science project for Sunday. I can write the report and I can draw the pictures, but I can't use the computer well. You can use computers very well. Can you help me, please? Can you come to my house on Thursday afternoon? Can you call me tonight?\nThanks,\nKhaled",
+          "word_count": 54
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about a nice day in the past: where you were, what you did and how you felt. Use was, were and regular past verbs (-ed).",
-        "min_words": 50,
-        "max_words": 90,
+        "prompt_en": "Write a short message to a friend about a school project. Say what you can and can't do, and ask for help politely.",
+        "min_words": 40,
+        "max_words": 80,
         "rubric_focus": [
-          "was / were",
-          "past simple regular verbs (-ed spelling)",
-          "time expressions (yesterday, last, ago)"
+          "can / can't",
+          "polite requests with can"
         ]
       }
     },
@@ -643,12 +705,22 @@
       "id": "A1-12-l7",
       "position": 7,
       "skill": "review",
-      "title": "مراجعة المستوى A1",
-      "est_minutes": 20,
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "مبروك! وصلت إلى نهاية **A1**. راجع أهم القواعد قبل الاختبار:\n\n- **am / is / are** و **was / were**\n- **my, your, his, her** و **'s**\n- **there is / there are**\n- **How much / How many**\n- المضارع البسيط: **I work / he works / doesn't / Does…?**\n- **some / any**، حروف المكان، الأمر\n- **can / can't**، ظروف التكرار\n- المضارع المستمر: **I'm working now**\n- الماضي: **visited, stayed, studied**"
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **can / can't** + الفعل (بدون to وبدون s) مع كل الضمائر.\n- السؤال: **Can you…?** والإجابة **Yes, I can. / No, I can't.**\n- الطلب المهذب: **Can I…? Can you…, please?**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "QQ66VKPsAag",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 706,
+          "optional": true,
+          "approx_size_mb": 47
         },
         {
           "type": "exercise",
@@ -656,14 +728,14 @@
             "id": "A1-12-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "She ___ to school every day, but yesterday she ___ at home.",
+            "prompt": "They ___ speak English very well.",
             "options": [
-              "walks / was",
-              "walk / were",
-              "is walking / is"
+              "can",
+              "cans",
+              "can to"
             ],
             "answer": 0,
-            "explanation_ar": "عادة: walks، وأمس: was."
+            "explanation_ar": "can لا يتغير."
           }
         },
         {
@@ -672,14 +744,14 @@
             "id": "A1-12-e18",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Look! It ___.",
+            "prompt": "Can he ride a bike? — No, he ___.",
             "options": [
-              "rains",
-              "is raining",
-              "rained"
+              "can",
+              "can't",
+              "doesn't"
             ],
             "answer": 1,
-            "explanation_ar": "Look! = الآن: is raining."
+            "explanation_ar": "الإجابة المنفية: No, he can't."
           }
         },
         {
@@ -688,14 +760,10 @@
             "id": "A1-12-e19",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "They ___ (stay) in a hotel last summer.",
-            "answer": "stayed",
-            "explanation_ar": "متحرك + y ← yed: stayed."
+            "prompt": "Can I ___ your charger, please? (يستعير)",
+            "answer": "borrow",
+            "explanation_ar": "يستعير = borrow."
           }
-        },
-        {
-          "type": "text",
-          "markdown_ar": "بعد هذا الاختبار، إذا نجحت في كل وحدات A1 تحصل على **شهادة إتمام المستوى A1** وتنتقل إلى **A2**."
         }
       ]
     }
@@ -707,87 +775,88 @@
         "id": "A1-12-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "We ___ at the market yesterday.",
+        "prompt": "He ___ swim very well.",
         "options": [
-          "was",
-          "were",
-          "are"
+          "can",
+          "cans",
+          "can to"
         ],
-        "answer": 1,
-        "explanation_ar": "مع we في الماضي: were."
+        "answer": 0,
+        "explanation_ar": "can لا يتغير مع he."
       },
       {
         "id": "A1-12-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "He ___ at school last Monday. He was sick.",
+        "prompt": "She can ___ three languages.",
         "options": [
-          "wasn't",
-          "weren't",
-          "isn't"
+          "speaks",
+          "speak",
+          "to speak"
         ],
-        "answer": 0,
-        "explanation_ar": "مع he في الماضي المنفي: wasn't."
+        "answer": 1,
+        "explanation_ar": "بعد can الفعل بدون s."
       },
       {
         "id": "A1-12-q3",
         "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "I ___ (watch) a football match last night.",
-        "answer": "watched",
-        "explanation_ar": "الماضي المنتظم: watch + ed."
+        "kind": "mcq",
+        "prompt": "«هل تستطيع أن تطبخ؟»:",
+        "options": [
+          "Do you can cook?",
+          "Can you cook?",
+          "Can you to cook?"
+        ],
+        "answer": 1,
+        "explanation_ar": "السؤال: Can + الفاعل + الفعل."
       },
       {
         "id": "A1-12-q4",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "arrive في الماضي:",
-        "options": [
-          "arriveed",
-          "arrived",
-          "arrivd"
-        ],
-        "answer": 1,
-        "explanation_ar": "ينتهي بـ e فنضيف d فقط: arrived."
+        "kind": "fill_blank",
+        "prompt": "I ___ play the guitar. I don't know how. (لا أستطيع)",
+        "answer": "can't",
+        "explanation_ar": "لا أستطيع = can't."
       },
       {
         "id": "A1-12-q5",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "___ the trip long? — Yes, it was.",
+        "prompt": "Can I ___ my phone? The battery is low.",
         "options": [
-          "Were",
-          "Was",
-          "Is"
+          "call",
+          "charge",
+          "borrow"
         ],
         "answer": 1,
-        "explanation_ar": "مع it في الماضي: Was it…?"
+        "explanation_ar": "البطارية ضعيفة: charge."
       },
       {
         "id": "A1-12-q6",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "Today is Saturday. Yesterday was ___.",
+        "prompt": "Can you help me? — Yes, ___.",
         "options": [
-          "Sunday",
-          "Thursday",
-          "Friday"
+          "of course",
+          "I can't",
+          "no"
         ],
-        "answer": 2,
-        "explanation_ar": "قبل السبت يأتي الجمعة Friday."
+        "answer": 0,
+        "explanation_ar": "الموافقة: Yes, of course."
       },
       {
         "id": "A1-12-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: grandfather / visited / we / our",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: I / your / can / borrow / pen",
         "answer": [
-          "We",
-          "visited",
-          "our",
-          "grandfather"
+          "Can",
+          "I",
+          "borrow",
+          "your",
+          "pen"
         ],
-        "explanation_ar": "الفاعل + الفعل الماضي + المفعول."
+        "explanation_ar": "الطلب: Can I + الفعل…؟"
       },
       {
         "id": "A1-12-q8",
@@ -795,35 +864,35 @@
         "kind": "mcq",
         "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "She studyed for the test.",
-          "She studied for the test.",
-          "She studies for the test yesterday."
+          "We can't to come today.",
+          "We can't come today.",
+          "We don't can come today."
         ],
         "answer": 1,
-        "explanation_ar": "study ← studied في الماضي."
+        "explanation_ar": "can't + الفعل بدون to."
       },
       {
         "id": "A1-12-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «Last Friday, Salma was in Ibb. It was rainy, so she stayed at home.» Why did Salma stay at home?",
+        "prompt": "Read: «Nabil can run fast but he can't swim.» What can't Nabil do?",
         "options": [
-          "It was hot.",
-          "It was rainy.",
-          "She was tired."
+          "run",
+          "swim",
+          "play"
         ],
         "answer": 1,
-        "explanation_ar": "It was rainy, so she stayed at home."
+        "explanation_ar": "he can't swim."
       },
       {
         "id": "A1-12-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "We were in Aden two years ___.",
-        "answer": "ago",
-        "explanation_ar": "مدة + ago = منذ."
+        "prompt": "She draws very ___. Her pictures are beautiful. (جيداً)",
+        "answer": "well",
+        "explanation_ar": "جيداً = well."
       }
     ]
   },
-  "context_note": "قرية في جبال تعز، صلاة الجمعة، شبام حضرموت ذات البيوت الطينية، عسل حضرمي."
+  "context_note": "فريق المدرسة في المكلا، السباحة في بحر المكلا، رسم بيوت شبام القديمة، واتساب."
 }

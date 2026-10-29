@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 9,
-  "title": "I Can Do It",
-  "topic": "المهارات والرياضة والهاتف المحمول",
-  "grammar_point": "can / can't (ability, requests, permission)",
+  "title": "Numbers",
+  "topic": "الأرقام والشراء في سوق سيئون القديم",
+  "grammar_point": "numbers 1–1000 + how much / how many + this / these / that / those",
   "can_do": [
-    "أتحدث عما أستطيع وما لا أستطيع فعله",
-    "أطلب طلباً مهذباً وأرد على طلب",
-    "أفهم نصاً قصيراً عن مهارات شخص"
+    "أسأل عن سعر شيء وأفهم الإجابة",
+    "أقول وأفهم الأرقام حتى 1000 وأكثر",
+    "أشتري شيئاً بسيطاً من البائع بعبارات مهذبة"
   ],
   "vocab": [
     {
       "id": "A1-09-v1",
-      "word": "swim",
-      "ipa": "/swɪm/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يسبح",
-      "example_en": "I can swim in the sea."
+      "word": "market",
+      "ipa": "/ˈmɑːkɪt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سوق",
+      "example_en": "The market is very busy today."
     },
     {
       "id": "A1-09-v2",
-      "word": "run",
-      "ipa": "/rʌn/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يركض",
-      "example_en": "He can run very fast."
+      "word": "shop",
+      "ipa": "/ʃɒp/",
+      "part_of_speech": "noun",
+      "meaning_ar": "دكان / متجر",
+      "example_en": "My uncle has a small shop."
     },
     {
       "id": "A1-09-v3",
-      "word": "ride a bike",
-      "ipa": "/raɪd ə baɪk/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يركب دراجة",
-      "example_en": "My sister can ride a bike."
+      "word": "price",
+      "ipa": "/praɪs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سعر",
+      "example_en": "What's the price of this bag?"
     },
     {
       "id": "A1-09-v4",
-      "word": "play football",
-      "ipa": "/pleɪ ˈfʊtbɔːl/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يلعب كرة القدم",
-      "example_en": "We play football after school."
+      "word": "rial",
+      "ipa": "/riˈɑːl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ريال",
+      "example_en": "It's five hundred rials."
     },
     {
       "id": "A1-09-v5",
-      "word": "draw",
-      "ipa": "/drɔː/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يرسم",
-      "example_en": "Can you draw a map of Yemen?"
+      "word": "cheap",
+      "ipa": "/tʃiːp/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "رخيص",
+      "example_en": "These oranges are cheap."
     },
     {
       "id": "A1-09-v6",
-      "word": "cook",
-      "ipa": "/kʊk/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يطبخ",
-      "example_en": "My brother can cook rice."
+      "word": "expensive",
+      "ipa": "/ɪkˈspensɪv/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "غالٍ",
+      "example_en": "This phone is expensive."
     },
     {
       "id": "A1-09-v7",
-      "word": "speak",
-      "ipa": "/spiːk/",
+      "word": "buy",
+      "ipa": "/baɪ/",
       "part_of_speech": "verb",
-      "meaning_ar": "يتكلم",
-      "example_en": "I can speak Arabic and a little English."
+      "meaning_ar": "يشتري",
+      "example_en": "I want to buy some bread."
     },
     {
       "id": "A1-09-v8",
-      "word": "send a message",
-      "ipa": "/send ə ˈmesɪdʒ/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يرسل رسالة",
-      "example_en": "Can you send me a message?"
+      "word": "sell",
+      "ipa": "/sel/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يبيع",
+      "example_en": "He sells honey from Doan."
     },
     {
       "id": "A1-09-v9",
-      "word": "call",
-      "ipa": "/kɔːl/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يتصل",
-      "example_en": "Call me after school."
+      "word": "bread",
+      "ipa": "/bred/",
+      "part_of_speech": "noun",
+      "meaning_ar": "خبز",
+      "example_en": "Two pieces of bread, please."
     },
     {
       "id": "A1-09-v10",
-      "word": "charge",
-      "ipa": "/tʃɑːdʒ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يشحن",
-      "example_en": "Can I charge my phone here?"
+      "word": "honey",
+      "ipa": "/ˈhʌni/",
+      "part_of_speech": "noun",
+      "meaning_ar": "عسل",
+      "example_en": "Yemeni honey is famous."
     },
     {
       "id": "A1-09-v11",
-      "word": "borrow",
-      "ipa": "/ˈbɒrəʊ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يستعير",
-      "example_en": "Can I borrow your pen?"
+      "word": "dates",
+      "ipa": "/deɪts/",
+      "part_of_speech": "noun",
+      "meaning_ar": "تمر",
+      "example_en": "These dates are sweet."
     },
     {
       "id": "A1-09-v12",
-      "word": "well",
-      "ipa": "/wel/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "جيداً",
-      "example_en": "She can draw very well."
+      "word": "kilo",
+      "ipa": "/ˈkiːləʊ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "كيلو",
+      "example_en": "A kilo of tomatoes, please."
     },
     {
       "id": "A1-09-v13",
-      "word": "a little",
-      "ipa": "/ə ˈlɪtl/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "قليلاً",
-      "example_en": "I can speak English a little."
+      "word": "hundred",
+      "ipa": "/ˈhʌndrəd/",
+      "part_of_speech": "other",
+      "meaning_ar": "مئة",
+      "example_en": "One hundred rials."
     },
     {
       "id": "A1-09-v14",
-      "word": "of course",
-      "ipa": "/əv kɔːs/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "طبعاً",
-      "example_en": "Can you help me? — Of course!"
+      "word": "thousand",
+      "ipa": "/ˈθaʊznd/",
+      "part_of_speech": "other",
+      "meaning_ar": "ألف",
+      "example_en": "It's two thousand rials."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-09-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "المهارات والهاتف",
-      "est_minutes": 20,
+      "title": "في السوق والأرقام",
+      "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "ماذا تستطيع أن تفعل؟ تسبح؟ ترسم؟ تطبخ؟ تعلّم أفعال المهارات، وكلمات **الهاتف المحمول** التي نستعملها كل يوم."
+          "markdown_ar": "نذهب اليوم إلى **السوق القديم في سيئون** وإلى **سوق السمك في المكلا**. تعلّم الأرقام وكلمات الشراء والبيع."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
         },
         {
           "type": "table",
@@ -148,94 +158,173 @@
           ],
           "rows": [
             [
-              "swim",
-              "/swɪm/",
-              "يسبح",
-              "I can swim in the sea."
+              "market",
+              "/ˈmɑːkɪt/",
+              "سوق",
+              "The market is very busy today."
             ],
             [
-              "run",
-              "/rʌn/",
-              "يركض",
-              "He can run very fast."
+              "shop",
+              "/ʃɒp/",
+              "دكان / متجر",
+              "My uncle has a small shop."
             ],
             [
-              "ride a bike",
-              "/raɪd ə baɪk/",
-              "يركب دراجة",
-              "My sister can ride a bike."
+              "price",
+              "/praɪs/",
+              "سعر",
+              "What's the price of this bag?"
             ],
             [
-              "play football",
-              "/pleɪ ˈfʊtbɔːl/",
-              "يلعب كرة القدم",
-              "We play football after school."
+              "rial",
+              "/riˈɑːl/",
+              "ريال",
+              "It's five hundred rials."
             ],
             [
-              "draw",
-              "/drɔː/",
-              "يرسم",
-              "Can you draw a map of Yemen?"
+              "cheap",
+              "/tʃiːp/",
+              "رخيص",
+              "These oranges are cheap."
             ],
             [
-              "cook",
-              "/kʊk/",
-              "يطبخ",
-              "My brother can cook rice."
+              "expensive",
+              "/ɪkˈspensɪv/",
+              "غالٍ",
+              "This phone is expensive."
             ],
             [
-              "speak",
-              "/spiːk/",
-              "يتكلم",
-              "I can speak Arabic and a little English."
+              "buy",
+              "/baɪ/",
+              "يشتري",
+              "I want to buy some bread."
             ],
             [
-              "send a message",
-              "/send ə ˈmesɪdʒ/",
-              "يرسل رسالة",
-              "Can you send me a message?"
+              "sell",
+              "/sel/",
+              "يبيع",
+              "He sells honey from Doan."
             ],
             [
-              "call",
-              "/kɔːl/",
-              "يتصل",
-              "Call me after school."
+              "bread",
+              "/bred/",
+              "خبز",
+              "Two pieces of bread, please."
             ],
             [
-              "charge",
-              "/tʃɑːdʒ/",
-              "يشحن",
-              "Can I charge my phone here?"
+              "honey",
+              "/ˈhʌni/",
+              "عسل",
+              "Yemeni honey is famous."
             ],
             [
-              "borrow",
-              "/ˈbɒrəʊ/",
-              "يستعير",
-              "Can I borrow your pen?"
+              "dates",
+              "/deɪts/",
+              "تمر",
+              "These dates are sweet."
             ],
             [
-              "well",
-              "/wel/",
-              "جيداً",
-              "She can draw very well."
+              "kilo",
+              "/ˈkiːləʊ/",
+              "كيلو",
+              "A kilo of tomatoes, please."
             ],
             [
-              "a little",
-              "/ə ˈlɪtl/",
-              "قليلاً",
-              "I can speak English a little."
+              "hundred",
+              "/ˈhʌndrəd/",
+              "مئة",
+              "One hundred rials."
             ],
             [
-              "of course",
-              "/əv kɔːs/",
-              "طبعاً",
-              "Can you help me? — Of course!"
+              "thousand",
+              "/ˈθaʊznd/",
+              "ألف",
+              "It's two thousand rials."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "swim. I can swim in the sea.\nrun. He can run very fast.\nride a bike. My sister can ride a bike.\nplay football. We play football after school.\ndraw. Can you draw a map of Yemen?\ncook. My brother can cook rice.\nspeak. I can speak Arabic and a little English.\nsend a message. Can you send me a message?\ncall. Call me after school.\ncharge. Can I charge my phone here?\nborrow. Can I borrow your pen?\nwell. She can draw very well.\na little. I can speak English a little.\nof course. Can you help me? — Of course!"
+          "text_en": "market. The market is very busy today.\nshop. My uncle has a small shop.\nprice. What's the price of this bag?\nrial. It's five hundred rials.\ncheap. These oranges are cheap.\nexpensive. This phone is expensive.\nbuy. I want to buy some bread.\nsell. He sells honey from Doan.\nbread. Two pieces of bread, please.\nhoney. Yemeni honey is famous.\ndates. These dates are sweet.\nkilo. A kilo of tomatoes, please.\nhundred. One hundred rials.\nthousand. It's two thousand rials."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الرقم",
+            "بالإنجليزية",
+            "الرقم",
+            "بالإنجليزية"
+          ],
+          "rows": [
+            [
+              "1",
+              "one",
+              "11",
+              "eleven"
+            ],
+            [
+              "2",
+              "two",
+              "12",
+              "twelve"
+            ],
+            [
+              "3",
+              "three",
+              "13",
+              "thirteen"
+            ],
+            [
+              "4",
+              "four",
+              "20",
+              "twenty"
+            ],
+            [
+              "5",
+              "five",
+              "30",
+              "thirty"
+            ],
+            [
+              "6",
+              "six",
+              "40",
+              "forty"
+            ],
+            [
+              "7",
+              "seven",
+              "50",
+              "fifty"
+            ],
+            [
+              "8",
+              "eight",
+              "100",
+              "one hundred"
+            ],
+            [
+              "9",
+              "nine",
+              "500",
+              "five hundred"
+            ],
+            [
+              "10",
+              "ten",
+              "1,000",
+              "one thousand"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "one, two, three, four, five, six, seven, eight, nine, ten. eleven, twelve, thirteen. twenty, thirty, forty, fifty. one hundred. five hundred. one thousand."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**انتبه للفرق في النطق:** **thirteen** (13) نشدد على آخرها، و**thirty** (30) نشدد على أولها. وكذلك fourteen / forty و fifteen / fifty.\n\n**الأعداد الكبيرة:** 250 = two hundred **and** fifty، و 1,500 = one thousand five hundred."
         },
         {
           "type": "exercise",
@@ -243,14 +332,14 @@
             "id": "A1-09-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "My phone battery is low. I need to ___ it.",
+            "prompt": "40 بالإنجليزية:",
             "options": [
-              "borrow",
-              "charge",
-              "draw"
+              "fourteen",
+              "forty",
+              "four"
             ],
             "answer": 1,
-            "explanation_ar": "البطارية ضعيفة فنحتاج أن نشحن charge."
+            "explanation_ar": "40 = forty، أما 14 = fourteen."
           }
         },
         {
@@ -259,14 +348,14 @@
             "id": "A1-09-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "Can I ___ your book? I'll give it back tomorrow.",
+            "prompt": "The opposite of «cheap» is:",
             "options": [
-              "borrow",
-              "cook",
-              "swim"
+              "expensive",
+              "sweet",
+              "busy"
             ],
             "answer": 0,
-            "explanation_ar": "نأخذ الشيء ونعيده = borrow (نستعير)."
+            "explanation_ar": "عكس رخيص cheap هو غالٍ expensive."
           }
         },
         {
@@ -275,9 +364,9 @@
             "id": "A1-09-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Can you help me? — Of ___!",
-            "answer": "course",
-            "explanation_ar": "Of course = طبعاً."
+            "prompt": "I want to ___ some honey. (يشتري)",
+            "answer": "buy",
+            "explanation_ar": "يشتري = buy."
           }
         }
       ]
@@ -286,46 +375,67 @@
       "id": "A1-09-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "can / can't",
+      "title": "How much / How many + this / these",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**can** فعل مساعد سهل جداً: **لا يتغير** مع أي فاعل، ولا نضيف له s، ويأتي بعده الفعل **بدون to**.\n\nنستخدمه لـ:\n\n- **القدرة:** I **can** swim. / She **can't** (cannot) cook.\n- **الطلب المهذب:** **Can** I borrow your pen? / **Can** you help me, please?\n- **الإذن:** You **can** use my phone."
+          "markdown_ar": "**How much** و **How many** للسؤال عن الكمية:\n\n- **How much is it?** = بكم؟ (للسؤال عن السعر)\n- **How many** + اسم جمع = كم عدد…؟: How many oranges?\n\n**this / these / that / those** للإشارة:"
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
         },
         {
           "type": "table",
           "headers": [
             "",
-            "الصيغة",
-            "مثال"
+            "قريب",
+            "بعيد"
           ],
           "rows": [
             [
-              "إثبات",
-              "الفاعل + can + الفعل",
-              "He can ride a bike."
+              "مفرد",
+              "this (هذا/هذه)",
+              "that (ذلك/تلك)"
             ],
             [
-              "نفي",
-              "الفاعل + can't + الفعل",
-              "We can't swim."
+              "جمع",
+              "these (هؤلاء/هذه)",
+              "those (أولئك/تلك)"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "السؤال",
+            "الإجابة"
+          ],
+          "rows": [
+            [
+              "How much is this bag?",
+              "It's two thousand rials."
             ],
             [
-              "سؤال",
-              "Can + الفاعل + الفعل؟",
-              "Can you speak English?"
+              "How much are these dates?",
+              "They're one thousand rials a kilo."
             ],
             [
-              "إجابة",
-              "Yes, I can. / No, I can't.",
-              "Can she draw? — Yes, she can."
+              "How many students are there?",
+              "There are forty."
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**أخطاء شائعة:**\n\n- ✗ He cans swim. ← ✓ He **can** swim.\n- ✗ I can to swim. ← ✓ I can **swim**.\n- ✗ She can swims. ← ✓ She can **swim**.\n\n**للرد على الطلب:** Yes, of course. / Sure. / Sorry, I can't."
+          "markdown_ar": "**لاحظ:** مع المفرد نقول **How much is…? / It's…**، ومع الجمع **How much are…? / They're…**."
         },
         {
           "type": "exercise",
@@ -333,14 +443,14 @@
             "id": "A1-09-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "My sister ___ cook very well.",
+            "prompt": "How ___ is this notebook? — It's 300 rials.",
             "options": [
-              "can",
-              "cans",
-              "can to"
+              "much",
+              "many",
+              "old"
             ],
             "answer": 0,
-            "explanation_ar": "can لا يتغير مع she."
+            "explanation_ar": "للسؤال عن السعر نستخدم How much."
           }
         },
         {
@@ -349,14 +459,14 @@
             "id": "A1-09-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "I can ___ a bike.",
+            "prompt": "How ___ desks are there in the classroom?",
             "options": [
-              "ride",
-              "rides",
-              "to ride"
+              "much",
+              "many",
+              "is"
             ],
-            "answer": 0,
-            "explanation_ar": "بعد can يأتي الفعل بدون to وبدون s."
+            "answer": 1,
+            "explanation_ar": "desks جمع يُعدّ فنستخدم How many."
           }
         },
         {
@@ -364,10 +474,15 @@
           "exercise": {
             "id": "A1-09-e6",
             "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ you swim? — No, I can't.",
-            "answer": "Can",
-            "explanation_ar": "السؤال يبدأ بـ Can."
+            "kind": "mcq",
+            "prompt": "___ apples here are fresh. (قريبة، جمع)",
+            "options": [
+              "This",
+              "These",
+              "That"
+            ],
+            "answer": 1,
+            "explanation_ar": "للجمع القريب نستخدم these."
           }
         },
         {
@@ -375,15 +490,10 @@
           "exercise": {
             "id": "A1-09-e7",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "«لا أستطيع الرسم» بالإنجليزية:",
-            "options": [
-              "I don't can draw.",
-              "I can't draw.",
-              "I can draw not."
-            ],
-            "answer": 1,
-            "explanation_ar": "النفي: can't + الفعل."
+            "kind": "fill_blank",
+            "prompt": "How much ___ these oranges?",
+            "answer": "are",
+            "explanation_ar": "oranges جمع فنستخدم are."
           }
         },
         {
@@ -391,31 +501,16 @@
           "exercise": {
             "id": "A1-09-e8",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "أي جملة طلب مهذب؟",
-            "options": [
-              "Give me your phone.",
-              "Can I use your phone, please?",
-              "I use your phone."
-            ],
-            "answer": 1,
-            "explanation_ar": "الطلب المهذب: Can I…, please?"
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e9",
-            "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: you / can / me / help",
+            "prompt": "رتب الكلمات: is / much / how / bread / the",
             "answer": [
-              "Can",
-              "you",
-              "help",
-              "me"
+              "How",
+              "much",
+              "is",
+              "the",
+              "bread"
             ],
-            "explanation_ar": "Can + الفاعل + الفعل؟"
+            "explanation_ar": "How much + is + الشيء."
           }
         }
       ]
@@ -424,30 +519,57 @@
       "id": "A1-09-l3",
       "position": 3,
       "skill": "listening",
-      "title": "فريق المدرسة",
+      "title": "عند بائع التمر والعسل",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "المدرب يختار لاعبين لفريق المدرسة. استمع إلى **زياد** و**أنور**."
+          "markdown_ar": "**أسماء** تشتري من بائع في السوق. استمع وانتبه **للأرقام والأسعار**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
         },
         {
           "type": "audio",
-          "text_en": "Coach: OK, everyone. We need players for the school team. Ziad, can you play football?\nZiad: Yes, I can. I can run fast, but I can't kick the ball very well.\nCoach: That's OK. And you, Anwar?\nAnwar: I can't play football, sir. But I can swim very well. I swim in the sea in Aden every summer.\nCoach: Great. We have a swimming race next month. Can you come on Monday?\nAnwar: Yes, of course.\nCoach: Ziad, can you send me your phone number?\nZiad: Sure. I can send it on WhatsApp."
+          "text_en": "Seller: Good morning! Welcome.\nAsma: Good morning. How much is this honey?\nSeller: This is sidr honey from Doan. It's ten thousand rials.\nAsma: Oh, that's expensive. And how much are those dates?\nSeller: These dates? They're one thousand five hundred rials a kilo.\nAsma: OK. Two kilos of dates, please.\nSeller: Here you are. That's three thousand rials.\nAsma: Here you are. Thank you!\nSeller: Thank you. Goodbye."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e9",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How much is the honey?",
+            "options": [
+              "1,500 rials",
+              "3,000 rials",
+              "10,000 rials"
+            ],
+            "answer": 2,
+            "explanation_ar": "قال البائع: It's ten thousand rials."
+          }
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-09-e10",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Ziad can kick the ball very well.",
+            "kind": "mcq",
+            "prompt": "How many kilos of dates does Asma buy?",
             "options": [
-              "True",
-              "False"
+              "one",
+              "two",
+              "three"
             ],
             "answer": 1,
-            "explanation_ar": "قال زياد: I can't kick the ball very well."
+            "explanation_ar": "قالت: Two kilos of dates, please."
           }
         },
         {
@@ -455,31 +577,14 @@
           "exercise": {
             "id": "A1-09-e11",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What can Anwar do well?",
+            "kind": "true_false",
+            "prompt": "Asma buys the honey.",
             "options": [
-              "play football",
-              "swim",
-              "draw"
+              "True",
+              "False"
             ],
             "answer": 1,
-            "explanation_ar": "قال أنور: I can swim very well."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e12",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How can Ziad send his number?",
-            "options": [
-              "on WhatsApp",
-              "by email",
-              "on paper"
-            ],
-            "answer": 0,
-            "explanation_ar": "قال: I can send it on WhatsApp."
+            "explanation_ar": "قالت إن العسل غالٍ، واشترت التمر فقط."
           }
         }
       ]
@@ -488,17 +593,43 @@
       "id": "A1-09-l4",
       "position": 4,
       "skill": "reading",
-      "title": "مهارات يسرى",
+      "title": "يوم الخميس في السوق القديم",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ عن مهارات **يسرى** من صنعاء، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ النص عن **فيصل** في سوق سيئون القديم، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
         },
         {
           "type": "reading",
-          "text_en": "Yousra is sixteen and she lives in Sana'a. She is a very good student and she has many skills. She can speak Arabic and English, and she can read a little French. She can draw very well. Her drawings of old Sana'a houses are on the wall of her classroom. She can use a computer and she can make short videos on her phone. But Yousra can't swim, because there is no sea in Sana'a. She can't cook well, but she wants to learn. Her grandmother says, «Come on Friday. I can teach you how to make bint al-sahn.»",
-          "word_count": 99
+          "text_en": "Every Thursday, Faisal goes to the old market in Seiyun with his father. The market is busy and noisy. There are many shops. Some shops sell spices, and some sell clothes and shoes. Faisal's father buys bread, tomatoes and onions. A kilo of tomatoes is eight hundred rials. Faisal wants a new notebook for school. The notebook is five hundred rials. It is cheap. He also wants a football, but it is seven thousand rials. That is too expensive for him. At the end, they buy a cup of tea and drink it near the shop of their friend, Uncle Awadh.",
+          "word_count": 101
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e12",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "When does Faisal go to the market?",
+            "options": [
+              "every Friday",
+              "every Thursday",
+              "every day"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: Every Thursday."
+          }
         },
         {
           "type": "exercise",
@@ -506,14 +637,14 @@
             "id": "A1-09-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "How many languages can Yousra speak?",
+            "prompt": "How much is the notebook?",
             "options": [
-              "one",
-              "two",
-              "three"
+              "500 rials",
+              "800 rials",
+              "7,000 rials"
             ],
-            "answer": 1,
-            "explanation_ar": "تتكلم العربية والإنجليزية، وتقرأ قليلاً من الفرنسية."
+            "answer": 0,
+            "explanation_ar": "في النص: The notebook is five hundred rials."
           }
         },
         {
@@ -521,15 +652,14 @@
           "exercise": {
             "id": "A1-09-e14",
             "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What are her drawings of?",
+            "kind": "true_false",
+            "prompt": "Faisal buys a football.",
             "options": [
-              "the sea",
-              "old Sana'a houses",
-              "her family"
+              "True",
+              "False"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: Her drawings of old Sana'a houses."
+            "explanation_ar": "الكرة غالية عليه (too expensive)، فلم يشترها."
           }
         },
         {
@@ -537,25 +667,10 @@
           "exercise": {
             "id": "A1-09-e15",
             "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Yousra can swim very well.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: Yousra can't swim."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e16",
-            "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "Her grandmother can ___ her how to make bint al-sahn.",
-            "answer": "teach",
-            "explanation_ar": "في النص: I can teach you."
+            "prompt": "The football is too ___ for Faisal.",
+            "answer": "expensive",
+            "explanation_ar": "في النص: That is too expensive for him."
           }
         }
       ]
@@ -564,12 +679,22 @@
       "id": "A1-09-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "ماذا تستطيع أن تفعل؟",
+      "title": "اشترِ من البائع",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "تحدث عن مهاراتك في 5 إلى 7 جمل: **3 أشياء تستطيع فعلها، وشيئان لا تستطيع فعلهما، وشيء تريد أن تتعلمه.** ثم اطلب طلباً مهذباً من زميل."
+          "markdown_ar": "أنت في السوق وتريد شراء شيئين. **حيِّ البائع، اسأل عن السعر، اطلب الكمية، واشكره.** قل الأسعار بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
         },
         {
           "type": "table",
@@ -579,38 +704,43 @@
           ],
           "rows": [
             [
-              "أستطيع",
-              "I can… very well."
+              "بكم هذا؟",
+              "How much is this…?"
             ],
             [
-              "لا أستطيع",
-              "I can't…"
+              "بكم هذه (جمع)؟",
+              "How much are these…?"
             ],
             [
-              "قليلاً",
-              "I can… a little."
+              "أريد…",
+              "… please. / I'd like…"
             ],
             [
-              "طلب",
-              "Can you…, please? / Can I…?"
+              "تفضل",
+              "Here you are."
+            ],
+            [
+              "شكراً",
+              "Thank you."
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Talk about your skills: three things you can do, two things you can't do, and one thing you want to learn. Then make a polite request.",
+        "prompt_en": "You are at the market. Greet the seller, ask the price of two things, say how many you want and thank the seller.",
         "helpful_phrases": [
-          "I can… very well.",
-          "I can… a little.",
-          "I can't…",
-          "I want to learn…",
-          "Can you…, please?"
+          "Good morning.",
+          "How much is this…?",
+          "How much are these…?",
+          "Two kilos, please.",
+          "Here you are. Thank you."
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "can / can't",
-          "polite requests"
+          "how much / how many",
+          "numbers",
+          "this / these"
         ]
       }
     },
@@ -618,26 +748,37 @@
       "id": "A1-09-l6",
       "position": 6,
       "skill": "writing",
-      "title": "رسالة تطلب فيها مساعدة",
+      "title": "قائمة مشترياتك",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب رسالة قصيرة (40 إلى 80 كلمة) إلى صديق: **قل ما تستطيع وما لا تستطيع فعله في مشروع مدرسي، واطلب منه المساعدة.** اقرأ المثال أولاً."
+          "markdown_ar": "اكتب فقرة قصيرة (30 إلى 70 كلمة) عن ذهابك للسوق: **ماذا تشتري، وكم العدد، وكم السعر**. اكتب الأعداد بالحروف."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
         },
         {
           "type": "reading",
-          "text_en": "Hi Fares,\nWe have a science project for Sunday. I can write the report and I can draw the pictures, but I can't use the computer well. You can use computers very well. Can you help me, please? Can you come to my house on Thursday afternoon? Can you call me tonight?\nThanks,\nKhaled",
-          "word_count": 54
+          "text_en": "On Saturday, I go to the market with my mother. We buy three kilos of potatoes. They are nine hundred rials a kilo. We also buy bread and some dates. The dates are cheap. I want a new bag for school, but it is expensive. It is six thousand rials.",
+          "word_count": 50
         }
       ],
       "writing_task": {
-        "prompt_en": "Write a short message to a friend about a school project. Say what you can and can't do, and ask for help politely.",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write about a trip to the market: what you buy, how many and how much. Write the numbers in words.",
+        "min_words": 30,
+        "max_words": 70,
         "rubric_focus": [
-          "can / can't",
-          "polite requests with can"
+          "numbers in words",
+          "how much / how many",
+          "this / these"
         ]
       }
     },
@@ -650,7 +791,33 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **can / can't** + الفعل (بدون to وبدون s) مع كل الضمائر.\n- السؤال: **Can you…?** والإجابة **Yes, I can. / No, I can't.**\n- الطلب المهذب: **Can I…? Can you…, please?**"
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **How much is…? / How much are…?** للسعر.\n- **How many** + جمع للعدد.\n- **this / these** للقريب، **that / those** للبعيد.\n- الأرقام: thirteen ≠ thirty، hundred، thousand."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pI3CrFMsduY",
+          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 843,
+          "optional": true,
+          "approx_size_mb": 56
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e16",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "250 بالإنجليزية:",
+            "options": [
+              "two hundred and fifty",
+              "twenty-five",
+              "two thousand and fifty"
+            ],
+            "answer": 0,
+            "explanation_ar": "250 = two hundred and fifty."
+          }
         },
         {
           "type": "exercise",
@@ -658,14 +825,14 @@
             "id": "A1-09-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "They ___ speak English very well.",
+            "prompt": "Look at ___ mountains! They're beautiful. (بعيدة، جمع)",
             "options": [
-              "can",
-              "cans",
-              "can to"
+              "this",
+              "these",
+              "those"
             ],
-            "answer": 0,
-            "explanation_ar": "can لا يتغير."
+            "answer": 2,
+            "explanation_ar": "للجمع البعيد نستخدم those."
           }
         },
         {
@@ -673,26 +840,10 @@
           "exercise": {
             "id": "A1-09-e18",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Can he ride a bike? — No, he ___.",
-            "options": [
-              "can",
-              "can't",
-              "doesn't"
-            ],
-            "answer": 1,
-            "explanation_ar": "الإجابة المنفية: No, he can't."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e19",
-            "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "Can I ___ your charger, please? (يستعير)",
-            "answer": "borrow",
-            "explanation_ar": "يستعير = borrow."
+            "prompt": "How ___ kilos do you want? — Two, please.",
+            "answer": "many",
+            "explanation_ar": "kilos جمع يُعدّ فنستخدم How many."
           }
         }
       ]
@@ -705,124 +856,124 @@
         "id": "A1-09-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "He ___ swim very well.",
+        "prompt": "How ___ is this pen? — It's 200 rials.",
         "options": [
-          "can",
-          "cans",
-          "can to"
+          "many",
+          "much",
+          "old"
         ],
-        "answer": 0,
-        "explanation_ar": "can لا يتغير مع he."
+        "answer": 1,
+        "explanation_ar": "للسعر نستخدم How much."
       },
       {
         "id": "A1-09-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "She can ___ three languages.",
+        "prompt": "How ___ students are there in your class?",
         "options": [
-          "speaks",
-          "speak",
-          "to speak"
+          "many",
+          "much",
+          "is"
         ],
-        "answer": 1,
-        "explanation_ar": "بعد can الفعل بدون s."
+        "answer": 0,
+        "explanation_ar": "students جمع يُعدّ فنستخدم How many."
       },
       {
         "id": "A1-09-q3",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "«هل تستطيع أن تطبخ؟»:",
+        "prompt": "15 بالإنجليزية:",
         "options": [
-          "Do you can cook?",
-          "Can you cook?",
-          "Can you to cook?"
+          "fifty",
+          "fifteen",
+          "five"
         ],
         "answer": 1,
-        "explanation_ar": "السؤال: Can + الفاعل + الفعل."
+        "explanation_ar": "15 = fifteen، و 50 = fifty."
       },
       {
         "id": "A1-09-q4",
         "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "I ___ play the guitar. I don't know how. (لا أستطيع)",
-        "answer": "can't",
-        "explanation_ar": "لا أستطيع = can't."
+        "kind": "mcq",
+        "prompt": "___ shoes are nice. (قريبة، جمع)",
+        "options": [
+          "This",
+          "These",
+          "That"
+        ],
+        "answer": 1,
+        "explanation_ar": "للجمع القريب: these."
       },
       {
         "id": "A1-09-q5",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "Can I ___ my phone? The battery is low.",
-        "options": [
-          "call",
-          "charge",
-          "borrow"
-        ],
-        "answer": 1,
-        "explanation_ar": "البطارية ضعيفة: charge."
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "How much ___ the dates? — They're 1,000 rials.",
+        "answer": "are",
+        "explanation_ar": "dates جمع فنستخدم are."
       },
       {
         "id": "A1-09-q6",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "Can you help me? — Yes, ___.",
+        "prompt": "The opposite of «sell» is:",
         "options": [
-          "of course",
-          "I can't",
-          "no"
+          "buy",
+          "cheap",
+          "want"
         ],
         "answer": 0,
-        "explanation_ar": "الموافقة: Yes, of course."
+        "explanation_ar": "عكس يبيع sell هو يشتري buy."
       },
       {
         "id": "A1-09-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: I / your / can / borrow / pen",
+        "prompt": "رتب الكلمات: are / these / how / oranges / much",
         "answer": [
-          "Can",
-          "I",
-          "borrow",
-          "your",
-          "pen"
+          "How",
+          "much",
+          "are",
+          "these",
+          "oranges"
         ],
-        "explanation_ar": "الطلب: Can I + الفعل…؟"
+        "explanation_ar": "How much + are + these + الاسم الجمع."
       },
       {
         "id": "A1-09-q8",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "3,000 بالإنجليزية:",
         "options": [
-          "We can't to come today.",
-          "We can't come today.",
-          "We don't can come today."
+          "three hundred",
+          "thirty thousand",
+          "three thousand"
         ],
-        "answer": 1,
-        "explanation_ar": "can't + الفعل بدون to."
+        "answer": 2,
+        "explanation_ar": "3,000 = three thousand."
       },
       {
         "id": "A1-09-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «Nabil can run fast but he can't swim.» What can't Nabil do?",
+        "prompt": "Read: «The bread is 100 rials and the honey is 9,000 rials.» Which is expensive?",
         "options": [
-          "run",
-          "swim",
-          "play"
+          "the bread",
+          "the honey",
+          "both"
         ],
         "answer": 1,
-        "explanation_ar": "he can't swim."
+        "explanation_ar": "العسل 9,000 ريال، وهو الغالي."
       },
       {
         "id": "A1-09-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "She draws very ___. Her pictures are beautiful. (جيداً)",
-        "answer": "well",
-        "explanation_ar": "جيداً = well."
+        "prompt": "This phone is very cheap. It isn't ___.",
+        "answer": "expensive",
+        "explanation_ar": "عكس cheap هو expensive."
       }
     ]
   },
-  "context_note": "فريق المدرسة، السباحة في بحر عدن، رسم بيوت صنعاء القديمة، واتساب."
+  "context_note": "السوق القديم في سيئون، عسل السدر من دوعن، تمور الوادي. الأسعار بالريال أمثلة تقريبية للتدريب فقط."
 }

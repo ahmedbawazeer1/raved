@@ -4,126 +4,110 @@
   "version": 1,
   "level": "A1",
   "position": 2,
-  "title": "My Family",
-  "topic": "عائلة يمنية كبيرة في مدينة إب",
-  "grammar_point": "possessive adjectives (my, your, his, her, our, their) + possessive 's",
+  "title": "Jobs",
+  "topic": "مهن من حضرموت: الصياد ومزارع النخيل والنحّال والبنّاء",
+  "grammar_point": "a / an + jobs + What's your job?",
   "can_do": [
-    "أقدّم أفراد عائلتي بأسمائهم وأعمارهم",
-    "أسأل عن عائلة شخص آخر وأفهم إجابته",
-    "أفهم نصاً قصيراً عن عائلة"
+    "أقول مهنتي ومهن أفراد عائلتي",
+    "أسأل عن مهنة شخص وأفهم الإجابة",
+    "أفهم نصاً قصيراً عن مهن عائلة"
   ],
   "vocab": [
     {
       "id": "A1-02-v1",
-      "word": "family",
-      "ipa": "/ˈfæməli/",
+      "word": "job",
+      "ipa": "/dʒɒb/",
       "part_of_speech": "noun",
-      "meaning_ar": "عائلة",
-      "example_en": "My family is big."
+      "meaning_ar": "وظيفة / مهنة",
+      "example_en": "What's your job?"
     },
     {
       "id": "A1-02-v2",
-      "word": "father",
-      "ipa": "/ˈfɑːðə/",
+      "word": "teacher",
+      "ipa": "/ˈtiːtʃə/",
       "part_of_speech": "noun",
-      "meaning_ar": "أب",
-      "example_en": "My father is a farmer."
+      "meaning_ar": "معلّم",
+      "example_en": "My father is a teacher in Tarim."
     },
     {
       "id": "A1-02-v3",
-      "word": "mother",
-      "ipa": "/ˈmʌðə/",
+      "word": "doctor",
+      "ipa": "/ˈdɒktə/",
       "part_of_speech": "noun",
-      "meaning_ar": "أم",
-      "example_en": "My mother is at home."
+      "meaning_ar": "طبيب",
+      "example_en": "She is a doctor at Ibn Sina Hospital."
     },
     {
       "id": "A1-02-v4",
-      "word": "brother",
-      "ipa": "/ˈbrʌðə/",
+      "word": "nurse",
+      "ipa": "/nɜːs/",
       "part_of_speech": "noun",
-      "meaning_ar": "أخ",
-      "example_en": "My brother is twelve."
+      "meaning_ar": "ممرض / ممرضة",
+      "example_en": "My aunt is a nurse."
     },
     {
       "id": "A1-02-v5",
-      "word": "sister",
-      "ipa": "/ˈsɪstə/",
+      "word": "fisherman",
+      "ipa": "/ˈfɪʃəmən/",
       "part_of_speech": "noun",
-      "meaning_ar": "أخت",
-      "example_en": "Her sister is a nurse."
+      "meaning_ar": "صياد سمك",
+      "example_en": "He is a fisherman in Mukalla."
     },
     {
       "id": "A1-02-v6",
-      "word": "grandfather",
-      "ipa": "/ˈɡrænfɑːðə/",
+      "word": "farmer",
+      "ipa": "/ˈfɑːmə/",
       "part_of_speech": "noun",
-      "meaning_ar": "جد",
-      "example_en": "My grandfather is from Ibb."
+      "meaning_ar": "مزارع",
+      "example_en": "My uncle is a date farmer in Wadi Hadramout."
     },
     {
       "id": "A1-02-v7",
-      "word": "grandmother",
-      "ipa": "/ˈɡrænmʌðə/",
+      "word": "beekeeper",
+      "ipa": "/ˈbiːkiːpə/",
       "part_of_speech": "noun",
-      "meaning_ar": "جدة",
-      "example_en": "Our grandmother is kind."
+      "meaning_ar": "نحّال (مربي نحل)",
+      "example_en": "Ahmed is a beekeeper in Doan."
     },
     {
       "id": "A1-02-v8",
-      "word": "uncle",
-      "ipa": "/ˈʌŋkl/",
+      "word": "builder",
+      "ipa": "/ˈbɪldə/",
       "part_of_speech": "noun",
-      "meaning_ar": "عم / خال",
-      "example_en": "My uncle is a driver."
+      "meaning_ar": "بنّاء",
+      "example_en": "The builder makes mud houses in Shibam."
     },
     {
       "id": "A1-02-v9",
-      "word": "aunt",
-      "ipa": "/ɑːnt/",
+      "word": "driver",
+      "ipa": "/ˈdraɪvə/",
       "part_of_speech": "noun",
-      "meaning_ar": "عمة / خالة",
-      "example_en": "My aunt is a teacher."
+      "meaning_ar": "سائق",
+      "example_en": "He is a bus driver from Seiyun to Mukalla."
     },
     {
       "id": "A1-02-v10",
-      "word": "cousin",
-      "ipa": "/ˈkʌzn/",
+      "word": "engineer",
+      "ipa": "/ˌendʒɪˈnɪə/",
       "part_of_speech": "noun",
-      "meaning_ar": "ابن/بنت العم أو الخال",
-      "example_en": "Khaled is my cousin."
+      "meaning_ar": "مهندس",
+      "example_en": "She is an engineer."
     },
     {
       "id": "A1-02-v11",
-      "word": "son",
-      "ipa": "/sʌn/",
+      "word": "shopkeeper",
+      "ipa": "/ˈʃɒpkiːpə/",
       "part_of_speech": "noun",
-      "meaning_ar": "ابن",
-      "example_en": "Ahmed is their son."
+      "meaning_ar": "صاحب دكان",
+      "example_en": "The shopkeeper is kind."
     },
     {
       "id": "A1-02-v12",
-      "word": "daughter",
-      "ipa": "/ˈdɔːtə/",
+      "word": "tailor",
+      "ipa": "/ˈteɪlə/",
       "part_of_speech": "noun",
-      "meaning_ar": "ابنة",
-      "example_en": "Maha is their daughter."
-    },
-    {
-      "id": "A1-02-v13",
-      "word": "young",
-      "ipa": "/jʌŋ/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "صغير السن",
-      "example_en": "My sister is young. She is six."
-    },
-    {
-      "id": "A1-02-v14",
-      "word": "old",
-      "ipa": "/əʊld/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "كبير السن / قديم",
-      "example_en": "My grandfather is old."
+      "meaning_ar": "خيّاط",
+      "example_en": "The tailor makes my school uniform."
     }
   ],
   "lessons": [
@@ -131,12 +115,22 @@
       "id": "A1-02-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "أفراد العائلة",
+      "title": "مهن من حضرموت",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "العائلة في اليمن غالباً كبيرة: الأب والأم والإخوة والجد والجدة وأحياناً الأعمام في بيت واحد. تعلّم أسماءهم بالإنجليزية واستمع لنطقها."
+          "markdown_ar": "في حضرموت مهن كثيرة: **الصياد** في المكلا والشحر، و**مزارع النخيل** في وادي حضرموت، و**النحّال** في دوعن، و**البنّاء** الذي يبني بيوت الطين في شبام. تعلّم أسماء المهن بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "table",
@@ -148,98 +142,82 @@
           ],
           "rows": [
             [
-              "family",
-              "/ˈfæməli/",
-              "عائلة",
-              "My family is big."
+              "job",
+              "/dʒɒb/",
+              "وظيفة / مهنة",
+              "What's your job?"
             ],
             [
-              "father",
-              "/ˈfɑːðə/",
-              "أب",
-              "My father is a farmer."
+              "teacher",
+              "/ˈtiːtʃə/",
+              "معلّم",
+              "My father is a teacher in Tarim."
             ],
             [
-              "mother",
-              "/ˈmʌðə/",
-              "أم",
-              "My mother is at home."
+              "doctor",
+              "/ˈdɒktə/",
+              "طبيب",
+              "She is a doctor at Ibn Sina Hospital."
             ],
             [
-              "brother",
-              "/ˈbrʌðə/",
-              "أخ",
-              "My brother is twelve."
+              "nurse",
+              "/nɜːs/",
+              "ممرض / ممرضة",
+              "My aunt is a nurse."
             ],
             [
-              "sister",
-              "/ˈsɪstə/",
-              "أخت",
-              "Her sister is a nurse."
+              "fisherman",
+              "/ˈfɪʃəmən/",
+              "صياد سمك",
+              "He is a fisherman in Mukalla."
             ],
             [
-              "grandfather",
-              "/ˈɡrænfɑːðə/",
-              "جد",
-              "My grandfather is from Ibb."
+              "farmer",
+              "/ˈfɑːmə/",
+              "مزارع",
+              "My uncle is a date farmer in Wadi Hadramout."
             ],
             [
-              "grandmother",
-              "/ˈɡrænmʌðə/",
-              "جدة",
-              "Our grandmother is kind."
+              "beekeeper",
+              "/ˈbiːkiːpə/",
+              "نحّال (مربي نحل)",
+              "Ahmed is a beekeeper in Doan."
             ],
             [
-              "uncle",
-              "/ˈʌŋkl/",
-              "عم / خال",
-              "My uncle is a driver."
+              "builder",
+              "/ˈbɪldə/",
+              "بنّاء",
+              "The builder makes mud houses in Shibam."
             ],
             [
-              "aunt",
-              "/ɑːnt/",
-              "عمة / خالة",
-              "My aunt is a teacher."
+              "driver",
+              "/ˈdraɪvə/",
+              "سائق",
+              "He is a bus driver from Seiyun to Mukalla."
             ],
             [
-              "cousin",
-              "/ˈkʌzn/",
-              "ابن/بنت العم أو الخال",
-              "Khaled is my cousin."
+              "engineer",
+              "/ˌendʒɪˈnɪə/",
+              "مهندس",
+              "She is an engineer."
             ],
             [
-              "son",
-              "/sʌn/",
-              "ابن",
-              "Ahmed is their son."
+              "shopkeeper",
+              "/ˈʃɒpkiːpə/",
+              "صاحب دكان",
+              "The shopkeeper is kind."
             ],
             [
-              "daughter",
-              "/ˈdɔːtə/",
-              "ابنة",
-              "Maha is their daughter."
-            ],
-            [
-              "young",
-              "/jʌŋ/",
-              "صغير السن",
-              "My sister is young. She is six."
-            ],
-            [
-              "old",
-              "/əʊld/",
-              "كبير السن / قديم",
-              "My grandfather is old."
+              "tailor",
+              "/ˈteɪlə/",
+              "خيّاط",
+              "The tailor makes my school uniform."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "family. My family is big.\nfather. My father is a farmer.\nmother. My mother is at home.\nbrother. My brother is twelve.\nsister. Her sister is a nurse.\ngrandfather. My grandfather is from Ibb.\ngrandmother. Our grandmother is kind.\nuncle. My uncle is a driver.\naunt. My aunt is a teacher.\ncousin. Khaled is my cousin.\nson. Ahmed is their son.\ndaughter. Maha is their daughter.\nyoung. My sister is young. She is six.\nold. My grandfather is old."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**ملاحظة:** في الإنجليزية كلمة واحدة **uncle** للعم والخال، و**aunt** للعمة والخالة، و**cousin** لأبناء العم والخال والعمة والخالة كلهم."
+          "text_en": "job. What's your job?\nteacher. My father is a teacher in Tarim.\ndoctor. She is a doctor at Ibn Sina Hospital.\nnurse. My aunt is a nurse.\nfisherman. He is a fisherman in Mukalla.\nfarmer. My uncle is a date farmer in Wadi Hadramout.\nbeekeeper. Ahmed is a beekeeper in Doan.\nbuilder. The builder makes mud houses in Shibam.\ndriver. He is a bus driver from Seiyun to Mukalla.\nengineer. She is an engineer.\nshopkeeper. The shopkeeper is kind.\ntailor. The tailor makes my school uniform."
         },
         {
           "type": "exercise",
@@ -247,14 +225,14 @@
             "id": "A1-02-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "My father's father is my ___.",
+            "prompt": "A ___ catches fish in the sea.",
             "options": [
-              "uncle",
-              "grandfather",
-              "brother"
+              "farmer",
+              "fisherman",
+              "tailor"
             ],
             "answer": 1,
-            "explanation_ar": "أبو الأب هو الجد grandfather."
+            "explanation_ar": "صياد السمك fisherman."
           }
         },
         {
@@ -263,14 +241,14 @@
             "id": "A1-02-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "My mother's sister is my ___.",
+            "prompt": "A ___ keeps bees and makes honey.",
             "options": [
-              "aunt",
-              "cousin",
-              "daughter"
+              "beekeeper",
+              "builder",
+              "driver"
             ],
             "answer": 0,
-            "explanation_ar": "أخت الأم هي الخالة aunt."
+            "explanation_ar": "مربي النحل beekeeper."
           }
         },
         {
@@ -279,9 +257,9 @@
             "id": "A1-02-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "My uncle's son is my ___.",
-            "answer": "cousin",
-            "explanation_ar": "ابن العم أو الخال هو cousin."
+            "prompt": "A ___ makes clothes. (خيّاط)",
+            "answer": "tailor",
+            "explanation_ar": "الخيّاط = tailor."
           }
         }
       ]
@@ -290,61 +268,51 @@
       "id": "A1-02-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "my / your / his / her + 's",
+      "title": "He's a teacher. — a / an",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نستخدم **صفات الملكية** قبل الاسم لنقول لمن الشيء. هي لا تتغير مع المفرد أو الجمع: «my brother» و«my brothers»."
+          "markdown_ar": "في الإنجليزية نضع **a** أو **an** قبل اسم المهنة المفردة. لا نقول «He is teacher».\n\n- **a** قبل الكلمة التي تبدأ بصوت ساكن: **a** doctor, **a** fisherman.\n- **an** قبل الكلمة التي تبدأ بصوت حرف علة (a, e, i, o, u): **an** engineer, **an** office worker.\n\nفي الجمع لا نضع a: «They are **farmers**.»"
+        },
+        {
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "table",
           "headers": [
-            "الضمير",
-            "صفة الملكية",
-            "مثال"
+            "السؤال",
+            "الإجابة"
           ],
           "rows": [
             [
-              "I",
-              "my",
-              "my father"
+              "What's your job? / What do you do?",
+              "I'm a student."
             ],
             [
-              "you",
-              "your",
-              "your sister"
+              "What's his job?",
+              "He's a fisherman."
             ],
             [
-              "he",
-              "his",
-              "his mother"
+              "What's her job?",
+              "She's an engineer."
             ],
             [
-              "she",
-              "her",
-              "her brother"
+              "Is he a doctor?",
+              "Yes, he is. / No, he isn't. He's a nurse."
             ],
             [
-              "it",
-              "its",
-              "its name"
-            ],
-            [
-              "we",
-              "our",
-              "our family"
-            ],
-            [
-              "they",
-              "their",
-              "their son"
+              "What are their jobs?",
+              "They're farmers."
             ]
           ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**ملكية الأسماء ('s):** نضيف **'s** بعد اسم الشخص: «**Ali's** sister» = أخت علي، «**my father's** car» = سيارة أبي.\n\n**انتبه:** his للمذكر و her للمؤنث، حسب صاحب الشيء وليس الشيء نفسه: «Ali and **his** mother».\n\n**تنبيه:** لا تخلط بين **his** (له) و **he's** (هو يكون = he is)."
         },
         {
           "type": "exercise",
@@ -352,14 +320,14 @@
             "id": "A1-02-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Maha is a student. ___ school is in Ibb.",
+            "prompt": "My mother is ___ engineer.",
             "options": [
-              "His",
-              "Her",
-              "Their"
+              "a",
+              "an",
+              "—"
             ],
             "answer": 1,
-            "explanation_ar": "Maha مؤنث فنستخدم her."
+            "explanation_ar": "engineer تبدأ بحرف علة فنستخدم an."
           }
         },
         {
@@ -368,14 +336,14 @@
             "id": "A1-02-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "We love ___ grandmother.",
+            "prompt": "He is ___ beekeeper in Doan.",
             "options": [
-              "our",
-              "their",
-              "my"
+              "a",
+              "an",
+              "—"
             ],
             "answer": 0,
-            "explanation_ar": "مع we نستخدم our."
+            "explanation_ar": "beekeeper تبدأ بصوت ساكن فنستخدم a."
           }
         },
         {
@@ -383,10 +351,15 @@
           "exercise": {
             "id": "A1-02-e6",
             "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "Salem and ___ brother are in class two.",
-            "answer": "his",
-            "explanation_ar": "Salem مذكر فنستخدم his."
+            "kind": "mcq",
+            "prompt": "اختر الجملة الصحيحة:",
+            "options": [
+              "She is doctor.",
+              "She is a doctor.",
+              "She a doctor."
+            ],
+            "answer": 1,
+            "explanation_ar": "نحتاج is و a قبل المهنة."
           }
         },
         {
@@ -394,15 +367,10 @@
           "exercise": {
             "id": "A1-02-e7",
             "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "«أخت أحمد» بالإنجليزية:",
-            "options": [
-              "Ahmed sister",
-              "Ahmed's sister",
-              "sister Ahmed's"
-            ],
-            "answer": 1,
-            "explanation_ar": "نضيف 's بعد اسم المالك: Ahmed's sister."
+            "kind": "fill_blank",
+            "prompt": "What's ___ job? — He's a driver.",
+            "answer": "his",
+            "explanation_ar": "نسأل عن مهنته هو: What's his job?"
           }
         },
         {
@@ -410,16 +378,30 @@
           "exercise": {
             "id": "A1-02-e8",
             "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات (ابدأ بـ My): name / brother's / is / my / Omar",
-            "answer": [
-              "My",
-              "brother's",
-              "name",
-              "is",
-              "Omar"
+            "kind": "mcq",
+            "prompt": "They are ___.",
+            "options": [
+              "a fisherman",
+              "fishermen",
+              "an fishermen"
             ],
-            "explanation_ar": "My brother's name = اسم أخي، ثم is Omar."
+            "answer": 1,
+            "explanation_ar": "الجمع بلا a: fishermen (جمع fisherman)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: job / your / what's",
+            "answer": [
+              "What's",
+              "your",
+              "job"
+            ],
+            "explanation_ar": "What's + your + job؟"
           }
         }
       ]
@@ -428,32 +410,26 @@
       "id": "A1-02-l3",
       "position": 3,
       "skill": "listening",
-      "title": "صورة عائلة لينا",
+      "title": "صورة عائلة هند",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**لينا** تُري صديقتها **ندى** صورة عائلتها. استمع للحوار وأجب عن الأسئلة."
+          "markdown_ar": "**هند** تُري صديقتها **سلمى** صورة عائلتها، وتخبرها بمهنة كل شخص. استمع وأجب."
+        },
+        {
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "audio",
-          "text_en": "Nada: Is this your family photo, Lina?\nLina: Yes, it is. This is my father. His name is Abdullah. He is a farmer in Ibb.\nNada: And who is this?\nLina: That's my mother, Fatima. She is a teacher.\nNada: Are these your brothers?\nLina: Yes. Their names are Yahya and Ali. Yahya is ten and Ali is seven.\nNada: And the old man?\nLina: He's my grandfather. He lives with us. His house is our house!\nNada: Your family is big and lovely."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e9",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What is Lina's father's job?",
-            "options": [
-              "teacher",
-              "farmer",
-              "driver"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: He is a farmer in Ibb."
-          }
+          "text_en": "Salma: Who is this in the photo, Hind?\nHind: This is my father. He's a fisherman in Al-Shihr.\nSalma: And this man?\nHind: That's my uncle Saeed. He's a date farmer in Seiyun.\nSalma: Is your mother a teacher?\nHind: No, she isn't. She's a nurse at the hospital in Mukalla.\nSalma: And your brother?\nHind: He's an engineer. He works at the port.\nSalma: Wow! My father is a builder. He builds houses in Shibam."
         },
         {
           "type": "exercise",
@@ -461,14 +437,14 @@
             "id": "A1-02-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "How old is Ali?",
+            "prompt": "What is Hind's father's job?",
             "options": [
-              "seven",
-              "ten",
-              "twelve"
+              "farmer",
+              "fisherman",
+              "builder"
             ],
-            "answer": 0,
-            "explanation_ar": "قالت: Ali is seven."
+            "answer": 1,
+            "explanation_ar": "قالت: He's a fisherman in Al-Shihr."
           }
         },
         {
@@ -477,13 +453,29 @@
             "id": "A1-02-e11",
             "skill": "listening",
             "kind": "true_false",
-            "prompt": "Lina's grandfather lives with the family.",
+            "prompt": "Hind's mother is a teacher.",
             "options": [
               "True",
               "False"
             ],
+            "answer": 1,
+            "explanation_ar": "قالت: No, she isn't. She's a nurse."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-e12",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "Where does Salma's father build houses?",
+            "options": [
+              "in Shibam",
+              "in Seiyun",
+              "in Al-Shihr"
+            ],
             "answer": 0,
-            "explanation_ar": "قالت: He lives with us."
+            "explanation_ar": "قالت سلمى: He builds houses in Shibam."
           }
         }
       ]
@@ -492,33 +484,27 @@
       "id": "A1-02-l4",
       "position": 4,
       "skill": "reading",
-      "title": "عائلة الحداد",
+      "title": "عائلة من وادي دوعن",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ النص عن عائلة من مدينة **إب**، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ عن عائلة تعيش في **وادي دوعن** المشهور بالعسل، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "reading",
-          "text_en": "This is the Al-Haddad family from Ibb. Mr. Saeed Al-Haddad is the father. He is forty-five years old. His wife's name is Khadija. She is a nurse at the hospital. They have three children: two sons and one daughter. Their sons are Mohammed and Hassan. Mohammed is eighteen and Hassan is fourteen. Their daughter is Asma. She is nine. Mr. Saeed's mother lives with them. The children love their grandmother. On Fridays, their uncle and his family visit them. The cousins play together in the garden.",
-          "word_count": 86
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e12",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What is Khadija's job?",
-            "options": [
-              "teacher",
-              "nurse",
-              "farmer"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: She is a nurse at the hospital."
-          }
+          "text_en": "Wadi Doan is a beautiful valley in Hadramout. It is famous for its honey. Mr. Abdullah Ba-Obaid is a beekeeper there. His bees make sidr honey. His wife, Fatima, is a teacher at the girls' school. Their son, Khaled, is a driver. He drives a truck from Doan to Mukalla. Their daughter, Nora, is a student. She wants to be a doctor. Mr. Abdullah's brother is a builder. He builds the tall mud houses of the valley. They are a busy family, and they are proud of their work.",
+          "word_count": 89
         },
         {
           "type": "exercise",
@@ -526,14 +512,14 @@
             "id": "A1-02-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "How many children do Saeed and Khadija have?",
+            "prompt": "What is Mr. Abdullah's job?",
             "options": [
-              "two",
-              "three",
-              "four"
+              "teacher",
+              "beekeeper",
+              "driver"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: They have three children."
+            "explanation_ar": "في النص: Mr. Abdullah Ba-Obaid is a beekeeper."
           }
         },
         {
@@ -541,14 +527,15 @@
           "exercise": {
             "id": "A1-02-e14",
             "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Asma is the oldest child.",
+            "kind": "mcq",
+            "prompt": "What is Fatima's job?",
             "options": [
-              "True",
-              "False"
+              "teacher",
+              "doctor",
+              "nurse"
             ],
-            "answer": 1,
-            "explanation_ar": "أكبرهم Mohammed (18)، أما Asma فعمرها 9."
+            "answer": 0,
+            "explanation_ar": "في النص: His wife, Fatima, is a teacher."
           }
         },
         {
@@ -556,10 +543,25 @@
           "exercise": {
             "id": "A1-02-e15",
             "skill": "reading",
+            "kind": "true_false",
+            "prompt": "Nora is a doctor.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "نورة طالبة، وتريد أن تصبح طبيبة (She wants to be a doctor)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-e16",
+            "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "Mr. Saeed's mother is the children's ___.",
-            "answer": "grandmother",
-            "explanation_ar": "أم الأب هي الجدة grandmother."
+            "prompt": "Mr. Abdullah's brother is a ___.",
+            "answer": "builder",
+            "explanation_ar": "في النص: Mr. Abdullah's brother is a builder."
           }
         }
       ]
@@ -568,12 +570,22 @@
       "id": "A1-02-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "قدّم عائلتك",
+      "title": "مهن عائلتك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "تخيّل أنك تُري صديقك صورة عائلتك. قدّم 3 أو 4 أفراد من عائلتك: **الاسم، العمر أو العمل**. استعمل my و his و her."
+          "markdown_ar": "تحدث عن مهن 3 أو 4 أشخاص من عائلتك أو حيّك. **قل اسم الشخص وقرابته ومهنته**. لا تنسَ a أو an قبل المهنة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "table",
@@ -583,38 +595,38 @@
           ],
           "rows": [
             [
-              "هذا / هذه",
-              "This is my…"
+              "أبي",
+              "My father is a…"
             ],
             [
-              "اسمه / اسمها",
-              "His name is… / Her name is…"
+              "أمي",
+              "My mother is an… / a…"
             ],
             [
-              "عمره",
-              "He's … years old."
+              "هم",
+              "My brothers are…"
             ],
             [
-              "عمله",
-              "She's a teacher."
+              "أنا",
+              "I'm a student. I want to be a…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "Show a photo of your family and introduce three or four family members: their names, ages or jobs.",
+        "prompt_en": "Talk about the jobs of three or four people in your family or neighbourhood. Then say what job you want in the future.",
         "helpful_phrases": [
-          "This is my…",
-          "His name is…",
-          "Her name is…",
-          "He's … years old.",
-          "She's a…"
+          "My father is a…",
+          "My uncle is an…",
+          "They are…",
+          "I'm a student.",
+          "I want to be a…"
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "possessive adjectives",
-          "family vocabulary"
+          "a / an with jobs",
+          "jobs vocabulary"
         ]
       }
     },
@@ -622,27 +634,37 @@
       "id": "A1-02-l6",
       "position": 6,
       "skill": "writing",
-      "title": "اكتب عن عائلتك",
+      "title": "اكتب عن مهن عائلتك",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة عن عائلتك (30 إلى 70 كلمة). اقرأ المثال أولاً.\n\n**تذكّر:** his للمذكر، her للمؤنث، their للجمع، و 's للملكية."
+          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن مهن أفراد عائلتك. اقرأ المثال أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "reading",
-          "text_en": "My name is Waleed. My family is from Dhamar. My father's name is Ali. He is a driver. My mother is a housewife. I have two sisters. Their names are Noor and Huda. Noor is twelve and Huda is eight. My grandmother lives with us. Her name is Maryam.",
+          "text_en": "My name is Hassan. I am from Ghail Ba Wazir. My father is a farmer. He grows tobacco and vegetables. My mother is a teacher. My sister is a nurse in Mukalla. My two brothers are fishermen in Al-Shihr. I am a student. I want to be an engineer.",
           "word_count": 49
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about your family in 5–7 sentences. Use my, his, her, their and 's.",
+        "prompt_en": "Write about the jobs of the people in your family. Use a / an, is and are. Say what job you want.",
         "min_words": 30,
         "max_words": 70,
         "rubric_focus": [
-          "possessive adjectives",
-          "possessive 's",
-          "family vocabulary"
+          "a / an with jobs",
+          "verb to be",
+          "jobs vocabulary"
         ]
       }
     },
@@ -655,49 +677,59 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **my, your, his, her, its, our, their** قبل الاسم.\n- **'s** للملكية: Ali's brother.\n- أفراد العائلة: father, mother, brother, sister, grandfather, grandmother, uncle, aunt, cousin, son, daughter."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **a** + صوت ساكن، **an** + صوت حرف علة: a doctor, an engineer.\n- الجمع بلا a: They are farmers.\n- **What's your job? What does he do?** ← He's a…\n- المهن: teacher, doctor, nurse, fisherman, farmer, beekeeper, builder, driver, engineer, shopkeeper, tailor."
         },
         {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e16",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Ahmed and Sami are brothers. ___ father is a doctor.",
-            "options": [
-              "His",
-              "Our",
-              "Their"
-            ],
-            "answer": 2,
-            "explanation_ar": "Ahmed and Sami = they فنستخدم their."
-          }
+          "type": "video",
+          "youtube_id": "AZZCsweJaiw",
+          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 477,
+          "optional": true,
+          "approx_size_mb": 32
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-02-e17",
-            "skill": "vocab",
+            "skill": "grammar",
             "kind": "mcq",
-            "prompt": "My father's brother is my ___.",
+            "prompt": "Is she a nurse? — No, she ___. She's a doctor.",
             "options": [
-              "uncle",
-              "cousin",
-              "son"
+              "is",
+              "isn't",
+              "aren't"
             ],
-            "answer": 0,
-            "explanation_ar": "أخو الأب هو العم uncle."
+            "answer": 1,
+            "explanation_ar": "الإجابة المنفية: No, she isn't."
           }
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-02-e18",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "A ___ builds houses.",
+            "options": [
+              "builder",
+              "tailor",
+              "nurse"
+            ],
+            "answer": 0,
+            "explanation_ar": "البنّاء builder."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-e19",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "Is this ___ book, Sara? — Yes, it's my book.",
-            "answer": "your",
-            "explanation_ar": "عند مخاطبة Sara نستخدم your."
+            "prompt": "My brothers ___ drivers.",
+            "answer": "are",
+            "explanation_ar": "الجمع: are."
           }
         }
       ]
@@ -708,126 +740,126 @@
     "questions": [
       {
         "id": "A1-02-q1",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "My mother's mother is my ___.",
+        "prompt": "He is ___ fisherman.",
         "options": [
-          "aunt",
-          "grandmother",
-          "sister"
+          "a",
+          "an",
+          "—"
         ],
-        "answer": 1,
-        "explanation_ar": "أم الأم هي الجدة grandmother."
+        "answer": 0,
+        "explanation_ar": "fisherman تبدأ بصوت ساكن: a."
       },
       {
         "id": "A1-02-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "Hassan is my friend. ___ sister is in my class.",
+        "prompt": "She is ___ engineer.",
         "options": [
-          "Her",
-          "His",
-          "Its"
+          "a",
+          "an",
+          "—"
         ],
         "answer": 1,
-        "explanation_ar": "Hassan مذكر فنستخدم his."
+        "explanation_ar": "engineer تبدأ بحرف علة: an."
       },
       {
         "id": "A1-02-q3",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "Mona loves ___ mother.",
+        "prompt": "A ___ works in a hospital and helps doctors.",
         "options": [
-          "his",
-          "her",
-          "their"
+          "nurse",
+          "farmer",
+          "builder"
         ],
-        "answer": 1,
-        "explanation_ar": "Mona مؤنث فنستخدم her."
+        "answer": 0,
+        "explanation_ar": "الممرض nurse يعمل في المستشفى."
       },
       {
         "id": "A1-02-q4",
         "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "We are from Ibb. ___ house is near the market.",
-        "answer": "Our",
-        "explanation_ar": "مع we نستخدم our."
+        "prompt": "What's ___ job? — She's a tailor.",
+        "answer": "her",
+        "explanation_ar": "نسأل عن مهنتها هي: What's her job?"
       },
       {
         "id": "A1-02-q5",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "«كتاب أبي» بالإنجليزية:",
+        "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "my father book",
-          "my father's book",
-          "my book's father"
+          "My father is teacher.",
+          "My father is a teacher.",
+          "My father a teacher."
         ],
         "answer": 1,
-        "explanation_ar": "نضيف 's بعد المالك: my father's book."
+        "explanation_ar": "نحتاج is و a قبل المهنة."
       },
       {
         "id": "A1-02-q6",
         "skill": "vocab",
         "kind": "mcq",
-        "prompt": "A girl is her parents' ___.",
+        "prompt": "Sidr honey comes from a ___.",
         "options": [
-          "son",
-          "daughter",
-          "uncle"
+          "fisherman",
+          "beekeeper",
+          "driver"
         ],
         "answer": 1,
-        "explanation_ar": "البنت بالنسبة لوالديها daughter."
+        "explanation_ar": "العسل من النحّال beekeeper."
       },
       {
         "id": "A1-02-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات (ابدأ بـ Their): is / their / Taiz / in / house",
+        "prompt": "رتب الكلمات (ابدأ بـ My): is / a / my / uncle / farmer",
         "answer": [
-          "Their",
-          "house",
+          "My",
+          "uncle",
           "is",
-          "in",
-          "Taiz"
+          "a",
+          "farmer"
         ],
-        "explanation_ar": "Their house = بيتهم، ثم is in Taiz."
+        "explanation_ar": "الفاعل + is + a + المهنة."
       },
       {
         "id": "A1-02-q8",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "They are ___.",
         "options": [
-          "She is Ali sister.",
-          "She is Ali's sister.",
-          "She is sister's Ali."
+          "a farmers",
+          "farmers",
+          "an farmer"
         ],
         "answer": 1,
-        "explanation_ar": "الملكية: Ali's sister."
+        "explanation_ar": "الجمع بلا a."
       },
       {
         "id": "A1-02-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «Salma has two brothers and no sisters.» How many brothers does Salma have?",
+        "prompt": "Read: «Ali drives a bus from Seiyun to Mukalla.» What is Ali's job?",
         "options": [
-          "one",
-          "two",
-          "three"
+          "He's a driver.",
+          "He's a builder.",
+          "He's a tailor."
         ],
-        "answer": 1,
-        "explanation_ar": "two brothers = أخوان."
+        "answer": 0,
+        "explanation_ar": "من يقود الحافلة سائق driver."
       },
       {
         "id": "A1-02-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "My aunt's daughter is my ___.",
-        "answer": "cousin",
-        "explanation_ar": "بنت الخالة أو العمة cousin."
+        "prompt": "A ___ catches fish. (صياد)",
+        "answer": "fisherman",
+        "explanation_ar": "الصياد = fisherman."
       }
     ]
   },
-  "context_note": "عائلة ممتدة يعيش معها الجد أو الجدة، وزيارة الأعمام يوم الجمعة."
+  "context_note": "الصيد في المكلا والشحر، نخيل وادي حضرموت، عسل السدر في دوعن، بيوت الطين في شبام."
 }

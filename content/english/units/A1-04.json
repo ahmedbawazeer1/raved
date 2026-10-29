@@ -4,126 +4,134 @@
   "version": 1,
   "level": "A1",
   "position": 4,
-  "title": "At the Market",
-  "topic": "الشراء من سوق الملح في صنعاء القديمة",
-  "grammar_point": "numbers 1–1000 + how much / how many + this / these / that / those",
+  "title": "Home and School",
+  "topic": "الفصل والبيت والمدرسة في المكلا",
+  "grammar_point": "there is / there are + a / an + plural nouns",
   "can_do": [
-    "أسأل عن سعر شيء وأفهم الإجابة",
-    "أقول وأفهم الأرقام حتى 1000 وأكثر",
-    "أشتري شيئاً بسيطاً من البائع بعبارات مهذبة"
+    "أصف ما يوجد في فصلي ومدرستي",
+    "أسأل هل يوجد شيء في مكان ما وأفهم الإجابة",
+    "أفهم وصفاً قصيراً لمدرسة"
   ],
   "vocab": [
     {
       "id": "A1-04-v1",
-      "word": "market",
-      "ipa": "/ˈmɑːkɪt/",
+      "word": "classroom",
+      "ipa": "/ˈklɑːsruːm/",
       "part_of_speech": "noun",
-      "meaning_ar": "سوق",
-      "example_en": "The market is very busy today."
+      "meaning_ar": "فصل (غرفة الدراسة)",
+      "example_en": "Our classroom is big."
     },
     {
       "id": "A1-04-v2",
-      "word": "shop",
-      "ipa": "/ʃɒp/",
+      "word": "desk",
+      "ipa": "/desk/",
       "part_of_speech": "noun",
-      "meaning_ar": "دكان / متجر",
-      "example_en": "My uncle has a small shop."
+      "meaning_ar": "طاولة الطالب / مكتب",
+      "example_en": "There is a book on my desk."
     },
     {
       "id": "A1-04-v3",
-      "word": "price",
-      "ipa": "/praɪs/",
+      "word": "chair",
+      "ipa": "/tʃeə/",
       "part_of_speech": "noun",
-      "meaning_ar": "سعر",
-      "example_en": "What's the price of this bag?"
+      "meaning_ar": "كرسي",
+      "example_en": "There are thirty chairs in the room."
     },
     {
       "id": "A1-04-v4",
-      "word": "rial",
-      "ipa": "/riˈɑːl/",
+      "word": "board",
+      "ipa": "/bɔːd/",
       "part_of_speech": "noun",
-      "meaning_ar": "ريال",
-      "example_en": "It's five hundred rials."
+      "meaning_ar": "سبورة",
+      "example_en": "The teacher writes on the board."
     },
     {
       "id": "A1-04-v5",
-      "word": "cheap",
-      "ipa": "/tʃiːp/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "رخيص",
-      "example_en": "These oranges are cheap."
+      "word": "book",
+      "ipa": "/bʊk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "كتاب",
+      "example_en": "This is my English book."
     },
     {
       "id": "A1-04-v6",
-      "word": "expensive",
-      "ipa": "/ɪkˈspensɪv/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "غالٍ",
-      "example_en": "This phone is expensive."
+      "word": "notebook",
+      "ipa": "/ˈnəʊtbʊk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "دفتر",
+      "example_en": "I have a red notebook."
     },
     {
       "id": "A1-04-v7",
-      "word": "buy",
-      "ipa": "/baɪ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يشتري",
-      "example_en": "I want to buy some bread."
+      "word": "pen",
+      "ipa": "/pen/",
+      "part_of_speech": "noun",
+      "meaning_ar": "قلم حبر",
+      "example_en": "Can I use your pen?"
     },
     {
       "id": "A1-04-v8",
-      "word": "sell",
-      "ipa": "/sel/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يبيع",
-      "example_en": "He sells honey from Hadramout."
+      "word": "pencil",
+      "ipa": "/ˈpensl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "قلم رصاص",
+      "example_en": "There is a pencil in my bag."
     },
     {
       "id": "A1-04-v9",
-      "word": "bread",
-      "ipa": "/bred/",
+      "word": "bag",
+      "ipa": "/bæɡ/",
       "part_of_speech": "noun",
-      "meaning_ar": "خبز",
-      "example_en": "Two pieces of bread, please."
+      "meaning_ar": "حقيبة",
+      "example_en": "My bag is heavy."
     },
     {
       "id": "A1-04-v10",
-      "word": "honey",
-      "ipa": "/ˈhʌni/",
+      "word": "window",
+      "ipa": "/ˈwɪndəʊ/",
       "part_of_speech": "noun",
-      "meaning_ar": "عسل",
-      "example_en": "Yemeni honey is famous."
+      "meaning_ar": "نافذة",
+      "example_en": "There are four windows in our classroom."
     },
     {
       "id": "A1-04-v11",
-      "word": "dates",
-      "ipa": "/deɪts/",
+      "word": "door",
+      "ipa": "/dɔː/",
       "part_of_speech": "noun",
-      "meaning_ar": "تمر",
-      "example_en": "These dates are sweet."
+      "meaning_ar": "باب",
+      "example_en": "The door is open."
     },
     {
       "id": "A1-04-v12",
-      "word": "kilo",
-      "ipa": "/ˈkiːləʊ/",
+      "word": "library",
+      "ipa": "/ˈlaɪbrəri/",
       "part_of_speech": "noun",
-      "meaning_ar": "كيلو",
-      "example_en": "A kilo of tomatoes, please."
+      "meaning_ar": "مكتبة",
+      "example_en": "There is a small library in our school."
     },
     {
       "id": "A1-04-v13",
-      "word": "hundred",
-      "ipa": "/ˈhʌndrəd/",
-      "part_of_speech": "other",
-      "meaning_ar": "مئة",
-      "example_en": "One hundred rials."
+      "word": "playground",
+      "ipa": "/ˈpleɪɡraʊnd/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ساحة / ملعب المدرسة",
+      "example_en": "The students are in the playground."
     },
     {
       "id": "A1-04-v14",
-      "word": "thousand",
-      "ipa": "/ˈθaʊznd/",
-      "part_of_speech": "other",
-      "meaning_ar": "ألف",
-      "example_en": "It's two thousand rials."
+      "word": "lab",
+      "ipa": "/læb/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مختبر / معمل",
+      "example_en": "There is a science lab in our school."
+    },
+    {
+      "id": "A1-04-v15",
+      "word": "room",
+      "ipa": "/ruːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "غرفة",
+      "example_en": "There are five rooms in our house in Mukalla."
     }
   ],
   "lessons": [
@@ -131,12 +139,22 @@
       "id": "A1-04-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "في السوق والأرقام",
-      "est_minutes": 25,
+      "title": "أشياء في المدرسة",
+      "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نذهب اليوم إلى **سوق الملح** في صنعاء القديمة. تعلّم كلمات الشراء والبيع، ثم راجع الأرقام."
+          "markdown_ar": "انظر حولك في الفصل وفي البيت: ماذا ترى؟ تعلّم أسماء الأشياء والأماكن في المدرسة والبيت واستمع لنطقها."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "table",
@@ -148,173 +166,100 @@
           ],
           "rows": [
             [
-              "market",
-              "/ˈmɑːkɪt/",
-              "سوق",
-              "The market is very busy today."
+              "classroom",
+              "/ˈklɑːsruːm/",
+              "فصل (غرفة الدراسة)",
+              "Our classroom is big."
             ],
             [
-              "shop",
-              "/ʃɒp/",
-              "دكان / متجر",
-              "My uncle has a small shop."
+              "desk",
+              "/desk/",
+              "طاولة الطالب / مكتب",
+              "There is a book on my desk."
             ],
             [
-              "price",
-              "/praɪs/",
-              "سعر",
-              "What's the price of this bag?"
+              "chair",
+              "/tʃeə/",
+              "كرسي",
+              "There are thirty chairs in the room."
             ],
             [
-              "rial",
-              "/riˈɑːl/",
-              "ريال",
-              "It's five hundred rials."
+              "board",
+              "/bɔːd/",
+              "سبورة",
+              "The teacher writes on the board."
             ],
             [
-              "cheap",
-              "/tʃiːp/",
-              "رخيص",
-              "These oranges are cheap."
+              "book",
+              "/bʊk/",
+              "كتاب",
+              "This is my English book."
             ],
             [
-              "expensive",
-              "/ɪkˈspensɪv/",
-              "غالٍ",
-              "This phone is expensive."
+              "notebook",
+              "/ˈnəʊtbʊk/",
+              "دفتر",
+              "I have a red notebook."
             ],
             [
-              "buy",
-              "/baɪ/",
-              "يشتري",
-              "I want to buy some bread."
+              "pen",
+              "/pen/",
+              "قلم حبر",
+              "Can I use your pen?"
             ],
             [
-              "sell",
-              "/sel/",
-              "يبيع",
-              "He sells honey from Hadramout."
+              "pencil",
+              "/ˈpensl/",
+              "قلم رصاص",
+              "There is a pencil in my bag."
             ],
             [
-              "bread",
-              "/bred/",
-              "خبز",
-              "Two pieces of bread, please."
+              "bag",
+              "/bæɡ/",
+              "حقيبة",
+              "My bag is heavy."
             ],
             [
-              "honey",
-              "/ˈhʌni/",
-              "عسل",
-              "Yemeni honey is famous."
+              "window",
+              "/ˈwɪndəʊ/",
+              "نافذة",
+              "There are four windows in our classroom."
             ],
             [
-              "dates",
-              "/deɪts/",
-              "تمر",
-              "These dates are sweet."
+              "door",
+              "/dɔː/",
+              "باب",
+              "The door is open."
             ],
             [
-              "kilo",
-              "/ˈkiːləʊ/",
-              "كيلو",
-              "A kilo of tomatoes, please."
+              "library",
+              "/ˈlaɪbrəri/",
+              "مكتبة",
+              "There is a small library in our school."
             ],
             [
-              "hundred",
-              "/ˈhʌndrəd/",
-              "مئة",
-              "One hundred rials."
+              "playground",
+              "/ˈpleɪɡraʊnd/",
+              "ساحة / ملعب المدرسة",
+              "The students are in the playground."
             ],
             [
-              "thousand",
-              "/ˈθaʊznd/",
-              "ألف",
-              "It's two thousand rials."
+              "lab",
+              "/læb/",
+              "مختبر / معمل",
+              "There is a science lab in our school."
+            ],
+            [
+              "room",
+              "/ruːm/",
+              "غرفة",
+              "There are five rooms in our house in Mukalla."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "market. The market is very busy today.\nshop. My uncle has a small shop.\nprice. What's the price of this bag?\nrial. It's five hundred rials.\ncheap. These oranges are cheap.\nexpensive. This phone is expensive.\nbuy. I want to buy some bread.\nsell. He sells honey from Hadramout.\nbread. Two pieces of bread, please.\nhoney. Yemeni honey is famous.\ndates. These dates are sweet.\nkilo. A kilo of tomatoes, please.\nhundred. One hundred rials.\nthousand. It's two thousand rials."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "الرقم",
-            "بالإنجليزية",
-            "الرقم",
-            "بالإنجليزية"
-          ],
-          "rows": [
-            [
-              "1",
-              "one",
-              "11",
-              "eleven"
-            ],
-            [
-              "2",
-              "two",
-              "12",
-              "twelve"
-            ],
-            [
-              "3",
-              "three",
-              "13",
-              "thirteen"
-            ],
-            [
-              "4",
-              "four",
-              "20",
-              "twenty"
-            ],
-            [
-              "5",
-              "five",
-              "30",
-              "thirty"
-            ],
-            [
-              "6",
-              "six",
-              "40",
-              "forty"
-            ],
-            [
-              "7",
-              "seven",
-              "50",
-              "fifty"
-            ],
-            [
-              "8",
-              "eight",
-              "100",
-              "one hundred"
-            ],
-            [
-              "9",
-              "nine",
-              "500",
-              "five hundred"
-            ],
-            [
-              "10",
-              "ten",
-              "1,000",
-              "one thousand"
-            ]
-          ]
-        },
-        {
-          "type": "audio",
-          "text_en": "one, two, three, four, five, six, seven, eight, nine, ten. eleven, twelve, thirteen. twenty, thirty, forty, fifty. one hundred. five hundred. one thousand."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**انتبه للفرق في النطق:** **thirteen** (13) نشدد على آخرها، و**thirty** (30) نشدد على أولها. وكذلك fourteen / forty و fifteen / fifty.\n\n**الأعداد الكبيرة:** 250 = two hundred **and** fifty، و 1,500 = one thousand five hundred."
+          "text_en": "classroom. Our classroom is big.\ndesk. There is a book on my desk.\nchair. There are thirty chairs in the room.\nboard. The teacher writes on the board.\nbook. This is my English book.\nnotebook. I have a red notebook.\npen. Can I use your pen?\npencil. There is a pencil in my bag.\nbag. My bag is heavy.\nwindow. There are four windows in our classroom.\ndoor. The door is open.\nlibrary. There is a small library in our school.\nplayground. The students are in the playground.\nlab. There is a science lab in our school.\nroom. There are five rooms in our house in Mukalla."
         },
         {
           "type": "exercise",
@@ -322,14 +267,14 @@
             "id": "A1-04-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "40 بالإنجليزية:",
+            "prompt": "The teacher writes on the ___.",
             "options": [
-              "fourteen",
-              "forty",
-              "four"
+              "door",
+              "board",
+              "bag"
             ],
             "answer": 1,
-            "explanation_ar": "40 = forty، أما 14 = fourteen."
+            "explanation_ar": "المعلم يكتب على السبورة board."
           }
         },
         {
@@ -338,14 +283,14 @@
             "id": "A1-04-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "The opposite of «cheap» is:",
+            "prompt": "We read books in the ___.",
             "options": [
-              "expensive",
-              "sweet",
-              "busy"
+              "library",
+              "playground",
+              "window"
             ],
             "answer": 0,
-            "explanation_ar": "عكس رخيص cheap هو غالٍ expensive."
+            "explanation_ar": "نقرأ الكتب في المكتبة library."
           }
         },
         {
@@ -354,9 +299,9 @@
             "id": "A1-04-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I want to ___ some honey. (يشتري)",
-            "answer": "buy",
-            "explanation_ar": "يشتري = buy."
+            "prompt": "I write with a ___. (قلم رصاص)",
+            "answer": "pencil",
+            "explanation_ar": "قلم الرصاص = pencil."
           }
         }
       ]
@@ -365,57 +310,56 @@
       "id": "A1-04-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "How much / How many + this / these",
+      "title": "there is / there are",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**How much** و **How many** للسؤال عن الكمية:\n\n- **How much is it?** = بكم؟ (للسؤال عن السعر)\n- **How many** + اسم جمع = كم عدد…؟: How many oranges?\n\n**this / these / that / those** للإشارة:"
+          "markdown_ar": "نستخدم **there is** و **there are** لنقول إن شيئاً **موجود** في مكان («يوجد»).\n\n- **There is** + اسم مفرد: There is **a** board.\n- **There are** + اسم جمع: There are **thirty** chairs.\n- المختصر: **There's** a book."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "table",
           "headers": [
-            "",
-            "قريب",
-            "بعيد"
+            "الحالة",
+            "المفرد",
+            "الجمع"
           ],
           "rows": [
             [
-              "مفرد",
-              "this (هذا/هذه)",
-              "that (ذلك/تلك)"
+              "إثبات",
+              "There is a lab.",
+              "There are two labs."
             ],
             [
-              "جمع",
-              "these (هؤلاء/هذه)",
-              "those (أولئك/تلك)"
-            ]
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "السؤال",
-            "الإجابة"
-          ],
-          "rows": [
-            [
-              "How much is this bag?",
-              "It's two thousand rials."
+              "نفي",
+              "There isn't a library.",
+              "There aren't any windows."
             ],
             [
-              "How much are these dates?",
-              "They're one thousand rials a kilo."
+              "سؤال",
+              "Is there a lab?",
+              "Are there any books?"
             ],
             [
-              "How many students are there?",
-              "There are forty."
+              "إجابة",
+              "Yes, there is. / No, there isn't.",
+              "Yes, there are. / No, there aren't."
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**لاحظ:** مع المفرد نقول **How much is…? / It's…**، ومع الجمع **How much are…? / They're…**."
+          "markdown_ar": "**a أم an؟** نستخدم **an** قبل الكلمة التي تبدأ بصوت حرف علة (a, e, i, o, u): **an** English book, **an** office. وغير ذلك **a**: **a** desk, **a** pen.\n\n**الجمع:** نضيف **s** غالباً: book ← books. وبعد s و sh و ch و x نضيف **es**: class ← classes. وبعض الكلمات شاذة: man ← men, woman ← women, child ← children."
         },
         {
           "type": "exercise",
@@ -423,14 +367,14 @@
             "id": "A1-04-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "How ___ is this notebook? — It's 300 rials.",
+            "prompt": "There ___ a big window in our classroom.",
             "options": [
-              "much",
-              "many",
-              "old"
+              "is",
+              "are",
+              "am"
             ],
             "answer": 0,
-            "explanation_ar": "للسؤال عن السعر نستخدم How much."
+            "explanation_ar": "window مفرد فنستخدم there is."
           }
         },
         {
@@ -439,14 +383,14 @@
             "id": "A1-04-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "How ___ desks are there in the classroom?",
+            "prompt": "There ___ forty students in my class.",
             "options": [
-              "much",
-              "many",
-              "is"
+              "is",
+              "are",
+              "be"
             ],
             "answer": 1,
-            "explanation_ar": "desks جمع يُعدّ فنستخدم How many."
+            "explanation_ar": "forty students جمع فنستخدم there are."
           }
         },
         {
@@ -455,14 +399,14 @@
             "id": "A1-04-e6",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "___ apples here are fresh. (قريبة، جمع)",
+            "prompt": "I have ___ English notebook.",
             "options": [
-              "This",
-              "These",
-              "That"
+              "a",
+              "an",
+              "—"
             ],
             "answer": 1,
-            "explanation_ar": "للجمع القريب نستخدم these."
+            "explanation_ar": "English تبدأ بصوت حرف علة فنستخدم an."
           }
         },
         {
@@ -471,9 +415,9 @@
             "id": "A1-04-e7",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "How much ___ these oranges?",
-            "answer": "are",
-            "explanation_ar": "oranges جمع فنستخدم are."
+            "prompt": "___ there a library in your school? — Yes, there is.",
+            "answer": "Is",
+            "explanation_ar": "السؤال عن مفرد يبدأ بـ Is there."
           }
         },
         {
@@ -481,16 +425,15 @@
           "exercise": {
             "id": "A1-04-e8",
             "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات: is / much / how / bread / the",
-            "answer": [
-              "How",
-              "much",
-              "is",
-              "the",
-              "bread"
+            "kind": "mcq",
+            "prompt": "جمع كلمة class:",
+            "options": [
+              "classs",
+              "classes",
+              "class's"
             ],
-            "explanation_ar": "How much + is + الشيء."
+            "answer": 1,
+            "explanation_ar": "بعد s نضيف es: classes."
           }
         }
       ]
@@ -499,31 +442,40 @@
       "id": "A1-04-l3",
       "position": 3,
       "skill": "listening",
-      "title": "عند بائع التمر والعسل",
+      "title": "مدرسة بلال الجديدة",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**أسماء** تشتري من بائع في السوق. استمع وانتبه **للأرقام والأسعار**."
+          "markdown_ar": "**بلال** انتقل إلى مدرسة جديدة في **المكلا**. استمع إلى حديثه مع صديقه **عمر**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "audio",
-          "text_en": "Seller: Good morning! Welcome.\nAsma: Good morning. How much is this honey?\nSeller: This is honey from Hadramout. It's ten thousand rials.\nAsma: Oh, that's expensive. And how much are those dates?\nSeller: These dates? They're one thousand five hundred rials a kilo.\nAsma: OK. Two kilos of dates, please.\nSeller: Here you are. That's three thousand rials.\nAsma: Here you are. Thank you!\nSeller: Thank you. Goodbye."
+          "text_en": "Omar: Hi, Bilal. How is your new school in Mukalla?\nBilal: It's great! It's big and it's near the sea.\nOmar: Is there a library?\nBilal: Yes, there is. There are a lot of books in English and Arabic.\nOmar: Are there any computers?\nBilal: Yes, there are ten computers in the lab. But there isn't a playground for football.\nOmar: Oh no! How many students are there in your class?\nBilal: There are thirty-five students."
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-04-e9",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How much is the honey?",
+            "kind": "true_false",
+            "prompt": "There is a library in Bilal's school.",
             "options": [
-              "1,500 rials",
-              "3,000 rials",
-              "10,000 rials"
+              "True",
+              "False"
             ],
-            "answer": 2,
-            "explanation_ar": "قال البائع: It's ten thousand rials."
+            "answer": 0,
+            "explanation_ar": "قال: Yes, there is."
           }
         },
         {
@@ -532,14 +484,14 @@
             "id": "A1-04-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "How many kilos of dates does Asma buy?",
+            "prompt": "How many computers are there in the lab?",
             "options": [
-              "one",
-              "two",
-              "three"
+              "five",
+              "ten",
+              "thirty-five"
             ],
             "answer": 1,
-            "explanation_ar": "قالت: Two kilos of dates, please."
+            "explanation_ar": "قال: there are ten computers in the lab."
           }
         },
         {
@@ -548,13 +500,13 @@
             "id": "A1-04-e11",
             "skill": "listening",
             "kind": "true_false",
-            "prompt": "Asma buys the honey.",
+            "prompt": "There is a football playground.",
             "options": [
               "True",
               "False"
             ],
             "answer": 1,
-            "explanation_ar": "قالت إن العسل غالٍ، واشترت التمر فقط."
+            "explanation_ar": "قال: there isn't a playground for football."
           }
         }
       ]
@@ -563,17 +515,27 @@
       "id": "A1-04-l4",
       "position": 4,
       "skill": "reading",
-      "title": "يوم الخميس في السوق القديم",
+      "title": "مدرسة الفجر",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ النص عن **فيصل** في السوق القديم، ثم أجب عن الأسئلة."
+          "markdown_ar": "اقرأ وصف طالب لمدرسته في **المكلا**، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "reading",
-          "text_en": "Every Thursday, Faisal goes to the old market in Sana'a with his father. The market is busy and noisy. There are many shops. Some shops sell spices, and some sell clothes and shoes. Faisal's father buys bread, tomatoes and onions. A kilo of tomatoes is eight hundred rials. Faisal wants a new notebook for school. The notebook is five hundred rials. It is cheap. He also wants a football, but it is seven thousand rials. That is too expensive for him. At the end, they buy a cup of tea and drink it near the shop of their friend, Uncle Yahya.",
-          "word_count": 101
+          "text_en": "Al-Fajr School is in Mukalla. It is an old school, but it is clean and nice. There are twelve classrooms and there is a big library. In my classroom, there are thirty desks and thirty chairs. There is a board and there are four windows. There isn't a computer in my classroom, but there is a computer lab on the first floor. There is a small playground. We play football there at break time. I like my school because my teachers are kind and my friends are there.",
+          "word_count": 88
         },
         {
           "type": "exercise",
@@ -581,14 +543,14 @@
             "id": "A1-04-e12",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "When does Faisal go to the market?",
+            "prompt": "How many classrooms are there?",
             "options": [
-              "every Friday",
-              "every Thursday",
-              "every day"
+              "four",
+              "twelve",
+              "thirty"
             ],
             "answer": 1,
-            "explanation_ar": "في النص: Every Thursday."
+            "explanation_ar": "في النص: There are twelve classrooms."
           }
         },
         {
@@ -596,15 +558,14 @@
           "exercise": {
             "id": "A1-04-e13",
             "skill": "reading",
-            "kind": "mcq",
-            "prompt": "How much is the notebook?",
+            "kind": "true_false",
+            "prompt": "There is a computer in the writer's classroom.",
             "options": [
-              "500 rials",
-              "800 rials",
-              "7,000 rials"
+              "True",
+              "False"
             ],
-            "answer": 0,
-            "explanation_ar": "في النص: The notebook is five hundred rials."
+            "answer": 1,
+            "explanation_ar": "في النص: There isn't a computer in my classroom."
           }
         },
         {
@@ -612,14 +573,15 @@
           "exercise": {
             "id": "A1-04-e14",
             "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Faisal buys a football.",
+            "kind": "mcq",
+            "prompt": "Where is the computer lab?",
             "options": [
-              "True",
-              "False"
+              "on the first floor",
+              "in the playground",
+              "in the library"
             ],
-            "answer": 1,
-            "explanation_ar": "الكرة غالية عليه (too expensive)، فلم يشترها."
+            "answer": 0,
+            "explanation_ar": "في النص: on the first floor."
           }
         },
         {
@@ -628,9 +590,9 @@
             "id": "A1-04-e15",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "The football is too ___ for Faisal.",
-            "answer": "expensive",
-            "explanation_ar": "في النص: That is too expensive for him."
+            "prompt": "The students play football in the ___.",
+            "answer": "playground",
+            "explanation_ar": "في النص: There is a small playground. We play football there."
           }
         }
       ]
@@ -639,12 +601,22 @@
       "id": "A1-04-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "اشترِ من البائع",
+      "title": "صف فصلك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "أنت في السوق وتريد شراء شيئين. **حيِّ البائع، اسأل عن السعر، اطلب الكمية، واشكره.** قل الأسعار بالإنجليزية."
+          "markdown_ar": "صِف فصلك أو مدرستك لصديق في مدينة أخرى. قل ما **يوجد** وما **لا يوجد**، واستعمل there is و there are مع الأعداد."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "table",
@@ -654,43 +626,33 @@
           ],
           "rows": [
             [
-              "بكم هذا؟",
-              "How much is this…?"
+              "يوجد (مفرد)",
+              "There is a…"
             ],
             [
-              "بكم هذه (جمع)؟",
-              "How much are these…?"
+              "يوجد (جمع)",
+              "There are … students / desks"
             ],
             [
-              "أريد…",
-              "… please. / I'd like…"
-            ],
-            [
-              "تفضل",
-              "Here you are."
-            ],
-            [
-              "شكراً",
-              "Thank you."
+              "لا يوجد",
+              "There isn't a… / There aren't any…"
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "You are at the market. Greet the seller, ask the price of two things, say how many you want and thank the seller.",
+        "prompt_en": "Describe your classroom or your school to a friend in another city. Say what there is and what there isn't.",
         "helpful_phrases": [
-          "Good morning.",
-          "How much is this…?",
-          "How much are these…?",
-          "Two kilos, please.",
-          "Here you are. Thank you."
+          "In my classroom, there is…",
+          "There are … desks.",
+          "There isn't a…",
+          "My school is…"
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "how much / how many",
-          "numbers",
-          "this / these"
+          "there is / there are",
+          "school vocabulary"
         ]
       }
     },
@@ -698,27 +660,37 @@
       "id": "A1-04-l6",
       "position": 6,
       "skill": "writing",
-      "title": "قائمة مشترياتك",
+      "title": "رسالة عن مدرستك",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة قصيرة (30 إلى 70 كلمة) عن ذهابك للسوق: **ماذا تشتري، وكم العدد، وكم السعر**. اكتب الأعداد بالحروف."
+          "markdown_ar": "اكتب رسالة قصيرة إلى صديق (30 إلى 70 كلمة) تصف فيها مدرستك. اقرأ المثال أولاً.\n\n**تذكّر:** there is + مفرد، there are + جمع، و a / an قبل المفرد."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "reading",
-          "text_en": "On Saturday, I go to the market with my mother. We buy three kilos of potatoes. They are nine hundred rials a kilo. We also buy bread and some dates. The dates are cheap. I want a new bag for school, but it is expensive. It is six thousand rials.",
-          "word_count": 50
+          "text_en": "Hi Rami,\nMy school is in Seiyun. It is not very big. There are eight classrooms and there is a small library. There isn't a lab, but there is a computer room. There are forty students in my class. My teachers are very good.\nBye,\nNasser",
+          "word_count": 46
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about a trip to the market: what you buy, how many and how much. Write the numbers in words.",
+        "prompt_en": "Write a short message to a friend about your school. Use there is, there are, there isn't and there aren't.",
         "min_words": 30,
         "max_words": 70,
         "rubric_focus": [
-          "numbers in words",
-          "how much / how many",
-          "this / these"
+          "there is / there are",
+          "a / an",
+          "plural nouns"
         ]
       }
     },
@@ -731,22 +703,32 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **How much is…? / How much are…?** للسعر.\n- **How many** + جمع للعدد.\n- **this / these** للقريب، **that / those** للبعيد.\n- الأرقام: thirteen ≠ thirty، hundred، thousand."
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **There is** + مفرد / **There are** + جمع.\n- **Is there…? Are there any…?**\n- **a** قبل الصوت الساكن، **an** قبل صوت حرف العلة.\n- الجمع: books, classes, children."
+        },
+        {
+          "type": "video",
+          "youtube_id": "m8VUaW1b_z8",
+          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 657,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "exercise",
           "exercise": {
             "id": "A1-04-e16",
-            "skill": "vocab",
+            "skill": "grammar",
             "kind": "mcq",
-            "prompt": "250 بالإنجليزية:",
+            "prompt": "___ there any students in the lab?",
             "options": [
-              "two hundred and fifty",
-              "twenty-five",
-              "two thousand and fifty"
+              "Is",
+              "Are",
+              "Am"
             ],
-            "answer": 0,
-            "explanation_ar": "250 = two hundred and fifty."
+            "answer": 1,
+            "explanation_ar": "students جمع فنستخدم Are there."
           }
         },
         {
@@ -755,14 +737,14 @@
             "id": "A1-04-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "Look at ___ mountains! They're beautiful. (بعيدة، جمع)",
+            "prompt": "There is ___ office near the library.",
             "options": [
-              "this",
-              "these",
-              "those"
+              "a",
+              "an",
+              "two"
             ],
-            "answer": 2,
-            "explanation_ar": "للجمع البعيد نستخدم those."
+            "answer": 1,
+            "explanation_ar": "office تبدأ بحرف علة فنستخدم an."
           }
         },
         {
@@ -771,9 +753,9 @@
             "id": "A1-04-e18",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "How ___ kilos do you want? — Two, please.",
-            "answer": "many",
-            "explanation_ar": "kilos جمع يُعدّ فنستخدم How many."
+            "prompt": "There aren't ___ computers in my classroom.",
+            "answer": "any",
+            "explanation_ar": "في النفي مع الجمع نستخدم any."
           }
         }
       ]
@@ -786,124 +768,123 @@
         "id": "A1-04-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "How ___ is this pen? — It's 200 rials.",
+        "prompt": "There ___ a library in our school.",
         "options": [
-          "many",
-          "much",
-          "old"
+          "is",
+          "are",
+          "am"
         ],
-        "answer": 1,
-        "explanation_ar": "للسعر نستخدم How much."
+        "answer": 0,
+        "explanation_ar": "library مفرد فنستخدم there is."
       },
       {
         "id": "A1-04-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "How ___ students are there in your class?",
+        "prompt": "There ___ twenty desks in the classroom.",
         "options": [
-          "many",
-          "much",
-          "is"
+          "is",
+          "are",
+          "isn't"
         ],
-        "answer": 0,
-        "explanation_ar": "students جمع يُعدّ فنستخدم How many."
+        "answer": 1,
+        "explanation_ar": "twenty desks جمع فنستخدم there are."
       },
       {
         "id": "A1-04-q3",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "15 بالإنجليزية:",
+        "prompt": "I have ___ orange bag.",
         "options": [
-          "fifty",
-          "fifteen",
-          "five"
+          "a",
+          "an",
+          "—"
         ],
         "answer": 1,
-        "explanation_ar": "15 = fifteen، و 50 = fifty."
+        "explanation_ar": "orange تبدأ بحرف علة فنستخدم an."
       },
       {
         "id": "A1-04-q4",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "___ shoes are nice. (قريبة، جمع)",
-        "options": [
-          "This",
-          "These",
-          "That"
-        ],
-        "answer": 1,
-        "explanation_ar": "للجمع القريب: these."
+        "kind": "fill_blank",
+        "prompt": "Are there any books on the desk? — Yes, there ___.",
+        "answer": "are",
+        "explanation_ar": "الإجابة القصيرة: Yes, there are."
       },
       {
         "id": "A1-04-q5",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "How much ___ the dates? — They're 1,000 rials.",
-        "answer": "are",
-        "explanation_ar": "dates جمع فنستخدم are."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "We do science experiments in the ___.",
+        "options": [
+          "lab",
+          "library",
+          "playground"
+        ],
+        "answer": 0,
+        "explanation_ar": "التجارب العلمية في المختبر lab."
       },
       {
         "id": "A1-04-q6",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "The opposite of «sell» is:",
+        "prompt": "جمع كلمة child:",
         "options": [
-          "buy",
-          "cheap",
-          "want"
+          "childs",
+          "childes",
+          "children"
         ],
-        "answer": 0,
-        "explanation_ar": "عكس يبيع sell هو يشتري buy."
+        "answer": 2,
+        "explanation_ar": "child جمعها شاذ: children."
       },
       {
         "id": "A1-04-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: are / these / how / oranges / much",
+        "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): a / there / board / is",
         "answer": [
-          "How",
-          "much",
-          "are",
-          "these",
-          "oranges"
+          "There",
+          "is",
+          "a",
+          "board"
         ],
-        "explanation_ar": "How much + are + these + الاسم الجمع."
+        "explanation_ar": "There is + a + الاسم المفرد."
       },
       {
         "id": "A1-04-q8",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "3,000 بالإنجليزية:",
+        "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "three hundred",
-          "thirty thousand",
-          "three thousand"
+          "There are a pen on the desk.",
+          "There is a pen on the desk.",
+          "There is pens on the desk."
         ],
-        "answer": 2,
-        "explanation_ar": "3,000 = three thousand."
+        "answer": 1,
+        "explanation_ar": "a pen مفرد فنستخدم There is."
       },
       {
         "id": "A1-04-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «The bread is 100 rials and the honey is 9,000 rials.» Which is expensive?",
+        "prompt": "Read: «There are 3 windows and 1 door in the room.» How many windows are there?",
         "options": [
-          "the bread",
-          "the honey",
-          "both"
+          "one",
+          "three",
+          "four"
         ],
         "answer": 1,
-        "explanation_ar": "العسل 9,000 ريال، وهو الغالي."
+        "explanation_ar": "3 windows = ثلاث نوافذ."
       },
       {
         "id": "A1-04-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "This phone is very cheap. It isn't ___.",
-        "answer": "expensive",
-        "explanation_ar": "عكس cheap هو expensive."
+        "prompt": "Open the ___, please. It's hot in the classroom. (نافذة)",
+        "answer": "window",
+        "explanation_ar": "النافذة = window."
       }
     ]
   },
-  "context_note": "سوق الملح في صنعاء القديمة، عسل حضرموت، الأسعار بالريال أمثلة تقريبية للتدريب فقط."
+  "context_note": "مدارس في المكلا وسيئون؛ مدرسة قرب البحر في المكلا."
 }

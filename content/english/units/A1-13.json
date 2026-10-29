@@ -1,0 +1,911 @@
+{
+  "path": "english",
+  "code": "A1-13",
+  "version": 1,
+  "level": "A1",
+  "position": 13,
+  "title": "My Body",
+  "topic": "أجزاء الجسم والصحة في صيف حضرموت",
+  "grammar_point": "imperatives + My … hurts / I have a headache",
+  "can_do": [
+    "أسمّي أجزاء الجسم",
+    "أقول للطبيب ما يؤلمني",
+    "أفهم تعليمات ونصائح صحية بسيطة وأعطيها"
+  ],
+  "vocab": [
+    {
+      "id": "A1-13-v1",
+      "word": "head",
+      "ipa": "/hed/",
+      "part_of_speech": "noun",
+      "meaning_ar": "رأس",
+      "example_en": "My head hurts."
+    },
+    {
+      "id": "A1-13-v2",
+      "word": "eye",
+      "ipa": "/aɪ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "عين",
+      "example_en": "Close your eyes."
+    },
+    {
+      "id": "A1-13-v3",
+      "word": "ear",
+      "ipa": "/ɪə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "أذن",
+      "example_en": "I have two ears."
+    },
+    {
+      "id": "A1-13-v4",
+      "word": "nose",
+      "ipa": "/nəʊz/",
+      "part_of_speech": "noun",
+      "meaning_ar": "أنف",
+      "example_en": "Touch your nose."
+    },
+    {
+      "id": "A1-13-v5",
+      "word": "mouth",
+      "ipa": "/maʊθ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "فم",
+      "example_en": "Open your mouth, please."
+    },
+    {
+      "id": "A1-13-v6",
+      "word": "tooth / teeth",
+      "ipa": "/tuːθ/ /tiːθ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سن / أسنان",
+      "example_en": "Brush your teeth every day."
+    },
+    {
+      "id": "A1-13-v7",
+      "word": "hand",
+      "ipa": "/hænd/",
+      "part_of_speech": "noun",
+      "meaning_ar": "يد",
+      "example_en": "Wash your hands before lunch."
+    },
+    {
+      "id": "A1-13-v8",
+      "word": "arm",
+      "ipa": "/ɑːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ذراع",
+      "example_en": "My arm hurts after the match."
+    },
+    {
+      "id": "A1-13-v9",
+      "word": "leg",
+      "ipa": "/leɡ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ساق / رجل",
+      "example_en": "He has a long leg."
+    },
+    {
+      "id": "A1-13-v10",
+      "word": "foot / feet",
+      "ipa": "/fʊt/ /fiːt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "قدم / أقدام",
+      "example_en": "My feet are tired."
+    },
+    {
+      "id": "A1-13-v11",
+      "word": "back",
+      "ipa": "/bæk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ظهر",
+      "example_en": "My grandfather's back hurts."
+    },
+    {
+      "id": "A1-13-v12",
+      "word": "stomach",
+      "ipa": "/ˈstʌmək/",
+      "part_of_speech": "noun",
+      "meaning_ar": "معدة / بطن",
+      "example_en": "I have a stomach ache."
+    },
+    {
+      "id": "A1-13-v13",
+      "word": "hurt",
+      "ipa": "/hɜːt/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يؤلم",
+      "example_en": "My tooth hurts."
+    },
+    {
+      "id": "A1-13-v14",
+      "word": "headache",
+      "ipa": "/ˈhedeɪk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صداع",
+      "example_en": "I have a headache. It's very hot today."
+    },
+    {
+      "id": "A1-13-v15",
+      "word": "medicine",
+      "ipa": "/ˈmedsn/",
+      "part_of_speech": "noun",
+      "meaning_ar": "دواء",
+      "example_en": "Take this medicine after lunch."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-13-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "أجزاء الجسم",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تعلّم أسماء **أجزاء الجسم** وكيف تقول للطبيب **أين يؤلمك**. لاحظ أن بعض الكلمات جمعها شاذ: tooth ← **teeth**، foot ← **feet**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "head",
+              "/hed/",
+              "رأس",
+              "My head hurts."
+            ],
+            [
+              "eye",
+              "/aɪ/",
+              "عين",
+              "Close your eyes."
+            ],
+            [
+              "ear",
+              "/ɪə/",
+              "أذن",
+              "I have two ears."
+            ],
+            [
+              "nose",
+              "/nəʊz/",
+              "أنف",
+              "Touch your nose."
+            ],
+            [
+              "mouth",
+              "/maʊθ/",
+              "فم",
+              "Open your mouth, please."
+            ],
+            [
+              "tooth / teeth",
+              "/tuːθ/ /tiːθ/",
+              "سن / أسنان",
+              "Brush your teeth every day."
+            ],
+            [
+              "hand",
+              "/hænd/",
+              "يد",
+              "Wash your hands before lunch."
+            ],
+            [
+              "arm",
+              "/ɑːm/",
+              "ذراع",
+              "My arm hurts after the match."
+            ],
+            [
+              "leg",
+              "/leɡ/",
+              "ساق / رجل",
+              "He has a long leg."
+            ],
+            [
+              "foot / feet",
+              "/fʊt/ /fiːt/",
+              "قدم / أقدام",
+              "My feet are tired."
+            ],
+            [
+              "back",
+              "/bæk/",
+              "ظهر",
+              "My grandfather's back hurts."
+            ],
+            [
+              "stomach",
+              "/ˈstʌmək/",
+              "معدة / بطن",
+              "I have a stomach ache."
+            ],
+            [
+              "hurt",
+              "/hɜːt/",
+              "يؤلم",
+              "My tooth hurts."
+            ],
+            [
+              "headache",
+              "/ˈhedeɪk/",
+              "صداع",
+              "I have a headache. It's very hot today."
+            ],
+            [
+              "medicine",
+              "/ˈmedsn/",
+              "دواء",
+              "Take this medicine after lunch."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "head. My head hurts.\neye. Close your eyes.\near. I have two ears.\nnose. Touch your nose.\nmouth. Open your mouth, please.\ntooth / teeth. Brush your teeth every day.\nhand. Wash your hands before lunch.\narm. My arm hurts after the match.\nleg. He has a long leg.\nfoot / feet. My feet are tired.\nback. My grandfather's back hurts.\nstomach. I have a stomach ache.\nhurt. My tooth hurts.\nheadache. I have a headache. It's very hot today.\nmedicine. Take this medicine after lunch."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "We see with our ___.",
+            "options": [
+              "ears",
+              "eyes",
+              "feet"
+            ],
+            "answer": 1,
+            "explanation_ar": "نرى بالعينين eyes."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "We eat with our ___.",
+            "options": [
+              "mouth",
+              "nose",
+              "back"
+            ],
+            "answer": 0,
+            "explanation_ar": "نأكل بالفم mouth."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "جمع foot: ___",
+            "answer": "feet",
+            "explanation_ar": "foot جمعها شاذ: feet."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-13-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "الأمر + My … hurts",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**1) صيغة الأمر:** نبدأ الجملة بالفعل مباشرة لنعطي تعليمات، مثل الطبيب أو المدرب:\n\n- **Open** your mouth. / **Close** your eyes. / **Touch** your nose.\n- النفي: **Don't** + الفعل: **Don't** eat sweets at night.\n- للتهذيب نضيف **please**: «Sit down, **please**.»\n\n**2) لنقول ما يؤلمنا:**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "بالإنجليزية"
+          ],
+          "rows": [
+            [
+              "رأسي يؤلمني",
+              "My head hurts."
+            ],
+            [
+              "قدماي تؤلمانني",
+              "My feet hurt."
+            ],
+            [
+              "عندي صداع",
+              "I have a headache."
+            ],
+            [
+              "عندي ألم في البطن",
+              "I have a stomach ache."
+            ],
+            [
+              "ما بك؟ / ما المشكلة؟",
+              "What's the matter?"
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**انتبه:** مع المفرد نقول **hurts** (My arm hurts)، ومع الجمع **hurt** بدون s (My eyes hurt)."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "اختر الأمر الصحيح:",
+            "options": [
+              "You wash your hands.",
+              "Wash your hands.",
+              "Washing your hands."
+            ],
+            "answer": 1,
+            "explanation_ar": "الأمر يبدأ بالفعل: Wash your hands."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My leg ___.",
+            "options": [
+              "hurt",
+              "hurts",
+              "hurting"
+            ],
+            "answer": 1,
+            "explanation_ar": "leg مفرد: hurts."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e6",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My eyes ___.",
+            "options": [
+              "hurt",
+              "hurts",
+              "is hurt"
+            ],
+            "answer": 0,
+            "explanation_ar": "eyes جمع: hurt بدون s."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e7",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "___ walk in the sun at noon. It's very hot. (لا)",
+            "answer": "Don't",
+            "explanation_ar": "نفي الأمر: Don't + الفعل."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "«ما بك؟» بالإنجليزية:",
+            "options": [
+              "What's your name?",
+              "What's the matter?",
+              "What time is it?"
+            ],
+            "answer": 1,
+            "explanation_ar": "ما بك = What's the matter?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات (ابدأ بـ Open): mouth / your / open / please",
+            "answer": [
+              "Open",
+              "your",
+              "mouth",
+              "please"
+            ],
+            "explanation_ar": "الأمر: Open + your mouth + please."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-13-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "عند الطبيب",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**سالم** عند الطبيب في **سيئون**. استمع: ما مشكلته؟ وماذا قال له الطبيب؟"
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "audio",
+          "text_en": "Doctor: Hello, Salem. What's the matter?\nSalem: I have a headache, and my stomach hurts.\nDoctor: When did it start?\nSalem: Yesterday. I played football in the sun in Seiyun, and it was very hot.\nDoctor: Do you drink a lot of water?\nSalem: No, not a lot.\nDoctor: OK. Open your mouth, please… Good. Now, close your eyes… OK.\nDoctor: It's the sun. Drink a lot of water. Don't play in the sun at noon. And take this medicine after lunch.\nSalem: Thank you, doctor."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What's the matter with Salem?",
+            "options": [
+              "His leg hurts.",
+              "He has a headache and his stomach hurts.",
+              "His eyes hurt."
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: I have a headache, and my stomach hurts."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e11",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem drinks a lot of water.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: No, not a lot."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e12",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "When should Salem take the medicine?",
+            "options": [
+              "before breakfast",
+              "after lunch",
+              "at night"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال الطبيب: take this medicine after lunch."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-13-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "نصائح صحية لصيف حضرموت",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ هذه **النصائح الصحية** لصيف حضرموت الحار. لاحظ أن معظم الجمل تبدأ بفعل أمر."
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "reading",
+          "text_en": "Summer in Hadramout is very hot, especially in the valley. Here are some tips to stay healthy. Drink a lot of water every day, at least eight glasses. Don't walk in the sun at noon. Wear a hat or a shemagh on your head. Eat fresh fruit and vegetables, like watermelon and cucumber. They have a lot of water. Wash your hands before you eat. Brush your teeth in the morning and at night. Sleep early. Your body needs eight hours of sleep. If your head hurts or you feel very tired, sit in a cool place and drink water. If you feel very sick, go to the doctor.",
+          "word_count": 109
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "How many glasses of water should you drink?",
+            "options": [
+              "four",
+              "at least eight",
+              "two"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: at least eight glasses."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e14",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "It is good to walk in the sun at noon.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: Don't walk in the sun at noon."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e15",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Why are watermelon and cucumber good in summer?",
+            "options": [
+              "They are cheap.",
+              "They have a lot of water.",
+              "They are sweet."
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: They have a lot of water."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "Brush your ___ in the morning and at night.",
+            "answer": "teeth",
+            "explanation_ar": "في النص: Brush your teeth."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-13-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "صِف ما يؤلمك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تخيّل أنك عند الطبيب. **قل ما يؤلمك ومتى بدأ**. ثم تخيّل أنك الطبيب: **أعطِ 3 نصائح** بصيغة الأمر."
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "ما يؤلمك",
+              "My … hurts. / I have a headache."
+            ],
+            [
+              "نصيحة",
+              "Drink… / Eat… / Sleep…"
+            ],
+            [
+              "لا تفعل",
+              "Don't…"
+            ],
+            [
+              "الشكر",
+              "Thank you, doctor."
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are at the doctor's. Say what hurts. Then, as the doctor, give three pieces of advice using imperatives.",
+        "helpful_phrases": [
+          "What's the matter?",
+          "My … hurts.",
+          "I have a headache.",
+          "Drink a lot of water.",
+          "Don't…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "imperatives",
+          "My … hurts",
+          "body parts"
+        ]
+      }
+    },
+    {
+      "id": "A1-13-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "اكتب نصائح صحية",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب **5 إلى 7 نصائح صحية** (30 إلى 70 كلمة) لطلاب مدرستك في الصيف أو في أيام الامتحانات. استعمل صيغة الأمر و Don't. اقرأ المثال أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "reading",
+          "text_en": "Exam tips for students: Sleep early before the exam. Eat a good breakfast. Don't drink a lot of tea at night. Drink water. Rest your eyes after one hour of study. Don't use your phone in bed. Walk for twenty minutes in the evening. Good luck!",
+          "word_count": 46
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write five to seven health tips for students in summer or during exams. Use imperatives and Don't.",
+        "min_words": 30,
+        "max_words": 70,
+        "rubric_focus": [
+          "imperatives",
+          "Don't + verb",
+          "body vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-13-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- أجزاء الجسم: head, eye, ear, nose, mouth, tooth/teeth, hand, arm, leg, foot/feet, back, stomach.\n- الأمر: **Open / Close / Wash / Drink**، والنفي **Don't** + الفعل.\n- **My … hurts** (مفرد) / **My … hurt** (جمع)، **I have a headache**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "LBdAxKWOz1c",
+          "video_title": "كلمات عن أجزاء الجسم باللغة الإنجليزية — الحلقة 13",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 882,
+          "optional": true,
+          "approx_size_mb": 59
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e17",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "We hear with our ___.",
+            "options": [
+              "eyes",
+              "ears",
+              "hands"
+            ],
+            "answer": 1,
+            "explanation_ar": "نسمع بالأذنين ears."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My teeth ___.",
+            "options": [
+              "hurt",
+              "hurts",
+              "hurting"
+            ],
+            "answer": 0,
+            "explanation_ar": "teeth جمع: hurt."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-13-e19",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "جمع tooth: ___",
+            "answer": "teeth",
+            "explanation_ar": "tooth جمعها شاذ: teeth."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-13-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "We walk with our ___.",
+        "options": [
+          "hands",
+          "feet",
+          "ears"
+        ],
+        "answer": 1,
+        "explanation_ar": "نمشي بالقدمين feet."
+      },
+      {
+        "id": "A1-13-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "My back ___.",
+        "options": [
+          "hurt",
+          "hurts",
+          "hurting"
+        ],
+        "answer": 1,
+        "explanation_ar": "back مفرد: hurts."
+      },
+      {
+        "id": "A1-13-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الأمر الصحيح:",
+        "options": [
+          "Close your eyes.",
+          "You closing your eyes.",
+          "Closes your eyes."
+        ],
+        "answer": 0,
+        "explanation_ar": "الأمر يبدأ بالفعل: Close."
+      },
+      {
+        "id": "A1-13-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "___ eat a lot of sweets. They're bad for your teeth. (لا)",
+        "answer": "Don't",
+        "explanation_ar": "نفي الأمر: Don't."
+      },
+      {
+        "id": "A1-13-q5",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "«صداع» بالإنجليزية:",
+        "options": [
+          "stomach ache",
+          "headache",
+          "medicine"
+        ],
+        "answer": 1,
+        "explanation_ar": "الصداع = headache."
+      },
+      {
+        "id": "A1-13-q6",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "جمع foot:",
+        "options": [
+          "foots",
+          "feet",
+          "feets"
+        ],
+        "answer": 1,
+        "explanation_ar": "foot جمعها feet."
+      },
+      {
+        "id": "A1-13-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: matter / the / what's",
+        "answer": [
+          "What's",
+          "the",
+          "matter"
+        ],
+        "explanation_ar": "What's the matter?"
+      },
+      {
+        "id": "A1-13-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "My eyes hurts.",
+          "My eyes hurt.",
+          "My eye hurt."
+        ],
+        "answer": 1,
+        "explanation_ar": "eyes جمع: hurt بدون s."
+      },
+      {
+        "id": "A1-13-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «Drink water. Don't walk in the sun. Wear a hat.» What should you wear?",
+        "options": [
+          "a hat",
+          "a jacket",
+          "shoes"
+        ],
+        "answer": 0,
+        "explanation_ar": "Wear a hat."
+      },
+      {
+        "id": "A1-13-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The doctor gives you ___ when you are sick. (دواء)",
+        "answer": "medicine",
+        "explanation_ar": "الدواء = medicine."
+      }
+    ]
+  },
+  "context_note": "الطبيب في سيئون، حر الصيف في الوادي، الشماغ على الرأس، البطيخ والخيار."
+}

@@ -4,126 +4,126 @@
   "version": 1,
   "level": "A1",
   "position": 8,
-  "title": "In My Town",
-  "topic": "البيت والحي في الحديدة",
-  "grammar_point": "prepositions of place + imperatives (directions)",
+  "title": "Vegetables",
+  "topic": "خضروات وادي حضرموت وغيل باوزير وسوق سيئون",
+  "grammar_point": "countable / uncountable nouns + some / any + like / don't like",
   "can_do": [
-    "أصف مكان الأشياء في البيت والحي",
-    "أسأل عن الطريق وأعطي اتجاهات بسيطة",
-    "أفهم وصفاً قصيراً لبيت أو حي"
+    "أسمّي الخضروات الشائعة",
+    "أشتري خضاراً وأسأل عما هو متوفر",
+    "أعبّر عما أحب وما لا أحب من الطعام"
   ],
   "vocab": [
     {
       "id": "A1-08-v1",
-      "word": "house",
-      "ipa": "/haʊs/",
+      "word": "vegetables",
+      "ipa": "/ˈvedʒtəblz/",
       "part_of_speech": "noun",
-      "meaning_ar": "بيت",
-      "example_en": "Our house is near the sea."
+      "meaning_ar": "خضروات",
+      "example_en": "We buy vegetables at the market in Seiyun."
     },
     {
       "id": "A1-08-v2",
-      "word": "kitchen",
-      "ipa": "/ˈkɪtʃɪn/",
+      "word": "tomato",
+      "ipa": "/təˈmɑːtəʊ/",
       "part_of_speech": "noun",
-      "meaning_ar": "مطبخ",
-      "example_en": "My mother is in the kitchen."
+      "meaning_ar": "طماطم",
+      "example_en": "I want two kilos of tomatoes."
     },
     {
       "id": "A1-08-v3",
-      "word": "bedroom",
-      "ipa": "/ˈbedruːm/",
+      "word": "potato",
+      "ipa": "/pəˈteɪtəʊ/",
       "part_of_speech": "noun",
-      "meaning_ar": "غرفة نوم",
-      "example_en": "My bedroom is small."
+      "meaning_ar": "بطاطس",
+      "example_en": "My mother cooks potatoes with meat."
     },
     {
       "id": "A1-08-v4",
-      "word": "bathroom",
-      "ipa": "/ˈbɑːθruːm/",
+      "word": "onion",
+      "ipa": "/ˈʌnjən/",
       "part_of_speech": "noun",
-      "meaning_ar": "حمّام",
-      "example_en": "The bathroom is next to the kitchen."
+      "meaning_ar": "بصل",
+      "example_en": "There are some onions in the kitchen."
     },
     {
       "id": "A1-08-v5",
-      "word": "living room",
-      "ipa": "/ˈlɪvɪŋ ruːm/",
+      "word": "carrot",
+      "ipa": "/ˈkærət/",
       "part_of_speech": "noun",
-      "meaning_ar": "غرفة الجلوس (الديوان)",
-      "example_en": "We sit in the living room in the evening."
+      "meaning_ar": "جزر",
+      "example_en": "Carrots are good for your eyes."
     },
     {
       "id": "A1-08-v6",
-      "word": "mosque",
-      "ipa": "/mɒsk/",
+      "word": "cucumber",
+      "ipa": "/ˈkjuːkʌmbə/",
       "part_of_speech": "noun",
-      "meaning_ar": "مسجد",
-      "example_en": "The mosque is opposite the school."
+      "meaning_ar": "خيار",
+      "example_en": "I like cucumber in my salad."
     },
     {
       "id": "A1-08-v7",
-      "word": "street",
-      "ipa": "/striːt/",
+      "word": "pepper",
+      "ipa": "/ˈpepə/",
       "part_of_speech": "noun",
-      "meaning_ar": "شارع",
-      "example_en": "Our school is on Al-Matar Street."
+      "meaning_ar": "فلفل",
+      "example_en": "Green peppers are hot."
     },
     {
       "id": "A1-08-v8",
-      "word": "pharmacy",
-      "ipa": "/ˈfɑːməsi/",
+      "word": "garlic",
+      "ipa": "/ˈɡɑːlɪk/",
       "part_of_speech": "noun",
-      "meaning_ar": "صيدلية",
-      "example_en": "Is there a pharmacy near here?"
+      "meaning_ar": "ثوم",
+      "example_en": "There isn't any garlic."
     },
     {
       "id": "A1-08-v9",
-      "word": "bank",
-      "ipa": "/bæŋk/",
+      "word": "okra",
+      "ipa": "/ˈəʊkrə/",
       "part_of_speech": "noun",
-      "meaning_ar": "بنك",
-      "example_en": "The bank is between the pharmacy and the mosque."
+      "meaning_ar": "بامية",
+      "example_en": "Okra with meat is delicious."
     },
     {
       "id": "A1-08-v10",
-      "word": "park",
-      "ipa": "/pɑːk/",
+      "word": "aubergine",
+      "ipa": "/ˈəʊbəʒiːn/",
       "part_of_speech": "noun",
-      "meaning_ar": "حديقة عامة",
-      "example_en": "Children play in the park."
+      "meaning_ar": "باذنجان",
+      "example_en": "Do you like aubergine?"
     },
     {
       "id": "A1-08-v11",
-      "word": "near",
-      "ipa": "/nɪə/",
-      "part_of_speech": "other",
-      "meaning_ar": "قريب من",
-      "example_en": "My house is near the market."
+      "word": "salad",
+      "ipa": "/ˈsæləd/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سلطة",
+      "example_en": "We eat salad every day."
     },
     {
       "id": "A1-08-v12",
-      "word": "turn left",
-      "ipa": "/tɜːn left/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "انعطف يساراً",
-      "example_en": "Turn left at the mosque."
+      "word": "fresh",
+      "ipa": "/freʃ/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "طازج",
+      "example_en": "These vegetables are fresh from the farm."
     },
     {
       "id": "A1-08-v13",
-      "word": "turn right",
-      "ipa": "/tɜːn raɪt/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "انعطف يميناً",
-      "example_en": "Turn right at the bank."
+      "word": "kilo",
+      "ipa": "/ˈkiːləʊ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "كيلو",
+      "example_en": "A kilo of onions, please."
     },
     {
       "id": "A1-08-v14",
-      "word": "go straight",
-      "ipa": "/ɡəʊ streɪt/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "امشِ مستقيماً",
-      "example_en": "Go straight on for two minutes."
+      "word": "like",
+      "ipa": "/laɪk/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يحب",
+      "example_en": "I like carrots, but I don't like garlic."
     }
   ],
   "lessons": [
@@ -131,12 +131,22 @@
       "id": "A1-08-l1",
       "position": 1,
       "skill": "vocab",
-      "title": "البيت والحي",
+      "title": "خضروات الوادي",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "تعلّم أسماء غرف البيت والأماكن في الحي، وكلمات **الاتجاهات** التي تحتاجها لتدل شخصاً على مكان."
+          "markdown_ar": "في **وادي حضرموت** و**غيل باوزير** مزارع كثيرة للخضروات. تعلّم أسماء الخضروات التي نشتريها من السوق كل أسبوع."
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "table",
@@ -148,94 +158,98 @@
           ],
           "rows": [
             [
-              "house",
-              "/haʊs/",
-              "بيت",
-              "Our house is near the sea."
+              "vegetables",
+              "/ˈvedʒtəblz/",
+              "خضروات",
+              "We buy vegetables at the market in Seiyun."
             ],
             [
-              "kitchen",
-              "/ˈkɪtʃɪn/",
-              "مطبخ",
-              "My mother is in the kitchen."
+              "tomato",
+              "/təˈmɑːtəʊ/",
+              "طماطم",
+              "I want two kilos of tomatoes."
             ],
             [
-              "bedroom",
-              "/ˈbedruːm/",
-              "غرفة نوم",
-              "My bedroom is small."
+              "potato",
+              "/pəˈteɪtəʊ/",
+              "بطاطس",
+              "My mother cooks potatoes with meat."
             ],
             [
-              "bathroom",
-              "/ˈbɑːθruːm/",
-              "حمّام",
-              "The bathroom is next to the kitchen."
+              "onion",
+              "/ˈʌnjən/",
+              "بصل",
+              "There are some onions in the kitchen."
             ],
             [
-              "living room",
-              "/ˈlɪvɪŋ ruːm/",
-              "غرفة الجلوس (الديوان)",
-              "We sit in the living room in the evening."
+              "carrot",
+              "/ˈkærət/",
+              "جزر",
+              "Carrots are good for your eyes."
             ],
             [
-              "mosque",
-              "/mɒsk/",
-              "مسجد",
-              "The mosque is opposite the school."
+              "cucumber",
+              "/ˈkjuːkʌmbə/",
+              "خيار",
+              "I like cucumber in my salad."
             ],
             [
-              "street",
-              "/striːt/",
-              "شارع",
-              "Our school is on Al-Matar Street."
+              "pepper",
+              "/ˈpepə/",
+              "فلفل",
+              "Green peppers are hot."
             ],
             [
-              "pharmacy",
-              "/ˈfɑːməsi/",
-              "صيدلية",
-              "Is there a pharmacy near here?"
+              "garlic",
+              "/ˈɡɑːlɪk/",
+              "ثوم",
+              "There isn't any garlic."
             ],
             [
-              "bank",
-              "/bæŋk/",
-              "بنك",
-              "The bank is between the pharmacy and the mosque."
+              "okra",
+              "/ˈəʊkrə/",
+              "بامية",
+              "Okra with meat is delicious."
             ],
             [
-              "park",
-              "/pɑːk/",
-              "حديقة عامة",
-              "Children play in the park."
+              "aubergine",
+              "/ˈəʊbəʒiːn/",
+              "باذنجان",
+              "Do you like aubergine?"
             ],
             [
-              "near",
-              "/nɪə/",
-              "قريب من",
-              "My house is near the market."
+              "salad",
+              "/ˈsæləd/",
+              "سلطة",
+              "We eat salad every day."
             ],
             [
-              "turn left",
-              "/tɜːn left/",
-              "انعطف يساراً",
-              "Turn left at the mosque."
+              "fresh",
+              "/freʃ/",
+              "طازج",
+              "These vegetables are fresh from the farm."
             ],
             [
-              "turn right",
-              "/tɜːn raɪt/",
-              "انعطف يميناً",
-              "Turn right at the bank."
+              "kilo",
+              "/ˈkiːləʊ/",
+              "كيلو",
+              "A kilo of onions, please."
             ],
             [
-              "go straight",
-              "/ɡəʊ streɪt/",
-              "امشِ مستقيماً",
-              "Go straight on for two minutes."
+              "like",
+              "/laɪk/",
+              "يحب",
+              "I like carrots, but I don't like garlic."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "house. Our house is near the sea.\nkitchen. My mother is in the kitchen.\nbedroom. My bedroom is small.\nbathroom. The bathroom is next to the kitchen.\nliving room. We sit in the living room in the evening.\nmosque. The mosque is opposite the school.\nstreet. Our school is on Al-Matar Street.\npharmacy. Is there a pharmacy near here?\nbank. The bank is between the pharmacy and the mosque.\npark. Children play in the park.\nnear. My house is near the market.\nturn left. Turn left at the mosque.\nturn right. Turn right at the bank.\ngo straight. Go straight on for two minutes."
+          "text_en": "vegetables. We buy vegetables at the market in Seiyun.\ntomato. I want two kilos of tomatoes.\npotato. My mother cooks potatoes with meat.\nonion. There are some onions in the kitchen.\ncarrot. Carrots are good for your eyes.\ncucumber. I like cucumber in my salad.\npepper. Green peppers are hot.\ngarlic. There isn't any garlic.\nokra. Okra with meat is delicious.\naubergine. Do you like aubergine?\nsalad. We eat salad every day.\nfresh. These vegetables are fresh from the farm.\nkilo. A kilo of onions, please.\nlike. I like carrots, but I don't like garlic."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**جمع tomato و potato:** نضيف **es**: tomato**es**، potato**es**."
         },
         {
           "type": "exercise",
@@ -243,14 +257,14 @@
             "id": "A1-08-e1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "We cook food in the ___.",
+            "prompt": "«بصل» بالإنجليزية:",
             "options": [
-              "bedroom",
-              "kitchen",
-              "bathroom"
+              "garlic",
+              "onion",
+              "okra"
             ],
             "answer": 1,
-            "explanation_ar": "نطبخ في المطبخ kitchen."
+            "explanation_ar": "البصل = onion، والثوم = garlic."
           }
         },
         {
@@ -259,14 +273,14 @@
             "id": "A1-08-e2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "You buy medicine at the ___.",
+            "prompt": "We make ___ with tomatoes, cucumbers and onions.",
             "options": [
-              "bank",
-              "pharmacy",
-              "park"
+              "salad",
+              "tea",
+              "bread"
             ],
-            "answer": 1,
-            "explanation_ar": "الدواء من الصيدلية pharmacy."
+            "answer": 0,
+            "explanation_ar": "السلطة salad من الطماطم والخيار والبصل."
           }
         },
         {
@@ -275,9 +289,9 @@
             "id": "A1-08-e3",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Turn ___ at the mosque. (يساراً)",
-            "answer": "left",
-            "explanation_ar": "يساراً = left، ويميناً = right."
+            "prompt": "جمع potato: ___",
+            "answer": "potatoes",
+            "explanation_ar": "نضيف es: potatoes."
           }
         }
       ]
@@ -286,66 +300,56 @@
       "id": "A1-08-l2",
       "position": 2,
       "skill": "grammar",
-      "title": "حروف المكان + الأوامر",
+      "title": "some / any + like",
       "est_minutes": 30,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "**حروف المكان** تقول لنا **أين** الشيء:"
+          "markdown_ar": "**الأسماء المعدودة** نعدّها ولها جمع: a carrot ← three carrots، a tomato ← tomatoes.\n\n**الأسماء غير المعدودة** لا نعدّها ولا جمع لها: garlic, salad, water, rice. نقول «some garlic» وليس «a garlic»."
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "table",
           "headers": [
-            "الحرف",
-            "المعنى",
-            "مثال"
+            "",
+            "مع المعدود (جمع)",
+            "مع غير المعدود"
           ],
           "rows": [
             [
-              "in",
-              "في / داخل",
-              "The book is in my bag."
+              "إثبات: some",
+              "There are some carrots.",
+              "There is some garlic."
             ],
             [
-              "on",
-              "على",
-              "The phone is on the table."
+              "نفي: any",
+              "There aren't any onions.",
+              "There isn't any salad."
             ],
             [
-              "under",
-              "تحت",
-              "The cat is under the chair."
+              "سؤال: any",
+              "Are there any tomatoes?",
+              "Is there any rice?"
             ],
             [
-              "next to",
-              "بجانب",
-              "The bank is next to the pharmacy."
-            ],
-            [
-              "between",
-              "بين",
-              "The shop is between the bank and the mosque."
-            ],
-            [
-              "opposite",
-              "مقابل",
-              "The school is opposite the park."
-            ],
-            [
-              "behind",
-              "خلف",
-              "The car is behind the house."
-            ],
-            [
-              "in front of",
-              "أمام",
-              "There is a tree in front of the mosque."
+              "طلب: some",
+              "Can I have some peppers?",
+              "Can I have some salad, please?"
             ]
           ]
         },
         {
           "type": "text",
-          "markdown_ar": "**صيغة الأمر (imperative):** نستخدم الفعل وحده في أول الجملة لنعطي تعليمات أو اتجاهات:\n\n- **Go** straight on. / **Turn** left. / **Take** the first street on the right.\n- النفي: **Don't** + الفعل: **Don't** turn right.\n- لنجعل الأمر مهذباً نضيف **please**: «Close the door, **please**.»\n\n**للسؤال عن المكان:** Where is the bank? / Is there a pharmacy near here? / Excuse me, how do I get to…?"
+          "markdown_ar": "**التعبير عن الحب:** like / don't like:\n\n- I **like** okra. / I **don't like** garlic.\n- He **likes** carrots. / She **doesn't like** onions.\n- **Do you like** aubergine? — Yes, I do. / No, I don't.\n\nمع الأسماء المعدودة نستخدم الجمع بعد like: «I like **tomatoes**.»"
         },
         {
           "type": "exercise",
@@ -353,14 +357,14 @@
             "id": "A1-08-e4",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "The pen is ___ the desk. (على)",
+            "prompt": "There are ___ potatoes in the bag.",
             "options": [
-              "in",
-              "on",
-              "under"
+              "any",
+              "some",
+              "a"
             ],
             "answer": 1,
-            "explanation_ar": "على = on."
+            "explanation_ar": "في الإثبات: some."
           }
         },
         {
@@ -369,14 +373,14 @@
             "id": "A1-08-e5",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "The bank is ___ the school and the park. (بين)",
+            "prompt": "There isn't ___ garlic in the kitchen.",
             "options": [
-              "between",
-              "next to",
-              "behind"
+              "some",
+              "any",
+              "a"
             ],
-            "answer": 0,
-            "explanation_ar": "بين شيئين = between."
+            "answer": 1,
+            "explanation_ar": "في النفي: any."
           }
         },
         {
@@ -385,9 +389,9 @@
             "id": "A1-08-e6",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "The pharmacy is next ___ the mosque.",
-            "answer": "to",
-            "explanation_ar": "بجانب = next to."
+            "prompt": "Are there ___ cucumbers? I want to make a salad.",
+            "answer": "any",
+            "explanation_ar": "في السؤال: any."
           }
         },
         {
@@ -396,14 +400,14 @@
             "id": "A1-08-e7",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "اختر الأمر الصحيح:",
+            "prompt": "My brother ___ okra.",
             "options": [
-              "You turn left at the bank.",
-              "Turn left at the bank.",
-              "Turning left at the bank."
+              "like",
+              "likes",
+              "liking"
             ],
             "answer": 1,
-            "explanation_ar": "الأمر يبدأ بالفعل مباشرة: Turn left."
+            "explanation_ar": "مع he: likes."
           }
         },
         {
@@ -412,14 +416,14 @@
             "id": "A1-08-e8",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "«لا تعبر الشارع هنا» بالإنجليزية:",
+            "prompt": "اختر الجملة الصحيحة:",
             "options": [
-              "Don't cross the street here.",
-              "Not cross the street here.",
-              "No cross the street here."
+              "I like carrot.",
+              "I like carrots.",
+              "I likes carrots."
             ],
-            "answer": 0,
-            "explanation_ar": "نفي الأمر: Don't + الفعل."
+            "answer": 1,
+            "explanation_ar": "مع المعدود نستخدم الجمع بعد like."
           }
         },
         {
@@ -428,14 +432,14 @@
             "id": "A1-08-e9",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: the / is / bank / where",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: tomatoes / are / any / there",
             "answer": [
-              "Where",
-              "is",
-              "the",
-              "bank"
+              "Are",
+              "there",
+              "any",
+              "tomatoes"
             ],
-            "explanation_ar": "السؤال عن المكان: Where + is + الشيء؟"
+            "explanation_ar": "Are there any + جمع؟"
           }
         }
       ]
@@ -444,16 +448,26 @@
       "id": "A1-08-l3",
       "position": 3,
       "skill": "listening",
-      "title": "أين الصيدلية؟",
+      "title": "عند بائع الخضار",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "زائر في **الحديدة** يسأل **إبراهيم** عن الطريق إلى صيدلية. استمع وتتبّع الاتجاهات في ذهنك."
+          "markdown_ar": "**هدى** تشتري خضروات من بائع في سوق **سيئون**. استمع: ماذا اشترت؟ وماذا لم تجد؟"
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "audio",
-          "text_en": "Visitor: Excuse me. Is there a pharmacy near here?\nIbrahim: Yes, there is. It's on Sanaa Street.\nVisitor: How do I get there?\nIbrahim: Go straight on. Turn right at the big mosque. Then go straight for two minutes.\nVisitor: Turn right at the mosque…\nIbrahim: Yes. The pharmacy is on the left, between the bank and a small restaurant. It's opposite the park.\nVisitor: Thank you very much.\nIbrahim: You're welcome."
+          "text_en": "Seller: Good morning! Fresh vegetables from Ghail Ba Wazir!\nHuda: Good morning. Do you have any okra today?\nSeller: Yes, I do. It's very fresh.\nHuda: One kilo of okra, please. And some tomatoes.\nSeller: How many kilos of tomatoes?\nHuda: Two kilos. Do you have any carrots?\nSeller: Sorry, there aren't any carrots today. But there are some nice cucumbers.\nHuda: OK, three cucumbers, please. My children like salad.\nSeller: Here you are. Anything else?\nHuda: No, thank you."
         },
         {
           "type": "exercise",
@@ -461,14 +475,14 @@
             "id": "A1-08-e10",
             "skill": "listening",
             "kind": "mcq",
-            "prompt": "Where does the visitor turn right?",
+            "prompt": "How many kilos of tomatoes does Huda want?",
             "options": [
-              "at the bank",
-              "at the big mosque",
-              "at the park"
+              "one",
+              "two",
+              "three"
             ],
             "answer": 1,
-            "explanation_ar": "قال: Turn right at the big mosque."
+            "explanation_ar": "قالت: Two kilos."
           }
         },
         {
@@ -476,15 +490,14 @@
           "exercise": {
             "id": "A1-08-e11",
             "skill": "listening",
-            "kind": "mcq",
-            "prompt": "The pharmacy is between the bank and…",
+            "kind": "true_false",
+            "prompt": "There are carrots today.",
             "options": [
-              "a school",
-              "a small restaurant",
-              "the park"
+              "True",
+              "False"
             ],
             "answer": 1,
-            "explanation_ar": "قال: between the bank and a small restaurant."
+            "explanation_ar": "قال البائع: there aren't any carrots today."
           }
         },
         {
@@ -492,14 +505,15 @@
           "exercise": {
             "id": "A1-08-e12",
             "skill": "listening",
-            "kind": "true_false",
-            "prompt": "The pharmacy is opposite the park.",
+            "kind": "mcq",
+            "prompt": "Why does Huda buy cucumbers?",
             "options": [
-              "True",
-              "False"
+              "Her children like salad.",
+              "They are cheap.",
+              "She likes okra."
             ],
             "answer": 0,
-            "explanation_ar": "قال: It's opposite the park."
+            "explanation_ar": "قالت: My children like salad."
           }
         }
       ]
@@ -508,17 +522,27 @@
       "id": "A1-08-l4",
       "position": 4,
       "skill": "reading",
-      "title": "بيت أفنان في الحديدة",
+      "title": "مزرعة في الوادي",
       "est_minutes": 20,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اقرأ وصف **أفنان** لبيتها في الحديدة، ثم أجب عن الأسئلة. يمكنك أن ترسم البيت على ورقة وأنت تقرأ!"
+          "markdown_ar": "اقرأ عن مزارع في **وادي حضرموت** قرب سيئون، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "reading",
-          "text_en": "My name is Afnan and I live in Hodeidah. Our house is in Al-Hali area, near the sea. It is a white house with two floors. On the ground floor, there is a big living room and a kitchen. The bathroom is next to the kitchen. My bedroom is on the first floor. In my bedroom, there is a bed, a desk and a small window. My books are on the desk and my school bag is under the bed. In front of our house, there is a tall tree. Behind the house, there is a small garden with flowers. The mosque is opposite our house, and the market is a five-minute walk from here.",
-          "word_count": 115
+          "text_en": "Mr. Omar Bin Sumait is a farmer in Wadi Hadramout, near Seiyun. He has a big farm with palm trees and vegetables. In winter, he grows tomatoes, onions, carrots and peppers. In summer, it is very hot, so he grows okra and aubergines. He gets up early every day and he waters the plants before the sun is hot. His sons help him on the farm after school. On Thursday, they take the fresh vegetables to the market in Seiyun. People like his vegetables because they are fresh and cheap. Mr. Omar doesn't use a lot of chemicals. He says, «Good food comes from good soil and clean water.»",
+          "word_count": 109
         },
         {
           "type": "exercise",
@@ -526,14 +550,14 @@
             "id": "A1-08-e13",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "Where is the bathroom?",
+            "prompt": "What does Mr. Omar grow in summer?",
             "options": [
-              "next to the kitchen",
-              "on the first floor",
-              "behind the house"
+              "tomatoes and onions",
+              "okra and aubergines",
+              "carrots and peppers"
             ],
-            "answer": 0,
-            "explanation_ar": "في النص: The bathroom is next to the kitchen."
+            "answer": 1,
+            "explanation_ar": "في النص: In summer… he grows okra and aubergines."
           }
         },
         {
@@ -542,14 +566,14 @@
             "id": "A1-08-e14",
             "skill": "reading",
             "kind": "mcq",
-            "prompt": "Where is Afnan's school bag?",
+            "prompt": "When do they take the vegetables to the market?",
             "options": [
-              "on the desk",
-              "under the bed",
-              "in the kitchen"
+              "on Thursday",
+              "on Friday",
+              "every day"
             ],
-            "answer": 1,
-            "explanation_ar": "في النص: my school bag is under the bed."
+            "answer": 0,
+            "explanation_ar": "في النص: On Thursday, they take the fresh vegetables to the market."
           }
         },
         {
@@ -558,13 +582,13 @@
             "id": "A1-08-e15",
             "skill": "reading",
             "kind": "true_false",
-            "prompt": "There is a garden in front of the house.",
+            "prompt": "Mr. Omar uses a lot of chemicals.",
             "options": [
               "True",
               "False"
             ],
             "answer": 1,
-            "explanation_ar": "الحديقة خلف البيت (behind)، وأمامه شجرة طويلة."
+            "explanation_ar": "في النص: Mr. Omar doesn't use a lot of chemicals."
           }
         },
         {
@@ -573,9 +597,9 @@
             "id": "A1-08-e16",
             "skill": "reading",
             "kind": "fill_blank",
-            "prompt": "The mosque is ___ Afnan's house. (مقابل)",
-            "answer": "opposite",
-            "explanation_ar": "في النص: The mosque is opposite our house."
+            "prompt": "People like his vegetables because they are ___ and cheap.",
+            "answer": "fresh",
+            "explanation_ar": "في النص: because they are fresh and cheap."
           }
         }
       ]
@@ -584,12 +608,22 @@
       "id": "A1-08-l5",
       "position": 5,
       "skill": "speaking",
-      "title": "دلّ زائراً على مكان",
+      "title": "اشترِ خضارك",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "زائر يسألك عن مكان قريب من مدرستك (مسجد، صيدلية، سوق…). **أعطه اتجاهات واضحة** من المدرسة إلى المكان، وصف ما بجانبه."
+          "markdown_ar": "أنت في سوق الخضار. **اسأل البائع هل عنده خضروات معيّنة، واطلب الكميات، ثم قل ما تحبه وما لا تحبه من الخضار.**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "table",
@@ -599,38 +633,39 @@
           ],
           "rows": [
             [
-              "امشِ مستقيماً",
-              "Go straight on."
+              "هل عندك؟",
+              "Do you have any…?"
             ],
             [
-              "انعطف",
-              "Turn left / right at…"
+              "أريد",
+              "One kilo of…, please. / Some…, please."
             ],
             [
-              "المكان",
-              "It's next to / opposite / between…"
+              "أحب",
+              "I like… / I don't like…"
             ],
             [
-              "قريب",
-              "It's near…"
+              "شكراً",
+              "Thank you."
             ]
           ]
         }
       ],
       "speaking_task": {
-        "prompt_en": "A visitor asks you the way from your school to a place near it. Give clear directions and say what is next to it.",
+        "prompt_en": "You are at the vegetable market. Ask the seller if he has some vegetables, ask for amounts, then say which vegetables you like and don't like.",
         "helpful_phrases": [
-          "Go straight on.",
-          "Turn left at…",
-          "Turn right at…",
-          "It's next to…",
-          "It's opposite…"
+          "Do you have any…?",
+          "One kilo of…, please.",
+          "Some…, please.",
+          "I like…",
+          "I don't like…"
         ],
         "prep_seconds": 30,
         "max_seconds": 60,
         "rubric_focus": [
-          "imperatives",
-          "prepositions of place"
+          "some / any",
+          "countable and uncountable nouns",
+          "like / don't like"
         ]
       }
     },
@@ -638,27 +673,37 @@
       "id": "A1-08-l6",
       "position": 6,
       "skill": "writing",
-      "title": "صف بيتك",
+      "title": "سلطتك المفضلة",
       "est_minutes": 25,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) تصف فيها بيتك أو غرفتك. اقرأ المثال أولاً.\n\n**تذكّر:** استعمل there is / there are مع حروف المكان: in, on, under, next to, between, opposite."
+          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن الخضروات التي تحبها والتي لا تحبها، أو عن طبق خضار تصنعه عائلتكم. اقرأ المثال أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "reading",
-          "text_en": "I live in a small house in Taiz. There are three bedrooms, a kitchen and a living room. The kitchen is next to the living room. In my bedroom, there is a bed and a cupboard. My clothes are in the cupboard. There is a big window opposite my bed. Our house is near my school.",
-          "word_count": 56
+          "text_en": "I like vegetables. My favourite is okra with meat. My mother cooks it on Friday. I also like salad with tomatoes, cucumbers and some lemon. I don't like garlic, but my father likes it very much. Today, there aren't any potatoes at home, so my brother is at the market now.",
+          "word_count": 51
         }
       ],
       "writing_task": {
-        "prompt_en": "Describe your house or your bedroom. Use there is / there are and prepositions of place.",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write about the vegetables you like and don't like, or a vegetable dish your family makes. Use some, any, like and don't like.",
+        "min_words": 30,
+        "max_words": 70,
         "rubric_focus": [
-          "prepositions of place",
-          "there is / there are",
-          "house vocabulary"
+          "some / any",
+          "plural nouns",
+          "like / don't like"
         ]
       }
     },
@@ -671,7 +716,17 @@
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **in, on, under, next to, between, opposite, behind, in front of**.\n- الأمر: **Go / Turn / Take** + …، والنفي **Don't** + الفعل.\n- السؤال: **Where is…? / Is there a… near here?**"
+          "markdown_ar": "راجع قبل الاختبار:\n\n- المعدود: a carrot, two carrots, tomatoes, potatoes. غير المعدود: garlic, salad, rice.\n- **some** في الإثبات والطلب، **any** في النفي والسؤال.\n- **like / likes / don't like / doesn't like** + الجمع."
+        },
+        {
+          "type": "video",
+          "youtube_id": "63Riw1SEDPk",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "duration_sec": 660,
+          "optional": true,
+          "approx_size_mb": 44
         },
         {
           "type": "exercise",
@@ -679,14 +734,14 @@
             "id": "A1-08-e17",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "The car is ___ the house. (خلف)",
+            "prompt": "Can I have ___ peppers, please?",
             "options": [
-              "in front of",
-              "behind",
-              "on"
+              "any",
+              "some",
+              "a"
             ],
             "answer": 1,
-            "explanation_ar": "خلف = behind."
+            "explanation_ar": "في الطلب: some."
           }
         },
         {
@@ -695,14 +750,14 @@
             "id": "A1-08-e18",
             "skill": "grammar",
             "kind": "mcq",
-            "prompt": "___ the window, please. It's cold.",
+            "prompt": "She ___ like onions.",
             "options": [
-              "Close",
-              "Closes",
-              "You closing"
+              "don't",
+              "doesn't",
+              "isn't"
             ],
-            "answer": 0,
-            "explanation_ar": "الأمر بالفعل وحده: Close."
+            "answer": 1,
+            "explanation_ar": "النفي مع she: doesn't like."
           }
         },
         {
@@ -711,9 +766,9 @@
             "id": "A1-08-e19",
             "skill": "grammar",
             "kind": "fill_blank",
-            "prompt": "There is a tree in front ___ the school.",
-            "answer": "of",
-            "explanation_ar": "أمام = in front of."
+            "prompt": "جمع tomato: ___",
+            "answer": "tomatoes",
+            "explanation_ar": "نضيف es: tomatoes."
           }
         }
       ]
@@ -726,123 +781,123 @@
         "id": "A1-08-q1",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "The cat is ___ the table. (تحت)",
+        "prompt": "There are ___ onions on the table.",
         "options": [
-          "on",
-          "under",
-          "in"
+          "some",
+          "any",
+          "a"
         ],
-        "answer": 1,
-        "explanation_ar": "تحت = under."
+        "answer": 0,
+        "explanation_ar": "في الإثبات: some."
       },
       {
         "id": "A1-08-q2",
         "skill": "grammar",
         "kind": "mcq",
-        "prompt": "My phone is ___ my bag. (داخل)",
+        "prompt": "There aren't ___ carrots today.",
         "options": [
-          "in",
-          "on",
-          "opposite"
+          "some",
+          "any",
+          "an"
         ],
-        "answer": 0,
-        "explanation_ar": "داخل = in."
+        "answer": 1,
+        "explanation_ar": "في النفي: any."
       },
       {
         "id": "A1-08-q3",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "The mosque is ___ the bank and the school.",
+        "prompt": "«باذنجان» بالإنجليزية:",
         "options": [
-          "next to",
-          "between",
-          "under"
+          "okra",
+          "aubergine",
+          "cucumber"
         ],
         "answer": 1,
-        "explanation_ar": "بين شيئين: between … and …"
+        "explanation_ar": "الباذنجان = aubergine."
       },
       {
         "id": "A1-08-q4",
         "skill": "grammar",
         "kind": "fill_blank",
-        "prompt": "___ turn left here. It's a one-way street. (لا)",
-        "answer": "Don't",
-        "explanation_ar": "نفي الأمر: Don't + الفعل."
+        "prompt": "Do you like okra? — Yes, I ___.",
+        "answer": "do",
+        "explanation_ar": "الإجابة القصيرة: Yes, I do."
       },
       {
         "id": "A1-08-q5",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "We sleep in the ___.",
+        "prompt": "My father ___ salad very much.",
         "options": [
-          "kitchen",
-          "bedroom",
-          "bank"
+          "like",
+          "likes",
+          "liking"
         ],
         "answer": 1,
-        "explanation_ar": "ننام في غرفة النوم bedroom."
+        "explanation_ar": "مع he: likes."
       },
       {
         "id": "A1-08-q6",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "prompt": "These vegetables are from the farm today. They're very ___.",
         "options": [
-          "The bank is next the pharmacy.",
-          "The bank is next to the pharmacy.",
-          "The bank is to next the pharmacy."
+          "fresh",
+          "dirty",
+          "slow"
         ],
-        "answer": 1,
-        "explanation_ar": "بجانب = next to."
+        "answer": 0,
+        "explanation_ar": "طازج = fresh."
       },
       {
         "id": "A1-08-q7",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات: at / right / the bank / turn",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: any / is / there / garlic",
         "answer": [
-          "Turn",
-          "right",
-          "at",
-          "the bank"
+          "Is",
+          "there",
+          "any",
+          "garlic"
         ],
-        "explanation_ar": "الأمر: Turn right at + المكان."
+        "explanation_ar": "Is there any + غير المعدود؟"
       },
       {
         "id": "A1-08-q8",
-        "skill": "vocab",
+        "skill": "grammar",
         "kind": "mcq",
-        "prompt": "«امشِ مستقيماً» بالإنجليزية:",
+        "prompt": "اختر الجملة الصحيحة:",
         "options": [
-          "Turn right.",
-          "Go straight on.",
-          "Turn left."
+          "I want a garlic.",
+          "I want some garlic.",
+          "I want garlics."
         ],
         "answer": 1,
-        "explanation_ar": "امشِ مستقيماً = Go straight on."
+        "explanation_ar": "garlic غير معدود: some garlic."
       },
       {
         "id": "A1-08-q9",
         "skill": "reading",
         "kind": "mcq",
-        "prompt": "Read: «The park is opposite the school. The bank is next to the park.» What is next to the park?",
+        "prompt": "Read: «Nada likes carrots but she doesn't like peppers.» What doesn't Nada like?",
         "options": [
-          "the school",
-          "the bank",
-          "the mosque"
+          "carrots",
+          "peppers",
+          "salad"
         ],
         "answer": 1,
-        "explanation_ar": "The bank is next to the park."
+        "explanation_ar": "she doesn't like peppers."
       },
       {
         "id": "A1-08-q10",
         "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "Excuse me, is there a ___ near here? I need some medicine.",
-        "answer": "pharmacy",
-        "explanation_ar": "الدواء من الصيدلية pharmacy."
+        "prompt": "جمع potato: ___",
+        "answer": "potatoes",
+        "explanation_ar": "نضيف es: potatoes."
       }
     ]
   },
-  "context_note": "حي الحالي في الحديدة، شارع المطار، المسجد مقابل البيت."
+  "context_note": "مزارع وادي حضرموت وغيل باوزير، سوق الخضار في سيئون، البامية باللحم."
 }
