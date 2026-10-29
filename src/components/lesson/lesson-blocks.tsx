@@ -4,11 +4,14 @@ import { MixedText } from "@/components/mixed-text";
 import type { LessonBlock } from "@/lib/content/types";
 import { Markdown } from "./markdown";
 import { AudioBlock } from "./audio-block";
-import { VideoBlock } from "./video-block";
+import { VideoBlock, type VideoStatus } from "./video-block";
 import { ExerciseBlock } from "./exercise-block";
 
-/** Renders a lesson's content blocks (student player and admin preview). */
-export function LessonBlocks({ blocks }: { blocks: LessonBlock[] }) {
+/**
+ * Renders a lesson's content blocks (student player and admin preview).
+ * `videos` (student player only) makes videos mandatory and carries what the student already watched.
+ */
+export function LessonBlocks({ blocks, videos }: { blocks: LessonBlock[]; videos?: Record<string, VideoStatus> }) {
   return (
     <div className="flex flex-col gap-4">
       {blocks.map((block, i) => {
@@ -60,7 +63,7 @@ export function LessonBlocks({ blocks }: { blocks: LessonBlock[] }) {
           case "audio":
             return block.text_en ? <AudioBlock key={i} text={block.text_en} /> : null;
           case "video":
-            return <VideoBlock key={i} block={block} />;
+            return <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} />;
           case "exercise":
             return block.exercise ? <ExerciseBlock key={i} exercise={block.exercise} /> : null;
           default:

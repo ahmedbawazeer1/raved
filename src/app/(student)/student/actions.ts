@@ -5,22 +5,44 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 import { requireActiveStudent } from "@/lib/auth/session";
+import { LESSON_BLOCKERS_AR } from "@/lib/gamification/blockers";
 
 const uuid = z.uuid();
 
-/** Marks a lesson complete and goes to the next lesson (or back to the unit). */
-export async function completeLesson(formData: FormData): Promise<void> {
-  const { userId } = await requireActiveStudent();
-  const lessonId = uuid.parse(formData.get("lesson_id"));
+export interface CompleteLessonState {
+  error?: string;
+}
+
+/** Completes a lesson (only when every requirement is met) and goes to the next step. */
+export async function completeLesson(_prev: CompleteLessonState, formData: FormData): Promise<CompleteLessonState> {
+  await requireActiveStudent();
+  const lessonId = uuid.safeParse(formData.get("lesson_id"));
+  if (!lessonId.success) return { error: "حدث خطأ." };
   const next = String(formData.get("next") ?? "");
 
   const supabase = await createClient();
-  await supabase.from("lesson_progress").upsert(
-    { student_id: userId, lesson_id: lessonId, status: "completed", completed_at: new Date().toISOString(), synced_at: new Date().toISOString() },
-    { onConflict: "student_id,lesson_id" },
-  );
+  const { error } = await supabase.rpc("complete_lesson", { p_lesson_id: lessonId.data });
+  if (error) return { error: LESSON_BLOCKERS_AR[error.message] ?? "تعذر الحفظ. حاول مرة أخرى." };
   revalidatePath("/student", "layout");
   redirect(next.startsWith("/student") ? next : "/student");
+}
+
+const youtubeId = z.string().regex(/^[A-Za-z0-9_-]{11}$/);
+
+/** Saves how much of a video was really played; returns the server's view of it. */
+export async function recordVideoWatch(
+  videoId: string,
+  watchedSec: number,
+): Promise<{ watched: number; duration: number; done: boolean } | null> {
+  await requireActiveStudent();
+  const id = youtubeId.safeParse(videoId);
+  const sec = z.number().int().min(0).max(36_000).safeParse(Math.floor(watchedSec));
+  if (!id.success || !sec.success) return null;
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("record_video_watch", { p_youtube_id: id.data, p_watched_sec: sec.data });
+  if (error || !data) return null;
+  const d = data as { watched_sec: number; duration_sec: number; done: boolean };
+  return { watched: d.watched_sec, duration: d.duration_sec, done: d.done };
 }
 
 export interface FeedbackState {

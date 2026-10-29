@@ -84,6 +84,8 @@ export interface UnitPackage {
   lessons: PackageLesson[];
   quiz: { pass_percent?: number; questions: PackageQuestion[] };
   context_note?: string;
+  /** Arabic name of the stop on the journey map (e.g. «المكلا»). */
+  stop_ar?: string;
 }
 
 export const SKILL_LABELS: Record<PackageLesson["skill"], string> = {

@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, Circle, Lock, PlayCircle } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
+import { JourneyMap } from "@/components/student/journey-map";
 import { ProgressBar } from "@/components/student/progress-bar";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
@@ -69,41 +68,11 @@ export default async function CurriculumPage({ params, searchParams }: PageProps
         </Card>
       )}
 
-      <Card className="px-4 py-1.5">
-        {units.length === 0 && <p className="py-4 text-sm text-muted-foreground">وحدات هذا المستوى قيد الإعداد.</p>}
-        {units.map((u) => {
-          const inner = (
-            <>
-              {u.state === "done" ? (
-                <CheckCircle2 className="size-5 text-success" aria-label="مكتملة" />
-              ) : u.state === "now" ? (
-                <PlayCircle className="size-5 text-primary" aria-label="الحالية" />
-              ) : u.state === "open" ? (
-                <Circle className="size-5 text-[#9AA8A4]" aria-label="مفتوحة للمراجعة" />
-              ) : (
-                <Lock className="size-5 text-[#9AA8A4]" aria-label="مقفلة" />
-              )}
-              <En className="w-6 text-muted-foreground">{u.position}</En>
-              <En className={cn("flex-1", u.state === "now" && "font-semibold")}>{u.title}</En>
-              {u.state === "now" && <Badge>الآن</Badge>}
-              {u.state === "open" && <Badge tone="muted">مراجعة اختيارية</Badge>}
-            </>
-          );
-          return u.state === "locked" ? (
-            <div key={u.id} className="flex min-h-12 items-center gap-3 border-b border-muted py-2.5 text-sm text-muted-foreground last:border-b-0">
-              {inner}
-            </div>
-          ) : (
-            <Link
-              key={u.id}
-              href={`/student/${path.slug}/unit/${u.id}`}
-              className="flex min-h-12 items-center gap-3 border-b border-muted py-2.5 text-sm text-foreground no-underline last:border-b-0 hover:text-foreground"
-            >
-              {inner}
-            </Link>
-          );
-        })}
-      </Card>
+      {units.length === 0 ? (
+        <Card className="p-4 text-sm text-muted-foreground">وحدات هذا المستوى قيد الإعداد.</Card>
+      ) : (
+        <JourneyMap units={units} pathSlug={path.slug} />
+      )}
     </main>
   );
 }

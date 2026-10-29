@@ -41,7 +41,7 @@ export const getCurriculum = cache(async (userId: string, pathId: string): Promi
   const supabase = await createClient();
   const { data: levels } = await supabase
     .from("levels")
-    .select("id, code, title, position, kind, units(id, code, title, position, status, package_size_bytes, quizzes(id, kind), lessons(id, position, title, skill, est_minutes, archived))")
+    .select("id, code, title, position, kind, units(id, code, title, position, status, package_size_bytes, stop_ar, quizzes(id, kind), lessons(id, position, title, skill, est_minutes, archived))")
     .eq("path_id", pathId)
     .eq("kind", "general")
     .order("position");
@@ -59,6 +59,7 @@ export const getCurriculum = cache(async (userId: string, pathId: string): Promi
         levelPosition: level.position,
         sizeBytes: u.package_size_bytes,
         quizId: (u.quizzes ?? []).find((q) => q.kind === "unit")?.id ?? null,
+        stop: u.stop_ar,
         lessons: (u.lessons ?? [])
           .filter((l) => !l.archived)
           .map((l) => ({ id: l.id, position: l.position, title: l.title, skill: l.skill, estMinutes: l.est_minutes })),

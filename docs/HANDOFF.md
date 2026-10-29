@@ -60,6 +60,11 @@ The artifact links are private to the owner; Claude Code cannot open them. Use t
 - Pilot cohort: who, which governorates.
 - Domain name or stay on `raved.vercel.app`.
 
+## 6b. Decisions after launch of the build (2026-10-29)
+- A1 = the ZAmericanEnglish playlist (25 episodes → 25 units), every lesson carries its episode; all topics, names and places from Hadramout.
+- Everything is mandatory and in order; the episode video must be watched (80%) by everyone, even on weak bundles (owner chose this knowing the data cost of 30–66MB per episode).
+- The platform must not be boring: activities, games and gamification in 3 phases (see CLAUDE.md «Gamification»).
+
 ## 7. Working style the owner expects
 - Reply in simple Arabic, step by step, click-by-click for any dashboard action.
 - One phase per session and per PR; give phone test steps (including airplane mode from phase 3).

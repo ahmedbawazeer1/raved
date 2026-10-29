@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, Circle, PlayCircle } from "lucide-react";
+import { CheckCircle2, Lock, PlayCircle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
@@ -55,18 +55,16 @@ export default async function UnitPage({ params }: PageProps<"/student/[path]/un
           {lessons.map((l) => {
             const done = curriculum.completedLessonIds.has(l.id);
             const isNow = nextLesson?.id === l.id;
-            return (
-              <Link
-                key={l.id}
-                href={`/student/learn/${l.id}`}
-                className="flex min-h-13 items-center gap-3 border-b border-muted py-2.5 text-sm text-foreground no-underline hover:text-foreground"
-              >
+            // Lessons open in order: only finished ones and the current one.
+            const locked = !done && !isNow;
+            const inner = (
+              <>
                 {done ? (
                   <CheckCircle2 className="size-5 text-success" aria-label="مكتمل" />
                 ) : isNow ? (
                   <PlayCircle className="size-5 text-primary" aria-label="الآن" />
                 ) : (
-                  <Circle className="size-5 text-[#9AA8A4]" aria-hidden="true" />
+                  <Lock className="size-5 text-[#9AA8A4]" aria-label="مقفل" />
                 )}
                 <span className="flex size-8 items-center justify-center rounded-lg bg-primary-tint text-primary">
                   <LessonIcon skill={l.skill} className="size-4" />
@@ -77,26 +75,52 @@ export default async function UnitPage({ params }: PageProps<"/student/[path]/un
                 {isNow && <Badge>الآن</Badge>}
                 {NEEDS_NETWORK.has(l.skill) && !done && <Badge tone="muted">يحتاج اتصالاً</Badge>}
                 {l.estMinutes && <span className="text-muted-foreground">{l.estMinutes} د</span>}
+              </>
+            );
+            return locked ? (
+              <div key={l.id} className="flex min-h-13 items-center gap-3 border-b border-muted py-2.5 text-sm text-muted-foreground">
+                {inner}
+              </div>
+            ) : (
+              <Link
+                key={l.id}
+                href={`/student/learn/${l.id}`}
+                className="flex min-h-13 items-center gap-3 border-b border-muted py-2.5 text-sm text-foreground no-underline hover:text-foreground"
+              >
+                {inner}
               </Link>
             );
           })}
-          {unit.quizId && (
-            <Link
-              href={`/student/quiz/${unit.quizId}`}
-              className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-foreground no-underline hover:text-foreground"
-            >
-              {unit.quizPassed ? (
-                <CheckCircle2 className="size-5 text-success" aria-label="ناجح" />
-              ) : (
-                <Circle className="size-5 text-[#9AA8A4]" aria-hidden="true" />
-              )}
-              <span className="flex size-8 items-center justify-center rounded-lg bg-warning-tint text-warning">
-                <LessonIcon skill="quiz" className="size-4" />
-              </span>
-              <span className="flex-1 font-semibold">اختبار الوحدة</span>
-              {unit.quizPassed && <Badge tone="success">نجحت</Badge>}
-            </Link>
-          )}
+          {unit.quizId && (() => {
+            const quizOpen = !nextLesson;
+            const inner = (
+              <>
+                {unit.quizPassed ? (
+                  <CheckCircle2 className="size-5 text-success" aria-label="ناجح" />
+                ) : quizOpen ? (
+                  <PlayCircle className="size-5 text-primary" aria-label="الآن" />
+                ) : (
+                  <Lock className="size-5 text-[#9AA8A4]" aria-label="مقفل" />
+                )}
+                <span className="flex size-8 items-center justify-center rounded-lg bg-warning-tint text-warning">
+                  <LessonIcon skill="quiz" className="size-4" />
+                </span>
+                <span className="flex-1 font-semibold">اختبار الوحدة</span>
+                {unit.quizPassed && <Badge tone="success">نجحت</Badge>}
+                {!quizOpen && <span className="text-xs">بعد إكمال الدروس</span>}
+              </>
+            );
+            return quizOpen ? (
+              <Link
+                href={`/student/quiz/${unit.quizId}`}
+                className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-foreground no-underline hover:text-foreground"
+              >
+                {inner}
+              </Link>
+            ) : (
+              <div className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-muted-foreground">{inner}</div>
+            );
+          })()}
         </Card>
       </main>
     </>

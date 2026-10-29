@@ -7,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
 import { MixedText } from "@/components/mixed-text";
 import { ProgressBar } from "@/components/student/progress-bar";
+import { XpBar } from "@/components/student/xp-bar";
+import { getXpRows } from "@/lib/gamification/queries";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { parseFeatures } from "@/lib/paths/features";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
@@ -34,7 +36,7 @@ export default async function TodayPage() {
     .is("read_at", null);
 
   const features = parseFeatures(path?.features);
-  const [{ data: placement }, deck] = await Promise.all([
+  const [{ data: placement }, deck, xpRows] = await Promise.all([
     path && features.placement
       ? supabase
           .from("placement_attempts")
@@ -46,7 +48,9 @@ export default async function TodayPage() {
           .maybeSingle()
       : Promise.resolve({ data: null }),
     path && features.vocab ? getVocabDeck(userId, path.id) : Promise.resolve(null),
+    getXpRows(userId),
   ]);
+  const xp = xpRows.reduce((sum, r) => sum + r.points, 0);
   const placementCard = path && features.placement && placement?.status !== "completed";
   const vocabToday = deck ? deck.cards.length : 0;
 
@@ -72,6 +76,8 @@ export default async function TodayPage() {
           {Boolean(unread) && <span className="absolute end-2 top-2 size-2.5 rounded-full bg-accent" />}
         </Link>
       </header>
+
+      <XpBar xp={xp} />
 
       {placementCard && (
         <Card className="flex items-center gap-3 border-accent p-4">

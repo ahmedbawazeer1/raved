@@ -4,6 +4,13 @@ import { login } from "./fixtures";
 test("a student completes today's lessons and passes the unit quiz", async ({ page }) => {
   await login(page);
 
+  // The journey map: the first stop is open, the quiz waits for the lessons.
+  await page.goto("/student/english");
+  await expect(page.getByRole("heading", { name: "رحلتك" })).toBeVisible();
+  await page.getByRole("link", { name: /الوحدة 1/ }).first().click();
+  await expect(page.getByText("بعد إكمال الدروس")).toBeVisible();
+  await page.goto("/student");
+
   // Today's session → first lesson (grammar).
   await page.getByRole("link", { name: "ابدأ جلسة اليوم" }).click();
   await expect(page).toHaveURL(/\/student\/learn\//);

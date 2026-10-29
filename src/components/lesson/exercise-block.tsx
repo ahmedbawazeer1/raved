@@ -1,18 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MixedText } from "@/components/mixed-text";
 import { checkAnswer, shuffleWords } from "@/lib/content/check-answer";
+import { markSolved, solvedStore } from "@/lib/gamification/events";
 import type { PackageQuestion } from "@/lib/content/types";
 import { QuestionInput, isAnswered, type Answer } from "./question-input";
 
 /** In-lesson exercise: checked on the device (works offline), with the Arabic explanation. */
 export function ExerciseBlock({ exercise }: { exercise: PackageQuestion }) {
   const [value, setValue] = useState<Answer>(undefined);
-  const [result, setResult] = useState<"right" | "wrong" | null>(null);
+  const [checked, setResult] = useState<"right" | "wrong" | null>(null);
+  // Solved before on this device: show it as solved (lessons require every exercise).
+  const solvedBefore = solvedStore.parse(useSyncExternalStore(solvedStore.subscribe, solvedStore.getSnapshot, solvedStore.getServerSnapshot)).has(exercise.id);
+  const result = checked ?? (solvedBefore ? "right" : null);
   const words = exercise.kind === "order_words" && Array.isArray(exercise.answer) ? shuffleWords(exercise.answer, exercise.id) : null;
 
   return (
@@ -45,7 +49,11 @@ export function ExerciseBlock({ exercise }: { exercise: PackageQuestion }) {
         </div>
       )}
       {result !== "right" && (
-        <Button type="button" disabled={!isAnswered(value)} onClick={() => setResult(checkAnswer(exercise, value) ? "right" : "wrong")}>
+        <Button type="button" disabled={!isAnswered(value)} onClick={() => {
+            const right = checkAnswer(exercise, value);
+            setResult(right ? "right" : "wrong");
+            if (right) markSolved(exercise.id);
+          }}>
           تحقق من الإجابة
         </Button>
       )}
