@@ -8,6 +8,8 @@ export interface UnitInput {
   levelPosition: number;
   sizeBytes: number | null;
   quizId: string | null;
+  /** Stop on the journey map (e.g. «المكلا»). */
+  stop?: string | null;
   lessons: { id: string; position: number; title: string; skill: string; estMinutes: number | null }[];
 }
 

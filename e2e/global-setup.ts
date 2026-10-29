@@ -54,4 +54,24 @@ export default async function globalSetup() {
   await admin.from("speaking_attempts").delete().eq("student_id", user!.id);
   await admin.from("ai_usage").delete().eq("student_id", user!.id);
   await admin.from("certificates").delete().eq("student_id", user!.id);
+  await admin.from("video_views").delete().eq("student_id", user!.id);
+  await admin.from("xp_events").delete().eq("student_id", user!.id);
+
+  // Lessons are completed only after their speaking/writing task is sent. The flows that test those
+  // tasks run on their own (practice.spec.ts); here every task already has one attempt.
+  const { data: lessons } = await admin.from("lessons").select("id, speaking_task, writing_task").eq("unit_id", unitId);
+  for (const lesson of lessons ?? []) {
+    if (lesson.speaking_task) {
+      const { error } = await admin
+        .from("speaking_attempts")
+        .insert({ student_id: user!.id, lesson_id: lesson.id, prompt_en: "seed", transcript: "Hello, I am a student.", duration_sec: 20 });
+      if (error) throw error;
+    }
+    if (lesson.writing_task) {
+      const { error } = await admin
+        .from("writing_submissions")
+        .insert({ student_id: user!.id, lesson_id: lesson.id, prompt_en: "seed", text: "I am a student. I am from Mukalla.", word_count: 8 });
+      if (error) throw error;
+    }
+  }
 }

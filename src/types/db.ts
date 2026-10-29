@@ -1409,6 +1409,7 @@ export type Database = {
           position: number
           source_package: Json | null
           status: string
+          stop_ar: string | null
           title: string
           topic: string
           updated_at: string
@@ -1425,6 +1426,7 @@ export type Database = {
           position: number
           source_package?: Json | null
           status?: string
+          stop_ar?: string | null
           title: string
           topic?: string
           updated_at?: string
@@ -1441,6 +1443,7 @@ export type Database = {
           position?: number
           source_package?: Json | null
           status?: string
+          stop_ar?: string | null
           title?: string
           topic?: string
           updated_at?: string
@@ -1452,6 +1455,47 @@ export type Database = {
             columns: ["level_id"]
             isOneToOne: false
             referencedRelation: "levels"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      video_views: {
+        Row: {
+          completed_at: string | null
+          created_at: string
+          duration_sec: number
+          first_seen_at: string
+          student_id: string
+          updated_at: string
+          watched_sec: number
+          youtube_id: string
+        }
+        Insert: {
+          completed_at?: string | null
+          created_at?: string
+          duration_sec: number
+          first_seen_at?: string
+          student_id: string
+          updated_at?: string
+          watched_sec?: number
+          youtube_id: string
+        }
+        Update: {
+          completed_at?: string | null
+          created_at?: string
+          duration_sec?: number
+          first_seen_at?: string
+          student_id?: string
+          updated_at?: string
+          watched_sec?: number
+          youtube_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "video_views_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
         ]
@@ -1663,12 +1707,51 @@ export type Database = {
           },
         ]
       }
+      xp_events: {
+        Row: {
+          created_at: string
+          id: string
+          kind: string
+          points: number
+          ref: string
+          student_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          kind: string
+          points: number
+          ref: string
+          student_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          kind?: string
+          points?: number
+          ref?: string
+          student_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "xp_events_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
       claim_certificates: { Args: never; Returns: number }
+      complete_lesson: { Args: { p_lesson_id: string }; Returns: Json }
       get_quiz: { Args: { p_quiz_id: string }; Returns: Json }
       import_placement_bank: {
         Args: { p_bank: Json; p_path_slug: string }
@@ -1677,8 +1760,14 @@ export type Database = {
       import_unit_package: { Args: { p_package: Json }; Returns: string }
       is_active_member: { Args: never; Returns: boolean }
       is_admin: { Args: never; Returns: boolean }
+      my_lesson_blocker: { Args: { p_lesson_id: string }; Returns: string }
+      my_quiz_open: { Args: { p_quiz_id: string }; Returns: boolean }
       notify_path_waitlist: { Args: { p_path_id: string }; Returns: string[] }
       publish_unit: { Args: { p_unit_id: string }; Returns: undefined }
+      record_video_watch: {
+        Args: { p_watched_sec: number; p_youtube_id: string }
+        Returns: Json
+      }
       review_application: {
         Args: { p_application_id: string; p_decision: string; p_note?: string }
         Returns: Json

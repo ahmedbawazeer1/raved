@@ -11,6 +11,10 @@ import { requireActiveStudent } from "@/lib/auth/session";
 import { parseFeatures } from "@/lib/paths/features";
 import { LEVELS, monthsToB2, SKILL_LABELS_AR, SKILLS, type Level } from "@/lib/placement/engine";
 import { examTrackOpen, streakDays } from "@/lib/student/stats";
+import { BadgeGrid } from "@/components/student/badge-grid";
+import { XpBar } from "@/components/student/xp-bar";
+import { getXpRows } from "@/lib/gamification/queries";
+import { badges, statsFromXp } from "@/lib/gamification/xp";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
 import { createClient } from "@/lib/supabase/server";
 
@@ -27,7 +31,7 @@ export default async function ProgressPage() {
   const curriculum = path ? await getCurriculum(userId, path.id) : null;
   const features = parseFeatures(path?.features);
 
-  const [skills, placement, lessons, quizzes, words, speaking, writing, exams, levels] = await Promise.all([
+  const [skills, placement, lessons, quizzes, words, speaking, writing, exams, levels, xpRows] = await Promise.all([
     path ? supabase.from("skill_estimates").select("skill, level").eq("student_id", userId).eq("path_id", path.id) : Promise.resolve({ data: [] }),
     path
       ? supabase
@@ -49,6 +53,7 @@ export default async function ProgressPage() {
       ? supabase.from("exams").select("code, name, availability_ye, locations, fee_note, payment_note, official_practice_url, verified_at").order("position")
       : Promise.resolve({ data: [] }),
     path ? supabase.from("levels").select("code, est_hours").eq("path_id", path.id).eq("kind", "general") : Promise.resolve({ data: [] }),
+    getXpRows(userId),
   ]);
 
   const streak = streakDays([
@@ -118,6 +123,9 @@ export default async function ProgressPage() {
           </Card>
         ))}
       </div>
+
+      <XpBar xp={xpRows.reduce((sum, r) => sum + r.points, 0)} />
+      <BadgeGrid badges={badges(statsFromXp(xpRows, streak))} />
 
       <Card className="flex flex-col gap-1 px-4 py-3">
         <div className="flex items-center justify-between pb-1">

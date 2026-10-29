@@ -18,6 +18,8 @@ update public.lessons set review_status = 'approved' where unit_id = :'unit_id';
 select public.publish_unit(:'unit_id');
 select id as word_id from public.vocab_items where unit_id = :'unit_id' order by position limit 1 \gset
 select id as quiz_id from public.quizzes where unit_id = :'unit_id' \gset
+insert into public.lesson_progress (student_id, lesson_id, status, completed_at)
+select :'st', id, 'completed', now() from public.lessons where unit_id = :'unit_id';
 
 -- placement bank was seeded by its migration
 select tests.ok((select count(*) from public.placement_questions where path_id = :'english' and not archived) = 40, 'placement bank seeded (40 questions)');

@@ -24,6 +24,22 @@ begin
 end;
 $$;
 
+-- Asserts that running `sql` raises an error whose message is exactly `expected`.
+create or replace function tests.throws_msg(sql text, expected text, msg text) returns void language plpgsql as $$
+begin
+  begin
+    execute sql;
+  exception when others then
+    if sqlerrm <> expected then
+      raise exception 'FAILED (wrong error "%", expected "%"): %', sqlerrm, expected, msg;
+    end if;
+    raise notice 'ok - %', msg;
+    return;
+  end;
+  raise exception 'FAILED (no error): %', msg;
+end;
+$$;
+
 -- Number of rows `sql` returns (or changes, with RETURNING) for the current role.
 create or replace function tests.count(sql text) returns bigint language plpgsql as $$
 declare n bigint;

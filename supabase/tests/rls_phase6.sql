@@ -17,6 +17,8 @@ select public.publish_unit(:'unit_id');
 select id as quiz_id from public.quizzes where unit_id = :'unit_id' \gset
 -- A1 plans 12 units; for this test one published unit is the whole level.
 update public.levels set planned_units = 1 where id = :'a1';
+insert into public.lesson_progress (student_id, lesson_id, status, completed_at)
+select :'st', id, 'completed', now() from public.lessons where unit_id = :'unit_id';
 
 set local role authenticated;
 select set_config('request.jwt.claims', json_build_object('sub', :'st')::text, true);

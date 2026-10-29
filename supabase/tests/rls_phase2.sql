@@ -50,6 +50,9 @@ select tests.ok((select count(*) from public.vocab_items where unit_id = :'unit_
 select public.import_unit_package(:'pkg'::jsonb);
 select tests.ok((select count(*) from public.lessons where unit_id = :'unit_id' and not archived) = 2, 'lesson comes back on re-import');
 update public.lessons set review_status = 'approved' where unit_id = :'unit_id';
+-- the unit quiz opens after the unit's lessons (completed here directly, as the server would)
+insert into public.lesson_progress (student_id, lesson_id, status, completed_at)
+select :'st', id, 'completed', now() from public.lessons where unit_id = :'unit_id' and not archived;
 
 -- active student
 set local role authenticated;
@@ -70,8 +73,9 @@ select tests.ok(public.submit_quiz(:'quiz_id', '{}'::jsonb, 'aaaaaaaa-0000-0000-
 select tests.ok((select results -> 0 ->> 'explanation_ar' from public.quiz_attempts where id = :'att2') is not null, 'results include explanations');
 select tests.throws(format('insert into public.quiz_attempts (student_id, quiz_id, answers, results, correct, total, score, passed) values (%L, %L, ''{}'', ''[]'', 5, 5, 100, true)', :'st', :'quiz_id'), 'student cannot forge an attempt');
 
-insert into public.lesson_progress (student_id, lesson_id, status, completed_at) values (:'st', :'lesson_id', 'completed', now());
-select tests.ok(tests.count('select * from public.lesson_progress') = 1, 'student records progress');
+select tests.throws(format('update public.lesson_progress set completed_at = now() - interval ''1 day'' where student_id = %L', :'st'), 'student cannot change completion directly');
+update public.lesson_progress set rating = 'useful' where student_id = :'st' and lesson_id = :'lesson_id';
+select tests.ok(tests.count('select * from public.lesson_progress where rating = ''useful''') = 1, 'student rates own lesson');
 select tests.throws(format('insert into public.lesson_progress (student_id, lesson_id) values (%L, %L)', :'pe', :'lesson_id'), 'cannot write progress for another student');
 insert into public.reports (student_id, lesson_id, kind, note) values (:'st', :'lesson_id', 'error', 'خطأ إملائي');
 select tests.ok(tests.count('select * from public.reports') = 1, 'student reports an error');

@@ -185,6 +185,11 @@
     "context_note": {
       "type": "string",
       "description": "optional note on local (Yemeni) context used in the unit"
+    },
+    "stop_ar": {
+      "type": "string",
+      "maxLength": 40,
+      "description": "Arabic name of the unit's stop on the journey map, e.g. المكلا"
     }
   },
   "$defs": {

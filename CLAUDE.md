@@ -3,7 +3,7 @@
 You are the sole developer of Raved. The project owner is a **non-programmer** acting as product manager. Read this file at the start of every session, then `docs/HANDOFF.md` (decisions and history from the planning conversation), then the docs it points to for the task at hand.
 
 ## What Raved is
-A free, Arabic (RTL) **multi-path learning platform for secondary-school students in Yemen**. Each path = levels → units → lessons → blocks, with quizzes and level certificates. The first and most important path is **English: from zero to international-exam ready** (CEFR A1→B2, then an IELTS / TOEFL iBT / Duolingo English Test prep track). More paths (web development, data analysis, digital design) come later and must be addable **with content only, no new code**.
+A free, Arabic (RTL) **multi-path learning platform for secondary-school students in Yemen**. Each path = levels → units → lessons → blocks, with quizzes and level certificates. The first and most important path is **English: from zero to international-exam ready** (CEFR A1→B2, then an IELTS / TOEFL iBT / Duolingo English Test prep track). Level A1 follows the ZAmericanEnglish beginner playlist (25 units, one per episode), set entirely in Hadramout. More paths (web development, data analysis, digital design) come later and must be addable **with content only, no new code**.
 
 ## Where everything is
 | File | What |
@@ -68,7 +68,9 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 ## Low-bandwidth & offline rules (non-negotiable)
 - **Data saver ON by default**: no autoplay video, YouTube iframe loads only after tap (show a thumbnail-free placeholder with duration and approx. size).
 - Initial JS < 200KB gzipped on student pages; self-host fonts with `next/font` and subset; no heavy client libraries.
-- Every lesson must be fully usable **without video**.
+- **Videos are mandatory (owner decision, 2026-10-29):** a lesson completes only after 80% of its video was really played (skipping ahead does not count; tracked per YouTube video in `video_views`, enforced by `complete_lesson()`). Videos still load only after a tap, and every lesson still carries its full Arabic explanation, exercises and TTS listening. A video marked `needs_check` does not block.
+- **Everything is mandatory and in order:** lessons open one after another, the unit quiz opens after all lessons, the next unit after passing the quiz (`private.unit_open/lesson_open/quiz_open`). In-lesson exercises must all be solved, and the speaking/writing task sent (unless AI is paused).
+- **Gamification** (`src/lib/gamification/`): points in `xp_events` (written only by DB functions/triggers), player levels, Hadrami-named badges, the «رحلة حضرموت» journey map (`units.stop_ar`, from the package field `stop_ar`). Planned next: games and activities (phase 2), in-video questions, weekly league, duels, story (phase 3).
 - Units downloadable for offline (< 2MB without video). Progress, quiz answers and writing drafts are queued in IndexedDB and synced later; the server re-grades quizzes (never trust client scores).
 - Show a clear offline banner and pending-sync count. Never lose user input.
 - Details: `docs/OFFLINE.md`.
