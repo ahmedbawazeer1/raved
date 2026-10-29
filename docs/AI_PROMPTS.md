@@ -96,3 +96,12 @@ Reuse the writing/speaking prompts with `TASK` = the placement item and return o
 - Redaction is tested with Arabic and English names, Yemeni phone formats (`+967 7x xxx xxxx`, `77xxxxxxx`), emails.
 - Store `model`, `provider`, and prompt version with every attempt for the monthly human-agreement review (`/admin/ai-review`).
 - If the provider returns rate-limit/quota errors: show «التقييم متوقف مؤقتاً، جرّب لاحقاً» and keep the draft/transcript queued for evaluation later.
+
+
+## 6. Role-play with a unit character (`src/lib/ai/prompts/roleplay.ts`, version `roleplay-v1`)
+
+- Each unit package may define `roleplay` (`character_ar`, `scenario_en`, `opening_en`): a Hadrami character (fisherman in Al-Shihr, honey seller in Seiyun, doctor in Al-Qatn…).
+- Provider: Groq only (student text). Student messages are redacted (`redact.ts`) before the call; the last 8 messages are sent; nothing is stored except the `ai_usage` row.
+- Counts against the student's daily **assistant** limit. After 4 student messages the conversation earns 5 points once per unit (`record_roleplay()`).
+- System prompt: plain-language role, level-appropriate English (max 2 short sentences), the unit's grammar and words, one question per turn, gentle recasts of mistakes, short Arabic hint only when the student writes Arabic, respectful local topics, never personal data, never homework answers.
+- Replies are shown as «تقديري» context (AI), and the student can listen to them with the phone's voice.

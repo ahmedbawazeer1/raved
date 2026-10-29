@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-02",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 2,
   "title": "Jobs",
@@ -715,6 +715,38 @@
           "approx_size_mb": 32
         },
         {
+          "type": "story",
+          "id": "A1-02-s1",
+          "title_ar": "الحلقة 2: صياد في الشحر",
+          "panels": [
+            {
+              "speaker": "Reem",
+              "text_en": "Hamza, this is my uncle Salem. He's a fisherman.",
+              "text_ar": "حمزة، هذا عمي سالم. هو صياد."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Hello, sir. Is your boat here in Al-Shihr?",
+              "text_ar": "مرحباً يا عم. هل قاربك هنا في الشحر؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, it is. I'm a fisherman, and my son is a driver.",
+              "text_ar": "نعم. أنا صياد، وابني سائق."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "My father is a farmer. He's a date farmer in Seiyun.",
+              "text_ar": "أبي مزارع. هو مزارع نخيل في سيئون."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Fishermen and farmers! Hadramout is full of work.",
+              "text_ar": "صيادون ومزارعون! حضرموت مليئة بالعمل."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-02-e17",
@@ -907,5 +939,10 @@
     ]
   },
   "context_note": "الصيد في المكلا والشحر، نخيل وادي حضرموت، عسل السدر في دوعن، بيوت الطين في شبام.",
-  "stop_ar": "الشحر"
+  "stop_ar": "الشحر",
+  "roleplay": {
+    "character_ar": "العم سالم، صياد في الشحر",
+    "scenario_en": "You are Uncle Salem, a fisherman in Al-Shihr. Talk about jobs: ask the student about the jobs of their family.",
+    "opening_en": "Hello! I'm a fisherman. And you? What's your father's job?"
+  }
 }

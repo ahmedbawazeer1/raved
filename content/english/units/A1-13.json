@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-13",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 13,
   "title": "My Body",
@@ -763,6 +763,38 @@
           "approx_size_mb": 59
         },
         {
+          "type": "story",
+          "id": "A1-13-s1",
+          "title_ar": "الحلقة 13: عند الطبيب في القطن",
+          "panels": [
+            {
+              "speaker": "Doctor",
+              "text_en": "Hello, Hamza. What's the matter?",
+              "text_ar": "مرحباً يا حمزة. ما بك؟"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "I have a headache, and my feet hurt.",
+              "text_ar": "عندي صداع، وقدماي تؤلمانني."
+            },
+            {
+              "speaker": "Doctor",
+              "text_en": "It's the sun. Drink a lot of water and rest.",
+              "text_ar": "إنها الشمس. اشرب ماءً كثيراً واسترح."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Don't walk in the sun at noon, Hamza!",
+              "text_ar": "لا تمشِ في الشمس وقت الظهر يا حمزة!"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "OK, OK! Our trip is long, but it's beautiful.",
+              "text_ar": "حسناً، حسناً! رحلتنا طويلة، لكنها جميلة."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-13-e17",
@@ -953,5 +985,10 @@
     ]
   },
   "context_note": "الطبيب في سيئون، حر الصيف في الوادي، الشماغ على الرأس، البطيخ والخيار.",
-  "stop_ar": "القطن"
+  "stop_ar": "القطن",
+  "roleplay": {
+    "character_ar": "الطبيب في القطن",
+    "scenario_en": "You are a doctor in Al-Qatn. The student is a patient. Ask what's the matter and give simple advice with imperatives.",
+    "opening_en": "Hello! Come in, please. What's the matter?"
+  }
 }

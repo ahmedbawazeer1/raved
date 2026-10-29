@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-06",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 6,
   "title": "Animals",
@@ -756,6 +756,38 @@
           "approx_size_mb": 33
         },
         {
+          "type": "story",
+          "id": "A1-06-s1",
+          "title_ar": "الحلقة 6: سلاحف شرمة",
+          "panels": [
+            {
+              "speaker": "Reem",
+              "text_en": "Hamza, look! A big turtle on the sand!",
+              "text_ar": "حمزة، انظر! سلحفاة كبيرة على الرمل!"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Wow! Does it have eggs?",
+              "text_ar": "واو! هل معها بيض؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Yes, it has about one hundred eggs.",
+              "text_ar": "نعم، معها حوالي مئة بيضة."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "We don't have turtles in Seiyun. We have camels and goats.",
+              "text_ar": "ليس عندنا سلاحف في سيئون. عندنا جمال وماعز."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Shh! Don't use your phone light. Turtles don't like it.",
+              "text_ar": "اششش! لا تستعمل ضوء هاتفك. السلاحف لا تحبه."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-06-e17",
@@ -948,5 +980,10 @@
     ]
   },
   "context_note": "السلاحف البحرية في شاطئ شرمة، جمال صحراء ثمود، نحل دوعن، مزارع وادي حضرموت.",
-  "stop_ar": "شرمة"
+  "stop_ar": "شرمة",
+  "roleplay": {
+    "character_ar": "حارس شاطئ شرمة",
+    "scenario_en": "You are a volunteer who protects sea turtles at Sharma beach. Ask the student about animals they have or like.",
+    "opening_en": "Welcome to Sharma! Do you have animals at home?"
+  }
 }

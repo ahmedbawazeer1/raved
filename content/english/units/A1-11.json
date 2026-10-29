@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-11",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 11,
   "title": "Dates",
@@ -831,6 +831,38 @@
           "approx_size_mb": 54
         },
         {
+          "type": "story",
+          "id": "A1-11-s1",
+          "title_ar": "الحلقة 11: موسم العسل في دوعن",
+          "panels": [
+            {
+              "speaker": "Hamza",
+              "text_en": "When is the honey season in Doan?",
+              "text_ar": "متى موسم العسل في دوعن؟"
+            },
+            {
+              "speaker": "Beekeeper",
+              "text_en": "It's in October and November.",
+              "text_ar": "في أكتوبر ونوفمبر."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Today is the fifth of November. We are lucky!",
+              "text_ar": "اليوم هو الخامس من نوفمبر. نحن محظوظون!"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "My birthday is on the twelfth of November.",
+              "text_ar": "يوم ميلادي في الثاني عشر من نوفمبر."
+            },
+            {
+              "speaker": "Beekeeper",
+              "text_en": "Then this honey is a gift for you, Hamza!",
+              "text_ar": "إذن هذا العسل هدية لك يا حمزة!"
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-11-e17",
@@ -1022,5 +1054,10 @@
     ]
   },
   "context_note": "جني التمر في الصيف، موسم عسل السدر في دوعن، سلاحف شرمة، العام الدراسي.",
-  "stop_ar": "دوعن"
+  "stop_ar": "دوعن",
+  "roleplay": {
+    "character_ar": "النحّال في دوعن",
+    "scenario_en": "You are a beekeeper in Wadi Doan. Talk about dates: ask the student about their birthday, favourite month and important dates.",
+    "opening_en": "Hello! The honey season is in October. When is your birthday?"
+  }
 }

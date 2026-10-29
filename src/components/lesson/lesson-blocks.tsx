@@ -7,6 +7,7 @@ import { AudioBlock } from "./audio-block";
 import { VideoBlock, type VideoStatus } from "./video-block";
 import { ExerciseBlock } from "./exercise-block";
 import { GameBlock } from "./game-block";
+import { StoryBlock } from "./story-block";
 import type { GameWord } from "@/lib/games/logic";
 
 /**
@@ -74,9 +75,11 @@ export function LessonBlocks({
           case "audio":
             return block.text_en ? <AudioBlock key={i} text={block.text_en} /> : null;
           case "video":
-            return <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} />;
+            return <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} words={words} />;
           case "exercise":
             return block.exercise ? <ExerciseBlock key={i} exercise={block.exercise} /> : null;
+          case "story":
+            return block.id && block.panels?.length ? <StoryBlock key={i} id={block.id} title={block.title_ar} panels={block.panels} /> : null;
           case "game":
             return block.id && block.game ? <GameBlock key={i} id={block.id} kind={block.game} title={block.title_ar} words={words} /> : null;
           default:

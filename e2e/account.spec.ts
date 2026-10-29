@@ -23,3 +23,17 @@ test("the public certificate check rejects an unknown code", async ({ page }) =>
   await expect(page.getByRole("heading", { name: "التحقق من شهادة" })).toBeVisible();
   await expect(page.getByText("لم نجد شهادة بهذا الرمز")).toBeVisible();
 });
+
+test("the weekly league, games hub and friend duels open", async ({ page }) => {
+  await login(page);
+  await page.getByRole("link", { name: /الدوري/ }).first().click();
+  await expect(page.getByText("ترتيبك:")).toBeVisible();
+  await page.getByRole("button", { name: "شارك في الدوري" }).click();
+  await expect(page.getByRole("button", { name: "اخرج من الدوري" })).toBeVisible();
+
+  await page.goto("/student/practice/games");
+  await expect(page.getByText("ساحة الألعاب").first()).toBeVisible();
+
+  await page.goto("/student/duel");
+  await expect(page.getByRole("button", { name: /أنشئ تحدياً جديداً/ })).toBeVisible();
+});

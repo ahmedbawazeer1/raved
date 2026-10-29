@@ -899,6 +899,7 @@ export type Database = {
       }
       profiles: {
         Row: {
+          league_opt_in: boolean
           birth_date: string | null
           city: string | null
           created_at: string
@@ -920,6 +921,7 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          league_opt_in?: boolean
           birth_date?: string | null
           city?: string | null
           created_at?: string
@@ -941,6 +943,7 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          league_opt_in?: boolean
           birth_date?: string | null
           city?: string | null
           created_at?: string
@@ -1399,6 +1402,7 @@ export type Database = {
       }
       units: {
         Row: {
+          roleplay: Json | null
           can_do: string
           code: string
           created_at: string
@@ -1416,6 +1420,7 @@ export type Database = {
           version: number
         }
         Insert: {
+          roleplay?: Json | null
           can_do?: string
           code: string
           created_at?: string
@@ -1433,6 +1438,7 @@ export type Database = {
           version?: number
         }
         Update: {
+          roleplay?: Json | null
           can_do?: string
           code?: string
           created_at?: string
@@ -1752,6 +1758,8 @@ export type Database = {
     Functions: {
       claim_certificates: { Args: never; Returns: number }
       complete_lesson: { Args: { p_lesson_id: string }; Returns: Json }
+      create_duel: { Args: never; Returns: string }
+      get_duel: { Args: { p_code: string }; Returns: Json }
       get_quiz: { Args: { p_quiz_id: string }; Returns: Json }
       import_placement_bank: {
         Args: { p_bank: Json; p_path_slug: string }
@@ -1760,11 +1768,13 @@ export type Database = {
       import_unit_package: { Args: { p_package: Json }; Returns: string }
       is_active_member: { Args: never; Returns: boolean }
       is_admin: { Args: never; Returns: boolean }
+      my_duels: { Args: never; Returns: Json }
       my_lesson_blocker: { Args: { p_lesson_id: string }; Returns: string }
       my_quiz_open: { Args: { p_quiz_id: string }; Returns: boolean }
       notify_path_waitlist: { Args: { p_path_id: string }; Returns: string[] }
       publish_unit: { Args: { p_unit_id: string }; Returns: undefined }
       record_game: { Args: { p_game: string }; Returns: number }
+      record_roleplay: { Args: { p_unit_id: string }; Returns: undefined }
       record_video_watch: {
         Args: { p_watched_sec: number; p_youtube_id: string }
         Returns: Json
@@ -1773,9 +1783,14 @@ export type Database = {
         Args: { p_application_id: string; p_decision: string; p_note?: string }
         Returns: Json
       }
+      set_league_opt_in: { Args: { p_join: boolean }; Returns: undefined }
       submit_application: {
         Args: { p_guardian_consent: boolean; p_privacy_consent: boolean }
         Returns: string
+      }
+      submit_duel: {
+        Args: { p_answers: Json; p_code: string; p_time_ms: number }
+        Returns: number
       }
       submit_quiz: {
         Args: {
@@ -1788,6 +1803,7 @@ export type Database = {
         Returns: string
       }
       verify_certificate: { Args: { p_code: string }; Returns: Json }
+      weekly_league: { Args: { p_scope?: string }; Returns: Json }
     }
     Enums: {
       [_ in never]: never

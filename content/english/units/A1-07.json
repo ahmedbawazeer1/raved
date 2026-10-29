@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-07",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 7,
   "title": "Opposites",
@@ -781,6 +781,38 @@
           "approx_size_mb": 66
         },
         {
+          "type": "story",
+          "id": "A1-07-s1",
+          "title_ar": "الحلقة 7: ناطحات سحاب شبام",
+          "panels": [
+            {
+              "speaker": "Hamza",
+              "text_en": "Welcome to Shibam! The houses are very tall.",
+              "text_ar": "أهلاً بكِ في شبام! البيوت عالية جداً."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "They are old, but they are beautiful.",
+              "text_ar": "إنها قديمة، لكنها جميلة."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Is Mukalla old?",
+              "text_ar": "هل المكلا قديمة؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Some parts are old, but Mukalla is a big, busy city.",
+              "text_ar": "بعض أجزائها قديمة، لكن المكلا مدينة كبيرة ومزدحمة."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Shibam is small and quiet. I like it!",
+              "text_ar": "شبام صغيرة وهادئة. أحبها!"
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-07-e16",
@@ -973,5 +1005,10 @@
     ]
   },
   "context_note": "شبام ذات البيوت الطينية العالية، الساحل والوادي، تريم وشوارعها الضيقة، المكلا والشحر.",
-  "stop_ar": "شبام"
+  "stop_ar": "شبام",
+  "roleplay": {
+    "character_ar": "مرشد سياحي في شبام",
+    "scenario_en": "You are a tour guide in Shibam. Ask the student to describe their city using adjectives (big, small, old, new, hot, cold).",
+    "opening_en": "Welcome to Shibam! The houses are tall and old. Is your city big or small?"
+  }
 }

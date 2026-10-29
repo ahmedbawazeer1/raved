@@ -190,6 +190,30 @@
       "type": "string",
       "maxLength": 40,
       "description": "Arabic name of the unit's stop on the journey map, e.g. المكلا"
+    },
+    "roleplay": {
+      "type": "object",
+      "description": "AI conversation partner of the unit (Hadrami character)",
+      "required": [
+        "character_ar",
+        "scenario_en",
+        "opening_en"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "character_ar": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "scenario_en": {
+          "type": "string",
+          "maxLength": 600
+        },
+        "opening_en": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
     }
   },
   "$defs": {
@@ -207,7 +231,8 @@
             "audio",
             "table",
             "exercise",
-            "game"
+            "game",
+            "story"
           ]
         },
         "markdown_ar": {
@@ -275,7 +300,7 @@
         },
         "id": {
           "type": "string",
-          "description": "for type=game: stable id, e.g. A1-01-g1"
+          "description": "for type=game or story: stable id, e.g. A1-01-g1 / A1-01-s1"
         },
         "game": {
           "enum": [
@@ -293,7 +318,31 @@
         },
         "title_ar": {
           "type": "string",
-          "description": "for type=game: optional Arabic title"
+          "description": "for type=game or story: Arabic title"
+        },
+        "panels": {
+          "type": "array",
+          "description": "for type=story: lines of the episode",
+          "items": {
+            "type": "object",
+            "required": [
+              "speaker",
+              "text_en",
+              "text_ar"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "speaker": {
+                "type": "string"
+              },
+              "text_en": {
+                "type": "string"
+              },
+              "text_ar": {
+                "type": "string"
+              }
+            }
+          }
         }
       }
     },

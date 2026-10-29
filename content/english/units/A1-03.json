@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-03",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 3,
   "title": "My Family",
@@ -753,6 +753,38 @@
           "approx_size_mb": 49
         },
         {
+          "type": "story",
+          "id": "A1-03-s1",
+          "title_ar": "الحلقة 3: بيت حمزة في سيئون",
+          "panels": [
+            {
+              "speaker": "Hamza",
+              "text_en": "Welcome to my family's house in Seiyun, Reem!",
+              "text_ar": "أهلاً بكِ في بيت عائلتي في سيئون يا ريم!"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Thank you! Who is this?",
+              "text_ar": "شكراً! من هذا؟"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "This is my grandfather. His name is Ahmed.",
+              "text_ar": "هذا جدي. اسمه أحمد."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "And who is she?",
+              "text_ar": "ومن هي؟"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "She's my sister. Her name is Maha. Our family is big!",
+              "text_ar": "هي أختي. اسمها مها. عائلتنا كبيرة!"
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-03-e16",
@@ -945,5 +977,10 @@
     ]
   },
   "context_note": "عائلة حضرمية ممتدة في سيئون يعيش معها الجد أو الجدة، وزيارة الأعمام يوم الجمعة.",
-  "stop_ar": "سيئون"
+  "stop_ar": "سيئون",
+  "roleplay": {
+    "character_ar": "الجدة فاطمة في سيئون",
+    "scenario_en": "You are Grandmother Fatima in Seiyun. Ask the student about their family members: names and ages.",
+    "opening_en": "Welcome, my child! Tell me about your family. Do you have brothers?"
+  }
 }

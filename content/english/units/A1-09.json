@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-09",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 9,
   "title": "Numbers",
@@ -829,6 +829,43 @@
           "approx_size_mb": 56
         },
         {
+          "type": "story",
+          "id": "A1-09-s1",
+          "title_ar": "الحلقة 9: سوق سيئون",
+          "panels": [
+            {
+              "speaker": "Hamza",
+              "text_en": "How much is this honey?",
+              "text_ar": "بكم هذا العسل؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "It's ten thousand rials. It's sidr honey from Doan.",
+              "text_ar": "بعشرة آلاف ريال. هذا عسل سدر من دوعن."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "That's expensive! How much are these dates?",
+              "text_ar": "هذا غالٍ! بكم هذا التمر؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "They're one thousand rials a kilo.",
+              "text_ar": "بألف ريال للكيلو."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Two kilos of dates, please.",
+              "text_ar": "كيلوان من التمر من فضلك."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Here you are. That's two thousand rials.",
+              "text_ar": "تفضل. المجموع ألفا ريال."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-09-e16",
@@ -1021,5 +1058,10 @@
     ]
   },
   "context_note": "السوق القديم في سيئون، عسل السدر من دوعن، تمور الوادي. الأسعار بالريال أمثلة تقريبية للتدريب فقط.",
-  "stop_ar": "سوق سيئون"
+  "stop_ar": "سوق سيئون",
+  "roleplay": {
+    "character_ar": "بائع العسل في سوق سيئون",
+    "scenario_en": "You are a honey and dates seller in the old market of Seiyun. Prices are in rials. The student asks about prices and buys.",
+    "opening_en": "Welcome! Sidr honey and fresh dates. What do you want?"
+  }
 }

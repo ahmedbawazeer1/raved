@@ -78,6 +78,24 @@ export default async function TodayPage() {
       </header>
 
       <XpBar xp={xp} />
+      <nav aria-label="تحديات" className="grid grid-cols-3 gap-2">
+        {[
+          { href: "/student/league", icon: "🏆", label: "الدوري" },
+          { href: "/student/duel", icon: "⚔️", label: "تحدي صديق" },
+          { href: "/student/practice/games", icon: "🎮", label: "الألعاب" },
+        ].map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="flex min-h-16 flex-col items-center justify-center gap-0.5 rounded-2xl border border-border bg-card text-sm font-semibold text-foreground no-underline hover:border-primary hover:text-foreground"
+          >
+            <span className="text-xl" aria-hidden="true">
+              {l.icon}
+            </span>
+            {l.label}
+          </Link>
+        ))}
+      </nav>
 
       {placementCard && (
         <Card className="flex items-center gap-3 border-accent p-4">

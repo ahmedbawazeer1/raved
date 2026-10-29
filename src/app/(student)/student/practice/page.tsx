@@ -27,12 +27,20 @@ export default async function PracticePage() {
   const curriculum = path ? await getCurriculum(userId, path.id) : null;
   const reached = (curriculum?.units ?? []).filter((u) => u.state !== "locked").map((u) => u.id);
   const supabase = await createClient();
-  const [tasks, today, { data: speaking }, { data: writing }] = await Promise.all([
+  const [tasks, today, { data: speaking }, { data: writing }, { data: roleplayUnits }] = await Promise.all([
     path ? listPracticeTasks(path.id, reached) : Promise.resolve([]),
     remainingToday(userId),
     supabase.from("speaking_attempts").select("id, lesson_id, scores, created_at, lessons(title)").eq("student_id", userId).order("created_at", { ascending: false }).limit(10),
     supabase.from("writing_submissions").select("id, lesson_id, status, scores, version, created_at, lessons(title)").eq("student_id", userId).order("created_at", { ascending: false }).limit(10),
+    reached.length && features.speaking
+      ? supabase.from("units").select("id, title, position, roleplay").in("id", reached).not("roleplay", "is", null).order("position")
+      : Promise.resolve({ data: [] as { id: string; title: string; position: number; roleplay: unknown }[] }),
   ]);
+  // Role-play characters of the units the student has reached.
+  const roleplays = (roleplayUnits ?? []).flatMap((u) => {
+    const role = u.roleplay as { character_ar?: string } | null;
+    return role?.character_ar ? [{ id: u.id, title: u.title, position: u.position, character: role.character_ar }] : [];
+  });
   const visible = tasks.filter((t) => (t.kind === "speaking" ? features.speaking : features.writing));
   const history = [
     ...(features.speaking ? (speaking ?? []).map((a) => ({ kind: "speaking" as const, ...a, status: "evaluated", version: 1 })) : []),
@@ -85,6 +93,39 @@ export default async function PracticePage() {
           <Badge>متاح</Badge>
         </Link>
       ))}
+
+      <Link
+        href="/student/duel"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-card p-4 text-foreground no-underline hover:text-foreground"
+      >
+        <span className="text-2xl" aria-hidden="true">
+          ⚔️
+        </span>
+        <span className="flex-1 font-semibold">تحدي صديق · 10 كلمات، من الأسرع؟</span>
+      </Link>
+
+      {roleplays.length > 0 && (
+        <>
+          <h2 className="mt-2 font-bold">تحدث مع شخصيات الرحلة</h2>
+          {roleplays.map((r) => (
+            <Link
+              key={r.id}
+              href={`/student/practice/roleplay/${r.id}`}
+              className="flex min-h-14 items-center gap-3 rounded-2xl border border-ai-tint bg-card p-4 text-foreground no-underline hover:text-foreground"
+            >
+              <span className="text-2xl" aria-hidden="true">
+                💬
+              </span>
+              <span className="flex-1">
+                <span className="block font-semibold">{r.character}</span>
+                <span className="block text-xs text-muted-foreground">
+                  الوحدة {r.position} · <En>{r.title}</En>
+                </span>
+              </span>
+            </Link>
+          ))}
+        </>
+      )}
 
       <Link
         href="/student/practice/listen"
