@@ -18,7 +18,7 @@ export default async function QuizPage({ params }: PageProps<"/student/quiz/[qui
   // Questions come without answers (get_quiz runs on the server).
   const [{ data: quiz, error }, { data: meta }, { data: open }] = await Promise.all([
     supabase.rpc("get_quiz", { p_quiz_id: quizId }),
-    supabase.from("quizzes").select("units(id, levels(paths(slug)))").eq("id", quizId).maybeSingle(),
+    supabase.from("quizzes").select("units(id, stop_ar, levels(paths(slug)))").eq("id", quizId).maybeSingle(),
     supabase.rpc("my_quiz_open", { p_quiz_id: quizId }),
   ]);
   if (error || !quiz) notFound();
@@ -45,7 +45,7 @@ export default async function QuizPage({ params }: PageProps<"/student/quiz/[qui
 
   return (
     <div className="fixed inset-0 z-30 overflow-y-auto bg-background">
-      <QuizRunner quizId={quizId} questions={questions} closeHref={closeHref} />
+      <QuizRunner quizId={quizId} questions={questions} closeHref={closeHref} stop={unit?.stop_ar ?? null} />
     </div>
   );
 }

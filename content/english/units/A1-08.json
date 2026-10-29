@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-08",
-  "version": 5,
+  "version": 6,
   "level": "A1",
   "position": 8,
   "title": "Vegetables",
@@ -293,6 +293,26 @@
             "answer": "potatoes",
             "explanation_ar": "نضيف es: potatoes."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g1",
+          "game": "flashcards"
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g2",
+          "game": "match"
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g3",
+          "game": "listen"
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g4",
+          "game": "pronounce"
         }
       ]
     },
@@ -515,6 +535,11 @@
             "answer": 0,
             "explanation_ar": "قالت: My children like salad."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g5",
+          "game": "dictation"
         }
       ]
     },
@@ -759,6 +784,26 @@
             "answer": 1,
             "explanation_ar": "النفي مع she: doesn't like."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g6",
+          "game": "memory"
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g7",
+          "game": "swipe"
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g8",
+          "game": "spell"
+        },
+        {
+          "type": "game",
+          "id": "A1-08-g9",
+          "game": "speed"
         },
         {
           "type": "exercise",

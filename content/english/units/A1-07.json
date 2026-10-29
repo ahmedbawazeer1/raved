@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-07",
-  "version": 5,
+  "version": 6,
   "level": "A1",
   "position": 7,
   "title": "Opposites",
@@ -340,6 +340,26 @@
             "answer": "old",
             "explanation_ar": "ضد جديد new هو قديم old."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g1",
+          "game": "flashcards"
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g2",
+          "game": "match"
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g3",
+          "game": "listen"
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g4",
+          "game": "pronounce"
         }
       ]
     },
@@ -542,6 +562,11 @@
             "answer": 1,
             "explanation_ar": "قالت: It's about five hours by car."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g5",
+          "game": "dictation"
         }
       ]
     },
@@ -786,6 +811,26 @@
             "answer": 1,
             "explanation_ar": "الصفة قبل الاسم ولا تأخذ s."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g6",
+          "game": "memory"
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g7",
+          "game": "swipe"
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g8",
+          "game": "spell"
+        },
+        {
+          "type": "game",
+          "id": "A1-07-g9",
+          "game": "speed"
         },
         {
           "type": "exercise",

@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-02",
-  "version": 5,
+  "version": 6,
   "level": "A1",
   "position": 2,
   "title": "Jobs",
@@ -261,6 +261,26 @@
             "answer": "tailor",
             "explanation_ar": "الخيّاط = tailor."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g1",
+          "game": "flashcards"
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g2",
+          "game": "match"
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g3",
+          "game": "listen"
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g4",
+          "game": "pronounce"
         }
       ]
     },
@@ -477,6 +497,11 @@
             "answer": 0,
             "explanation_ar": "قالت سلمى: He builds houses in Shibam."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g5",
+          "game": "dictation"
         }
       ]
     },
@@ -720,6 +745,26 @@
             "answer": 0,
             "explanation_ar": "البنّاء builder."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g6",
+          "game": "memory"
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g7",
+          "game": "swipe"
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g8",
+          "game": "spell"
+        },
+        {
+          "type": "game",
+          "id": "A1-02-g9",
+          "game": "speed"
         },
         {
           "type": "exercise",

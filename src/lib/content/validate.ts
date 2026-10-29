@@ -135,6 +135,12 @@ export function validateUnitPackage(input: unknown, opts: { fileName?: string } 
           if (!block.headers?.length || !block.rows?.length) add("error", bp, "الجدول يحتاج عناوين وصفوفاً.");
           else if (block.rows.some((r) => r.length !== block.headers!.length)) add("error", bp, "عدد خانات كل صف يجب أن يساوي عدد العناوين.");
           break;
+        case "game":
+          if (!block.id) add("error", `${bp}.id`, "اللعبة تحتاج معرّفاً ثابتاً (مثل A1-01-g1).");
+          else seen(block.id, bp);
+          if (!block.game) add("error", `${bp}.game`, "اختر نوع اللعبة.");
+          if (pkg.vocab.length < 4) add("warning", bp, "الألعاب تحتاج 4 كلمات على الأقل في الوحدة.");
+          break;
         case "exercise":
           if (!block.exercise) add("error", `${bp}.exercise`, "كتلة التمرين بلا سؤال.");
           else {

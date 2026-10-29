@@ -47,7 +47,15 @@ export interface ExerciseBlock {
   exercise?: PackageQuestion;
 }
 
-export type LessonBlock = TextBlock | VideoBlock | ReadingBlock | AudioBlock | TableBlock | ExerciseBlock;
+export interface GameBlock {
+  type: "game";
+  /** Stable id (e.g. "A1-01-g1"): finishing the game counts as an activity of the lesson. */
+  id?: string;
+  game?: "flashcards" | "match" | "listen" | "memory" | "speed" | "spell" | "swipe" | "dictation" | "pronounce";
+  title_ar?: string;
+}
+
+export type LessonBlock = TextBlock | VideoBlock | ReadingBlock | AudioBlock | TableBlock | ExerciseBlock | GameBlock;
 
 export interface PackageLesson {
   id: string;

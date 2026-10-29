@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-10",
-  "version": 5,
+  "version": 6,
   "level": "A1",
   "position": 10,
   "title": "Time",
@@ -289,6 +289,26 @@
             "answer": "homework",
             "explanation_ar": "الواجب المدرسي = homework."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g1",
+          "game": "flashcards"
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g2",
+          "game": "match"
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g3",
+          "game": "listen"
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g4",
+          "game": "pronounce"
         }
       ]
     },
@@ -517,6 +537,11 @@
             "answer": 1,
             "explanation_ar": "قال: I help my father in his shop."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g5",
+          "game": "dictation"
         }
       ]
     },
@@ -761,6 +786,26 @@
             "answer": 1,
             "explanation_ar": "9:15 = nine fifteen."
           }
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g6",
+          "game": "memory"
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g7",
+          "game": "swipe"
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g8",
+          "game": "spell"
+        },
+        {
+          "type": "game",
+          "id": "A1-10-g9",
+          "game": "speed"
         },
         {
           "type": "exercise",
