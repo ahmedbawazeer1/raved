@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-01",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 1,
   "title": "Hello!",
@@ -708,6 +708,38 @@
           "approx_size_mb": 34
         },
         {
+          "type": "story",
+          "id": "A1-01-s1",
+          "title_ar": "الحلقة 1: صديق جديد في المكلا",
+          "panels": [
+            {
+              "speaker": "Hamza",
+              "text_en": "Hello! I'm Hamza. I'm from Seiyun.",
+              "text_ar": "مرحباً! أنا حمزة. أنا من سيئون."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Hi, Hamza. I'm Reem. I'm from Mukalla.",
+              "text_ar": "أهلاً يا حمزة. أنا ريم. أنا من المكلا."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Are you in class one?",
+              "text_ar": "هل أنتِ في الفصل الأول؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Yes, I am. We are in the same class!",
+              "text_ar": "نعم. نحن في نفس الفصل!"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Great! Nice to meet you, Reem.",
+              "text_ar": "رائع! تشرفت بمعرفتك يا ريم."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-01-e16",
@@ -902,5 +934,10 @@
     ]
   },
   "context_note": "مدن حضرمية: المكلا، سيئون، تريم، شبام، الشحر. وأسماء عائلات حضرمية مثل باوزير وبامطرف.",
-  "stop_ar": "المكلا"
+  "stop_ar": "المكلا",
+  "roleplay": {
+    "character_ar": "مستر باوزير، معلّم الإنجليزي في المكلا",
+    "scenario_en": "You are Mr. Bawazir, a kind English teacher in Mukalla. It is the first day of school. Greet the new student and ask their name, age and city.",
+    "opening_en": "Good morning! Welcome to class one. What's your name?"
+  }
 }

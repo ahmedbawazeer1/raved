@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-08",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 8,
   "title": "Vegetables",
@@ -754,6 +754,38 @@
           "approx_size_mb": 44
         },
         {
+          "type": "story",
+          "id": "A1-08-s1",
+          "title_ar": "الحلقة 8: مزرعة في غيل باوزير",
+          "panels": [
+            {
+              "speaker": "Reem",
+              "text_en": "These tomatoes are very fresh!",
+              "text_ar": "هذه الطماطم طازجة جداً!"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Are there any cucumbers?",
+              "text_ar": "هل يوجد خيار؟"
+            },
+            {
+              "speaker": "Farmer",
+              "text_en": "Sorry, there aren't any cucumbers today. But there are some carrots.",
+              "text_ar": "آسف، لا يوجد خيار اليوم. لكن يوجد بعض الجزر."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "I like carrots! Can I have some, please?",
+              "text_ar": "أحب الجزر! هل آخذ بعضاً منه من فضلك؟"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "I don't like carrots, but I like okra.",
+              "text_ar": "لا أحب الجزر، لكني أحب البامية."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-08-e17",
@@ -945,5 +977,10 @@
     ]
   },
   "context_note": "مزارع وادي حضرموت وغيل باوزير، سوق الخضار في سيئون، البامية باللحم.",
-  "stop_ar": "غيل باوزير"
+  "stop_ar": "غيل باوزير",
+  "roleplay": {
+    "character_ar": "مزارع في غيل باوزير",
+    "scenario_en": "You are a vegetable farmer in Ghail Ba Wazir. The student wants to buy vegetables. Use some/any and ask what they like.",
+    "opening_en": "Good morning! Fresh vegetables! What do you want today?"
+  }
 }

@@ -55,7 +55,15 @@ export interface GameBlock {
   title_ar?: string;
 }
 
-export type LessonBlock = TextBlock | VideoBlock | ReadingBlock | AudioBlock | TableBlock | ExerciseBlock | GameBlock;
+export interface StoryBlock {
+  type: "story";
+  /** Stable id (e.g. "A1-01-s1"): reading it to the end counts as an activity of the lesson. */
+  id?: string;
+  title_ar?: string;
+  panels?: { speaker: string; text_en: string; text_ar: string }[];
+}
+
+export type LessonBlock = TextBlock | VideoBlock | ReadingBlock | AudioBlock | TableBlock | ExerciseBlock | GameBlock | StoryBlock;
 
 export interface PackageLesson {
   id: string;
@@ -94,6 +102,8 @@ export interface UnitPackage {
   context_note?: string;
   /** Arabic name of the stop on the journey map (e.g. «المكلا»). */
   stop_ar?: string;
+  /** AI conversation partner of the unit (a Hadrami character). */
+  roleplay?: { character_ar: string; scenario_en: string; opening_en: string };
 }
 
 export const SKILL_LABELS: Record<PackageLesson["skill"], string> = {

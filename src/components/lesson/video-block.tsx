@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { recordVideoWatch } from "@/app/(student)/student/actions";
 import { VIDEO_DONE } from "@/lib/gamification/events";
 import { addSecond, parseRanges, videoDone, watchedPercent, watchedSeconds, type WatchRanges } from "@/lib/gamification/watch";
+import { choiceRound, seededRandom, type GameWord } from "@/lib/games/logic";
 import type { VideoBlock as VideoBlockData } from "@/lib/content/types";
 
 export interface VideoStatus {
@@ -23,6 +24,8 @@ function formatDuration(sec?: number): string | null {
 interface YtPlayer {
   getCurrentTime(): number;
   getPlayerState(): number;
+  pauseVideo(): void;
+  playVideo(): void;
   destroy(): void;
 }
 interface YtNamespace {
@@ -55,18 +58,60 @@ function loadYouTubeApi(): Promise<YtNamespace> {
 }
 
 const storageKey = (id: string) => `raved:watch:${id}`;
+const checkpointKey = (id: string) => `raved:checkpoints:${id}`;
+
+interface Checkpoint {
+  at: number;
+  target: GameWord;
+  options: GameWord[];
+}
+
+/** Two attention checks inside a mandatory video (at 1/3 and 2/3), asking about the unit's words. */
+function checkpointsFor(id: string, duration: number, words: GameWord[]): Checkpoint[] {
+  if (words.length < 4 || duration < 60) return [];
+  return [1 / 3, 2 / 3].map((f, k) => {
+    const rand = seededRandom(`${id}:${k}`);
+    const target = words[Math.floor(rand() * words.length)];
+    return { at: Math.floor(duration * f), target, options: choiceRound(target, words, 3, rand) };
+  });
+}
+
+function readAnswered(id: string): Set<number> {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(checkpointKey(id)) ?? "[]") as number[]);
+  } catch {
+    return new Set();
+  }
+}
 
 /**
  * Lesson video. Nothing downloads until the student taps. When `required`, the seconds really played
  * are counted (skipping ahead does not count) and saved, and the lesson needs 80% of the video.
  */
-export function VideoBlock({ block, required = false, status }: { block: VideoBlockData; required?: boolean; status?: VideoStatus }) {
+export function VideoBlock({
+  block,
+  required = false,
+  status,
+  words = [],
+}: {
+  block: VideoBlockData;
+  required?: boolean;
+  status?: VideoStatus;
+  /** The unit's words, for the questions that pause the video. */
+  words?: GameWord[];
+}) {
   const [open, setOpen] = useState(false);
   const duration = block.duration_sec ?? (block.end_sec && block.start_sec !== undefined ? block.end_sec - block.start_sec : 0);
   const [watched, setWatched] = useState(status?.watched ?? 0);
   const [done, setDone] = useState(status?.done ?? false);
   const holder = useRef<HTMLDivElement>(null);
   const tracking = required && !block.needs_check && Boolean(block.youtube_id);
+  const [checkpoint, setCheckpoint] = useState<Checkpoint | null>(null);
+  const [wrongOption, setWrongOption] = useState<string | null>(null);
+  const playerRef = useRef<YtPlayer | null>(null);
+  // Answered questions (also kept in storage so a reload does not ask again).
+  const answeredRef = useRef<Set<number>>(new Set());
+  const wordsKey = words.map((w) => w.id).join(",");
 
   useEffect(() => {
     if (!open || !block.youtube_id || !holder.current) return;
@@ -76,6 +121,8 @@ export function VideoBlock({ block, required = false, status }: { block: VideoBl
     let ranges: WatchRanges = parseRanges(typeof localStorage === "undefined" ? null : localStorage.getItem(storageKey(id)));
     let lastSent = watchedSeconds(ranges);
     let cancelled = false;
+    const checkpoints = tracking && !status?.done ? checkpointsFor(id, duration, words) : [];
+    for (const at of readAnswered(id)) answeredRef.current.add(at);
 
     const send = async () => {
       const seconds = watchedSeconds(ranges);
@@ -114,9 +161,18 @@ export function VideoBlock({ block, required = false, status }: { block: VideoBl
           },
         },
       });
+      playerRef.current = player;
       timer = setInterval(() => {
         if (!player || player.getPlayerState() !== YT.PlayerState.PLAYING) return;
-        ranges = addSecond(ranges, player.getCurrentTime());
+        const now = player.getCurrentTime();
+        // A question pauses the video at its moment until it is answered.
+        const due = checkpoints.find((c) => !answeredRef.current.has(c.at) && now >= c.at && now < c.at + 5);
+        if (due) {
+          player.pauseVideo();
+          setCheckpoint(due);
+          return;
+        }
+        ranges = addSecond(ranges, now);
         const seconds = watchedSeconds(ranges);
         setWatched((w) => Math.max(w, seconds));
         try {
@@ -134,7 +190,24 @@ export function VideoBlock({ block, required = false, status }: { block: VideoBl
       void send();
       player?.destroy();
     };
-  }, [open, block.youtube_id, block.start_sec, block.end_sec, tracking, duration]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- words are identified by wordsKey
+  }, [open, block.youtube_id, block.start_sec, block.end_sec, tracking, duration, wordsKey, status?.done]);
+
+  const answer = (cp: Checkpoint, id: string) => {
+    if (id !== cp.target.id) {
+      setWrongOption(id);
+      return;
+    }
+    answeredRef.current.add(cp.at);
+    try {
+      localStorage.setItem(checkpointKey(block.youtube_id!), JSON.stringify([...answeredRef.current]));
+    } catch {
+      // storage unavailable: the question may come again on reload
+    }
+    setWrongOption(null);
+    setCheckpoint(null);
+    playerRef.current?.playVideo();
+  };
 
   if (!block.youtube_id) return null;
   const meta = [formatDuration(duration || undefined), block.approx_size_mb ? `حوالي ${block.approx_size_mb}MB` : null].filter(Boolean).join(" · ");
@@ -161,6 +234,24 @@ export function VideoBlock({ block, required = false, status }: { block: VideoBl
       ) : (
         <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
           <div ref={holder} className="absolute inset-0 [&_iframe]:size-full" title={block.video_title ?? "فيديو"} />
+        </div>
+      )}
+      {checkpoint && (
+        <div role="dialog" aria-label="سؤال أثناء الفيديو" className="flex flex-col gap-2 rounded-2xl border-2 border-accent bg-warning-tint p-3">
+          <p className="text-sm font-bold">⏸️ سؤال سريع قبل أن تكمل: ما معنى «<span dir="ltr" className="font-en">{checkpoint.target.word}</span>»؟</p>
+          <div className="grid grid-cols-1 gap-1.5">
+            {checkpoint.options.map((o) => (
+              <button
+                key={o.id}
+                type="button"
+                onClick={() => answer(checkpoint, o.id)}
+                className={`min-h-11 rounded-xl border-2 bg-card px-3 text-start font-semibold ${wrongOption === o.id ? "border-destructive" : "border-border"}`}
+              >
+                {o.meaning}
+              </button>
+            ))}
+          </div>
+          {wrongOption && <p className="text-sm text-destructive">ليست الإجابة. جرّب مرة أخرى.</p>}
         </div>
       )}
       {tracking && (

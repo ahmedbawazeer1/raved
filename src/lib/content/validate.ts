@@ -141,6 +141,11 @@ export function validateUnitPackage(input: unknown, opts: { fileName?: string } 
           if (!block.game) add("error", `${bp}.game`, "اختر نوع اللعبة.");
           if (pkg.vocab.length < 4) add("warning", bp, "الألعاب تحتاج 4 كلمات على الأقل في الوحدة.");
           break;
+        case "story":
+          if (!block.id) add("error", `${bp}.id`, "الحلقة تحتاج معرّفاً ثابتاً (مثل A1-01-s1).");
+          else seen(block.id, bp);
+          if (!block.panels?.length) add("error", `${bp}.panels`, "الحلقة بلا سطور.");
+          break;
         case "exercise":
           if (!block.exercise) add("error", `${bp}.exercise`, "كتلة التمرين بلا سؤال.");
           else {

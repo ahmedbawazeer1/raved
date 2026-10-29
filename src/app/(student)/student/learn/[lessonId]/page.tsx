@@ -26,16 +26,20 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
 
   const { data: lesson } = await supabase
     .from("lessons")
-    .select("id, unit_id, title, skill, position, blocks, speaking_task, writing_task, units(id, title, position, quizzes(id, kind), levels(code, paths(slug, features)))")
+    .select("id, unit_id, title, skill, position, blocks, speaking_task, writing_task, units(id, title, position, roleplay, quizzes(id, kind), levels(code, paths(slug, features)))")
     .eq("id", lessonId)
     .maybeSingle();
   if (!lesson || !lesson.units) notFound();
 
   const blocks = (lesson.blocks ?? []) as unknown as LessonBlock[];
   const trackedVideos = [...new Set(blocks.flatMap((b) => (b.type === "video" && b.youtube_id && !b.needs_check ? [b.youtube_id] : [])))];
-  // Exercises and games of the lesson: all mandatory.
+  // Exercises, games and the story episode of the lesson: all mandatory.
   const exerciseIds = blocks.flatMap((b) =>
-    b.type === "exercise" && b.exercise ? [b.exercise.id] : b.type === "game" && b.id && b.game ? [b.id] : [],
+    b.type === "exercise" && b.exercise
+      ? [b.exercise.id]
+      : (b.type === "game" && b.id && b.game) || (b.type === "story" && b.id && b.panels?.length)
+        ? [b.id]
+        : [],
   );
   const hasGames = blocks.some((b) => b.type === "game");
 
@@ -117,6 +121,20 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
           speaking={speakingTask}
           writing={writingTask}
         />
+        {lesson.skill === "speaking" && features.speaking && (unit.roleplay as { character_ar?: string } | null)?.character_ar && (
+          <Link
+            href={`/student/practice/roleplay/${unit.id}`}
+            className="flex min-h-12 items-center gap-3 rounded-2xl border border-ai-tint bg-ai-tint px-4 py-3 text-foreground no-underline hover:text-foreground"
+          >
+            <span className="text-2xl" aria-hidden="true">
+              💬
+            </span>
+            <span className="flex-1">
+              <span className="block font-semibold">تحدث مع {(unit.roleplay as { character_ar: string }).character_ar}</span>
+              <span className="block text-[13px] text-muted-foreground">محادثة بالإنجليزية مع شخصية من الرحلة · +5 نقاط · يحتاج اتصالاً</span>
+            </span>
+          </Link>
+        )}
         <Link
           href={`/student/learn/${lesson.id}/assistant`}
           className="flex min-h-12 items-center gap-3 rounded-2xl border border-ai-tint bg-card px-4 py-3 text-foreground no-underline hover:text-foreground"

@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-12",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 12,
   "title": "Sports",
@@ -748,6 +748,38 @@
           "approx_size_mb": 47
         },
         {
+          "type": "story",
+          "id": "A1-12-s1",
+          "title_ar": "الحلقة 12: مباراة في فوّة",
+          "panels": [
+            {
+              "speaker": "Reem",
+              "text_en": "Can you play football, Hamza?",
+              "text_ar": "هل تستطيع لعب كرة القدم يا حمزة؟"
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Yes, I can, but I can't run very fast.",
+              "text_ar": "نعم أستطيع، لكني لا أستطيع الركض بسرعة كبيرة."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "I can't play football, but I can swim very well.",
+              "text_ar": "لا أستطيع لعب كرة القدم، لكني أسبح جيداً جداً."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Can you teach me to swim in the sea?",
+              "text_ar": "هل تستطيعين تعليمي السباحة في البحر؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Of course! Come to the beach on Friday.",
+              "text_ar": "طبعاً! تعال إلى الشاطئ يوم الجمعة."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-12-e17",
@@ -940,5 +972,10 @@
     ]
   },
   "context_note": "فريق المدرسة في المكلا، السباحة في بحر المكلا، رسم بيوت شبام القديمة، واتساب.",
-  "stop_ar": "فوّة"
+  "stop_ar": "فوّة",
+  "roleplay": {
+    "character_ar": "مدرب فريق كرة القدم في فوّة",
+    "scenario_en": "You are a football coach in Fuwwah, Mukalla. Ask the student what sports and activities they can and can't do.",
+    "opening_en": "Hi! I need players for the team. Can you play football?"
+  }
 }

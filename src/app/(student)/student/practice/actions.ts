@@ -6,6 +6,8 @@ import { AI_ERROR_AR, AiError, isTemporary } from "@/lib/ai/errors";
 import { remainingToday } from "@/lib/ai/limits";
 import { assertCanUse, assistantReply, evaluateJson, transcribeSpeech } from "@/lib/ai/provider";
 import { ASSISTANT_HISTORY, assistantSystem } from "@/lib/ai/prompts/assistant";
+import { ROLEPLAY_HISTORY, ROLEPLAY_MIN_TURNS, roleplaySystem } from "@/lib/ai/prompts/roleplay";
+import { createClient } from "@/lib/supabase/server";
 import { SPEAKING_PROMPT_VERSION, SPEAKING_SYSTEM, speakingSchema, speakingUserMessage, type SpeakingFeedback } from "@/lib/ai/prompts/speaking";
 import { WRITING_PROMPT_VERSION, WRITING_SYSTEM, writingSchema, writingUserMessage, type WritingFeedback } from "@/lib/ai/prompts/writing";
 import { redact } from "@/lib/ai/redact";
@@ -265,6 +267,58 @@ export async function askAssistant(input: z.infer<typeof assistantInput>): Promi
     });
     const { remaining } = await remainingToday(userId);
     return { reply: result.data, remaining: remaining.assistant };
+  } catch (e) {
+    return { error: aiMessage(e) };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Role-play with the unit's character (counts against the assistant's daily limit)
+// ---------------------------------------------------------------------------
+
+const roleplayInput = z.object({
+  unitId: uuid,
+  messages: z
+    .array(z.object({ role: z.enum(["user", "assistant"]), content: z.string().trim().min(1).max(500) }))
+    .min(1)
+    .max(40),
+});
+
+export async function askRoleplay(input: z.infer<typeof roleplayInput>): Promise<{ reply?: string; error?: string; remaining?: number; counted?: boolean }> {
+  const parsed = roleplayInput.safeParse(input);
+  if (!parsed.success) return { error: "اكتب رسالة أقصر." };
+  const { userId, profile } = await requireActiveStudent();
+  const supabase = await createClient();
+  const { data: unit } = await supabase
+    .from("units")
+    .select("id, grammar_point, roleplay, levels(code), vocab_items(word, archived)")
+    .eq("id", parsed.data.unitId)
+    .maybeSingle();
+  const role = unit?.roleplay as { scenario_en?: string } | null;
+  if (!unit || !role?.scenario_en) return { error: "لا توجد محادثة لهذه الوحدة." };
+  const history = parsed.data.messages.slice(-ROLEPLAY_HISTORY);
+  if (history.at(-1)?.role !== "user") return { error: "اكتب رسالتك." };
+
+  try {
+    await assertCanUse(userId, "assistant");
+    const result = await assistantReply({
+      studentId: userId,
+      system: roleplaySystem({
+        scenario: role.scenario_en,
+        level: unit.levels?.code ?? "A1",
+        grammar: unit.grammar_point,
+        words: (unit.vocab_items ?? []).filter((v) => !v.archived).map((v) => v.word).slice(0, 15),
+      }),
+      messages: history.map((m) => ({ role: m.role, content: m.role === "user" ? redact(m.content, { knownNames: [profile.full_name] }) : m.content })),
+    });
+    const turns = parsed.data.messages.filter((m) => m.role === "user").length;
+    let counted = false;
+    if (turns >= ROLEPLAY_MIN_TURNS) {
+      const { error } = await supabase.rpc("record_roleplay", { p_unit_id: unit.id });
+      counted = !error;
+    }
+    const { remaining } = await remainingToday(userId);
+    return { reply: result.data, remaining: remaining.assistant, counted };
   } catch (e) {
     return { error: aiMessage(e) };
   }

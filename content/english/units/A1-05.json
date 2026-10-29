@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-05",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 5,
   "title": "At Work",
@@ -759,6 +759,38 @@
           "approx_size_mb": 49
         },
         {
+          "type": "story",
+          "id": "A1-05-s1",
+          "title_ar": "الحلقة 5: في ميناء المكلا",
+          "panels": [
+            {
+              "speaker": "Hamza",
+              "text_en": "Look at the ships! What does your mother do, Reem?",
+              "text_ar": "انظري إلى السفن! ماذا تعمل أمك يا ريم؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "She's an engineer. She works at the port.",
+              "text_ar": "هي مهندسة. تعمل في الميناء."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Does she work on Fridays?",
+              "text_ar": "هل تعمل يوم الجمعة؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "No, she doesn't. On Fridays she visits my grandmother.",
+              "text_ar": "لا. يوم الجمعة تزور جدتي."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "My father doesn't work on Fridays too.",
+              "text_ar": "وأبي أيضاً لا يعمل يوم الجمعة."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-05-e17",
@@ -951,5 +983,10 @@
     ]
   },
   "context_note": "ميناء المكلا، مستشفى ابن سينا، الصيادون وسوق السمك في المكلا، حي الديس.",
-  "stop_ar": "ميناء المكلا"
+  "stop_ar": "ميناء المكلا",
+  "roleplay": {
+    "character_ar": "المهندسة سعاد في ميناء المكلا",
+    "scenario_en": "You are Suad, an engineer at the port of Mukalla. Ask the student where people in their family work and what they do.",
+    "opening_en": "Hi! I work at the port. Where does your mother or father work?"
+  }
 }

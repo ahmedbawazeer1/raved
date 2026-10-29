@@ -1,7 +1,7 @@
 {
   "path": "english",
   "code": "A1-04",
-  "version": 6,
+  "version": 7,
   "level": "A1",
   "position": 4,
   "title": "Home and School",
@@ -741,6 +741,38 @@
           "approx_size_mb": 44
         },
         {
+          "type": "story",
+          "id": "A1-04-s1",
+          "title_ar": "الحلقة 4: مدرسة ريم في الديس",
+          "panels": [
+            {
+              "speaker": "Reem",
+              "text_en": "This is my school in Al-Dees.",
+              "text_ar": "هذه مدرستي في الديس."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "Is there a library?",
+              "text_ar": "هل توجد مكتبة؟"
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Yes, there is. And there are two labs.",
+              "text_ar": "نعم. ويوجد مختبران."
+            },
+            {
+              "speaker": "Hamza",
+              "text_en": "There isn't a lab in my old school.",
+              "text_ar": "لا يوجد مختبر في مدرستي القديمة."
+            },
+            {
+              "speaker": "Reem",
+              "text_en": "Come on! Let's go to the library.",
+              "text_ar": "هيا! لنذهب إلى المكتبة."
+            }
+          ]
+        },
+        {
           "type": "exercise",
           "exercise": {
             "id": "A1-04-e16",
@@ -932,5 +964,10 @@
     ]
   },
   "context_note": "مدارس في المكلا وسيئون؛ مدرسة قرب البحر في المكلا.",
-  "stop_ar": "الديس"
+  "stop_ar": "الديس",
+  "roleplay": {
+    "character_ar": "أمين مكتبة مدرسة الديس",
+    "scenario_en": "You are the school librarian in Al-Dees, Mukalla. Ask the student what there is in their classroom and school.",
+    "opening_en": "Hello! Is there a library in your school?"
+  }
 }
