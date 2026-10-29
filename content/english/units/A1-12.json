@@ -1,0 +1,829 @@
+{
+  "path": "english",
+  "code": "A1-12",
+  "version": 1,
+  "level": "A1",
+  "position": 12,
+  "title": "Last Weekend",
+  "topic": "زيارة قرية الجد قرب تعز ورحلة إلى شبام",
+  "grammar_point": "past simple of be (was / were) + regular verbs (-ed)",
+  "can_do": [
+    "أحكي عن عطلة أو زيارة في الماضي",
+    "أسأل عن مكان شخص في الماضي وأفهم الإجابة",
+    "أفهم قصة قصيرة عن رحلة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-12-v1",
+      "word": "yesterday",
+      "ipa": "/ˈjestədeɪ/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "أمس",
+      "example_en": "I was at home yesterday."
+    },
+    {
+      "id": "A1-12-v2",
+      "word": "last weekend",
+      "ipa": "/lɑːst ˌwiːkˈend/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "عطلة الأسبوع الماضية",
+      "example_en": "We visited our village last weekend."
+    },
+    {
+      "id": "A1-12-v3",
+      "word": "ago",
+      "ipa": "/əˈɡəʊ/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "منذ / قبل (مدة)",
+      "example_en": "I was in Aden two weeks ago."
+    },
+    {
+      "id": "A1-12-v4",
+      "word": "village",
+      "ipa": "/ˈvɪlɪdʒ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "قرية",
+      "example_en": "My grandfather's village is in the mountains."
+    },
+    {
+      "id": "A1-12-v5",
+      "word": "mountain",
+      "ipa": "/ˈmaʊntən/",
+      "part_of_speech": "noun",
+      "meaning_ar": "جبل",
+      "example_en": "We climbed the mountain in the morning."
+    },
+    {
+      "id": "A1-12-v6",
+      "word": "trip",
+      "ipa": "/trɪp/",
+      "part_of_speech": "noun",
+      "meaning_ar": "رحلة",
+      "example_en": "The trip was long but nice."
+    },
+    {
+      "id": "A1-12-v7",
+      "word": "arrive",
+      "ipa": "/əˈraɪv/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يصل",
+      "example_en": "We arrived at noon."
+    },
+    {
+      "id": "A1-12-v8",
+      "word": "stay",
+      "ipa": "/steɪ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يبقى / يقيم",
+      "example_en": "We stayed with our grandparents."
+    },
+    {
+      "id": "A1-12-v9",
+      "word": "climb",
+      "ipa": "/klaɪm/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يتسلق / يصعد",
+      "example_en": "My cousins climbed the hill."
+    },
+    {
+      "id": "A1-12-v10",
+      "word": "walk",
+      "ipa": "/wɔːk/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يمشي",
+      "example_en": "We walked to the old well."
+    },
+    {
+      "id": "A1-12-v11",
+      "word": "tired",
+      "ipa": "/ˈtaɪəd/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "متعب",
+      "example_en": "I was tired after the trip."
+    },
+    {
+      "id": "A1-12-v12",
+      "word": "happy",
+      "ipa": "/ˈhæpi/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "سعيد",
+      "example_en": "My grandmother was very happy."
+    },
+    {
+      "id": "A1-12-v13",
+      "word": "Thursday",
+      "ipa": "/ˈθɜːzdeɪ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "الخميس",
+      "example_en": "We left on Thursday."
+    },
+    {
+      "id": "A1-12-v14",
+      "word": "Friday",
+      "ipa": "/ˈfraɪdeɪ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "الجمعة",
+      "example_en": "On Friday, we prayed in the village mosque."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-12-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "عطلة في القرية",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في آخر وحدة من **A1** نتعلم الحديث عن **الماضي**: أين كنا، وماذا فعلنا. تعلّم كلمات الزيارة والسفر وأيام الأسبوع.\n\n**أيام الأسبوع:** Saturday (السبت)، Sunday (الأحد)، Monday (الاثنين)، Tuesday (الثلاثاء)، Wednesday (الأربعاء)، Thursday (الخميس)، Friday (الجمعة). تُكتب دائماً بحرف كبير."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "yesterday",
+              "/ˈjestədeɪ/",
+              "أمس",
+              "I was at home yesterday."
+            ],
+            [
+              "last weekend",
+              "/lɑːst ˌwiːkˈend/",
+              "عطلة الأسبوع الماضية",
+              "We visited our village last weekend."
+            ],
+            [
+              "ago",
+              "/əˈɡəʊ/",
+              "منذ / قبل (مدة)",
+              "I was in Aden two weeks ago."
+            ],
+            [
+              "village",
+              "/ˈvɪlɪdʒ/",
+              "قرية",
+              "My grandfather's village is in the mountains."
+            ],
+            [
+              "mountain",
+              "/ˈmaʊntən/",
+              "جبل",
+              "We climbed the mountain in the morning."
+            ],
+            [
+              "trip",
+              "/trɪp/",
+              "رحلة",
+              "The trip was long but nice."
+            ],
+            [
+              "arrive",
+              "/əˈraɪv/",
+              "يصل",
+              "We arrived at noon."
+            ],
+            [
+              "stay",
+              "/steɪ/",
+              "يبقى / يقيم",
+              "We stayed with our grandparents."
+            ],
+            [
+              "climb",
+              "/klaɪm/",
+              "يتسلق / يصعد",
+              "My cousins climbed the hill."
+            ],
+            [
+              "walk",
+              "/wɔːk/",
+              "يمشي",
+              "We walked to the old well."
+            ],
+            [
+              "tired",
+              "/ˈtaɪəd/",
+              "متعب",
+              "I was tired after the trip."
+            ],
+            [
+              "happy",
+              "/ˈhæpi/",
+              "سعيد",
+              "My grandmother was very happy."
+            ],
+            [
+              "Thursday",
+              "/ˈθɜːzdeɪ/",
+              "الخميس",
+              "We left on Thursday."
+            ],
+            [
+              "Friday",
+              "/ˈfraɪdeɪ/",
+              "الجمعة",
+              "On Friday, we prayed in the village mosque."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "yesterday. I was at home yesterday.\nlast weekend. We visited our village last weekend.\nago. I was in Aden two weeks ago.\nvillage. My grandfather's village is in the mountains.\nmountain. We climbed the mountain in the morning.\ntrip. The trip was long but nice.\narrive. We arrived at noon.\nstay. We stayed with our grandparents.\nclimb. My cousins climbed the hill.\nwalk. We walked to the old well.\ntired. I was tired after the trip.\nhappy. My grandmother was very happy.\nThursday. We left on Thursday.\nFriday. On Friday, we prayed in the village mosque."
+        },
+        {
+          "type": "audio",
+          "text_en": "Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Today is Tuesday. Yesterday was ___.",
+            "options": [
+              "Monday",
+              "Wednesday",
+              "Sunday"
+            ],
+            "answer": 0,
+            "explanation_ar": "اليوم الثلاثاء، فأمس كان الاثنين Monday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "After a long trip, you are ___.",
+            "options": [
+              "tired",
+              "happy",
+              "hungry"
+            ],
+            "answer": 0,
+            "explanation_ar": "بعد رحلة طويلة نكون متعبين tired."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I was in Sana'a three days ___. (منذ)",
+            "answer": "ago",
+            "explanation_ar": "مدة + ago = منذ."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-12-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "was / were + الفعل الماضي (-ed)",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**1) ماضي فعل be:** am / is ← **was**، و are ← **were**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الضمير",
+            "الماضي",
+            "النفي",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "I / he / she / it",
+              "was",
+              "wasn't",
+              "I was at home yesterday."
+            ],
+            [
+              "you / we / they",
+              "were",
+              "weren't",
+              "They weren't at school on Friday."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "السؤال: **Were** you at home? — Yes, I **was**. / **Was** it hot? — No, it **wasn't**.\n\n**2) الماضي البسيط للأفعال المنتظمة:** نضيف **ed** إلى الفعل، وهو **نفسه لكل الضمائر**:\n\n- I visit**ed** my uncle. / She play**ed** football. / They walk**ed** to the market.\n\n**الإملاء:**\n\n- ينتهي بـ e: نضيف d فقط: arrive ← **arrived**.\n- ساكن + y: ← **ied**: study ← **studied**.\n- متحرك + y: ← **yed**: stay ← **stayed**، play ← **played**.\n- قصير ينتهي بساكن: نضاعف: stop ← **stopped**.\n\n**كلمات الماضي:** yesterday, last week, last Friday, two days ago.\n\n**ملاحظة:** هناك أفعال **شاذة** في الماضي مثل go ← went. سنتعلمها في أول وحدة من **A2**."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "I ___ in Aden last week.",
+            "options": [
+              "was",
+              "were",
+              "am"
+            ],
+            "answer": 0,
+            "explanation_ar": "مع I في الماضي: was."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My friends ___ at the wedding yesterday.",
+            "options": [
+              "was",
+              "were",
+              "are"
+            ],
+            "answer": 1,
+            "explanation_ar": "مع الجمع في الماضي: were."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e6",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "We ___ (visit) our grandmother last Friday.",
+            "answer": "visited",
+            "explanation_ar": "الماضي المنتظم: visit + ed."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e7",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "study في الماضي:",
+            "options": [
+              "studyed",
+              "studied",
+              "studed"
+            ],
+            "answer": 1,
+            "explanation_ar": "ساكن + y ← ied: studied."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "___ you tired after the trip? — Yes, I was.",
+            "options": [
+              "Was",
+              "Were",
+              "Did"
+            ],
+            "answer": 1,
+            "explanation_ar": "السؤال مع you: Were you…?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: at / she / school / wasn't",
+            "answer": [
+              "She",
+              "wasn't",
+              "at",
+              "school"
+            ],
+            "explanation_ar": "الفاعل + wasn't + المكان."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-12-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "زيارة قرية الجد",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "استمع إلى طالب يحكي عن **عطلة نهاية الأسبوع** في قرية جده قرب **تعز**. انتبه للأفعال المنتهية بـ **-ed**."
+        },
+        {
+          "type": "audio",
+          "text_en": "Last weekend was great. On Thursday afternoon, my family and I travelled to my grandfather's village near Taiz. The trip was three hours long. We arrived in the evening and my grandparents were very happy. On Friday morning, my cousins and I climbed the mountain behind the village. The weather was cool and sunny. We walked for two hours and we watched the green fields from the top. After the Friday prayer, my grandmother cooked lunch for everybody. It was delicious. In the evening, we talked and listened to my grandfather's old stories. We returned home on Saturday. I was tired, but I was very happy."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "When did the family travel?",
+            "options": [
+              "on Thursday",
+              "on Friday",
+              "on Saturday"
+            ],
+            "answer": 0,
+            "explanation_ar": "قال: On Thursday afternoon… travelled."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e11",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How long was the trip?",
+            "options": [
+              "one hour",
+              "two hours",
+              "three hours"
+            ],
+            "answer": 2,
+            "explanation_ar": "قال: The trip was three hours long."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e12",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "The weather on the mountain was hot and rainy.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: The weather was cool and sunny."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-12-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "رحلة مدرسية إلى شبام",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ عن رحلة مدرسية إلى **شبام حضرموت**، المدينة ذات البيوت الطينية العالية، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Last week was the end of the exams, so my school organised a trip to Shibam in Hadramout. We were forty students and three teachers. We started early, at six in the morning. Shibam is a very old city with tall mud buildings. People call it «the Manhattan of the desert». We walked in the narrow streets and we looked at the old houses. A guide talked to us about the history of the city. I wanted to take a lot of photos, but my phone battery was low! At lunch time, we stopped at a small restaurant and we tasted Hadrami honey. We weren't home until nine in the evening. It was a long day, but nobody was bored.",
+          "word_count": 120
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "How many students were on the trip?",
+            "options": [
+              "three",
+              "forty",
+              "nine"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: We were forty students."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Why didn't the writer take a lot of photos?",
+            "options": [
+              "The phone battery was low.",
+              "It was raining.",
+              "The guide said no."
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: my phone battery was low."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e15",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "The students were bored.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: nobody was bored."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "At lunch time, they ___ Hadrami honey.",
+            "answer": "tasted",
+            "explanation_ar": "في النص: we tasted Hadrami honey."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-12-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "احكِ عن عطلتك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "احكِ عن **عطلة نهاية الأسبوع الماضية** أو زيارة قمت بها: **أين كنت؟ مع من؟ كيف كان الطقس؟ ماذا فعلت؟ كيف كان شعورك؟** استعمل was / were وأفعالاً منتظمة مثل visited, stayed, played, watched."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "كنت في…",
+              "Last weekend, I was in…"
+            ],
+            [
+              "كان الطقس",
+              "The weather was…"
+            ],
+            [
+              "فعلت",
+              "I visited / played / watched…"
+            ],
+            [
+              "شعوري",
+              "I was happy / tired."
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Talk about last weekend or a visit: where you were, who with, the weather, what you did and how you felt.",
+        "helpful_phrases": [
+          "Last weekend, I was…",
+          "The weather was…",
+          "We visited…",
+          "We stayed…",
+          "I was very happy because…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 75,
+        "rubric_focus": [
+          "was / were",
+          "past simple regular verbs"
+        ]
+      }
+    },
+    {
+      "id": "A1-12-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "يوم لا تنساه",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة (50 إلى 90 كلمة) عن يوم جميل في الماضي. اقرأ المثال أولاً.\n\n**تذكّر:** was / were، والأفعال المنتظمة + ed، وكلمات الماضي: yesterday, last…, … ago."
+        },
+        {
+          "type": "reading",
+          "text_en": "Two months ago, my family and I visited my aunt in Mukalla. We travelled by bus and the trip was long. My aunt's house was near the sea. In the morning, we walked on the beach and my brothers played football. In the afternoon, it was very hot, so we stayed at home. We watched a film and we talked a lot. I was sad when we returned home.",
+          "word_count": 69
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write about a nice day in the past: where you were, what you did and how you felt. Use was, were and regular past verbs (-ed).",
+        "min_words": 50,
+        "max_words": 90,
+        "rubric_focus": [
+          "was / were",
+          "past simple regular verbs (-ed spelling)",
+          "time expressions (yesterday, last, ago)"
+        ]
+      }
+    },
+    {
+      "id": "A1-12-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة المستوى A1",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "مبروك! وصلت إلى نهاية **A1**. راجع أهم القواعد قبل الاختبار:\n\n- **am / is / are** و **was / were**\n- **my, your, his, her** و **'s**\n- **there is / there are**\n- **How much / How many**\n- المضارع البسيط: **I work / he works / doesn't / Does…?**\n- **some / any**، حروف المكان، الأمر\n- **can / can't**، ظروف التكرار\n- المضارع المستمر: **I'm working now**\n- الماضي: **visited, stayed, studied**"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "She ___ to school every day, but yesterday she ___ at home.",
+            "options": [
+              "walks / was",
+              "walk / were",
+              "is walking / is"
+            ],
+            "answer": 0,
+            "explanation_ar": "عادة: walks، وأمس: was."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "Look! It ___.",
+            "options": [
+              "rains",
+              "is raining",
+              "rained"
+            ],
+            "answer": 1,
+            "explanation_ar": "Look! = الآن: is raining."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-e19",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "They ___ (stay) in a hotel last summer.",
+            "answer": "stayed",
+            "explanation_ar": "متحرك + y ← yed: stayed."
+          }
+        },
+        {
+          "type": "text",
+          "markdown_ar": "بعد هذا الاختبار، إذا نجحت في كل وحدات A1 تحصل على **شهادة إتمام المستوى A1** وتنتقل إلى **A2**."
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-12-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "We ___ at the market yesterday.",
+        "options": [
+          "was",
+          "were",
+          "are"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع we في الماضي: were."
+      },
+      {
+        "id": "A1-12-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "He ___ at school last Monday. He was sick.",
+        "options": [
+          "wasn't",
+          "weren't",
+          "isn't"
+        ],
+        "answer": 0,
+        "explanation_ar": "مع he في الماضي المنفي: wasn't."
+      },
+      {
+        "id": "A1-12-q3",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "I ___ (watch) a football match last night.",
+        "answer": "watched",
+        "explanation_ar": "الماضي المنتظم: watch + ed."
+      },
+      {
+        "id": "A1-12-q4",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "arrive في الماضي:",
+        "options": [
+          "arriveed",
+          "arrived",
+          "arrivd"
+        ],
+        "answer": 1,
+        "explanation_ar": "ينتهي بـ e فنضيف d فقط: arrived."
+      },
+      {
+        "id": "A1-12-q5",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "___ the trip long? — Yes, it was.",
+        "options": [
+          "Were",
+          "Was",
+          "Is"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع it في الماضي: Was it…?"
+      },
+      {
+        "id": "A1-12-q6",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "Today is Saturday. Yesterday was ___.",
+        "options": [
+          "Sunday",
+          "Thursday",
+          "Friday"
+        ],
+        "answer": 2,
+        "explanation_ar": "قبل السبت يأتي الجمعة Friday."
+      },
+      {
+        "id": "A1-12-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: grandfather / visited / we / our",
+        "answer": [
+          "We",
+          "visited",
+          "our",
+          "grandfather"
+        ],
+        "explanation_ar": "الفاعل + الفعل الماضي + المفعول."
+      },
+      {
+        "id": "A1-12-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "She studyed for the test.",
+          "She studied for the test.",
+          "She studies for the test yesterday."
+        ],
+        "answer": 1,
+        "explanation_ar": "study ← studied في الماضي."
+      },
+      {
+        "id": "A1-12-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «Last Friday, Salma was in Ibb. It was rainy, so she stayed at home.» Why did Salma stay at home?",
+        "options": [
+          "It was hot.",
+          "It was rainy.",
+          "She was tired."
+        ],
+        "answer": 1,
+        "explanation_ar": "It was rainy, so she stayed at home."
+      },
+      {
+        "id": "A1-12-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We were in Aden two years ___.",
+        "answer": "ago",
+        "explanation_ar": "مدة + ago = منذ."
+      }
+    ]
+  },
+  "context_note": "قرية في جبال تعز، صلاة الجمعة، شبام حضرموت ذات البيوت الطينية، عسل حضرمي."
+}

@@ -1,0 +1,828 @@
+{
+  "path": "english",
+  "code": "A1-09",
+  "version": 1,
+  "level": "A1",
+  "position": 9,
+  "title": "I Can Do It",
+  "topic": "المهارات والرياضة والهاتف المحمول",
+  "grammar_point": "can / can't (ability, requests, permission)",
+  "can_do": [
+    "أتحدث عما أستطيع وما لا أستطيع فعله",
+    "أطلب طلباً مهذباً وأرد على طلب",
+    "أفهم نصاً قصيراً عن مهارات شخص"
+  ],
+  "vocab": [
+    {
+      "id": "A1-09-v1",
+      "word": "swim",
+      "ipa": "/swɪm/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يسبح",
+      "example_en": "I can swim in the sea."
+    },
+    {
+      "id": "A1-09-v2",
+      "word": "run",
+      "ipa": "/rʌn/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يركض",
+      "example_en": "He can run very fast."
+    },
+    {
+      "id": "A1-09-v3",
+      "word": "ride a bike",
+      "ipa": "/raɪd ə baɪk/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يركب دراجة",
+      "example_en": "My sister can ride a bike."
+    },
+    {
+      "id": "A1-09-v4",
+      "word": "play football",
+      "ipa": "/pleɪ ˈfʊtbɔːl/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يلعب كرة القدم",
+      "example_en": "We play football after school."
+    },
+    {
+      "id": "A1-09-v5",
+      "word": "draw",
+      "ipa": "/drɔː/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يرسم",
+      "example_en": "Can you draw a map of Yemen?"
+    },
+    {
+      "id": "A1-09-v6",
+      "word": "cook",
+      "ipa": "/kʊk/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يطبخ",
+      "example_en": "My brother can cook rice."
+    },
+    {
+      "id": "A1-09-v7",
+      "word": "speak",
+      "ipa": "/spiːk/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يتكلم",
+      "example_en": "I can speak Arabic and a little English."
+    },
+    {
+      "id": "A1-09-v8",
+      "word": "send a message",
+      "ipa": "/send ə ˈmesɪdʒ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "يرسل رسالة",
+      "example_en": "Can you send me a message?"
+    },
+    {
+      "id": "A1-09-v9",
+      "word": "call",
+      "ipa": "/kɔːl/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يتصل",
+      "example_en": "Call me after school."
+    },
+    {
+      "id": "A1-09-v10",
+      "word": "charge",
+      "ipa": "/tʃɑːdʒ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يشحن",
+      "example_en": "Can I charge my phone here?"
+    },
+    {
+      "id": "A1-09-v11",
+      "word": "borrow",
+      "ipa": "/ˈbɒrəʊ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يستعير",
+      "example_en": "Can I borrow your pen?"
+    },
+    {
+      "id": "A1-09-v12",
+      "word": "well",
+      "ipa": "/wel/",
+      "part_of_speech": "adverb",
+      "meaning_ar": "جيداً",
+      "example_en": "She can draw very well."
+    },
+    {
+      "id": "A1-09-v13",
+      "word": "a little",
+      "ipa": "/ə ˈlɪtl/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "قليلاً",
+      "example_en": "I can speak English a little."
+    },
+    {
+      "id": "A1-09-v14",
+      "word": "of course",
+      "ipa": "/əv kɔːs/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "طبعاً",
+      "example_en": "Can you help me? — Of course!"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-09-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "المهارات والهاتف",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "ماذا تستطيع أن تفعل؟ تسبح؟ ترسم؟ تطبخ؟ تعلّم أفعال المهارات، وكلمات **الهاتف المحمول** التي نستعملها كل يوم."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "swim",
+              "/swɪm/",
+              "يسبح",
+              "I can swim in the sea."
+            ],
+            [
+              "run",
+              "/rʌn/",
+              "يركض",
+              "He can run very fast."
+            ],
+            [
+              "ride a bike",
+              "/raɪd ə baɪk/",
+              "يركب دراجة",
+              "My sister can ride a bike."
+            ],
+            [
+              "play football",
+              "/pleɪ ˈfʊtbɔːl/",
+              "يلعب كرة القدم",
+              "We play football after school."
+            ],
+            [
+              "draw",
+              "/drɔː/",
+              "يرسم",
+              "Can you draw a map of Yemen?"
+            ],
+            [
+              "cook",
+              "/kʊk/",
+              "يطبخ",
+              "My brother can cook rice."
+            ],
+            [
+              "speak",
+              "/spiːk/",
+              "يتكلم",
+              "I can speak Arabic and a little English."
+            ],
+            [
+              "send a message",
+              "/send ə ˈmesɪdʒ/",
+              "يرسل رسالة",
+              "Can you send me a message?"
+            ],
+            [
+              "call",
+              "/kɔːl/",
+              "يتصل",
+              "Call me after school."
+            ],
+            [
+              "charge",
+              "/tʃɑːdʒ/",
+              "يشحن",
+              "Can I charge my phone here?"
+            ],
+            [
+              "borrow",
+              "/ˈbɒrəʊ/",
+              "يستعير",
+              "Can I borrow your pen?"
+            ],
+            [
+              "well",
+              "/wel/",
+              "جيداً",
+              "She can draw very well."
+            ],
+            [
+              "a little",
+              "/ə ˈlɪtl/",
+              "قليلاً",
+              "I can speak English a little."
+            ],
+            [
+              "of course",
+              "/əv kɔːs/",
+              "طبعاً",
+              "Can you help me? — Of course!"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "swim. I can swim in the sea.\nrun. He can run very fast.\nride a bike. My sister can ride a bike.\nplay football. We play football after school.\ndraw. Can you draw a map of Yemen?\ncook. My brother can cook rice.\nspeak. I can speak Arabic and a little English.\nsend a message. Can you send me a message?\ncall. Call me after school.\ncharge. Can I charge my phone here?\nborrow. Can I borrow your pen?\nwell. She can draw very well.\na little. I can speak English a little.\nof course. Can you help me? — Of course!"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "My phone battery is low. I need to ___ it.",
+            "options": [
+              "borrow",
+              "charge",
+              "draw"
+            ],
+            "answer": 1,
+            "explanation_ar": "البطارية ضعيفة فنحتاج أن نشحن charge."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Can I ___ your book? I'll give it back tomorrow.",
+            "options": [
+              "borrow",
+              "cook",
+              "swim"
+            ],
+            "answer": 0,
+            "explanation_ar": "نأخذ الشيء ونعيده = borrow (نستعير)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Can you help me? — Of ___!",
+            "answer": "course",
+            "explanation_ar": "Of course = طبعاً."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-09-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "can / can't",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**can** فعل مساعد سهل جداً: **لا يتغير** مع أي فاعل، ولا نضيف له s، ويأتي بعده الفعل **بدون to**.\n\nنستخدمه لـ:\n\n- **القدرة:** I **can** swim. / She **can't** (cannot) cook.\n- **الطلب المهذب:** **Can** I borrow your pen? / **Can** you help me, please?\n- **الإذن:** You **can** use my phone."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "الصيغة",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "إثبات",
+              "الفاعل + can + الفعل",
+              "He can ride a bike."
+            ],
+            [
+              "نفي",
+              "الفاعل + can't + الفعل",
+              "We can't swim."
+            ],
+            [
+              "سؤال",
+              "Can + الفاعل + الفعل؟",
+              "Can you speak English?"
+            ],
+            [
+              "إجابة",
+              "Yes, I can. / No, I can't.",
+              "Can she draw? — Yes, she can."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**أخطاء شائعة:**\n\n- ✗ He cans swim. ← ✓ He **can** swim.\n- ✗ I can to swim. ← ✓ I can **swim**.\n- ✗ She can swims. ← ✓ She can **swim**.\n\n**للرد على الطلب:** Yes, of course. / Sure. / Sorry, I can't."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "My sister ___ cook very well.",
+            "options": [
+              "can",
+              "cans",
+              "can to"
+            ],
+            "answer": 0,
+            "explanation_ar": "can لا يتغير مع she."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "I can ___ a bike.",
+            "options": [
+              "ride",
+              "rides",
+              "to ride"
+            ],
+            "answer": 0,
+            "explanation_ar": "بعد can يأتي الفعل بدون to وبدون s."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e6",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "___ you swim? — No, I can't.",
+            "answer": "Can",
+            "explanation_ar": "السؤال يبدأ بـ Can."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e7",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "«لا أستطيع الرسم» بالإنجليزية:",
+            "options": [
+              "I don't can draw.",
+              "I can't draw.",
+              "I can draw not."
+            ],
+            "answer": 1,
+            "explanation_ar": "النفي: can't + الفعل."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "أي جملة طلب مهذب؟",
+            "options": [
+              "Give me your phone.",
+              "Can I use your phone, please?",
+              "I use your phone."
+            ],
+            "answer": 1,
+            "explanation_ar": "الطلب المهذب: Can I…, please?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات لتكوّن سؤالاً: you / can / me / help",
+            "answer": [
+              "Can",
+              "you",
+              "help",
+              "me"
+            ],
+            "explanation_ar": "Can + الفاعل + الفعل؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-09-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "فريق المدرسة",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "المدرب يختار لاعبين لفريق المدرسة. استمع إلى **زياد** و**أنور**."
+        },
+        {
+          "type": "audio",
+          "text_en": "Coach: OK, everyone. We need players for the school team. Ziad, can you play football?\nZiad: Yes, I can. I can run fast, but I can't kick the ball very well.\nCoach: That's OK. And you, Anwar?\nAnwar: I can't play football, sir. But I can swim very well. I swim in the sea in Aden every summer.\nCoach: Great. We have a swimming race next month. Can you come on Monday?\nAnwar: Yes, of course.\nCoach: Ziad, can you send me your phone number?\nZiad: Sure. I can send it on WhatsApp."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e10",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Ziad can kick the ball very well.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال زياد: I can't kick the ball very well."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e11",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "What can Anwar do well?",
+            "options": [
+              "play football",
+              "swim",
+              "draw"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال أنور: I can swim very well."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e12",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How can Ziad send his number?",
+            "options": [
+              "on WhatsApp",
+              "by email",
+              "on paper"
+            ],
+            "answer": 0,
+            "explanation_ar": "قال: I can send it on WhatsApp."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-09-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "مهارات يسرى",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ عن مهارات **يسرى** من صنعاء، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Yousra is sixteen and she lives in Sana'a. She is a very good student and she has many skills. She can speak Arabic and English, and she can read a little French. She can draw very well. Her drawings of old Sana'a houses are on the wall of her classroom. She can use a computer and she can make short videos on her phone. But Yousra can't swim, because there is no sea in Sana'a. She can't cook well, but she wants to learn. Her grandmother says, «Come on Friday. I can teach you how to make bint al-sahn.»",
+          "word_count": 99
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "How many languages can Yousra speak?",
+            "options": [
+              "one",
+              "two",
+              "three"
+            ],
+            "answer": 1,
+            "explanation_ar": "تتكلم العربية والإنجليزية، وتقرأ قليلاً من الفرنسية."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "What are her drawings of?",
+            "options": [
+              "the sea",
+              "old Sana'a houses",
+              "her family"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: Her drawings of old Sana'a houses."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e15",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "Yousra can swim very well.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: Yousra can't swim."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "Her grandmother can ___ her how to make bint al-sahn.",
+            "answer": "teach",
+            "explanation_ar": "في النص: I can teach you."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-09-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "ماذا تستطيع أن تفعل؟",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تحدث عن مهاراتك في 5 إلى 7 جمل: **3 أشياء تستطيع فعلها، وشيئان لا تستطيع فعلهما، وشيء تريد أن تتعلمه.** ثم اطلب طلباً مهذباً من زميل."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "أستطيع",
+              "I can… very well."
+            ],
+            [
+              "لا أستطيع",
+              "I can't…"
+            ],
+            [
+              "قليلاً",
+              "I can… a little."
+            ],
+            [
+              "طلب",
+              "Can you…, please? / Can I…?"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Talk about your skills: three things you can do, two things you can't do, and one thing you want to learn. Then make a polite request.",
+        "helpful_phrases": [
+          "I can… very well.",
+          "I can… a little.",
+          "I can't…",
+          "I want to learn…",
+          "Can you…, please?"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "can / can't",
+          "polite requests"
+        ]
+      }
+    },
+    {
+      "id": "A1-09-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "رسالة تطلب فيها مساعدة",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب رسالة قصيرة (40 إلى 80 كلمة) إلى صديق: **قل ما تستطيع وما لا تستطيع فعله في مشروع مدرسي، واطلب منه المساعدة.** اقرأ المثال أولاً."
+        },
+        {
+          "type": "reading",
+          "text_en": "Hi Fares,\nWe have a science project for Sunday. I can write the report and I can draw the pictures, but I can't use the computer well. You can use computers very well. Can you help me, please? Can you come to my house on Thursday afternoon? Can you call me tonight?\nThanks,\nKhaled",
+          "word_count": 54
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write a short message to a friend about a school project. Say what you can and can't do, and ask for help politely.",
+        "min_words": 40,
+        "max_words": 80,
+        "rubric_focus": [
+          "can / can't",
+          "polite requests with can"
+        ]
+      }
+    },
+    {
+      "id": "A1-09-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **can / can't** + الفعل (بدون to وبدون s) مع كل الضمائر.\n- السؤال: **Can you…?** والإجابة **Yes, I can. / No, I can't.**\n- الطلب المهذب: **Can I…? Can you…, please?**"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "They ___ speak English very well.",
+            "options": [
+              "can",
+              "cans",
+              "can to"
+            ],
+            "answer": 0,
+            "explanation_ar": "can لا يتغير."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "Can he ride a bike? — No, he ___.",
+            "options": [
+              "can",
+              "can't",
+              "doesn't"
+            ],
+            "answer": 1,
+            "explanation_ar": "الإجابة المنفية: No, he can't."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-e19",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "Can I ___ your charger, please? (يستعير)",
+            "answer": "borrow",
+            "explanation_ar": "يستعير = borrow."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-09-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "He ___ swim very well.",
+        "options": [
+          "can",
+          "cans",
+          "can to"
+        ],
+        "answer": 0,
+        "explanation_ar": "can لا يتغير مع he."
+      },
+      {
+        "id": "A1-09-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "She can ___ three languages.",
+        "options": [
+          "speaks",
+          "speak",
+          "to speak"
+        ],
+        "answer": 1,
+        "explanation_ar": "بعد can الفعل بدون s."
+      },
+      {
+        "id": "A1-09-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "«هل تستطيع أن تطبخ؟»:",
+        "options": [
+          "Do you can cook?",
+          "Can you cook?",
+          "Can you to cook?"
+        ],
+        "answer": 1,
+        "explanation_ar": "السؤال: Can + الفاعل + الفعل."
+      },
+      {
+        "id": "A1-09-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "I ___ play the guitar. I don't know how. (لا أستطيع)",
+        "answer": "can't",
+        "explanation_ar": "لا أستطيع = can't."
+      },
+      {
+        "id": "A1-09-q5",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "Can I ___ my phone? The battery is low.",
+        "options": [
+          "call",
+          "charge",
+          "borrow"
+        ],
+        "answer": 1,
+        "explanation_ar": "البطارية ضعيفة: charge."
+      },
+      {
+        "id": "A1-09-q6",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "Can you help me? — Yes, ___.",
+        "options": [
+          "of course",
+          "I can't",
+          "no"
+        ],
+        "answer": 0,
+        "explanation_ar": "الموافقة: Yes, of course."
+      },
+      {
+        "id": "A1-09-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات لتكوّن سؤالاً: I / your / can / borrow / pen",
+        "answer": [
+          "Can",
+          "I",
+          "borrow",
+          "your",
+          "pen"
+        ],
+        "explanation_ar": "الطلب: Can I + الفعل…؟"
+      },
+      {
+        "id": "A1-09-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "We can't to come today.",
+          "We can't come today.",
+          "We don't can come today."
+        ],
+        "answer": 1,
+        "explanation_ar": "can't + الفعل بدون to."
+      },
+      {
+        "id": "A1-09-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «Nabil can run fast but he can't swim.» What can't Nabil do?",
+        "options": [
+          "run",
+          "swim",
+          "play"
+        ],
+        "answer": 1,
+        "explanation_ar": "he can't swim."
+      },
+      {
+        "id": "A1-09-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "She draws very ___. Her pictures are beautiful. (جيداً)",
+        "answer": "well",
+        "explanation_ar": "جيداً = well."
+      }
+    ]
+  },
+  "context_note": "فريق المدرسة، السباحة في بحر عدن، رسم بيوت صنعاء القديمة، واتساب."
+}

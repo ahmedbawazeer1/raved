@@ -1,0 +1,806 @@
+{
+  "path": "english",
+  "code": "A1-03",
+  "version": 1,
+  "level": "A1",
+  "position": 3,
+  "title": "My School",
+  "topic": "الفصل والمدرسة في المكلا",
+  "grammar_point": "there is / there are + a / an + plural nouns",
+  "can_do": [
+    "أصف ما يوجد في فصلي ومدرستي",
+    "أسأل هل يوجد شيء في مكان ما وأفهم الإجابة",
+    "أفهم وصفاً قصيراً لمدرسة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-03-v1",
+      "word": "classroom",
+      "ipa": "/ˈklɑːsruːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "فصل (غرفة الدراسة)",
+      "example_en": "Our classroom is big."
+    },
+    {
+      "id": "A1-03-v2",
+      "word": "desk",
+      "ipa": "/desk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "طاولة الطالب / مكتب",
+      "example_en": "There is a book on my desk."
+    },
+    {
+      "id": "A1-03-v3",
+      "word": "chair",
+      "ipa": "/tʃeə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "كرسي",
+      "example_en": "There are thirty chairs in the room."
+    },
+    {
+      "id": "A1-03-v4",
+      "word": "board",
+      "ipa": "/bɔːd/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سبورة",
+      "example_en": "The teacher writes on the board."
+    },
+    {
+      "id": "A1-03-v5",
+      "word": "book",
+      "ipa": "/bʊk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "كتاب",
+      "example_en": "This is my English book."
+    },
+    {
+      "id": "A1-03-v6",
+      "word": "notebook",
+      "ipa": "/ˈnəʊtbʊk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "دفتر",
+      "example_en": "I have a red notebook."
+    },
+    {
+      "id": "A1-03-v7",
+      "word": "pen",
+      "ipa": "/pen/",
+      "part_of_speech": "noun",
+      "meaning_ar": "قلم حبر",
+      "example_en": "Can I use your pen?"
+    },
+    {
+      "id": "A1-03-v8",
+      "word": "pencil",
+      "ipa": "/ˈpensl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "قلم رصاص",
+      "example_en": "There is a pencil in my bag."
+    },
+    {
+      "id": "A1-03-v9",
+      "word": "bag",
+      "ipa": "/bæɡ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "حقيبة",
+      "example_en": "My bag is heavy."
+    },
+    {
+      "id": "A1-03-v10",
+      "word": "window",
+      "ipa": "/ˈwɪndəʊ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "نافذة",
+      "example_en": "There are four windows in our classroom."
+    },
+    {
+      "id": "A1-03-v11",
+      "word": "door",
+      "ipa": "/dɔː/",
+      "part_of_speech": "noun",
+      "meaning_ar": "باب",
+      "example_en": "The door is open."
+    },
+    {
+      "id": "A1-03-v12",
+      "word": "library",
+      "ipa": "/ˈlaɪbrəri/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مكتبة",
+      "example_en": "There is a small library in our school."
+    },
+    {
+      "id": "A1-03-v13",
+      "word": "playground",
+      "ipa": "/ˈpleɪɡraʊnd/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ساحة / ملعب المدرسة",
+      "example_en": "The students are in the playground."
+    },
+    {
+      "id": "A1-03-v14",
+      "word": "lab",
+      "ipa": "/læb/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مختبر / معمل",
+      "example_en": "There is a science lab in our school."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-03-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "أشياء في المدرسة",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "انظر حولك في الفصل: ماذا ترى؟ تعلّم أسماء الأشياء والأماكن في المدرسة واستمع لنطقها."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "classroom",
+              "/ˈklɑːsruːm/",
+              "فصل (غرفة الدراسة)",
+              "Our classroom is big."
+            ],
+            [
+              "desk",
+              "/desk/",
+              "طاولة الطالب / مكتب",
+              "There is a book on my desk."
+            ],
+            [
+              "chair",
+              "/tʃeə/",
+              "كرسي",
+              "There are thirty chairs in the room."
+            ],
+            [
+              "board",
+              "/bɔːd/",
+              "سبورة",
+              "The teacher writes on the board."
+            ],
+            [
+              "book",
+              "/bʊk/",
+              "كتاب",
+              "This is my English book."
+            ],
+            [
+              "notebook",
+              "/ˈnəʊtbʊk/",
+              "دفتر",
+              "I have a red notebook."
+            ],
+            [
+              "pen",
+              "/pen/",
+              "قلم حبر",
+              "Can I use your pen?"
+            ],
+            [
+              "pencil",
+              "/ˈpensl/",
+              "قلم رصاص",
+              "There is a pencil in my bag."
+            ],
+            [
+              "bag",
+              "/bæɡ/",
+              "حقيبة",
+              "My bag is heavy."
+            ],
+            [
+              "window",
+              "/ˈwɪndəʊ/",
+              "نافذة",
+              "There are four windows in our classroom."
+            ],
+            [
+              "door",
+              "/dɔː/",
+              "باب",
+              "The door is open."
+            ],
+            [
+              "library",
+              "/ˈlaɪbrəri/",
+              "مكتبة",
+              "There is a small library in our school."
+            ],
+            [
+              "playground",
+              "/ˈpleɪɡraʊnd/",
+              "ساحة / ملعب المدرسة",
+              "The students are in the playground."
+            ],
+            [
+              "lab",
+              "/læb/",
+              "مختبر / معمل",
+              "There is a science lab in our school."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "classroom. Our classroom is big.\ndesk. There is a book on my desk.\nchair. There are thirty chairs in the room.\nboard. The teacher writes on the board.\nbook. This is my English book.\nnotebook. I have a red notebook.\npen. Can I use your pen?\npencil. There is a pencil in my bag.\nbag. My bag is heavy.\nwindow. There are four windows in our classroom.\ndoor. The door is open.\nlibrary. There is a small library in our school.\nplayground. The students are in the playground.\nlab. There is a science lab in our school."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "The teacher writes on the ___.",
+            "options": [
+              "door",
+              "board",
+              "bag"
+            ],
+            "answer": 1,
+            "explanation_ar": "المعلم يكتب على السبورة board."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "We read books in the ___.",
+            "options": [
+              "library",
+              "playground",
+              "window"
+            ],
+            "answer": 0,
+            "explanation_ar": "نقرأ الكتب في المكتبة library."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I write with a ___. (قلم رصاص)",
+            "answer": "pencil",
+            "explanation_ar": "قلم الرصاص = pencil."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-03-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "there is / there are",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "نستخدم **there is** و **there are** لنقول إن شيئاً **موجود** في مكان («يوجد»).\n\n- **There is** + اسم مفرد: There is **a** board.\n- **There are** + اسم جمع: There are **thirty** chairs.\n- المختصر: **There's** a book."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الحالة",
+            "المفرد",
+            "الجمع"
+          ],
+          "rows": [
+            [
+              "إثبات",
+              "There is a lab.",
+              "There are two labs."
+            ],
+            [
+              "نفي",
+              "There isn't a library.",
+              "There aren't any windows."
+            ],
+            [
+              "سؤال",
+              "Is there a lab?",
+              "Are there any books?"
+            ],
+            [
+              "إجابة",
+              "Yes, there is. / No, there isn't.",
+              "Yes, there are. / No, there aren't."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**a أم an؟** نستخدم **an** قبل الكلمة التي تبدأ بصوت حرف علة (a, e, i, o, u): **an** English book, **an** office. وغير ذلك **a**: **a** desk, **a** pen.\n\n**الجمع:** نضيف **s** غالباً: book ← books. وبعد s و sh و ch و x نضيف **es**: class ← classes. وبعض الكلمات شاذة: man ← men, woman ← women, child ← children."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "There ___ a big window in our classroom.",
+            "options": [
+              "is",
+              "are",
+              "am"
+            ],
+            "answer": 0,
+            "explanation_ar": "window مفرد فنستخدم there is."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "There ___ forty students in my class.",
+            "options": [
+              "is",
+              "are",
+              "be"
+            ],
+            "answer": 1,
+            "explanation_ar": "forty students جمع فنستخدم there are."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e6",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "I have ___ English notebook.",
+            "options": [
+              "a",
+              "an",
+              "—"
+            ],
+            "answer": 1,
+            "explanation_ar": "English تبدأ بصوت حرف علة فنستخدم an."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e7",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "___ there a library in your school? — Yes, there is.",
+            "answer": "Is",
+            "explanation_ar": "السؤال عن مفرد يبدأ بـ Is there."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "جمع كلمة class:",
+            "options": [
+              "classs",
+              "classes",
+              "class's"
+            ],
+            "answer": 1,
+            "explanation_ar": "بعد s نضيف es: classes."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-03-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "مدرسة بلال الجديدة",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**بلال** انتقل إلى مدرسة جديدة في **المكلا**. استمع إلى حديثه مع صديقه **عمر**."
+        },
+        {
+          "type": "audio",
+          "text_en": "Omar: Hi, Bilal. How is your new school in Mukalla?\nBilal: It's great! It's big and it's near the sea.\nOmar: Is there a library?\nBilal: Yes, there is. There are a lot of books in English and Arabic.\nOmar: Are there any computers?\nBilal: Yes, there are ten computers in the lab. But there isn't a playground for football.\nOmar: Oh no! How many students are there in your class?\nBilal: There are thirty-five students."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e9",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "There is a library in Bilal's school.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "قال: Yes, there is."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How many computers are there in the lab?",
+            "options": [
+              "five",
+              "ten",
+              "thirty-five"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: there are ten computers in the lab."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e11",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "There is a football playground.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: there isn't a playground for football."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-03-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "مدرسة الفجر",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ وصف طالب لمدرسته في **المكلا**، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Al-Fajr School is in Mukalla. It is an old school, but it is clean and nice. There are twelve classrooms and there is a big library. In my classroom, there are thirty desks and thirty chairs. There is a board and there are four windows. There isn't a computer in my classroom, but there is a computer lab on the first floor. There is a small playground. We play football there at break time. I like my school because my teachers are kind and my friends are there.",
+          "word_count": 88
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e12",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "How many classrooms are there?",
+            "options": [
+              "four",
+              "twelve",
+              "thirty"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: There are twelve classrooms."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e13",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "There is a computer in the writer's classroom.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: There isn't a computer in my classroom."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where is the computer lab?",
+            "options": [
+              "on the first floor",
+              "in the playground",
+              "in the library"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: on the first floor."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e15",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "The students play football in the ___.",
+            "answer": "playground",
+            "explanation_ar": "في النص: There is a small playground. We play football there."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-03-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "صف فصلك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "صِف فصلك أو مدرستك لصديق في مدينة أخرى. قل ما **يوجد** وما **لا يوجد**، واستعمل there is و there are مع الأعداد."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "يوجد (مفرد)",
+              "There is a…"
+            ],
+            [
+              "يوجد (جمع)",
+              "There are … students / desks"
+            ],
+            [
+              "لا يوجد",
+              "There isn't a… / There aren't any…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe your classroom or your school to a friend in another city. Say what there is and what there isn't.",
+        "helpful_phrases": [
+          "In my classroom, there is…",
+          "There are … desks.",
+          "There isn't a…",
+          "My school is…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "there is / there are",
+          "school vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-03-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "رسالة عن مدرستك",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب رسالة قصيرة إلى صديق (30 إلى 70 كلمة) تصف فيها مدرستك. اقرأ المثال أولاً.\n\n**تذكّر:** there is + مفرد، there are + جمع، و a / an قبل المفرد."
+        },
+        {
+          "type": "reading",
+          "text_en": "Hi Rami,\nMy school is in Seiyun. It is not very big. There are eight classrooms and there is a small library. There isn't a lab, but there is a computer room. There are forty students in my class. My teachers are very good.\nBye,\nNasser",
+          "word_count": 46
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write a short message to a friend about your school. Use there is, there are, there isn't and there aren't.",
+        "min_words": 30,
+        "max_words": 70,
+        "rubric_focus": [
+          "there is / there are",
+          "a / an",
+          "plural nouns"
+        ]
+      }
+    },
+    {
+      "id": "A1-03-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **There is** + مفرد / **There are** + جمع.\n- **Is there…? Are there any…?**\n- **a** قبل الصوت الساكن، **an** قبل صوت حرف العلة.\n- الجمع: books, classes, children."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e16",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "___ there any students in the lab?",
+            "options": [
+              "Is",
+              "Are",
+              "Am"
+            ],
+            "answer": 1,
+            "explanation_ar": "students جمع فنستخدم Are there."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "There is ___ office near the library.",
+            "options": [
+              "a",
+              "an",
+              "two"
+            ],
+            "answer": 1,
+            "explanation_ar": "office تبدأ بحرف علة فنستخدم an."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-e18",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "There aren't ___ computers in my classroom.",
+            "answer": "any",
+            "explanation_ar": "في النفي مع الجمع نستخدم any."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-03-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "There ___ a library in our school.",
+        "options": [
+          "is",
+          "are",
+          "am"
+        ],
+        "answer": 0,
+        "explanation_ar": "library مفرد فنستخدم there is."
+      },
+      {
+        "id": "A1-03-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "There ___ twenty desks in the classroom.",
+        "options": [
+          "is",
+          "are",
+          "isn't"
+        ],
+        "answer": 1,
+        "explanation_ar": "twenty desks جمع فنستخدم there are."
+      },
+      {
+        "id": "A1-03-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "I have ___ orange bag.",
+        "options": [
+          "a",
+          "an",
+          "—"
+        ],
+        "answer": 1,
+        "explanation_ar": "orange تبدأ بحرف علة فنستخدم an."
+      },
+      {
+        "id": "A1-03-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "Are there any books on the desk? — Yes, there ___.",
+        "answer": "are",
+        "explanation_ar": "الإجابة القصيرة: Yes, there are."
+      },
+      {
+        "id": "A1-03-q5",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "We do science experiments in the ___.",
+        "options": [
+          "lab",
+          "library",
+          "playground"
+        ],
+        "answer": 0,
+        "explanation_ar": "التجارب العلمية في المختبر lab."
+      },
+      {
+        "id": "A1-03-q6",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "جمع كلمة child:",
+        "options": [
+          "childs",
+          "childes",
+          "children"
+        ],
+        "answer": 2,
+        "explanation_ar": "child جمعها شاذ: children."
+      },
+      {
+        "id": "A1-03-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): a / there / board / is",
+        "answer": [
+          "There",
+          "is",
+          "a",
+          "board"
+        ],
+        "explanation_ar": "There is + a + الاسم المفرد."
+      },
+      {
+        "id": "A1-03-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "There are a pen on the desk.",
+          "There is a pen on the desk.",
+          "There is pens on the desk."
+        ],
+        "answer": 1,
+        "explanation_ar": "a pen مفرد فنستخدم There is."
+      },
+      {
+        "id": "A1-03-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «There are 3 windows and 1 door in the room.» How many windows are there?",
+        "options": [
+          "one",
+          "three",
+          "four"
+        ],
+        "answer": 1,
+        "explanation_ar": "3 windows = ثلاث نوافذ."
+      },
+      {
+        "id": "A1-03-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Open the ___, please. It's hot in the classroom. (نافذة)",
+        "answer": "window",
+        "explanation_ar": "النافذة = window."
+      }
+    ]
+  },
+  "context_note": "مدارس في المكلا وسيئون؛ مدرسة قرب البحر."
+}

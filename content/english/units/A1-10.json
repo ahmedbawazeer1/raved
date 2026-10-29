@@ -1,0 +1,822 @@
+{
+  "path": "english",
+  "code": "A1-10",
+  "version": 1,
+  "level": "A1",
+  "position": 10,
+  "title": "Weather",
+  "topic": "الطقس من صنعاء الباردة إلى عدن الحارة",
+  "grammar_point": "adverbs of frequency (always, usually, often, sometimes, never)",
+  "can_do": [
+    "أصف الطقس في مدينتي في الفصول المختلفة",
+    "أتحدث عن عاداتي وكم مرة أفعلها",
+    "أفهم نشرة طقس بسيطة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-10-v1",
+      "word": "weather",
+      "ipa": "/ˈweðə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "الطقس",
+      "example_en": "What's the weather like in Aden?"
+    },
+    {
+      "id": "A1-10-v2",
+      "word": "hot",
+      "ipa": "/hɒt/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "حار",
+      "example_en": "It's very hot in summer."
+    },
+    {
+      "id": "A1-10-v3",
+      "word": "cold",
+      "ipa": "/kəʊld/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "بارد",
+      "example_en": "Sana'a is cold in winter."
+    },
+    {
+      "id": "A1-10-v4",
+      "word": "warm",
+      "ipa": "/wɔːm/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "دافئ",
+      "example_en": "It's warm in spring."
+    },
+    {
+      "id": "A1-10-v5",
+      "word": "sunny",
+      "ipa": "/ˈsʌni/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مشمس",
+      "example_en": "It's sunny today."
+    },
+    {
+      "id": "A1-10-v6",
+      "word": "rainy",
+      "ipa": "/ˈreɪni/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "ماطر",
+      "example_en": "August is rainy in Ibb."
+    },
+    {
+      "id": "A1-10-v7",
+      "word": "windy",
+      "ipa": "/ˈwɪndi/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "عاصف / فيه رياح",
+      "example_en": "It's windy near the sea."
+    },
+    {
+      "id": "A1-10-v8",
+      "word": "cloudy",
+      "ipa": "/ˈklaʊdi/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "غائم",
+      "example_en": "The sky is cloudy."
+    },
+    {
+      "id": "A1-10-v9",
+      "word": "summer",
+      "ipa": "/ˈsʌmə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "الصيف",
+      "example_en": "We visit our village in summer."
+    },
+    {
+      "id": "A1-10-v10",
+      "word": "winter",
+      "ipa": "/ˈwɪntə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "الشتاء",
+      "example_en": "I wear a jacket in winter."
+    },
+    {
+      "id": "A1-10-v11",
+      "word": "spring",
+      "ipa": "/sprɪŋ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "الربيع",
+      "example_en": "The mountains are green in spring."
+    },
+    {
+      "id": "A1-10-v12",
+      "word": "jacket",
+      "ipa": "/ˈdʒækɪt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "جاكيت / سترة",
+      "example_en": "Take your jacket. It's cold."
+    },
+    {
+      "id": "A1-10-v13",
+      "word": "umbrella",
+      "ipa": "/ʌmˈbrelə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مظلة",
+      "example_en": "I always take an umbrella in August."
+    },
+    {
+      "id": "A1-10-v14",
+      "word": "degrees",
+      "ipa": "/dɪˈɡriːz/",
+      "part_of_speech": "noun",
+      "meaning_ar": "درجات (حرارة)",
+      "example_en": "It's thirty-five degrees today."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-10-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "الطقس والفصول",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اليمن بلد متنوع: **صنعاء** باردة في الشتاء، و**عدن** و**الحديدة** حارتان أغلب السنة، و**إب** خضراء وماطرة في الصيف. تعلّم كلمات الطقس.\n\n**لاحظ:** كثير من صفات الطقس تأتي من الاسم + **y**: sun ← sunny، rain ← rainy، wind ← windy، cloud ← cloudy."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "weather",
+              "/ˈweðə/",
+              "الطقس",
+              "What's the weather like in Aden?"
+            ],
+            [
+              "hot",
+              "/hɒt/",
+              "حار",
+              "It's very hot in summer."
+            ],
+            [
+              "cold",
+              "/kəʊld/",
+              "بارد",
+              "Sana'a is cold in winter."
+            ],
+            [
+              "warm",
+              "/wɔːm/",
+              "دافئ",
+              "It's warm in spring."
+            ],
+            [
+              "sunny",
+              "/ˈsʌni/",
+              "مشمس",
+              "It's sunny today."
+            ],
+            [
+              "rainy",
+              "/ˈreɪni/",
+              "ماطر",
+              "August is rainy in Ibb."
+            ],
+            [
+              "windy",
+              "/ˈwɪndi/",
+              "عاصف / فيه رياح",
+              "It's windy near the sea."
+            ],
+            [
+              "cloudy",
+              "/ˈklaʊdi/",
+              "غائم",
+              "The sky is cloudy."
+            ],
+            [
+              "summer",
+              "/ˈsʌmə/",
+              "الصيف",
+              "We visit our village in summer."
+            ],
+            [
+              "winter",
+              "/ˈwɪntə/",
+              "الشتاء",
+              "I wear a jacket in winter."
+            ],
+            [
+              "spring",
+              "/sprɪŋ/",
+              "الربيع",
+              "The mountains are green in spring."
+            ],
+            [
+              "jacket",
+              "/ˈdʒækɪt/",
+              "جاكيت / سترة",
+              "Take your jacket. It's cold."
+            ],
+            [
+              "umbrella",
+              "/ʌmˈbrelə/",
+              "مظلة",
+              "I always take an umbrella in August."
+            ],
+            [
+              "degrees",
+              "/dɪˈɡriːz/",
+              "درجات (حرارة)",
+              "It's thirty-five degrees today."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "weather. What's the weather like in Aden?\nhot. It's very hot in summer.\ncold. Sana'a is cold in winter.\nwarm. It's warm in spring.\nsunny. It's sunny today.\nrainy. August is rainy in Ibb.\nwindy. It's windy near the sea.\ncloudy. The sky is cloudy.\nsummer. We visit our village in summer.\nwinter. I wear a jacket in winter.\nspring. The mountains are green in spring.\njacket. Take your jacket. It's cold.\numbrella. I always take an umbrella in August.\ndegrees. It's thirty-five degrees today."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "The opposite of «hot» is:",
+            "options": [
+              "warm",
+              "cold",
+              "sunny"
+            ],
+            "answer": 1,
+            "explanation_ar": "عكس حار hot هو بارد cold."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "It's raining. Take your ___.",
+            "options": [
+              "umbrella",
+              "jacket",
+              "degrees"
+            ],
+            "answer": 0,
+            "explanation_ar": "مع المطر نأخذ المظلة umbrella."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There are a lot of clouds. It's ___.",
+            "answer": "cloudy",
+            "explanation_ar": "cloud + y = cloudy (غائم)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-10-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "always / usually / sometimes / never",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**ظروف التكرار** تقول **كم مرة** نفعل الشيء. نستخدمها مع المضارع البسيط."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "النسبة",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "always",
+              "دائماً",
+              "100%",
+              "It's always hot in Aden in summer."
+            ],
+            [
+              "usually",
+              "عادةً",
+              "80%",
+              "I usually walk to school."
+            ],
+            [
+              "often",
+              "غالباً / كثيراً",
+              "60%",
+              "It often rains in Ibb in August."
+            ],
+            [
+              "sometimes",
+              "أحياناً",
+              "40%",
+              "It's sometimes windy in Mukalla."
+            ],
+            [
+              "never",
+              "أبداً / لا … أبداً",
+              "0%",
+              "It never snows in Aden."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**مكانها في الجملة:**\n\n- **قبل** الفعل العادي: I **always** get up early. / She **never** drinks coffee.\n- **بعد** فعل be (am / is / are): It **is often** cold in Sana'a. / They **are never** late.\n\n**انتبه:** never معناها النفي، فلا نضع معها not: ✗ I don't never… ← ✓ I **never**…\n\n**السؤال عن الطقس:** What's the weather like today? ← It's sunny and hot. It's 30 degrees."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "اختر الترتيب الصحيح:",
+            "options": [
+              "I go always to school by bus.",
+              "I always go to school by bus.",
+              "Always I go to school by bus."
+            ],
+            "answer": 1,
+            "explanation_ar": "ظرف التكرار قبل الفعل العادي."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "اختر الترتيب الصحيح:",
+            "options": [
+              "It is usually hot in Hodeidah.",
+              "It usually is hot in Hodeidah.",
+              "Usually it hot in Hodeidah."
+            ],
+            "answer": 0,
+            "explanation_ar": "مع فعل be يأتي الظرف بعده: is usually."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e6",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "It ___ snows in Aden. (0%)",
+            "options": [
+              "always",
+              "sometimes",
+              "never"
+            ],
+            "answer": 2,
+            "explanation_ar": "0% = never."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e7",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "What's the weather ___ in Taiz today?",
+            "answer": "like",
+            "explanation_ar": "السؤال عن الطقس: What's the weather like…?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e8",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: sometimes / is / it / windy",
+            "answer": [
+              "It",
+              "is",
+              "sometimes",
+              "windy"
+            ],
+            "explanation_ar": "الظرف بعد is."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-10-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "نشرة الطقس",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "استمع إلى **نشرة الطقس** لعدة مدن يمنية. ستسمع **it will be** ومعناها «سيكون»، ولا بأس إن لم تعرف القاعدة الآن؛ ركّز على كلمات الطقس والأرقام."
+        },
+        {
+          "type": "audio",
+          "text_en": "Good evening. Here is the weather for tomorrow, Tuesday. In Sana'a, it will be sunny in the morning but cold at night, about eight degrees. Take a jacket. In Aden, it will be very hot, thirty-six degrees, and windy near the sea. In Ibb, it will be cloudy and rainy in the afternoon. Don't forget your umbrella. In Mukalla, it will be sunny and hot, thirty-four degrees. That's all for tonight. Good night."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e9",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "Where will it be rainy?",
+            "options": [
+              "Sana'a",
+              "Aden",
+              "Ibb"
+            ],
+            "answer": 2,
+            "explanation_ar": "قيل: In Ibb, it will be cloudy and rainy."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How hot will it be in Aden?",
+            "options": [
+              "8 degrees",
+              "34 degrees",
+              "36 degrees"
+            ],
+            "answer": 2,
+            "explanation_ar": "قيل: thirty-six degrees."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e11",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "It will be cold at night in Sana'a.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "قيل: cold at night, about eight degrees."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-10-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "الطقس في صنعاء وعدن",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ رسالة **غدير** عن الطقس في **صنعاء** وطقس ابنة عمها في **عدن**، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Hello! My name is Ghadeer and I live in Sana'a. Sana'a is a city in the mountains, so the weather is different from Aden. In winter, it is usually sunny in the day, but it is very cold at night. Sometimes it is zero degrees! I always wear a jacket in the morning when I go to school. In summer, it is warm and it often rains in the afternoon. The rain is short but strong. My cousin lives in Aden. She says it is never cold there. In summer, it is always very hot and humid. She usually stays at home in the afternoon, and she goes to the beach in the evening.",
+          "word_count": 114
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e12",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "What is the weather like in Sana'a in winter at night?",
+            "options": [
+              "very hot",
+              "very cold",
+              "rainy"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: it is very cold at night."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "When does it often rain in Sana'a?",
+            "options": [
+              "in winter mornings",
+              "in summer afternoons",
+              "never"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: In summer… it often rains in the afternoon."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e14",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "It is sometimes cold in Aden.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: it is never cold there."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e15",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "Ghadeer always wears a ___ in the morning.",
+            "answer": "jacket",
+            "explanation_ar": "في النص: I always wear a jacket in the morning."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-10-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "طقس مدينتك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "صِف طقس مدينتك في **الصيف والشتاء**، وقل ماذا تفعل عادة في كل فصل. استعمل always و usually و sometimes و never."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "الطقس",
+              "In summer, it's usually…"
+            ],
+            [
+              "الحرارة",
+              "It's about … degrees."
+            ],
+            [
+              "عاداتك",
+              "I always / sometimes / never…"
+            ],
+            [
+              "فصلي المفضل",
+              "My favourite season is… because…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe the weather in your city in summer and in winter, and say what you usually do in each season.",
+        "helpful_phrases": [
+          "In summer, it's usually…",
+          "In winter, it's sometimes…",
+          "It's about … degrees.",
+          "I always…",
+          "My favourite season is…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "adverbs of frequency",
+          "weather vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-10-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "فصلك المفضل",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن فصلك المفضل وطقسه، وماذا تفعل فيه. اقرأ المثال أولاً.\n\n**تذكّر:** ظرف التكرار قبل الفعل العادي وبعد is / are."
+        },
+        {
+          "type": "reading",
+          "text_en": "My favourite season is winter in Hodeidah. It is never cold, but it is warm and nice. It is usually sunny. In summer, it is very hot and I always stay at home in the afternoon. But in winter, I often go to the beach with my family. We sometimes have fish for lunch near the sea.",
+          "word_count": 57
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write about your favourite season: the weather and what you do. Use always, usually, often, sometimes and never.",
+        "min_words": 40,
+        "max_words": 80,
+        "rubric_focus": [
+          "adverbs of frequency (position)",
+          "weather vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-10-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- الطقس: hot, cold, warm, sunny, rainy, windy, cloudy.\n- الفصول: summer, winter, spring (و autumn للخريف).\n- **always > usually > often > sometimes > never**.\n- المكان: قبل الفعل العادي، وبعد am / is / are."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e16",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "She ___ late for school. She is a good student.",
+            "options": [
+              "is never",
+              "never is",
+              "never"
+            ],
+            "answer": 0,
+            "explanation_ar": "مع be: is never."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e17",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Which season is very hot in Aden?",
+            "options": [
+              "winter",
+              "summer",
+              "spring"
+            ],
+            "answer": 1,
+            "explanation_ar": "الصيف summer حار جداً في عدن."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-e18",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "We ___ visit our grandfather on Fridays. (عادةً)",
+            "answer": "usually",
+            "explanation_ar": "عادةً = usually."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-10-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "I ___ to school by bus. (100%)",
+        "options": [
+          "always go",
+          "go always",
+          "always goes"
+        ],
+        "answer": 0,
+        "explanation_ar": "always قبل الفعل، ومع I الفعل بدون s."
+      },
+      {
+        "id": "A1-10-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "It ___ cold in Sana'a in winter.",
+        "options": [
+          "often is",
+          "is often",
+          "often"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع is يأتي الظرف بعده."
+      },
+      {
+        "id": "A1-10-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "He ___ drinks coffee. He doesn't like it. (0%)",
+        "options": [
+          "always",
+          "usually",
+          "never"
+        ],
+        "answer": 2,
+        "explanation_ar": "0% = never."
+      },
+      {
+        "id": "A1-10-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "What's the weather ___ in Ibb? — It's rainy.",
+        "answer": "like",
+        "explanation_ar": "What's the weather like?"
+      },
+      {
+        "id": "A1-10-q5",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "There is a lot of sun. It's ___.",
+        "options": [
+          "rainy",
+          "sunny",
+          "cloudy"
+        ],
+        "answer": 1,
+        "explanation_ar": "sun + ny = sunny."
+      },
+      {
+        "id": "A1-10-q6",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "It's raining. You need an ___.",
+        "options": [
+          "jacket",
+          "umbrella",
+          "summer"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع المطر: umbrella."
+      },
+      {
+        "id": "A1-10-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: drinks / she / tea / often",
+        "answer": [
+          "She",
+          "often",
+          "drinks",
+          "tea"
+        ],
+        "explanation_ar": "الظرف قبل الفعل drinks."
+      },
+      {
+        "id": "A1-10-q8",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "I don't never watch TV.",
+          "I never watch TV.",
+          "I watch never TV."
+        ],
+        "answer": 1,
+        "explanation_ar": "never وحدها تكفي للنفي وتأتي قبل الفعل."
+      },
+      {
+        "id": "A1-10-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «In Mukalla it's 35 degrees today. In Sana'a it's 15.» Where is it cold?",
+        "options": [
+          "Mukalla",
+          "Sana'a",
+          "both"
+        ],
+        "answer": 1,
+        "explanation_ar": "15 درجة أبرد من 35."
+      },
+      {
+        "id": "A1-10-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The opposite of «cold» is ___.",
+        "answer": "hot",
+        "explanation_ar": "عكس بارد cold هو حار hot."
+      }
+    ]
+  },
+  "context_note": "تنوّع طقس اليمن: برد صنعاء، حر عدن والحديدة والمكلا، أمطار إب في الصيف."
+}

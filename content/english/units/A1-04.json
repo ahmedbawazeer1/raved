@@ -1,0 +1,909 @@
+{
+  "path": "english",
+  "code": "A1-04",
+  "version": 1,
+  "level": "A1",
+  "position": 4,
+  "title": "At the Market",
+  "topic": "الشراء من سوق الملح في صنعاء القديمة",
+  "grammar_point": "numbers 1–1000 + how much / how many + this / these / that / those",
+  "can_do": [
+    "أسأل عن سعر شيء وأفهم الإجابة",
+    "أقول وأفهم الأرقام حتى 1000 وأكثر",
+    "أشتري شيئاً بسيطاً من البائع بعبارات مهذبة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-04-v1",
+      "word": "market",
+      "ipa": "/ˈmɑːkɪt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سوق",
+      "example_en": "The market is very busy today."
+    },
+    {
+      "id": "A1-04-v2",
+      "word": "shop",
+      "ipa": "/ʃɒp/",
+      "part_of_speech": "noun",
+      "meaning_ar": "دكان / متجر",
+      "example_en": "My uncle has a small shop."
+    },
+    {
+      "id": "A1-04-v3",
+      "word": "price",
+      "ipa": "/praɪs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "سعر",
+      "example_en": "What's the price of this bag?"
+    },
+    {
+      "id": "A1-04-v4",
+      "word": "rial",
+      "ipa": "/riˈɑːl/",
+      "part_of_speech": "noun",
+      "meaning_ar": "ريال",
+      "example_en": "It's five hundred rials."
+    },
+    {
+      "id": "A1-04-v5",
+      "word": "cheap",
+      "ipa": "/tʃiːp/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "رخيص",
+      "example_en": "These oranges are cheap."
+    },
+    {
+      "id": "A1-04-v6",
+      "word": "expensive",
+      "ipa": "/ɪkˈspensɪv/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "غالٍ",
+      "example_en": "This phone is expensive."
+    },
+    {
+      "id": "A1-04-v7",
+      "word": "buy",
+      "ipa": "/baɪ/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يشتري",
+      "example_en": "I want to buy some bread."
+    },
+    {
+      "id": "A1-04-v8",
+      "word": "sell",
+      "ipa": "/sel/",
+      "part_of_speech": "verb",
+      "meaning_ar": "يبيع",
+      "example_en": "He sells honey from Hadramout."
+    },
+    {
+      "id": "A1-04-v9",
+      "word": "bread",
+      "ipa": "/bred/",
+      "part_of_speech": "noun",
+      "meaning_ar": "خبز",
+      "example_en": "Two pieces of bread, please."
+    },
+    {
+      "id": "A1-04-v10",
+      "word": "honey",
+      "ipa": "/ˈhʌni/",
+      "part_of_speech": "noun",
+      "meaning_ar": "عسل",
+      "example_en": "Yemeni honey is famous."
+    },
+    {
+      "id": "A1-04-v11",
+      "word": "dates",
+      "ipa": "/deɪts/",
+      "part_of_speech": "noun",
+      "meaning_ar": "تمر",
+      "example_en": "These dates are sweet."
+    },
+    {
+      "id": "A1-04-v12",
+      "word": "kilo",
+      "ipa": "/ˈkiːləʊ/",
+      "part_of_speech": "noun",
+      "meaning_ar": "كيلو",
+      "example_en": "A kilo of tomatoes, please."
+    },
+    {
+      "id": "A1-04-v13",
+      "word": "hundred",
+      "ipa": "/ˈhʌndrəd/",
+      "part_of_speech": "other",
+      "meaning_ar": "مئة",
+      "example_en": "One hundred rials."
+    },
+    {
+      "id": "A1-04-v14",
+      "word": "thousand",
+      "ipa": "/ˈθaʊznd/",
+      "part_of_speech": "other",
+      "meaning_ar": "ألف",
+      "example_en": "It's two thousand rials."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-04-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "في السوق والأرقام",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "نذهب اليوم إلى **سوق الملح** في صنعاء القديمة. تعلّم كلمات الشراء والبيع، ثم راجع الأرقام."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "market",
+              "/ˈmɑːkɪt/",
+              "سوق",
+              "The market is very busy today."
+            ],
+            [
+              "shop",
+              "/ʃɒp/",
+              "دكان / متجر",
+              "My uncle has a small shop."
+            ],
+            [
+              "price",
+              "/praɪs/",
+              "سعر",
+              "What's the price of this bag?"
+            ],
+            [
+              "rial",
+              "/riˈɑːl/",
+              "ريال",
+              "It's five hundred rials."
+            ],
+            [
+              "cheap",
+              "/tʃiːp/",
+              "رخيص",
+              "These oranges are cheap."
+            ],
+            [
+              "expensive",
+              "/ɪkˈspensɪv/",
+              "غالٍ",
+              "This phone is expensive."
+            ],
+            [
+              "buy",
+              "/baɪ/",
+              "يشتري",
+              "I want to buy some bread."
+            ],
+            [
+              "sell",
+              "/sel/",
+              "يبيع",
+              "He sells honey from Hadramout."
+            ],
+            [
+              "bread",
+              "/bred/",
+              "خبز",
+              "Two pieces of bread, please."
+            ],
+            [
+              "honey",
+              "/ˈhʌni/",
+              "عسل",
+              "Yemeni honey is famous."
+            ],
+            [
+              "dates",
+              "/deɪts/",
+              "تمر",
+              "These dates are sweet."
+            ],
+            [
+              "kilo",
+              "/ˈkiːləʊ/",
+              "كيلو",
+              "A kilo of tomatoes, please."
+            ],
+            [
+              "hundred",
+              "/ˈhʌndrəd/",
+              "مئة",
+              "One hundred rials."
+            ],
+            [
+              "thousand",
+              "/ˈθaʊznd/",
+              "ألف",
+              "It's two thousand rials."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "market. The market is very busy today.\nshop. My uncle has a small shop.\nprice. What's the price of this bag?\nrial. It's five hundred rials.\ncheap. These oranges are cheap.\nexpensive. This phone is expensive.\nbuy. I want to buy some bread.\nsell. He sells honey from Hadramout.\nbread. Two pieces of bread, please.\nhoney. Yemeni honey is famous.\ndates. These dates are sweet.\nkilo. A kilo of tomatoes, please.\nhundred. One hundred rials.\nthousand. It's two thousand rials."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الرقم",
+            "بالإنجليزية",
+            "الرقم",
+            "بالإنجليزية"
+          ],
+          "rows": [
+            [
+              "1",
+              "one",
+              "11",
+              "eleven"
+            ],
+            [
+              "2",
+              "two",
+              "12",
+              "twelve"
+            ],
+            [
+              "3",
+              "three",
+              "13",
+              "thirteen"
+            ],
+            [
+              "4",
+              "four",
+              "20",
+              "twenty"
+            ],
+            [
+              "5",
+              "five",
+              "30",
+              "thirty"
+            ],
+            [
+              "6",
+              "six",
+              "40",
+              "forty"
+            ],
+            [
+              "7",
+              "seven",
+              "50",
+              "fifty"
+            ],
+            [
+              "8",
+              "eight",
+              "100",
+              "one hundred"
+            ],
+            [
+              "9",
+              "nine",
+              "500",
+              "five hundred"
+            ],
+            [
+              "10",
+              "ten",
+              "1,000",
+              "one thousand"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "one, two, three, four, five, six, seven, eight, nine, ten. eleven, twelve, thirteen. twenty, thirty, forty, fifty. one hundred. five hundred. one thousand."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**انتبه للفرق في النطق:** **thirteen** (13) نشدد على آخرها، و**thirty** (30) نشدد على أولها. وكذلك fourteen / forty و fifteen / fifty.\n\n**الأعداد الكبيرة:** 250 = two hundred **and** fifty، و 1,500 = one thousand five hundred."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "40 بالإنجليزية:",
+            "options": [
+              "fourteen",
+              "forty",
+              "four"
+            ],
+            "answer": 1,
+            "explanation_ar": "40 = forty، أما 14 = fourteen."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "The opposite of «cheap» is:",
+            "options": [
+              "expensive",
+              "sweet",
+              "busy"
+            ],
+            "answer": 0,
+            "explanation_ar": "عكس رخيص cheap هو غالٍ expensive."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I want to ___ some honey. (يشتري)",
+            "answer": "buy",
+            "explanation_ar": "يشتري = buy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-04-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "How much / How many + this / these",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**How much** و **How many** للسؤال عن الكمية:\n\n- **How much is it?** = بكم؟ (للسؤال عن السعر)\n- **How many** + اسم جمع = كم عدد…؟: How many oranges?\n\n**this / these / that / those** للإشارة:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "",
+            "قريب",
+            "بعيد"
+          ],
+          "rows": [
+            [
+              "مفرد",
+              "this (هذا/هذه)",
+              "that (ذلك/تلك)"
+            ],
+            [
+              "جمع",
+              "these (هؤلاء/هذه)",
+              "those (أولئك/تلك)"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "headers": [
+            "السؤال",
+            "الإجابة"
+          ],
+          "rows": [
+            [
+              "How much is this bag?",
+              "It's two thousand rials."
+            ],
+            [
+              "How much are these dates?",
+              "They're one thousand rials a kilo."
+            ],
+            [
+              "How many students are there?",
+              "There are forty."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**لاحظ:** مع المفرد نقول **How much is…? / It's…**، ومع الجمع **How much are…? / They're…**."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "How ___ is this notebook? — It's 300 rials.",
+            "options": [
+              "much",
+              "many",
+              "old"
+            ],
+            "answer": 0,
+            "explanation_ar": "للسؤال عن السعر نستخدم How much."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "How ___ desks are there in the classroom?",
+            "options": [
+              "much",
+              "many",
+              "is"
+            ],
+            "answer": 1,
+            "explanation_ar": "desks جمع يُعدّ فنستخدم How many."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e6",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "___ apples here are fresh. (قريبة، جمع)",
+            "options": [
+              "This",
+              "These",
+              "That"
+            ],
+            "answer": 1,
+            "explanation_ar": "للجمع القريب نستخدم these."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e7",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "How much ___ these oranges?",
+            "answer": "are",
+            "explanation_ar": "oranges جمع فنستخدم are."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e8",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / much / how / bread / the",
+            "answer": [
+              "How",
+              "much",
+              "is",
+              "the",
+              "bread"
+            ],
+            "explanation_ar": "How much + is + الشيء."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-04-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "عند بائع التمر والعسل",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**أسماء** تشتري من بائع في السوق. استمع وانتبه **للأرقام والأسعار**."
+        },
+        {
+          "type": "audio",
+          "text_en": "Seller: Good morning! Welcome.\nAsma: Good morning. How much is this honey?\nSeller: This is honey from Hadramout. It's ten thousand rials.\nAsma: Oh, that's expensive. And how much are those dates?\nSeller: These dates? They're one thousand five hundred rials a kilo.\nAsma: OK. Two kilos of dates, please.\nSeller: Here you are. That's three thousand rials.\nAsma: Here you are. Thank you!\nSeller: Thank you. Goodbye."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e9",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How much is the honey?",
+            "options": [
+              "1,500 rials",
+              "3,000 rials",
+              "10,000 rials"
+            ],
+            "answer": 2,
+            "explanation_ar": "قال البائع: It's ten thousand rials."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How many kilos of dates does Asma buy?",
+            "options": [
+              "one",
+              "two",
+              "three"
+            ],
+            "answer": 1,
+            "explanation_ar": "قالت: Two kilos of dates, please."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e11",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Asma buys the honey.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "قالت إن العسل غالٍ، واشترت التمر فقط."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-04-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "يوم الخميس في السوق القديم",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ النص عن **فيصل** في السوق القديم، ثم أجب عن الأسئلة."
+        },
+        {
+          "type": "reading",
+          "text_en": "Every Thursday, Faisal goes to the old market in Sana'a with his father. The market is busy and noisy. There are many shops. Some shops sell spices, and some sell clothes and shoes. Faisal's father buys bread, tomatoes and onions. A kilo of tomatoes is eight hundred rials. Faisal wants a new notebook for school. The notebook is five hundred rials. It is cheap. He also wants a football, but it is seven thousand rials. That is too expensive for him. At the end, they buy a cup of tea and drink it near the shop of their friend, Uncle Yahya.",
+          "word_count": 101
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e12",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "When does Faisal go to the market?",
+            "options": [
+              "every Friday",
+              "every Thursday",
+              "every day"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: Every Thursday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "How much is the notebook?",
+            "options": [
+              "500 rials",
+              "800 rials",
+              "7,000 rials"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: The notebook is five hundred rials."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e14",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "Faisal buys a football.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الكرة غالية عليه (too expensive)، فلم يشترها."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e15",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "The football is too ___ for Faisal.",
+            "answer": "expensive",
+            "explanation_ar": "في النص: That is too expensive for him."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-04-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "اشترِ من البائع",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "أنت في السوق وتريد شراء شيئين. **حيِّ البائع، اسأل عن السعر، اطلب الكمية، واشكره.** قل الأسعار بالإنجليزية."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "بكم هذا؟",
+              "How much is this…?"
+            ],
+            [
+              "بكم هذه (جمع)؟",
+              "How much are these…?"
+            ],
+            [
+              "أريد…",
+              "… please. / I'd like…"
+            ],
+            [
+              "تفضل",
+              "Here you are."
+            ],
+            [
+              "شكراً",
+              "Thank you."
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are at the market. Greet the seller, ask the price of two things, say how many you want and thank the seller.",
+        "helpful_phrases": [
+          "Good morning.",
+          "How much is this…?",
+          "How much are these…?",
+          "Two kilos, please.",
+          "Here you are. Thank you."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "how much / how many",
+          "numbers",
+          "this / these"
+        ]
+      }
+    },
+    {
+      "id": "A1-04-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "قائمة مشترياتك",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة قصيرة (30 إلى 70 كلمة) عن ذهابك للسوق: **ماذا تشتري، وكم العدد، وكم السعر**. اكتب الأعداد بالحروف."
+        },
+        {
+          "type": "reading",
+          "text_en": "On Saturday, I go to the market with my mother. We buy three kilos of potatoes. They are nine hundred rials a kilo. We also buy bread and some dates. The dates are cheap. I want a new bag for school, but it is expensive. It is six thousand rials.",
+          "word_count": 50
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write about a trip to the market: what you buy, how many and how much. Write the numbers in words.",
+        "min_words": 30,
+        "max_words": 70,
+        "rubric_focus": [
+          "numbers in words",
+          "how much / how many",
+          "this / these"
+        ]
+      }
+    },
+    {
+      "id": "A1-04-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **How much is…? / How much are…?** للسعر.\n- **How many** + جمع للعدد.\n- **this / these** للقريب، **that / those** للبعيد.\n- الأرقام: thirteen ≠ thirty، hundred، thousand."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e16",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "250 بالإنجليزية:",
+            "options": [
+              "two hundred and fifty",
+              "twenty-five",
+              "two thousand and fifty"
+            ],
+            "answer": 0,
+            "explanation_ar": "250 = two hundred and fifty."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "Look at ___ mountains! They're beautiful. (بعيدة، جمع)",
+            "options": [
+              "this",
+              "these",
+              "those"
+            ],
+            "answer": 2,
+            "explanation_ar": "للجمع البعيد نستخدم those."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-e18",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "How ___ kilos do you want? — Two, please.",
+            "answer": "many",
+            "explanation_ar": "kilos جمع يُعدّ فنستخدم How many."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-04-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "How ___ is this pen? — It's 200 rials.",
+        "options": [
+          "many",
+          "much",
+          "old"
+        ],
+        "answer": 1,
+        "explanation_ar": "للسعر نستخدم How much."
+      },
+      {
+        "id": "A1-04-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "How ___ students are there in your class?",
+        "options": [
+          "many",
+          "much",
+          "is"
+        ],
+        "answer": 0,
+        "explanation_ar": "students جمع يُعدّ فنستخدم How many."
+      },
+      {
+        "id": "A1-04-q3",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "15 بالإنجليزية:",
+        "options": [
+          "fifty",
+          "fifteen",
+          "five"
+        ],
+        "answer": 1,
+        "explanation_ar": "15 = fifteen، و 50 = fifty."
+      },
+      {
+        "id": "A1-04-q4",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "___ shoes are nice. (قريبة، جمع)",
+        "options": [
+          "This",
+          "These",
+          "That"
+        ],
+        "answer": 1,
+        "explanation_ar": "للجمع القريب: these."
+      },
+      {
+        "id": "A1-04-q5",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "How much ___ the dates? — They're 1,000 rials.",
+        "answer": "are",
+        "explanation_ar": "dates جمع فنستخدم are."
+      },
+      {
+        "id": "A1-04-q6",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "The opposite of «sell» is:",
+        "options": [
+          "buy",
+          "cheap",
+          "want"
+        ],
+        "answer": 0,
+        "explanation_ar": "عكس يبيع sell هو يشتري buy."
+      },
+      {
+        "id": "A1-04-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: are / these / how / oranges / much",
+        "answer": [
+          "How",
+          "much",
+          "are",
+          "these",
+          "oranges"
+        ],
+        "explanation_ar": "How much + are + these + الاسم الجمع."
+      },
+      {
+        "id": "A1-04-q8",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "3,000 بالإنجليزية:",
+        "options": [
+          "three hundred",
+          "thirty thousand",
+          "three thousand"
+        ],
+        "answer": 2,
+        "explanation_ar": "3,000 = three thousand."
+      },
+      {
+        "id": "A1-04-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «The bread is 100 rials and the honey is 9,000 rials.» Which is expensive?",
+        "options": [
+          "the bread",
+          "the honey",
+          "both"
+        ],
+        "answer": 1,
+        "explanation_ar": "العسل 9,000 ريال، وهو الغالي."
+      },
+      {
+        "id": "A1-04-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "This phone is very cheap. It isn't ___.",
+        "answer": "expensive",
+        "explanation_ar": "عكس cheap هو expensive."
+      }
+    ]
+  },
+  "context_note": "سوق الملح في صنعاء القديمة، عسل حضرموت، الأسعار بالريال أمثلة تقريبية للتدريب فقط."
+}

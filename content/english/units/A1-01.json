@@ -1,0 +1,790 @@
+{
+  "path": "english",
+  "code": "A1-01",
+  "version": 3,
+  "level": "A1",
+  "position": 1,
+  "title": "Hello!",
+  "topic": "التعارف في أول يوم دراسي في مدرسة بتعز",
+  "grammar_point": "verb to be (am / is / are)",
+  "can_do": [
+    "أعرّف نفسي باسمي وعمري ومدينتي",
+    "أحيّي شخصاً وأسأله عن اسمه وعمره ومدينته",
+    "أفهم حواراً قصيراً جداً عن التعارف"
+  ],
+  "vocab": [
+    {
+      "id": "A1-01-v1",
+      "word": "hello",
+      "ipa": "/həˈləʊ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "مرحباً",
+      "example_en": "Hello, I'm Youssef."
+    },
+    {
+      "id": "A1-01-v2",
+      "word": "name",
+      "ipa": "/neɪm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "اسم",
+      "example_en": "What's your name?"
+    },
+    {
+      "id": "A1-01-v3",
+      "word": "student",
+      "ipa": "/ˈstjuːdənt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "طالب",
+      "example_en": "I am a student."
+    },
+    {
+      "id": "A1-01-v4",
+      "word": "years old",
+      "ipa": "/jɪəz əʊld/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "من العمر (سنة)",
+      "example_en": "I'm fifteen years old."
+    },
+    {
+      "id": "A1-01-v5",
+      "word": "from",
+      "ipa": "/frɒm/",
+      "part_of_speech": "other",
+      "meaning_ar": "من (مكان)",
+      "example_en": "I'm from Taiz."
+    },
+    {
+      "id": "A1-01-v6",
+      "word": "friend",
+      "ipa": "/frend/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صديق",
+      "example_en": "She is my friend."
+    },
+    {
+      "id": "A1-01-v7",
+      "word": "nice to meet you",
+      "ipa": "/naɪs tə miːt juː/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "تشرفت بمعرفتك",
+      "example_en": "Nice to meet you, Mona."
+    },
+    {
+      "id": "A1-01-v8",
+      "word": "class",
+      "ipa": "/klɑːs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "فصل دراسي",
+      "example_en": "We are in the same class."
+    },
+    {
+      "id": "A1-01-v9",
+      "word": "teacher",
+      "ipa": "/ˈtiːtʃə/",
+      "part_of_speech": "noun",
+      "meaning_ar": "معلّم / معلّمة",
+      "example_en": "Mr. Saleh is our teacher."
+    },
+    {
+      "id": "A1-01-v10",
+      "word": "new",
+      "ipa": "/njuː/",
+      "part_of_speech": "adjective",
+      "meaning_ar": "جديد",
+      "example_en": "Ali is a new student."
+    },
+    {
+      "id": "A1-01-v11",
+      "word": "good morning",
+      "ipa": "/ɡʊd ˈmɔːnɪŋ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "صباح الخير",
+      "example_en": "Good morning, teacher!"
+    },
+    {
+      "id": "A1-01-v12",
+      "word": "goodbye",
+      "ipa": "/ɡʊdˈbaɪ/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "مع السلامة",
+      "example_en": "Goodbye, see you tomorrow."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-01-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "كلمات التعارف",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في هذه الوحدة نتعلم كيف **نعرّف أنفسنا** في أول يوم دراسي. اقرأ الكلمات، واضغط زر الاستماع لتسمع نطقها بصوت جهازك، ثم كررها بصوت مرتفع."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "hello",
+              "/həˈləʊ/",
+              "مرحباً",
+              "Hello, I'm Youssef."
+            ],
+            [
+              "name",
+              "/neɪm/",
+              "اسم",
+              "What's your name?"
+            ],
+            [
+              "student",
+              "/ˈstjuːdənt/",
+              "طالب",
+              "I am a student."
+            ],
+            [
+              "years old",
+              "/jɪəz əʊld/",
+              "من العمر (سنة)",
+              "I'm fifteen years old."
+            ],
+            [
+              "from",
+              "/frɒm/",
+              "من (مكان)",
+              "I'm from Taiz."
+            ],
+            [
+              "friend",
+              "/frend/",
+              "صديق",
+              "She is my friend."
+            ],
+            [
+              "nice to meet you",
+              "/naɪs tə miːt juː/",
+              "تشرفت بمعرفتك",
+              "Nice to meet you, Mona."
+            ],
+            [
+              "class",
+              "/klɑːs/",
+              "فصل دراسي",
+              "We are in the same class."
+            ],
+            [
+              "teacher",
+              "/ˈtiːtʃə/",
+              "معلّم / معلّمة",
+              "Mr. Saleh is our teacher."
+            ],
+            [
+              "new",
+              "/njuː/",
+              "جديد",
+              "Ali is a new student."
+            ],
+            [
+              "good morning",
+              "/ɡʊd ˈmɔːnɪŋ/",
+              "صباح الخير",
+              "Good morning, teacher!"
+            ],
+            [
+              "goodbye",
+              "/ɡʊdˈbaɪ/",
+              "مع السلامة",
+              "Goodbye, see you tomorrow."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "hello. Hello, I'm Youssef.\nname. What's your name?\nstudent. I am a student.\nyears old. I'm fifteen years old.\nfrom. I'm from Taiz.\nfriend. She is my friend.\nnice to meet you. Nice to meet you, Mona.\nclass. We are in the same class.\nteacher. Mr. Saleh is our teacher.\nnew. Ali is a new student.\ngood morning. Good morning, teacher!\ngoodbye. Goodbye, see you tomorrow."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**نصيحة:** كلمة **class** تعني الفصل (الصف) الذي تدرس فيه، وكلمة **teacher** تُقال للمعلم والمعلمة."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "«صباح الخير» بالإنجليزية:",
+            "options": [
+              "Goodbye",
+              "Good morning",
+              "Nice to meet you"
+            ],
+            "answer": 1,
+            "explanation_ar": "Good morning تقال في الصباح عند اللقاء."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "Mr. Saleh is our ___. He teaches English.",
+            "options": [
+              "student",
+              "friend",
+              "teacher"
+            ],
+            "answer": 2,
+            "explanation_ar": "الذي يدرّسنا هو teacher (المعلّم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I'm fifteen years ___.",
+            "answer": "old",
+            "explanation_ar": "نقول years old للتعبير عن العمر."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-01-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "am / is / are",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "في العربية نقول «أنا طالب» بلا فعل. أما في الإنجليزية فنحتاج فعل **be** دائماً: «I **am** a student».\n\n- نستخدم **am** مع I فقط.\n- نستخدم **is** مع he و she و it (ومع اسم شخص واحد مثل Ali).\n- نستخدم **are** مع you و we و they."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الضمير",
+            "الفعل",
+            "المختصر",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "I",
+              "am",
+              "I'm",
+              "I am a student."
+            ],
+            [
+              "he / she / it",
+              "is",
+              "he's / she's / it's",
+              "She is my friend."
+            ],
+            [
+              "you / we / they",
+              "are",
+              "you're / we're / they're",
+              "We are in class 1."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**السؤال:** نقدّم الفعل على الضمير: «**Are** you a student?» ← «Yes, I am.»\n\n**النفي:** نضيف not بعد الفعل: «I am **not** from Aden.» / «She **is not** (isn't) a teacher.»"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e1",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "They ___ my friends.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": 2,
+            "explanation_ar": "مع they نستخدم are."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "Ali ___ from Ibb.",
+            "options": [
+              "am",
+              "is",
+              "are"
+            ],
+            "answer": 1,
+            "explanation_ar": "Ali شخص واحد (he) فنستخدم is."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e6",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "I ___ a new student.",
+            "answer": "am",
+            "explanation_ar": "مع I نستخدم am."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e7",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "اختر السؤال الصحيح:",
+            "options": [
+              "You are a student?",
+              "Are you a student?",
+              "Is you a student?"
+            ],
+            "answer": 1,
+            "explanation_ar": "في السؤال نقدّم are على you."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e8",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: not / from / I / am / Aden",
+            "answer": [
+              "I",
+              "am",
+              "not",
+              "from",
+              "Aden"
+            ],
+            "explanation_ar": "النفي: I am not ثم بقية الجملة."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-01-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "طالب جديد في الفصل",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "استمع إلى الحوار بين المعلم وطالب جديد اسمه **Hamza**. استمع مرتين: مرة لتفهم الفكرة العامة، ومرة لتجيب عن الأسئلة. يمكنك إظهار النص إذا احتجت."
+        },
+        {
+          "type": "audio",
+          "text_en": "Teacher: Good morning, class!\nStudents: Good morning, teacher!\nTeacher: We have a new student today. What's your name?\nHamza: My name is Hamza.\nTeacher: Nice to meet you, Hamza. Where are you from?\nHamza: I'm from Aden. My family is in Taiz now.\nTeacher: How old are you?\nHamza: I'm fifteen years old.\nTeacher: Welcome to class one, Hamza. This is Ammar. He is a good student.\nAmmar: Hello, Hamza. Nice to meet you."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e9",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "Where is Hamza from?",
+            "options": [
+              "Taiz",
+              "Aden",
+              "Ibb"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال Hamza: I'm from Aden."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "How old is Hamza?",
+            "options": [
+              "fourteen",
+              "fifteen",
+              "sixteen"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: I'm fifteen years old."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e11",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Ammar is a new student.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الطالب الجديد هو Hamza، أما Ammar فهو زميل في الفصل."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-01-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "ريم تعرّف نفسها",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ النص الذي كتبته **ريم** عن نفسها، ثم أجب عن الأسئلة. لا تترجم كل كلمة؛ ابحث عن المعلومة المطلوبة."
+        },
+        {
+          "type": "reading",
+          "text_en": "My name is Reem. I am sixteen years old and I am from Taiz. I am a student at Al-Nour Secondary School. I am in the second grade. My best friend is Sara. She is from Taiz too. We are in the same class. Our English teacher is Ms. Amal. She is kind and her lessons are fun. Today is the first day of school. There are new students in our class. Their names are Huda and Afrah. They are from Hodeidah. Nice to meet you, Huda and Afrah!",
+          "word_count": 89
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e12",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "How old is Reem?",
+            "options": [
+              "fifteen",
+              "sixteen",
+              "seventeen"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: I am sixteen years old."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e13",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "Sara and Reem are in the same class.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: We are in the same class."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where are Huda and Afrah from?",
+            "options": [
+              "Taiz",
+              "Aden",
+              "Hodeidah"
+            ],
+            "answer": 2,
+            "explanation_ar": "في النص: They are from Hodeidah."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e15",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "Ms. Amal is Reem's English ___.",
+            "answer": "teacher",
+            "explanation_ar": "Ms. Amal هي معلمة الإنجليزي."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-01-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "عرّف نفسك",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تخيّل أنك في أول يوم دراسي، وأمامك زميل جديد. عرّف نفسك في 3 إلى 5 جمل: **اسمك، عمرك، مدينتك، فصلك**.\n\nاستعمل العبارات المساعدة، وتكلم ببطء ووضوح. لا بأس بالأخطاء، فالتقييم **تقديري** لمساعدتك."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المعلومة",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "الاسم",
+              "My name is… / I'm…"
+            ],
+            [
+              "العمر",
+              "I'm … years old."
+            ],
+            [
+              "المدينة",
+              "I'm from…"
+            ],
+            [
+              "الفصل",
+              "I'm in class…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Introduce yourself to a new classmate: your name, age, city and class.",
+        "helpful_phrases": [
+          "Hello, I'm…",
+          "I'm … years old.",
+          "I'm from…",
+          "I'm in class…",
+          "Nice to meet you."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 45,
+        "rubric_focus": [
+          "verb to be",
+          "self-introduction"
+        ]
+      }
+    },
+    {
+      "id": "A1-01-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "اكتب عن نفسك",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة قصيرة عن نفسك (25 إلى 60 كلمة). اقرأ المثال أولاً، ثم اكتب فقرتك بمعلوماتك أنت.\n\n**تذكّر:** ابدأ الجملة بحرف كبير، وضع نقطة في آخرها، واستعمل am و is و are."
+        },
+        {
+          "type": "reading",
+          "text_en": "Hello! My name is Nabil. I am fifteen years old. I am from Sana'a. I am a student in the first grade. My friend is Fahd. He is from Sana'a too. We are in the same class.",
+          "word_count": 37
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write about you in 4–6 sentences: your name, age, city, school and a friend. Use am, is and are.",
+        "min_words": 25,
+        "max_words": 60,
+        "rubric_focus": [
+          "verb to be",
+          "capital letters and full stops"
+        ]
+      }
+    },
+    {
+      "id": "A1-01-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "قبل اختبار الوحدة، راجع أهم ما تعلمت:\n\n- **I am** / **he, she, it is** / **you, we, they are**\n- السؤال: **Are you…? Is she…?**\n- النفي: **I'm not… / She isn't…**\n- التعارف: **What's your name? Where are you from? How old are you?**"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e16",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "___ she your sister?",
+            "options": [
+              "Am",
+              "Is",
+              "Are"
+            ],
+            "answer": 1,
+            "explanation_ar": "مع she نستخدم is، وفي السؤال يأتي في البداية."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e17",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "اختر الرد المناسب: «Nice to meet you.»",
+            "options": [
+              "Goodbye.",
+              "Nice to meet you too.",
+              "I'm fine."
+            ],
+            "answer": 1,
+            "explanation_ar": "نرد على Nice to meet you بـ Nice to meet you too."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-01-e18",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "We ___ not in class two. We are in class one.",
+            "answer": "are",
+            "explanation_ar": "مع we نستخدم are."
+          }
+        },
+        {
+          "type": "text",
+          "markdown_ar": "عندما تنتهي، افتح **اختبار الوحدة** (10 أسئلة). تحتاج 70% للنجاح، ويمكنك الإعادة."
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-01-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "I ___ from Aden.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "answer": 0,
+        "explanation_ar": "مع I نستخدم am."
+      },
+      {
+        "id": "A1-01-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "She ___ fifteen years old.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "answer": 1,
+        "explanation_ar": "مع she نستخدم is."
+      },
+      {
+        "id": "A1-01-q3",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "«تشرفت بمعرفتك» بالإنجليزية:",
+        "options": [
+          "See you",
+          "Nice to meet you",
+          "Good night"
+        ],
+        "answer": 1,
+        "explanation_ar": "Nice to meet you تقال عند أول لقاء."
+      },
+      {
+        "id": "A1-01-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "We ___ in the same class.",
+        "answer": "are",
+        "explanation_ar": "مع we نستخدم are."
+      },
+      {
+        "id": "A1-01-q5",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: name / your / what's",
+        "answer": [
+          "what's",
+          "your",
+          "name"
+        ],
+        "explanation_ar": "السؤال يبدأ بكلمة الاستفهام what."
+      },
+      {
+        "id": "A1-01-q6",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "Huda and Afrah ___ from Hodeidah.",
+        "options": [
+          "am",
+          "is",
+          "are"
+        ],
+        "answer": 2,
+        "explanation_ar": "Huda and Afrah شخصان (they) فنستخدم are."
+      },
+      {
+        "id": "A1-01-q7",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "He are a teacher.",
+          "He is a teacher.",
+          "He am a teacher."
+        ],
+        "answer": 1,
+        "explanation_ar": "مع he نستخدم is."
+      },
+      {
+        "id": "A1-01-q8",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "«مع السلامة» بالإنجليزية:",
+        "options": [
+          "Hello",
+          "Goodbye",
+          "Good morning"
+        ],
+        "answer": 1,
+        "explanation_ar": "Goodbye تقال عند الوداع."
+      },
+      {
+        "id": "A1-01-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «My name is Salem. I'm sixteen. I'm from Marib.» How old is Salem?",
+        "options": [
+          "15",
+          "16",
+          "17"
+        ],
+        "answer": 1,
+        "explanation_ar": "sixteen تعني 16."
+      },
+      {
+        "id": "A1-01-q10",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "I am ___ a teacher. I am a student.",
+        "answer": "not",
+        "explanation_ar": "النفي مع am: I am not."
+      }
+    ]
+  },
+  "context_note": "أسماء ومدن يمنية: تعز، عدن، إب، الحديدة، صنعاء، مأرب."
+}

@@ -1,0 +1,848 @@
+{
+  "path": "english",
+  "code": "A1-08",
+  "version": 1,
+  "level": "A1",
+  "position": 8,
+  "title": "In My Town",
+  "topic": "البيت والحي في الحديدة",
+  "grammar_point": "prepositions of place + imperatives (directions)",
+  "can_do": [
+    "أصف مكان الأشياء في البيت والحي",
+    "أسأل عن الطريق وأعطي اتجاهات بسيطة",
+    "أفهم وصفاً قصيراً لبيت أو حي"
+  ],
+  "vocab": [
+    {
+      "id": "A1-08-v1",
+      "word": "house",
+      "ipa": "/haʊs/",
+      "part_of_speech": "noun",
+      "meaning_ar": "بيت",
+      "example_en": "Our house is near the sea."
+    },
+    {
+      "id": "A1-08-v2",
+      "word": "kitchen",
+      "ipa": "/ˈkɪtʃɪn/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مطبخ",
+      "example_en": "My mother is in the kitchen."
+    },
+    {
+      "id": "A1-08-v3",
+      "word": "bedroom",
+      "ipa": "/ˈbedruːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "غرفة نوم",
+      "example_en": "My bedroom is small."
+    },
+    {
+      "id": "A1-08-v4",
+      "word": "bathroom",
+      "ipa": "/ˈbɑːθruːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "حمّام",
+      "example_en": "The bathroom is next to the kitchen."
+    },
+    {
+      "id": "A1-08-v5",
+      "word": "living room",
+      "ipa": "/ˈlɪvɪŋ ruːm/",
+      "part_of_speech": "noun",
+      "meaning_ar": "غرفة الجلوس (الديوان)",
+      "example_en": "We sit in the living room in the evening."
+    },
+    {
+      "id": "A1-08-v6",
+      "word": "mosque",
+      "ipa": "/mɒsk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "مسجد",
+      "example_en": "The mosque is opposite the school."
+    },
+    {
+      "id": "A1-08-v7",
+      "word": "street",
+      "ipa": "/striːt/",
+      "part_of_speech": "noun",
+      "meaning_ar": "شارع",
+      "example_en": "Our school is on Al-Matar Street."
+    },
+    {
+      "id": "A1-08-v8",
+      "word": "pharmacy",
+      "ipa": "/ˈfɑːməsi/",
+      "part_of_speech": "noun",
+      "meaning_ar": "صيدلية",
+      "example_en": "Is there a pharmacy near here?"
+    },
+    {
+      "id": "A1-08-v9",
+      "word": "bank",
+      "ipa": "/bæŋk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "بنك",
+      "example_en": "The bank is between the pharmacy and the mosque."
+    },
+    {
+      "id": "A1-08-v10",
+      "word": "park",
+      "ipa": "/pɑːk/",
+      "part_of_speech": "noun",
+      "meaning_ar": "حديقة عامة",
+      "example_en": "Children play in the park."
+    },
+    {
+      "id": "A1-08-v11",
+      "word": "near",
+      "ipa": "/nɪə/",
+      "part_of_speech": "other",
+      "meaning_ar": "قريب من",
+      "example_en": "My house is near the market."
+    },
+    {
+      "id": "A1-08-v12",
+      "word": "turn left",
+      "ipa": "/tɜːn left/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "انعطف يساراً",
+      "example_en": "Turn left at the mosque."
+    },
+    {
+      "id": "A1-08-v13",
+      "word": "turn right",
+      "ipa": "/tɜːn raɪt/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "انعطف يميناً",
+      "example_en": "Turn right at the bank."
+    },
+    {
+      "id": "A1-08-v14",
+      "word": "go straight",
+      "ipa": "/ɡəʊ streɪt/",
+      "part_of_speech": "phrase",
+      "meaning_ar": "امشِ مستقيماً",
+      "example_en": "Go straight on for two minutes."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-08-l1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "البيت والحي",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "تعلّم أسماء غرف البيت والأماكن في الحي، وكلمات **الاتجاهات** التي تحتاجها لتدل شخصاً على مكان."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "النطق",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "house",
+              "/haʊs/",
+              "بيت",
+              "Our house is near the sea."
+            ],
+            [
+              "kitchen",
+              "/ˈkɪtʃɪn/",
+              "مطبخ",
+              "My mother is in the kitchen."
+            ],
+            [
+              "bedroom",
+              "/ˈbedruːm/",
+              "غرفة نوم",
+              "My bedroom is small."
+            ],
+            [
+              "bathroom",
+              "/ˈbɑːθruːm/",
+              "حمّام",
+              "The bathroom is next to the kitchen."
+            ],
+            [
+              "living room",
+              "/ˈlɪvɪŋ ruːm/",
+              "غرفة الجلوس (الديوان)",
+              "We sit in the living room in the evening."
+            ],
+            [
+              "mosque",
+              "/mɒsk/",
+              "مسجد",
+              "The mosque is opposite the school."
+            ],
+            [
+              "street",
+              "/striːt/",
+              "شارع",
+              "Our school is on Al-Matar Street."
+            ],
+            [
+              "pharmacy",
+              "/ˈfɑːməsi/",
+              "صيدلية",
+              "Is there a pharmacy near here?"
+            ],
+            [
+              "bank",
+              "/bæŋk/",
+              "بنك",
+              "The bank is between the pharmacy and the mosque."
+            ],
+            [
+              "park",
+              "/pɑːk/",
+              "حديقة عامة",
+              "Children play in the park."
+            ],
+            [
+              "near",
+              "/nɪə/",
+              "قريب من",
+              "My house is near the market."
+            ],
+            [
+              "turn left",
+              "/tɜːn left/",
+              "انعطف يساراً",
+              "Turn left at the mosque."
+            ],
+            [
+              "turn right",
+              "/tɜːn raɪt/",
+              "انعطف يميناً",
+              "Turn right at the bank."
+            ],
+            [
+              "go straight",
+              "/ɡəʊ streɪt/",
+              "امشِ مستقيماً",
+              "Go straight on for two minutes."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "house. Our house is near the sea.\nkitchen. My mother is in the kitchen.\nbedroom. My bedroom is small.\nbathroom. The bathroom is next to the kitchen.\nliving room. We sit in the living room in the evening.\nmosque. The mosque is opposite the school.\nstreet. Our school is on Al-Matar Street.\npharmacy. Is there a pharmacy near here?\nbank. The bank is between the pharmacy and the mosque.\npark. Children play in the park.\nnear. My house is near the market.\nturn left. Turn left at the mosque.\nturn right. Turn right at the bank.\ngo straight. Go straight on for two minutes."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "We cook food in the ___.",
+            "options": [
+              "bedroom",
+              "kitchen",
+              "bathroom"
+            ],
+            "answer": 1,
+            "explanation_ar": "نطبخ في المطبخ kitchen."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "You buy medicine at the ___.",
+            "options": [
+              "bank",
+              "pharmacy",
+              "park"
+            ],
+            "answer": 1,
+            "explanation_ar": "الدواء من الصيدلية pharmacy."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e3",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Turn ___ at the mosque. (يساراً)",
+            "answer": "left",
+            "explanation_ar": "يساراً = left، ويميناً = right."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-08-l2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "حروف المكان + الأوامر",
+      "est_minutes": 30,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "**حروف المكان** تقول لنا **أين** الشيء:"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الحرف",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "in",
+              "في / داخل",
+              "The book is in my bag."
+            ],
+            [
+              "on",
+              "على",
+              "The phone is on the table."
+            ],
+            [
+              "under",
+              "تحت",
+              "The cat is under the chair."
+            ],
+            [
+              "next to",
+              "بجانب",
+              "The bank is next to the pharmacy."
+            ],
+            [
+              "between",
+              "بين",
+              "The shop is between the bank and the mosque."
+            ],
+            [
+              "opposite",
+              "مقابل",
+              "The school is opposite the park."
+            ],
+            [
+              "behind",
+              "خلف",
+              "The car is behind the house."
+            ],
+            [
+              "in front of",
+              "أمام",
+              "There is a tree in front of the mosque."
+            ]
+          ]
+        },
+        {
+          "type": "text",
+          "markdown_ar": "**صيغة الأمر (imperative):** نستخدم الفعل وحده في أول الجملة لنعطي تعليمات أو اتجاهات:\n\n- **Go** straight on. / **Turn** left. / **Take** the first street on the right.\n- النفي: **Don't** + الفعل: **Don't** turn right.\n- لنجعل الأمر مهذباً نضيف **please**: «Close the door, **please**.»\n\n**للسؤال عن المكان:** Where is the bank? / Is there a pharmacy near here? / Excuse me, how do I get to…?"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e4",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "The pen is ___ the desk. (على)",
+            "options": [
+              "in",
+              "on",
+              "under"
+            ],
+            "answer": 1,
+            "explanation_ar": "على = on."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e5",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "The bank is ___ the school and the park. (بين)",
+            "options": [
+              "between",
+              "next to",
+              "behind"
+            ],
+            "answer": 0,
+            "explanation_ar": "بين شيئين = between."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e6",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "The pharmacy is next ___ the mosque.",
+            "answer": "to",
+            "explanation_ar": "بجانب = next to."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e7",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "اختر الأمر الصحيح:",
+            "options": [
+              "You turn left at the bank.",
+              "Turn left at the bank.",
+              "Turning left at the bank."
+            ],
+            "answer": 1,
+            "explanation_ar": "الأمر يبدأ بالفعل مباشرة: Turn left."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e8",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "«لا تعبر الشارع هنا» بالإنجليزية:",
+            "options": [
+              "Don't cross the street here.",
+              "Not cross the street here.",
+              "No cross the street here."
+            ],
+            "answer": 0,
+            "explanation_ar": "نفي الأمر: Don't + الفعل."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e9",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: the / is / bank / where",
+            "answer": [
+              "Where",
+              "is",
+              "the",
+              "bank"
+            ],
+            "explanation_ar": "السؤال عن المكان: Where + is + الشيء؟"
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-08-l3",
+      "position": 3,
+      "skill": "listening",
+      "title": "أين الصيدلية؟",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "زائر في **الحديدة** يسأل **إبراهيم** عن الطريق إلى صيدلية. استمع وتتبّع الاتجاهات في ذهنك."
+        },
+        {
+          "type": "audio",
+          "text_en": "Visitor: Excuse me. Is there a pharmacy near here?\nIbrahim: Yes, there is. It's on Sanaa Street.\nVisitor: How do I get there?\nIbrahim: Go straight on. Turn right at the big mosque. Then go straight for two minutes.\nVisitor: Turn right at the mosque…\nIbrahim: Yes. The pharmacy is on the left, between the bank and a small restaurant. It's opposite the park.\nVisitor: Thank you very much.\nIbrahim: You're welcome."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e10",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "Where does the visitor turn right?",
+            "options": [
+              "at the bank",
+              "at the big mosque",
+              "at the park"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: Turn right at the big mosque."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e11",
+            "skill": "listening",
+            "kind": "mcq",
+            "prompt": "The pharmacy is between the bank and…",
+            "options": [
+              "a school",
+              "a small restaurant",
+              "the park"
+            ],
+            "answer": 1,
+            "explanation_ar": "قال: between the bank and a small restaurant."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e12",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "The pharmacy is opposite the park.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "قال: It's opposite the park."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-08-l4",
+      "position": 4,
+      "skill": "reading",
+      "title": "بيت أفنان في الحديدة",
+      "est_minutes": 20,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اقرأ وصف **أفنان** لبيتها في الحديدة، ثم أجب عن الأسئلة. يمكنك أن ترسم البيت على ورقة وأنت تقرأ!"
+        },
+        {
+          "type": "reading",
+          "text_en": "My name is Afnan and I live in Hodeidah. Our house is in Al-Hali area, near the sea. It is a white house with two floors. On the ground floor, there is a big living room and a kitchen. The bathroom is next to the kitchen. My bedroom is on the first floor. In my bedroom, there is a bed, a desk and a small window. My books are on the desk and my school bag is under the bed. In front of our house, there is a tall tree. Behind the house, there is a small garden with flowers. The mosque is opposite our house, and the market is a five-minute walk from here.",
+          "word_count": 115
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e13",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where is the bathroom?",
+            "options": [
+              "next to the kitchen",
+              "on the first floor",
+              "behind the house"
+            ],
+            "answer": 0,
+            "explanation_ar": "في النص: The bathroom is next to the kitchen."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e14",
+            "skill": "reading",
+            "kind": "mcq",
+            "prompt": "Where is Afnan's school bag?",
+            "options": [
+              "on the desk",
+              "under the bed",
+              "in the kitchen"
+            ],
+            "answer": 1,
+            "explanation_ar": "في النص: my school bag is under the bed."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e15",
+            "skill": "reading",
+            "kind": "true_false",
+            "prompt": "There is a garden in front of the house.",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الحديقة خلف البيت (behind)، وأمامه شجرة طويلة."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e16",
+            "skill": "reading",
+            "kind": "fill_blank",
+            "prompt": "The mosque is ___ Afnan's house. (مقابل)",
+            "answer": "opposite",
+            "explanation_ar": "في النص: The mosque is opposite our house."
+          }
+        }
+      ]
+    },
+    {
+      "id": "A1-08-l5",
+      "position": 5,
+      "skill": "speaking",
+      "title": "دلّ زائراً على مكان",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "زائر يسألك عن مكان قريب من مدرستك (مسجد، صيدلية، سوق…). **أعطه اتجاهات واضحة** من المدرسة إلى المكان، وصف ما بجانبه."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "لتقول",
+            "العبارة"
+          ],
+          "rows": [
+            [
+              "امشِ مستقيماً",
+              "Go straight on."
+            ],
+            [
+              "انعطف",
+              "Turn left / right at…"
+            ],
+            [
+              "المكان",
+              "It's next to / opposite / between…"
+            ],
+            [
+              "قريب",
+              "It's near…"
+            ]
+          ]
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "A visitor asks you the way from your school to a place near it. Give clear directions and say what is next to it.",
+        "helpful_phrases": [
+          "Go straight on.",
+          "Turn left at…",
+          "Turn right at…",
+          "It's next to…",
+          "It's opposite…"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "imperatives",
+          "prepositions of place"
+        ]
+      }
+    },
+    {
+      "id": "A1-08-l6",
+      "position": 6,
+      "skill": "writing",
+      "title": "صف بيتك",
+      "est_minutes": 25,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) تصف فيها بيتك أو غرفتك. اقرأ المثال أولاً.\n\n**تذكّر:** استعمل there is / there are مع حروف المكان: in, on, under, next to, between, opposite."
+        },
+        {
+          "type": "reading",
+          "text_en": "I live in a small house in Taiz. There are three bedrooms, a kitchen and a living room. The kitchen is next to the living room. In my bedroom, there is a bed and a cupboard. My clothes are in the cupboard. There is a big window opposite my bed. Our house is near my school.",
+          "word_count": 56
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Describe your house or your bedroom. Use there is / there are and prepositions of place.",
+        "min_words": 40,
+        "max_words": 80,
+        "rubric_focus": [
+          "prepositions of place",
+          "there is / there are",
+          "house vocabulary"
+        ]
+      }
+    },
+    {
+      "id": "A1-08-l7",
+      "position": 7,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "راجع قبل الاختبار:\n\n- **in, on, under, next to, between, opposite, behind, in front of**.\n- الأمر: **Go / Turn / Take** + …، والنفي **Don't** + الفعل.\n- السؤال: **Where is…? / Is there a… near here?**"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e17",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "The car is ___ the house. (خلف)",
+            "options": [
+              "in front of",
+              "behind",
+              "on"
+            ],
+            "answer": 1,
+            "explanation_ar": "خلف = behind."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e18",
+            "skill": "grammar",
+            "kind": "mcq",
+            "prompt": "___ the window, please. It's cold.",
+            "options": [
+              "Close",
+              "Closes",
+              "You closing"
+            ],
+            "answer": 0,
+            "explanation_ar": "الأمر بالفعل وحده: Close."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-e19",
+            "skill": "grammar",
+            "kind": "fill_blank",
+            "prompt": "There is a tree in front ___ the school.",
+            "answer": "of",
+            "explanation_ar": "أمام = in front of."
+          }
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-08-q1",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "The cat is ___ the table. (تحت)",
+        "options": [
+          "on",
+          "under",
+          "in"
+        ],
+        "answer": 1,
+        "explanation_ar": "تحت = under."
+      },
+      {
+        "id": "A1-08-q2",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "My phone is ___ my bag. (داخل)",
+        "options": [
+          "in",
+          "on",
+          "opposite"
+        ],
+        "answer": 0,
+        "explanation_ar": "داخل = in."
+      },
+      {
+        "id": "A1-08-q3",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "The mosque is ___ the bank and the school.",
+        "options": [
+          "next to",
+          "between",
+          "under"
+        ],
+        "answer": 1,
+        "explanation_ar": "بين شيئين: between … and …"
+      },
+      {
+        "id": "A1-08-q4",
+        "skill": "grammar",
+        "kind": "fill_blank",
+        "prompt": "___ turn left here. It's a one-way street. (لا)",
+        "answer": "Don't",
+        "explanation_ar": "نفي الأمر: Don't + الفعل."
+      },
+      {
+        "id": "A1-08-q5",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "We sleep in the ___.",
+        "options": [
+          "kitchen",
+          "bedroom",
+          "bank"
+        ],
+        "answer": 1,
+        "explanation_ar": "ننام في غرفة النوم bedroom."
+      },
+      {
+        "id": "A1-08-q6",
+        "skill": "grammar",
+        "kind": "mcq",
+        "prompt": "اختر الجملة الصحيحة:",
+        "options": [
+          "The bank is next the pharmacy.",
+          "The bank is next to the pharmacy.",
+          "The bank is to next the pharmacy."
+        ],
+        "answer": 1,
+        "explanation_ar": "بجانب = next to."
+      },
+      {
+        "id": "A1-08-q7",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: at / right / the bank / turn",
+        "answer": [
+          "Turn",
+          "right",
+          "at",
+          "the bank"
+        ],
+        "explanation_ar": "الأمر: Turn right at + المكان."
+      },
+      {
+        "id": "A1-08-q8",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "«امشِ مستقيماً» بالإنجليزية:",
+        "options": [
+          "Turn right.",
+          "Go straight on.",
+          "Turn left."
+        ],
+        "answer": 1,
+        "explanation_ar": "امشِ مستقيماً = Go straight on."
+      },
+      {
+        "id": "A1-08-q9",
+        "skill": "reading",
+        "kind": "mcq",
+        "prompt": "Read: «The park is opposite the school. The bank is next to the park.» What is next to the park?",
+        "options": [
+          "the school",
+          "the bank",
+          "the mosque"
+        ],
+        "answer": 1,
+        "explanation_ar": "The bank is next to the park."
+      },
+      {
+        "id": "A1-08-q10",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Excuse me, is there a ___ near here? I need some medicine.",
+        "answer": "pharmacy",
+        "explanation_ar": "الدواء من الصيدلية pharmacy."
+      }
+    ]
+  },
+  "context_note": "حي الحالي في الحديدة، شارع المطار، المسجد مقابل البيت."
+}
