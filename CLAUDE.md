@@ -79,7 +79,7 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 ## Privacy & safety (non-negotiable)
 - RLS on every table; students read only their own rows; student phone visible only to the student and admin.
 - Secrets only in server code / Vercel env vars. `.env.example` lists names only. Never commit keys.
-- Teacher recommendation files (required at apply step 2): private Supabase Storage bucket, admin-only read via signed URLs, client-side image compression, max 2MB, auto-delete 90 days after the decision.
+- **No teacher recommendation (owner decision, 2026-11-02).** Registration is a step-by-step wizard (8 short steps: details, then goal), with Google sign-in; Google accounts complete the same details after signing in. Files uploaded before stay in the private `recommendations` bucket (admin-only, purged 90 days after the decision).
 - **Never store audio.** Transcribe, then discard (no Storage, no logs).
 - Before any AI call: strip names, emails, phones, long digit runs (`src/lib/ai/redact.ts`, unit-tested). Never send student name/ID.
 - Every AI score/feedback labelled «تقديري» and stored with model name.

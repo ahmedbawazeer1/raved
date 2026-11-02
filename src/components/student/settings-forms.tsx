@@ -137,7 +137,7 @@ export function DeleteAccountForm() {
   return (
     <form action={action} className="flex flex-col gap-3">
       <p className="text-sm leading-relaxed text-muted-foreground">
-        يُحذف حسابك وكل بياناتك (تقدمك، وكتاباتك، وطلب الالتحاق وتوصية المعلم) نهائياً، ولا يمكن استرجاعها. نزّل بياناتك أولاً إن أردت الاحتفاظ بنسخة.
+        يُحذف حسابك وكل بياناتك (تقدمك، وكتاباتك، وطلب الالتحاق) نهائياً، ولا يمكن استرجاعها. نزّل بياناتك أولاً إن أردت الاحتفاظ بنسخة.
       </p>
       <Field id="confirm_delete" label="للتأكيد اكتب: احذف حسابي">
         <Input name="confirm" autoComplete="off" />

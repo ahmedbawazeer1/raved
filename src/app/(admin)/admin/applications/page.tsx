@@ -50,10 +50,7 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
   const supabase = await createClient();
   let query = supabase.from("applications").select(SELECT).eq("status", status).order("submitted_at", { ascending: true, nullsFirst: false }).limit(100);
   if (governorate) query = query.eq("student.governorate", governorate);
-  const [{ data: rows }, { data: governorates }] = await Promise.all([
-    query,
-    supabase.from("governorates").select("code, name_ar").order("position"),
-  ]);
+  const [{ data: rows }, { data: governorates }] = await Promise.all([query, supabase.from("governorates").select("code, name_ar").order("position")]);
   const list = (rows ?? []).filter((r) => r.student);
 
   let selected = selectedId ? list.find((r) => r.id === selectedId) : undefined;
@@ -106,7 +103,10 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
       {done && <Alert tone="success">{done}</Alert>}
 
       <div className="flex flex-wrap items-start gap-5">
-        <section aria-label="قائمة الطلبات" className={cn("w-full overflow-hidden rounded-2xl border border-border bg-card md:max-w-[400px] md:flex-[1_1_320px]", selected && "max-md:hidden")}>
+        <section
+          aria-label="قائمة الطلبات"
+          className={cn("w-full overflow-hidden rounded-2xl border border-border bg-card md:max-w-[400px] md:flex-[1_1_320px]", selected && "max-md:hidden")}
+        >
           {list.length === 0 && <p className="p-5 text-sm text-muted-foreground">لا توجد طلبات بهذه الحالة.</p>}
           {list.map((r) => {
             const s = r.student!;
@@ -130,18 +130,17 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
                     <En>{targetExamLabel(r.target_exam)}</En> · {s.governorates?.name_ar ?? "—"}
                   </p>
                 </div>
-                {r.recommendation_path ? (
-                  <span className="text-xs text-muted-foreground">{since(r.submitted_at ?? r.created_at)}</span>
-                ) : (
-                  <Badge tone="destructive">بلا توصية</Badge>
-                )}
+                <span className="text-xs text-muted-foreground">{since(r.submitted_at ?? r.created_at)}</span>
               </Link>
             );
           })}
         </section>
 
         {selected?.student ? (
-          <section aria-label="تفاصيل الطلب" className="flex w-full min-w-0 flex-col gap-5 rounded-2xl border border-border bg-card p-5 md:flex-[999_1_460px] md:p-6">
+          <section
+            aria-label="تفاصيل الطلب"
+            className="flex w-full min-w-0 flex-col gap-5 rounded-2xl border border-border bg-card p-5 md:flex-[999_1_460px] md:p-6"
+          >
             <Link href={`/admin/applications?status=${status}`} className="-mt-1 flex min-h-11 items-center gap-1 text-sm md:hidden">
               <ArrowRight className="size-4" aria-hidden="true" /> كل الطلبات
             </Link>
@@ -195,41 +194,38 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
               </Alert>
             )}
 
-            <div className="overflow-hidden rounded-xl border border-border">
-              <div className="flex items-center justify-between gap-2 border-b border-border bg-background px-3.5 py-2.5">
-                <span className="truncate text-sm font-semibold">{selected.recommendation_name ?? "توصية المعلم"}</span>
-                {fileUrl && (
-                  <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center gap-1 text-[13px]">
-                    فتح في نافذة جديدة <ExternalLink className="size-3.5" aria-hidden="true" />
-                  </a>
+            {/* Older applications may still carry a teacher recommendation (no longer required since 2026-11-02). */}
+            {selected.recommendation_path && (
+              <div className="overflow-hidden rounded-xl border border-border">
+                <div className="flex items-center justify-between gap-2 border-b border-border bg-background px-3.5 py-2.5">
+                  <span className="truncate text-sm font-semibold">{selected.recommendation_name ?? "توصية المعلم"}</span>
+                  {fileUrl && (
+                    <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-9 items-center gap-1 text-[13px]">
+                      فتح في نافذة جديدة <ExternalLink className="size-3.5" aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+                {fileUrl ? (
+                  isPdf ? (
+                    <iframe src={fileUrl} title="ملف التوصية" className="h-[420px] w-full bg-white" />
+                  ) : (
+                    // eslint-disable-next-line @next/next/no-img-element -- short-lived signed URL, not optimisable
+                    <img src={fileUrl} alt="صورة توصية المعلم" className="max-h-[520px] w-full bg-white object-contain" />
+                  )
+                ) : (
+                  <p className="p-5 text-sm text-muted-foreground">تعذر فتح الملف. حدّث الصفحة.</p>
                 )}
               </div>
-              {fileUrl ? (
-                isPdf ? (
-                  <iframe src={fileUrl} title="ملف التوصية" className="h-[420px] w-full bg-white" />
-                ) : (
-                  // eslint-disable-next-line @next/next/no-img-element -- short-lived signed URL, not optimisable
-                  <img src={fileUrl} alt="صورة توصية المعلم" className="max-h-[520px] w-full bg-white object-contain" />
-                )
-              ) : (
-                <p className="p-5 text-sm text-muted-foreground">
-                  {selected.recommendation_path ? "تعذر فتح الملف. حدّث الصفحة." : "لم يرفع الطالب توصية."}
-                </p>
-              )}
-            </div>
+            )}
 
             {["submitted", "needs_changes", "rejected"].includes(selected.status) ? (
               <ReviewForm applicationId={selected.id} nextId={nextId} />
             ) : (
-              <p className="text-sm text-muted-foreground">
-                {selected.status === "approved" ? "هذا الطلب مقبول." : "الطالب لم يرسل طلبه بعد."}
-              </p>
+              <p className="text-sm text-muted-foreground">{selected.status === "approved" ? "هذا الطلب مقبول." : "الطالب لم يرسل طلبه بعد."}</p>
             )}
           </section>
         ) : (
-          list.length > 0 && (
-            <Card className="hidden p-6 text-sm text-muted-foreground md:block md:flex-[999_1_460px]">اختر طلباً من القائمة لعرضه.</Card>
-          )
+          list.length > 0 && <Card className="hidden p-6 text-sm text-muted-foreground md:block md:flex-[999_1_460px]">اختر طلباً من القائمة لعرضه.</Card>
         )}
       </div>
     </div>

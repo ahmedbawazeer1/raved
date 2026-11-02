@@ -1,11 +1,12 @@
 "use client";
 
 import { useActionState, useState } from "react";
-import { Alert, Field, FieldsetLegend, Input, RadioOption, Select } from "@/components/ui/form";
-import { SubmitButton } from "@/components/ui/submit-button";
+import { Field, FieldsetLegend, Input, RadioOption, Select } from "@/components/ui/form";
 import { En } from "@/components/en";
 import { completeStep1, saveStep1Draft, type ApplyFormState } from "@/app/(auth)/apply/actions";
-import { GRADES, STREAMS, formatYemeniMobileLocal } from "@/lib/yemen";
+import { GRADES, STREAMS, formatYemeniMobileLocal, normalizeYemeniMobile } from "@/lib/yemen";
+import { TOTAL_APPLY_STEPS } from "./steps";
+import { Wizard } from "./wizard";
 import { AutosaveNote, useAutosave } from "./use-autosave";
 
 export interface Step1Initial {
@@ -29,11 +30,17 @@ export function Step1Form({ initial, governorates }: { initial: Step1Initial; go
   const errors = state.fieldErrors ?? {};
   const set = (key: keyof typeof values) => (value: string) => setValues((v) => ({ ...v, [key]: value }));
 
-  return (
-    <form action={action} className="flex flex-1 flex-col" noValidate>
-      <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-4 p-4">
-        {state.error && <Alert tone="error">{state.error}</Alert>}
-        <div className="grid gap-[18px] md:grid-cols-2">
+  const need = (...keys: (keyof typeof values)[]) => (keys.some((k) => !values[k].trim()) ? "أكمل الخانات قبل المتابعة." : null);
+
+  const steps = [
+    {
+      key: "you",
+      title: "عرّفنا بنفسك",
+      hint: "اسمك كما تحب أن يظهر في شهادتك، وتاريخ ميلادك.",
+      fields: ["full_name", "birth_date"],
+      check: () => need("full_name", "birth_date"),
+      content: (
+        <>
           <Field id="full_name" label="اسمك الكامل" error={errors.full_name}>
             <Input name="full_name" value={values.full_name} onChange={(e) => set("full_name")(e.target.value)} autoComplete="name" />
           </Field>
@@ -49,6 +56,17 @@ export function Step1Form({ initial, governorates }: { initial: Step1Initial; go
               onChange={(e) => set("birth_date")(e.target.value)}
             />
           </Field>
+        </>
+      ),
+    },
+    {
+      key: "place",
+      title: "من أين أنت؟",
+      hint: "محافظتك ومدينتك، لنعرف طلابنا في كل اليمن.",
+      fields: ["governorate", "city"],
+      check: () => need("governorate", "city"),
+      content: (
+        <>
           <Field id="governorate" label="المحافظة" error={errors.governorate}>
             <Select name="governorate" value={values.governorate} onChange={(e) => set("governorate")(e.target.value)}>
               <option value="">اختر محافظتك</option>
@@ -62,48 +80,58 @@ export function Step1Form({ initial, governorates }: { initial: Step1Initial; go
           <Field id="city" label="المدينة أو المديرية" error={errors.city}>
             <Input name="city" value={values.city} onChange={(e) => set("city")(e.target.value)} />
           </Field>
-          <Field id="school" label="اسم المدرسة" error={errors.school} className="md:col-span-2">
-            <Input
-              name="school"
-              placeholder="مثال: مدرسة الشعب الثانوية"
-              value={values.school}
-              onChange={(e) => set("school")(e.target.value)}
-            />
+        </>
+      ),
+    },
+    {
+      key: "school",
+      title: "دراستك",
+      hint: "مدرستك وصفّك وقسمك.",
+      fields: ["school", "grade", "stream"],
+      check: () => need("school", "grade", "stream"),
+      content: (
+        <>
+          <Field id="school" label="اسم المدرسة" error={errors.school}>
+            <Input name="school" placeholder="مثال: مدرسة الشعب الثانوية" value={values.school} onChange={(e) => set("school")(e.target.value)} />
           </Field>
-        </div>
-
-        <fieldset className="m-0 border-0 p-0">
-          <FieldsetLegend error={errors.grade}>الصف</FieldsetLegend>
-          <div className="grid gap-2.5 md:grid-cols-3">
-            {GRADES.map((g) => (
-              <RadioOption key={g.value} name="grade" value={String(g.value)} checked={values.grade === String(g.value)} onChange={set("grade")}>
-                {g.label}
-              </RadioOption>
-            ))}
-          </div>
-        </fieldset>
-
-        <fieldset className="m-0 border-0 p-0">
-          <FieldsetLegend error={errors.stream}>
-            القسم <span className="font-normal text-muted-foreground">(من الثاني الثانوي)</span>
-          </FieldsetLegend>
-          <div className="grid gap-2.5 md:grid-cols-3">
-            {STREAMS.map((s) => (
-              <RadioOption key={s.value} name="stream" value={s.value} checked={values.stream === s.value} onChange={set("stream")}>
-                {s.label}
-              </RadioOption>
-            ))}
-          </div>
-        </fieldset>
-
+          <fieldset className="m-0 border-0 p-0">
+            <FieldsetLegend error={errors.grade}>الصف</FieldsetLegend>
+            <div className="grid gap-2.5 sm:grid-cols-3">
+              {GRADES.map((g) => (
+                <RadioOption key={g.value} name="grade" value={String(g.value)} checked={values.grade === String(g.value)} onChange={set("grade")}>
+                  {g.label}
+                </RadioOption>
+              ))}
+            </div>
+          </fieldset>
+          <fieldset className="m-0 border-0 p-0">
+            <FieldsetLegend error={errors.stream}>
+              القسم <span className="font-normal text-muted-foreground">(من الثاني الثانوي)</span>
+            </FieldsetLegend>
+            <div className="grid gap-2.5 sm:grid-cols-3">
+              {STREAMS.map((st) => (
+                <RadioOption key={st.value} name="stream" value={st.value} checked={values.stream === st.value} onChange={set("stream")}>
+                  {st.label}
+                </RadioOption>
+              ))}
+            </div>
+          </fieldset>
+        </>
+      ),
+    },
+    {
+      key: "phone",
+      title: "رقم هاتفك",
+      hint: "للتواصل معك عند الحاجة فقط. لا نرسل رسائل SMS.",
+      fields: ["phone"],
+      check: () => (normalizeYemeniMobile(values.phone) ? null : "اكتب رقم جوال يمني صحيحاً: 9 أرقام يبدأ بـ 7."),
+      content: (
         <div className="flex flex-col gap-2">
           <label htmlFor="phone" className="text-sm font-semibold">
             رقم هاتفك
           </label>
           <div className="flex gap-2" dir="ltr">
-            <En className="flex min-h-12 w-[90px] flex-none items-center justify-center rounded-xl border border-input bg-background text-[15px]">
-              +967
-            </En>
+            <En className="flex min-h-12 w-[90px] flex-none items-center justify-center rounded-xl border border-input bg-background text-[15px]">+967</En>
             <Input
               id="phone"
               name="phone"
@@ -119,19 +147,26 @@ export function Step1Form({ initial, governorates }: { initial: Step1Initial; go
             />
           </div>
           <p id="phone-hint" className="text-xs text-muted-foreground">
-            لا نرسل رسائل SMS. يراه فريق الإدارة فقط، للتواصل معك عند الحاجة.
+            يراه فريق الإدارة فقط.
           </p>
           {errors.phone && <p className="text-[13px] font-medium text-destructive">{errors.phone}</p>}
         </div>
-        <AutosaveNote status={autosave} />
-      </div>
-      <footer className="sticky bottom-0 border-t border-border bg-card px-4 pt-3 pb-5">
-        <div className="mx-auto max-w-2xl">
-          <SubmitButton className="min-h-13 w-full" pendingLabel="جارٍ الحفظ…">
-            التالي: هدفك
-          </SubmitButton>
-        </div>
-      </footer>
+      ),
+    },
+  ];
+
+  return (
+    <form action={action} className="flex flex-1 flex-col" noValidate>
+      <Wizard
+        steps={steps}
+        total={TOTAL_APPLY_STEPS}
+        backHref="/"
+        submitLabel="التالي: هدفك"
+        pendingLabel="جارٍ الحفظ…"
+        error={state.error}
+        errorFields={Object.keys(errors)}
+        footerNote={<AutosaveNote status={autosave} />}
+      />
     </form>
   );
 }

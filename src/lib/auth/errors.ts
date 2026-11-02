@@ -30,7 +30,6 @@ const DB_MESSAGES: Record<string, string> = {
   profile_incomplete: "أكمل بياناتك في الخطوة الأولى أولاً.",
   path_required: "اختر المسار الذي تبدأ به.",
   goal_incomplete: "أكمل الامتحان والموعد والدقائق اليومية.",
-  recommendation_required: "ارفع توصية المعلم قبل الإرسال.",
   consent_required: "يلزم موافقة ولي الأمر والموافقة على سياسة الخصوصية.",
   forbidden: "ليست لديك صلاحية لهذا الإجراء.",
   note_required: "اكتب ملاحظة للطالب توضح السبب.",

@@ -10,7 +10,7 @@ import { En } from "@/components/en";
 import { MixedText } from "@/components/mixed-text";
 import { CopyNotesButton, LessonReviewForm, PublishUnitForm } from "@/components/admin/unit-review";
 import { createClient } from "@/lib/supabase/server";
-import { formatBytes } from "@/lib/apply/compress";
+import { formatBytes } from "@/lib/format";
 import { validateUnitPackage } from "@/lib/content/validate";
 import { SKILL_LABELS, type PackageQuestion } from "@/lib/content/types";
 import { unpublishUnit } from "../actions";

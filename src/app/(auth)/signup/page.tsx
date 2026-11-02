@@ -16,9 +16,21 @@ export default async function SignupPage() {
 
   return (
     <AuthShell>
-      <div>
-        <h1 className="text-2xl font-bold">أنشئ حسابك</h1>
-        <p className="mt-1 text-sm text-muted-foreground">دقيقتان، ثم تكمل بياناتك وتختبر مستواك.</p>
+      <div className="flex flex-col gap-3">
+        <h1 className="text-2xl font-bold">ابدأ رحلتك مع رفد</h1>
+        <p className="text-sm text-muted-foreground">مجاني بالكامل. خطوات قصيرة، ثم تبدأ أول محطة في رحلة حضرموت.</p>
+        <ol className="grid grid-cols-4 gap-1.5 text-center text-[11px] font-semibold text-muted-foreground" aria-label="خطوات التسجيل">
+          {["حسابك", "بياناتك", "هدفك", "مستواك"].map((label, i) => (
+            <li key={label} className="flex flex-col items-center gap-1">
+              <span
+                className={`flex size-8 items-center justify-center rounded-full font-en text-sm font-bold ${i === 0 ? "bg-primary text-white" : "bg-muted text-subtle"}`}
+              >
+                {i + 1}
+              </span>
+              {label}
+            </li>
+          ))}
+        </ol>
       </div>
       {google && (
         <>

@@ -58,7 +58,7 @@ update public.applications set path_id = :'english', target_exam = 'ielts', targ
   motivation = 'منحة' where student_id = :'s1';
 select tests.throws(format('update public.applications set status = ''approved'' where student_id = %L', :'s1'), 'student cannot approve own application');
 select tests.throws(format('update public.applications set recommendation_path = %L where student_id = %L', :'s2' || '/x.jpg', :'s1'), 'recommendation must be in own folder');
-select tests.throws('select public.submit_application(true, true)', 'cannot submit without recommendation');
+select tests.throws('select public.submit_application(true, false)', 'cannot submit without privacy consent');
 
 insert into storage.objects (bucket_id, name, owner) values ('recommendations', :'s1' || '/rec.jpg', :'s1');
 select tests.throws(format('insert into storage.objects (bucket_id, name) values (''recommendations'', %L)', :'s2' || '/evil.jpg'), 'cannot upload into another student folder');

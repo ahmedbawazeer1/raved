@@ -11,7 +11,7 @@ import { PathIcon } from "@/components/site/path-icon";
 import { WaitlistForm } from "@/components/paths/waitlist-form";
 import { getExams, getPublicPath, getPublicPaths, getPublishedUnits } from "@/lib/paths/queries";
 import { getSessionContext } from "@/lib/auth/session";
-import { formatBytes } from "@/lib/apply/compress";
+import { formatBytes } from "@/lib/format";
 
 export async function generateMetadata({ params }: PageProps<"/paths/[slug]">): Promise<Metadata> {
   const { slug } = await params;

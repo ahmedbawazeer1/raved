@@ -85,7 +85,6 @@ export default async function ApplyStatusPage() {
         <Card className="w-full px-4 py-1.5 text-start">
           <StepRow state="done">إنشاء الحساب</StepRow>
           <StepRow state={status === "needs_changes" ? "now" : "done"}>البيانات والهدف والموافقات</StepRow>
-          <StepRow state={status === "needs_changes" ? "now" : "done"}>توصية المعلم</StepRow>
           <StepRow state={status === "submitted" ? "now" : status === "needs_changes" ? "todo" : "done"}>مراجعة الطلب</StepRow>
           <StepRow state="todo">اختبار تحديد المستوى</StepRow>
         </Card>
@@ -95,9 +94,7 @@ export default async function ApplyStatusPage() {
             <Link href="/apply/goal">عدّل طلبك</Link>
           </Button>
         )}
-        {status === "submitted" && (
-          <p className="text-[13px] text-muted-foreground">اختبار تحديد المستوى يُفتح قريباً، وسنبلغك عندما يجهز.</p>
-        )}
+        {status === "submitted" && <p className="text-[13px] text-muted-foreground">اختبار تحديد المستوى يُفتح قريباً، وسنبلغك عندما يجهز.</p>}
         <form action="/auth/signout" method="post" className="w-full">
           <Button type="submit" variant="secondary" className="w-full">
             تسجيل الخروج

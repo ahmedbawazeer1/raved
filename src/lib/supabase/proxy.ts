@@ -3,10 +3,7 @@ import { createServerClient } from "@supabase/ssr";
 import type { Database } from "@/types/db";
 
 const PROTECTED_PREFIXES = ["/student", "/admin", "/apply", "/preview"];
-const PUBLIC_EXCEPTIONS = ["/apply/recommendation-template"];
-
 function isProtected(pathname: string): boolean {
-  if (PUBLIC_EXCEPTIONS.some((p) => pathname === p)) return false;
   return PROTECTED_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`));
 }
 
