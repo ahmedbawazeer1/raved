@@ -7,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
 import { CompanionGreeting } from "@/components/art/companion-greeting";
 import { Hud } from "@/components/student/hud";
+import { DailyQuests } from "@/components/student/daily-quests";
+import { dailyQuests } from "@/lib/gamification/quests";
 import { MistakesLink } from "@/components/student/mistakes-link";
 import { JourneyMap } from "@/components/student/journey-map";
 import { ProgressBar } from "@/components/student/progress-bar";
@@ -145,6 +147,8 @@ export default async function TodayPage() {
           </Button>
         </section>
       )}
+
+      {path && <DailyQuests quests={dailyQuests(xpRows, features)} />}
 
       {path && mapUnits.length > 0 && <JourneyMap units={mapUnits} pathSlug={path.slug} />}
 

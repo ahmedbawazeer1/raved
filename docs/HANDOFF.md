@@ -68,6 +68,7 @@ The artifact links are private to the owner; Claude Code cannot open them. Use t
 ## 6c. Redesign (2026-11-02)
 - Owner approved the second UI prototype and asked to apply it with my suggestions. Rule: **platform first, content later**.
 - Plan: (1) home map + companion (Hamza/Reem) + HUD + effects setting, (2) video-first lesson player with surprise questions, (3) step-by-step exercises with feedback and celebration, (4) guardian battle, stamp album, wardrobe, shareable stamp, (5) polish.
+- Done (2026-11-02): (1) PR #17 map home + companion + HUD + effects; (2) PR #18 video-first player (own controls, no skipping, `checkpoints` surprise questions, word preview), step-by-step exercises, «تدرّب على أخطائك» (device-only list in `src/lib/mistakes.ts`); (3) PR #19 guardians (`src/lib/art/guardians.ts`), battle scene, stamp drop + share image, stamp album on the progress page, wardrobe unlocked by stamps; (4) daily quests from today's `xp_events`, «fog lifts» moment on the map after a new stamp.
 - Surprise questions tied to the moment in the video need time-coded questions per video; until content has them, the player asks about the unit words (as today). An admin tool to add them while watching is planned.
 
 ## 7. Working style the owner expects
