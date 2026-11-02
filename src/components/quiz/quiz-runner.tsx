@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 import { MixedText } from "@/components/mixed-text";
 import { QuestionInput, isAnswered, type Answer, type QuestionView } from "@/components/lesson/question-input";
 import { submitQuiz } from "@/app/(student)/student/actions";
+import { BattleScene } from "@/components/art/battle-scene";
+import { guardianFor } from "@/lib/art/guardians";
+import { fx } from "@/lib/fx";
 import { cn } from "@/lib/utils";
 
 function newClientId(): string {
@@ -21,7 +24,19 @@ function newClientId(): string {
  * Shown as a battle with the guardian of the journey stop: each answer charges the attack,
  * and the result page shows the hits once the server has graded.
  */
-export function QuizRunner({ quizId, questions, closeHref, stop }: { quizId: string; questions: QuestionView[]; closeHref: string; stop?: string | null }) {
+export function QuizRunner({
+  quizId,
+  questions,
+  closeHref,
+  stop,
+  position = 1,
+}: {
+  quizId: string;
+  questions: QuestionView[];
+  closeHref: string;
+  stop?: string | null;
+  position?: number;
+}) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
   const [seconds, setSeconds] = useState(0);
@@ -78,25 +93,26 @@ export function QuizRunner({ quizId, questions, closeHref, stop }: { quizId: str
       </header>
 
       <main className="mx-auto flex w-full max-w-[640px] flex-1 flex-col gap-5 px-4 py-6">
-        <div className="flex items-center gap-3 rounded-2xl bg-foreground p-3 text-white">
-          <span className="text-3xl" aria-hidden="true">
-            🛡️
-          </span>
-          <div className="flex flex-1 flex-col gap-1">
-            <p className="text-sm font-bold">معركة المحطة: تغلّب على حارس {stop ?? "الوحدة"}</p>
-            <div className="h-2 overflow-hidden rounded-full bg-white/20" aria-hidden="true">
-              <div
-                className="h-full rounded-full bg-accent transition-all"
-                style={{ width: `${(Object.values(answers).filter((a) => isAnswered(a)).length / questions.length) * 100}%` }}
-              />
-            </div>
-            <p className="text-xs text-white/70">كل إجابة تشحن ضربتك · النتيجة بعد التسليم</p>
-          </div>
-        </div>
+        <BattleScene
+          compact
+          guardian={guardianFor(stop, position)}
+          meter={{
+            value: (Object.values(answers).filter((a) => isAnswered(a)).length / questions.length) * 100,
+            label: `معركة ${stop ?? "المحطة"} · كل إجابة تشحن ضربتك`,
+          }}
+        />
         <h1 className="text-xl leading-relaxed font-bold">
           <MixedText text={q.prompt} />
         </h1>
-        <QuestionInput question={q} value={value} onChange={(v) => setAnswers((a) => ({ ...a, [q.id]: v }))} disabled={pending} />
+        <QuestionInput
+          question={q}
+          value={value}
+          onChange={(v) => {
+            if (!isAnswered(answers[q.id])) fx("pop");
+            setAnswers((a) => ({ ...a, [q.id]: v }));
+          }}
+          disabled={pending}
+        />
         {error && <Alert tone="error">{error}</Alert>}
       </main>
 

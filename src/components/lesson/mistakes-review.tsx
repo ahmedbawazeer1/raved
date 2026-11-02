@@ -20,7 +20,7 @@ export function MistakesReview() {
   if (list.length === 0) {
     return (
       <div className="flex flex-col items-center gap-2 rounded-3xl border border-border bg-card p-6 text-center">
-        <Companion who={prefs.companion} mood="happy" wave size={80} />
+        <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood="happy" wave size={80} />
         <p className="font-bold">لا توجد أخطاء لتراجعها 👏</p>
         <p className="text-sm text-muted-foreground">كل تمرين تخطئ فيه داخل الدروس يُحفظ هنا لتتدرّب عليه.</p>
         <Link href="/student" className="text-sm">
@@ -31,7 +31,7 @@ export function MistakesReview() {
   }
   return (
     <div className="flex flex-col items-center gap-3 rounded-3xl border border-border bg-card p-6 text-center">
-      <Companion who={prefs.companion} mood="think" size={80} />
+      <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood="think" size={80} />
       <p className="font-bold">عندك {list.length} تمرين أخطأت فيه</p>
       <p className="text-sm text-muted-foreground">أجب عنها صحيحة لتخرج من القائمة.</p>
       <Button type="button" className="min-h-12 w-full" onClick={() => setRound(list)}>

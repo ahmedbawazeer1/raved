@@ -307,7 +307,7 @@ export function VideoBlock({
   return (
     <section aria-label="فيديو الدرس" className="flex flex-col gap-3">
       <div className="flex items-end gap-2">
-        <Companion who={prefs.companion} mood={done ? "happy" : open ? "think" : "idle"} wave={done} size={52} />
+        <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood={done ? "happy" : open ? "think" : "idle"} wave={done} size={52} />
         <p className="relative mb-2 min-w-0 flex-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-sm leading-relaxed font-semibold">{coach}</p>
       </div>
 

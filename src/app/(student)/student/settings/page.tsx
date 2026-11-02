@@ -21,10 +21,12 @@ const LINKS = [
 export default async function SettingsPage() {
   const { profile, userId } = await requireActiveStudent();
   const supabase = await createClient();
-  const [{ data: governorates }, { count: unread }] = await Promise.all([
+  const [{ data: governorates }, { count: unread }, { data: passed }] = await Promise.all([
     supabase.from("governorates").select("code, name_ar").order("position"),
     supabase.from("notifications").select("id", { count: "exact", head: true }).eq("student_id", userId).is("read_at", null),
+    supabase.from("quiz_attempts").select("quiz_id, quizzes!inner(kind)").eq("student_id", userId).eq("passed", true).eq("quizzes.kind", "unit"),
   ]);
+  const stamps = new Set((passed ?? []).map((p) => p.quiz_id)).size;
   const governorate = governorates?.find((g) => g.code === profile.governorate)?.name_ar;
 
   return (
@@ -35,9 +37,7 @@ export default async function SettingsPage() {
         </span>
         <div>
           <h1 className="text-xl font-bold">{profile.full_name}</h1>
-          <p className="text-sm text-muted-foreground">
-            {[gradeLabel(profile.grade), governorate].filter((v) => v && v !== "—").join(" · ")}
-          </p>
+          <p className="text-sm text-muted-foreground">{[gradeLabel(profile.grade), governorate].filter((v) => v && v !== "—").join(" · ")}</p>
         </div>
       </header>
 
@@ -58,7 +58,7 @@ export default async function SettingsPage() {
         ))}
       </Card>
 
-      <ExperienceForm />
+      <ExperienceForm stamps={stamps} />
 
       <Card className="p-5">
         <h2 className="mb-3 font-bold">دراستي</h2>

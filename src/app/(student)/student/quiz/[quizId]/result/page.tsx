@@ -8,6 +8,11 @@ import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
 import { MixedText } from "@/components/mixed-text";
 import { TopBar } from "@/components/student/top-bar";
+import { BattleScene } from "@/components/art/battle-scene";
+import { Celebrate } from "@/components/art/celebrate";
+import { ShareStamp } from "@/components/art/share-stamp";
+import { Stamp } from "@/components/art/stamp";
+import { guardianFor } from "@/lib/art/guardians";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
@@ -45,7 +50,11 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
   const { data: attempt } = await query.maybeSingle();
   if (!attempt) notFound();
 
-  const { data: quiz } = await supabase.from("quizzes").select("pass_percent, units(id, title, position, stop_ar, levels(paths(slug)))").eq("id", quizId).maybeSingle();
+  const { data: quiz } = await supabase
+    .from("quizzes")
+    .select("pass_percent, units(id, title, position, stop_ar, levels(paths(slug)))")
+    .eq("id", quizId)
+    .maybeSingle();
   const unit = quiz?.units;
   const slug = unit?.levels?.paths?.slug ?? "";
   const unitHref = unit ? `/student/${slug}/unit/${unit.id}` : "/student";
@@ -61,33 +70,32 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
     }
   }
   const results = (attempt.results as unknown as ResultItem[]) ?? [];
+  const guardian = guardianFor(unit?.stop_ar, unit?.position ?? 1);
+  const stopName = unit?.stop_ar ?? `الوحدة ${unit?.position ?? ""}`;
   const wrong = results.filter((r) => !r.correct);
 
   return (
     <>
       <TopBar backHref={unitHref} title={<>نتيجة اختبار الوحدة {unit?.position ?? ""}</>} />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
-        <section aria-label="نتيجة المعركة" className="flex flex-col gap-2 rounded-2xl bg-foreground p-4 text-white">
-          <div className="flex items-center gap-3">
-            <span className="text-4xl motion-safe:animate-[boss-hit_0.6s_ease-in-out_3]" aria-hidden="true">
-              {attempt.passed ? "🏳️" : "🛡️"}
+        <section aria-label="نتيجة المعركة" className="flex flex-col gap-2">
+          <BattleScene guardian={guardian} hp={Math.max(0, 100 - attempt.score)} outcome={attempt.passed ? "won" : "lost"} />
+          <p className="text-center font-bold">
+            {attempt.passed ? `هزمت ${guardian.name}! طابع ${stopName} لك 🏅` : `${guardian.name} صمد هذه المرة`}
+            <span className="block text-xs font-normal text-muted-foreground">
+              {attempt.correct} ضربات صحيحة من {attempt.total}
             </span>
-            <div className="flex-1">
-              <p className="font-bold">
-                {attempt.passed ? `هزمت حارس ${unit?.stop_ar ?? "المحطة"}! ختم المحطة لك 🏅` : `حارس ${unit?.stop_ar ?? "المحطة"} صمد هذه المرة`}
-              </p>
-              <p className="text-xs text-white/70">
-                {attempt.correct} ضربات صحيحة من {attempt.total}
-              </p>
-            </div>
-          </div>
-          <div className="h-3 overflow-hidden rounded-full bg-white/20" role="img" aria-label={`صحة الحارس ${Math.max(0, 100 - attempt.score)}%`}>
-            <div
-              className="h-full rounded-full bg-destructive motion-safe:animate-[boss-hp_1.6s_ease-out_forwards]"
-              style={{ ["--hp" as string]: `${Math.max(0, 100 - attempt.score)}%`, width: `${Math.max(0, 100 - attempt.score)}%` }}
-            />
-          </div>
+          </p>
         </section>
+
+        {attempt.passed && unit && (
+          <section aria-label="طابع المحطة" className="flex flex-col items-center gap-3 rounded-3xl border border-border bg-card p-4">
+            <Celebrate id={attempt.id} />
+            <Stamp name={stopName} position={unit.position} earned className="w-32 motion-safe:animate-[stamp-drop_.7s_cubic-bezier(.3,1.6,.5,1)]" />
+            <p className="text-sm text-muted-foreground">أضيف إلى ألبوم طوابعك في «التقدم»</p>
+            <ShareStamp name={stopName} position={unit.position} />
+          </section>
+        )}
 
         <Card className="flex items-center gap-4 p-5">
           <En className={`text-4xl font-bold ${attempt.passed ? "text-success" : "text-warning"}`}>
@@ -98,9 +106,7 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
               {attempt.passed ? "نجحت" : "لم تنجح بعد"}
             </Badge>
             <p className="font-semibold">
-              {attempt.passed
-                ? `أحسنت يا ${profile.full_name.split(" ")[0]}!`
-                : `تحتاج ${quiz?.pass_percent ?? 70}% للنجاح. راجع الأخطاء وحاول مرة أخرى.`}
+              {attempt.passed ? `أحسنت يا ${profile.full_name.split(" ")[0]}!` : `تحتاج ${quiz?.pass_percent ?? 70}% للنجاح. راجع الأخطاء وحاول مرة أخرى.`}
             </p>
           </div>
         </Card>

@@ -12,6 +12,7 @@ import { parseFeatures } from "@/lib/paths/features";
 import { LEVELS, monthsToB2, SKILL_LABELS_AR, SKILLS, type Level } from "@/lib/placement/engine";
 import { examTrackOpen, streakDays } from "@/lib/student/stats";
 import { BadgeGrid } from "@/components/student/badge-grid";
+import { Stamp } from "@/components/art/stamp";
 import { XpBar } from "@/components/student/xp-bar";
 import { getXpRows } from "@/lib/gamification/queries";
 import { badges, statsFromXp } from "@/lib/gamification/xp";
@@ -127,6 +128,24 @@ export default async function ProgressPage() {
       <XpBar xp={xpRows.reduce((sum, r) => sum + r.points, 0)} />
       <BadgeGrid badges={badges(statsFromXp(xpRows, streak))} />
 
+      {curriculum && curriculum.units.length > 0 && (
+        <section aria-labelledby="album-title" className="flex flex-col gap-3">
+          <div className="flex items-center justify-between">
+            <h2 id="album-title" className="font-bold">
+              ألبوم الطوابع
+            </h2>
+            <span className="text-xs text-muted-foreground">
+              {curriculum.units.filter((u) => u.state === "done").length} من {curriculum.units.length}
+            </span>
+          </div>
+          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
+            {curriculum.units.map((u) => (
+              <Stamp key={u.id} name={u.stop ?? `الوحدة ${u.position}`} position={u.position} earned={u.state === "done"} />
+            ))}
+          </div>
+        </section>
+      )}
+
       <Card className="flex flex-col gap-1 px-4 py-3">
         <div className="flex items-center justify-between pb-1">
           <h2 className="font-bold">مهاراتك</h2>
@@ -151,9 +170,7 @@ export default async function ProgressPage() {
               <div key={l.id} className="flex items-center gap-3 text-sm">
                 <En className="w-8 font-bold">{l.code}</En>
                 <ProgressBar value={done} max={Math.max(units.length, 1)} label={`تقدم ${l.code}`} />
-                <span className="w-20 text-start text-muted-foreground">
-                  {units.length ? `${done} من ${units.length}` : "قريباً"}
-                </span>
+                <span className="w-20 text-start text-muted-foreground">{units.length ? `${done} من ${units.length}` : "قريباً"}</span>
               </div>
             );
           })}
