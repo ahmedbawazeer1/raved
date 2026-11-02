@@ -26,6 +26,3 @@ export function targetDateLabel(value: string | null | undefined): string {
   return TARGET_DATES.find((d) => d.value === value)?.label ?? "—";
 }
 
-/** Teacher recommendation upload rules (APP-04). */
-export const RECOMMENDATION_MAX_BYTES = 2 * 1024 * 1024;
-export const RECOMMENDATION_TYPES = ["image/jpeg", "image/png", "image/webp", "application/pdf"] as const;

@@ -6,10 +6,17 @@ export const STUDENT = {
   name: "طالب الاختبار",
 };
 
-export async function login(page: Page) {
+/** A new account that has not applied yet (reset before every run). */
+export const APPLICANT = {
+  email: "e2e-applicant@example.com",
+  password: "e2e-Password-456",
+  name: "متقدم الاختبار",
+};
+
+export async function login(page: Page, account: { email: string; password: string } = STUDENT, home: RegExp = /\/student$/) {
   await page.goto("/login");
-  await page.getByLabel("البريد الإلكتروني").fill(STUDENT.email);
-  await page.getByLabel("كلمة المرور").fill(STUDENT.password);
+  await page.getByLabel("البريد الإلكتروني").fill(account.email);
+  await page.getByLabel("كلمة المرور").fill(account.password);
   await page.getByRole("button", { name: "تسجيل الدخول" }).click();
-  await expect(page).toHaveURL(/\/student$/);
+  await expect(page).toHaveURL(home);
 }

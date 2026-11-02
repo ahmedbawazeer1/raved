@@ -4,16 +4,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { getSessionContext } from "@/lib/auth/session";
 import { dbErrorMessage } from "@/lib/auth/errors";
-import {
-  fieldErrors,
-  sanitizeStep1Draft,
-  sanitizeStep2Draft,
-  step1Schema,
-  step2Schema,
-  type Step1Input,
-  type Step2Input,
-} from "@/lib/apply/schemas";
-import { RECOMMENDATION_MAX_BYTES } from "@/lib/apply/options";
+import { fieldErrors, sanitizeStep1Draft, sanitizeStep2Draft, step1Schema, step2Schema, type Step1Input, type Step2Input } from "@/lib/apply/schemas";
 
 export interface ApplyFormState {
   error?: string;
@@ -30,11 +21,7 @@ async function ensureApplication(userId: string) {
   const supabase = await createClient();
   const { data } = await supabase.from("applications").select("id, status").eq("student_id", userId).maybeSingle();
   if (data) return data;
-  const { data: created, error } = await supabase
-    .from("applications")
-    .insert({ student_id: userId })
-    .select("id, status")
-    .single();
+  const { data: created, error } = await supabase.from("applications").insert({ student_id: userId }).select("id, status").single();
   if (error) throw new Error(error.message);
   return created;
 }
@@ -72,40 +59,8 @@ export async function saveStep2Draft(input: Partial<Record<keyof Step2Input, unk
   const draft = sanitizeStep2Draft(input);
   if (Object.keys(draft).length === 0) return { ok: true };
   const supabase = await createClient();
-  const { error } = await supabase
-    .from("applications")
-    .update(draft)
-    .eq("student_id", ctx.userId)
-    .in("status", EDITABLE);
+  const { error } = await supabase.from("applications").update(draft).eq("student_id", ctx.userId).in("status", EDITABLE);
   return { ok: !error };
-}
-
-/** Attaches an uploaded recommendation file (already in Storage under the student's folder). */
-export async function attachRecommendation(file: {
-  path: string;
-  name: string;
-  size: number;
-}): Promise<{ ok: boolean; error?: string; previousPath?: string | null }> {
-  const ctx = await getSessionContext();
-  if (!ctx) return { ok: false, error: "انتهت جلستك. سجّل الدخول مرة أخرى." };
-  if (!file.path.startsWith(`${ctx.userId}/`) || file.size > RECOMMENDATION_MAX_BYTES) {
-    return { ok: false, error: "ملف التوصية غير صالح. ارفعه مرة أخرى." };
-  }
-  const app = await ensureApplication(ctx.userId);
-  if (!EDITABLE.includes(app.status)) return { ok: false, error: "طلبك أُرسل ولا يمكن تعديله الآن." };
-
-  const supabase = await createClient();
-  const { data: current } = await supabase
-    .from("applications")
-    .select("recommendation_path")
-    .eq("student_id", ctx.userId)
-    .single();
-  const { error } = await supabase
-    .from("applications")
-    .update({ recommendation_path: file.path, recommendation_name: file.name.slice(0, 200), recommendation_size: file.size })
-    .eq("student_id", ctx.userId);
-  if (error) return { ok: false, error: dbErrorMessage(error) };
-  return { ok: true, previousPath: current?.recommendation_path ?? null };
 }
 
 export async function submitApplication(_prev: ApplyFormState, formData: FormData): Promise<ApplyFormState> {
@@ -127,11 +82,7 @@ export async function submitApplication(_prev: ApplyFormState, formData: FormDat
   }
 
   const supabase = await createClient();
-  const { error: updateError } = await supabase
-    .from("applications")
-    .update(parsed.data)
-    .eq("student_id", ctx.userId)
-    .in("status", EDITABLE);
+  const { error: updateError } = await supabase.from("applications").update(parsed.data).eq("student_id", ctx.userId).in("status", EDITABLE);
   if (updateError) return { error: dbErrorMessage(updateError) };
 
   const { data: status, error } = await supabase.rpc("submit_application", {

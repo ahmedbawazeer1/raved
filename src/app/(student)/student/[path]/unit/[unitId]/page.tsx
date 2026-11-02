@@ -11,7 +11,7 @@ import { ProgressBar } from "@/components/student/progress-bar";
 import { TopBar } from "@/components/student/top-bar";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
-import { formatBytes } from "@/lib/apply/compress";
+import { formatBytes } from "@/lib/format";
 
 export const metadata: Metadata = { title: "الوحدة" };
 

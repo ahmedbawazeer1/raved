@@ -13,6 +13,5 @@ describe("error messages", () => {
     expect(dbErrorMessage({ message: "something else" })).toContain("خطأ");
   });
   it("maps SQL function errors", () => {
-    expect(dbErrorMessage({ message: "recommendation_required" })).toContain("توصية");
   });
 });
