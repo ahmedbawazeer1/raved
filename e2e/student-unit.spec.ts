@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { login } from "./fixtures";
+import { login, openLessonStep } from "./fixtures";
 
 test("a student completes today's lessons and passes the unit quiz", async ({ page }) => {
   await login(page);
@@ -16,13 +16,17 @@ test("a student completes today's lessons and passes the unit quiz", async ({ pa
   await expect(page).toHaveURL(/\/student\/learn\//);
   await expect(page.getByText("am / is / are").first()).toBeVisible();
 
+  // The lesson is shown step by step: the exercises open after the explanation.
+  await openLessonStep(page, "التمارين");
   // The in-lesson exercise is checked on the device.
   await page.getByRole("radio", { name: "are" }).click();
   await page.getByRole("button", { name: "تحقق من الإجابة" }).click();
   await expect(page.getByText("إجابة صحيحة")).toBeVisible();
 
+  await openLessonStep(page, "إنهاء الدرس");
   await page.getByRole("button", { name: /أكملت الدرس · التالي/ }).click();
   await expect(page.getByText("عرّف نفسك").first()).toBeVisible();
+  await openLessonStep(page, "إنهاء الدرس");
   await page.getByRole("button", { name: /إلى الاختبار/ }).click();
 
   // Unit quiz: answers are graded on the server after submitting.
