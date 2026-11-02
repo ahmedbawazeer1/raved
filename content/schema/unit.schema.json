@@ -265,6 +265,23 @@
         "needs_check": {
           "type": "boolean"
         },
+        "checkpoints": {
+          "type": "array",
+          "description": "for video blocks: surprise questions that pause the video at at_sec and ask about the part just watched",
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "required": ["at_sec", "prompt_ar", "options", "answer"],
+            "additionalProperties": false,
+            "properties": {
+              "at_sec": { "type": "integer", "minimum": 5 },
+              "prompt_ar": { "type": "string" },
+              "options": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "type": "string" } },
+              "answer": { "type": "integer", "minimum": 0, "description": "index of the right option" },
+              "explanation_ar": { "type": "string" }
+            }
+          }
+        },
         "text_en": {
           "type": "string",
           "description": "for type=reading or audio (read by TTS)"

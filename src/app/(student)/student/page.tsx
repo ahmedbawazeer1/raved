@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
 import { CompanionGreeting } from "@/components/art/companion-greeting";
 import { Hud } from "@/components/student/hud";
+import { MistakesLink } from "@/components/student/mistakes-link";
 import { JourneyMap } from "@/components/student/journey-map";
 import { ProgressBar } from "@/components/student/progress-bar";
 import { getXpRows } from "@/lib/gamification/queries";
@@ -165,6 +166,8 @@ export default async function TodayPage() {
           </Link>
         ))}
       </nav>
+
+      <MistakesLink />
 
       {vocabToday > 0 && (
         <Link

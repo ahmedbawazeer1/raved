@@ -1,3 +1,4 @@
+import { MistakesLink } from "@/components/student/mistakes-link";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Gamepad2, Headphones, Mic, PenLine } from "lucide-react";
@@ -58,6 +59,7 @@ export default async function PracticePage() {
         </p>
       </header>
       <WritingSyncNotice />
+      <MistakesLink />
 
       <Link
         href="/student/practice/games"

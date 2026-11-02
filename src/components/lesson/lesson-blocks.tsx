@@ -5,7 +5,7 @@ import type { LessonBlock } from "@/lib/content/types";
 import { Markdown } from "./markdown";
 import { AudioBlock } from "./audio-block";
 import { VideoBlock, type VideoStatus } from "./video-block";
-import { ExerciseBlock } from "./exercise-block";
+import { ExerciseStepper } from "./exercise-stepper";
 import { GameBlock } from "./game-block";
 import { StoryBlock } from "./story-block";
 import type { GameWord } from "@/lib/games/logic";
@@ -24,6 +24,9 @@ export function LessonBlocks({
   /** The unit's vocabulary, played by game blocks. */
   words?: GameWord[];
 }) {
+  // All exercises of the lesson are played one at a time, where the first one was.
+  const exercises = blocks.flatMap((b) => (b.type === "exercise" && b.exercise ? [b.exercise] : []));
+  const firstExercise = blocks.findIndex((b) => b.type === "exercise" && b.exercise);
   return (
     <div className="flex flex-col gap-4">
       {blocks.map((block, i) => {
@@ -75,9 +78,11 @@ export function LessonBlocks({
           case "audio":
             return block.text_en ? <AudioBlock key={i} text={block.text_en} /> : null;
           case "video":
-            return <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} words={words} />;
+            return (
+              <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} words={words} />
+            );
           case "exercise":
-            return block.exercise ? <ExerciseBlock key={i} exercise={block.exercise} /> : null;
+            return i === firstExercise ? <ExerciseStepper key={i} exercises={exercises} /> : null;
           case "story":
             return block.id && block.panels?.length ? <StoryBlock key={i} id={block.id} title={block.title_ar} panels={block.panels} /> : null;
           case "game":

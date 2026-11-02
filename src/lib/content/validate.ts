@@ -123,6 +123,13 @@ export function validateUnitPackage(input: unknown, opts: { fileName?: string } 
           else if (PLACEHOLDER_ID.test(block.youtube_id) || block.needs_check) add("warning", bp, "فيديو يحتاج تحققاً قبل النشر (needs_check).");
           if (block.optional !== true) add("error", `${bp}.optional`, "الفيديو يجب أن يكون اختيارياً (optional: true).");
           if (!block.approx_size_mb) add("warning", `${bp}.approx_size_mb`, "أضف حجم الفيديو التقريبي ليعرفه الطالب.");
+          (block.checkpoints ?? []).forEach((c, ci) => {
+            const cp = `${bp}.checkpoints[${ci}]`;
+            if (!c.prompt_ar?.trim()) add("error", `${cp}.prompt_ar`, "السؤال المفاجئ بلا نص.");
+            if (!Array.isArray(c.options) || c.options.length < 2) add("error", `${cp}.options`, "السؤال المفاجئ يحتاج خيارين على الأقل.");
+            else if (!Number.isInteger(c.answer) || c.answer < 0 || c.answer >= c.options.length) add("error", `${cp}.answer`, "رقم الإجابة الصحيحة خارج الخيارات.");
+            if (block.duration_sec && c.at_sec >= block.duration_sec) add("error", `${cp}.at_sec`, "وقت السؤال بعد نهاية الفيديو.");
+          });
           break;
         case "text":
           if (!block.markdown_ar?.trim()) add("error", `${bp}.markdown_ar`, "كتلة الشرح فارغة.");
