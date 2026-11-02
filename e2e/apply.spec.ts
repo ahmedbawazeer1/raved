@@ -26,10 +26,10 @@ test("a new account applies step by step, without a teacher recommendation", asy
   await page.getByRole("button", { name: "التالي" }).click();
 
   // Step 4: phone (checked before moving on).
-  await page.getByLabel("رقم هاتفك").fill("12345");
+  await page.getByRole("textbox", { name: "رقم هاتفك" }).fill("12345");
   await page.getByRole("button", { name: "التالي: هدفك" }).click();
   await expect(page).toHaveURL(/\/apply$/);
-  await page.getByLabel("رقم هاتفك").fill("77 123 4567");
+  await page.getByRole("textbox", { name: "رقم هاتفك" }).fill("77 123 4567");
   await page.getByRole("button", { name: "التالي: هدفك" }).click();
 
   // Steps 5–8: goal.
