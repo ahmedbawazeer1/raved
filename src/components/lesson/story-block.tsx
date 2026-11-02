@@ -41,8 +41,12 @@ export function StoryBlock({ id, title, panels }: { id: string; title?: string; 
               <span className="text-2xl" aria-hidden="true">
                 {AVATAR[p.speaker] ?? "🧔🏽"}
               </span>
-              <div className={cn("max-w-[80%] rounded-2xl px-3.5 py-2.5", side === "end" ? "bg-warning-tint" : side === "start" ? "bg-primary-tint" : "bg-muted")}>
-                <p className="text-xs font-semibold text-muted-foreground">{p.speaker === "Hamza" ? "حمزة" : p.speaker === "Reem" ? "ريم" : <En>{p.speaker}</En>}</p>
+              <div
+                className={cn("max-w-[80%] rounded-2xl px-3.5 py-2.5", side === "end" ? "bg-warning-tint" : side === "start" ? "bg-primary-tint" : "bg-muted")}
+              >
+                <p className="text-xs font-semibold text-muted-foreground">
+                  {p.speaker === "Hamza" ? "حمزة" : p.speaker === "Reem" ? "ريم" : <En>{p.speaker}</En>}
+                </p>
                 <button type="button" onClick={() => speak(p.text_en, { rate: 0.85 })} className="flex items-start gap-1.5 text-start">
                   <En className="text-[16px] leading-relaxed">{p.text_en}</En>
                   <Volume2 className="mt-1 size-3.5 flex-none text-muted-foreground" aria-label="استمع" />

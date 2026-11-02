@@ -94,7 +94,11 @@ export function QuestionInput({
   return (
     <div className="flex flex-col gap-3">
       <div dir="ltr" aria-label="جملتك" className="flex min-h-14 flex-wrap items-center gap-2 rounded-xl border border-dashed border-input bg-card p-2.5">
-        {chosen.length === 0 && <span dir="rtl" className="text-sm text-muted-foreground">اضغط الكلمات بالترتيب</span>}
+        {chosen.length === 0 && (
+          <span dir="rtl" className="text-sm text-muted-foreground">
+            اضغط الكلمات بالترتيب
+          </span>
+        )}
         {chosen.map((w, i) => (
           <button
             key={`${w}-${i}`}

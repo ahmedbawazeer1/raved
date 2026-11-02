@@ -27,6 +27,16 @@ export interface VideoBlock {
   needs_check?: boolean;
   approx_size_mb?: number;
   optional?: boolean;
+  /** Surprise questions about the part just watched (the video pauses at `at_sec`). */
+  checkpoints?: VideoCheckpoint[];
+}
+export interface VideoCheckpoint {
+  at_sec: number;
+  prompt_ar: string;
+  options: string[];
+  /** Index of the right option. */
+  answer: number;
+  explanation_ar?: string;
 }
 export interface ReadingBlock {
   type: "reading";

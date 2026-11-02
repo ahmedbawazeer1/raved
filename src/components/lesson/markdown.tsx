@@ -14,8 +14,18 @@ function inline(text: string, keyPrefix: string): ReactNode[] {
     const index = match.index ?? 0;
     if (index > last) out.push(<MixedText key={`${keyPrefix}-t${i++}`} text={text.slice(last, index)} />);
     const token = match[0];
-    if (token.startsWith("**")) out.push(<strong key={`${keyPrefix}-b${i++}`}><MixedText text={token.slice(2, -2)} /></strong>);
-    else out.push(<em key={`${keyPrefix}-i${i++}`}><MixedText text={token.slice(1, -1)} /></em>);
+    if (token.startsWith("**"))
+      out.push(
+        <strong key={`${keyPrefix}-b${i++}`}>
+          <MixedText text={token.slice(2, -2)} />
+        </strong>,
+      );
+    else
+      out.push(
+        <em key={`${keyPrefix}-i${i++}`}>
+          <MixedText text={token.slice(1, -1)} />
+        </em>,
+      );
     last = index + token.length;
   }
   if (last < text.length) out.push(<MixedText key={`${keyPrefix}-t${i++}`} text={text.slice(last)} />);

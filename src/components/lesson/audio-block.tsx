@@ -59,7 +59,7 @@ export function AudioBlock({ text }: { text: string }) {
           جهازك لا يحتوي صوتاً إنجليزياً. اقرأ النص أدناه، أو ثبّت الصوت من: الإعدادات ← اللغة ← تحويل النص إلى كلام.
         </p>
       ) : null}
-      {(showText || supported === false || !hasEnglishVoice) ? (
+      {showText || supported === false || !hasEnglishVoice ? (
         <En as="p" className="rounded-lg bg-background p-3 text-[15px] leading-relaxed whitespace-pre-line">
           {text}
         </En>

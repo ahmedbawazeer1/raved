@@ -32,6 +32,7 @@ Build content/english/units/<code>.json following the schema exactly:
 - Original reading text at the unit level, set in Yemen when natural (names, cities, rial prices).
 - 10–15 vocabulary items with Arabic meaning, IPA and example sentences.
 - Speaking and writing tasks per schema.
+- For every mandatory lesson video add 2–4 `checkpoints` (surprise questions): `at_sec` right after the moment, `prompt_ar` about what was just said or shown, 3 `options`, `answer` index, short `explanation_ar`.
 - Unit quiz: 10 questions, exactly one correct answer each, each with an Arabic explanation.
 - Never copy official exam questions or textbook content.
 - Keep the package under 2MB.

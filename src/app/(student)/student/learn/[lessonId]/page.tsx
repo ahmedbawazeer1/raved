@@ -5,6 +5,7 @@ import { Lock, MessageCircleQuestion } from "lucide-react";
 import { En } from "@/components/en";
 import { MixedText } from "@/components/mixed-text";
 import { LessonBlocks } from "@/components/lesson/lesson-blocks";
+import { VideoFirst } from "@/components/lesson/video-first";
 import { LessonFeedback } from "@/components/lesson/lesson-feedback";
 import { TaskPreview } from "@/components/lesson/task-preview";
 import { TopBar } from "@/components/student/top-bar";
@@ -26,7 +27,9 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
 
   const { data: lesson } = await supabase
     .from("lessons")
-    .select("id, unit_id, title, skill, position, blocks, speaking_task, writing_task, units(id, title, position, roleplay, quizzes(id, kind), levels(code, paths(slug, features)))")
+    .select(
+      "id, unit_id, title, skill, position, blocks, speaking_task, writing_task, units(id, title, position, roleplay, quizzes(id, kind), levels(code, paths(slug, features)))",
+    )
     .eq("id", lessonId)
     .maybeSingle();
   if (!lesson || !lesson.units) notFound();
@@ -54,7 +57,7 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
       supabase.from("speaking_attempts").select("id").eq("student_id", userId).eq("lesson_id", lesson.id).limit(1),
       supabase.from("writing_submissions").select("id").eq("student_id", userId).eq("lesson_id", lesson.id).limit(1),
       getAiSettings(),
-      hasGames
+      hasGames || trackedVideos.length
         ? supabase.from("vocab_items").select("item_key, word, meaning_ar, example_en").eq("unit_id", lesson.unit_id).eq("archived", false).order("position")
         : Promise.resolve({ data: [] as { item_key: string; word: string; meaning_ar: string; example_en: string }[] }),
     ]);
@@ -93,6 +96,9 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
   const videos: Record<string, VideoStatus> = {};
   for (const v of views ?? []) videos[v.youtube_id] = { watched: v.watched_sec, duration: v.duration_sec, done: Boolean(v.completed_at) };
   const tasksRequired = !ai.paused;
+  const isLead = (b: LessonBlock) => b.type === "video" && Boolean(b.youtube_id) && !b.needs_check;
+  const leadVideos = blocks.filter(isLead);
+  const rest = blocks.filter((b) => !isLead(b));
   const speakingTask = features.speaking ? (lesson.speaking_task as PackageLesson["speaking_task"] | null) : null;
   const writingTask = features.writing ? (lesson.writing_task as PackageLesson["writing_task"] | null) : null;
   const tasks: GateTask[] = [];
@@ -115,36 +121,36 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
         title={<MixedText text={lesson.title} />}
       />
       <main className="mx-auto flex w-full max-w-[680px] flex-col gap-4 px-4 py-5">
-        <LessonBlocks blocks={blocks} videos={videos} words={words} />
-        <TaskPreview
-          lessonId={lesson.id}
-          speaking={speakingTask}
-          writing={writingTask}
-        />
-        {lesson.skill === "speaking" && features.speaking && (unit.roleplay as { character_ar?: string } | null)?.character_ar && (
+        {/* The lesson starts with its video; the rest opens once it is watched. */}
+        {trackedVideos.length > 0 && <LessonBlocks blocks={leadVideos} videos={videos} words={words} />}
+        <VideoFirst done={!trackedVideos.length || trackedVideos.every((id) => videos[id]?.done)}>
+          <LessonBlocks blocks={trackedVideos.length ? rest : blocks} videos={videos} words={words} />
+          <TaskPreview lessonId={lesson.id} speaking={speakingTask} writing={writingTask} />
+          {lesson.skill === "speaking" && features.speaking && (unit.roleplay as { character_ar?: string } | null)?.character_ar && (
+            <Link
+              href={`/student/practice/roleplay/${unit.id}`}
+              className="flex min-h-12 items-center gap-3 rounded-2xl border border-ai-tint bg-ai-tint px-4 py-3 text-foreground no-underline hover:text-foreground"
+            >
+              <span className="text-2xl" aria-hidden="true">
+                💬
+              </span>
+              <span className="flex-1">
+                <span className="block font-semibold">تحدث مع {(unit.roleplay as { character_ar: string }).character_ar}</span>
+                <span className="block text-[13px] text-muted-foreground">محادثة بالإنجليزية مع شخصية من الرحلة · +5 نقاط · يحتاج اتصالاً</span>
+              </span>
+            </Link>
+          )}
           <Link
-            href={`/student/practice/roleplay/${unit.id}`}
-            className="flex min-h-12 items-center gap-3 rounded-2xl border border-ai-tint bg-ai-tint px-4 py-3 text-foreground no-underline hover:text-foreground"
+            href={`/student/learn/${lesson.id}/assistant`}
+            className="flex min-h-12 items-center gap-3 rounded-2xl border border-ai-tint bg-card px-4 py-3 text-foreground no-underline hover:text-foreground"
           >
-            <span className="text-2xl" aria-hidden="true">
-              💬
-            </span>
+            <MessageCircleQuestion className="size-6 flex-none text-ai" aria-hidden="true" />
             <span className="flex-1">
-              <span className="block font-semibold">تحدث مع {(unit.roleplay as { character_ar: string }).character_ar}</span>
-              <span className="block text-[13px] text-muted-foreground">محادثة بالإنجليزية مع شخصية من الرحلة · +5 نقاط · يحتاج اتصالاً</span>
+              <span className="block font-semibold">عندك سؤال؟ اسأل المساعد</span>
+              <span className="block text-[13px] text-muted-foreground">يشرح هذا الدرس بالعربية · يحتاج اتصالاً</span>
             </span>
           </Link>
-        )}
-        <Link
-          href={`/student/learn/${lesson.id}/assistant`}
-          className="flex min-h-12 items-center gap-3 rounded-2xl border border-ai-tint bg-card px-4 py-3 text-foreground no-underline hover:text-foreground"
-        >
-          <MessageCircleQuestion className="size-6 flex-none text-ai" aria-hidden="true" />
-          <span className="flex-1">
-            <span className="block font-semibold">عندك سؤال؟ اسأل المساعد</span>
-            <span className="block text-[13px] text-muted-foreground">يشرح هذا الدرس بالعربية · يحتاج اتصالاً</span>
-          </span>
-        </Link>
+        </VideoFirst>
         <LessonFeedback lessonId={lesson.id} initialRating={progress?.rating ?? null} />
       </main>
       <footer className="sticky bottom-[78px] border-t border-border bg-card px-4 pt-3 pb-4 md:bottom-0">

@@ -35,6 +35,20 @@ describe("validateUnitPackage", () => {
     expect(r.errors.some((e) => e.path === "quiz.questions[1].options")).toBe(true);
   });
 
+  it("checks the surprise questions of a video", () => {
+    const pkg = clone();
+    const video = pkg.lessons[0].blocks.find((b: { type: string }) => b.type === "video");
+    video.duration_sec = 300;
+    video.checkpoints = [
+      { at_sec: 60, prompt_ar: "ماذا قال؟", options: ["أ", "ب"], answer: 1 },
+      { at_sec: 400, prompt_ar: "متى؟", options: ["أ", "ب"], answer: 2 },
+    ];
+    const r = validateUnitPackage(pkg);
+    expect(r.errors.some((e) => e.path.endsWith("checkpoints[0].answer"))).toBe(false);
+    expect(r.errors.some((e) => e.path.endsWith("checkpoints[1].answer"))).toBe(true);
+    expect(r.errors.some((e) => e.path.endsWith("checkpoints[1].at_sec"))).toBe(true);
+  });
+
   it("requires videos to be optional", () => {
     const pkg = clone();
     pkg.lessons[0].blocks[3].optional = false;
