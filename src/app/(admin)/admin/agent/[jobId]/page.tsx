@@ -7,6 +7,8 @@ import { Card } from "@/components/ui/card";
 import { Alert } from "@/components/ui/form";
 import { En } from "@/components/en";
 import { AutoRefresh, ReviewJobForm } from "@/components/admin/agent-forms";
+import { BuiltUnitReview } from "@/components/admin/built-unit-review";
+import { retryJob } from "../actions";
 import { JOB_KIND_AR, JOB_STATUS_AR } from "@/lib/agent/labels";
 import { countUnits, pathPlanSchema } from "@/lib/agent/plan";
 import { createClient } from "@/lib/supabase/server";
@@ -49,7 +51,17 @@ export default async function AgentJobPage({ params }: PageProps<"/admin/agent/[
           </div>
         </Card>
       )}
-      {job.status === "failed" && <Alert tone="error">{job.error ?? "توقف الوكيل."}</Alert>}
+      {job.status === "failed" && (
+        <div className="flex flex-col gap-2">
+          <Alert tone="error">{job.error ?? "توقف الوكيل."}</Alert>
+          <form action={retryJob}>
+            <input type="hidden" name="job_id" value={job.id} />
+            <button type="submit" className="min-h-11 rounded-xl bg-primary px-4 font-semibold text-white">
+              أعد المحاولة
+            </button>
+          </form>
+        </div>
+      )}
       {job.review_note && (
         <Alert tone="info">
           <b>ملاحظتك:</b> {job.review_note}
@@ -110,6 +122,7 @@ export default async function AgentJobPage({ params }: PageProps<"/admin/agent/[
         </section>
       )}
       {plan && !plan.success && <Alert tone="error">نتيجة الوكيل غير صالحة للعرض.</Alert>}
+      {job.kind === "build_unit" && job.output != null && <BuiltUnitReview output={job.output} />}
 
       {job.status === "needs_review" && (
         <Card className="flex flex-col gap-3 border-primary p-5">
@@ -128,7 +141,11 @@ export default async function AgentJobPage({ params }: PageProps<"/admin/agent/[
             </li>
           ))}
         </ol>
-        {job.model && <p className="text-xs text-muted-foreground">النموذج: <En>{job.model}</En></p>}
+        {job.model && (
+          <p className="text-xs text-muted-foreground">
+            النموذج: <En>{job.model}</En>
+          </p>
+        )}
       </Card>
     </div>
   );

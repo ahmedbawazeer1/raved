@@ -3,9 +3,13 @@
  * Runs queued agent jobs with the service role, at most a few per run.
  * Needs NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SECRET_KEY and GEMINI_API_KEY (repository secrets).
  */
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
 import { callGemini } from "../../src/lib/agent/gemini";
-import { runNextJob, type AgentJob, type AgentStore } from "../../src/lib/agent/runner";
+import { runNextJob, type AgentJob, type AgentStore, type UnitTools } from "../../src/lib/agent/runner";
+import { searchYouTube } from "../../src/lib/agent/youtube";
+import { validateUnitPackage } from "../../src/lib/content/validate";
 
 const MAX_JOBS = 3;
 
@@ -35,13 +39,27 @@ async function main() {
       if (error) throw error;
     },
     async pathContext(pathId) {
-      const { data: path, error } = await db.from("paths").select("title, description, features, levels(code, title, kind, position)").eq("id", pathId).single();
+      const { data: path, error } = await db
+        .from("paths")
+        .select("title, description, features, levels(code, title, kind, position)")
+        .eq("id", pathId)
+        .single();
       if (error) throw error;
       const features = Object.entries((path.features ?? {}) as Record<string, unknown>)
         .filter(([, on]) => on === true)
         .map(([k]) => k);
       const levels = [...(path.levels ?? [])].sort((a, b) => a.position - b.position).map((l) => ({ code: l.code, title: l.title, kind: l.kind }));
       return { title: path.title, description: path.description, levels, features };
+    },
+    async unitPackage(unitId) {
+      const { data } = await db
+        .from("unit_packages")
+        .select("package, version")
+        .eq("unit_id", unitId)
+        .order("version", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      return data ? { package: data.package as Record<string, unknown>, version: data.version } : null;
     },
     async memory(pathId) {
       const { data } = await db
@@ -55,8 +73,22 @@ async function main() {
     },
   };
 
+  const root = path.join(__dirname, "..", "..");
+  const tools: UnitTools = {
+    search: (q) => {
+      if (!process.env.YOUTUBE_API_KEY) throw new Error("مفتاح YouTube غير مضاف بعد (YOUTUBE_API_KEY).");
+      return searchYouTube(q);
+    },
+    validate: (pkg) => {
+      const r = validateUnitPackage(pkg);
+      return { ok: r.ok, errors: r.errors.map((e) => ({ path: e.path, message: e.message })) };
+    },
+    schema: readFileSync(path.join(root, "content", "schema", "unit.schema.json"), "utf8"),
+    example: readFileSync(path.join(root, "content", "examples", "A1-01.json"), "utf8"),
+  };
+
   for (let i = 0; i < MAX_JOBS; i++) {
-    const id = await runNextJob(store, (req) => callGemini(req));
+    const id = await runNextJob(store, (req) => callGemini(req), tools);
     if (!id) break;
     console.log(`Agent runner: handled job ${id}`);
   }

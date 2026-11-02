@@ -15,7 +15,10 @@ const unit = (code: string) => ({
   vocab_domain: "greetings",
   search_hints: ["greetings for beginners"],
 });
-const plan = { summary_ar: "مسار من الصفر إلى B2 مبني على رحلة حضرموت", levels: [{ code: "A1", title_ar: "المبتدئ", goal_ar: "يتواصل في مواقف بسيطة", units: [unit("A1-01"), unit("A1-02"), unit("A1-03")] }] };
+const plan = {
+  summary_ar: "مسار من الصفر إلى B2 مبني على رحلة حضرموت",
+  levels: [{ code: "A1", title_ar: "المبتدئ", goal_ar: "يتواصل في مواقف بسيطة", units: [unit("A1-01"), unit("A1-02"), unit("A1-03")] }],
+};
 
 function fakeStore(job: AgentJob | null) {
   const updates: Record<string, unknown>[] = [];
@@ -38,7 +41,10 @@ describe("agent prompts", () => {
   });
 
   it("asks for the plan with the existing levels and the owner's feedback", () => {
-    const p = planPathPrompt({ title: "الإنجليزية", description: null, levels: [{ code: "A1", title: "المبتدئ", kind: "general" }], features: [] }, "وحدات أقل");
+    const p = planPathPrompt(
+      { title: "الإنجليزية", description: null, levels: [{ code: "A1", title: "المبتدئ", kind: "general" }], features: [] },
+      "وحدات أقل",
+    );
     expect(p).toContain("A1 (المبتدئ, general)");
     expect(p).toContain("وحدات أقل");
   });
