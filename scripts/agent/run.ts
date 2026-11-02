@@ -39,13 +39,27 @@ async function main() {
       if (error) throw error;
     },
     async pathContext(pathId) {
-      const { data: path, error } = await db.from("paths").select("title, description, features, levels(code, title, kind, position)").eq("id", pathId).single();
+      const { data: path, error } = await db
+        .from("paths")
+        .select("title, description, features, levels(code, title, kind, position)")
+        .eq("id", pathId)
+        .single();
       if (error) throw error;
       const features = Object.entries((path.features ?? {}) as Record<string, unknown>)
         .filter(([, on]) => on === true)
         .map(([k]) => k);
       const levels = [...(path.levels ?? [])].sort((a, b) => a.position - b.position).map((l) => ({ code: l.code, title: l.title, kind: l.kind }));
       return { title: path.title, description: path.description, levels, features };
+    },
+    async unitPackage(unitId) {
+      const { data } = await db
+        .from("unit_packages")
+        .select("package, version")
+        .eq("unit_id", unitId)
+        .order("version", { ascending: false })
+        .limit(1)
+        .maybeSingle();
+      return data ? { package: data.package as Record<string, unknown>, version: data.version } : null;
     },
     async memory(pathId) {
       const { data } = await db

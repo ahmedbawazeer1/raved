@@ -5,6 +5,8 @@ name: Raved agent
 on:
   schedule:
     - cron: "*/30 * * * *"
+    # Fridays: look at student results and queue improvements.
+    - cron: "17 3 * * 5"
   workflow_dispatch:
 
 concurrency:
@@ -22,6 +24,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci --ignore-scripts
+      - name: Weekly self-improvement check
+        if: github.event.schedule == '17 3 * * 5'
+        run: npx tsx scripts/agent/weekly.ts
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
       - run: npx tsx scripts/agent/run.ts
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}

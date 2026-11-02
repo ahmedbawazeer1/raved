@@ -141,7 +141,11 @@ export default async function AgentJobPage({ params }: PageProps<"/admin/agent/[
             </li>
           ))}
         </ol>
-        {job.model && <p className="text-xs text-muted-foreground">النموذج: <En>{job.model}</En></p>}
+        {job.model && (
+          <p className="text-xs text-muted-foreground">
+            النموذج: <En>{job.model}</En>
+          </p>
+        )}
       </Card>
     </div>
   );

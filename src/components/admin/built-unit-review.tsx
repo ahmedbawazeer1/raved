@@ -5,11 +5,16 @@ import { MixedText } from "@/components/mixed-text";
 import { LessonBlocks } from "@/components/lesson/lesson-blocks";
 import { SKILL_LABELS, type UnitPackage } from "@/lib/content/types";
 import type { Timeline } from "@/lib/agent/unit";
+import { weakQuestions, type UnitStats } from "@/lib/agent/improve";
 
 interface BuiltOutput {
   package: UnitPackage;
-  video: { id: string; title: string; channel: string; durationSec: number; reason_ar?: string };
-  timeline: Timeline;
+  video?: { id: string; title: string; channel: string; durationSec: number; reason_ar?: string };
+  timeline?: Timeline;
+  clip?: { id: string; title: string; channel: string; start_sec: number; end_sec: number } | null;
+  /** improve_unit: what students struggled with, and the version being replaced. */
+  stats?: UnitStats;
+  previous_version?: number;
 }
 
 function mmss(sec: number): string {
@@ -33,26 +38,65 @@ export function BuiltUnitReview({ output }: { output: unknown }) {
         </p>
       </Card>
 
-      <Card className="flex flex-col gap-2 p-5">
-        <h3 className="font-bold">الفيديو الذي اختاره</h3>
-        <a href={`https://www.youtube.com/watch?v=${out.video.id}`} target="_blank" rel="noopener noreferrer" className="font-semibold">
-          <En>{out.video.title}</En> · {out.video.channel} · <En>{mmss(out.video.durationSec)}</En>
-        </a>
-        {out.video.reason_ar && <p className="text-sm text-muted-foreground">لماذا: {out.video.reason_ar}</p>}
-        <details className="text-sm">
-          <summary className="min-h-10 font-semibold">ماذا يقال في كل دقيقة ({out.timeline.segments.length} مقاطع)</summary>
-          <ol className="flex flex-col gap-1 pt-2">
-            {out.timeline.segments.map((seg) => (
-              <li key={seg.start_sec}>
-                <En className="text-xs text-muted-foreground">
-                  {mmss(seg.start_sec)}–{mmss(seg.end_sec)}
-                </En>{" "}
-                <En>{seg.what_happens_en}</En>
+      {out.stats && (
+        <Card className="flex flex-col gap-2 border-warning p-5">
+          <h3 className="font-bold">
+            لماذا يقترح تحسينها (النسخة {out.previous_version} ← {pkg.version})
+          </h3>
+          <p className="text-sm">
+            {out.stats.attempts} محاولة اختبار · نسبة النجاح {Math.round(out.stats.passRate * 100)}%
+          </p>
+          <ul className="list-disc ps-5 text-sm">
+            {weakQuestions(out.stats).map((q) => (
+              <li key={q.id}>
+                <MixedText text={q.prompt} /> · أجاب صحيحاً {Math.round(q.correctRate * 100)}%
               </li>
             ))}
-          </ol>
-        </details>
-      </Card>
+            {out.stats.lessonsNotUseful
+              .filter((l) => l.share >= 0.4)
+              .map((l) => (
+                <li key={l.lesson}>
+                  درس «<MixedText text={l.lesson} />
+                  »: {Math.round(l.share * 100)}% قالوا غير مفيد
+                </li>
+              ))}
+          </ul>
+        </Card>
+      )}
+
+      {out.video && out.timeline && (
+        <Card className="flex flex-col gap-2 p-5">
+          <h3 className="font-bold">الفيديو الذي اختاره</h3>
+          <a href={`https://www.youtube.com/watch?v=${out.video.id}`} target="_blank" rel="noopener noreferrer" className="font-semibold">
+            <En>{out.video.title}</En> · {out.video.channel} · <En>{mmss(out.video.durationSec)}</En>
+          </a>
+          {out.video.reason_ar && <p className="text-sm text-muted-foreground">لماذا: {out.video.reason_ar}</p>}
+          <details className="text-sm">
+            <summary className="min-h-10 font-semibold">ماذا يقال في كل دقيقة ({out.timeline.segments.length} مقاطع)</summary>
+            <ol className="flex flex-col gap-1 pt-2">
+              {out.timeline.segments.map((seg) => (
+                <li key={seg.start_sec}>
+                  <En className="text-xs text-muted-foreground">
+                    {mmss(seg.start_sec)}–{mmss(seg.end_sec)}
+                  </En>{" "}
+                  <En>{seg.what_happens_en}</En>
+                </li>
+              ))}
+            </ol>
+          </details>
+          {out.clip && (
+            <p className="text-sm">
+              مشهد نهاية الوحدة:{" "}
+              <a href={`https://www.youtube.com/watch?v=${out.clip.id}&t=${out.clip.start_sec}s`} target="_blank" rel="noopener noreferrer">
+                <En>{out.clip.title}</En> · {out.clip.channel} ·{" "}
+                <En>
+                  {mmss(out.clip.start_sec)}–{mmss(out.clip.end_sec)}
+                </En>
+              </a>
+            </p>
+          )}
+        </Card>
+      )}
 
       <div className="grid gap-4 lg:grid-cols-2">
         {pkg.lessons.map((lesson) => (
@@ -96,7 +140,8 @@ export function BuiltUnitReview({ output }: { output: unknown }) {
             <li key={q.id}>
               <MixedText text={q.prompt} />
               <span className="block text-xs text-success">
-                الإجابة: <En>{Array.isArray(q.answer) ? q.answer.join(" ") : typeof q.answer === "number" && q.options ? q.options[q.answer] : String(q.answer)}</En>
+                الإجابة:{" "}
+                <En>{Array.isArray(q.answer) ? q.answer.join(" ") : typeof q.answer === "number" && q.options ? q.options[q.answer] : String(q.answer)}</En>
               </span>
             </li>
           ))}

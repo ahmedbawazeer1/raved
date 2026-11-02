@@ -36,7 +36,9 @@ function harness(answers: (prompt: string) => string, validateOk = true) {
     memory: async () => [],
   };
   const tools: UnitTools = {
-    search: async () => [{ id: "abcdefghijk", title: "Shopping English", channel: "Good Channel", description: "", durationSec: 300, captions: true, views: 1000 }],
+    search: async () => [
+      { id: "abcdefghijk", title: "Shopping English", channel: "Good Channel", description: "", durationSec: 300, captions: true, views: 1000 },
+    ],
     validate: () => (validateOk ? { ok: true, errors: [] } : { ok: false, errors: [{ path: "/lessons", message: "missing" }] }),
     schema: "{}",
     example: "{}",
@@ -75,6 +77,16 @@ describe("unit builder", () => {
     const out = h.last();
     expect(out.status).toBe("needs_review");
     expect((out.output as { video: { id: string } }).video.id).toBe("abcdefghijk");
+  });
+
+  it("adds an authentic scene at the end when a suitable one is found", async () => {
+    const h = harness((p) =>
+      p.startsWith("After the lessons") ? JSON.stringify({ video_id: "abcdefghijk", start_sec: 30, end_sec: 120, reason_ar: "مشهد شراء مناسب" }) : answer(p),
+    );
+    await h.run();
+    const build = h.prompts.find((p) => p.prompt.includes("Write the complete unit package"));
+    expect(build?.prompt).toContain("مشهد من الحياة");
+    expect((h.last().output as { clip: { start_sec: number } }).clip.start_sec).toBe(30);
   });
 
   it("refuses a video the model picked that was not in the search results", async () => {

@@ -80,6 +80,7 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 - The platform builds its own content: an agent designs paths and builds units; the owner **only reviews** (approve, or reject with a note). Nothing reaches students before approval.
 - Code: `src/lib/agent/` (constitution, Gemini client, plan schema, runner), runner entry `scripts/agent/run.ts` on GitHub Actions (`.github/workflows/agent.yml`, every 30 min + manual), admin UI `/admin/agent`.
 - Tables `agent_jobs` (queue, progress, output, review) and `agent_memory` (the owner's review notes become rules added to every prompt). Admin-only RLS; results written only by the service role.
+- Unit builder: YouTube Data API search (embeddable, safe) → Gemini watches the chosen video → whole unit written around it → validated → review; optional authentic scene (film/series/real conversation) at the end + the role-play coach on the same situation. Weekly (Fridays) `scripts/agent/weekly.ts` aggregates quiz results and lesson ratings (no identities) and queues `improve_unit` proposals.
 - Gemini (free tier) receives public curriculum content only, never student data. Videos only through YouTube's embedded player; articles are never copied.
 
 ## Privacy & safety (non-negotiable)

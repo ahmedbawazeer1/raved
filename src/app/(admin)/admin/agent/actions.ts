@@ -18,7 +18,15 @@ async function queueLevel(supabase: Db, pathId: string, pathSlug: string, plan: 
   const rows = level.units.map((unit, i) => ({
     kind: "build_unit",
     path_id: pathId,
-    input: { path_slug: pathSlug, level: level.code, level_index: levelIndex, position: i + 1, unit, previous: level.units.slice(0, i).map((u) => u.title_en), plan_job: planJob },
+    input: {
+      path_slug: pathSlug,
+      level: level.code,
+      level_index: levelIndex,
+      position: i + 1,
+      unit,
+      previous: level.units.slice(0, i).map((u) => u.title_en),
+      plan_job: planJob,
+    },
   }));
   await supabase.from("agent_jobs").insert(rows);
   return rows.length;
@@ -35,7 +43,9 @@ async function ensureLevels(supabase: Db, pathId: string, plan: PathPlan) {
       continue;
     }
     position += 1;
-    await supabase.from("levels").insert({ path_id: pathId, code: level.code, title: level.title_ar, description: level.goal_ar, position, planned_units: level.units.length });
+    await supabase
+      .from("levels")
+      .insert({ path_id: pathId, code: level.code, title: level.title_ar, description: level.goal_ar, position, planned_units: level.units.length });
   }
 }
 
@@ -94,7 +104,7 @@ export async function reviewJob(_prev: AdminFormState, formData: FormData): Prom
       return { ok: true, message: `اعتمدت الخطة. بدأ الوكيل ببناء ${n} وحدة من المستوى الأول، وستصلك واحدة واحدة للمراجعة.` };
     }
   }
-  if (decision === "approved" && job.kind === "build_unit") {
+  if (decision === "approved" && (job.kind === "build_unit" || job.kind === "improve_unit")) {
     const out = job.output as { package?: unknown } | null;
     const problem = out?.package ? await publishBuiltUnit(supabase, out.package) : "لا توجد وحدة في النتيجة.";
     if (problem) return { error: `اعتُمدت، لكن تعذر نشرها: ${problem}` };

@@ -19,7 +19,13 @@ export interface BuildUnitInput {
 export function parseBuildInput(input: Record<string, unknown>): BuildUnitInput | null {
   const u = input.unit as PlanUnit | undefined;
   if (!u || typeof input.path_slug !== "string" || typeof input.level !== "string" || typeof input.position !== "number") return null;
-  return { path_slug: input.path_slug, level: input.level, position: input.position, unit: u, previous: Array.isArray(input.previous) ? (input.previous as string[]) : [] };
+  return {
+    path_slug: input.path_slug,
+    level: input.level,
+    position: input.position,
+    unit: u,
+    previous: Array.isArray(input.previous) ? (input.previous as string[]) : [],
+  };
 }
 
 export const choiceSchema = z.object({
@@ -49,7 +55,9 @@ export type Timeline = z.infer<typeof timelineSchema>;
 
 export function searchQueries(unit: PlanUnit, level: string): string[] {
   const base = unit.search_hints.slice(0, 3);
-  return base.length ? base.map((h) => (/(english|esl|lesson)/i.test(h) ? h : `${h} English lesson ${level}`)) : [`${unit.title_en} English lesson for beginners`];
+  return base.length
+    ? base.map((h) => (/(english|esl|lesson)/i.test(h) ? h : `${h} English lesson ${level}`))
+    : [`${unit.title_en} English lesson for beginners`];
 }
 
 export function chooseVideoPrompt(input: BuildUnitInput, candidates: VideoCandidate[]): string {
@@ -72,7 +80,13 @@ Return JSON: {"summary_en": "...", "duration_sec": 0, "segments": [{"start_sec":
 "key_sentences": ["..."]}], "words": ["..."], "suitable": true, "concerns_ar": ""}`;
 }
 
-export function buildUnitPrompt(input: BuildUnitInput, video: { id: string; title: string; channel: string; channelUrl?: string }, timeline: Timeline, schema: string, example: string): string {
+export function buildUnitPrompt(
+  input: BuildUnitInput,
+  video: { id: string; title: string; channel: string; channelUrl?: string },
+  timeline: Timeline,
+  schema: string,
+  example: string,
+): string {
   return `Write the complete unit package for Raved.
 Path "${input.path_slug}", level "${input.level}", position ${input.position}, code "${input.unit.code}".
 Unit plan: ${JSON.stringify(input.unit)}
@@ -105,4 +119,53 @@ A short example of a valid package (format only, not content):
 ${example}
 
 Return only the package JSON.`;
+}
+
+/** Choosing an authentic scene (film, series, real-life video) for the end of the unit: optional. */
+export const clipChoiceSchema = z.object({
+  video_id: z
+    .string()
+    .regex(/^[A-Za-z0-9_-]{11}$/)
+    .nullable(),
+  start_sec: z.number().int().min(0).optional(),
+  end_sec: z.number().int().min(1).optional(),
+  reason_ar: z.string().max(400),
+});
+
+export function clipQueries(unit: PlanUnit): string[] {
+  const topic = unit.search_hints[0] ?? unit.title_en;
+  return [`${topic} scene movie clip`, `${topic} real conversation English`];
+}
+
+export function chooseClipPrompt(input: BuildUnitInput, candidates: VideoCandidate[]): string {
+  return `After the lessons, students watch ONE short authentic scene (an official film or series clip, or a real-life
+conversation) that shows the unit's situation «${input.unit.title_en}» (${input.unit.situation_ar}) with the same language
+(${input.unit.grammar}; ${input.unit.vocab_domain}). It must be fully suitable for Yemeni secondary students (no romance,
+alcohol, immodest images, violence, swearing or mocking religion). Pick a part of 30–120 seconds. If none is suitable, return
+"video_id": null.
+Candidates:
+${candidates.map((c) => `- id ${c.id}: «${c.title}» by ${c.channel}, ${Math.round(c.durationSec / 60)} min. ${c.description.replace(/\s+/g, " ").slice(0, 140)}`).join("\n")}
+Return JSON: {"video_id": "<id or null>", "start_sec": 0, "end_sec": 0, "reason_ar": "<why, in Arabic>"}`;
+}
+
+export interface ClipChoice {
+  id: string;
+  title: string;
+  channel: string;
+  start_sec: number;
+  end_sec: number;
+  timeline: Timeline;
+}
+
+/** Extra instructions for the unit package when an authentic scene was found. */
+export function clipInstructions(clip: ClipChoice): string {
+  return `
+Authentic scene for the end of the unit (after the review lesson): YouTube id ${clip.id}, «${clip.title}» by ${clip.channel},
+from ${clip.start_sec}s to ${clip.end_sec}s. What happens:
+${clip.timeline.segments.map((s) => `[${s.start_sec}-${s.end_sec}s] ${s.what_happens_en} | ${s.key_sentences.join(" / ")}`).join("\n")}
+Add one more lesson at the end titled «مشهد من الحياة» (skill "listening") with: a video block for this scene (youtube_id
+"${clip.id}", start_sec ${clip.start_sec}, end_sec ${clip.end_sec}, duration_sec ${clip.end_sec - clip.start_sec},
+optional: true, 2 checkpoints), a short Arabic text block about what to notice, and 3–4 exercises on what was said.
+Set the unit "roleplay" to the same situation at the unit's Hadramout stop: the Hadrami character the student talks to
+afterwards plays the other person of this scene.`;
 }

@@ -74,14 +74,15 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
   const cand = data.candidates?.[0];
   const text = (cand?.content?.parts ?? []).map((p) => p.text ?? "").join("");
   if (!text) throw new GeminiError("bad_response", `empty answer (${cand?.finishReason ?? "no candidate"})`);
-  const sources = (cand?.groundingMetadata?.groundingChunks ?? [])
-    .map((c) => ({ title: c.web?.title ?? "", url: c.web?.uri ?? "" }))
-    .filter((s) => s.url);
+  const sources = (cand?.groundingMetadata?.groundingChunks ?? []).map((c) => ({ title: c.web?.title ?? "", url: c.web?.uri ?? "" })).filter((s) => s.url);
   return { text, model, sources };
 }
 
 /** Reads a JSON answer, tolerating ```json fences around it. */
 export function parseJsonAnswer(text: string): unknown {
-  const trimmed = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  const trimmed = text
+    .trim()
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/\s*```$/, "");
   return JSON.parse(trimmed);
 }
