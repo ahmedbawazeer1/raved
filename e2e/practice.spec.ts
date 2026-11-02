@@ -1,10 +1,15 @@
 import { expect, test } from "@playwright/test";
-import { login } from "./fixtures";
+import { login, openLessonStep } from "./fixtures";
 
 // CI runs the app with RAVED_AI_FAKE=1: deterministic AI answers, no provider calls.
 test("writing: draft survives a reload, then it is corrected with numbered errors", async ({ page }) => {
   await login(page);
   await page.getByRole("link", { name: "ابدأ جلسة اليوم" }).click();
+  // The task is a later step of the lesson: solve the exercise first.
+  await openLessonStep(page, "التمارين");
+  await page.getByRole("radio", { name: "are" }).click();
+  await page.getByRole("button", { name: "تحقق من الإجابة" }).click();
+  await openLessonStep(page, "المهمة");
   await page.getByRole("link", { name: "اكتب واحصل على تصحيح" }).click();
   await expect(page).toHaveURL(/\/student\/practice\/writing\//);
 

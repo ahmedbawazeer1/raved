@@ -104,7 +104,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
         <div className="flex flex-col items-center gap-2 py-3 text-center motion-safe:animate-[rise-in_.4s]">
           <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood="happy" wave size={84} />
           <p className="text-lg font-bold">{mode === "review" ? "راجعت كل أخطائك 🎉" : "أنهيت كل التمارين 🎉"}</p>
-          <p className="text-sm text-muted-foreground">{mode === "review" ? "الأخطاء التي صحّحتها خرجت من القائمة." : "أكمل بقية الدرس بالأسفل."}</p>
+          <p className="text-sm text-muted-foreground">{mode === "review" ? "الأخطاء التي صحّحتها خرجت من القائمة." : "اضغط «التالي» لتكمل الدرس."}</p>
           <Button
             type="button"
             variant="secondary"

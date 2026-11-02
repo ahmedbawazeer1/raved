@@ -20,3 +20,14 @@ export async function login(page: Page, account: { email: string; password: stri
   await page.getByRole("button", { name: "تسجيل الدخول" }).click();
   await expect(page).toHaveURL(home);
 }
+
+/** In a lesson: presses «التالي» until the step called `title` is open. */
+export async function openLessonStep(page: Page, title: string) {
+  for (let i = 0; i < 10; i++) {
+    const next = page.getByRole("button", { name: /^التالي: / });
+    const label = (await next.textContent())?.trim() ?? "";
+    await next.click();
+    if (label.includes(title)) return;
+  }
+  throw new Error(`lesson step not found: ${title}`);
+}
