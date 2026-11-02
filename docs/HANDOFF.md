@@ -65,6 +65,11 @@ The artifact links are private to the owner; Claude Code cannot open them. Use t
 - Everything is mandatory and in order; the episode video must be watched (80%) by everyone, even on weak bundles (owner chose this knowing the data cost of 30–66MB per episode).
 - The platform must not be boring: activities, games and gamification in 3 phases (see CLAUDE.md «Gamification»).
 
+## 6c. Redesign (2026-11-02)
+- Owner approved the second UI prototype and asked to apply it with my suggestions. Rule: **platform first, content later**.
+- Plan: (1) home map + companion (Hamza/Reem) + HUD + effects setting, (2) video-first lesson player with surprise questions, (3) step-by-step exercises with feedback and celebration, (4) guardian battle, stamp album, wardrobe, shareable stamp, (5) polish.
+- Surprise questions tied to the moment in the video need time-coded questions per video; until content has them, the player asks about the unit words (as today). An admin tool to add them while watching is planned.
+
 ## 7. Working style the owner expects
 - Reply in simple Arabic, step by step, click-by-click for any dashboard action.
 - One phase per session and per PR; give phone test steps (including airplane mode from phase 3).

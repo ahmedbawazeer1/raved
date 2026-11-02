@@ -21,7 +21,7 @@ export function StudentNav({ learnHref }: { learnHref: string }) {
     <>
       <nav
         aria-label="التنقل الرئيسي"
-        className="fixed inset-x-0 bottom-0 z-20 flex h-[68px] justify-around border-t border-border bg-card pb-[env(safe-area-inset-bottom)] md:hidden"
+        className="fixed inset-x-2.5 bottom-[max(10px,env(safe-area-inset-bottom))] z-20 flex h-[64px] justify-around rounded-3xl border border-border bg-card/85 shadow-[0_10px_30px_-12px_rgba(0,0,0,.35)] backdrop-blur-md md:hidden"
       >
         {tabs.map(({ href, label, icon: Icon, match }) => {
           const active = match(pathname);
@@ -31,11 +31,11 @@ export function StudentNav({ learnHref }: { learnHref: string }) {
               href={href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "flex min-h-12 min-w-[60px] flex-col items-center justify-center gap-0.5 text-[11px] font-semibold no-underline",
-                active ? "text-primary" : "text-muted-foreground hover:text-foreground",
+                "relative flex min-h-12 min-w-[60px] flex-col items-center justify-center gap-0.5 text-[11px] font-semibold no-underline",
+                active ? "text-primary after:absolute after:bottom-1 after:size-1.5 after:rounded-full after:bg-current" : "text-muted-foreground hover:text-foreground",
               )}
             >
-              <Icon className="size-6" aria-hidden="true" />
+              <Icon className={cn("size-6 transition-transform", active && "-translate-y-0.5 scale-110")} strokeWidth={active ? 2.4 : 2} aria-hidden="true" />
               {label}
             </Link>
           );

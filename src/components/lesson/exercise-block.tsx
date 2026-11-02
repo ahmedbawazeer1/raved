@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { MixedText } from "@/components/mixed-text";
 import { checkAnswer, shuffleWords } from "@/lib/content/check-answer";
 import { markSolved, solvedStore } from "@/lib/gamification/events";
+import { fx } from "@/lib/fx";
 import type { PackageQuestion } from "@/lib/content/types";
 import { QuestionInput, isAnswered, type Answer } from "./question-input";
 
@@ -52,6 +53,7 @@ export function ExerciseBlock({ exercise }: { exercise: PackageQuestion }) {
         <Button type="button" disabled={!isAnswered(value)} onClick={() => {
             const right = checkAnswer(exercise, value);
             setResult(right ? "right" : "wrong");
+            fx(right ? "ok" : "bad");
             if (right) markSolved(exercise.id);
           }}>
           تحقق من الإجابة

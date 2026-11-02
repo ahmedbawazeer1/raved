@@ -98,3 +98,165 @@
     transform: translateX(6px) rotate(4deg);
   }
 }
+
+/* Illustrated art (journey map, companions). Motion stops when the student prefers less motion. */
+.art-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: art-blink 4.5s infinite;
+}
+.art-wave {
+  transform-origin: 88px 120px;
+  animation: art-wave-arm 0.7s ease-in-out infinite alternate;
+}
+.art-talking .art-mouth {
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: art-talk 0.17s infinite alternate;
+}
+.art-pulse {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: art-pulse 2s ease-out infinite;
+}
+.art-ping {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: art-ping 2.4s ease-out infinite;
+}
+.art-bob {
+  animation: art-bob 2.6s ease-in-out infinite;
+}
+.art-drift {
+  animation: art-drift 14s ease-in-out infinite alternate;
+}
+.art-sea-waves {
+  animation: art-waves 5s linear infinite;
+}
+.art-rock {
+  transform-box: fill-box;
+  transform-origin: 50% 90%;
+  animation: art-rock 3.4s ease-in-out infinite;
+}
+.art-fly {
+  animation: art-fly 9s ease-in-out infinite;
+}
+.art-flap {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: art-flap 0.5s ease-in-out infinite alternate;
+}
+.art-buzz {
+  animation: art-buzz 2.2s linear infinite;
+}
+.art-stop .art-press {
+  transition: transform 0.12s;
+}
+.art-stop:active .art-press {
+  transform: translateY(5px);
+}
+.art-stop:focus-visible {
+  outline: none;
+}
+.art-stop:focus-visible circle:nth-of-type(2) {
+  stroke: var(--color-accent);
+  stroke-width: 4;
+}
+@keyframes art-blink {
+  0%,
+  93%,
+  100% {
+    transform: scaleY(1);
+  }
+  96% {
+    transform: scaleY(0.08);
+  }
+}
+@keyframes art-wave-arm {
+  from {
+    transform: rotate(-12deg);
+  }
+  to {
+    transform: rotate(14deg);
+  }
+}
+@keyframes art-talk {
+  to {
+    transform: scaleY(2.4);
+  }
+}
+@keyframes art-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+@keyframes art-ping {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes art-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes art-drift {
+  to {
+    transform: translateX(26px);
+  }
+}
+@keyframes art-waves {
+  to {
+    transform: translateX(-56px);
+  }
+}
+@keyframes art-rock {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+@keyframes art-fly {
+  50% {
+    transform: translate(40px, -14px);
+  }
+}
+@keyframes art-flap {
+  to {
+    transform: scaleY(0.4);
+  }
+}
+@keyframes art-buzz {
+  25% {
+    transform: translate(8px, -6px);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+  75% {
+    transform: translate(-8px, -4px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [class*="art-"],
+  [class*="art-"] * {
+    animation: none !important;
+  }
+}
