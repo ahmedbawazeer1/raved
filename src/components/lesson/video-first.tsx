@@ -20,7 +20,7 @@ export function VideoFirst({ done: initialDone, children }: { done: boolean; chi
   return (
     <div className="flex flex-col items-center gap-2 rounded-3xl border-2 border-dashed border-border bg-card/60 px-4 py-6 text-center">
       <div className="relative">
-        <Companion who={prefs.companion} mood="think" size={60} />
+        <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood="think" size={60} />
         <span className="absolute -end-2 bottom-2 flex size-7 items-center justify-center rounded-full bg-muted text-subtle">
           <Lock className="size-4" aria-hidden="true" />
         </span>

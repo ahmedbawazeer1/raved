@@ -24,7 +24,10 @@ describe("watched seconds", () => {
 
   it("handles seconds before existing ranges", () => {
     const r = addSecond(addSecond([[10, 20]], 3), 9);
-    expect(r).toEqual([[3, 4], [9, 20]]);
+    expect(r).toEqual([
+      [3, 4],
+      [9, 20],
+    ]);
   });
 
   it("applies the 80% rule like the server", () => {

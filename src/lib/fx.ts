@@ -3,15 +3,18 @@
  * device preferences (effects on/off, chosen companion). Preferences live in localStorage, with an
  * in-memory fallback, and are read with useSyncExternalStore (see usePrefs).
  */
-import type { CompanionId } from "@/lib/art/companion";
+import type { CompanionId, Headwear } from "@/lib/art/companion";
 
 export interface Prefs {
   effects: boolean;
   companion: CompanionId;
+  /** Hamza's headwear and Reem's hijab colour (see src/lib/art/wardrobe.ts). */
+  headwear: Headwear;
+  hijab: string;
 }
 
 const KEY = "raved:prefs";
-const DEFAULTS: Prefs = { effects: true, companion: "hamza" };
+const DEFAULTS: Prefs = { effects: true, companion: "hamza", headwear: "kufi", hijab: "plum" };
 let memory: Prefs | null = null;
 let cachedRaw: string | null | undefined;
 let cached: Prefs = DEFAULTS;
@@ -32,6 +35,8 @@ export function parsePrefs(raw: string | null): Prefs {
     return {
       effects: typeof p.effects === "boolean" ? p.effects : DEFAULTS.effects,
       companion: p.companion === "reem" ? "reem" : "hamza",
+      headwear: p.headwear === "emama" || p.headwear === "none" ? p.headwear : DEFAULTS.headwear,
+      hijab: typeof p.hijab === "string" ? p.hijab : DEFAULTS.hijab,
     };
   } catch {
     return DEFAULTS;

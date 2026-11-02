@@ -21,6 +21,9 @@ export const ART_DEFS = `
 <linearGradient id="art-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE38F"/><stop offset=".55" stop-color="#F5A524"/><stop offset="1" stop-color="#C98210"/></linearGradient>
 <linearGradient id="art-flame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC078"/><stop offset=".5" stop-color="#FF7A1A"/><stop offset="1" stop-color="#E03131"/></linearGradient>
 <linearGradient id="art-wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C08A52"/><stop offset="1" stop-color="#7A4E2A"/></linearGradient>
+<radialGradient id="art-leo" cx=".45" cy=".35" r=".75"><stop offset="0" stop-color="#FCD98A"/><stop offset="1" stop-color="#D98A2B"/></radialGradient>
+<linearGradient id="art-dusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B2A5C"/><stop offset=".45" stop-color="#8E4A73"/><stop offset=".78" stop-color="#F28C5B"/><stop offset="1" stop-color="#FFC27A"/></linearGradient>
+<filter id="art-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <pattern id="art-emama" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#E8590C"/><rect width="9" height="3" fill="#B02A1A" opacity=".75"/><rect width="3" height="9" fill="#FFC94D" opacity=".6"/></pattern>
 <filter id="art-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="3" stdDeviation="2.4" flood-color="#000" flood-opacity=".28"/></filter>
 <filter id="art-gray"><feColorMatrix type="saturate" values=".05"/><feComponentTransfer><feFuncA type="linear" slope=".7"/></feComponentTransfer></filter>

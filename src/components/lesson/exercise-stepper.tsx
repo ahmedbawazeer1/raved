@@ -102,7 +102,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
 
       {finished ? (
         <div className="flex flex-col items-center gap-2 py-3 text-center motion-safe:animate-[rise-in_.4s]">
-          <Companion who={prefs.companion} mood="happy" wave size={84} />
+          <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood="happy" wave size={84} />
           <p className="text-lg font-bold">{mode === "review" ? "راجعت كل أخطائك 🎉" : "أنهيت كل التمارين 🎉"}</p>
           <p className="text-sm text-muted-foreground">{mode === "review" ? "الأخطاء التي صحّحتها خرجت من القائمة." : "أكمل بقية الدرس بالأسفل."}</p>
           <Button
@@ -143,7 +143,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
                 result === "right" ? "bg-success-tint" : "bg-destructive-tint",
               )}
             >
-              <Companion who={prefs.companion} mood={result === "right" ? "happy" : "sad"} size={40} />
+              <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood={result === "right" ? "happy" : "sad"} size={40} />
               <div className="min-w-0 flex-1">
                 <p className={cn("flex items-center gap-1.5 font-bold", result === "right" ? "text-success" : "text-destructive")}>
                   {result === "right" ? <CheckCircle2 className="size-4" aria-hidden="true" /> : <XCircle className="size-4" aria-hidden="true" />}

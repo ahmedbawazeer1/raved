@@ -12,6 +12,14 @@ export const COMPANIONS: { id: CompanionId; name: string }[] = [
   { id: "reem", name: "ريم" },
 ];
 
+/** Reem's hijab colours (unlocked with stamps, see WARDROBE). */
+export const HIJABS: Record<string, [string, string]> = {
+  plum: ["#5B3A6E", "#4A2D5B"],
+  teal: ["#0E6E5C", "#0A5446"],
+  navy: ["#26355E", "#1B2747"],
+  rose: ["#9C3D5A", "#7D2E47"],
+};
+
 export interface CompanionOptions {
   who?: CompanionId;
   mood?: Mood;
@@ -21,6 +29,8 @@ export interface CompanionOptions {
   headwear?: Headwear;
   /** The older market seller used in scenes. */
   seller?: boolean;
+  /** Reem's hijab colour (a key of HIJABS). */
+  hijab?: string;
 }
 
 const BROWS: Record<Mood, string> = {
@@ -77,20 +87,28 @@ function hands(skin: string, wave: boolean, sleeve: string): string {
 }
 
 /** Inner SVG markup for a companion in a 120×160 viewBox. */
-export function companionMarkup({ who = "hamza", mood = "idle", wave = false, headwear = "kufi", seller = false }: CompanionOptions = {}): string {
+export function companionMarkup({
+  who = "hamza",
+  mood = "idle",
+  wave = false,
+  headwear = "kufi",
+  seller = false,
+  hijab = "plum",
+}: CompanionOptions = {}): string {
   const shadow = '<ellipse cx="60" cy="156" rx="32" ry="5" fill="#000" opacity=".16"/>';
   if (who === "reem" && !seller) {
     const skin = "url(#art-skin-reem)";
+    const [scarf, inner] = HIJABS[hijab] ?? HIJABS.plum;
     return `${shadow}
 <path d="M26 160 C26 122 40 106 60 106 C80 106 94 122 94 160Z" fill="#0E6E5C"/>
 <path d="M44 108 Q60 122 76 108 L80 160 H40Z" fill="#0A5446"/><path d="M46 126 Q60 134 74 126" stroke="#F5A524" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
 ${hands(skin, wave, "#0E6E5C")}
-<path d="M23 72 Q20 22 60 20 Q100 22 97 72 Q99 106 86 118 L34 118 Q21 106 23 72Z" fill="#5B3A6E"/>
-<path d="M30 70 Q28 30 60 29 Q92 30 90 70" fill="#4A2D5B"/>
+<path d="M23 72 Q20 22 60 20 Q100 22 97 72 Q99 106 86 118 L34 118 Q21 106 23 72Z" fill="${scarf}"/>
+<path d="M30 70 Q28 30 60 29 Q92 30 90 70" fill="${inner}"/>
 <ellipse cx="60" cy="68" rx="25" ry="28" fill="${skin}"/>
-<path d="M35 62 Q36 37 60 36 Q84 37 85 62 Q80 46 60 45 Q40 46 35 62Z" fill="#4A2D5B"/>
+<path d="M35 62 Q36 37 60 36 Q84 37 85 62 Q80 46 60 45 Q40 46 35 62Z" fill="${inner}"/>
 ${face(mood, skin, "#B5764A", "#3B2410")}
-<path d="M36 90 Q60 112 84 90 L90 114 Q60 128 30 114Z" fill="#5B3A6E"/><circle cx="80" cy="104" r="3.2" fill="#F5A524" stroke="#fff" stroke-width="1"/>`;
+<path d="M36 90 Q60 112 84 90 L90 114 Q60 128 30 114Z" fill="${scarf}"/><circle cx="80" cy="104" r="3.2" fill="#F5A524" stroke="#fff" stroke-width="1"/>`;
   }
   const skin = seller ? "url(#art-skin-seller)" : "url(#art-skin-hamza)";
   const dark = seller ? "#8A5230" : "#B5764A";

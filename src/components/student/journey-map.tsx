@@ -6,6 +6,7 @@ import { Volume2, X } from "lucide-react";
 import { En } from "@/components/en";
 import { companionMarkup } from "@/lib/art/companion";
 import { journeyLayout, landmarks, roadPath, sceneryMarkup, stopIcon, type Landmark } from "@/lib/art/journey";
+import { confetti } from "@/lib/confetti";
 import { fx, prefsStore } from "@/lib/fx";
 import type { UnitView } from "@/lib/student/progress";
 import { speak } from "@/lib/tts";
@@ -43,6 +44,30 @@ const foundStore = {
       // storage unavailable: kept for this visit
     }
     foundListeners.forEach((f) => f());
+  },
+};
+
+/** Stamps already celebrated on this device, per map (to play the «fog lifts» moment once). */
+const seenListeners = new Set<() => void>();
+const seenStore = {
+  subscribe(l: () => void) {
+    seenListeners.add(l);
+    return () => seenListeners.delete(l);
+  },
+  get(key: string): string | null {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return "skip";
+    }
+  },
+  set(key: string, value: number) {
+    try {
+      localStorage.setItem(key, String(value));
+    } catch {
+      // storage unavailable: no celebration
+    }
+    seenListeners.forEach((f) => f());
   },
 };
 
@@ -170,6 +195,24 @@ export function JourneyMap({ units, pathSlug }: { units: UnitView[]; pathSlug: s
 
   const companion = units[focus] && units[focus].state !== "locked" ? layout.stops[focus] : null;
 
+  // A new stamp since the last visit: the fog lifts over the next stop.
+  const seenKey = `raved:seen-stamps:${units[0]?.id ?? "none"}`;
+  const seenRaw = useSyncExternalStore(
+    seenStore.subscribe,
+    () => seenStore.get(seenKey),
+    () => "skip",
+  );
+  const celebrate = seenRaw !== null && seenRaw !== "skip" && stamps > Number(seenRaw);
+  useEffect(() => {
+    if (seenRaw === null)
+      seenStore.set(seenKey, stamps); // first visit: nothing to celebrate
+    else if (celebrate) {
+      confetti(140);
+      fx("coin");
+    }
+  }, [seenRaw, seenKey, stamps, celebrate]);
+  const newStop = units[nowIndex]?.stop ?? (units[nowIndex] ? `الوحدة ${units[nowIndex].position}` : null);
+
   return (
     <section aria-labelledby="journey-title" className="flex flex-col gap-2">
       <div className="flex items-center justify-between gap-2">
@@ -282,6 +325,36 @@ export function JourneyMap({ units, pathSlug }: { units: UnitView[]; pathSlug: s
             })}
           </div>
         </div>
+        {celebrate && (
+          <div
+            role="dialog"
+            aria-label="محطة جديدة"
+            className="absolute inset-0 flex items-center justify-center rounded-3xl bg-black/35 p-4 backdrop-blur-[2px]"
+          >
+            <div className="flex w-full max-w-xs flex-col items-center gap-2 rounded-3xl bg-card p-5 text-center shadow-xl motion-safe:animate-[pop-in_.45s_cubic-bezier(.3,1.5,.5,1)]">
+              <svg
+                width="96"
+                height="128"
+                viewBox="0 0 120 160"
+                aria-hidden="true"
+                dangerouslySetInnerHTML={{
+                  __html: companionMarkup({ who: prefs.companion, headwear: prefs.headwear, hijab: prefs.hijab, mood: "happy", wave: true }),
+                }}
+              />
+              <p className="text-lg font-bold">انقشع الضباب! 🌤️</p>
+              <p className="text-sm text-muted-foreground">
+                {newStop ? `محطتك الجديدة: ${newStop}. أخذت طابعاً جديداً لألبومك.` : "أنهيت كل محطات هذا المستوى! 🏆"}
+              </p>
+              <button
+                type="button"
+                onClick={() => seenStore.set(seenKey, stamps)}
+                className="mt-1 flex min-h-12 w-full items-center justify-center rounded-2xl bg-accent font-bold text-accent-foreground shadow-[0_5px_0_#C98210] active:translate-y-[5px] active:shadow-none"
+              >
+                هيا نكمل الرحلة
+              </button>
+            </div>
+          </div>
+        )}
         {word && (
           <div
             role="status"
