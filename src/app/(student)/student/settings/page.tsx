@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Award, Bell, ChevronLeft, Download, LineChart, Route } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ExperienceForm } from "@/components/student/experience-form";
 import { DeleteAccountForm, PasswordForm, ProfileForm, StudyForm } from "@/components/student/settings-forms";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { gradeLabel } from "@/lib/yemen";
@@ -56,6 +57,8 @@ export default async function SettingsPage() {
           </Link>
         ))}
       </Card>
+
+      <ExperienceForm />
 
       <Card className="p-5">
         <h2 className="mb-3 font-bold">دراستي</h2>

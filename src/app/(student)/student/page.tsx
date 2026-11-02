@@ -1,25 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Bell, CheckCircle2, Circle, Layers, PlayCircle, Target } from "lucide-react";
+import { Bell, Layers, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
-import { MixedText } from "@/components/mixed-text";
+import { CompanionGreeting } from "@/components/art/companion-greeting";
+import { Hud } from "@/components/student/hud";
+import { JourneyMap } from "@/components/student/journey-map";
 import { ProgressBar } from "@/components/student/progress-bar";
-import { XpBar } from "@/components/student/xp-bar";
 import { getXpRows } from "@/lib/gamification/queries";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { parseFeatures } from "@/lib/paths/features";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
 import { nextStep } from "@/lib/student/progress";
+import { streakDays } from "@/lib/student/stats";
 import { createClient } from "@/lib/supabase/server";
 import { getVocabDeck } from "@/lib/vocab/queries";
 
 export const metadata: Metadata = { title: "اليوم" };
 
 function greeting(): string {
-  const hour = Number(new Intl.DateTimeFormat("en-GB", { hour: "numeric", hour12: false, timeZone: "Asia/Aden" }).format(new Date()));
+  const hour = Number(
+    new Intl.DateTimeFormat("en-GB", {
+      hour: "numeric",
+      hour12: false,
+      timeZone: "Asia/Aden",
+    }).format(new Date()),
+  );
   return hour < 12 ? "صباح الخير" : "مساء الخير";
 }
 
@@ -29,14 +37,10 @@ export default async function TodayPage() {
   const curriculum = path ? await getCurriculum(userId, path.id) : null;
   const step = curriculum ? nextStep(curriculum.units, curriculum) : { kind: "empty" as const };
   const supabase = await createClient();
-  const { count: unread } = await supabase
-    .from("notifications")
-    .select("id", { count: "exact", head: true })
-    .eq("student_id", userId)
-    .is("read_at", null);
+  const { count: unread } = await supabase.from("notifications").select("id", { count: "exact", head: true }).eq("student_id", userId).is("read_at", null);
 
   const features = parseFeatures(path?.features);
-  const [{ data: placement }, deck, xpRows] = await Promise.all([
+  const [{ data: placement }, deck, xpRows, activity] = await Promise.all([
     path && features.placement
       ? supabase
           .from("placement_attempts")
@@ -49,62 +53,59 @@ export default async function TodayPage() {
       : Promise.resolve({ data: null }),
     path && features.vocab ? getVocabDeck(userId, path.id) : Promise.resolve(null),
     getXpRows(userId),
+    Promise.all([
+      supabase.from("lesson_progress").select("completed_at").eq("student_id", userId).eq("status", "completed"),
+      supabase.from("quiz_attempts").select("created_at").eq("student_id", userId),
+      supabase.from("vocab_reviews").select("last_reviewed_at").eq("student_id", userId),
+    ]),
+  ]);
+  const [lessonDays, quizDays, vocabDays] = activity;
+  const streak = streakDays([
+    ...(lessonDays.data ?? []).map((r) => r.completed_at),
+    ...(quizDays.data ?? []).map((r) => r.created_at),
+    ...(vocabDays.data ?? []).map((r) => r.last_reviewed_at),
   ]);
   const xp = xpRows.reduce((sum, r) => sum + r.points, 0);
   const placementCard = path && features.placement && placement?.status !== "completed";
   const vocabToday = deck ? deck.cards.length : 0;
 
   const unit = step.kind === "lesson" || step.kind === "quiz" ? step.unit : null;
-  const lessons = unit ? [...unit.lessons].sort((a, b) => a.position - b.position) : [];
+  const lessons = unit ? unit.lessons : [];
   const done = unit ? unit.lessonsDone : 0;
-  const href =
-    step.kind === "lesson" ? `/student/learn/${step.lessonId}` : step.kind === "quiz" ? `/student/quiz/${step.quizId}` : null;
+  const levelCode = unit?.levelCode ?? curriculum?.units.at(-1)?.levelCode;
+  const mapUnits = curriculum ? curriculum.units.filter((u) => u.levelCode === levelCode) : [];
+  const first = profile.full_name.split(" ")[0];
+  const bubble =
+    step.kind === "lesson" || step.kind === "quiz"
+      ? `${greeting()} يا ${first}! محطتك اليوم: ${unit?.stop ?? `الوحدة ${unit?.position}`}. ${step.kind === "quiz" ? "الحارس في انتظارك ⚔️" : "يلا نكمل الرحلة 🚀"}`
+      : `${greeting()} يا ${first}!`;
+  const href = step.kind === "lesson" ? `/student/learn/${step.lessonId}` : step.kind === "quiz" ? `/student/quiz/${step.quizId}` : null;
 
   return (
     <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
-      <header className="flex items-center justify-between">
-        <div>
-          <p className="text-sm text-muted-foreground">{greeting()}</p>
-          <h1 className="text-2xl font-bold">{profile.full_name.split(" ")[0]}</h1>
+      <header className="flex items-center gap-2">
+        <h1 className="sr-only">اليوم</h1>
+        <div className="min-w-0 flex-1">
+          <Hud streak={streak} xp={xp} />
         </div>
         <Link
           href="/student/notifications"
           aria-label={unread ? `الإشعارات، ${unread} جديدة` : "الإشعارات"}
-          className="relative flex size-11 items-center justify-center rounded-full bg-card text-foreground"
+          className="relative flex size-11 flex-none items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm"
         >
           <Bell className="size-5" aria-hidden="true" />
           {Boolean(unread) && <span className="absolute end-2 top-2 size-2.5 rounded-full bg-accent" />}
         </Link>
       </header>
 
-      <XpBar xp={xp} />
-      <nav aria-label="تحديات" className="grid grid-cols-3 gap-2">
-        {[
-          { href: "/student/league", icon: "🏆", label: "الدوري" },
-          { href: "/student/duel", icon: "⚔️", label: "تحدي صديق" },
-          { href: "/student/practice/games", icon: "🎮", label: "الألعاب" },
-        ].map((l) => (
-          <Link
-            key={l.href}
-            href={l.href}
-            className="flex min-h-16 flex-col items-center justify-center gap-0.5 rounded-2xl border border-border bg-card text-sm font-semibold text-foreground no-underline hover:border-primary hover:text-foreground"
-          >
-            <span className="text-xl" aria-hidden="true">
-              {l.icon}
-            </span>
-            {l.label}
-          </Link>
-        ))}
-      </nav>
+      <CompanionGreeting>{bubble}</CompanionGreeting>
 
       {placementCard && (
         <Card className="flex items-center gap-3 border-accent p-4">
           <Target className="size-8 flex-none text-accent" aria-hidden="true" />
           <div className="flex-1">
             <p className="font-bold">{placement ? "أكمل اختبار المستوى" : "حدّد مستواك أولاً"}</p>
-            <p className="text-[13px] text-muted-foreground">
-              {placement ? "تكمل من نفس السؤال." : "20 دقيقة تقريباً، لتبدأ من الوحدة المناسبة لك."}
-            </p>
+            <p className="text-[13px] text-muted-foreground">{placement ? "تكمل من نفس السؤال." : "20 دقيقة تقريباً، لتبدأ من الوحدة المناسبة لك."}</p>
           </div>
           <Button asChild size="sm" variant="accent">
             <Link href="/placement">{placement ? "أكمل" : "ابدأ"}</Link>
@@ -127,62 +128,43 @@ export default async function TodayPage() {
       )}
 
       {unit && href && (
-        <>
-          <section className="flex flex-col gap-3 rounded-2xl bg-primary p-5 text-white">
-            <p className="text-sm text-primary-tint">
-              جلسة اليوم · {profile.daily_goal_minutes} دقيقة
-            </p>
-            <h2 className="text-xl font-bold">
-              الوحدة {unit.position}: <En>{unit.title}</En>
-            </h2>
-            <div className="flex items-center gap-3 [&_[role=progressbar]]:bg-white/25 [&_[role=progressbar]>span]:bg-accent">
-              <ProgressBar value={done} max={lessons.length} label="تقدم الوحدة" />
-              <span className="text-sm text-primary-tint">
-                {done} من {lessons.length}
-              </span>
-            </div>
-            <Button asChild variant="accent" size="lg">
-              <Link href={href}>{done === 0 ? "ابدأ جلسة اليوم" : "أكمل جلسة اليوم"}</Link>
-            </Button>
-          </section>
-
-          <Card className="px-4 py-1.5">
-            {lessons.map((l) => {
-              const isDone = curriculum!.completedLessonIds.has(l.id);
-              const isNow = step.kind === "lesson" && step.lessonId === l.id;
-              return (
-                <Link
-                  key={l.id}
-                  href={`/student/learn/${l.id}`}
-                  className="flex min-h-12 items-center gap-3 border-b border-muted py-2.5 text-sm text-foreground no-underline last:border-b-0 hover:text-foreground"
-                >
-                  {isDone ? (
-                    <CheckCircle2 className="size-5 text-success" aria-label="مكتمل" />
-                  ) : isNow ? (
-                    <PlayCircle className="size-5 text-primary" aria-label="الآن" />
-                  ) : (
-                    <Circle className="size-5 text-[#9AA8A4]" aria-hidden="true" />
-                  )}
-                  <span className={`flex-1 ${isDone ? "text-muted-foreground" : isNow ? "font-semibold" : ""}`}>
-                    <MixedText text={l.title} />
-                  </span>
-                  {isNow && <Badge>الآن</Badge>}
-                </Link>
-              );
-            })}
-            {unit.quizId && (
-              <Link
-                href={`/student/quiz/${unit.quizId}`}
-                className="flex min-h-12 items-center gap-3 py-2.5 text-sm text-foreground no-underline hover:text-foreground"
-              >
-                {step.kind === "quiz" ? <PlayCircle className="size-5 text-primary" aria-label="الآن" /> : <Circle className="size-5 text-[#9AA8A4]" aria-hidden="true" />}
-                <span className={`flex-1 ${step.kind === "quiz" ? "font-semibold" : ""}`}>اختبار الوحدة</span>
-                {step.kind === "quiz" && <Badge>الآن</Badge>}
-              </Link>
-            )}
-          </Card>
-        </>
+        <section className="relative flex flex-col gap-3 overflow-hidden rounded-3xl bg-[radial-gradient(120%_90%_at_85%_0%,#18A383_0%,#0E6E5C_45%,#08392F_100%)] p-5 text-white">
+          <p className="text-sm text-primary-tint">جلسة اليوم · {profile.daily_goal_minutes} دقيقة</p>
+          <h2 className="text-xl font-bold">
+            {unit.stop ? `${unit.stop} · ` : ""}الوحدة {unit.position}: <En>{unit.title}</En>
+          </h2>
+          <div className="flex items-center gap-3 [&_[role=progressbar]]:bg-white/25 [&_[role=progressbar]>span]:bg-accent">
+            <ProgressBar value={done} max={lessons.length} label="تقدم الوحدة" />
+            <span className="text-sm whitespace-nowrap text-primary-tint">
+              {done} من {lessons.length}
+            </span>
+          </div>
+          <Button asChild variant="accent" size="lg" className="shadow-[0_5px_0_#C98210] active:translate-y-[5px] active:shadow-none">
+            <Link href={href}>{step.kind === "quiz" ? "واجه حارس المحطة" : done === 0 ? "ابدأ جلسة اليوم" : "أكمل جلسة اليوم"}</Link>
+          </Button>
+        </section>
       )}
+
+      {path && mapUnits.length > 0 && <JourneyMap units={mapUnits} pathSlug={path.slug} />}
+
+      <nav aria-label="تحديات" className="grid grid-cols-3 gap-2">
+        {[
+          { href: "/student/league", icon: "🏆", label: "الدوري" },
+          { href: "/student/duel", icon: "⚔️", label: "تحدي صديق" },
+          { href: "/student/practice/games", icon: "🎮", label: "الألعاب" },
+        ].map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            className="flex min-h-16 flex-col items-center justify-center gap-0.5 rounded-2xl border border-border bg-card text-sm font-semibold text-foreground no-underline hover:border-primary hover:text-foreground"
+          >
+            <span className="text-xl" aria-hidden="true">
+              {l.icon}
+            </span>
+            {l.label}
+          </Link>
+        ))}
+      </nav>
 
       {vocabToday > 0 && (
         <Link
@@ -200,7 +182,7 @@ export default async function TodayPage() {
 
       {path && (
         <Link href={`/student/${path.slug}`} className="text-sm">
-          كل الوحدات ←
+          كل المستويات ←
         </Link>
       )}
     </main>

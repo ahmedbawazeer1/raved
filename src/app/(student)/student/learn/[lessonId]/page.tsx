@@ -147,7 +147,7 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
         </Link>
         <LessonFeedback lessonId={lesson.id} initialRating={progress?.rating ?? null} />
       </main>
-      <footer className="sticky bottom-[68px] border-t border-border bg-card px-4 pt-3 pb-4 md:bottom-0">
+      <footer className="sticky bottom-[78px] border-t border-border bg-card px-4 pt-3 pb-4 md:bottom-0">
         <div className="mx-auto max-w-[680px]">
           <LessonGate
             lessonId={lesson.id}

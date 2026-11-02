@@ -90,7 +90,7 @@ export function RoleplayChat({
         <p className="text-xs text-muted-foreground">{remaining} رسالة متبقية اليوم (من رصيد المساعد) · يحتاج اتصالاً · الردود تقديرية</p>
       </main>
       <form
-        className="sticky bottom-[68px] border-t border-border bg-card px-4 py-3 md:bottom-0"
+        className="sticky bottom-[78px] border-t border-border bg-card px-4 py-3 md:bottom-0"
         onSubmit={(e) => {
           e.preventDefault();
           send(input);

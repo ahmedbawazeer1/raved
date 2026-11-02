@@ -19,7 +19,7 @@ export default async function RoleplayPage({ params }: PageProps<"/student/pract
   const today = await remainingToday(userId);
 
   return (
-    <div className="flex min-h-[calc(100dvh-68px)] flex-col">
+    <div className="flex min-h-[calc(100dvh-78px)] flex-col">
       <TopBar backHref="/student/practice" title={role.character_ar} subtitle={<>محادثة الوحدة · {unit.title}</>} />
       {aiConfigured() ? (
         <RoleplayChat unitId={unit.id} character={role.character_ar} opening={role.opening_en} initialRemaining={today.remaining.assistant} />
