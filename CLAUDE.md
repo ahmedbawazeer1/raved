@@ -76,6 +76,12 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 - Show a clear offline banner and pending-sync count. Never lose user input.
 - Details: `docs/OFFLINE.md`.
 
+## Content agent «عقل رفد» (owner decision, 2026-11-03)
+- The platform builds its own content: an agent designs paths and builds units; the owner **only reviews** (approve, or reject with a note). Nothing reaches students before approval.
+- Code: `src/lib/agent/` (constitution, Gemini client, plan schema, runner), runner entry `scripts/agent/run.ts` on GitHub Actions (`.github/workflows/agent.yml`, every 30 min + manual), admin UI `/admin/agent`.
+- Tables `agent_jobs` (queue, progress, output, review) and `agent_memory` (the owner's review notes become rules added to every prompt). Admin-only RLS; results written only by the service role.
+- Gemini (free tier) receives public curriculum content only, never student data. Videos only through YouTube's embedded player; articles are never copied.
+
 ## Privacy & safety (non-negotiable)
 - RLS on every table; students read only their own rows; student phone visible only to the student and admin.
 - Secrets only in server code / Vercel env vars. `.env.example` lists names only. Never commit keys.
