@@ -120,6 +120,26 @@ describe("runNextJob", () => {
     expect(last()).toMatchObject({ status: "needs_review", progress: 100, model: "gemini-test", output: plan });
   });
 
+  it("keeps the finished steps when Gemini is busy and resumes from them", async () => {
+    const { units, ...level } = plan.levels[0];
+    const outline = { summary_ar: plan.summary_ar, levels: [{ ...level, unit_count: units.length }] };
+    const first = fakeStore({ ...job });
+    await runNextJob(first.store, async (req) => {
+      if (req.prompt.startsWith("Design the levels")) return { text: JSON.stringify(outline), model: "m", sources: [] };
+      throw new GeminiError("busy");
+    });
+    const saved = first.last();
+    expect(saved).toMatchObject({ status: "queued", step: "waiting" });
+    const prompts: string[] = [];
+    const second = fakeStore({ ...job, input: saved.input as Record<string, unknown> });
+    await runNextJob(second.store, async (req) => {
+      prompts.push(req.prompt);
+      return { text: JSON.stringify({ units }), model: "m", sources: [] };
+    });
+    expect(prompts.some((p) => p.startsWith("Design the levels"))).toBe(false);
+    expect(second.last()).toMatchObject({ status: "needs_review", output: plan });
+  });
+
   it("retries once with the validation errors, then fails clearly", async () => {
     const { store, last } = fakeStore({ ...job });
     let calls = 0;

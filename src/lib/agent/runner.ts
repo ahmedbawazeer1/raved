@@ -16,6 +16,7 @@ import {
   planErrors,
   type PathContext,
   type PathPlan,
+  type PlanOutline,
 } from "./plan";
 import {
   buildUnitPrompt,
@@ -98,10 +99,22 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
     const feedback = typeof job.input.feedback === "string" ? job.input.feedback : undefined;
     const system = systemPrompt(memory);
     // Two short steps instead of one huge answer: the levels first, then the units of each level.
-    await note("أصمّم المستويات", { progress: 20, step: "outline" });
-    const outline = await askJson(model, { system, prompt: outlinePrompt(path, feedback), json: true, temperature: 0.5 }, zodCheck(outlineSchema));
-    const levels: PathPlan["levels"] = [];
+    // Finished steps are saved in the job, so a busy or used-up free tier only costs the step it stopped on.
+    const saved = outlineSchema.safeParse((job.input.partial as { outline?: unknown } | undefined)?.outline);
+    const savedLevels = saved.success ? ((job.input.partial as { levels?: PathPlan["levels"] }).levels ?? []) : [];
+    let outline: { value: PlanOutline; model: string };
+    if (saved.success) {
+      outline = { value: saved.data, model: typeof job.input.partial_model === "string" ? job.input.partial_model : "" };
+      await note(`أكمل من حيث توقفت: ${savedLevels.length} من ${saved.data.levels.length} مستويات جاهزة`, { progress: 20, step: "outline" });
+    } else {
+      await note("أصمّم المستويات", { progress: 20, step: "outline" });
+      outline = await askJson(model, { system, prompt: outlinePrompt(path, feedback), json: true, temperature: 0.5 }, zodCheck(outlineSchema));
+    }
+    const levels: PathPlan["levels"] = [...savedLevels];
+    const save = () => store.update(job.id, { input: { ...job.input, partial: { outline: outline.value, levels }, partial_model: outline.model } });
+    if (!saved.success) await save();
     for (const [i, level] of outline.value.levels.entries()) {
+      if (i < levels.length) continue;
       await note(`أصمّم وحدات المستوى ${level.code} (${level.unit_count} وحدة)`, {
         progress: 25 + Math.round((60 * i) / outline.value.levels.length),
         step: "units",
@@ -113,6 +126,7 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
         zodCheck(levelUnitsSchema),
       );
       levels.push({ code: level.code, title_ar: level.title_ar, goal_ar: level.goal_ar, units: units.value.units });
+      await save();
     }
     const plan = pathPlanSchema.safeParse({ summary_ar: outline.value.summary_ar, levels });
     if (!plan.success) throw new Error(`plan invalid: ${planErrors(plan.error).join("; ")}`);
