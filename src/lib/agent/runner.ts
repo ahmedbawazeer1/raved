@@ -115,7 +115,9 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
     throw new Error(`plan invalid: ${lastErrors.join("; ")}`);
   } catch (e) {
     const code = e instanceof GeminiError ? e.code : null;
-    const message = code ? ERROR_AR[code] : e instanceof Error ? e.message : String(e);
+    const detail = e instanceof Error ? e.message : String(e);
+    // Keep the provider's reason next to the Arabic summary, so a wrong key or model is easy to spot.
+    const message = code ? (code === "quota" || detail === code ? ERROR_AR[code] : `${ERROR_AR[code]} (${detail.slice(0, 300)})`) : detail;
     // Out of free quota: put the job back in the queue for the next run.
     if (code === "quota") {
       await note(message, { status: "queued", progress: 0, step: "waiting" });
