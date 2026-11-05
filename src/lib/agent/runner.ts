@@ -54,6 +54,7 @@ export interface UnitTools {
 export const ERROR_AR: Record<string, string> = {
   not_configured: "مفتاح Gemini غير مضاف بعد (GEMINI_API_KEY).",
   quota: "انتهت حصة Gemini المجانية لليوم. سيعيد الوكيل المحاولة لاحقاً.",
+  busy: "خوادم Gemini المجانية مزدحمة الآن. سيعيد الوكيل المحاولة في التشغيل التالي.",
   blocked: "رفض Gemini الطلب لأسباب أمان.",
   bad_response: "رد Gemini بشكل غير متوقع.",
   network: "تعذر الاتصال بـ Gemini.",
@@ -117,9 +118,9 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
     const code = e instanceof GeminiError ? e.code : null;
     const detail = e instanceof Error ? e.message : String(e);
     // Keep the provider's reason next to the Arabic summary, so a wrong key or model is easy to spot.
-    const message = code ? (code === "quota" || detail === code ? ERROR_AR[code] : `${ERROR_AR[code]} (${detail.slice(0, 300)})`) : detail;
+    const message = code ? (code === "quota" || code === "busy" || detail === code ? ERROR_AR[code] : `${ERROR_AR[code]} (${detail.slice(0, 300)})`) : detail;
     // Out of free quota: put the job back in the queue for the next run.
-    if (code === "quota") {
+    if (code === "quota" || code === "busy") {
       await note(message, { status: "queued", progress: 0, step: "waiting" });
       return job.id;
     }

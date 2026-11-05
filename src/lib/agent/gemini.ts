@@ -23,7 +23,7 @@ export interface GeminiResult {
 
 export class GeminiError extends Error {
   constructor(
-    public code: "not_configured" | "quota" | "blocked" | "bad_response" | "network",
+    public code: "not_configured" | "quota" | "busy" | "blocked" | "bad_response" | "network",
     message?: string,
   ) {
     super(message ?? code);
@@ -76,7 +76,7 @@ async function resolveModel(apiKey: string): Promise<string> {
   return chosenModel;
 }
 
-export async function callGemini(req: GeminiRequest, env: { apiKey?: string; model?: string } = {}): Promise<GeminiResult> {
+export async function callGemini(req: GeminiRequest, env: { apiKey?: string; model?: string; retryDelayMs?: number } = {}): Promise<GeminiResult> {
   const apiKey = env.apiKey ?? process.env.GEMINI_API_KEY;
   if (!apiKey) throw new GeminiError("not_configured", "GEMINI_API_KEY is missing");
   const model = env.model || process.env.GEMINI_MODEL || (await resolveModel(apiKey));
@@ -91,17 +91,25 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
     ...(req.search ? { tools: [{ google_search: {} }] } : {}),
   };
 
-  let res: Response;
-  try {
-    res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: "POST",
-      headers: { "content-type": "application/json", "x-goog-api-key": apiKey },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(240_000),
-    });
-  } catch (e) {
-    throw new GeminiError("network", e instanceof Error ? e.message : String(e));
+  // The free tier is sometimes overloaded (503/500): wait and try again a few times.
+  let res: Response | null = null;
+  for (let attempt = 0; attempt < 4; attempt++) {
+    if (attempt > 0) await new Promise((r) => setTimeout(r, (env.retryDelayMs ?? 10_000) * attempt));
+    try {
+      res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-goog-api-key": apiKey },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(240_000),
+      });
+    } catch (e) {
+      if (attempt === 3) throw new GeminiError("network", e instanceof Error ? e.message : String(e));
+      continue;
+    }
+    if (res.status !== 503 && res.status !== 500) break;
   }
+  if (!res) throw new GeminiError("network", "no response");
+  if (res.status === 503 || res.status === 500) throw new GeminiError("busy", `Gemini ${res.status}: busy`);
   if (res.status === 429) throw new GeminiError("quota", "Gemini free quota reached, try later");
   if (!res.ok) throw new GeminiError("bad_response", `Gemini ${res.status}: ${(await res.text()).slice(0, 300)}`);
   const data = (await res.json()) as ApiResponse;

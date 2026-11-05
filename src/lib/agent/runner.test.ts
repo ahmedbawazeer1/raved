@@ -111,6 +111,14 @@ describe("runNextJob", () => {
     expect(last()).toMatchObject({ status: "queued", step: "waiting" });
   });
 
+  it("puts the job back in the queue when Gemini is overloaded", async () => {
+    const { store, last } = fakeStore({ ...job });
+    await runNextJob(store, async () => {
+      throw new GeminiError("busy");
+    });
+    expect(last()).toMatchObject({ status: "queued", step: "waiting" });
+  });
+
   it("explains a missing key in Arabic", async () => {
     const { store, last } = fakeStore({ ...job });
     await runNextJob(store, async () => {
