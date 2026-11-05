@@ -160,6 +160,11 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
       exhausted.add(model);
       continue;
     }
+    if ((res.status === 404 || res.status === 403) && !fixed) {
+      // Listed but not open to this key (retired for new users): skip it and try the next model.
+      exhausted.add(model);
+      continue;
+    }
     if (res.status === 503 || res.status === 500) throw new GeminiError("busy", `Gemini ${res.status}: busy`);
     if (!res.ok) throw new GeminiError("bad_response", `Gemini ${res.status}: ${text.slice(0, 300)}`);
     const data = (await res.json()) as ApiResponse;
@@ -170,6 +175,7 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
     const sources = (cand?.groundingMetadata?.groundingChunks ?? []).map((c) => ({ title: c.web?.title ?? "", url: c.web?.uri ?? "" })).filter((s) => s.url);
     return { text: answer, model, sources };
   }
+  if (!quotaDetail) throw new GeminiError("bad_response", `no usable Gemini model for this key (${models.join(", ")})`);
   throw new GeminiError("quota", `free quota used up (${quotaDetail})`);
 }
 
