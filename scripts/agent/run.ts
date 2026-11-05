@@ -22,15 +22,13 @@ async function main() {
   }
   const db = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
 
+  // A job put back in the queue (quota, busy) waits for the next run instead of being retried at once.
+  const handled: string[] = [];
   const store: AgentStore = {
     async nextQueued() {
-      const { data, error } = await db
-        .from("agent_jobs")
-        .select("id, kind, path_id, input, log")
-        .eq("status", "queued")
-        .order("created_at")
-        .limit(1)
-        .maybeSingle();
+      let query = db.from("agent_jobs").select("id, kind, path_id, input, log").eq("status", "queued");
+      if (handled.length) query = query.not("id", "in", `(${handled.join(",")})`);
+      const { data, error } = await query.order("created_at").limit(1).maybeSingle();
       if (error) throw error;
       return (data as AgentJob | null) ?? null;
     },
@@ -90,6 +88,7 @@ async function main() {
   for (let i = 0; i < MAX_JOBS; i++) {
     const id = await runNextJob(store, (req) => callGemini(req), tools);
     if (!id) break;
+    handled.push(id);
     console.log(`Agent runner: handled job ${id}`);
   }
 }

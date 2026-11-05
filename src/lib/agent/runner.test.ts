@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CONSTITUTION, systemPrompt } from "./constitution";
-import { GeminiError, parseJsonAnswer } from "./gemini";
+import { flashModels, GeminiError, parseJsonAnswer, pickFlashModel, readQuota } from "./gemini";
 import { pathPlanSchema, planPathPrompt } from "./plan";
 import { runNextJob, type AgentJob, type AgentStore } from "./runner";
 
@@ -49,6 +49,44 @@ describe("agent prompts", () => {
     expect(p).toContain("وحدات أقل");
   });
 
+  it("picks the newest flash model that can generate content", () => {
+    const gen = ["generateContent"];
+    expect(
+      pickFlashModel([
+        { name: "models/gemini-2.5-flash", supportedGenerationMethods: gen },
+        { name: "models/gemini-3.0-flash", supportedGenerationMethods: gen },
+        { name: "models/gemini-3.0-flash-lite", supportedGenerationMethods: gen },
+        { name: "models/gemini-3.0-flash-image", supportedGenerationMethods: gen },
+        { name: "models/text-embedding-004", supportedGenerationMethods: ["embedContent"] },
+      ]),
+    ).toBe("gemini-3.0-flash");
+    expect(pickFlashModel([{ name: "models/gemini-flash-latest", supportedGenerationMethods: gen }])).toBe("gemini-flash-latest");
+    expect(pickFlashModel([])).toBeNull();
+  });
+
+  it("falls back from flash to lite models, newest first", () => {
+    const gen = ["generateContent"];
+    const m = (name: string) => ({ name: `models/${name}`, supportedGenerationMethods: gen });
+    expect(
+      flashModels([m("gemini-2.5-flash-lite"), m("gemini-2.5-flash"), m("gemini-flash-latest"), m("gemini-3.0-flash"), m("gemini-flash-lite-latest")]),
+    ).toEqual(["gemini-flash-latest", "gemini-3.0-flash", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"]);
+  });
+
+  it("tells a per-minute limit from a used-up daily quota", () => {
+    const body = (quotaId: string) =>
+      JSON.stringify({
+        error: {
+          code: 429,
+          details: [
+            { "@type": "type.googleapis.com/google.rpc.QuotaFailure", violations: [{ quotaId }] },
+            { "@type": "type.googleapis.com/google.rpc.RetryInfo", retryDelay: "34s" },
+          ],
+        },
+      });
+    expect(readQuota(body("GenerateRequestsPerMinutePerProjectPerModel-FreeTier"))).toMatchObject({ perMinute: true, retrySec: 34 });
+    expect(readQuota(body("GenerateRequestsPerDayPerProjectPerModel-FreeTier")).perMinute).toBe(false);
+  });
+
   it("reads JSON wrapped in code fences", () => {
     expect(parseJsonAnswer('```json\n{"a":1}\n```')).toEqual({ a: 1 });
   });
@@ -69,12 +107,37 @@ describe("runNextJob", () => {
   it("plans a path and leaves it for review", async () => {
     const { store, last } = fakeStore({ ...job });
     let system = "";
+    const prompts: string[] = [];
     await runNextJob(store, async (req) => {
       system = req.system;
-      return { text: JSON.stringify(plan), model: "gemini-test", sources: [] };
+      prompts.push(req.prompt);
+      const { units, ...level } = plan.levels[0];
+      const answer = req.prompt.startsWith("Design the levels") ? { summary_ar: plan.summary_ar, levels: [{ ...level, unit_count: units.length }] } : { units };
+      return { text: JSON.stringify(answer), model: "gemini-test", sources: [] };
     });
+    expect(prompts).toHaveLength(2);
     expect(system).toContain("سوق المكلا");
     expect(last()).toMatchObject({ status: "needs_review", progress: 100, model: "gemini-test", output: plan });
+  });
+
+  it("keeps the finished steps when Gemini is busy and resumes from them", async () => {
+    const { units, ...level } = plan.levels[0];
+    const outline = { summary_ar: plan.summary_ar, levels: [{ ...level, unit_count: units.length }] };
+    const first = fakeStore({ ...job });
+    await runNextJob(first.store, async (req) => {
+      if (req.prompt.startsWith("Design the levels")) return { text: JSON.stringify(outline), model: "m", sources: [] };
+      throw new GeminiError("busy");
+    });
+    const saved = first.last();
+    expect(saved).toMatchObject({ status: "queued", step: "waiting" });
+    const prompts: string[] = [];
+    const second = fakeStore({ ...job, input: saved.input as Record<string, unknown> });
+    await runNextJob(second.store, async (req) => {
+      prompts.push(req.prompt);
+      return { text: JSON.stringify({ units }), model: "m", sources: [] };
+    });
+    expect(prompts.some((p) => p.startsWith("Design the levels"))).toBe(false);
+    expect(second.last()).toMatchObject({ status: "needs_review", output: plan });
   });
 
   it("retries once with the validation errors, then fails clearly", async () => {
@@ -92,6 +155,14 @@ describe("runNextJob", () => {
     const { store, last } = fakeStore({ ...job });
     await runNextJob(store, async () => {
       throw new GeminiError("quota");
+    });
+    expect(last()).toMatchObject({ status: "queued", step: "waiting" });
+  });
+
+  it("puts the job back in the queue when Gemini is overloaded", async () => {
+    const { store, last } = fakeStore({ ...job });
+    await runNextJob(store, async () => {
+      throw new GeminiError("busy");
     });
     expect(last()).toMatchObject({ status: "queued", step: "waiting" });
   });
