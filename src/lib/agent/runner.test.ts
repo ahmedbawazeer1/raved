@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CONSTITUTION, systemPrompt } from "./constitution";
-import { GeminiError, parseJsonAnswer, pickFlashModel } from "./gemini";
+import { flashModels, GeminiError, parseJsonAnswer, pickFlashModel, readQuota } from "./gemini";
 import { pathPlanSchema, planPathPrompt } from "./plan";
 import { runNextJob, type AgentJob, type AgentStore } from "./runner";
 
@@ -62,6 +62,29 @@ describe("agent prompts", () => {
     ).toBe("gemini-3.0-flash");
     expect(pickFlashModel([{ name: "models/gemini-flash-latest", supportedGenerationMethods: gen }])).toBe("gemini-flash-latest");
     expect(pickFlashModel([])).toBeNull();
+  });
+
+  it("falls back from flash to lite models, newest first", () => {
+    const gen = ["generateContent"];
+    const m = (name: string) => ({ name: `models/${name}`, supportedGenerationMethods: gen });
+    expect(
+      flashModels([m("gemini-2.5-flash-lite"), m("gemini-2.5-flash"), m("gemini-flash-latest"), m("gemini-3.0-flash"), m("gemini-flash-lite-latest")]),
+    ).toEqual(["gemini-flash-latest", "gemini-3.0-flash", "gemini-2.5-flash", "gemini-flash-lite-latest", "gemini-2.5-flash-lite"]);
+  });
+
+  it("tells a per-minute limit from a used-up daily quota", () => {
+    const body = (quotaId: string) =>
+      JSON.stringify({
+        error: {
+          code: 429,
+          details: [
+            { "@type": "type.googleapis.com/google.rpc.QuotaFailure", violations: [{ quotaId }] },
+            { "@type": "type.googleapis.com/google.rpc.RetryInfo", retryDelay: "34s" },
+          ],
+        },
+      });
+    expect(readQuota(body("GenerateRequestsPerMinutePerProjectPerModel-FreeTier"))).toMatchObject({ perMinute: true, retrySec: 34 });
+    expect(readQuota(body("GenerateRequestsPerDayPerProjectPerModel-FreeTier")).perMinute).toBe(false);
   });
 
   it("reads JSON wrapped in code fences", () => {
