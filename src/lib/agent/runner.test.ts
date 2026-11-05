@@ -84,10 +84,15 @@ describe("runNextJob", () => {
   it("plans a path and leaves it for review", async () => {
     const { store, last } = fakeStore({ ...job });
     let system = "";
+    const prompts: string[] = [];
     await runNextJob(store, async (req) => {
       system = req.system;
-      return { text: JSON.stringify(plan), model: "gemini-test", sources: [] };
+      prompts.push(req.prompt);
+      const { units, ...level } = plan.levels[0];
+      const answer = req.prompt.startsWith("Design the levels") ? { summary_ar: plan.summary_ar, levels: [{ ...level, unit_count: units.length }] } : { units };
+      return { text: JSON.stringify(answer), model: "gemini-test", sources: [] };
     });
+    expect(prompts).toHaveLength(2);
     expect(system).toContain("سوق المكلا");
     expect(last()).toMatchObject({ status: "needs_review", progress: 100, model: "gemini-test", output: plan });
   });

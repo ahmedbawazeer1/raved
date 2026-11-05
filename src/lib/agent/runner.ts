@@ -6,7 +6,17 @@
 import { systemPrompt } from "./constitution";
 import { GeminiError, parseJsonAnswer, type GeminiRequest, type GeminiResult } from "./gemini";
 import { improvePrompt, type UnitStats } from "./improve";
-import { countUnits, pathPlanSchema, planErrors, planPathPrompt, type PathContext } from "./plan";
+import {
+  countUnits,
+  levelUnitsPrompt,
+  levelUnitsSchema,
+  outlinePrompt,
+  outlineSchema,
+  pathPlanSchema,
+  planErrors,
+  type PathContext,
+  type PathPlan,
+} from "./plan";
 import {
   buildUnitPrompt,
   choiceSchema,
@@ -86,34 +96,35 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
     await note(`أقرأ المسار «${path.title}» و${memory.length} ملاحظة من مراجعاتك`, { progress: 15, step: "context" });
 
     const feedback = typeof job.input.feedback === "string" ? job.input.feedback : undefined;
-    let lastErrors: string[] = [];
-    for (let attempt = 1; attempt <= 2; attempt++) {
-      await note(attempt === 1 ? "أصمّم المستويات والوحدات" : "أصحّح الأخطاء وأعيد المحاولة", { progress: 30 + attempt * 20, step: "plan" });
-      const prompt = planPathPrompt(path, feedback) + (lastErrors.length ? `\n\nYour previous answer was invalid: ${lastErrors.join("; ")}. Fix it.` : "");
-      const res = await model({ system: systemPrompt(memory), prompt, json: true, temperature: 0.5 });
-      let parsed: unknown;
-      try {
-        parsed = parseJsonAnswer(res.text);
-      } catch {
-        lastErrors = ["the answer was not valid JSON"];
-        continue;
-      }
-      const plan = pathPlanSchema.safeParse(parsed);
-      if (!plan.success) {
-        lastErrors = planErrors(plan.error);
-        continue;
-      }
-      await note(`جاهز للمراجعة: ${plan.data.levels.length} مستويات و${countUnits(plan.data)} وحدة`, {
-        status: "needs_review",
-        progress: 100,
-        step: "review",
-        output: plan.data,
-        model: res.model,
-        finished_at: now().toISOString(),
+    const system = systemPrompt(memory);
+    // Two short steps instead of one huge answer: the levels first, then the units of each level.
+    await note("أصمّم المستويات", { progress: 20, step: "outline" });
+    const outline = await askJson(model, { system, prompt: outlinePrompt(path, feedback), json: true, temperature: 0.5 }, zodCheck(outlineSchema));
+    const levels: PathPlan["levels"] = [];
+    for (const [i, level] of outline.value.levels.entries()) {
+      await note(`أصمّم وحدات المستوى ${level.code} (${level.unit_count} وحدة)`, {
+        progress: 25 + Math.round((60 * i) / outline.value.levels.length),
+        step: "units",
       });
-      return job.id;
+      const before = levels.flatMap((l) => l.units.map((u) => `${u.code} ${u.title_en}`));
+      const units = await askJson(
+        model,
+        { system, prompt: levelUnitsPrompt(path, outline.value, i, before, feedback), json: true, temperature: 0.5 },
+        zodCheck(levelUnitsSchema),
+      );
+      levels.push({ code: level.code, title_ar: level.title_ar, goal_ar: level.goal_ar, units: units.value.units });
     }
-    throw new Error(`plan invalid: ${lastErrors.join("; ")}`);
+    const plan = pathPlanSchema.safeParse({ summary_ar: outline.value.summary_ar, levels });
+    if (!plan.success) throw new Error(`plan invalid: ${planErrors(plan.error).join("; ")}`);
+    await note(`جاهز للمراجعة: ${plan.data.levels.length} مستويات و${countUnits(plan.data)} وحدة`, {
+      status: "needs_review",
+      progress: 100,
+      step: "review",
+      output: plan.data,
+      model: outline.model,
+      finished_at: now().toISOString(),
+    });
+    return job.id;
   } catch (e) {
     const code = e instanceof GeminiError ? e.code : null;
     const detail = e instanceof Error ? e.message : String(e);
