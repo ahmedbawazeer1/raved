@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { CONSTITUTION, systemPrompt } from "./constitution";
-import { GeminiError, parseJsonAnswer } from "./gemini";
+import { GeminiError, parseJsonAnswer, pickFlashModel } from "./gemini";
 import { pathPlanSchema, planPathPrompt } from "./plan";
 import { runNextJob, type AgentJob, type AgentStore } from "./runner";
 
@@ -47,6 +47,21 @@ describe("agent prompts", () => {
     );
     expect(p).toContain("A1 (المبتدئ, general)");
     expect(p).toContain("وحدات أقل");
+  });
+
+  it("picks the newest flash model that can generate content", () => {
+    const gen = ["generateContent"];
+    expect(
+      pickFlashModel([
+        { name: "models/gemini-2.5-flash", supportedGenerationMethods: gen },
+        { name: "models/gemini-3.0-flash", supportedGenerationMethods: gen },
+        { name: "models/gemini-3.0-flash-lite", supportedGenerationMethods: gen },
+        { name: "models/gemini-3.0-flash-image", supportedGenerationMethods: gen },
+        { name: "models/text-embedding-004", supportedGenerationMethods: ["embedContent"] },
+      ]),
+    ).toBe("gemini-3.0-flash");
+    expect(pickFlashModel([{ name: "models/gemini-flash-latest", supportedGenerationMethods: gen }])).toBe("gemini-flash-latest");
+    expect(pickFlashModel([])).toBeNull();
   });
 
   it("reads JSON wrapped in code fences", () => {

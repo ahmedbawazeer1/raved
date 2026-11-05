@@ -41,10 +41,45 @@ interface ApiResponse {
   promptFeedback?: { blockReason?: string };
 }
 
+/**
+ * Picks the newest general "flash" model that can generate content (models get retired, so the
+ * name is not hard-coded). Skips lite, image, audio, live and experimental variants.
+ */
+export function pickFlashModel(models: { name: string; supportedGenerationMethods?: string[] }[]): string | null {
+  const ids = models
+    .filter((m) => m.supportedGenerationMethods?.includes("generateContent"))
+    .map((m) => m.name.replace(/^models\//, ""))
+    .filter((id) => /^gemini-[\d.]+-flash(-latest|-\d{3})?$/.test(id) || id === "gemini-flash-latest");
+  if (ids.includes("gemini-flash-latest")) return "gemini-flash-latest";
+  const version = (id: string) => Number(/^gemini-([\d.]+)/.exec(id)?.[1] ?? 0);
+  ids.sort((a, b) => version(b) - version(a) || a.length - b.length);
+  return ids[0] ?? null;
+}
+
+let chosenModel: string | null = null;
+
+async function resolveModel(apiKey: string): Promise<string> {
+  if (chosenModel) return chosenModel;
+  try {
+    const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", {
+      headers: { "x-goog-api-key": apiKey },
+      signal: AbortSignal.timeout(20_000),
+    });
+    if (res.ok) {
+      const body = (await res.json()) as { models?: { name: string; supportedGenerationMethods?: string[] }[] };
+      chosenModel = pickFlashModel(body.models ?? []);
+    }
+  } catch {
+    // fall back below
+  }
+  chosenModel ??= GEMINI_MODEL_DEFAULT;
+  return chosenModel;
+}
+
 export async function callGemini(req: GeminiRequest, env: { apiKey?: string; model?: string } = {}): Promise<GeminiResult> {
   const apiKey = env.apiKey ?? process.env.GEMINI_API_KEY;
-  const model = env.model ?? process.env.GEMINI_MODEL ?? GEMINI_MODEL_DEFAULT;
   if (!apiKey) throw new GeminiError("not_configured", "GEMINI_API_KEY is missing");
+  const model = env.model || process.env.GEMINI_MODEL || (await resolveModel(apiKey));
 
   const parts: Record<string, unknown>[] = [];
   if (req.youtubeUrl) parts.push({ fileData: { fileUri: req.youtubeUrl, mimeType: "video/*" } });
