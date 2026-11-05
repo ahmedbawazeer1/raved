@@ -36,6 +36,26 @@ describe("callGemini model fallback", () => {
     expect(called).toEqual(["gemini-flash-latest", "gemini-3.8-flash", "gemini-2.5-flash", "gemini-flash-lite-latest"]);
   });
 
+  it("moves on to the next model when one stays overloaded", async () => {
+    const called: string[] = [];
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string) => {
+        if (url.includes("/models?")) {
+          return json(200, { models: ["gemini-flash-latest", "gemini-3.8-flash"].map((n) => ({ name: `models/${n}`, supportedGenerationMethods: gen })) });
+        }
+        const model = /models\/([^:]+):/.exec(url)?.[1] ?? "";
+        called.push(model);
+        if (model === "gemini-flash-latest") return json(503, { error: { code: 503 } });
+        return json(200, { candidates: [{ content: { parts: [{ text: "{}" }] } }] });
+      }),
+    );
+    const { callGemini } = await import("./gemini");
+    const r = await callGemini({ system: "s", prompt: "p" }, { apiKey: "k", retryDelayMs: 1 });
+    expect(r.model).toBe("gemini-3.8-flash");
+    expect(called.filter((m) => m === "gemini-flash-latest")).toHaveLength(4);
+  });
+
   it("reports a used-up quota when no model is left", async () => {
     vi.stubGlobal(
       "fetch",
