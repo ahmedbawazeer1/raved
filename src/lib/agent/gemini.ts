@@ -125,6 +125,7 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
   const unit = env.retryDelayMs ?? 10_000;
 
   let quotaDetail = "";
+  let busy = false;
   for (const model of models) {
     // The free tier is sometimes overloaded (503/500) or rate limited per minute (429): wait and retry.
     let res: Response | null = null;
@@ -165,7 +166,12 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
       exhausted.add(model);
       continue;
     }
-    if (res.status === 503 || res.status === 500) throw new GeminiError("busy", `Gemini ${res.status}: busy`);
+    if (res.status === 503 || res.status === 500) {
+      // Still overloaded after the retries: another flash model is often free.
+      if (fixed) throw new GeminiError("busy", `Gemini ${res.status}: busy`);
+      busy = true;
+      continue;
+    }
     if (!res.ok) throw new GeminiError("bad_response", `Gemini ${res.status}: ${text.slice(0, 300)}`);
     const data = (await res.json()) as ApiResponse;
     if (data.promptFeedback?.blockReason) throw new GeminiError("blocked", data.promptFeedback.blockReason);
@@ -175,6 +181,7 @@ export async function callGemini(req: GeminiRequest, env: { apiKey?: string; mod
     const sources = (cand?.groundingMetadata?.groundingChunks ?? []).map((c) => ({ title: c.web?.title ?? "", url: c.web?.uri ?? "" })).filter((s) => s.url);
     return { text: answer, model, sources };
   }
+  if (busy) throw new GeminiError("busy", "Gemini models are busy");
   if (!quotaDetail) throw new GeminiError("bad_response", `no usable Gemini model for this key (${models.join(", ")})`);
   throw new GeminiError("quota", `free quota used up (${quotaDetail})`);
 }

@@ -5,7 +5,7 @@
 import { z } from "zod";
 
 export const planUnitSchema = z.object({
-  code: z.string().regex(/^[A-Z0-9]{1,4}-\d{2}$/, "رمز الوحدة مثل A1-01"),
+  code: z.string().regex(/^[A-Z0-9]{1,10}-\d{2}$/, "رمز الوحدة مثل A1-01 أو IELTS-01"),
   title_en: z.string().min(2).max(80),
   title_ar: z.string().min(2).max(80),
   stop_ar: z.string().min(2).max(40),

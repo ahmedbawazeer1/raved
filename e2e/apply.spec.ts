@@ -28,6 +28,8 @@ test("a new account applies step by step, without a teacher recommendation", asy
   // Step 4: phone (checked before moving on).
   await page.getByRole("textbox", { name: "رقم هاتفك" }).fill("12345");
   await page.getByRole("button", { name: "التالي: هدفك" }).click();
+  // Wait for the server's answer before fixing the number (the button is disabled while it saves).
+  await expect(page.getByText("رقم جوال يمني من 9 أرقام يبدأ بـ 7")).toBeVisible();
   await expect(page).toHaveURL(/\/apply$/);
   await page.getByRole("textbox", { name: "رقم هاتفك" }).fill("77 123 4567");
   await page.getByRole("button", { name: "التالي: هدفك" }).click();

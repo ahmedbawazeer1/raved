@@ -95,6 +95,9 @@ describe("agent prompts", () => {
     expect(pathPlanSchema.safeParse(plan).success).toBe(true);
     const dup = { ...plan, levels: [{ ...plan.levels[0], units: [unit("A1-01"), unit("A1-01"), unit("A1-02")] }] };
     expect(pathPlanSchema.safeParse(dup).success).toBe(false);
+    // Exam-prep levels have longer codes.
+    const ielts = { ...plan, levels: [{ ...plan.levels[0], code: "IELTS", units: [unit("IELTS-01"), unit("IELTS-02"), unit("IELTS-03")] }] };
+    expect(pathPlanSchema.safeParse(ielts).success).toBe(true);
   });
 });
 
