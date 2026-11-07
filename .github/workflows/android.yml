@@ -1,0 +1,68 @@
+name: Android app
+
+# Builds «رفد» for Android (a Trusted Web Activity: android/) and publishes the signed APK on the
+# GitHub release "android" (stable download link:
+# https://github.com/ahmedbawazeer1/raved/releases/download/android/raved.apk).
+# Needs the repository secrets ANDROID_KEYSTORE_B64 and ANDROID_KEYSTORE_PASSWORD (signing key).
+on:
+  push:
+    branches: [main]
+    paths: ["android/**", "public/.well-known/assetlinks.json", ".github/workflows/android.yml"]
+  pull_request:
+    paths: ["android/**", ".github/workflows/android.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.14.3"
+      - name: Signing key
+        id: key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "::warning::ANDROID_KEYSTORE_B64 is not set: building an unsigned app (not installable)."
+            echo "signed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "$KEYSTORE_B64" | tr -d ' \n\r' | base64 -d > "$RUNNER_TEMP/raved.jks"
+            echo "RAVED_KEYSTORE_FILE=$RUNNER_TEMP/raved.jks" >> "$GITHUB_ENV"
+            echo "signed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Build APK and App Bundle
+        working-directory: android
+        env:
+          RAVED_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          RAVED_VERSION_CODE: ${{ github.run_number }}
+          RAVED_VERSION_NAME: 1.0.${{ github.run_number }}
+        run: gradle --no-daemon assembleRelease bundleRelease
+      - name: Collect files
+        run: |
+          mkdir -p dist
+          cp android/app/build/outputs/apk/release/*.apk dist/raved.apk
+          cp android/app/build/outputs/bundle/release/*.aab dist/raved.aab
+          ls -la dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: raved-android
+          path: dist
+          retention-days: 30
+      - name: Publish the download link
+        if: github.ref == 'refs/heads/main' && steps.key.outputs.signed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view android >/dev/null 2>&1 || gh release create android --title "رفد لأندرويد" --notes "أحدث نسخة من تطبيق رفد لأندرويد. حمّل raved.apk وثبّته." --latest=false
+          gh release upload android dist/raved.apk dist/raved.aab --clobber

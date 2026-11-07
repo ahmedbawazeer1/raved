@@ -1,0 +1,54 @@
+// «رفد» for Android: a Trusted Web Activity that opens the platform full screen in Chrome
+// (same offline service worker, same accounts). Built by .github/workflows/android.yml.
+plugins {
+    id "com.android.application"
+}
+
+def host = "raved-seven.vercel.app"
+def keystorePath = System.getenv("RAVED_KEYSTORE_FILE")
+
+android {
+    namespace "com.raved.learn"
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.raved.learn"
+        minSdk 21
+        targetSdk 35
+        versionCode Integer.parseInt(System.getenv("RAVED_VERSION_CODE") ?: "1")
+        versionName System.getenv("RAVED_VERSION_NAME") ?: "1.0.0"
+        manifestPlaceholders = [
+            hostName  : host,
+            defaultUrl: "https://${host}/student".toString(),
+        ]
+        resValue "string", "asset_statements",
+            "[{\"relation\": [\"delegate_permission/common.handle_all_urls\"], \"target\": {\"namespace\": \"web\", \"site\": \"https://${host}\"}}]".toString()
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePath) {
+                storeFile file(keystorePath)
+                storePassword System.getenv("RAVED_KEYSTORE_PASSWORD")
+                keyAlias "raved"
+                keyPassword System.getenv("RAVED_KEYSTORE_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (keystorePath) signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation "com.google.androidbrowserhelper:androidbrowserhelper:2.5.0"
+}

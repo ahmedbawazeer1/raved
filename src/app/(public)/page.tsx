@@ -73,6 +73,9 @@ export default async function HomePage() {
               <Link href="/paths">تصفح المسارات</Link>
             </Button>
           </div>
+          <Link href="/app" className="self-start text-sm font-semibold">
+            حمّل تطبيق رفد لأندرويد ←
+          </Link>
         </div>
 
         {/* Preview of "today's session" while offline (desktop only, as in the design) */}

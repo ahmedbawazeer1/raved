@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.raved.learn",
+      "sha256_cert_fingerprints": ["0B:30:81:8C:FC:68:22:DD:EB:33:C8:6F:E2:86:3F:CA:F8:40:AC:80:56:76:22:66:A3:27:A6:B7:DC:98:47:E4"]
+    }
+  }
+]
