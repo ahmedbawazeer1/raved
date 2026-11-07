@@ -4,7 +4,9 @@ import { Bot } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { AddRuleForm, AutoRefresh, QueuePlanForm } from "@/components/admin/agent-forms";
-import { toggleRule } from "./actions";
+import { setAgentPaused, toggleRule } from "./actions";
+import { SubmitButton } from "@/components/ui/submit-button";
+import { JOB_BUDGET } from "@/lib/agent/runner";
 import { JOB_KIND_AR, JOB_STATUS_AR } from "@/lib/agent/labels";
 import { createClient } from "@/lib/supabase/server";
 
@@ -16,11 +18,13 @@ function when(iso: string): string {
 
 export default async function AgentPage() {
   const supabase = await createClient();
-  const [{ data: paths }, { data: jobs }, { data: rules }] = await Promise.all([
+  const [{ data: paths }, { data: jobs }, { data: rules }, { data: pausedRow }] = await Promise.all([
     supabase.from("paths").select("id, title").order("position"),
     supabase.from("agent_jobs").select("id, kind, status, progress, step, created_at, paths(title)").order("created_at", { ascending: false }).limit(30),
     supabase.from("agent_memory").select("id, text, source, active, created_at, paths(title)").order("created_at", { ascending: false }).limit(50),
+    supabase.from("settings").select("value").eq("key", "agent_paused").maybeSingle(),
   ]);
+  const paused = pausedRow?.value === true;
   const list = jobs ?? [];
   const waiting = list.filter((j) => j.status === "needs_review");
   const working = list.some((j) => j.status === "queued" || j.status === "running");
@@ -39,6 +43,27 @@ export default async function AgentPage() {
           </p>
         </div>
       </header>
+
+      <Card
+        className={
+          paused ? "flex flex-col gap-3 border-warning bg-warning-tint p-4 sm:flex-row sm:items-center" : "flex flex-col gap-3 p-4 sm:flex-row sm:items-center"
+        }
+      >
+        <div className="flex-1">
+          <h2 className="font-bold">{paused ? "الوكيل متوقف الآن" : "الوكيل يعمل"}</h2>
+          <p className="text-sm text-muted-foreground">
+            {paused
+              ? "لن يبدأ أي عمل جديد، والعمل الجاري يعود للطابور. شغّله متى شئت ويكمل من حيث توقف."
+              : `يعمل كل 30 دقيقة. لكل مهمة حد آمن: ${JOB_BUDGET.modelCalls} طلباً لـ Gemini و${JOB_BUDGET.searches} بحثاً في يوتيوب و${JOB_BUDGET.minutes} دقيقة.`}
+          </p>
+        </div>
+        <form action={setAgentPaused}>
+          <input type="hidden" name="paused" value={paused ? "0" : "1"} />
+          <SubmitButton variant={paused ? "primary" : "secondary"} pendingLabel="…" className="min-h-11">
+            {paused ? "شغّل الوكيل" : "أوقف الوكيل"}
+          </SubmitButton>
+        </form>
+      </Card>
 
       {waiting.length > 0 && (
         <Card className="flex flex-col gap-2 border-primary p-4">

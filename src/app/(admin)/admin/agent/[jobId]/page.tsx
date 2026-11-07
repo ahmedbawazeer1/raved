@@ -22,8 +22,18 @@ function time(iso: string): string {
 export default async function AgentJobPage({ params }: PageProps<"/admin/agent/[jobId]">) {
   const { jobId } = await params;
   const supabase = await createClient();
-  const { data: job } = await supabase.from("agent_jobs").select("*, paths(title)").eq("id", jobId).maybeSingle();
+  const [{ data: job }, { data: traces }] = await Promise.all([
+    supabase.from("agent_jobs").select("*, paths(title)").eq("id", jobId).maybeSingle(),
+    supabase
+      .from("agent_traces")
+      .select("id, kind, step, model, prompt_version, input_chars, output_chars, ms, ok, error, created_at")
+      .eq("job_id", jobId)
+      .order("created_at")
+      .limit(100),
+  ]);
   if (!job) notFound();
+  const calls = traces ?? [];
+  const totalSec = Math.round(calls.reduce((n, t) => n + t.ms, 0) / 1000);
   const st = JOB_STATUS_AR[job.status] ?? { label: job.status, tone: "muted" as const };
   const log = (job.log as { at: string; msg: string }[]) ?? [];
   const plan = job.kind === "plan_path" && job.output ? pathPlanSchema.safeParse(job.output) : null;
@@ -147,6 +157,47 @@ export default async function AgentJobPage({ params }: PageProps<"/admin/agent/[
           </p>
         )}
       </Card>
+
+      {calls.length > 0 && (
+        <Card className="flex flex-col gap-2 p-5">
+          <details>
+            <summary className="cursor-pointer font-bold">
+              تفاصيل التنفيذ: {calls.filter((t) => t.kind === "model").length} طلب لـ Gemini، {calls.filter((t) => t.kind === "search").length} بحث في يوتيوب،{" "}
+              {totalSec} ثانية
+            </summary>
+            <div className="mt-3 overflow-x-auto">
+              <table className="w-full text-start text-xs" dir="ltr">
+                <thead className="text-muted-foreground">
+                  <tr>
+                    <th className="p-1 text-start">time</th>
+                    <th className="p-1 text-start">call</th>
+                    <th className="p-1 text-start">step</th>
+                    <th className="p-1 text-start">model / version</th>
+                    <th className="p-1 text-end">in → out</th>
+                    <th className="p-1 text-end">sec</th>
+                    <th className="p-1 text-start">result</th>
+                  </tr>
+                </thead>
+                <tbody className="font-en">
+                  {calls.map((t) => (
+                    <tr key={t.id} className="border-t border-muted align-top">
+                      <td className="p-1">{time(t.created_at)}</td>
+                      <td className="p-1">{t.kind}</td>
+                      <td className="p-1">{t.step}</td>
+                      <td className="p-1">{[t.model, t.prompt_version].filter(Boolean).join(" · ")}</td>
+                      <td className="p-1 text-end">
+                        {t.input_chars} → {t.output_chars}
+                      </td>
+                      <td className="p-1 text-end">{(t.ms / 1000).toFixed(1)}</td>
+                      <td className={t.ok ? "p-1 text-success" : "p-1 text-destructive"}>{t.ok ? "ok" : t.error}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </Card>
+      )}
     </div>
   );
 }

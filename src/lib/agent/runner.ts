@@ -3,7 +3,7 @@
  * Takes the oldest queued job, runs it step by step, records progress and leaves the result
  * for the owner's review. Used by scripts/agent/run.ts (GitHub Actions, service role).
  */
-import { systemPrompt } from "./constitution";
+import { PROMPT_VERSION, systemPrompt } from "./constitution";
 import { YouTubeError, type VideoCandidate } from "./youtube";
 import { GeminiError, parseJsonAnswer, type GeminiRequest, type GeminiResult } from "./gemini";
 import { improvePrompt, type UnitStats } from "./improve";
@@ -50,6 +50,36 @@ export interface AgentStore {
   memory(pathId: string): Promise<string[]>;
   /** The latest package of a published unit (for improve_unit). */
   unitPackage?(unitId: string): Promise<{ package: Record<string, unknown>; version: number } | null>;
+  /** The owner's «أوقف الوكيل» switch. */
+  paused?(): Promise<boolean>;
+  /** Saves one trace row (model or search call). */
+  trace?(row: AgentTrace): Promise<void>;
+}
+
+export interface AgentTrace {
+  job_id: string;
+  kind: "model" | "search";
+  step: string | null;
+  model: string | null;
+  prompt_version: string;
+  input_chars: number;
+  output_chars: number;
+  ms: number;
+  ok: boolean;
+  error: string | null;
+}
+
+/** Hard limits for one job: a loop or a stuck provider stops here instead of using up the free quota. */
+export const JOB_BUDGET = { modelCalls: 20, searches: 12, minutes: 25 };
+
+/** Thrown when a job goes over JOB_BUDGET or the owner pauses the agent mid-job. */
+export class AgentStop extends Error {
+  constructor(
+    public code: "budget" | "paused",
+    message: string,
+  ) {
+    super(message);
+  }
 }
 
 export type Model = (req: GeminiRequest) => Promise<GeminiResult>;
@@ -74,13 +104,74 @@ export const ERROR_AR: Record<string, string> = {
     "مفتاح YouTube لا يعمل: تأكد أن YouTube Data API v3 مفعّلة في مشروع المفتاح على Google Cloud، وأن المفتاح غير مقيّد بمواقع. سيعيد الوكيل المحاولة كل نصف ساعة.",
 };
 
-export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTools, now: () => Date = () => new Date()): Promise<string | null> {
+export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: UnitTools, now: () => Date = () => new Date()): Promise<string | null> {
+  if (await store.paused?.()) return null;
   const job = await store.nextQueued();
   if (!job) return null;
   const log = [...job.log];
+  let step: string | null = "start";
   const note = async (msg: string, patch: Record<string, unknown> = {}) => {
     log.push({ at: now().toISOString(), msg });
+    if (typeof patch.step === "string") step = patch.step;
     await store.update(job.id, { log, ...patch });
+  };
+
+  // Every model and search call is counted, timed and traced; the job stops at its budget or a pause.
+  const startedAt = now().getTime();
+  let modelCalls = 0;
+  let searches = 0;
+  const trace = (row: Omit<AgentTrace, "job_id" | "step" | "prompt_version">) =>
+    store.trace?.({ job_id: job.id, step, prompt_version: PROMPT_VERSION, ...row }).catch(() => {});
+  const guard = async (kind: "model" | "search") => {
+    const count = kind === "model" ? ++modelCalls : ++searches;
+    const max = kind === "model" ? JOB_BUDGET.modelCalls : JOB_BUDGET.searches;
+    if (count > max) throw new AgentStop("budget", `${kind === "model" ? "Gemini" : "YouTube"} calls > ${max}`);
+    if (now().getTime() - startedAt > JOB_BUDGET.minutes * 60_000) throw new AgentStop("budget", `> ${JOB_BUDGET.minutes} min`);
+    if (await store.paused?.()) throw new AgentStop("paused", "paused by the owner");
+  };
+  const model: Model = async (req) => {
+    await guard("model");
+    const t0 = Date.now();
+    const input = req.system.length + req.prompt.length;
+    try {
+      const res = await rawModel(req);
+      await trace({ kind: "model", model: res.model, input_chars: input, output_chars: res.text.length, ms: Date.now() - t0, ok: true, error: null });
+      return res;
+    } catch (e) {
+      await trace({
+        kind: "model",
+        model: null,
+        input_chars: input,
+        output_chars: 0,
+        ms: Date.now() - t0,
+        ok: false,
+        error: String(e instanceof Error ? e.message : e).slice(0, 500),
+      });
+      throw e;
+    }
+  };
+  const tools: UnitTools | undefined = rawTools && {
+    ...rawTools,
+    search: async (q) => {
+      await guard("search");
+      const t0 = Date.now();
+      try {
+        const found = await rawTools.search(q);
+        await trace({ kind: "search", model: null, input_chars: q.length, output_chars: found.length, ms: Date.now() - t0, ok: true, error: null });
+        return found;
+      } catch (e) {
+        await trace({
+          kind: "search",
+          model: null,
+          input_chars: q.length,
+          output_chars: 0,
+          ms: Date.now() - t0,
+          ok: false,
+          error: String(e instanceof Error ? e.message : e).slice(0, 500),
+        });
+        throw e;
+      }
+    },
   };
 
   await note("بدأ العمل", { status: "running", started_at: now().toISOString(), progress: 5, step: "start" });
@@ -143,6 +234,15 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
     });
     return job.id;
   } catch (e) {
+    if (e instanceof AgentStop) {
+      if (e.code === "paused") {
+        await note("أوقفتَ الوكيل، فأعدت المهمة إلى الطابور. ستكمل عند تشغيله من جديد.", { status: "queued", progress: 0, step: "waiting" });
+      } else {
+        const msg = `تجاوزت المهمة حدها الآمن (${e.message}). أوقفتها حتى لا تستهلك الحصة المجانية. أعد المحاولة، وإن تكرر أخبر المطوّر.`;
+        await note(`توقف: ${msg}`, { status: "failed", error: msg, finished_at: now().toISOString() });
+      }
+      return job.id;
+    }
     // YouTube problems affect every unit, so the job waits instead of failing.
     if (e instanceof YouTubeError && e.code !== "network") {
       await note(`${ERROR_AR[`youtube_${e.code}`]} (${e.message})`, { status: "queued", progress: 0, step: "waiting" });

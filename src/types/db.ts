@@ -130,6 +130,59 @@ export type Database = {
           },
         ]
       }
+      agent_traces: {
+        Row: {
+          created_at: string
+          error: string | null
+          id: string
+          input_chars: number
+          job_id: string
+          kind: string
+          model: string | null
+          ms: number
+          ok: boolean
+          output_chars: number
+          prompt_version: string | null
+          step: string | null
+        }
+        Insert: {
+          created_at?: string
+          error?: string | null
+          id?: string
+          input_chars?: number
+          job_id: string
+          kind: string
+          model?: string | null
+          ms?: number
+          ok: boolean
+          output_chars?: number
+          prompt_version?: string | null
+          step?: string | null
+        }
+        Update: {
+          created_at?: string
+          error?: string | null
+          id?: string
+          input_chars?: number
+          job_id?: string
+          kind?: string
+          model?: string | null
+          ms?: number
+          ok?: boolean
+          output_chars?: number
+          prompt_version?: string | null
+          step?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "agent_traces_job_id_fkey"
+            columns: ["job_id"]
+            isOneToOne: false
+            referencedRelation: "agent_jobs"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       app_errors: {
         Row: {
           created_at: string

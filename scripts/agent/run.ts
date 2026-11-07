@@ -59,6 +59,13 @@ async function main() {
         .maybeSingle();
       return data ? { package: data.package as Record<string, unknown>, version: data.version } : null;
     },
+    async paused() {
+      const { data } = await db.from("settings").select("value").eq("key", "agent_paused").maybeSingle();
+      return data?.value === true;
+    },
+    async trace(row) {
+      await db.from("agent_traces").insert(row);
+    },
     async memory(pathId) {
       const { data } = await db
         .from("agent_memory")
@@ -85,6 +92,10 @@ async function main() {
     example: readFileSync(path.join(root, "content", "examples", "A1-01.json"), "utf8"),
   };
 
+  if (await store.paused?.()) {
+    console.log("Agent runner: paused by the owner (/admin/agent).");
+    return;
+  }
   for (let i = 0; i < MAX_JOBS; i++) {
     const id = await runNextJob(store, (req) => callGemini(req), tools);
     if (!id) break;

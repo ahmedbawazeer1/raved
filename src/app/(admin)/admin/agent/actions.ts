@@ -177,3 +177,13 @@ export async function retryJob(formData: FormData): Promise<void> {
   revalidatePath("/admin/agent");
   if (data) redirect(`/admin/agent/${data.id}`);
 }
+
+/** «أوقف الوكيل / شغّله»: the runner checks this before every job and every model call. */
+export async function setAgentPaused(formData: FormData): Promise<void> {
+  const { userId } = await requireAdmin();
+  const paused = formData.get("paused") === "1";
+  const supabase = await createClient();
+  await supabase.from("settings").upsert({ key: "agent_paused", value: paused });
+  await supabase.from("audit_log").insert({ actor_id: userId, action: paused ? "agent.pause" : "agent.resume", target: null, data: {} });
+  revalidatePath("/admin/agent");
+}
