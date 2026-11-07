@@ -7,8 +7,8 @@ export function SiteFooter() {
         {/* eslint-disable-next-line @next/next/no-img-element -- tiny static SVG */}
         <img src="/brand/raved-logo-green.svg" alt="شعار رفد" width={34} height={40} className="h-10 w-auto" />
         <p className="text-sm text-muted-foreground">
-          رفد — منصة تعليمية مجانية لطلاب اليمن · <Link href="/privacy">الخصوصية</Link> ·{" "}
-          <Link href="/terms">الشروط</Link> · <Link href="/verify">تحقق من شهادة</Link>
+          رفد — منصة تعليمية مجانية لطلاب اليمن · <Link href="/privacy">الخصوصية</Link> · <Link href="/terms">الشروط</Link> ·{" "}
+          <Link href="/verify">تحقق من شهادة</Link> · <Link href="/app">تطبيق أندرويد</Link>
         </p>
       </div>
     </footer>

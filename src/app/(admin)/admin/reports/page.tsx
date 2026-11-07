@@ -6,29 +6,56 @@ import { En } from "@/components/en";
 import { MixedText } from "@/components/mixed-text";
 import { daysAgoIso, dropOffLessons, weeklyActive } from "@/lib/admin/reports";
 import { createClient } from "@/lib/supabase/server";
-import { resolveReport } from "../actions";
+import { resolveAppError, resolveReport } from "../actions";
 
 export const metadata: Metadata = { title: "التقارير والبلاغات" };
 
-const KIND_AR: Record<string, string> = { error: "خطأ في الدرس", not_useful: "غير مفيد", broken_link: "رابط معطّل" };
+const KIND_AR: Record<string, string> = { error: "خطأ في الدرس", not_useful: "غير مفيد", broken_link: "رابط معطّل", feedback: "ملاحظة من طالب" };
 
 export default async function ReportsPage() {
   const supabase = await createClient();
   const since = daysAgoIso(8 * 7);
-  const [{ data: progress }, { data: quizzes }, { data: students }, { data: governorates }, { data: reports }, { data: lessons }, { data: allProgress }, { data: broken }] =
-    await Promise.all([
-      supabase.from("lesson_progress").select("student_id, completed_at").gte("completed_at", since),
-      supabase.from("quiz_attempts").select("student_id, created_at").gte("created_at", since),
-      supabase.from("profiles").select("governorate").eq("role", "student").eq("status", "active"),
-      supabase.from("governorates").select("code, name_ar"),
-      supabase.from("reports").select("id, kind, note, created_at, lessons(id, title)").eq("status", "open").order("created_at", { ascending: false }).limit(50),
-      supabase.from("lessons").select("id, title, position, units!inner(position, status, levels!inner(position))").eq("units.status", "published").eq("archived", false),
-      supabase.from("lesson_progress").select("student_id, lesson_id").eq("status", "completed"),
-      supabase.from("sources").select("youtube_id, title, last_checked_at").eq("status", "broken").order("last_checked_at", { ascending: false }),
-    ]);
+  const [
+    { data: progress },
+    { data: quizzes },
+    { data: students },
+    { data: governorates },
+    { data: reports },
+    { data: lessons },
+    { data: allProgress },
+    { data: broken },
+    { data: errors },
+  ] = await Promise.all([
+    supabase.from("lesson_progress").select("student_id, completed_at").gte("completed_at", since),
+    supabase.from("quiz_attempts").select("student_id, created_at").gte("created_at", since),
+    supabase.from("profiles").select("governorate").eq("role", "student").eq("status", "active"),
+    supabase.from("governorates").select("code, name_ar"),
+    supabase
+      .from("reports")
+      .select("id, kind, note, page, created_at, lessons(id, title)")
+      .eq("status", "open")
+      .order("created_at", { ascending: false })
+      .limit(50),
+    supabase
+      .from("lessons")
+      .select("id, title, position, units!inner(position, status, levels!inner(position))")
+      .eq("units.status", "published")
+      .eq("archived", false),
+    supabase.from("lesson_progress").select("student_id, lesson_id").eq("status", "completed"),
+    supabase.from("sources").select("youtube_id, title, last_checked_at").eq("status", "broken").order("last_checked_at", { ascending: false }),
+    supabase
+      .from("app_errors")
+      .select("id, source, message, digest, page, user_agent, created_at")
+      .eq("status", "open")
+      .order("created_at", { ascending: false })
+      .limit(50),
+  ]);
 
   const weeks = weeklyActive(
-    [...(progress ?? []).map((p) => ({ student: p.student_id, at: p.completed_at })), ...(quizzes ?? []).map((q) => ({ student: q.student_id, at: q.created_at }))],
+    [
+      ...(progress ?? []).map((p) => ({ student: p.student_id, at: p.completed_at })),
+      ...(quizzes ?? []).map((q) => ({ student: q.student_id, at: q.created_at })),
+    ],
     8,
     new Date(),
   );
@@ -104,9 +131,9 @@ export default async function ReportsPage() {
       </Card>
 
       <Card className="p-5">
-        <h2 className="mb-2 text-lg font-bold">بلاغات مفتوحة</h2>
+        <h2 className="mb-2 text-lg font-bold">البلاغات وملاحظات الطلاب</h2>
         {(reports ?? []).length === 0 ? (
-          <p className="text-sm text-muted-foreground">لا توجد بلاغات مفتوحة.</p>
+          <p className="text-sm text-muted-foreground">لا توجد بلاغات أو ملاحظات جديدة.</p>
         ) : (
           reports!.map((r) => (
             <div key={r.id} className="flex flex-wrap items-start gap-3 border-b border-muted py-3 text-sm last:border-b-0">
@@ -116,17 +143,63 @@ export default async function ReportsPage() {
                   {r.lessons && (
                     <>
                       {" "}
-                      · <Link href={`/preview/lesson/${r.lessons.id}`}>
+                      ·{" "}
+                      <Link href={`/preview/lesson/${r.lessons.id}`}>
                         <MixedText text={r.lessons.title} />
                       </Link>
                     </>
                   )}
                 </p>
-                {r.note && <p className="text-muted-foreground">{r.note}</p>}
+                {r.note && <p className="whitespace-pre-line text-muted-foreground">{r.note}</p>}
+                {r.page && (
+                  <p className="font-en text-xs text-muted-foreground" dir="ltr">
+                    {r.page}
+                  </p>
+                )}
                 <p className="text-xs text-muted-foreground">{new Date(r.created_at).toLocaleDateString("ar")}</p>
               </div>
               <form action={resolveReport}>
                 <input type="hidden" name="report_id" value={r.id} />
+                <SubmitButton variant="secondary" size="sm" pendingLabel="…">
+                  تمّت المعالجة
+                </SubmitButton>
+              </form>
+            </div>
+          ))
+        )}
+      </Card>
+
+      <Card id="errors" className="p-5">
+        <div className="mb-2 flex flex-wrap items-center gap-3">
+          <h2 className="flex-1 text-lg font-bold">سجل الأخطاء</h2>
+          {(errors ?? []).length > 0 && (
+            <form action={resolveAppError}>
+              <input type="hidden" name="all" value="1" />
+              <SubmitButton variant="secondary" size="sm" pendingLabel="…">
+                تمّت معالجة الكل
+              </SubmitButton>
+            </form>
+          )}
+        </div>
+        <p className="mb-2 text-xs text-muted-foreground">أخطاء ظهرت للطلاب في المتصفح أو على الخادم (بلا بيانات شخصية). أرسل لي نص الخطأ إذا تكرر لأصلحه.</p>
+        {(errors ?? []).length === 0 ? (
+          <p className="text-sm text-muted-foreground">لا توجد أخطاء جديدة.</p>
+        ) : (
+          errors!.map((e) => (
+            <div key={e.id} className="flex flex-wrap items-start gap-3 border-b border-muted py-3 text-sm last:border-b-0">
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold">
+                  {e.source === "server" ? "خطأ على الخادم" : "خطأ في المتصفح"} · {new Date(e.created_at).toLocaleString("ar")}
+                </p>
+                <p className="font-en break-words text-muted-foreground" dir="ltr">
+                  {e.message}
+                </p>
+                <p className="font-en text-xs text-muted-foreground" dir="ltr">
+                  {[e.page, e.digest && `digest ${e.digest}`, e.user_agent].filter(Boolean).join(" · ")}
+                </p>
+              </div>
+              <form action={resolveAppError}>
+                <input type="hidden" name="error_id" value={e.id} />
                 <SubmitButton variant="secondary" size="sm" pendingLabel="…">
                   تمّت المعالجة
                 </SubmitButton>

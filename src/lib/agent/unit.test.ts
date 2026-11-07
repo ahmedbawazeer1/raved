@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { runNextJob, type AgentJob, type AgentStore, type UnitTools } from "./runner";
 import { parseBuildInput, searchQueries } from "./unit";
-import { isoDurationSeconds } from "./youtube";
+import { isoDurationSeconds, youtubeError } from "./youtube";
 
 const unit = {
   code: "A1-04",
@@ -26,7 +26,7 @@ const timeline = {
   suitable: true,
 };
 
-function harness(answers: (prompt: string) => string, validateOk = true) {
+function harness(answers: (prompt: string) => string, validateOk = true, searchError?: Error) {
   const updates: Record<string, unknown>[] = [];
   const job: AgentJob = { id: "j", kind: "build_unit", path_id: "p", input, log: [] };
   const store: AgentStore = {
@@ -36,9 +36,10 @@ function harness(answers: (prompt: string) => string, validateOk = true) {
     memory: async () => [],
   };
   const tools: UnitTools = {
-    search: async () => [
-      { id: "abcdefghijk", title: "Shopping English", channel: "Good Channel", description: "", durationSec: 300, captions: true, views: 1000 },
-    ],
+    search: async () => {
+      if (searchError) throw searchError;
+      return [{ id: "abcdefghijk", title: "Shopping English", channel: "Good Channel", description: "", durationSec: 300, captions: true, views: 1000 }];
+    },
     validate: () => (validateOk ? { ok: true, errors: [] } : { ok: false, errors: [{ path: "/lessons", message: "missing" }] }),
     schema: "{}",
     example: "{}",
@@ -58,6 +59,18 @@ function answer(prompt: string): string {
 }
 
 describe("unit builder", () => {
+  it("waits (does not fail) when the YouTube key or quota is the problem", async () => {
+    const res = new Response(JSON.stringify({ error: { message: "API key not valid.", errors: [{ reason: "badRequest" }] } }), { status: 400 });
+    const err = await youtubeError(res, "search");
+    expect(err.code).toBe("config");
+    expect(err.message).toContain("API key not valid");
+    const h = harness(answer, true, err);
+    await h.run();
+    expect(h.last()).toMatchObject({ status: "queued", step: "waiting" });
+    const quota = await youtubeError(new Response(JSON.stringify({ error: { errors: [{ reason: "quotaExceeded" }] } }), { status: 403 }), "search");
+    expect(quota.code).toBe("quota");
+  });
+
   it("parses durations", () => {
     expect(isoDurationSeconds("PT4M13S")).toBe(253);
     expect(isoDurationSeconds("PT1H")).toBe(3600);

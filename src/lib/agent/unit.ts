@@ -3,6 +3,7 @@
  * a timeline, then write the whole unit package around that one video and situation.
  */
 import { z } from "zod";
+import { external } from "./constitution";
 import type { PlanUnit } from "./plan";
 import type { VideoCandidate } from "./youtube";
 
@@ -53,6 +54,13 @@ export const timelineSchema = z.object({
 });
 export type Timeline = z.infer<typeof timelineSchema>;
 
+/** A watched video's timeline for a prompt: what is said there is internet content, so it is wrapped as data. */
+export function timelineLines(timeline: Timeline): string {
+  return timeline.segments
+    .map((s) => `[${s.start_sec}-${s.end_sec}s] ${external(s.what_happens_en, 400)} | ${external(s.key_sentences.join(" / "), 800)}`)
+    .join("\n");
+}
+
 export function searchQueries(unit: PlanUnit, level: string): string[] {
   const base = unit.search_hints.slice(0, 3);
   return base.length
@@ -67,7 +75,7 @@ Grammar: ${input.unit.grammar}. Words: ${input.unit.vocab_domain}. Objectives: $
 Prefer: clear speech at this level, 3–12 minutes, a well-known educational channel, English captions, nothing unsuitable for
 Yemeni secondary students.
 Candidates:
-${candidates.map((c) => `- id ${c.id}: «${c.title}» by ${c.channel}, ${Math.round(c.durationSec / 60)} min, captions: ${c.captions ? "yes" : "no"}, views ${c.views}. ${c.description.replace(/\s+/g, " ").slice(0, 160)}`).join("\n")}
+${candidates.map((c) => `- id ${c.id}: ${external(c.title, 120)} by ${external(c.channel, 60)}, ${Math.round(c.durationSec / 60)} min, captions: ${c.captions ? "yes" : "no"}, views ${c.views}. ${external(c.description, 160)}`).join("\n")}
 Return JSON: {"video_id": "<one id from the list>", "reason_ar": "<why, in Arabic, one sentence>"}`;
 }
 
@@ -93,9 +101,9 @@ Unit plan: ${JSON.stringify(input.unit)}
 Units before it (build on them, do not repeat): ${input.previous.join(" | ") || "none"}.
 
 The unit is built around ONE YouTube video, which every lesson uses:
-video id ${video.id}, «${video.title}» by ${video.channel}, ${timeline.duration_sec} seconds.
+video id ${video.id}, ${external(video.title, 120)} by ${external(video.channel, 60)}, ${timeline.duration_sec} seconds.
 Its timeline:
-${timeline.segments.map((s) => `[${s.start_sec}-${s.end_sec}s] ${s.what_happens_en} | ${s.key_sentences.join(" / ")}`).join("\n")}
+${timelineLines(timeline)}
 
 Rules for this package:
 - 4 to 6 lessons. Each lesson covers a part of the video, in order, and follows: a video block for that part
@@ -144,7 +152,7 @@ conversation) that shows the unit's situation «${input.unit.title_en}» (${inpu
 alcohol, immodest images, violence, swearing or mocking religion). Pick a part of 30–120 seconds. If none is suitable, return
 "video_id": null.
 Candidates:
-${candidates.map((c) => `- id ${c.id}: «${c.title}» by ${c.channel}, ${Math.round(c.durationSec / 60)} min. ${c.description.replace(/\s+/g, " ").slice(0, 140)}`).join("\n")}
+${candidates.map((c) => `- id ${c.id}: ${external(c.title, 120)} by ${external(c.channel, 60)}, ${Math.round(c.durationSec / 60)} min. ${external(c.description, 140)}`).join("\n")}
 Return JSON: {"video_id": "<id or null>", "start_sec": 0, "end_sec": 0, "reason_ar": "<why, in Arabic>"}`;
 }
 
@@ -160,9 +168,9 @@ export interface ClipChoice {
 /** Extra instructions for the unit package when an authentic scene was found. */
 export function clipInstructions(clip: ClipChoice): string {
   return `
-Authentic scene for the end of the unit (after the review lesson): YouTube id ${clip.id}, «${clip.title}» by ${clip.channel},
+Authentic scene for the end of the unit (after the review lesson): YouTube id ${clip.id}, ${external(clip.title, 120)} by ${external(clip.channel, 60)},
 from ${clip.start_sec}s to ${clip.end_sec}s. What happens:
-${clip.timeline.segments.map((s) => `[${s.start_sec}-${s.end_sec}s] ${s.what_happens_en} | ${s.key_sentences.join(" / ")}`).join("\n")}
+${timelineLines(clip.timeline)}
 Add one more lesson at the end titled «مشهد من الحياة» (skill "listening") with: a video block for this scene (youtube_id
 "${clip.id}", start_sec ${clip.start_sec}, end_sec ${clip.end_sec}, duration_sec ${clip.end_sec - clip.start_sec},
 optional: true, 2 checkpoints), a short Arabic text block about what to notice, and 3–4 exercises on what was said.
