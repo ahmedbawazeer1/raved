@@ -8,7 +8,7 @@ import { createClient } from "@/lib/supabase/server";
 export default async function AdminHomePage() {
   const supabase = await createClient();
   const weekAgo = daysAgoIso(7);
-  const [pending, active, paths, waitlist, inReview, openReports, broken, activeWeek, enrollments, usage, quotas] = await Promise.all([
+  const [pending, active, paths, waitlist, inReview, openReports, broken, activeWeek, enrollments, usage, quotas, openErrors] = await Promise.all([
     supabase.from("applications").select("id", { count: "exact", head: true }).eq("status", "submitted"),
     supabase.from("profiles").select("id", { count: "exact", head: true }).eq("status", "active").eq("role", "student"),
     supabase.from("paths").select("id", { count: "exact", head: true }).eq("status", "published"),
@@ -17,9 +17,15 @@ export default async function AdminHomePage() {
     supabase.from("reports").select("id", { count: "exact", head: true }).eq("status", "open"),
     supabase.from("sources").select("id", { count: "exact", head: true }).eq("status", "broken"),
     supabase.from("lesson_progress").select("student_id").gte("updated_at", weekAgo),
-    supabase.from("enrollments").select("levels!enrollments_current_level_id_fkey(code), profiles!inner(status, role)").eq("is_primary", true).eq("profiles.status", "active").eq("profiles.role", "student"),
+    supabase
+      .from("enrollments")
+      .select("levels!enrollments_current_level_id_fkey(code), profiles!inner(status, role)")
+      .eq("is_primary", true)
+      .eq("profiles.status", "active")
+      .eq("profiles.role", "student"),
     supabase.from("ai_usage").select("feature, ok").eq("day", yemenDay()),
     quotaStatus(),
+    supabase.from("app_errors").select("id", { count: "exact", head: true }).eq("status", "open"),
   ]);
 
   const kpis = [
@@ -31,8 +37,9 @@ export default async function AdminHomePage() {
   const todos = [
     { label: "طلبات التحاق تنتظر المراجعة", count: pending.count ?? 0, href: "/admin/applications" },
     { label: "وحدات تنتظر المراجعة", count: inReview.count ?? 0, href: "/admin/content" },
-    { label: "بلاغات مفتوحة من الطلاب", count: openReports.count ?? 0, href: "/admin/reports" },
+    { label: "بلاغات وملاحظات من الطلاب", count: openReports.count ?? 0, href: "/admin/reports" },
     { label: "روابط فيديو معطّلة", count: broken.count ?? 0, href: "/admin/reports#videos" },
+    { label: "أخطاء جديدة في المنصة", count: openErrors.count ?? 0, href: "/admin/reports#errors" },
   ];
   const byLevel = new Map<string, number>();
   for (const e of enrollments.data ?? []) {
@@ -53,7 +60,8 @@ export default async function AdminHomePage() {
         .filter((q) => q.alert)
         .map((q) => (
           <Link key={q.provider} href="/admin/ai-review" className="rounded-2xl bg-warning-tint p-4 text-sm font-semibold text-[#5C3D00] no-underline">
-            تنبيه: استُهلك {q.percent}% من الحصة المجانية اليومية لـ <span className="font-en">{q.provider}</span> ({q.requests} من {q.quota} طلب). قد يتوقف التقييم الآلي قبل نهاية اليوم.
+            تنبيه: استُهلك {q.percent}% من الحصة المجانية اليومية لـ <span className="font-en">{q.provider}</span> ({q.requests} من {q.quota} طلب). قد يتوقف
+            التقييم الآلي قبل نهاية اليوم.
           </Link>
         ))}
 
@@ -80,7 +88,9 @@ export default async function AdminHomePage() {
               className="flex min-h-11 items-center gap-3 border-b border-muted py-2 text-[15px] text-foreground no-underline last:border-b-0 hover:text-foreground"
             >
               <span className="flex-1">{t.label}</span>
-              <span className={`rounded-full px-2.5 font-en text-sm leading-6 font-bold ${t.count ? "bg-accent text-accent-foreground" : "bg-muted text-subtle"}`}>
+              <span
+                className={`rounded-full px-2.5 font-en text-sm leading-6 font-bold ${t.count ? "bg-accent text-accent-foreground" : "bg-muted text-subtle"}`}
+              >
                 {t.count}
               </span>
             </Link>

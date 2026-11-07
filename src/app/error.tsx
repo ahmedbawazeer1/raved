@@ -1,11 +1,14 @@
 "use client";
 
+import { useEffect } from "react";
+import { reportError } from "@/lib/errors/client";
 import Link from "next/link";
 import { RefreshCw, TriangleAlert } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 /** Shown instead of the browser's English error page when a page fails on the server. */
 export default function ErrorPage({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  useEffect(() => reportError(error, error.digest), [error]);
   return (
     <main className="flex flex-1 items-center justify-center px-6 py-10">
       <div className="mx-auto flex max-w-[460px] flex-col items-center gap-3.5 text-center">

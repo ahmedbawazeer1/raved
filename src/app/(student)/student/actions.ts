@@ -6,6 +6,7 @@ import { z } from "zod";
 import { createClient } from "@/lib/supabase/server";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { LESSON_BLOCKERS_AR } from "@/lib/gamification/blockers";
+import { cleanPage } from "@/lib/errors/report";
 
 const uuid = z.uuid();
 
@@ -30,10 +31,7 @@ export async function completeLesson(_prev: CompleteLessonState, formData: FormD
 const youtubeId = z.string().regex(/^[A-Za-z0-9_-]{11}$/);
 
 /** Saves how much of a video was really played; returns the server's view of it. */
-export async function recordVideoWatch(
-  videoId: string,
-  watchedSec: number,
-): Promise<{ watched: number; duration: number; done: boolean } | null> {
+export async function recordVideoWatch(videoId: string, watchedSec: number): Promise<{ watched: number; duration: number; done: boolean } | null> {
   await requireActiveStudent();
   const id = youtubeId.safeParse(videoId);
   const sec = z.number().int().min(0).max(36_000).safeParse(Math.floor(watchedSec));
@@ -67,13 +65,38 @@ export async function rateLesson(_prev: FeedbackState, formData: FormData): Prom
 export async function reportLesson(_prev: FeedbackState, formData: FormData): Promise<FeedbackState> {
   const { userId } = await requireActiveStudent();
   const lessonId = uuid.safeParse(formData.get("lesson_id"));
-  const note = String(formData.get("note") ?? "").trim().slice(0, 1000);
+  const note = String(formData.get("note") ?? "")
+    .trim()
+    .slice(0, 1000);
   if (!lessonId.success) return { error: "حدث خطأ." };
   if (note.length < 3) return { error: "اكتب الخطأ الذي وجدته." };
 
   const supabase = await createClient();
   const { error } = await supabase.from("reports").insert({ student_id: userId, lesson_id: lessonId.data, kind: "error", note });
   if (error) return { error: "تعذر الإرسال. حاول مرة أخرى." };
+  return { ok: true };
+}
+
+/** A general note about the app for the Raved team (BUILD_PROMPTS phase 7), at most 10 a day. */
+export async function sendFeedback(_prev: FeedbackState, formData: FormData): Promise<FeedbackState> {
+  const { userId } = await requireActiveStudent();
+  const note = String(formData.get("note") ?? "")
+    .trim()
+    .slice(0, 1000);
+  if (note.length < 3) return { error: "اكتب ملاحظتك أولاً." };
+  const page = cleanPage(String(formData.get("page") ?? "") || undefined);
+
+  const supabase = await createClient();
+  const since = new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString();
+  const { count } = await supabase
+    .from("reports")
+    .select("id", { count: "exact", head: true })
+    .eq("student_id", userId)
+    .eq("kind", "feedback")
+    .gte("created_at", since);
+  if ((count ?? 0) >= 10) return { error: "أرسلت ملاحظات كثيرة اليوم. شكراً لك، جرّب غداً." };
+  const { error } = await supabase.from("reports").insert({ student_id: userId, kind: "feedback", note, page });
+  if (error) return { error: "تعذر الإرسال. تأكد من الاتصال وحاول مرة أخرى." };
   return { ok: true };
 }
 

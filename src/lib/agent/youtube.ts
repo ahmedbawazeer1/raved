@@ -61,7 +61,8 @@ interface VideosResponse {
 }
 
 export async function searchYouTube(query: string, opts: { apiKey?: string; max?: number; minSec?: number; maxSec?: number } = {}): Promise<VideoCandidate[]> {
-  const key = opts.apiKey ?? process.env.YOUTUBE_API_KEY;
+  // Trimmed: a key pasted into GitHub secrets often carries a trailing space or newline.
+  const key = (opts.apiKey ?? process.env.YOUTUBE_API_KEY)?.trim();
   if (!key) throw new Error("YOUTUBE_API_KEY is missing");
   const params = new URLSearchParams({
     part: "snippet",

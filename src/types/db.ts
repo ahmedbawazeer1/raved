@@ -130,6 +130,50 @@ export type Database = {
           },
         ]
       }
+      app_errors: {
+        Row: {
+          created_at: string
+          digest: string | null
+          id: string
+          message: string
+          page: string | null
+          source: string
+          status: string
+          user_agent: string | null
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          digest?: string | null
+          id?: string
+          message: string
+          page?: string | null
+          source: string
+          status?: string
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          digest?: string | null
+          id?: string
+          message?: string
+          page?: string | null
+          source?: string
+          status?: string
+          user_agent?: string | null
+          user_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "app_errors_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       agent_memory: {
         Row: {
           active: boolean
@@ -1240,6 +1284,7 @@ export type Database = {
           kind: string
           lesson_id: string | null
           note: string | null
+          page: string | null
           status: string
           student_id: string
           updated_at: string
@@ -1250,6 +1295,7 @@ export type Database = {
           kind: string
           lesson_id?: string | null
           note?: string | null
+          page?: string | null
           status?: string
           student_id: string
           updated_at?: string
@@ -1260,6 +1306,7 @@ export type Database = {
           kind?: string
           lesson_id?: string | null
           note?: string | null
+          page?: string | null
           status?: string
           student_id?: string
           updated_at?: string

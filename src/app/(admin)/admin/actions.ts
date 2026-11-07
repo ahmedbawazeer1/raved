@@ -45,7 +45,9 @@ export async function reviewApplication(_prev: AdminFormState, formData: FormDat
   await requireAdmin();
   const id = z.uuid().safeParse(formData.get("application_id"));
   const decision = z.enum(["approved", "needs_changes", "rejected"]).safeParse(formData.get("decision"));
-  const note = String(formData.get("note") ?? "").trim().slice(0, 1000);
+  const note = String(formData.get("note") ?? "")
+    .trim()
+    .slice(0, 1000);
   if (!id.success || !decision.success) return { error: "حدث خطأ. حدّث الصفحة وحاول مرة أخرى." };
   if (decision.data !== "approved" && !note) {
     return { fieldErrors: { note: "اكتب ملاحظة للطالب توضح المطلوب أو السبب." } };
@@ -118,7 +120,10 @@ export async function savePath(_prev: AdminFormState, formData: FormData): Promi
     const { data: current } = await supabase.from("paths").select("status, published_at").eq("id", id).single();
     previousStatus = current?.status ?? null;
     const publishedAt = values.status === "published" && !current?.published_at ? new Date().toISOString() : current?.published_at;
-    const { error } = await supabase.from("paths").update({ ...values, features, published_at: publishedAt ?? null }).eq("id", id);
+    const { error } = await supabase
+      .from("paths")
+      .update({ ...values, features, published_at: publishedAt ?? null })
+      .eq("id", id);
     if (error) return { error: error.code === "23505" ? "هذا الرابط مستخدم لمسار آخر." : "تعذر الحفظ. حاول مرة أخرى." };
   } else {
     const { error } = await supabase.from("paths").insert({
@@ -210,7 +215,9 @@ export async function saveAiSettings(_prev: AdminFormState, formData: FormData):
     { key: "quota_alert_percent", value: alert },
   ]);
   if (error) return { error: "تعذر الحفظ. حاول مرة أخرى." };
-  await supabase.from("audit_log").insert({ actor_id: userId, action: "settings.ai", target: "ai", data: { speaking, writing, assistant, quota, alert, paused } });
+  await supabase
+    .from("audit_log")
+    .insert({ actor_id: userId, action: "settings.ai", target: "ai", data: { speaking, writing, assistant, quota, alert, paused } });
   revalidatePath("/admin/settings");
   revalidatePath("/admin/ai-review");
   return { ok: true, message: "حُفظت إعدادات الذكاء الاصطناعي." };
@@ -275,6 +282,21 @@ export async function resolveReport(formData: FormData): Promise<void> {
   const supabase = await createClient();
   await supabase.from("reports").update({ status: "resolved" }).eq("id", id.data);
   await supabase.from("audit_log").insert({ actor_id: userId, action: "report.resolve", target: id.data, data: {} });
+  revalidatePath("/admin/reports");
+}
+
+/** Marks one logged error (or, with "all", every open one) as handled. */
+export async function resolveAppError(formData: FormData): Promise<void> {
+  const { userId } = await requireAdmin();
+  const supabase = await createClient();
+  if (formData.get("all") === "1") {
+    await supabase.from("app_errors").update({ status: "resolved" }).eq("status", "open");
+    await supabase.from("audit_log").insert({ actor_id: userId, action: "app_error.resolve_all", target: null, data: {} });
+  } else {
+    const id = z.uuid().safeParse(formData.get("error_id"));
+    if (!id.success) return;
+    await supabase.from("app_errors").update({ status: "resolved" }).eq("id", id.data);
+  }
   revalidatePath("/admin/reports");
 }
 

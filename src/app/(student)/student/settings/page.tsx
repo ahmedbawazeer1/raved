@@ -4,6 +4,7 @@ import { Award, Bell, ChevronLeft, Download, LineChart, Route } from "lucide-rea
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ExperienceForm } from "@/components/student/experience-form";
+import { FeedbackForm } from "@/components/student/feedback-form";
 import { DeleteAccountForm, PasswordForm, ProfileForm, StudyForm } from "@/components/student/settings-forms";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { gradeLabel } from "@/lib/yemen";
@@ -56,6 +57,10 @@ export default async function SettingsPage() {
             <ChevronLeft className="size-4 text-muted-foreground" aria-hidden="true" />
           </Link>
         ))}
+      </Card>
+
+      <Card id="feedback" className="p-5">
+        <FeedbackForm />
       </Card>
 
       <ExperienceForm stamps={stamps} />

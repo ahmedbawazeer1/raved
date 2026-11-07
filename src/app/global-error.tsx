@@ -1,7 +1,11 @@
 "use client";
 
+import { useEffect } from "react";
+import { reportError } from "@/lib/errors/client";
+
 /** Last resort when even the root layout fails: plain HTML, no app styles. */
 export default function GlobalError({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+  useEffect(() => reportError(error, error.digest), [error]);
   return (
     <html lang="ar" dir="rtl">
       <body style={{ margin: 0, fontFamily: "system-ui, sans-serif", background: "#F5F7F6", color: "#12201D" }}>
