@@ -4,6 +4,7 @@
  * for the owner's review. Used by scripts/agent/run.ts (GitHub Actions, service role).
  */
 import { systemPrompt } from "./constitution";
+import { YouTubeError, type VideoCandidate } from "./youtube";
 import { GeminiError, parseJsonAnswer, type GeminiRequest, type GeminiResult } from "./gemini";
 import { improvePrompt, type UnitStats } from "./improve";
 import {
@@ -32,7 +33,6 @@ import {
   watchPrompt,
   type ClipChoice,
 } from "./unit";
-import type { VideoCandidate } from "./youtube";
 
 export interface AgentJob {
   id: string;
@@ -69,6 +69,9 @@ export const ERROR_AR: Record<string, string> = {
   blocked: "رفض Gemini الطلب لأسباب أمان.",
   bad_response: "رد Gemini بشكل غير متوقع.",
   network: "تعذر الاتصال بـ Gemini.",
+  youtube_quota: "انتهت حصة YouTube المجانية لليوم. سيكمل الوكيل غداً تلقائياً.",
+  youtube_config:
+    "مفتاح YouTube لا يعمل: تأكد أن YouTube Data API v3 مفعّلة في مشروع المفتاح على Google Cloud، وأن المفتاح غير مقيّد بمواقع. سيعيد الوكيل المحاولة كل نصف ساعة.",
 };
 
 export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTools, now: () => Date = () => new Date()): Promise<string | null> {
@@ -140,6 +143,11 @@ export async function runNextJob(store: AgentStore, model: Model, tools?: UnitTo
     });
     return job.id;
   } catch (e) {
+    // YouTube problems affect every unit, so the job waits instead of failing.
+    if (e instanceof YouTubeError && e.code !== "network") {
+      await note(`${ERROR_AR[`youtube_${e.code}`]} (${e.message})`, { status: "queued", progress: 0, step: "waiting" });
+      return job.id;
+    }
     const code = e instanceof GeminiError ? e.code : null;
     const detail = e instanceof Error ? e.message : String(e);
     // Keep the provider's reason next to the Arabic summary, so a wrong key or model is easy to spot.
