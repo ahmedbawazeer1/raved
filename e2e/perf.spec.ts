@@ -4,14 +4,25 @@ import { login } from "./fixtures";
 /** CLAUDE.md: initial JS < 200KB gzipped on student pages. Measured on a fresh load (no cache, no service worker). */
 const BUDGET_KB = 200;
 
+/**
+ * Gzipped size of the scripts the page itself loaded (not link prefetches of other pages), computed in the
+ * browser with CompressionStream so the result does not depend on the test server's compression.
+ */
 async function initialJsKb(page: Page): Promise<number> {
   await page.waitForLoadState("networkidle");
-  const bytes = await page.evaluate(() =>
-    performance
+  const bytes = await page.evaluate(async () => {
+    const urls = performance
       .getEntriesByType("resource")
-      .filter((e) => (e as PerformanceResourceTiming).initiatorType === "script" || e.name.endsWith(".js"))
-      .reduce((n, e) => n + ((e as PerformanceResourceTiming).encodedBodySize || 0), 0),
-  );
+      .filter((e) => (e as PerformanceResourceTiming).initiatorType === "script")
+      .map((e) => e.name);
+    let total = 0;
+    for (const url of [...new Set(urls)]) {
+      const body = await (await fetch(url)).blob();
+      const gz = await new Response(body.stream().pipeThrough(new CompressionStream("gzip"))).blob();
+      total += gz.size;
+    }
+    return total;
+  });
   return Math.round(bytes / 1024);
 }
 
