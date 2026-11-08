@@ -20,17 +20,19 @@ export interface VideoStatus {
   done: boolean;
 }
 
-/** YouTube's own player inside the app, without the seek bar (no skipping ahead), reporting the time every second. */
-function playerHtml(id: string, start: number, end: number | undefined): string {
-  return `<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1">
-<style>html,body{margin:0;background:#000;height:100%}#p{position:absolute;inset:0}</style></head><body><div id="p"></div>
-<script src="https://www.youtube.com/iframe_api"></script><script>
-var player;function send(m){window.ReactNativeWebView.postMessage(JSON.stringify(m))}
-function onYouTubeIframeAPIReady(){player=new YT.Player('p',{videoId:'${id}',playerVars:{controls:0,disablekb:1,playsinline:1,rel:0,modestbranding:1,start:${start}${end ? `,end:${end}` : ""}},
-events:{onReady:function(){send({type:'ready',duration:player.getDuration()})},onStateChange:function(e){send({type:'state',state:e.data})}}});
-setInterval(function(){if(player&&player.getCurrentTime){send({type:'tick',t:player.getCurrentTime(),state:player.getPlayerState(),duration:player.getDuration()})}},1000)}
-</script></body></html>`;
+/**
+ * YouTube's own player, without the seek bar (no skipping ahead), reporting the time every second. It is
+ * a page on our website (src/app/embed/youtube) so YouTube sees a normal https page with a real origin;
+ * an inline page inside the app can get "Sign in to confirm you're not a bot".
+ */
+function playerUrl(id: string, start: number, end: number | undefined): string {
+  const q = new URLSearchParams({ v: id, start: String(start) });
+  if (end) q.set("end", String(end));
+  return `${WEB_URL}/embed/youtube?${q.toString()}`;
 }
+
+/** A normal mobile Chrome user agent: Android's WebView adds "; wv", which YouTube treats with suspicion. */
+const CHROME_UA = "Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Mobile Safari/537.36";
 
 /**
  * A mandatory lesson video: only seconds really played count (80% unlocks the lesson, checked by the
@@ -51,6 +53,7 @@ export function LessonVideo({
   const start = block.start_sec ?? 0;
   const web = useRef<WebView>(null);
   const [ready, setReady] = useState(false);
+  const [failed, setFailed] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [duration, setDuration] = useState(block.end_sec && block.start_sec !== undefined ? block.end_sec - block.start_sec : (block.duration_sec ?? 0));
   const [ranges, setRanges] = useState<WatchRanges>([]);
@@ -90,6 +93,7 @@ export function LessonVideo({
       if (m.duration && !block.end_sec) setDuration(Math.floor(m.duration - start));
     }
     if (m.type === "state") setPlaying(m.state === 1);
+    if (m.type === "error") setFailed(true);
     if (m.type === "tick" && m.state === 1 && typeof m.t === "number") {
       const now = m.t - start;
       const due = dueCheckpoint(checkpoints, prev.current, now, answered.current);
@@ -118,8 +122,13 @@ export function LessonVideo({
       <View style={{ aspectRatio: 16 / 9, borderRadius: radius.lg, overflow: "hidden", backgroundColor: "#000" }}>
         <YouTubeView
           ref={web}
-          source={{ html: playerHtml(id, start, block.end_sec), baseUrl: WEB_URL }}
+          source={{ uri: playerUrl(id, start, block.end_sec) }}
+          userAgent={CHROME_UA}
           onMessage={onMessage}
+          thirdPartyCookiesEnabled
+          sharedCookiesEnabled
+          originWhitelist={["https://*"]}
+          setSupportMultipleWindows={false}
           allowsInlineMediaPlayback
           mediaPlaybackRequiresUserAction={false}
           javaScriptEnabled
@@ -138,6 +147,7 @@ export function LessonVideo({
       <View style={{ height: 8, borderRadius: 999, backgroundColor: colors.border, overflow: "hidden" }}>
         <View style={{ width: `${pct}%`, height: "100%", backgroundColor: done ? colors.success : colors.accent }} />
       </View>
+      {failed ? <Text style={{ color: colors.error }}>تعذّر تشغيل الفيديو. تأكد من الإنترنت ثم أغلق الدرس وافتحه من جديد.</Text> : null}
       <Text variant="small">
         {done ? "✅ شاهدت الفيديو، يمكنك إكمال الدرس" : `شاهدت ${pct}% · المطلوب 80% · المدة ${formatTime(duration)}`}
         {block.channel ? ` · ${block.channel}` : ""}
