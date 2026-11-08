@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import type { LessonBlock } from "@/lib/content/types";
+import type { LessonBlock } from "../content/types";
 import { lessonSections } from "./sections";
 
 const text = (s: string): LessonBlock => ({ type: "text", markdown_ar: s });

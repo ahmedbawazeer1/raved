@@ -5,8 +5,18 @@ describe("videoIds", () => {
   it("collects unique valid YouTube ids from lesson blocks", () => {
     expect(
       videoIds([
-        { blocks: [{ type: "video", youtube_id: "dQw4w9WgXcQ" }, { type: "text", markdown_ar: "x" }] },
-        { blocks: [{ type: "video", youtube_id: "dQw4w9WgXcQ" }, { type: "video", youtube_id: "bad id" }] },
+        {
+          blocks: [
+            { type: "video", youtube_id: "dQw4w9WgXcQ" },
+            { type: "text", markdown_ar: "x" },
+          ],
+        },
+        {
+          blocks: [
+            { type: "video", youtube_id: "dQw4w9WgXcQ" },
+            { type: "video", youtube_id: "bad id" },
+          ],
+        },
         { blocks: null },
       ]),
     ).toEqual(["dQw4w9WgXcQ"]);
