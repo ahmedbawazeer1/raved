@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowDown, ArrowUp, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { AddLevelForm, AddSourceForm, LevelProfileForm, VideoRulesForm } from "@/components/studio/forms";
+import { AddLevelForm, AddSourceForm, DeletePathForm, LevelProfileForm, VideoRulesForm } from "@/components/studio/forms";
 import { Alert } from "@/components/ui/form";
 import { requireStaff } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
@@ -18,7 +18,7 @@ export default async function PathProfilePage({ params, searchParams }: PageProp
   const isNew = (await searchParams).new === "1";
   const { isAdmin } = await requireStaff();
   const supabase = await createClient();
-  const { data: path } = await supabase.from("paths").select("id, title, levels(id, code, title, position)").eq("slug", slug).maybeSingle();
+  const { data: path } = await supabase.from("paths").select("id, title, status, levels(id, code, title, position)").eq("slug", slug).maybeSingle();
   if (!path) notFound();
   const [{ data: prof }, { data: sources }, { data: unitTemplates }] = await Promise.all([
     supabase.from("path_profiles").select("profile, updated_at").eq("path_id", path.id).maybeSingle(),
@@ -183,6 +183,20 @@ export default async function PathProfilePage({ params, searchParams }: PageProp
           </div>
         )}
       </Card>
+      {isAdmin && (
+        <details className="rounded-2xl border border-destructive/30 p-5">
+          <summary className="cursor-pointer font-semibold text-destructive">حذف المسار</summary>
+          <div className="pt-3">
+            {path.status === "draft" ? (
+              <DeletePathForm pathId={path.id} slug={slug} />
+            ) : (
+              <p className="text-sm text-muted-foreground">
+                المسار ظاهر للطلاب، فلا يُحذف. لإخفائه غيّر حالته إلى «مسودة» من <Link href={`/admin/paths?edit=${slug}`}>إعدادات المسار في الإدارة</Link>.
+              </p>
+            )}
+          </div>
+        </details>
+      )}
     </div>
   );
 }
