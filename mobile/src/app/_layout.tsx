@@ -8,6 +8,7 @@ import { IBMPlexSansArabic_400Regular, IBMPlexSansArabic_600SemiBold, IBMPlexSan
 import { Inter_400Regular, Inter_600SemiBold } from "@expo-google-fonts/inter";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { AppConfigProvider, useAppConfig } from "@/lib/app-config";
+import { QueryProvider } from "@/lib/query";
 import { SessionProvider, useSession } from "@/lib/session";
 import { Button, colors, Screen, Text } from "@/ui";
 
@@ -24,12 +25,14 @@ export default function RootLayout() {
 
   return (
     <SafeAreaProvider>
-      <AppConfigProvider>
-        <SessionProvider>
-          <StatusBar style="dark" />
-          {fontsLoaded ? <Gate /> : null}
-        </SessionProvider>
-      </AppConfigProvider>
+      <QueryProvider>
+        <AppConfigProvider>
+          <SessionProvider>
+            <StatusBar style="dark" />
+            {fontsLoaded ? <Gate /> : null}
+          </SessionProvider>
+        </AppConfigProvider>
+      </QueryProvider>
     </SafeAreaProvider>
   );
 }

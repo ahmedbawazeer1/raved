@@ -47,7 +47,13 @@
           "forcesRTL": true
         }
       ],
-      "./plugins/with-release-signing"
+      "./plugins/with-release-signing",
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "يستخدم رفد الميكروفون لتسمعك في تدريب المحادثة. يتحول صوتك إلى نص ثم يُحذف ولا يُحفظ."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

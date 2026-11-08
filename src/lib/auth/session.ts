@@ -1,7 +1,7 @@
 import "server-only";
 import { cache } from "react";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { bearerToken, createClient } from "@/lib/supabase/server";
 import { isSupabaseConfigured } from "@/lib/supabase/env";
 import type { Tables } from "@/types/db";
 import { homePathFor } from "./routing";
@@ -20,7 +20,9 @@ export interface SessionContext {
 export const getSessionContext = cache(async (): Promise<SessionContext | null> => {
   if (!isSupabaseConfigured()) return null;
   const supabase = await createClient();
-  const { data: claimsData } = await supabase.auth.getClaims();
+  // The app sends its access token; the website uses the session cookie. Both are verified here.
+  const token = await bearerToken();
+  const { data: claimsData } = await supabase.auth.getClaims(token ?? undefined);
   const userId = claimsData?.claims?.sub;
   if (!userId) return null;
 

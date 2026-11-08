@@ -4,7 +4,12 @@ import { durationLabel, parseFeatures } from "./features";
 describe("path features", () => {
   it("parses missing and non-boolean flags as false", () => {
     expect(parseFeatures({ vocab: true, speaking: "yes" })).toEqual({
-      placement: false, vocab: true, speaking: false, writing: false, exam_track: false, projects: false,
+      placement: false,
+      vocab: true,
+      speaking: false,
+      writing: false,
+      exam_track: false,
+      projects: false,
     });
     expect(parseFeatures(null).vocab).toBe(false);
   });
