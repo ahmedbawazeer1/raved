@@ -23,8 +23,9 @@ interface Next {
   href: string;
 }
 
-export default async function StudioHome() {
+export default async function StudioHome({ searchParams }: PageProps<"/studio">) {
   const { isAdmin } = await requireStaff();
+  const deleted = (await searchParams).deleted === "1";
   const supabase = await createClient();
   const [{ data: paths }, { data: profiles }, { data: maps }, { data: units }] = await Promise.all([
     supabase.from("paths").select("id, slug, title, status, position, levels(id, code, title, position)").order("position"),
@@ -70,6 +71,8 @@ export default async function StudioHome() {
           </Button>
         )}
       </header>
+
+      {deleted && <p className="rounded-xl bg-success-tint px-4 py-3 text-sm font-semibold text-success">حُذف المسار.</p>}
 
       <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {STEPS.map((s) => (

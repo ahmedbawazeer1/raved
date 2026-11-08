@@ -4,7 +4,17 @@ import { useActionState } from "react";
 import { Alert, Checkbox, Field, Input, Select, Textarea } from "@/components/ui/form";
 import { SubmitButton } from "@/components/ui/submit-button";
 import type { AdminFormState } from "@/app/(admin)/admin/actions";
-import { addLevel, addVideoSource, approveMap, createPath, planLevelMap, saveLevelProfile, saveMapUnit, saveVideoRules } from "@/app/(studio)/studio/actions";
+import {
+  addLevel,
+  addVideoSource,
+  approveMap,
+  createPath,
+  deletePath,
+  planLevelMap,
+  saveLevelProfile,
+  saveMapUnit,
+  saveVideoRules,
+} from "@/app/(studio)/studio/actions";
 import { FRAMEWORK_LABELS, LANGUAGE_LABELS, type LevelProfile, type PathProfile } from "@/lib/factory/profile";
 
 function Status({ state }: { state: AdminFormState }) {
@@ -357,6 +367,24 @@ export function AddLevelForm({ pathId, unitTemplates, nextCode }: { pathId: stri
       </Field>
       <SubmitButton size="sm" className="self-start" pendingLabel="جارٍ الإضافة…">
         أضف المستوى
+      </SubmitButton>
+    </form>
+  );
+}
+
+/** Deleting a path: only hidden paths without students, confirmed by typing the link. */
+export function DeletePathForm({ pathId, slug }: { pathId: string; slug: string }) {
+  const [state, action] = useActionState<AdminFormState, FormData>(deletePath, {});
+  return (
+    <form action={action} className="flex flex-col gap-3">
+      <input type="hidden" name="path_id" value={pathId} />
+      <Status state={state} />
+      <p className="text-sm text-muted-foreground">يُحذف المسار مع مستوياته وخرائطه ووحداته نهائياً. متاح فقط لمسار مخفي عن الطلاب ولا يوجد فيه طالب مسجّل.</p>
+      <Field id="confirm-delete" label={`للتأكيد اكتب رابط المسار: ${slug}`}>
+        <Input id="confirm-delete" name="confirm" dir="ltr" autoComplete="off" required />
+      </Field>
+      <SubmitButton variant="destructive" size="sm" className="self-start" pendingLabel="جارٍ الحذف…">
+        احذف المسار نهائياً
       </SubmitButton>
     </form>
   );

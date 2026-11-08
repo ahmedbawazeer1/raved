@@ -435,3 +435,25 @@ export async function addLevel(_prev: AdminFormState, formData: FormData): Promi
   revalidatePath("/studio", "layout");
   return { ok: true, message: `أُضيف المستوى ${code}. الخطوة التالية: افتحه واطلب تخطيط خريطته.` };
 }
+
+/**
+ * Deletes a path with everything built for it (levels, maps, units, jobs). Only a hidden path that no
+ * student is enrolled in, and only after the admin types its link: student progress is never lost.
+ */
+export async function deletePath(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const pathId = uuid.safeParse(formData.get("path_id"));
+  if (!pathId.success) return { error: "بيانات غير صالحة." };
+  const supabase = await createClient();
+  const { data: path } = await supabase.from("paths").select("id, slug, title, status").eq("id", pathId.data).single();
+  if (!path) return { error: "المسار غير موجود." };
+  if (String(formData.get("confirm") ?? "").trim() !== path.slug) return { error: `اكتب رابط المسار «${path.slug}» بالضبط للتأكيد.` };
+  if (path.status !== "draft") return { error: "المسار ظاهر للطلاب. أخفِه أولاً من إعدادات المسار في الإدارة (الحالة: مسودة)، ثم احذفه." };
+  const { count } = await supabase.from("enrollments").select("student_id", { count: "exact", head: true }).eq("path_id", path.id);
+  if (count) return { error: `لا يمكن حذف المسار: ${count} طالب مسجّل فيه. الحذف يمسح تقدمهم.` };
+  const { error } = await supabase.from("paths").delete().eq("id", path.id);
+  if (error) return { error: dbErrorMessage(error) };
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "path.delete", target: path.id, data: { slug: path.slug, title: path.title } });
+  revalidatePath("/", "layout");
+  redirect("/studio?deleted=1");
+}
