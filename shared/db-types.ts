@@ -177,6 +177,264 @@ export type Database = {
           },
         ];
       };
+      content_templates: {
+        Row: {
+          active: boolean;
+          created_at: string;
+          description_ar: string;
+          id: string;
+          key: string;
+          kind: string;
+          spec: Json;
+          title_ar: string;
+          updated_at: string;
+          updated_by: string | null;
+          version: number;
+        };
+        Insert: {
+          active?: boolean;
+          created_at?: string;
+          description_ar?: string;
+          id?: string;
+          key: string;
+          kind: string;
+          spec: Json;
+          title_ar: string;
+          updated_at?: string;
+          updated_by?: string | null;
+          version?: number;
+        };
+        Update: {
+          active?: boolean;
+          created_at?: string;
+          description_ar?: string;
+          id?: string;
+          key?: string;
+          kind?: string;
+          spec?: Json;
+          title_ar?: string;
+          updated_at?: string;
+          updated_by?: string | null;
+          version?: number;
+        };
+        Relationships: [];
+      };
+      curriculum_items: {
+        Row: {
+          code: string;
+          created_at: string;
+          detail: Json;
+          id: string;
+          kind: string;
+          level_id: string;
+          position: number;
+          text_ar: string;
+          text_en: string;
+          unit_code: string | null;
+          updated_at: string;
+        };
+        Insert: {
+          code: string;
+          created_at?: string;
+          detail?: Json;
+          id?: string;
+          kind: string;
+          level_id: string;
+          position?: number;
+          text_ar?: string;
+          text_en?: string;
+          unit_code?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          code?: string;
+          created_at?: string;
+          detail?: Json;
+          id?: string;
+          kind?: string;
+          level_id?: string;
+          position?: number;
+          text_ar?: string;
+          text_en?: string;
+          unit_code?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      curriculum_levels: {
+        Row: {
+          approved_at: string | null;
+          approved_by: string | null;
+          created_at: string;
+          issues: Json;
+          job_id: string | null;
+          level_id: string;
+          status: string;
+          summary_ar: string;
+          teacher_ok_at: string | null;
+          teacher_ok_by: string | null;
+          updated_at: string;
+        };
+        Insert: {
+          approved_at?: string | null;
+          approved_by?: string | null;
+          created_at?: string;
+          issues?: Json;
+          job_id?: string | null;
+          level_id: string;
+          status?: string;
+          summary_ar?: string;
+          teacher_ok_at?: string | null;
+          teacher_ok_by?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          approved_at?: string | null;
+          approved_by?: string | null;
+          created_at?: string;
+          issues?: Json;
+          job_id?: string | null;
+          level_id?: string;
+          status?: string;
+          summary_ar?: string;
+          teacher_ok_at?: string | null;
+          teacher_ok_by?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      curriculum_units: {
+        Row: {
+          build_status: string;
+          code: string;
+          created_at: string;
+          grammar: string[];
+          id: string;
+          level_id: string;
+          objectives: string[];
+          position: number;
+          review_words: string[];
+          situation_ar: string;
+          source_video: Json | null;
+          stop_ar: string;
+          task_ar: string;
+          title_ar: string;
+          title_en: string;
+          unit_id: string | null;
+          updated_at: string;
+        };
+        Insert: {
+          build_status?: string;
+          code: string;
+          created_at?: string;
+          grammar?: string[];
+          id?: string;
+          level_id: string;
+          objectives?: string[];
+          position: number;
+          review_words?: string[];
+          situation_ar: string;
+          source_video?: Json | null;
+          stop_ar: string;
+          task_ar: string;
+          title_ar: string;
+          title_en: string;
+          unit_id?: string | null;
+          updated_at?: string;
+        };
+        Update: {
+          build_status?: string;
+          code?: string;
+          created_at?: string;
+          grammar?: string[];
+          id?: string;
+          level_id?: string;
+          objectives?: string[];
+          position?: number;
+          review_words?: string[];
+          situation_ar?: string;
+          source_video?: Json | null;
+          stop_ar?: string;
+          task_ar?: string;
+          title_ar?: string;
+          title_en?: string;
+          unit_id?: string | null;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
+      path_profiles: {
+        Row: {
+          created_at: string;
+          path_id: string;
+          profile: Json;
+          updated_at: string;
+          updated_by: string | null;
+        };
+        Insert: {
+          created_at?: string;
+          path_id: string;
+          profile: Json;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Update: {
+          created_at?: string;
+          path_id?: string;
+          profile?: Json;
+          updated_at?: string;
+          updated_by?: string | null;
+        };
+        Relationships: [];
+      };
+      video_sources: {
+        Row: {
+          active: boolean;
+          added_by: string | null;
+          created_at: string;
+          id: string;
+          kind: string;
+          language: string;
+          levels: string[];
+          notes: string | null;
+          path_id: string;
+          position: number;
+          ref: string;
+          title: string;
+          updated_at: string;
+        };
+        Insert: {
+          active?: boolean;
+          added_by?: string | null;
+          created_at?: string;
+          id?: string;
+          kind: string;
+          language: string;
+          levels?: string[];
+          notes?: string | null;
+          path_id: string;
+          position?: number;
+          ref: string;
+          title: string;
+          updated_at?: string;
+        };
+        Update: {
+          active?: boolean;
+          added_by?: string | null;
+          created_at?: string;
+          id?: string;
+          kind?: string;
+          language?: string;
+          levels?: string[];
+          notes?: string | null;
+          path_id?: string;
+          position?: number;
+          ref?: string;
+          title?: string;
+          updated_at?: string;
+        };
+        Relationships: [];
+      };
       app_config: {
         Row: {
           id: string;
@@ -1992,6 +2250,8 @@ export type Database = {
       import_unit_package: { Args: { p_package: Json }; Returns: string };
       is_active_member: { Args: never; Returns: boolean };
       is_admin: { Args: never; Returns: boolean };
+      is_staff: { Args: never; Returns: boolean };
+      set_teacher: { Args: { p_email: string; p_teacher: boolean }; Returns: string };
       my_duels: { Args: never; Returns: Json };
       my_lesson_blocker: { Args: { p_lesson_id: string }; Returns: string };
       my_quiz_open: { Args: { p_quiz_id: string }; Returns: boolean };

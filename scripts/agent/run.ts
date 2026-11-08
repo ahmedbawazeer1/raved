@@ -8,7 +8,10 @@ import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
 import { callGemini } from "../../src/lib/agent/gemini";
 import { runNextJob, type AgentJob, type AgentStore, type UnitTools } from "../../src/lib/agent/runner";
-import { searchYouTube } from "../../src/lib/agent/youtube";
+import { playlistVideos, searchYouTube } from "../../src/lib/agent/youtube";
+import { levelProfile, parseProfile } from "../../src/lib/factory/profile";
+import { DEFAULT_TEMPLATES, unitTemplateSpec } from "../../src/lib/factory/templates";
+import { mapToRows } from "../../src/lib/factory/rows";
 import { validateUnitPackage } from "../../src/lib/content/validate";
 
 const MAX_JOBS = 3;
@@ -66,6 +69,76 @@ async function main() {
     async trace(row) {
       await db.from("agent_traces").insert(row);
     },
+    async levelContext(levelId) {
+      const { data: level, error } = await db
+        .from("levels")
+        .select("id, code, title, description, kind, planned_units, position, path_id, paths(title)")
+        .eq("id", levelId)
+        .single();
+      if (error) throw error;
+      const [{ data: prof }, { data: earlier }] = await Promise.all([
+        db.from("path_profiles").select("profile").eq("path_id", level.path_id).maybeSingle(),
+        db.from("levels").select("id, code, position").eq("path_id", level.path_id).lt("position", level.position).order("position"),
+      ]);
+      const profile = levelProfile(parseProfile(prof?.profile), level.code) ?? null;
+      const key = profile?.unit_template ?? "standard";
+      const { data: tpl } = await db.from("content_templates").select("spec").eq("kind", "unit").eq("key", key).maybeSingle();
+      const parsed = unitTemplateSpec.safeParse(tpl?.spec);
+      const unitTemplate = parsed.success ? parsed.data : unitTemplateSpec.parse(DEFAULT_TEMPLATES.find((t) => t.key === "standard")!.spec);
+      const earlierIds = (earlier ?? []).map((l) => l.id);
+      const [{ data: words }, { data: units }] = earlierIds.length
+        ? await Promise.all([
+            db.from("curriculum_items").select("text_en").eq("kind", "word").in("level_id", earlierIds),
+            db.from("curriculum_units").select("level_id, title_en, position").in("level_id", earlierIds).order("position"),
+          ])
+        : [{ data: [] }, { data: [] }];
+      const earlierLevels = (earlier ?? []).map(
+        (l) =>
+          `${l.code}: ${
+            (units ?? [])
+              .filter((u) => u.level_id === l.id)
+              .map((u) => u.title_en)
+              .join(", ") || "—"
+          }`,
+      );
+      const pathTitle = (level.paths as unknown as { title: string } | null)?.title ?? "";
+      return {
+        pathTitle,
+        level: {
+          id: level.id,
+          code: level.code,
+          title: level.title,
+          description: level.description,
+          kind: level.kind,
+          planned_units: level.planned_units ?? 0,
+        },
+        profile,
+        unitTemplate,
+        earlierWords: (words ?? []).map((w) => w.text_en),
+        earlierLevels,
+      };
+    },
+    async saveLevelMap(levelId, map, issues, jobId) {
+      const { items, units } = mapToRows(map);
+      for (const table of ["curriculum_items", "curriculum_units"] as const) {
+        const { error } = await db.from(table).delete().eq("level_id", levelId);
+        if (error) throw error;
+      }
+      const { error: e1 } = await db.from("curriculum_items").insert(items.map((i) => ({ ...i, level_id: levelId, detail: i.detail as never })));
+      if (e1) throw e1;
+      const { error: e2 } = await db.from("curriculum_units").insert(units.map((u) => ({ ...u, level_id: levelId, source_video: u.source_video as never })));
+      if (e2) throw e2;
+      const { error: e3 } = await db.from("curriculum_levels").upsert({
+        level_id: levelId,
+        status: "review",
+        summary_ar: map.summary_ar,
+        issues: issues as never,
+        job_id: jobId,
+        teacher_ok_by: null,
+        teacher_ok_at: null,
+      });
+      if (e3) throw e3;
+    },
     async memory(pathId) {
       const { data } = await db
         .from("agent_memory")
@@ -84,6 +157,7 @@ async function main() {
       if (!process.env.YOUTUBE_API_KEY) throw new Error("مفتاح YouTube غير مضاف بعد (YOUTUBE_API_KEY).");
       return searchYouTube(q);
     },
+    playlist: (id) => playlistVideos(id),
     validate: (pkg) => {
       const r = validateUnitPackage(pkg);
       return { ok: r.ok, errors: r.errors.map((e) => ({ path: e.path, message: e.message })) };

@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
-import { APPLICANT, STUDENT } from "./fixtures";
+import { APPLICANT, STUDENT, TEACHER } from "./fixtures";
 
 /** Prepares an active student enrolled in English, with unit A1-01 imported and published. */
 export default async function globalSetup() {
@@ -41,6 +41,20 @@ export default async function globalSetup() {
     .from("profiles")
     .update({ status: "pending", birth_date: null, governorate: null, city: null, school: null, grade: null, stream: null, phone: null })
     .eq("id", applicant!.id);
+
+  // Teacher: the content studio's reviewer.
+  let teacher = list?.users.find((u) => u.email === TEACHER.email);
+  if (!teacher) {
+    const { data, error } = await admin.auth.admin.createUser({
+      email: TEACHER.email,
+      password: TEACHER.password,
+      email_confirm: true,
+      user_metadata: { full_name: TEACHER.name },
+    });
+    if (error) throw error;
+    teacher = data.user;
+  }
+  await admin.from("profiles").update({ role: "teacher", status: "active", full_name: TEACHER.name }).eq("id", teacher!.id);
 
   const { data: english } = await admin.from("paths").select("id").eq("slug", "english").single();
   const { data: a1 } = await admin.from("levels").select("id").eq("path_id", english!.id).eq("code", "A1").single();

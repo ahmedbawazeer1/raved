@@ -88,6 +88,15 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 - Unit builder: YouTube Data API search (embeddable, safe) → Gemini watches the chosen video → whole unit written around it → validated → review; optional authentic scene (film/series/real conversation) at the end + the role-play coach on the same situation. Weekly (Fridays) `scripts/agent/weekly.ts` aggregates quiz results and lesson ratings (no identities) and queues `improve_unit` proposals.
 - Gemini (free tier) receives public curriculum content only, never student data. Videos only through YouTube's embedded player; articles are never copied.
 
+## Content factory «مصنع المحتوى» (owner decisions, 2026-11-08)
+- **We build a system, not one-time content.** I never write units by hand and no old unit is merged in; the factory builds every unit. Old units are hidden (draft), old builder jobs closed.
+- Everything path-specific is **data**, edited in the content studio `/studio` (admin + teachers): the path profile (`path_profiles`: levels, framework, video language per level, unit template, ordering playlist, video rules, quality criteria), trusted video sources (`video_sources`), lesson/unit templates (`content_templates`, `src/lib/factory/templates.ts`).
+- Stages, each approved before the next: path profile → **level map** (`curriculum_levels/items/units`: objectives, grammar sequence, every unit's situation, task, new and review words; drafted by the agent job `plan_level`, reviewed by the teacher, approved by the owner) → units built **one by one in order** (the next starts after the previous is approved) → review → publish → weekly improvement.
+- **Every lesson has a mandatory video** (one `video` section per lesson template). Videos come first from trusted sources (A1: the ZAmericanEnglish playlist, one unit per episode), then general search; the agent rates candidates from captions; a lesson with no good video waits for a teacher, never ships without one. A1–A2 videos in Arabic, B1+ in English.
+- Exercises and games are generated **in code** from the lesson's sentences and words (the answer is always right); the model writes text sections only, one lesson per call.
+- Teachers (volunteers): role `teacher`, added by the admin by email at `/admin/teachers` (`set_teacher()`); they review and edit maps/units and curate video sources; only the admin approves maps and publishes.
+- Pilot: 3 units first, reviewed by the teacher and tried by 5–10 students, before scaling.
+
 ## Privacy & safety (non-negotiable)
 - RLS on every table; students read only their own rows; student phone visible only to the student and admin.
 - Secrets only in server code / Vercel env vars. `.env.example` lists names only. Never commit keys.

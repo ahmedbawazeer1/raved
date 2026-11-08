@@ -6,6 +6,7 @@ const step1Done = { ...base, birth_date: "2010-01-01", phone: "+967771234567", s
 
 describe("homePathFor", () => {
   it("sends admins to /admin", () => expect(homePathFor({ ...base, role: "admin", status: "active" }, null)).toBe("/admin"));
+  it("sends teachers to the content studio", () => expect(homePathFor({ ...base, role: "teacher", status: "active" }, null)).toBe("/studio"));
   it("sends active students to /student", () => expect(homePathFor({ ...base, status: "active" }, null)).toBe("/student"));
   it("new student starts at step 1", () => expect(homePathFor(base, null)).toBe("/apply"));
   it("step 1 done goes to step 2", () => expect(homePathFor(step1Done, { status: "draft" })).toBe("/apply/goal"));

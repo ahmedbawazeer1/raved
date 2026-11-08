@@ -57,7 +57,22 @@ back without a new app release**. Read this before structural work.
 | Mobile native (permissions, icon, SDK upgrade)     | New build → Google Play                           | 1–3 days review    |
 | Database rule / function                           | Migration (additive), applied at merge            | Instant, both apps |
 
-## 4. Mobile app specifics
+## 4. Content factory («مصنع المحتوى»)
+
+The platform builds its own content with a factory, so any path can be added with data only.
+
+| Layer | Where | Who changes it |
+| --- | --- | --- |
+| Path profile (levels, video language, unit template, ordering playlist, video rules, quality criteria) | `path_profiles`, `src/lib/factory/profile.ts` | admin, `/studio/paths/<slug>` |
+| Trusted video sources (searched in order) | `video_sources` | admin + teachers |
+| Templates (lesson = ordered sections with phase/block/source; unit = ordered lessons + counts + quiz) | `content_templates`, `src/lib/factory/templates.ts` | admin, `/studio/templates` |
+| Level map (objectives, grammar sequence, units with situation/task/words/review words) | `curriculum_levels/items/units`, `src/lib/factory/curriculum.ts` (checks), agent job `plan_level` (`src/lib/agent/level.ts`) | agent drafts, teacher reviews, admin approves |
+| Units, built one by one from an approved map | (next stage) | factory; teacher + admin review |
+
+Rules: a template change applies to units built afterwards, never to published ones; every lesson template has exactly one
+video section; exercises/games are generated in code; every map change re-runs the code checks shown in the studio.
+
+## 5. Mobile app specifics
 
 - **Expo SDK 58, Expo Router, Continuous Native Generation:** `mobile/android` and `mobile/ios` are generated
   by `expo prebuild` and never edited or committed; native settings go in `app.json` and config plugins

@@ -53,6 +53,16 @@ export async function requireAdmin(): Promise<SessionContext & { profile: Profil
   return ctx as SessionContext & { profile: Profile };
 }
 
+/** The content studio: the admin or an active teacher (the volunteer reviewer). */
+export async function requireStaff(): Promise<SessionContext & { profile: Profile; isAdmin: boolean }> {
+  const ctx = await requireSession("/studio");
+  const role = ctx.profile?.role;
+  if (!ctx.profile || (role !== "admin" && role !== "teacher") || ctx.profile.status === "suspended") {
+    redirect(homePathFor(ctx.profile, ctx.application));
+  }
+  return { ...(ctx as SessionContext & { profile: Profile }), isAdmin: role === "admin" };
+}
+
 export async function requireActiveStudent(): Promise<SessionContext & { profile: Profile }> {
   const ctx = await requireSession("/student");
   if (!ctx.profile || ctx.profile.status !== "active") {
