@@ -1,25 +1,10 @@
 import "server-only";
 import { cache } from "react";
 import { createClient } from "@/lib/supabase/server";
-import { noticesFor, type AgentState, type ConsoleSummary } from "./notices";
+import { noticesFor, STEP_AR, type AgentState, type ConsoleSummary } from "./notices";
 
 export type { AgentState, ConsoleNotice, ConsoleSummary, NoticeIcon } from "./notices";
 export { reviewCount } from "./notices";
-
-/** The agent job's step code → what it is doing, in Arabic. */
-const STEP_AR: Record<string, string> = {
-  start: "يبدأ",
-  context: "يقرأ الخريطة وملاحظاتك",
-  videos: "يختار الفيديو ويقسّمه على الدروس",
-  lessons: "يكتب نصوص الدروس",
-  critic: "المراجع الآلي يقيّم الدروس",
-  rewrite: "يعيد كتابة درس بملاحظات المراجع",
-  playlist: "يقرأ قائمة فيديوهات المستوى",
-  frame: "يصمّم الأهداف وتسلسل القواعد",
-  units: "يخطط الوحدات",
-  outline: "يصمّم المستويات",
-  waiting: "ينتظر دوره",
-};
 
 const JOB_LABEL: Record<string, string> = {
   plan_path: "تصميم مسار",

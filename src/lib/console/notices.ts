@@ -86,3 +86,18 @@ export function reviewCount(s: ConsoleSummary): number {
     ? s.unitsForAdmin.filter((u) => u.teacherOk).length + s.mapsInReview.length
     : s.unitsForTeacher.length + s.mapsInReview.filter((m) => !m.teacherOk).length;
 }
+
+/** The agent job's step code → what it is doing, in Arabic. */
+export const STEP_AR: Record<string, string> = {
+  start: "يبدأ",
+  context: "يقرأ الخريطة وملاحظاتك",
+  videos: "يختار الفيديو ويقسّمه على الدروس",
+  lessons: "يكتب نصوص الدروس",
+  critic: "المراجع الآلي يقيّم الدروس",
+  rewrite: "يعيد كتابة درس بملاحظات المراجع",
+  playlist: "يقرأ قائمة فيديوهات المستوى",
+  frame: "يصمّم الأهداف وتسلسل القواعد",
+  units: "يخطط الوحدات",
+  outline: "يصمّم المستويات",
+  waiting: "ينتظر دوره",
+};

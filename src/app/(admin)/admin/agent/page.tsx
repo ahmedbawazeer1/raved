@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Bot } from "lucide-react";
+import { BadgeCheck, Bot, Brain, Check, Clock, Cog, Gauge, History, OctagonAlert, Sparkles, X } from "lucide-react";
+import { IconTile, PageHead, Panel, type Tone } from "@/components/console/ui";
+import { En } from "@/components/en";
+import { quotaStatus } from "@/lib/ai/limits";
+import { STEP_AR } from "@/lib/console/notices";
 import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
 import { AddRuleForm, AutoRefresh, QueuePlanForm } from "@/components/admin/agent-forms";
 import { setAgentPaused, toggleRule } from "./actions";
 import { SubmitButton } from "@/components/ui/submit-button";
@@ -29,27 +32,19 @@ export default async function AgentPage() {
   const waiting = list.filter((j) => j.status === "needs_review");
   const working = list.some((j) => j.status === "queued" || j.status === "running");
 
-  return (
-    <div className="flex max-w-5xl flex-col gap-6">
-      <AutoRefresh active={working} />
-      <header className="flex items-start gap-3">
-        <span className="flex size-12 flex-none items-center justify-center rounded-2xl bg-ai-tint text-ai">
-          <Bot className="size-7" aria-hidden="true" />
-        </span>
-        <div>
-          <h1 className="text-2xl font-bold">عقل رفد</h1>
-          <p className="text-sm text-muted-foreground">
-            وكيل المنصة: يصمّم المسارات ويبني الدروس وحده. لا يصل شيء للطلاب قبل اعتمادك، وكل ملاحظة تكتبها يحفظها ويلتزم بها.
-          </p>
-        </div>
-      </header>
+  const running = list.find((j) => j.status === "running");
+  const quotas = await quotaStatus();
+  const TONE_OF: Record<string, Tone> = { running: "ai", queued: "off", needs_review: "gold", approved: "ok", rejected: "off", failed: "red" };
+  const ICON_OF: Record<string, typeof Bot> = { running: Cog, queued: Clock, needs_review: BadgeCheck, approved: Check, rejected: X, failed: OctagonAlert };
 
-      <Card
-        className={
-          paused ? "flex flex-col gap-3 border-warning bg-warning-tint p-4 sm:flex-row sm:items-center" : "flex flex-col gap-3 p-4 sm:flex-row sm:items-center"
-        }
-      >
-        <div className="flex-1">
+  return (
+    <div className="flex flex-col gap-5">
+      <AutoRefresh active={working} />
+      <PageHead title="عقل رفد" sub="وكيل المنصة: يرسم الخرائط ويبني الوحدات. لا يصل شيء للطلاب قبل اعتمادك، وكل ملاحظة تكتبها يحفظها ويلتزم بها." />
+
+      <Panel className={paused ? "flex flex-wrap items-center gap-3 border-accent bg-warning-tint" : "flex flex-wrap items-center gap-3"}>
+        <IconTile icon={Bot} tone={paused ? "gold" : "ai"} size="lg" />
+        <div className="min-w-[220px] flex-1">
           <h2 className="font-bold">{paused ? "الوكيل متوقف الآن" : "الوكيل يعمل"}</h2>
           <p className="text-sm text-muted-foreground">
             {paused
@@ -63,66 +58,120 @@ export default async function AgentPage() {
             {paused ? "شغّل الوكيل" : "أوقف الوكيل"}
           </SubmitButton>
         </form>
-      </Card>
+      </Panel>
 
-      {waiting.length > 0 && (
-        <Card className="flex flex-col gap-2 border-primary p-4">
-          <h2 className="font-bold">بانتظار مراجعتك ({waiting.length})</h2>
-          {waiting.map((j) => (
-            <Link key={j.id} href={`/admin/agent/${j.id}`} className="flex min-h-11 items-center justify-between rounded-xl bg-primary-tint px-3 font-semibold">
-              {JOB_KIND_AR[j.kind] ?? j.kind} · {j.paths?.title}
-              <span aria-hidden="true">←</span>
-            </Link>
-          ))}
-        </Card>
-      )}
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+        <div className="flex min-w-0 flex-col gap-5">
+          {running && (
+            <Panel
+              title={`يعمل الآن: ${JOB_KIND_AR[running.kind] ?? running.kind}`}
+              icon={Cog}
+              className="bg-[linear-gradient(160deg,var(--color-ai-tint),var(--color-card)_70%)]"
+            >
+              <span className="block h-2 overflow-hidden rounded-full bg-muted">
+                <span className="block h-full rounded-full bg-ai" style={{ width: `${Math.max(4, running.progress)}%` }} />
+              </span>
+              <p className="mt-2 text-sm text-muted-foreground">
+                {running.step ? (STEP_AR[running.step] ?? running.step) : "بدأ"} · {running.progress}% · {running.paths?.title}
+              </p>
+              <Link href={`/admin/agent/${running.id}`} className="mt-2 inline-block text-sm font-semibold">
+                التفاصيل ←
+              </Link>
+            </Panel>
+          )}
 
-      <Card className="flex flex-col gap-3 p-5">
-        <h2 className="text-lg font-bold">ابدأ</h2>
-        <p className="text-sm text-muted-foreground">
-          يصمّم الوكيل المستويات والوحدات وأهدافها ومحطاتها في رحلة حضرموت، ثم تصلك الخطة للمراجعة. يبدأ العمل خلال 30 دقيقة على الأكثر.
-        </p>
-        <QueuePlanForm paths={paths ?? []} />
-      </Card>
-
-      <Card className="flex flex-col gap-3 p-5">
-        <h2 className="text-lg font-bold">آخر الأعمال</h2>
-        {list.length === 0 ? (
-          <p className="text-sm text-muted-foreground">لم يبدأ الوكيل أي عمل بعد.</p>
-        ) : (
-          <ul className="flex flex-col divide-y divide-border">
-            {list.map((j) => {
-              const st = JOB_STATUS_AR[j.status] ?? { label: j.status, tone: "muted" as const };
-              return (
-                <li key={j.id}>
-                  <Link href={`/admin/agent/${j.id}`} className="flex min-h-14 items-center gap-3 py-2 text-foreground no-underline hover:text-foreground">
-                    <span className="min-w-0 flex-1">
-                      <span className="block font-semibold">
-                        {JOB_KIND_AR[j.kind] ?? j.kind} · {j.paths?.title}
-                      </span>
-                      <span className="block text-xs text-muted-foreground">{when(j.created_at)}</span>
-                    </span>
-                    {(j.status === "running" || j.status === "queued") && (
-                      <span className="h-2 w-24 overflow-hidden rounded-full bg-muted" aria-hidden="true">
-                        <span className="block h-full rounded-full bg-ai" style={{ width: `${j.progress}%` }} />
-                      </span>
-                    )}
-                    <Badge tone={st.tone}>{st.label}</Badge>
+          {waiting.length > 0 && (
+            <Panel title={`بانتظار مراجعتك (${waiting.length})`} icon={BadgeCheck}>
+              <div className="flex flex-col gap-2">
+                {waiting.map((j) => (
+                  <Link
+                    key={j.id}
+                    href={`/admin/agent/${j.id}`}
+                    className="flex min-h-11 items-center justify-between rounded-xl bg-warning-tint px-3 font-semibold text-warning no-underline"
+                  >
+                    {JOB_KIND_AR[j.kind] ?? j.kind} · {j.paths?.title}
+                    <span aria-hidden="true">←</span>
                   </Link>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </Card>
+                ))}
+              </div>
+            </Panel>
+          )}
 
-      <Card className="flex flex-col gap-3 p-5">
-        <h2 className="text-lg font-bold">ذاكرة الوكيل</h2>
-        <p className="text-sm text-muted-foreground">ملاحظات مراجعاتك وقواعدك. يقرأها الوكيل قبل كل عمل.</p>
+          <Panel title="آخر المهام" icon={History}>
+            {list.length === 0 ? (
+              <p className="text-sm text-muted-foreground">لم يبدأ الوكيل أي عمل بعد.</p>
+            ) : (
+              <ul className="flex flex-col">
+                {list.map((j) => {
+                  const st = JOB_STATUS_AR[j.status] ?? { label: j.status, tone: "muted" as const };
+                  const Icon = ICON_OF[j.status] ?? Bot;
+                  return (
+                    <li key={j.id} className="border-b border-dashed border-border last:border-b-0">
+                      <Link
+                        href={`/admin/agent/${j.id}`}
+                        className="grid min-h-14 grid-cols-[34px_1fr_auto] items-center gap-3 py-2 text-foreground no-underline hover:text-foreground"
+                      >
+                        <IconTile icon={Icon} tone={TONE_OF[j.status] ?? "off"} size="sm" />
+                        <span className="min-w-0">
+                          <span className="block truncate font-semibold">
+                            {JOB_KIND_AR[j.kind] ?? j.kind} · {j.paths?.title}
+                          </span>
+                          <span className="block text-xs text-muted-foreground">{when(j.created_at)}</span>
+                        </span>
+                        <Badge tone={st.tone}>{st.label}</Badge>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </Panel>
+        </div>
+
+        <div className="flex min-w-0 flex-col gap-5">
+          <Panel title="الحصص المجانية اليوم" icon={Gauge}>
+            {quotas.length === 0 ? (
+              <p className="text-sm text-muted-foreground">لا توجد حصص مضبوطة.</p>
+            ) : (
+              <ul className="flex flex-col gap-3">
+                {quotas.map((q) => (
+                  <li key={q.provider} className="grid grid-cols-[56px_1fr] items-center gap-3">
+                    <span
+                      className="flex size-14 items-center justify-center rounded-full"
+                      style={{
+                        background: `conic-gradient(var(--color-${q.alert ? "accent" : "primary"}) ${Math.min(100, q.percent)}%, var(--color-muted) 0)`,
+                      }}
+                      role="img"
+                      aria-label={`${q.percent}%`}
+                    >
+                      <span className="flex size-11 items-center justify-center rounded-full bg-card font-en text-xs font-bold">{q.percent}%</span>
+                    </span>
+                    <span>
+                      <En className="block font-semibold">{q.provider}</En>
+                      <span className="text-[13px] text-muted-foreground">
+                        {q.requests} من {q.quota} طلب
+                      </span>
+                      {q.alert && <span className="mt-0.5 block text-xs font-semibold text-warning">تجاوز حد التنبيه</span>}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Panel>
+
+          <Panel title="اطلب عملاً جديداً" icon={Sparkles}>
+            <p className="mb-3 text-sm text-muted-foreground">يصمّم الوكيل المستويات والوحدات، ثم تصلك الخطة للمراجعة. يبدأ خلال 30 دقيقة على الأكثر.</p>
+            <QueuePlanForm paths={paths ?? []} />
+          </Panel>
+        </div>
+      </div>
+
+      <Panel title="ما تعلّمه من ملاحظاتك" icon={Brain}>
+        <p className="mb-3 text-sm text-muted-foreground">ملاحظات مراجعاتك وقواعدك. يقرأها الوكيل قبل كل عمل.</p>
         <AddRuleForm paths={paths ?? []} />
-        <ul className="flex flex-col divide-y divide-border">
+        <ul className="mt-2 flex flex-col">
           {(rules ?? []).map((r) => (
-            <li key={r.id} className="flex items-start gap-3 py-2.5">
+            <li key={r.id} className="flex items-start gap-3 border-b border-dashed border-border py-2.5 last:border-b-0">
               <div className={`min-w-0 flex-1 text-sm ${r.active ? "" : "text-muted-foreground line-through"}`}>
                 <p>{r.text}</p>
                 <p className="text-xs text-muted-foreground">
@@ -132,14 +181,14 @@ export default async function AgentPage() {
               <form action={toggleRule}>
                 <input type="hidden" name="id" value={r.id} />
                 <input type="hidden" name="active" value={String(!r.active)} />
-                <button type="submit" className="min-h-9 rounded-lg px-2.5 text-xs font-semibold text-primary">
+                <button type="submit" className="min-h-10 rounded-lg px-2.5 text-xs font-semibold text-primary">
                   {r.active ? "أوقفها" : "فعّلها"}
                 </button>
               </form>
             </li>
           ))}
         </ul>
-      </Card>
+      </Panel>
     </div>
   );
 }

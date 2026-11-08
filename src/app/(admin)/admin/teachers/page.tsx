@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Card } from "@/components/ui/card";
+import { GraduationCap, UserPlus } from "lucide-react";
+import { Empty, IconTile, PageHead, Panel } from "@/components/console/ui";
 import { Button } from "@/components/ui/button";
 import { AddTeacherForm } from "@/components/admin/add-teacher-form";
 import { createClient } from "@/lib/supabase/server";
@@ -10,54 +11,81 @@ export const metadata: Metadata = { title: "المعلمون" };
 
 export default async function TeachersPage() {
   const supabase = await createClient();
-  const { data: teachers } = await supabase.from("profiles").select("id, email, full_name, updated_at").eq("role", "teacher").order("full_name");
+  const [{ data: teachers }, { data: units }, { data: maps }] = await Promise.all([
+    supabase.from("profiles").select("id, email, full_name, updated_at").eq("role", "teacher").order("full_name"),
+    supabase.from("curriculum_units").select("teacher_ok_by").not("teacher_ok_by", "is", null),
+    supabase.from("curriculum_levels").select("teacher_ok_by").not("teacher_ok_by", "is", null),
+  ]);
+  const reviewed = (id: string) => (units ?? []).filter((u) => u.teacher_ok_by === id).length;
+  const mapsReviewed = (id: string) => (maps ?? []).filter((m) => m.teacher_ok_by === id).length;
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col gap-6">
-      <header className="flex flex-col gap-1">
-        <h1 className="text-2xl font-bold">المعلمون</h1>
-        <p className="text-muted-foreground">
-          المعلم يراجع المحتوى ويعدّله ويضيف قنوات الفيديو في{" "}
-          <Link href="/studio" className="font-semibold">
-            استوديو المحتوى
-          </Link>
-          . الاعتماد والنشر للطلاب يبقيان لك وحدك.
-        </p>
-      </header>
+    <div className="flex flex-col gap-5">
+      <PageHead
+        title="المعلمون"
+        sub={
+          <>
+            المعلم المتطوع يراجع الخرائط والوحدات ويعدّلها ويختار الفيديوهات في{" "}
+            <Link href="/studio" className="font-semibold">
+              الاستوديو
+            </Link>
+            . الاعتماد والنشر لك وحدك.
+          </>
+        }
+      />
 
-      <Card className="flex flex-col gap-4 p-5">
-        <h2 className="text-lg font-semibold">إضافة معلم</h2>
-        <p className="text-sm text-muted-foreground">
-          يسجّل المعلم في المنصة أولاً بحساب عادي (بالبريد أو Google)، ثم تكتب بريده هنا. لا يحتاج أن يكمل طلب الالتحاق.
-        </p>
-        <AddTeacherForm />
-      </Card>
+      <Panel className="flex flex-wrap items-start gap-3">
+        <IconTile icon={UserPlus} tone="green" />
+        <div className="min-w-[220px] flex-1">
+          <b>أضف معلماً</b>
+          <p className="mb-3 text-sm text-muted-foreground">
+            يسجّل المعلم في رفد أولاً بحساب عادي (بالبريد أو Google)، ثم تكتب بريده هنا. لا يحتاج طلب التحاق.
+          </p>
+          <AddTeacherForm />
+        </div>
+      </Panel>
 
-      <Card className="flex flex-col gap-3 p-5">
-        <h2 className="text-lg font-semibold">المعلمون الحاليون ({teachers?.length ?? 0})</h2>
-        {!teachers?.length ? (
-          <p className="text-muted-foreground">لا يوجد معلمون بعد.</p>
-        ) : (
-          <ul className="flex flex-col divide-y divide-border">
-            {teachers.map((t) => (
-              <li key={t.id} className="flex flex-wrap items-center justify-between gap-3 py-3">
+      {!teachers?.length ? (
+        <Panel>
+          <Empty icon={GraduationCap} tone="gold" title="لا معلمين بعد">
+            المعلم المتطوع يراجع الوحدات قبل أن تنشرها. اطلب منه أن ينشئ حساباً في رفد، ثم أضف بريده في الأعلى.
+          </Empty>
+        </Panel>
+      ) : (
+        <ul className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {teachers.map((t) => (
+            <li key={t.id} className="flex flex-col gap-3 rounded-[18px] border border-border bg-card p-4">
+              <div className="flex items-center gap-3">
+                <span className="flex size-12 flex-none items-center justify-center rounded-2xl bg-warning-tint text-lg font-bold text-warning">
+                  {(t.full_name || "م").charAt(0)}
+                </span>
                 <div className="min-w-0">
-                  <p className="font-semibold">{t.full_name || "بدون اسم"}</p>
-                  <p className="text-sm break-all text-muted-foreground" dir="ltr">
+                  <b className="block truncate">{t.full_name || "بدون اسم"}</b>
+                  <p className="truncate text-sm text-muted-foreground" dir="ltr">
                     {t.email}
                   </p>
                 </div>
-                <form action={removeTeacher}>
-                  <input type="hidden" name="email" value={t.email ?? ""} />
-                  <Button type="submit" variant="destructive" size="sm">
-                    إزالة الصلاحية
-                  </Button>
-                </form>
-              </li>
-            ))}
-          </ul>
-        )}
-      </Card>
+              </div>
+              <div className="grid grid-cols-2 gap-2 text-center">
+                <span className="rounded-xl bg-muted p-2">
+                  <b className="block font-en text-lg">{reviewed(t.id)}</b>
+                  <span className="text-xs text-muted-foreground">وحدات راجعها</span>
+                </span>
+                <span className="rounded-xl bg-muted p-2">
+                  <b className="block font-en text-lg">{mapsReviewed(t.id)}</b>
+                  <span className="text-xs text-muted-foreground">خرائط راجعها</span>
+                </span>
+              </div>
+              <form action={removeTeacher}>
+                <input type="hidden" name="email" value={t.email ?? ""} />
+                <Button type="submit" variant="destructive" size="sm">
+                  إزالة الصلاحية
+                </Button>
+              </form>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
