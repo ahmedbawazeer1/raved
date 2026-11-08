@@ -215,7 +215,7 @@ export function VideoBlock({
       player?.destroy();
       playerRef.current = null;
     };
-  }, [open, id, block.start_sec, block.end_sec, tracking, duration, checkpoints, offset]);
+  }, [open, id, key, part, block.start_sec, block.end_sec, tracking, duration, checkpoints, offset]);
 
   const flash = (msg: string) => {
     setToast(msg);

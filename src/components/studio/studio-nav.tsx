@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutGrid, Layers, ShieldCheck } from "lucide-react";
+import { LayoutGrid, Layers, LineChart, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
   { href: "/studio", label: "المسارات والمناهج", icon: LayoutGrid, exact: true },
   { href: "/studio/templates", label: "القوالب", icon: Layers },
+  { href: "/studio/insights", label: "التحسين", icon: LineChart },
 ];
 
 export function StudioNav({ isAdmin, variant }: { isAdmin: boolean; variant: "sidebar" | "bar" }) {
@@ -16,7 +17,9 @@ export function StudioNav({ isAdmin, variant }: { isAdmin: boolean; variant: "si
   return (
     <nav aria-label="تنقل الاستوديو" className={cn(variant === "sidebar" ? "flex flex-col gap-0.5" : "flex gap-1 overflow-x-auto px-2 pb-2")}>
       {items.map(({ href, label, icon: Icon, exact }) => {
-        const active = exact ? pathname === href || pathname.startsWith("/studio/paths") || pathname.startsWith("/studio/levels") : pathname.startsWith(href);
+        const active = exact
+          ? pathname === href || pathname.startsWith("/studio/paths") || pathname.startsWith("/studio/levels") || pathname.startsWith("/studio/units")
+          : pathname.startsWith(href);
         return (
           <Link
             key={href}

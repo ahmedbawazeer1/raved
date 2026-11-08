@@ -31,7 +31,11 @@ export type VideoPartPlan = z.infer<typeof partSchema>;
 export const watchSchema = z.object({
   suitable: z.boolean(),
   concerns_ar: z.string().max(400).optional(),
-  duration_sec: z.number().int().min(20).max(4 * 3600),
+  duration_sec: z
+    .number()
+    .int()
+    .min(20)
+    .max(4 * 3600),
   rating: z.number().min(1).max(5),
   part: partSchema,
 });
@@ -39,11 +43,21 @@ export const watchSchema = z.object({
 export const episodeSchema = z.object({
   suitable: z.boolean(),
   concerns_ar: z.string().max(400).optional(),
-  duration_sec: z.number().int().min(20).max(4 * 3600),
+  duration_sec: z
+    .number()
+    .int()
+    .min(20)
+    .max(4 * 3600),
   parts: z.record(z.string(), partSchema),
 });
 
-export const chooseSchema = z.object({ video_ids: z.array(z.string().regex(/^[A-Za-z0-9_-]{11}$/)).min(1).max(5), reason_ar: z.string().max(400).optional() });
+export const chooseSchema = z.object({
+  video_ids: z
+    .array(z.string().regex(/^[A-Za-z0-9_-]{11}$/))
+    .min(1)
+    .max(5),
+  reason_ar: z.string().max(400).optional(),
+});
 
 export interface LessonNeed {
   key: string;

@@ -32,8 +32,17 @@ select tests.ok((select count(*) from public.agent_jobs where kind = 'factory_le
 select tests.throws(format('insert into public.agent_jobs (kind, path_id) values (''plan_level'', %L)', :'english'), 'teacher cannot queue other jobs');
 reset role;
 
+insert into public.units (level_id, code, position, title) values (:'a1', 'A1-99', 99, 'Test') returning id as unit \gset
+insert into public.unit_insights (unit_id, attempts, flagged) values (:'unit', 12, 1);
+set local role authenticated;
+select set_config('request.jwt.claims', json_build_object('sub', :'te', 'role', 'authenticated')::text, true);
+select tests.ok(tests.count('select * from public.unit_insights') = 1, 'teacher reads unit insights');
+select tests.throws(format('insert into public.unit_insights (unit_id) values (%L)', :'unit'), 'teacher cannot write insights');
+reset role;
+
 set local role authenticated;
 select set_config('request.jwt.claims', json_build_object('sub', :'st', 'role', 'authenticated')::text, true);
+select tests.ok(tests.count('select * from public.unit_insights') = 0, 'student cannot read insights');
 select tests.ok(tests.count('select * from public.agent_jobs') = 0, 'student sees no builds');
 select tests.throws(format('insert into public.agent_jobs (kind, path_id) values (''factory_lesson'', %L)', :'english'), 'student cannot queue a rebuild');
 reset role;

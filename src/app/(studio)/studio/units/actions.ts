@@ -63,7 +63,10 @@ export async function saveSection(_prev: AdminFormState, formData: FormData): Pr
   if (!lesson) return { error: "الدرس غير موجود." };
   lesson.sections[sectionKey] = parsed.value;
   const next = reassemble(out);
-  const { error } = await supabase.from("agent_jobs").update({ output: next as never }).eq("id", job.id);
+  const { error } = await supabase
+    .from("agent_jobs")
+    .update({ output: next as never })
+    .eq("id", job.id);
   if (error) return { error: dbErrorMessage(error) };
   revalidatePath(`/studio/units/${id.data}`);
   return { ok: true, message: "حُفظ التعديل، وأعيد توليد التمارين والفحص." };
@@ -91,7 +94,14 @@ export async function rebuildLesson(_prev: AdminFormState, formData: FormData): 
     .insert({
       kind: "factory_lesson",
       path_id: job.path_id,
-      input: { curriculum_unit_id: unit.id, unit_code: unit.code, base_job_id: job.id, lesson_key: lessonKey, ...(note ? { feedback: note } : {}), ...(videoId ? { video_id: videoId } : {}) },
+      input: {
+        curriculum_unit_id: unit.id,
+        unit_code: unit.code,
+        base_job_id: job.id,
+        lesson_key: lessonKey,
+        ...(note ? { feedback: note } : {}),
+        ...(videoId ? { video_id: videoId } : {}),
+      },
     })
     .select("id")
     .single();
@@ -119,7 +129,10 @@ export async function publishBuiltUnit(_prev: AdminFormState, formData: FormData
   if (!unit || !job || job.status !== "needs_review") return { error: "هذه الوحدة ليست في المراجعة الآن." };
   const out = job.output as unknown as FactoryOutput;
   if (out.factory.qa.issues.some((i) => i.severity === "error")) return { error: "في الوحدة ملاحظات حمراء يجب إصلاحها قبل النشر." };
-  const { data: unitId, error } = await supabase.rpc("import_unit_package", { p_package: out.package as never });
+  // A rebuilt unit (or an old unit with the same code) becomes the next version of that unit.
+  const { data: existing } = await supabase.from("units").select("version").eq("code", out.package.code).maybeSingle();
+  const pkg = { ...out.package, version: (existing?.version ?? 0) + 1 };
+  const { data: unitId, error } = await supabase.rpc("import_unit_package", { p_package: pkg as never });
   if (error || !unitId) return { error: error ? dbErrorMessage(error) : "تعذر الاستيراد." };
   await supabase.from("lessons").update({ review_status: "approved", review_note: null }).eq("unit_id", unitId);
   const { error: pubError } = await supabase.rpc("publish_unit", { p_unit_id: unitId });
@@ -149,7 +162,10 @@ export async function rejectBuiltUnit(_prev: AdminFormState, formData: FormData)
     .insert({ kind: "factory_unit", path_id: job.path_id, input: { curriculum_unit_id: unit.id, unit_code: unit.code, feedback: note } })
     .select("id")
     .single();
-  await supabase.from("curriculum_units").update({ build_status: "building", build_job_id: again?.id ?? null, teacher_ok_by: null, teacher_ok_at: null }).eq("id", unit.id);
+  await supabase
+    .from("curriculum_units")
+    .update({ build_status: "building", build_job_id: again?.id ?? null, teacher_ok_by: null, teacher_ok_at: null })
+    .eq("id", unit.id);
   revalidatePath(`/studio/units/${id.data}`);
   return { ok: true, message: "أُرسلت الوحدة لإعادة البناء بملاحظتك." };
 }
@@ -162,4 +178,30 @@ export async function buildNextUnit(formData: FormData): Promise<void> {
   const supabase = await createClient();
   await queueNextUnit(supabase, levelId.data);
   revalidatePath(`/studio/levels/${levelId.data}`);
+}
+
+/** The owner sends a published unit back to the factory with the weekly analysis as its note. */
+export async function improveUnit(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  await requireAdmin();
+  const unitId = uuid.safeParse(formData.get("unit_id"));
+  const note = String(formData.get("note") ?? "")
+    .trim()
+    .slice(0, 1000);
+  if (!unitId.success || note.length < 5) return { error: "لا توجد ملاحظات لإرسالها." };
+  const supabase = await createClient();
+  const { data: cu } = await supabase.from("curriculum_units").select("id, code, level_id, build_status").eq("unit_id", unitId.data).maybeSingle();
+  if (!cu) return { error: "هذه الوحدة لم يبنها المصنع (وحدة قديمة)، فلا يعيد بناءها." };
+  const { data: busy } = await supabase.from("curriculum_units").select("code").eq("level_id", cu.level_id).in("build_status", ["building", "review"]).limit(1);
+  if (busy?.length) return { error: `المصنع مشغول بالوحدة ${busy[0].code}. أنهِ مراجعتها أولاً.` };
+  const { data: lvl } = await supabase.from("levels").select("path_id").eq("id", cu.level_id).single();
+  if (!lvl) return { error: "المستوى غير موجود." };
+  const { data: job, error } = await supabase
+    .from("agent_jobs")
+    .insert({ kind: "factory_unit", path_id: lvl.path_id, input: { curriculum_unit_id: cu.id, unit_code: cu.code, feedback: note } })
+    .select("id")
+    .single();
+  if (error || !job) return { error: error ? dbErrorMessage(error) : "تعذر الإرسال." };
+  await supabase.from("curriculum_units").update({ build_status: "building", build_job_id: job.id, teacher_ok_by: null, teacher_ok_at: null }).eq("id", cu.id);
+  revalidatePath("/studio", "layout");
+  return { ok: true, message: `يعيد المصنع بناء ${cu.code} بهذه الملاحظات. النسخة المنشورة تبقى للطلاب حتى تنشر الجديدة.` };
 }

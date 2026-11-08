@@ -39,11 +39,7 @@ export default async function CurriculumPage({ params, searchParams }: PageProps
                 aria-current={l.code === level?.code ? "page" : undefined}
                 className={cn(
                   "inline-flex min-h-10 items-center rounded-full px-4 font-en text-sm font-semibold no-underline",
-                  l.code === level?.code
-                    ? "bg-primary text-white hover:text-white"
-                    : complete
-                      ? "bg-success-tint text-success"
-                      : "bg-muted text-subtle",
+                  l.code === level?.code ? "bg-primary text-white hover:text-white" : complete ? "bg-success-tint text-success" : "bg-muted text-subtle",
                 )}
               >
                 {l.code}

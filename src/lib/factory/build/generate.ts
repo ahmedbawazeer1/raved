@@ -39,7 +39,11 @@ export function findWord(sentence: string, word: string): RegExpExecArray | null
   return new RegExp(`(^|[^A-Za-z'])(${escapeRe(word)})(?=$|[^A-Za-z'])`, "i").exec(sentence);
 }
 
-const tokens = (s: string) => s.replace(/[.!?]+$/, "").split(/\s+/).filter(Boolean);
+const tokens = (s: string) =>
+  s
+    .replace(/[.!?]+$/, "")
+    .split(/\s+/)
+    .filter(Boolean);
 
 /** English sentences of a lesson's content, in order (examples of words first). */
 export function sentencesOf(contents: SectionContent[], words: WordItem[] = []): string[] {
@@ -128,7 +132,14 @@ function makeOne(kind: ExerciseKind, src: ExerciseSource, rnd: () => number, use
 }
 
 /** Exercises of the allowed kinds, rotating kinds; fewer if the material runs out. */
-export function makeExercises(kinds: ExerciseKind[], count: number, src: ExerciseSource, seed: string, idPrefix: string, used = new Set<string>()): PackageQuestion[] {
+export function makeExercises(
+  kinds: ExerciseKind[],
+  count: number,
+  src: ExerciseSource,
+  seed: string,
+  idPrefix: string,
+  used = new Set<string>(),
+): PackageQuestion[] {
   const rnd = seeded(seed);
   const out: PackageQuestion[] = [];
   let k = 0;
@@ -175,7 +186,10 @@ export function assembleLesson(code: string, n: number, lesson: LessonBuild, wor
   const contents = Object.values(lesson.sections);
   const src: ExerciseSource = {
     words,
-    sentences: sentencesOf(contents, words.filter((w) => !w.review)),
+    sentences: sentencesOf(
+      contents,
+      words.filter((w) => !w.review),
+    ),
     panels: contents.flatMap((c) => (PANEL_SECTION_BLOCKS.has(c.block) && c.block === "story" ? c.panels : [])),
   };
   const used = new Set<string>();
@@ -199,7 +213,8 @@ export function assembleLesson(code: string, n: number, lesson: LessonBuild, wor
     else if (c?.block === "audio") blocks.push({ type: "audio", text_en: c.sentences_en.join(" ") });
     else if (c?.block === "reading") blocks.push({ type: "reading", text_en: c.text_en, word_count: tokens(c.text_en).length });
     else if (c?.block === "story") blocks.push({ type: "story", id: `${id}-s${i + 1}`, title_ar: c.title_ar || s.title_ar, panels: c.panels });
-    else if (c?.block === "speaking_task") speaking = { prompt_en: c.prompt_en, helpful_phrases: c.helpful_phrases, prep_seconds: 30, max_seconds: 60, rubric_focus: c.rubric_focus };
+    else if (c?.block === "speaking_task")
+      speaking = { prompt_en: c.prompt_en, helpful_phrases: c.helpful_phrases, prep_seconds: 30, max_seconds: 60, rubric_focus: c.rubric_focus };
     else if (c?.block === "writing_task") writing = { prompt_en: c.prompt_en, min_words: c.min_words, max_words: c.max_words, rubric_focus: c.rubric_focus };
   });
   return {

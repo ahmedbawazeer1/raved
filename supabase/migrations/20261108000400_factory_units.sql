@@ -234,3 +234,19 @@ begin
   return new;
 end;
 $$;
+
+-- ---------------------------------------------------------------------------
+-- Weekly insights per published unit (no student identities): pass rate, item analysis of every quiz
+-- question (difficulty, discrimination, flag) and lessons rated "not useful". Written by the weekly job.
+-- ---------------------------------------------------------------------------
+create table public.unit_insights (
+  unit_id uuid primary key references public.units (id) on delete cascade,
+  attempts integer not null default 0 check (attempts >= 0),
+  pass_rate numeric(4, 3) not null default 0,
+  items jsonb not null default '[]'::jsonb,
+  lessons jsonb not null default '[]'::jsonb,
+  flagged integer not null default 0,
+  computed_at timestamptz not null default now()
+);
+alter table public.unit_insights enable row level security;
+create policy unit_insights_staff_read on public.unit_insights for select to authenticated using ((select public.is_staff()));

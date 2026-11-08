@@ -44,7 +44,11 @@ export async function recordVideoWatch(videoId: string, watchedSec: number): Pro
 }
 
 /** Same for a part of a video (a block with end_sec): tracked per youtube id + start second. */
-export async function recordVideoPart(videoId: string, startSec: number, watchedSec: number): Promise<{ watched: number; duration: number; done: boolean } | null> {
+export async function recordVideoPart(
+  videoId: string,
+  startSec: number,
+  watchedSec: number,
+): Promise<{ watched: number; duration: number; done: boolean } | null> {
   await requireActiveStudent();
   const id = youtubeId.safeParse(videoId);
   const start = z.number().int().min(0).max(36_000).safeParse(Math.floor(startSec));

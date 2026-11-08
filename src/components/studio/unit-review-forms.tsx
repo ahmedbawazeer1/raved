@@ -43,7 +43,14 @@ export function SectionForm({
       <input type="hidden" name="block" value={block} />
       <Status state={state} />
       <Field id={id} label={title} hint={hint}>
-        <Textarea id={id} name="text" rows={Math.min(14, Math.max(3, text.split("\n").length + 1))} dir={english ? "ltr" : undefined} defaultValue={text} disabled={disabled} />
+        <Textarea
+          id={id}
+          name="text"
+          rows={Math.min(14, Math.max(3, text.split("\n").length + 1))}
+          dir={english ? "ltr" : undefined}
+          defaultValue={text}
+          disabled={disabled}
+        />
       </Field>
       {!disabled && (
         <SubmitButton size="sm" variant="secondary" className="self-start" pendingLabel="جارٍ الحفظ…">
@@ -55,7 +62,15 @@ export function SectionForm({
 }
 
 /** Asks for ONE lesson to be rebuilt, with a note and/or another video. */
-export function RebuildLessonForm({ unitId, lessonKey, alternatives }: { unitId: string; lessonKey: string; alternatives: { youtube_id: string; title: string; channel: string }[] }) {
+export function RebuildLessonForm({
+  unitId,
+  lessonKey,
+  alternatives,
+}: {
+  unitId: string;
+  lessonKey: string;
+  alternatives: { youtube_id: string; title: string; channel: string }[];
+}) {
   const [state, action] = useActionState<AdminFormState, FormData>(rebuildLesson, {});
   return (
     <form action={action} className="flex flex-col gap-3 rounded-xl bg-background p-4">

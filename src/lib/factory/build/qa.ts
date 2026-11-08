@@ -34,7 +34,8 @@ const COMMON = new Set(
     .filter(Boolean),
 );
 
-const BANNED = /\b(alcohol|beer|wine|whisky|vodka|pork|bacon|casino|gambl\w*|bet(ting)?|girlfriend|boyfriend|kiss\w*|dating|date night|nightclub|bikini|sexy)\b/i;
+const BANNED =
+  /\b(alcohol|beer|wine|whisky|vodka|pork|bacon|casino|gambl\w*|bet(ting)?|girlfriend|boyfriend|kiss\w*|dating|date night|nightclub|bikini|sexy)\b/i;
 const ARABIC = /[؀-ۿ]/;
 
 const englishTokens = (s: string) => s.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) ?? [];
@@ -42,7 +43,8 @@ const englishTokens = (s: string) => s.toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g
 /** Strips simple endings so "markets", "worked", "working" count as the taught word. */
 function stem(w: string): string[] {
   const out = [w];
-  for (const end of ["'s", "s", "es", "ed", "d", "ing", "ly", "er", "est"]) if (w.endsWith(end) && w.length - end.length >= 2) out.push(w.slice(0, -end.length));
+  for (const end of ["'s", "s", "es", "ed", "d", "ing", "ly", "er", "est"])
+    if (w.endsWith(end) && w.length - end.length >= 2) out.push(w.slice(0, -end.length));
   if (w.endsWith("ies")) out.push(`${w.slice(0, -3)}y`);
   return out;
 }
@@ -70,7 +72,8 @@ export function gateOne({ pkg, words, known, quizMin, schemaErrors }: QaInput): 
     if (videos.length !== 1) issues.push({ severity: "error", lesson: l.position, message: "كل درس يحتاج فيديو واحداً بالضبط" });
     const english: string[] = [];
     for (const b of l.blocks) {
-      if (b.type === "text" && b.markdown_ar && !ARABIC.test(b.markdown_ar)) issues.push({ severity: "error", lesson: l.position, message: "الشرح ليس بالعربية" });
+      if (b.type === "text" && b.markdown_ar && !ARABIC.test(b.markdown_ar))
+        issues.push({ severity: "error", lesson: l.position, message: "الشرح ليس بالعربية" });
       if (b.type === "audio" && b.text_en) english.push(b.text_en);
       if (b.type === "reading" && b.text_en) english.push(b.text_en);
       if (b.type === "story") english.push(...(b.panels ?? []).map((p) => p.text_en));
@@ -81,7 +84,11 @@ export function gateOne({ pkg, words, known, quizMin, schemaErrors }: QaInput): 
     allText.push(...english);
     const unknown = [...new Set(english.flatMap(englishTokens).filter((t) => !isKnown(t)))];
     if (unknown.length > 6)
-      issues.push({ severity: "warn", lesson: l.position, message: `كلمات إنجليزية خارج ما تعلّمه الطالب (${unknown.length}): ${unknown.slice(0, 12).join("، ")}` });
+      issues.push({
+        severity: "warn",
+        lesson: l.position,
+        message: `كلمات إنجليزية خارج ما تعلّمه الطالب (${unknown.length}): ${unknown.slice(0, 12).join("، ")}`,
+      });
     const bad = [...english, ...l.blocks.flatMap((b) => (b.type === "text" && b.markdown_ar ? [b.markdown_ar] : []))].join(" \n ").match(BANNED);
     if (bad) issues.push({ severity: "error", lesson: l.position, message: `محتوى غير مناسب: «${bad[0]}»` });
   });
@@ -89,7 +96,8 @@ export function gateOne({ pkg, words, known, quizMin, schemaErrors }: QaInput): 
   const joined = allText.join(" \n ").toLowerCase();
   const unused = words.filter((w) => !w.review && !englishTokens(w.word).every((t) => stem(t).some((s) => joined.includes(s))));
   if (unused.length) issues.push({ severity: "warn", message: `كلمات جديدة لا تظهر في الدروس: ${unused.map((w) => w.word).join("، ")}` });
-  if (pkg.quiz.questions.length < quizMin) issues.push({ severity: "error", message: `أسئلة الاختبار ${pkg.quiz.questions.length} فقط، والمطلوب ${quizMin} على الأقل` });
+  if (pkg.quiz.questions.length < quizMin)
+    issues.push({ severity: "error", message: `أسئلة الاختبار ${pkg.quiz.questions.length} فقط، والمطلوب ${quizMin} على الأقل` });
   return issues;
 }
 
@@ -115,7 +123,8 @@ export type Critique = z.infer<typeof critiqueSchema>;
 /** A compact, readable view of a lesson for the critic (no ids, no answers hidden). */
 export function lessonDigest(l: UnitPackage["lessons"][number]): string {
   const parts = l.blocks.map((b) => {
-    if (b.type === "video") return `[video ${b.video_title ?? ""} ${b.start_sec ?? 0}-${b.end_sec ?? ""}s; questions: ${(b.checkpoints ?? []).map((c) => c.prompt_ar).join(" / ")}]`;
+    if (b.type === "video")
+      return `[video ${b.video_title ?? ""} ${b.start_sec ?? 0}-${b.end_sec ?? ""}s; questions: ${(b.checkpoints ?? []).map((c) => c.prompt_ar).join(" / ")}]`;
     if (b.type === "text") return `[text] ${b.markdown_ar ?? ""}`;
     if (b.type === "audio") return `[audio] ${b.text_en ?? ""}`;
     if (b.type === "reading") return `[reading] ${b.text_en ?? ""}`;

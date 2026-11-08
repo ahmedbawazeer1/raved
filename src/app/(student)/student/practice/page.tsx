@@ -31,8 +31,18 @@ export default async function PracticePage() {
   const [tasks, today, { data: speaking }, { data: writing }, { data: roleplayUnits }] = await Promise.all([
     path ? listPracticeTasks(path.id, reached) : Promise.resolve([]),
     remainingToday(userId),
-    supabase.from("speaking_attempts").select("id, lesson_id, scores, created_at, lessons(title)").eq("student_id", userId).order("created_at", { ascending: false }).limit(10),
-    supabase.from("writing_submissions").select("id, lesson_id, status, scores, version, created_at, lessons(title)").eq("student_id", userId).order("created_at", { ascending: false }).limit(10),
+    supabase
+      .from("speaking_attempts")
+      .select("id, lesson_id, scores, created_at, lessons(title)")
+      .eq("student_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(10),
+    supabase
+      .from("writing_submissions")
+      .select("id, lesson_id, status, scores, version, created_at, lessons(title)")
+      .eq("student_id", userId)
+      .order("created_at", { ascending: false })
+      .limit(10),
     reached.length && features.speaking
       ? supabase.from("units").select("id, title, position, roleplay").in("id", reached).not("roleplay", "is", null).order("position")
       : Promise.resolve({ data: [] as { id: string; title: string; position: number; roleplay: unknown }[] }),
@@ -72,9 +82,7 @@ export default async function PracticePage() {
         </span>
       </Link>
 
-      {visible.length === 0 && (
-        <Card className="p-5 text-sm leading-relaxed text-muted-foreground">مهام المحادثة والكتابة تظهر هنا عندما تصل إلى دروسها.</Card>
-      )}
+      {visible.length === 0 && <Card className="p-5 text-sm leading-relaxed text-muted-foreground">مهام المحادثة والكتابة تظهر هنا عندما تصل إلى دروسها.</Card>}
       {visible.map((t) => (
         <Link
           key={`${t.kind}-${t.lessonId}`}
@@ -148,7 +156,11 @@ export default async function PracticePage() {
                 href={`/student/practice/${h.kind}/result/${h.id}`}
                 className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-card p-3.5 text-foreground no-underline hover:text-foreground"
               >
-                {h.kind === "speaking" ? <Mic className="size-5 text-muted-foreground" aria-hidden="true" /> : <PenLine className="size-5 text-muted-foreground" aria-hidden="true" />}
+                {h.kind === "speaking" ? (
+                  <Mic className="size-5 text-muted-foreground" aria-hidden="true" />
+                ) : (
+                  <PenLine className="size-5 text-muted-foreground" aria-hidden="true" />
+                )}
                 <span className="min-w-0 flex-1">
                   <span className="block text-xs text-muted-foreground">
                     {h.kind === "speaking" ? "محادثة" : `كتابة · النسخة ${h.version}`} · {new Date(h.created_at).toLocaleDateString("ar")}

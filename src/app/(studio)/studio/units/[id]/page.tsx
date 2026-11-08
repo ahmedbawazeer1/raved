@@ -64,9 +64,7 @@ export default async function UnitReviewPage({ params }: PageProps<"/studio/unit
           <p className="text-xs text-muted-foreground">يعمل «عقل رفد» كل نصف ساعة. حدّث الصفحة لترى التقدم.</p>
         </Card>
       )}
-      {unit.build_status === "failed" && (
-        <Card className="p-5 text-destructive">تعثر البناء: {job?.error ?? "خطأ غير معروف"}. أعده من صفحة الخريطة.</Card>
-      )}
+      {unit.build_status === "failed" && <Card className="p-5 text-destructive">تعثر البناء: {job?.error ?? "خطأ غير معروف"}. أعده من صفحة الخريطة.</Card>}
 
       {out && (
         <>
@@ -137,7 +135,13 @@ export default async function UnitReviewPage({ params }: PageProps<"/studio/unit
                   </h2>
                   <Badge tone="muted">{meta.template}</Badge>
                   {meta.video ? (
-                    <a href={`https://www.youtube.com/watch?v=${meta.video.youtube_id}&t=${meta.video.part.start_sec}`} target="_blank" rel="noreferrer" className="text-sm" dir="ltr">
+                    <a
+                      href={`https://www.youtube.com/watch?v=${meta.video.youtube_id}&t=${meta.video.part.start_sec}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-sm"
+                      dir="ltr"
+                    >
                       {meta.video.title || meta.video.youtube_id} ({meta.video.part.start_sec}–{meta.video.part.end_sec}s)
                     </a>
                   ) : (
@@ -158,8 +162,16 @@ export default async function UnitReviewPage({ params }: PageProps<"/studio/unit
                     <p className="text-sm font-semibold text-muted-foreground">كما يراه الطالب</p>
                     <div className="rounded-2xl border border-border bg-background p-3">
                       <LessonBlocks blocks={lesson.blocks} />
-                      {lesson.speaking_task && <p className="mt-3 text-sm">مهمة التحدث: <span dir="ltr">{lesson.speaking_task.prompt_en}</span></p>}
-                      {lesson.writing_task && <p className="mt-1 text-sm">مهمة الكتابة: <span dir="ltr">{lesson.writing_task.prompt_en}</span></p>}
+                      {lesson.speaking_task && (
+                        <p className="mt-3 text-sm">
+                          مهمة التحدث: <span dir="ltr">{lesson.speaking_task.prompt_en}</span>
+                        </p>
+                      )}
+                      {lesson.writing_task && (
+                        <p className="mt-1 text-sm">
+                          مهمة الكتابة: <span dir="ltr">{lesson.writing_task.prompt_en}</span>
+                        </p>
+                      )}
                     </div>
                   </div>
                   <div className="flex flex-col gap-4">
@@ -191,7 +203,8 @@ export default async function UnitReviewPage({ params }: PageProps<"/studio/unit
             <ol className="flex list-inside list-decimal flex-col gap-1 text-sm">
               {out.package.quiz.questions.map((q) => (
                 <li key={q.id} dir="ltr" className="text-start">
-                  {q.prompt} {q.options ? `(${q.options.join(" / ")})` : ""} → <b>{Array.isArray(q.answer) ? q.answer.join(" ") : typeof q.answer === "number" ? q.options?.[q.answer] : q.answer}</b>
+                  {q.prompt} {q.options ? `(${q.options.join(" / ")})` : ""} →{" "}
+                  <b>{Array.isArray(q.answer) ? q.answer.join(" ") : typeof q.answer === "number" ? q.options?.[q.answer] : q.answer}</b>
                 </li>
               ))}
             </ol>

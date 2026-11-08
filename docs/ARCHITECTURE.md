@@ -67,7 +67,8 @@ The platform builds its own content with a factory, so any path can be added wit
 | Trusted video sources (searched in order) | `video_sources` | admin + teachers |
 | Templates (lesson = ordered sections with phase/block/source; unit = ordered lessons + counts + quiz) | `content_templates`, `src/lib/factory/templates.ts` | admin, `/studio/templates` |
 | Level map (objectives, grammar sequence, units with situation/task/words/review words) | `curriculum_levels/items/units`, `src/lib/factory/curriculum.ts` (checks), agent job `plan_level` (`src/lib/agent/level.ts`) | agent drafts, teacher reviews, admin approves |
-| Units, built one by one from an approved map | (next stage) | factory; teacher + admin review |
+| Units, built one by one from an approved map | jobs `factory_unit` / `factory_lesson` (`src/lib/agent/factory.ts`, `src/lib/factory/build/*`), queue `src/lib/factory/queue.ts` | factory builds; teacher + admin review at `/studio/units/<id>`; admin publishes |
+| Weekly improvement | `scripts/agent/weekly.ts` → `unit_insights`, `/studio/insights` | owner sends a unit back with the notes |
 
 Rules: a template change applies to units built afterwards, never to published ones; every lesson template has exactly one
 video section; exercises/games are generated in code; every map change re-runs the code checks shown in the studio.

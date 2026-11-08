@@ -16,7 +16,10 @@ export const CONTENT_SCHEMAS = {
   table: z.object({
     block: z.literal("table"),
     headers: z.array(z.string().trim().min(1).max(60)).min(2).max(5),
-    rows: z.array(z.array(z.string().trim().max(220)).min(2).max(5)).min(1).max(20),
+    rows: z
+      .array(z.array(z.string().trim().max(220)).min(2).max(5))
+      .min(1)
+      .max(20),
   }),
   audio: z.object({ block: z.literal("audio"), sentences_en: z.array(z.string().trim().min(2).max(220)).min(2).max(14) }),
   reading: z.object({ block: z.literal("reading"), text_en: z.string().trim().min(40).max(2500) }),

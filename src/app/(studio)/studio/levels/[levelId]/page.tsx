@@ -173,11 +173,11 @@ export default async function LevelMapPage({ params }: PageProps<"/studio/levels
                     <span className="ms-auto flex items-center gap-2">
                       {unitIssues.some((i) => i.severity === "error") && <Badge tone="destructive">يحتاج إصلاحاً</Badge>}
                       {locked && <Badge tone={bs.tone}>{bs.label}</Badge>}
-                    {row.build_job_id && (
-                      <Link href={`/studio/units/${row.id}`} className="text-sm font-semibold">
-                        {row.build_status === "review" ? "راجعها ←" : "افتحها ←"}
-                      </Link>
-                    )}
+                      {row.build_job_id && (
+                        <Link href={`/studio/units/${row.id}`} className="text-sm font-semibold">
+                          {row.build_status === "review" ? "راجعها ←" : "افتحها ←"}
+                        </Link>
+                      )}
                       <span className="text-xs text-muted-foreground">{u.words.length} كلمة</span>
                     </span>
                   </summary>
@@ -212,17 +212,20 @@ export default async function LevelMapPage({ params }: PageProps<"/studio/levels
             })}
           </Card>
 
-          {locked && isAdmin && !units.some((u) => u.build_status === "building" || u.build_status === "review") && units.some((u) => u.build_status !== "approved") && (
-            <Card className="flex flex-col gap-2 p-5">
-              <p className="text-sm text-muted-foreground">لا توجد وحدة قيد البناء الآن. المصنع يبني الوحدة التالية بالترتيب (أو يعيد التي تعثرت).</p>
-              <form action={buildNextUnit}>
-                <input type="hidden" name="level_id" value={level.id} />
-                <Button type="submit" className="self-start">
-                  ابنِ الوحدة التالية
-                </Button>
-              </form>
-            </Card>
-          )}
+          {locked &&
+            isAdmin &&
+            !units.some((u) => u.build_status === "building" || u.build_status === "review") &&
+            units.some((u) => u.build_status !== "approved") && (
+              <Card className="flex flex-col gap-2 p-5">
+                <p className="text-sm text-muted-foreground">لا توجد وحدة قيد البناء الآن. المصنع يبني الوحدة التالية بالترتيب (أو يعيد التي تعثرت).</p>
+                <form action={buildNextUnit}>
+                  <input type="hidden" name="level_id" value={level.id} />
+                  <Button type="submit" className="self-start">
+                    ابنِ الوحدة التالية
+                  </Button>
+                </form>
+              </Card>
+            )}
 
           {!locked && (
             <Card className="flex flex-col gap-4 p-5">

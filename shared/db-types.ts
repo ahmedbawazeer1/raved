@@ -483,6 +483,36 @@ export type Database = {
         };
         Relationships: [];
       };
+      unit_insights: {
+        Row: {
+          attempts: number;
+          computed_at: string;
+          flagged: number;
+          items: Json;
+          lessons: Json;
+          pass_rate: number;
+          unit_id: string;
+        };
+        Insert: {
+          attempts?: number;
+          computed_at?: string;
+          flagged?: number;
+          items?: Json;
+          lessons?: Json;
+          pass_rate?: number;
+          unit_id: string;
+        };
+        Update: {
+          attempts?: number;
+          computed_at?: string;
+          flagged?: number;
+          items?: Json;
+          lessons?: Json;
+          pass_rate?: number;
+          unit_id?: string;
+        };
+        Relationships: [];
+      };
       app_config: {
         Row: {
           id: string;

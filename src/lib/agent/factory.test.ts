@@ -58,7 +58,7 @@ const part = (start: number) => ({
 
 /** A fake model: answers each kind of prompt with valid JSON. */
 function fakeAsk(calls: string[]) {
-  return async <T,>(req: { prompt: string; youtubeUrl?: string }, check: (v: unknown) => { ok: true; value: T } | { ok: false; errors: string[] }) => {
+  return async <T>(req: { prompt: string; youtubeUrl?: string }, check: (v: unknown) => { ok: true; value: T } | { ok: false; errors: string[] }) => {
     calls.push(req.prompt.slice(0, 30));
     let answer: unknown;
     if (req.prompt.startsWith("Watch this whole video")) {
@@ -70,10 +70,19 @@ function fakeAsk(calls: string[]) {
       const sections: Record<string, unknown> = {
         warmup: { markdown_ar: "اليوم أول يوم في المدرسة في المكلا. كيف تحيّي زميلك الجديد؟" },
         words: { headers: ["English", "العربية", "Example"], rows: words.map((w) => [w.word, w.meaning_ar, w.example_en]) },
-        in_context: { sentences_en: ["Hello, I am Hamza.", "My name is Hamza.", "I am a student.", "She is my teacher.", "He is my friend.", "Nice to meet you."] },
+        in_context: {
+          sentences_en: ["Hello, I am Hamza.", "My name is Hamza.", "I am a student.", "She is my teacher.", "He is my friend.", "Nice to meet you."],
+        },
         notice: { sentences_en: ["I am a student.", "She is a teacher.", "We are friends."] },
         rule: { markdown_ar: "نستخدم am مع I، و is مع he و she، و are مع we و they و you." },
-        form: { headers: ["Subject", "Verb"], rows: [["I", "am"], ["He / She", "is"], ["We / They", "are"]] },
+        form: {
+          headers: ["Subject", "Verb"],
+          rows: [
+            ["I", "am"],
+            ["He / She", "is"],
+            ["We / They", "are"],
+          ],
+        },
         write: { prompt_en: "Write two sentences about you.", min_words: 10, max_words: 40 },
         before: { markdown_ar: "حمزة يقابل سالم في الفصل. استمع: من أين سالم؟" },
         dialogue: {
@@ -99,7 +108,11 @@ function fakeAsk(calls: string[]) {
       answer = {
         title_ar: "درس",
         sections,
-        roleplay: { character_ar: "مستر باوزير، معلّم في المكلا", scenario_en: "You are Mr. Bawazir, a kind teacher in Mukalla. Greet the new student.", opening_en: "Good morning!" },
+        roleplay: {
+          character_ar: "مستر باوزير، معلّم في المكلا",
+          scenario_en: "You are Mr. Bawazir, a kind teacher in Mukalla. Greet the new student.",
+          opening_en: "Good morning!",
+        },
       };
     }
     const r = check(answer);
@@ -181,9 +194,24 @@ describe("section editing", () => {
     const { sectionToText, textToSection } = await import("../factory/build/content");
     const samples = [
       { block: "text", markdown_ar: "شرح القاعدة بالعربية مع مثال واضح." },
-      { block: "table", headers: ["Subject", "Verb"], rows: [["I", "am"], ["He", "is"]] },
+      {
+        block: "table",
+        headers: ["Subject", "Verb"],
+        rows: [
+          ["I", "am"],
+          ["He", "is"],
+        ],
+      },
       { block: "audio", sentences_en: ["I am Hamza.", "She is Reem."] },
-      { block: "story", title_ar: "التعارف", panels: [{ speaker: "Hamza", text_en: "Hello!", text_ar: "مرحباً!" }, { speaker: "Reem", text_en: "Hi!", text_ar: "أهلاً!" }, { speaker: "Hamza", text_en: "Bye!", text_ar: "مع السلامة!" }] },
+      {
+        block: "story",
+        title_ar: "التعارف",
+        panels: [
+          { speaker: "Hamza", text_en: "Hello!", text_ar: "مرحباً!" },
+          { speaker: "Reem", text_en: "Hi!", text_ar: "أهلاً!" },
+          { speaker: "Hamza", text_en: "Bye!", text_ar: "مع السلامة!" },
+        ],
+      },
       { block: "speaking_task", prompt_en: "Introduce yourself to a new student.", helpful_phrases: ["My name is…"], rubric_focus: [] },
       { block: "writing_task", prompt_en: "Write about your family in Mukalla.", min_words: 20, max_words: 60, rubric_focus: [] },
     ] as const;

@@ -20,7 +20,10 @@ export async function createDuel(): Promise<DuelState> {
   redirect(`/student/duel/${data}`);
 }
 
-const code = z.string().trim().regex(/^[A-Za-z0-9]{6}$/);
+const code = z
+  .string()
+  .trim()
+  .regex(/^[A-Za-z0-9]{6}$/);
 
 /** Opens a friend's duel by its 6-character code. */
 export async function joinDuel(_prev: DuelState, formData: FormData): Promise<DuelState> {

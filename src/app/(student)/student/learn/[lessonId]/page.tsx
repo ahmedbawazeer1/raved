@@ -62,7 +62,11 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
           ? supabase.from("video_views").select("youtube_id, watched_sec, duration_sec, completed_at").eq("student_id", userId).in("youtube_id", wholeIds)
           : Promise.resolve({ data: [] as VideoProgressRow[] }),
         partIds.length
-          ? supabase.from("video_part_views").select("youtube_id, start_sec, watched_sec, duration_sec, completed_at").eq("student_id", userId).in("youtube_id", partIds)
+          ? supabase
+              .from("video_part_views")
+              .select("youtube_id, start_sec, watched_sec, duration_sec, completed_at")
+              .eq("student_id", userId)
+              .in("youtube_id", partIds)
           : Promise.resolve({ data: [] as VideoProgressRow[] }),
       ]).then(([w, p]) => ({ data: progressByKey(w.data ?? [], p.data ?? []) })),
       supabase.from("speaking_attempts").select("id").eq("student_id", userId).eq("lesson_id", lesson.id).limit(1),

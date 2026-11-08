@@ -65,7 +65,14 @@ export interface FactoryOutput {
   package: UnitPackage;
   factory: {
     curriculum_unit_id: string;
-    lessons: { key: string; template: string; spec: LessonTemplateSpec; title_ar: string; sections: Record<string, SectionContent>; video: ChosenVideo | null }[];
+    lessons: {
+      key: string;
+      template: string;
+      spec: LessonTemplateSpec;
+      title_ar: string;
+      sections: Record<string, SectionContent>;
+      video: ChosenVideo | null;
+    }[];
     roleplay: UnitPackage["roleplay"] | null;
     qa: { issues: QaIssue[]; critique: Critique | null; rewritten: number[] };
     /** Everything else the package is assembled from (to re-assemble after a reviewer's edit). */
@@ -102,7 +109,9 @@ export function plannedLessons(ctx: UnitContext): PlannedLesson[] {
     if (!t) return [];
     const video = t.spec.sections.find((s) => s.block === "video");
     const key = `${i + 1}-${l.template}`;
-    return [{ key, template: l.template, title_ar: t.title_ar, spec: t.spec, need: { key: l.template, title_ar: t.title_ar, guide_en: video?.guide_en ?? "" } }];
+    return [
+      { key, template: l.template, title_ar: t.title_ar, spec: t.spec, need: { key: l.template, title_ar: t.title_ar, guide_en: video?.guide_en ?? "" } },
+    ];
   });
 }
 
@@ -110,7 +119,16 @@ const ok = <T>(value: T) => ({ ok: true as const, value });
 const fail = (errors: string[]) => ({ ok: false as const, errors });
 
 /** Picks and watches the videos of all lessons that still need one. */
-async function chooseVideos(ctx: UnitContext, lessons: PlannedLesson[], saved: Record<string, ChosenVideo | null>, ask: Ask, tools: FactoryTools, system: string, note: Note, save: () => Promise<void>) {
+async function chooseVideos(
+  ctx: UnitContext,
+  lessons: PlannedLesson[],
+  saved: Record<string, ChosenVideo | null>,
+  ask: Ask,
+  tools: FactoryTools,
+  system: string,
+  note: Note,
+  save: () => Promise<void>,
+) {
   const rules = ctx.profile.video;
   const language = ctx.levelProfile?.video_language ?? "en";
   const missing = lessons.filter((l) => !(l.key in saved));
@@ -121,7 +139,17 @@ async function chooseVideos(ctx: UnitContext, lessons: PlannedLesson[], saved: R
   if (episode && missing.length === lessons.length) {
     await note(`أشاهد حلقة الوحدة «${episode.title}» وأقسّمها على الدروس`, { progress: 15, step: "videos" });
     const res = await ask(
-      { system, prompt: episodePrompt(ctx.unit, lessons.map((l) => ({ ...l.need, key: l.key })), ctx.level.code), json: true, youtubeUrl: `https://www.youtube.com/watch?v=${episode.youtube_id}`, temperature: 0.3 },
+      {
+        system,
+        prompt: episodePrompt(
+          ctx.unit,
+          lessons.map((l) => ({ ...l.need, key: l.key })),
+          ctx.level.code,
+        ),
+        json: true,
+        youtubeUrl: `https://www.youtube.com/watch?v=${episode.youtube_id}`,
+        temperature: 0.3,
+      },
       (v) => {
         const r = episodeSchema.safeParse(v);
         if (!r.success) return fail(r.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`));
@@ -153,27 +181,38 @@ async function chooseVideos(ctx: UnitContext, lessons: PlannedLesson[], saved: R
       if (found.size >= 8) break;
       if (s.kind === "channel" && tools.resolveChannel) {
         const channelId = await tools.resolveChannel(s.ref);
-        if (channelId) for (const c of await tools.search(queries[0], { channelId, language, minSec: rules.min_sec, maxSec: rules.max_sec * 4 })) found.set(c.id, c);
+        if (channelId)
+          for (const c of await tools.search(queries[0], { channelId, language, minSec: rules.min_sec, maxSec: rules.max_sec * 4 })) found.set(c.id, c);
       }
     }
-    if (found.size < 3) for (const c of await tools.search(queries[queries.length - 1], { language, minSec: rules.min_sec, maxSec: rules.max_sec * 4 })) found.set(c.id, c);
+    if (found.size < 3)
+      for (const c of await tools.search(queries[queries.length - 1], { language, minSec: rules.min_sec, maxSec: rules.max_sec * 4 })) found.set(c.id, c);
     const candidates = [...found.values()].filter((c) => !rules.captions_required || c.captions || language === "ar");
     if (!candidates.length) {
       saved[l.key] = null;
       await save();
       continue;
     }
-    const ranked = await ask({ system, prompt: choosePrompt(ctx.unit, l.need, ctx.level.code, language, candidates, rules.candidates), json: true, temperature: 0.2 }, (v) => {
-      const r = chooseSchema.safeParse(v);
-      if (!r.success) return fail(r.error.issues.map((x) => x.message));
-      const ids = r.data.video_ids.filter((id) => found.has(id));
-      return ids.length ? ok(ids) : fail(["choose ids from the list"]);
-    });
+    const ranked = await ask(
+      { system, prompt: choosePrompt(ctx.unit, l.need, ctx.level.code, language, candidates, rules.candidates), json: true, temperature: 0.2 },
+      (v) => {
+        const r = chooseSchema.safeParse(v);
+        if (!r.success) return fail(r.error.issues.map((x) => x.message));
+        const ids = r.data.video_ids.filter((id) => found.has(id));
+        return ids.length ? ok(ids) : fail(["choose ids from the list"]);
+      },
+    );
     let chosen: ChosenVideo | null = null;
     for (const id of ranked.value.slice(0, 2)) {
       const c = found.get(id)!;
       const watched = await ask(
-        { system, prompt: watchPrompt(ctx.unit, l.need, ctx.level.code, rules), json: true, youtubeUrl: `https://www.youtube.com/watch?v=${id}`, temperature: 0.3 },
+        {
+          system,
+          prompt: watchPrompt(ctx.unit, l.need, ctx.level.code, rules),
+          json: true,
+          youtubeUrl: `https://www.youtube.com/watch?v=${id}`,
+          temperature: 0.3,
+        },
         (v) => {
           const r = watchSchema.safeParse(v);
           if (!r.success) return fail(r.error.issues.map((x) => `${x.path.join(".")}: ${x.message}`));
@@ -202,7 +241,16 @@ async function chooseVideos(ctx: UnitContext, lessons: PlannedLesson[], saved: R
   }
 }
 
-export async function buildFactoryUnit(job: { id: string; input: Record<string, unknown> }, ctx: UnitContext, memory: string[], system: string, ask: Ask, tools: FactoryTools, note: Note, saveInput: (p: FactoryPartial) => Promise<void>): Promise<FactoryOutput> {
+export async function buildFactoryUnit(
+  job: { id: string; input: Record<string, unknown> },
+  ctx: UnitContext,
+  memory: string[],
+  system: string,
+  ask: Ask,
+  tools: FactoryTools,
+  note: Note,
+  saveInput: (p: FactoryPartial) => Promise<void>,
+): Promise<FactoryOutput> {
   const partial: FactoryPartial = (job.input.partial ?? {}) as FactoryPartial;
   const lessons = plannedLessons(ctx);
   const videos: Record<string, ChosenVideo | null> = { ...(partial.videos ?? {}) };
@@ -310,7 +358,9 @@ export async function buildFactoryUnit(job: { id: string; input: Record<string, 
 
   // Gate 1: the code checks (always on the final package).
   const issues = gateOne({ pkg, words, known: ctx.known, quizMin: ctx.unitTemplate.quiz.min, schemaErrors: tools.validate(pkg).errors });
-  for (const l of lessons) if (!videos[l.key]) issues.unshift({ severity: "error", lesson: lessons.indexOf(l) + 1, message: "لم يُعثر على فيديو مناسب: اختر فيديو للدرس في المراجعة" });
+  for (const l of lessons)
+    if (!videos[l.key])
+      issues.unshift({ severity: "error", lesson: lessons.indexOf(l) + 1, message: "لم يُعثر على فيديو مناسب: اختر فيديو للدرس في المراجعة" });
 
   return {
     package: pkg,
@@ -336,7 +386,13 @@ export async function buildFactoryUnit(job: { id: string; input: Record<string, 
 export async function watchChosen(ctx: UnitContext, lesson: PlannedLesson, videoId: string, ask: Ask): Promise<ChosenVideo> {
   const rules = ctx.profile.video;
   const res = await ask(
-    { system: "", prompt: watchPrompt(ctx.unit, lesson.need, ctx.level.code, rules), json: true, youtubeUrl: `https://www.youtube.com/watch?v=${videoId}`, temperature: 0.3 },
+    {
+      system: "",
+      prompt: watchPrompt(ctx.unit, lesson.need, ctx.level.code, rules),
+      json: true,
+      youtubeUrl: `https://www.youtube.com/watch?v=${videoId}`,
+      temperature: 0.3,
+    },
     (v) => {
       const r = watchSchema.safeParse(v);
       if (!r.success) return fail(r.error.issues.map((x) => `${x.path.join(".")}: ${x.message}`));
