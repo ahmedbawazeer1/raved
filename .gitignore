@@ -51,3 +51,7 @@ next-env.d.ts
 
 # e2e
 /e2e/.auth/
+
+# Supabase CLI local state
+supabase/.branches
+supabase/.temp

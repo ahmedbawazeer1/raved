@@ -24,6 +24,15 @@ back without a new app release**. Read this before structural work.
 | `mobile/`   | The student app (Expo, Expo Router)                                                                               | Screens in `src/app`, UI kit in `src/ui`, data/session in `src/lib`. Imports `@shared/...` (Metro watches `../shared`). |
 | `supabase/` | Migrations, RLS tests                                                                                             | Every table: RLS + a test in `supabase/tests/`.                                                                         |
 
+### The console (admin dashboard + studio)
+
+`/admin/*` and `/studio/*` share one frame, `src/components/console/shell.tsx`: a grouped sidebar (desktop), bottom
+tabs + «المزيد» sheet (phone), a top bar with search (Ctrl K, `src/lib/console/search.ts`) and the bell. What waits
+for a decision is read once per request by `loadConsoleSummary()` (`src/lib/console/summary.ts`); the badges, the bell
+(`notices.ts`) and «اليوم» all use it. Navigation items and who sees them live in `src/components/console/nav.tsx`;
+page building blocks (cards, icon tiles, numbers, empty states) in `src/components/console/ui.tsx`. Status colours mean
+the same everywhere: green = done, gold = waits for you, purple = the agent, red = a problem, blue = information.
+
 ## 2. Rules that keep changes cheap
 
 1. **One source of truth per idea.** A rule (phone format, sign-up fields, SRS intervals, colours) is written

@@ -283,7 +283,18 @@ export async function resolveReport(formData: FormData): Promise<void> {
   const supabase = await createClient();
   await supabase.from("reports").update({ status: "resolved" }).eq("id", id.data);
   await supabase.from("audit_log").insert({ actor_id: userId, action: "report.resolve", target: id.data, data: {} });
-  revalidatePath("/admin/reports");
+  revalidatePath("/admin", "layout");
+}
+
+/** Undo: puts a closed report back in the open list. */
+export async function reopenReport(formData: FormData): Promise<void> {
+  const { userId } = await requireAdmin();
+  const id = z.uuid().safeParse(formData.get("report_id"));
+  if (!id.success) return;
+  const supabase = await createClient();
+  await supabase.from("reports").update({ status: "open" }).eq("id", id.data);
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "report.reopen", target: id.data, data: {} });
+  revalidatePath("/admin", "layout");
 }
 
 /** Marks one logged error (or, with "all", every open one) as handled. */
@@ -337,7 +348,10 @@ const APP_FEATURES = ["games", "league", "duel", "roleplay", "assistant", "speak
 /** Remote config of the mobile app (shared/app-config.ts): switches, notice, minimum/latest version. */
 export async function saveAppConfig(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
   const { userId } = await requireAdmin();
-  const version = z.string().trim().regex(/^\d+\.\d+\.\d+$/, "اكتب النسخة مثل 1.0.0");
+  const version = z
+    .string()
+    .trim()
+    .regex(/^\d+\.\d+\.\d+$/, "اكتب النسخة مثل 1.0.0");
   const parsed = z
     .object({
       min_version: version,

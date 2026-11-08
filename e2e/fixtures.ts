@@ -20,6 +20,13 @@ export const TEACHER = {
   name: "معلم الاختبار",
 };
 
+/** The platform owner (admin dashboard + studio). */
+export const ADMIN = {
+  email: "e2e-admin@example.com",
+  password: "e2e-Password-246",
+  name: "مدير الاختبار",
+};
+
 export async function login(page: Page, account: { email: string; password: string } = STUDENT, home: RegExp = /\/student$/) {
   await page.goto("/login");
   await page.getByLabel("البريد الإلكتروني").fill(account.email);
