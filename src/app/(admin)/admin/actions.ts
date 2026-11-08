@@ -79,6 +79,31 @@ export async function reviewApplication(_prev: AdminFormState, formData: FormDat
   redirect(next ? `/admin/applications?id=${next}&done=${decision.data}` : `/admin/applications?done=${decision.data}`);
 }
 
+/** Accepts several complete applications at once (each one exactly like a single «قبول»). */
+export async function approveApplications(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  await requireAdmin();
+  const ids = z.array(z.uuid()).min(1).max(50).safeParse(formData.getAll("application_id"));
+  if (!ids.success) return { error: "اختر طلباً واحداً على الأقل." };
+  const supabase = await createClient();
+  const origin = await getOrigin();
+  const template = DECISION_EMAIL.approved!;
+  let ok = 0;
+  for (const id of ids.data) {
+    const { data, error } = await supabase.rpc("review_application", { p_application_id: id, p_decision: "approved" });
+    if (error) continue;
+    ok++;
+    const email = (data as { email?: string | null }).email;
+    if (email)
+      await sendEmail({ to: email, subject: template.subject, text: template.text(null), link: { href: `${origin}${template.path}`, label: template.label } });
+  }
+  revalidatePath("/admin", "layout");
+  if (!ok) return { error: "لم يُقبل أي طلب. حدّث الصفحة وحاول مرة أخرى." };
+  return {
+    ok: true,
+    message: ok === ids.data.length ? `قُبل ${ok} طلاب، وأُرسل لكل طالب بريد ترحيب.` : `قُبل ${ok} من ${ids.data.length}. حدّث الصفحة لترى الباقي.`,
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Paths
 // ---------------------------------------------------------------------------

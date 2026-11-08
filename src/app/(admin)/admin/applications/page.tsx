@@ -7,6 +7,8 @@ import { Alert, Select } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 import { En } from "@/components/en";
 import { ReviewForm } from "@/components/admin/review-form";
+import { BulkApprove } from "@/components/admin/bulk-approve";
+import { PageHead } from "@/components/console/ui";
 import { createClient } from "@/lib/supabase/server";
 import { ageFrom, gradeLabel, maskPhone, streamLabel } from "@/lib/yemen";
 import { targetDateLabel, targetExamLabel } from "@/lib/apply/options";
@@ -50,8 +52,15 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
   const supabase = await createClient();
   let query = supabase.from("applications").select(SELECT).eq("status", status).order("submitted_at", { ascending: true, nullsFirst: false }).limit(100);
   if (governorate) query = query.eq("student.governorate", governorate);
-  const [{ data: rows }, { data: governorates }] = await Promise.all([query, supabase.from("governorates").select("code, name_ar").order("position")]);
+  const [{ data: rows }, { data: governorates }, { data: all }] = await Promise.all([
+    query,
+    supabase.from("governorates").select("code, name_ar").order("position"),
+    supabase.from("applications").select("status"),
+  ]);
   const list = (rows ?? []).filter((r) => r.student);
+  const counts: Record<string, number> = {};
+  for (const r of all ?? []) counts[r.status] = (counts[r.status] ?? 0) + 1;
+  const complete = list.filter((r) => r.status === "submitted" && r.guardian_consent_at && r.privacy_consent_at).map((r) => r.id);
 
   let selected = selectedId ? list.find((r) => r.id === selectedId) : undefined;
   if (selectedId && !selected) {
@@ -70,34 +79,46 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
 
   return (
     <div className="flex flex-col gap-5">
-      <div className={cn("flex flex-wrap items-center justify-between gap-4", selected && "max-md:hidden")}>
-        <h1 className="text-[28px] font-bold">طلبات الالتحاق</h1>
-        <form className="flex flex-wrap gap-2" method="get">
-          <label htmlFor="f-status" className="sr-only">
-            الحالة
-          </label>
-          <Select id="f-status" name="status" defaultValue={status} className="min-h-11 w-auto">
-            {STATUSES.map((s) => (
-              <option key={s.value} value={s.value}>
-                {s.label}
-              </option>
+      <div className={cn("flex flex-col gap-3", selected && "max-md:hidden")}>
+        <PageHead title="طلبات الالتحاق" sub="اضغط طلباً لترى تفاصيله وتقبله أو تطلب تعديلاً أو ترفضه. الرفض والتعديل يطلبان ملاحظة تصل للطالب." />
+        <div className="flex flex-wrap items-center gap-2">
+          <nav aria-label="حالة الطلب" className="flex flex-wrap gap-1.5">
+            {STATUSES.filter((x) => x.value !== "draft").map((x) => (
+              <Link
+                key={x.value}
+                href={`/admin/applications?status=${x.value}${governorate ? `&gov=${governorate}` : ""}`}
+                aria-current={status === x.value ? "page" : undefined}
+                className={cn(
+                  "min-h-10 rounded-full border px-3.5 py-2 text-sm font-semibold no-underline",
+                  status === x.value
+                    ? "border-foreground bg-foreground text-background hover:text-background"
+                    : "border-border bg-card text-foreground hover:text-foreground",
+                )}
+              >
+                {x.label}
+                {counts[x.value] ? <span className="ms-1 font-en">{counts[x.value]}</span> : null}
+              </Link>
             ))}
-          </Select>
-          <label htmlFor="f-gov" className="sr-only">
-            المحافظة
-          </label>
-          <Select id="f-gov" name="gov" defaultValue={governorate} className="min-h-11 w-auto">
-            <option value="">كل المحافظات</option>
-            {(governorates ?? []).map((g) => (
-              <option key={g.code} value={g.code}>
-                {g.name_ar}
-              </option>
-            ))}
-          </Select>
-          <Button type="submit" variant="secondary">
-            عرض
-          </Button>
-        </form>
+          </nav>
+          <form className="ms-auto flex gap-2" method="get">
+            <input type="hidden" name="status" value={status} />
+            <label htmlFor="f-gov" className="sr-only">
+              المحافظة
+            </label>
+            <Select id="f-gov" name="gov" defaultValue={governorate} className="min-h-10 w-auto">
+              <option value="">كل المحافظات</option>
+              {(governorates ?? []).map((g) => (
+                <option key={g.code} value={g.code}>
+                  {g.name_ar}
+                </option>
+              ))}
+            </Select>
+            <Button type="submit" variant="secondary" size="sm">
+              عرض
+            </Button>
+          </form>
+        </div>
+        {status === "submitted" && complete.length > 1 && <BulkApprove ids={complete} />}
       </div>
 
       {done && <Alert tone="success">{done}</Alert>}
@@ -105,7 +126,7 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
       <div className="flex flex-wrap items-start gap-5">
         <section
           aria-label="قائمة الطلبات"
-          className={cn("w-full overflow-hidden rounded-2xl border border-border bg-card md:max-w-[400px] md:flex-[1_1_320px]", selected && "max-md:hidden")}
+          className={cn("w-full overflow-hidden rounded-[18px] border border-border bg-card md:max-w-[400px] md:flex-[1_1_320px]", selected && "max-md:hidden")}
         >
           {list.length === 0 && <p className="p-5 text-sm text-muted-foreground">لا توجد طلبات بهذه الحالة.</p>}
           {list.map((r) => {
@@ -121,7 +142,7 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
                   active && "border-s-4 border-s-primary bg-primary-tint",
                 )}
               >
-                <span className="flex size-10 flex-none items-center justify-center rounded-full bg-primary font-bold text-white">
+                <span className="flex size-11 flex-none items-center justify-center rounded-xl bg-primary-tint font-bold text-primary">
                   {s.full_name.charAt(0) || "؟"}
                 </span>
                 <div className="min-w-0 flex-1">
@@ -139,14 +160,14 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
         {selected?.student ? (
           <section
             aria-label="تفاصيل الطلب"
-            className="flex w-full min-w-0 flex-col gap-5 rounded-2xl border border-border bg-card p-5 md:flex-[999_1_460px] md:p-6"
+            className="flex w-full min-w-0 flex-col gap-5 rounded-[18px] border border-border bg-card p-5 md:flex-[999_1_460px] md:p-6"
           >
             <Link href={`/admin/applications?status=${status}`} className="-mt-1 flex min-h-11 items-center gap-1 text-sm md:hidden">
               <ArrowRight className="size-4" aria-hidden="true" /> كل الطلبات
             </Link>
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div className="flex items-center gap-3.5">
-                <span className="flex size-[52px] items-center justify-center rounded-full bg-primary text-xl font-bold text-white">
+                <span className="flex size-[52px] items-center justify-center rounded-2xl bg-primary-tint text-xl font-bold text-primary">
                   {selected.student.full_name.charAt(0) || "؟"}
                 </span>
                 <div>
@@ -159,7 +180,7 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
               <Badge tone={statusInfo(selected.status).tone}>{statusInfo(selected.status).label}</Badge>
             </div>
 
-            <dl className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-4 rounded-xl bg-background p-4">
+            <dl className="grid grid-cols-[repeat(auto-fit,minmax(150px,1fr))] gap-2">
               {[
                 ["المسار", selected.paths?.title ?? "—"],
                 ["الامتحان المستهدف", targetExamLabel(selected.target_exam)],
@@ -172,7 +193,7 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
                 ["الهاتف", selected.student.phone ? maskPhone(selected.student.phone) : "—"],
                 ["موافقة ولي الأمر", selected.guardian_consent_at ? "نعم" : "لا"],
               ].map(([k, v]) => (
-                <div key={k} className="flex flex-col gap-0.5">
+                <div key={k} className="flex flex-col gap-0.5 rounded-xl bg-muted px-3 py-2">
                   <dt className="text-xs text-muted-foreground">{k}</dt>
                   <dd className={cn("font-semibold", k === "موافقة ولي الأمر" && (v === "نعم" ? "text-success" : "text-destructive"))}>
                     {k === "الهاتف" ? <En>{v}</En> : v}
@@ -182,8 +203,8 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
             </dl>
 
             {selected.motivation && (
-              <div className="flex flex-col gap-1.5">
-                <p className="text-sm font-semibold">لماذا يريد الشهادة</p>
+              <div className="flex flex-col gap-1.5 rounded-xl bg-primary-tint p-3.5">
+                <p className="text-sm font-semibold text-primary">هدفه</p>
                 <p className="text-[15px] leading-[1.8]">«{selected.motivation}»</p>
               </div>
             )}
@@ -225,7 +246,9 @@ export default async function ApplicationsPage({ searchParams }: PageProps<"/adm
             )}
           </section>
         ) : (
-          list.length > 0 && <Card className="hidden p-6 text-sm text-muted-foreground md:block md:flex-[999_1_460px]">اختر طلباً من القائمة لعرضه.</Card>
+          list.length > 0 && (
+            <Card className="hidden rounded-[18px] p-6 text-sm text-muted-foreground md:block md:flex-[999_1_460px]">اختر طلباً من القائمة لعرضه.</Card>
+          )
         )}
       </div>
     </div>

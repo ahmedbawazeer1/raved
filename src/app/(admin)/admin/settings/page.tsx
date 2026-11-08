@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Card } from "@/components/ui/card";
+import { FileBadge, SlidersHorizontal, Smartphone, Sparkles, UserCheck } from "lucide-react";
+import { PageHead, Panel } from "@/components/console/ui";
 import { En } from "@/components/en";
 import { AiSettingsForm } from "@/components/admin/ai-settings-form";
 import { DefaultsForm, ExamForm } from "@/components/admin/exam-form";
@@ -25,45 +26,42 @@ export default async function AdminSettingsPage() {
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-[28px] font-bold">الإعدادات</h1>
-      <Card className="p-5 md:p-6">
-        <h2 className="mb-3 text-lg font-bold">القبول</h2>
-        <SettingsForm admissionMode={mode} />
-      </Card>
-      <Card className="p-5 md:p-6">
-        <h2 className="mb-1 text-lg font-bold">الذكاء الاصطناعي</h2>
-        {!aiConfigured() && (
-          <p className="mb-3 rounded-lg bg-warning-tint p-3 text-sm text-[#5C3D00]">
-            غير مفعّل: أضف المفتاح <En>GROQ_API_KEY</En> في Vercel (راجع docs/PHASE5_SETUP_AR.md).
-          </p>
-        )}
-        <AiSettingsForm
-          speaking={ai.limits.speaking}
-          writing={ai.limits.writing}
-          assistant={ai.limits.assistant}
-          quota={ai.dailyQuota.groq ?? 1000}
-          alert={ai.alertPercent}
-          paused={ai.paused}
-        />
-      </Card>
-      <Card className="p-5 md:p-6">
-        <h2 className="mb-1 text-lg font-bold">تطبيق الجوال</h2>
-        <p className="mb-3 text-sm text-muted-foreground">تتحكم في التطبيق دون إصدار نسخة جديدة: تصل التغييرات للطلاب عند فتحهم التطبيق.</p>
-        <AppConfigForm config={parseAppConfig(appConfig?.value)} />
-      </Card>
-      <Card className="p-5 md:p-6">
-        <h2 className="mb-3 text-lg font-bold">الإعدادات الافتراضية</h2>
-        <DefaultsForm dataSaver={saver?.value !== false} />
-      </Card>
-      <Card className="p-5 md:p-6">
-        <h2 className="mb-1 text-lg font-bold">معلومات الامتحانات في اليمن</h2>
+      <PageHead title="الإعدادات" sub="كل إعداد في بطاقة. يُحفظ عند الضغط على «احفظ» في البطاقة نفسها." />
+      <div className="grid items-start gap-5 xl:grid-cols-2">
+        <Panel title="القبول" icon={UserCheck}>
+          <SettingsForm admissionMode={mode} />
+        </Panel>
+        <Panel title="الذكاء الاصطناعي للطلاب" icon={Sparkles}>
+          {!aiConfigured() && (
+            <p className="mb-3 rounded-xl bg-warning-tint p-3 text-sm text-warning">
+              غير مفعّل: أضف المفتاح <En>GROQ_API_KEY</En> في Vercel (راجع docs/PHASE5_SETUP_AR.md).
+            </p>
+          )}
+          <AiSettingsForm
+            speaking={ai.limits.speaking}
+            writing={ai.limits.writing}
+            assistant={ai.limits.assistant}
+            quota={ai.dailyQuota.groq ?? 1000}
+            alert={ai.alertPercent}
+            paused={ai.paused}
+          />
+        </Panel>
+        <Panel title="تطبيق الجوال" icon={Smartphone}>
+          <p className="mb-3 text-sm text-muted-foreground">تتحكم في التطبيق دون إصدار نسخة جديدة: تصل التغييرات للطلاب عند فتحهم التطبيق.</p>
+          <AppConfigForm config={parseAppConfig(appConfig?.value)} />
+        </Panel>
+        <Panel title="الإعدادات الافتراضية" icon={SlidersHorizontal}>
+          <DefaultsForm dataSaver={saver?.value !== false} />
+        </Panel>
+      </div>
+      <Panel title="معلومات الامتحانات في اليمن" icon={FileBadge}>
         <p className="text-sm text-muted-foreground">
           يراها الطلاب في صفحة التقدم ومسار الامتحان. عند الحفظ يُسجَّل تاريخ اليوم كتاريخ تحقق، فاحفظ فقط بعد أن تتأكد من المعلومات.
         </p>
         {(exams ?? []).map((e) => (
           <ExamForm key={e.code} exam={e} />
         ))}
-      </Card>
+      </Panel>
     </div>
   );
 }
