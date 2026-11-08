@@ -35,9 +35,7 @@ export default async function MyPathsPage() {
               </span>
               {e.is_primary && <Badge>الأساسي</Badge>}
             </span>
-            <span className="text-sm text-muted-foreground">
-              {e.levels?.code ? `مستواك الحالي: ${e.levels.code}` : <MixedText text={e.paths.summary} />}
-            </span>
+            <span className="text-sm text-muted-foreground">{e.levels?.code ? `مستواك الحالي: ${e.levels.code}` : <MixedText text={e.paths.summary} />}</span>
           </Link>
         ) : null,
       )}

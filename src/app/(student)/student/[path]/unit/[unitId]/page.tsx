@@ -91,36 +91,37 @@ export default async function UnitPage({ params }: PageProps<"/student/[path]/un
               </Link>
             );
           })}
-          {unit.quizId && (() => {
-            const quizOpen = !nextLesson;
-            const inner = (
-              <>
-                {unit.quizPassed ? (
-                  <CheckCircle2 className="size-5 text-success" aria-label="ناجح" />
-                ) : quizOpen ? (
-                  <PlayCircle className="size-5 text-primary" aria-label="الآن" />
-                ) : (
-                  <Lock className="size-5 text-[#9AA8A4]" aria-label="مقفل" />
-                )}
-                <span className="flex size-8 items-center justify-center rounded-lg bg-warning-tint text-warning">
-                  <LessonIcon skill="quiz" className="size-4" />
-                </span>
-                <span className="flex-1 font-semibold">اختبار الوحدة</span>
-                {unit.quizPassed && <Badge tone="success">نجحت</Badge>}
-                {!quizOpen && <span className="text-xs">بعد إكمال الدروس</span>}
-              </>
-            );
-            return quizOpen ? (
-              <Link
-                href={`/student/quiz/${unit.quizId}`}
-                className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-foreground no-underline hover:text-foreground"
-              >
-                {inner}
-              </Link>
-            ) : (
-              <div className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-muted-foreground">{inner}</div>
-            );
-          })()}
+          {unit.quizId &&
+            (() => {
+              const quizOpen = !nextLesson;
+              const inner = (
+                <>
+                  {unit.quizPassed ? (
+                    <CheckCircle2 className="size-5 text-success" aria-label="ناجح" />
+                  ) : quizOpen ? (
+                    <PlayCircle className="size-5 text-primary" aria-label="الآن" />
+                  ) : (
+                    <Lock className="size-5 text-[#9AA8A4]" aria-label="مقفل" />
+                  )}
+                  <span className="flex size-8 items-center justify-center rounded-lg bg-warning-tint text-warning">
+                    <LessonIcon skill="quiz" className="size-4" />
+                  </span>
+                  <span className="flex-1 font-semibold">اختبار الوحدة</span>
+                  {unit.quizPassed && <Badge tone="success">نجحت</Badge>}
+                  {!quizOpen && <span className="text-xs">بعد إكمال الدروس</span>}
+                </>
+              );
+              return quizOpen ? (
+                <Link
+                  href={`/student/quiz/${unit.quizId}`}
+                  className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-foreground no-underline hover:text-foreground"
+                >
+                  {inner}
+                </Link>
+              ) : (
+                <div className="flex min-h-13 items-center gap-3 py-2.5 text-sm text-muted-foreground">{inner}</div>
+              );
+            })()}
         </Card>
       </main>
     </>

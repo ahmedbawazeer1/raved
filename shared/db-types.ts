@@ -305,6 +305,7 @@ export type Database = {
       };
       curriculum_units: {
         Row: {
+          build_job_id: string | null;
           build_status: string;
           code: string;
           created_at: string;
@@ -313,17 +314,21 @@ export type Database = {
           level_id: string;
           objectives: string[];
           position: number;
+          review_note: string | null;
           review_words: string[];
           situation_ar: string;
           source_video: Json | null;
           stop_ar: string;
           task_ar: string;
+          teacher_ok_at: string | null;
+          teacher_ok_by: string | null;
           title_ar: string;
           title_en: string;
           unit_id: string | null;
           updated_at: string;
         };
         Insert: {
+          build_job_id?: string | null;
           build_status?: string;
           code: string;
           created_at?: string;
@@ -332,17 +337,21 @@ export type Database = {
           level_id: string;
           objectives?: string[];
           position: number;
+          review_note: string | null;
           review_words?: string[];
           situation_ar: string;
           source_video?: Json | null;
           stop_ar: string;
           task_ar: string;
+          teacher_ok_at: string | null;
+          teacher_ok_by: string | null;
           title_ar: string;
           title_en: string;
           unit_id?: string | null;
           updated_at?: string;
         };
         Update: {
+          build_job_id?: string | null;
           build_status?: string;
           code?: string;
           created_at?: string;
@@ -351,11 +360,14 @@ export type Database = {
           level_id?: string;
           objectives?: string[];
           position?: number;
+          review_note?: string | null;
           review_words?: string[];
           situation_ar?: string;
           source_video?: Json | null;
           stop_ar?: string;
           task_ar?: string;
+          teacher_ok_at?: string | null;
+          teacher_ok_by?: string | null;
           title_ar?: string;
           title_en?: string;
           unit_id?: string | null;
@@ -432,6 +444,72 @@ export type Database = {
           ref?: string;
           title?: string;
           updated_at?: string;
+        };
+        Relationships: [];
+      };
+      video_part_views: {
+        Row: {
+          completed_at: string | null;
+          created_at: string;
+          duration_sec: number;
+          first_seen_at: string;
+          start_sec: number;
+          student_id: string;
+          updated_at: string;
+          watched_sec: number;
+          youtube_id: string;
+        };
+        Insert: {
+          completed_at?: string | null;
+          created_at?: string;
+          duration_sec: number;
+          first_seen_at?: string;
+          start_sec: number;
+          student_id: string;
+          updated_at?: string;
+          watched_sec?: number;
+          youtube_id: string;
+        };
+        Update: {
+          completed_at?: string | null;
+          created_at?: string;
+          duration_sec?: number;
+          first_seen_at?: string;
+          start_sec?: number;
+          student_id?: string;
+          updated_at?: string;
+          watched_sec?: number;
+          youtube_id?: string;
+        };
+        Relationships: [];
+      };
+      unit_insights: {
+        Row: {
+          attempts: number;
+          computed_at: string;
+          flagged: number;
+          items: Json;
+          lessons: Json;
+          pass_rate: number;
+          unit_id: string;
+        };
+        Insert: {
+          attempts?: number;
+          computed_at?: string;
+          flagged?: number;
+          items?: Json;
+          lessons?: Json;
+          pass_rate?: number;
+          unit_id: string;
+        };
+        Update: {
+          attempts?: number;
+          computed_at?: string;
+          flagged?: number;
+          items?: Json;
+          lessons?: Json;
+          pass_rate?: number;
+          unit_id?: string;
         };
         Relationships: [];
       };
@@ -2251,6 +2329,7 @@ export type Database = {
       is_active_member: { Args: never; Returns: boolean };
       is_admin: { Args: never; Returns: boolean };
       is_staff: { Args: never; Returns: boolean };
+      record_video_part: { Args: { p_youtube_id: string; p_start_sec: number; p_watched_sec: number }; Returns: Json };
       set_teacher: { Args: { p_email: string; p_teacher: boolean }; Returns: string };
       my_duels: { Args: never; Returns: Json };
       my_lesson_blocker: { Args: { p_lesson_id: string }; Returns: string };

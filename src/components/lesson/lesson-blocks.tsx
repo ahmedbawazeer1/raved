@@ -4,6 +4,7 @@ import { MixedText } from "@/components/mixed-text";
 import type { LessonBlock } from "@/lib/content/types";
 import { Markdown } from "./markdown";
 import { AudioBlock } from "./audio-block";
+import { videoKey } from "@shared/lesson/video-part";
 import { VideoBlock, type VideoStatus } from "./video-block";
 import { ExerciseStepper } from "./exercise-stepper";
 import { GameBlock } from "./game-block";
@@ -79,7 +80,7 @@ export function LessonBlocks({
             return block.text_en ? <AudioBlock key={i} text={block.text_en} /> : null;
           case "video":
             return (
-              <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[block.youtube_id] : undefined} words={words} />
+              <VideoBlock key={i} block={block} required={Boolean(videos)} status={block.youtube_id ? videos?.[videoKey(block)] : undefined} words={words} />
             );
           case "exercise":
             return i === firstExercise ? <ExerciseStepper key={i} exercises={exercises} /> : null;

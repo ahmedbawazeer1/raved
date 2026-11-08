@@ -7,6 +7,7 @@ import { dbErrorMessage } from "@/lib/auth/errors";
 import { createClient } from "@/lib/supabase/server";
 import { blocking, mapWordSchema, WORD, wordCode } from "@/lib/factory/curriculum";
 import { refreshIssues } from "@/lib/factory/load";
+import { queueNextUnit } from "@/lib/factory/queue";
 import { channelFromUrl, FRAMEWORKS, LANGUAGES, parseProfile, pathProfileSchema, playlistFromUrl } from "@/lib/factory/profile";
 import { DEFAULT_TEMPLATES, lessonTemplateSpec, templateErrors, unitTemplateSpec } from "@/lib/factory/templates";
 import type { AdminFormState } from "@/app/(admin)/admin/actions";
@@ -348,7 +349,9 @@ export async function approveMap(_prev: AdminFormState, formData: FormData): Pro
     .eq("level_id", levelId.data);
   if (error) return { error: lockedMessage(error.message) };
   if (cl?.job_id) await supabase.from("agent_jobs").update({ status: "approved" }).eq("id", cl.job_id);
+  // The factory starts with the first unit; each next one starts when the previous is published.
+  const first = await queueNextUnit(supabase, levelId.data);
   revalidatePath(`/studio/levels/${levelId.data}`);
   revalidatePath("/studio");
-  return { ok: true, message: "اعتُمدت خريطة المستوى. سيبني المصنع وحداتها واحدة واحدة." };
+  return { ok: true, message: `اعتُمدت خريطة المستوى. ${first ? `بدأ المصنع ببناء ${first}، وستصلك وحدة وحدة للمراجعة.` : ""}` };
 }

@@ -86,6 +86,8 @@ export async function reviewJob(_prev: AdminFormState, formData: FormData): Prom
   if (decision === "rejected" && (!note || note.length < 3)) return { error: "اكتب ملاحظتك ليعرف الوكيل ماذا يغيّر." };
 
   const supabase = await createClient();
+  const { data: kindRow } = await supabase.from("agent_jobs").select("kind").eq("id", job_id).single();
+  if (kindRow && ["plan_level", "factory_unit", "factory_lesson"].includes(kindRow.kind)) return { error: "تُراجع هذه المهمة من «استوديو المحتوى»." };
   const { data: job, error } = await supabase
     .from("agent_jobs")
     .update({ status: decision, review_note: note || null })

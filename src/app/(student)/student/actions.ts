@@ -43,6 +43,24 @@ export async function recordVideoWatch(videoId: string, watchedSec: number): Pro
   return { watched: d.watched_sec, duration: d.duration_sec, done: d.done };
 }
 
+/** Same for a part of a video (a block with end_sec): tracked per youtube id + start second. */
+export async function recordVideoPart(
+  videoId: string,
+  startSec: number,
+  watchedSec: number,
+): Promise<{ watched: number; duration: number; done: boolean } | null> {
+  await requireActiveStudent();
+  const id = youtubeId.safeParse(videoId);
+  const start = z.number().int().min(0).max(36_000).safeParse(Math.floor(startSec));
+  const sec = z.number().int().min(0).max(36_000).safeParse(Math.floor(watchedSec));
+  if (!id.success || !start.success || !sec.success) return null;
+  const supabase = await createClient();
+  const { data, error } = await supabase.rpc("record_video_part", { p_youtube_id: id.data, p_start_sec: start.data, p_watched_sec: sec.data });
+  if (error || !data) return null;
+  const d = data as { watched_sec: number; duration_sec: number; done: boolean };
+  return { watched: d.watched_sec, duration: d.duration_sec, done: d.done };
+}
+
 export interface FeedbackState {
   ok?: boolean;
   error?: string;

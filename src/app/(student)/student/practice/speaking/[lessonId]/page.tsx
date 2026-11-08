@@ -22,11 +22,7 @@ export default async function SpeakingTaskPage(props: PageProps<"/student/practi
 
   return (
     <div className="flex flex-col">
-      <PracticeHeader
-        backHref="/student/practice"
-        overline={`محادثة · ${today.used.speaking} من ${today.limits.speaking} اليوم`}
-        title={lesson.title}
-      />
+      <PracticeHeader backHref="/student/practice" overline={`محادثة · ${today.used.speaking} من ${today.limits.speaking} اليوم`} title={lesson.title} />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-3 p-4">
         <Card className="flex flex-col gap-2 p-4">
           <En as="p" className="text-[17px] leading-relaxed font-semibold">
@@ -46,9 +42,7 @@ export default async function SpeakingTaskPage(props: PageProps<"/student/practi
         {aiConfigured() ? (
           <SpeakingRecorder lessonId={lesson.id} prepSeconds={task.prep_seconds} maxSeconds={task.max_seconds} remaining={today.remaining.speaking} />
         ) : (
-          <Card className="p-4 text-sm leading-relaxed text-muted-foreground">
-            التقييم الآلي غير مفعّل بعد. تدرّب الآن بصوت عالٍ، وسيُفتح التقييم قريباً.
-          </Card>
+          <Card className="p-4 text-sm leading-relaxed text-muted-foreground">التقييم الآلي غير مفعّل بعد. تدرّب الآن بصوت عالٍ، وسيُفتح التقييم قريباً.</Card>
         )}
       </main>
     </div>

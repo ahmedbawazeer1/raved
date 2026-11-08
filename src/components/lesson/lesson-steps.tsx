@@ -47,7 +47,11 @@ export function LessonSteps({
   help?: React.ReactNode;
 }) {
   const solved = solvedStore.parse(useSyncExternalStore(solvedStore.subscribe, solvedStore.getSnapshot, solvedStore.getServerSnapshot));
-  const saved = useSyncExternalStore(noop, () => readSaved(lessonId), () => 0);
+  const saved = useSyncExternalStore(
+    noop,
+    () => readSaved(lessonId),
+    () => 0,
+  );
   const [picked, setPicked] = useState<number | null>(null);
   const [videoDone, setVideoDone] = useState(initialVideoDone);
 
@@ -95,7 +99,11 @@ export function LessonSteps({
                   aria-current={i === index ? "step" : undefined}
                   className={cn(
                     "flex min-h-11 items-center gap-1.5 rounded-full border-2 px-3 text-[13px] font-bold whitespace-nowrap transition-colors",
-                    i === index ? "border-primary bg-primary text-white" : isDone ? "border-success/40 bg-success-tint text-success" : "border-border bg-card text-muted-foreground",
+                    i === index
+                      ? "border-primary bg-primary text-white"
+                      : isDone
+                        ? "border-success/40 bg-success-tint text-success"
+                        : "border-border bg-card text-muted-foreground",
                     locked && "opacity-60",
                   )}
                 >
@@ -148,7 +156,11 @@ export function LessonSteps({
         </div>
       )}
       {!next && index > 0 && (
-        <button type="button" onClick={() => go(index - 1)} className="flex min-h-11 items-center justify-center gap-1 text-sm font-semibold text-muted-foreground">
+        <button
+          type="button"
+          onClick={() => go(index - 1)}
+          className="flex min-h-11 items-center justify-center gap-1 text-sm font-semibold text-muted-foreground"
+        >
           <ArrowRight className="size-4" aria-hidden="true" />
           رجوع إلى {steps[index - 1].title}
         </button>

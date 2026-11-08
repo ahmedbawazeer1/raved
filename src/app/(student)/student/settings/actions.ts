@@ -17,9 +17,7 @@ export interface SettingsState {
 }
 
 const studySchema = z.object({
-  daily_goal_minutes: z.coerce
-    .number()
-    .refine((n) => (DAILY_MINUTES as readonly number[]).includes(n), "اختر عدد الدقائق"),
+  daily_goal_minutes: z.coerce.number().refine((n) => (DAILY_MINUTES as readonly number[]).includes(n), "اختر عدد الدقائق"),
 });
 
 export async function saveStudySettings(_prev: SettingsState, formData: FormData): Promise<SettingsState> {

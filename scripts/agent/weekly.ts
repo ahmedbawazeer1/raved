@@ -1,10 +1,12 @@
 /**
- * Weekly self-improvement check of «عقل رفد» (GitHub Actions, Fridays). For every published unit,
- * aggregates quiz results and lesson ratings (no student identities) and queues an improve_unit
- * job when students clearly struggle. The owner reviews every proposal before it is published.
+ * Weekly improvement check (GitHub Actions, Fridays). For every published unit it aggregates the
+ * last 60 days of quiz results and lesson ratings — never a student's identity — into
+ * public.unit_insights: pass rate, item analysis of every quiz question (difficulty, discrimination,
+ * flag) and lessons rated "not useful". The content studio (/studio/insights) shows the flagged
+ * units; the owner decides whether the factory rebuilds one with those notes.
  */
 import { createClient } from "@supabase/supabase-js";
-import { needsImprovement, questionStats, type UnitStats } from "../../src/lib/agent/improve";
+import { itemAnalysis } from "../../src/lib/agent/improve";
 
 async function main() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -15,40 +17,41 @@ async function main() {
   }
   const db = createClient(url, key, { auth: { persistSession: false, autoRefreshToken: false } });
   const since = new Date(Date.now() - 60 * 86400_000).toISOString();
-  const { data: units, error } = await db.from("units").select("id, code, levels(path_id), quizzes(id, kind), lessons(id, title)").eq("status", "published");
+  const { data: units, error } = await db.from("units").select("id, code, quizzes(id, kind), lessons(id, title)").eq("status", "published");
   if (error) throw error;
 
-  let queued = 0;
+  let flaggedUnits = 0;
   for (const u of units ?? []) {
     const quizIds = (u.quizzes ?? []).filter((q) => q.kind === "unit").map((q) => q.id);
-    if (quizIds.length === 0) continue;
-    const { data: attempts } = await db.from("quiz_attempts").select("results, passed").in("quiz_id", quizIds).gte("created_at", since).limit(2000);
+    const { data: attempts } = quizIds.length
+      ? await db.from("quiz_attempts").select("results, correct, passed").in("quiz_id", quizIds).gte("created_at", since).limit(5000)
+      : { data: [] as { results: unknown; correct: number; passed: boolean }[] };
     const lessonIds = (u.lessons ?? []).map((l) => l.id);
     const { data: ratings } = lessonIds.length
       ? await db.from("lesson_progress").select("lesson_id, rating").in("lesson_id", lessonIds).not("rating", "is", null)
       : { data: [] as { lesson_id: string; rating: string }[] };
-    const lessonsNotUseful = (u.lessons ?? []).map((l) => {
-      const votes = (ratings ?? []).filter((r) => r.lesson_id === l.id);
-      return { lesson: l.title, votes: votes.length, share: votes.length ? votes.filter((r) => r.rating === "not_useful").length / votes.length : 0 };
+    const lessons = (u.lessons ?? [])
+      .map((l) => {
+        const votes = (ratings ?? []).filter((r) => r.lesson_id === l.id);
+        return { lesson: l.title, votes: votes.length, share: votes.length ? votes.filter((r) => r.rating === "not_useful").length / votes.length : 0 };
+      })
+      .filter((l) => l.votes > 0);
+    const list = attempts ?? [];
+    const items = itemAnalysis(list);
+    const flagged = items.filter((i) => i.flag).length + lessons.filter((l) => l.votes >= 5 && l.share >= 0.3).length;
+    if (flagged) flaggedUnits++;
+    const { error: upErr } = await db.from("unit_insights").upsert({
+      unit_id: u.id,
+      attempts: list.length,
+      pass_rate: list.length ? Math.round((list.filter((a) => a.passed).length / list.length) * 1000) / 1000 : 0,
+      items,
+      lessons,
+      flagged,
+      computed_at: new Date().toISOString(),
     });
-    const stats: UnitStats = { ...questionStats(attempts ?? []), lessonsNotUseful: lessonsNotUseful.filter((l) => l.votes > 0) };
-    if (!needsImprovement(stats)) continue;
-
-    const recent = new Date(Date.now() - 14 * 86400_000).toISOString();
-    const { data: open } = await db
-      .from("agent_jobs")
-      .select("id")
-      .eq("kind", "improve_unit")
-      .contains("input", { unit_id: u.id })
-      .or(`status.in.(queued,running,needs_review),created_at.gte.${recent}`)
-      .limit(1);
-    if (open?.length) continue;
-    const pathId = (u.levels as unknown as { path_id: string } | null)?.path_id;
-    if (!pathId) continue;
-    await db.from("agent_jobs").insert({ kind: "improve_unit", path_id: pathId, input: { unit_id: u.id, unit_code: u.code, stats } });
-    queued++;
+    if (upErr) throw upErr;
   }
-  console.log(`Weekly check: ${queued} unit(s) queued for improvement.`);
+  console.log(`Weekly check: ${units?.length ?? 0} unit(s) analysed, ${flaggedUnits} with something to improve.`);
 }
 
 main().catch((e) => {

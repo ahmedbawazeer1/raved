@@ -5,7 +5,8 @@ import { CheckCircle2, Maximize, Pause, Play, RotateCcw, Volume2 } from "lucide-
 import { Badge } from "@/components/ui/badge";
 import { Companion } from "@/components/art/companion";
 import { En } from "@/components/en";
-import { recordVideoWatch } from "@/app/(student)/student/actions";
+import { recordVideoPart, recordVideoWatch } from "@/app/(student)/student/actions";
+import { isVideoPart, videoKey } from "@shared/lesson/video-part";
 import { VIDEO_DONE } from "@/lib/gamification/events";
 import { addSecond, parseRanges, videoDone, watchedPercent, watchedSeconds, type WatchRanges } from "@/lib/gamification/watch";
 import { canSeek, checkpointsFor, dueCheckpoint, formatTime, frontierOf, rangesGradient, rewindTarget, type Checkpoint } from "@/lib/lesson/player";
@@ -122,17 +123,20 @@ export function VideoBlock({
   const answeredRef = useRef<Set<number>>(new Set());
   const frontierRef = useRef(0);
   const offset = block.start_sec ?? 0;
+  // A part of a video (one episode split across lessons) is tracked on its own.
+  const part = isVideoPart(block);
+  const key = videoKey(block);
 
   useEffect(() => {
     if (!open || !id || !holder.current) return;
     let player: YtPlayer | null = null;
     let timer: ReturnType<typeof setInterval> | undefined;
-    let saved: WatchRanges = parseRanges(typeof localStorage === "undefined" ? null : localStorage.getItem(storageKey(id)));
+    let saved: WatchRanges = parseRanges(typeof localStorage === "undefined" ? null : localStorage.getItem(storageKey(key)));
     let lastSent = watchedSeconds(saved);
     let last = 0;
     let cancelled = false;
     frontierRef.current = frontierOf(saved);
-    for (const at of readAnswered(id)) answeredRef.current.add(at);
+    for (const at of readAnswered(key)) answeredRef.current.add(at);
     setAnswered(new Set(answeredRef.current));
     setRanges(saved);
 
@@ -140,7 +144,7 @@ export function VideoBlock({
       const seconds = watchedSeconds(saved);
       if (!tracking || seconds <= lastSent) return;
       lastSent = seconds;
-      const res = await recordVideoWatch(id, seconds);
+      const res = part ? await recordVideoPart(id, block.start_sec ?? 0, seconds) : await recordVideoWatch(id, seconds);
       if (res?.done && !cancelled) {
         setDone(true);
         fx("coin");
@@ -196,7 +200,7 @@ export function VideoBlock({
         setRanges(saved);
         setWatched((w) => Math.max(w, seconds));
         try {
-          localStorage.setItem(storageKey(id), JSON.stringify(saved));
+          localStorage.setItem(storageKey(key), JSON.stringify(saved));
         } catch {
           // storage unavailable: progress still goes to the server
         }
@@ -211,7 +215,7 @@ export function VideoBlock({
       player?.destroy();
       playerRef.current = null;
     };
-  }, [open, id, block.start_sec, block.end_sec, tracking, duration, checkpoints, offset]);
+  }, [open, id, key, part, block.start_sec, block.end_sec, tracking, duration, checkpoints, offset]);
 
   const flash = (msg: string) => {
     setToast(msg);
@@ -240,7 +244,7 @@ export function VideoBlock({
     answeredRef.current.add(cp.at);
     setAnswered(new Set(answeredRef.current));
     try {
-      localStorage.setItem(checkpointKey(id), JSON.stringify([...answeredRef.current]));
+      localStorage.setItem(checkpointKey(key), JSON.stringify([...answeredRef.current]));
     } catch {
       // storage unavailable: the question may come again on reload
     }

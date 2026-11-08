@@ -24,7 +24,13 @@ export default async function WritingTaskPage(props: PageProps<"/student/practic
   let parent: { id: string; text: string } | null = null;
   if (from) {
     const supabase = await createClient();
-    const { data } = await supabase.from("writing_submissions").select("id, text").eq("id", from).eq("student_id", userId).eq("lesson_id", lessonId).maybeSingle();
+    const { data } = await supabase
+      .from("writing_submissions")
+      .select("id, text")
+      .eq("id", from)
+      .eq("student_id", userId)
+      .eq("lesson_id", lessonId)
+      .maybeSingle();
     parent = data;
   }
   const today = await remainingToday(userId);
@@ -43,7 +49,13 @@ export default async function WritingTaskPage(props: PageProps<"/student/practic
           </p>
         </Card>
         {parent && <p className="text-sm text-muted-foreground">عدّل نسختك السابقة حسب التصحيحات، ثم أرسلها لترى الفرق.</p>}
-        <WritingEditor lessonId={lesson.id} minWords={task.min_words} maxWords={task.max_words} initialText={parent?.text ?? ""} parentId={parent?.id ?? null} />
+        <WritingEditor
+          lessonId={lesson.id}
+          minWords={task.min_words}
+          maxWords={task.max_words}
+          initialText={parent?.text ?? ""}
+          parentId={parent?.id ?? null}
+        />
       </main>
     </div>
   );

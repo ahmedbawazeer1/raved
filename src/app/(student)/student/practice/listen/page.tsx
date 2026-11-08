@@ -18,11 +18,7 @@ export default async function ListenRepeatPage() {
     <div className="flex flex-col">
       <PracticeHeader backHref="/student/practice" overline="تدريب بلا إنترنت" title="استمع وكرّر" />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-3 p-4">
-        {sentences.length ? (
-          <ListenRepeat sentences={sentences} />
-        ) : (
-          <Card className="p-5 text-sm text-muted-foreground">أكمل أول درس لتظهر جمله هنا.</Card>
-        )}
+        {sentences.length ? <ListenRepeat sentences={sentences} /> : <Card className="p-5 text-sm text-muted-foreground">أكمل أول درس لتظهر جمله هنا.</Card>}
       </main>
     </div>
   );

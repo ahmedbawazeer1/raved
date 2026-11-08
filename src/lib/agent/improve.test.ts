@@ -37,3 +37,29 @@ describe("self-improvement", () => {
     expect(improvePrompt({ code: "A1-01" }, stats, "{}")).toContain("q2 (17% correct)");
   });
 });
+
+describe("item analysis", () => {
+  const attempt = (correct: number, answers: Record<string, boolean>) => ({
+    correct,
+    results: Object.entries(answers).map(([id, ok]) => ({ id, prompt: id, correct: ok })),
+  });
+
+  it("flags a question the best students get wrong (miskeyed) and one everybody gets right", async () => {
+    const { itemAnalysis } = await import("./improve");
+    const attempts = [
+      ...Array.from({ length: 6 }, () => attempt(9, { good: true, easy: true, trap: false })),
+      ...Array.from({ length: 6 }, () => attempt(5, { good: true, easy: true, trap: true })),
+      ...Array.from({ length: 6 }, () => attempt(2, { good: false, easy: true, trap: true })),
+    ];
+    const stats = Object.fromEntries(itemAnalysis(attempts).map((s) => [s.id, s]));
+    expect(stats.trap.flag).toBe("miskeyed");
+    expect(stats.easy.flag).toBe("too_easy");
+    expect(stats.good.flag).toBe(null);
+    expect(stats.good.discrimination).toBeGreaterThan(0.5);
+  });
+
+  it("does not flag anything with too few answers", async () => {
+    const { itemAnalysis } = await import("./improve");
+    expect(itemAnalysis([attempt(1, { q: false })]).every((s) => s.flag === null)).toBe(true);
+  });
+});

@@ -46,7 +46,12 @@ export default async function ExamTrackPage() {
   return (
     <main className="mx-auto flex w-full max-w-[720px] flex-col gap-4 px-4 py-5">
       <h1 className="text-2xl font-bold">
-        مسار الامتحان{exam ? <>: <En>{exam}</En></> : null}
+        مسار الامتحان
+        {exam ? (
+          <>
+            : <En>{exam}</En>
+          </>
+        ) : null}
       </h1>
       <Card className="flex items-center gap-3 border-accent bg-warning-tint p-4">
         <Lock className="size-6 flex-none text-warning" aria-hidden="true" />

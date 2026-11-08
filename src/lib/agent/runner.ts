@@ -49,10 +49,11 @@ import {
   type PlaylistVideo,
 } from "./level";
 import { checkLevelMap, type LevelMap, type MapIssue, type MapUnit } from "../factory/curriculum";
+import { buildFactoryUnit, plannedLessons, watchChosen, type FactoryOutput, type FactoryPartial, type UnitContext } from "./factory";
 
 export interface AgentJob {
   id: string;
-  kind: "plan_path" | "build_unit" | "improve_unit" | "plan_level";
+  kind: "plan_path" | "build_unit" | "improve_unit" | "plan_level" | "factory_unit" | "factory_lesson";
   path_id: string;
   input: Record<string, unknown>;
   log: { at: string; msg: string }[];
@@ -74,6 +75,12 @@ export interface AgentStore {
   levelContext?(levelId: string): Promise<LevelContext>;
   /** plan_level: replaces the level's draft map and puts it in review. */
   saveLevelMap?(levelId: string, map: LevelMap, issues: MapIssue[], jobId: string): Promise<void>;
+  /** factory_unit: everything one unit is built from. */
+  unitContext?(curriculumUnitId: string): Promise<UnitContext>;
+  /** factory_unit: the unit's build status in the level map. */
+  setBuildStatus?(curriculumUnitId: string, status: "building" | "review" | "failed", jobId: string): Promise<void>;
+  /** factory_lesson: the output of the unit build it revises. */
+  jobOutput?(jobId: string): Promise<unknown>;
 }
 
 export interface AgentTrace {
@@ -93,6 +100,8 @@ export interface AgentTrace {
 export const JOB_BUDGET = { modelCalls: 20, searches: 12, minutes: 25 };
 /** A level map is planned in ~6 short steps with up to two retries each. */
 export const LEVEL_BUDGET = { modelCalls: 30, searches: 4, minutes: 25 };
+/** A unit: ~4 videos (choose + watch), 4 lessons, the critic and up to 2 rewrites, with retries. */
+export const UNIT_BUDGET = { modelCalls: 36, searches: 24, minutes: 40 };
 
 /** Thrown when a job goes over JOB_BUDGET or the owner pauses the agent mid-job. */
 export class AgentStop extends Error {
@@ -108,7 +117,9 @@ export type Model = (req: GeminiRequest) => Promise<GeminiResult>;
 
 /** Tools for building units (YouTube search, the package validator and the format reference). */
 export interface UnitTools {
-  search: (query: string) => Promise<VideoCandidate[]>;
+  search: (query: string, opts?: { channelId?: string; language?: "ar" | "en"; minSec?: number; maxSec?: number }) => Promise<VideoCandidate[]>;
+  /** A channel id from a stored @handle (cheap). */
+  resolveChannel?: (ref: string) => Promise<string | null>;
   /** The videos of a YouTube playlist, in order (cheap: no search quota). */
   playlist?: (playlistId: string) => Promise<PlaylistVideo[]>;
   validate: (pkg: unknown) => { ok: boolean; errors: { path: string; message: string }[] };
@@ -146,7 +157,7 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
   let searches = 0;
   const trace = (row: Omit<AgentTrace, "job_id" | "step" | "prompt_version">) =>
     store.trace?.({ job_id: job.id, step, prompt_version: PROMPT_VERSION, ...row }).catch(() => {});
-  const budget = job.kind === "plan_level" ? LEVEL_BUDGET : JOB_BUDGET;
+  const budget = job.kind === "plan_level" ? LEVEL_BUDGET : job.kind === "factory_unit" || job.kind === "factory_lesson" ? UNIT_BUDGET : JOB_BUDGET;
   const guard = async (kind: "model" | "search") => {
     const count = kind === "model" ? ++modelCalls : ++searches;
     const max = kind === "model" ? budget.modelCalls : budget.searches;
@@ -177,11 +188,17 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
   };
   const tools: UnitTools | undefined = rawTools && {
     ...rawTools,
-    search: async (q) => {
+    resolveChannel:
+      rawTools.resolveChannel &&
+      (async (ref) => {
+        await guard("search");
+        return rawTools.resolveChannel!(ref);
+      }),
+    search: async (q, opts) => {
       await guard("search");
       const t0 = Date.now();
       try {
-        const found = await rawTools.search(q);
+        const found = await rawTools.search(q, opts);
         await trace({ kind: "search", model: null, input_chars: q.length, output_chars: found.length, ms: Date.now() - t0, ok: true, error: null });
         return found;
       } catch (e) {
@@ -208,6 +225,11 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
       }),
   };
 
+  const markFailed = async () => {
+    if ((job.kind === "factory_unit" || job.kind === "factory_lesson") && typeof job.input.curriculum_unit_id === "string")
+      await store.setBuildStatus?.(job.input.curriculum_unit_id, "failed", job.id).catch(() => {});
+  };
+
   await note("بدأ العمل", { status: "running", started_at: now().toISOString(), progress: 5, step: "start" });
   try {
     if (job.kind === "build_unit") {
@@ -222,6 +244,10 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
     }
     if (job.kind === "plan_level") {
       await planLevel(job, store, model, tools, note);
+      return job.id;
+    }
+    if (job.kind === "factory_unit" || job.kind === "factory_lesson") {
+      await factoryUnit(job, store, model, tools, note);
       return job.id;
     }
     if (job.kind !== "plan_path") throw new Error(`unsupported job kind: ${job.kind}`);
@@ -278,6 +304,7 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
       } else {
         const msg = `تجاوزت المهمة حدها الآمن (${e.message}). أوقفتها حتى لا تستهلك الحصة المجانية. أعد المحاولة، وإن تكرر أخبر المطوّر.`;
         await note(`توقف: ${msg}`, { status: "failed", error: msg, finished_at: now().toISOString() });
+        await markFailed();
       }
       return job.id;
     }
@@ -296,11 +323,64 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
       return job.id;
     }
     await note(`توقف: ${message}`, { status: "failed", error: message, finished_at: now().toISOString() });
+    await markFailed();
     return job.id;
   }
 }
 
 type Note = (msg: string, patch?: Record<string, unknown>) => Promise<void>;
+
+/** factory_unit: builds one unit of an approved map (src/lib/agent/factory.ts). */
+async function factoryUnit(job: AgentJob, store: AgentStore, model: Model, tools: UnitTools | undefined, note: Note) {
+  const id = typeof job.input.curriculum_unit_id === "string" ? job.input.curriculum_unit_id : "";
+  if (!id || !store.unitContext || !tools) throw new Error("factory tools are not available");
+  const [ctx, memory] = await Promise.all([store.unitContext(id), store.memory(job.path_id)]);
+  await store.setBuildStatus?.(id, "building", job.id);
+  const baseId = typeof job.input.base_job_id === "string" ? job.input.base_job_id : null;
+  if (job.kind === "factory_lesson" && !job.input.partial) {
+    // Revise ONE lesson of a built unit: keep everything else, rewrite that lesson (and its video if asked).
+    const key = String(job.input.lesson_key ?? "");
+    const base = (baseId && (await store.jobOutput?.(baseId))) as FactoryOutput | null;
+    if (!base?.factory?.lessons?.some((l) => l.key === key)) throw new Error("the unit build to revise was not found");
+    const partial: FactoryPartial = {
+      videos: Object.fromEntries(base.factory.lessons.map((l) => [l.key, l.video])),
+      lessons: Object.fromEntries(base.factory.lessons.filter((l) => l.key !== key).map((l) => [l.key, { title_ar: l.title_ar, sections: l.sections }])),
+      roleplay: base.factory.roleplay,
+      critique: base.factory.qa.critique,
+      rewritten: [],
+    };
+    const videoId = typeof job.input.video_id === "string" ? job.input.video_id : null;
+    if (videoId) {
+      const lesson = plannedLessons(ctx).find((l) => l.key === key);
+      if (!lesson) throw new Error("lesson not found in the unit template");
+      await note("أشاهد الفيديو الذي اخترتموه لهذا الدرس", { progress: 15, step: "videos" });
+      partial.videos![key] = await watchChosen(ctx, lesson, videoId, (req, check) => askJson(model, req, check));
+    }
+    job.input = { ...job.input, partial };
+    await store.update(job.id, { input: job.input });
+  }
+  await note(`أبني الوحدة ${ctx.unit.code} «${ctx.unit.title_en}» من خريطة المستوى`, { progress: 10, step: "context" });
+  const output = await buildFactoryUnit(
+    job,
+    ctx,
+    memory,
+    systemPrompt(memory),
+    (req, check) => askJson(model, req, check),
+    { search: tools.search, playlist: tools.playlist, resolveChannel: tools.resolveChannel, validate: tools.validate },
+    note,
+    (partial) => store.update(job.id, { input: { ...job.input, partial } }),
+  );
+  await store.setBuildStatus?.(id, "review", job.id);
+  if (baseId) await store.update(baseId, { status: "rejected", review_note: "استُبدلت بنسخة معدّلة من المراجعة." });
+  const errors = output.factory.qa.issues.filter((i) => i.severity === "error").length;
+  await note(`الوحدة ${ctx.unit.code} جاهزة للمراجعة${errors ? ` (${errors} ملاحظة يجب إصلاحها)` : ""}`, {
+    status: "needs_review",
+    progress: 100,
+    step: "review",
+    output,
+    finished_at: new Date().toISOString(),
+  });
+}
 
 /** plan_level: the frame first, then the units five at a time; every finished step is saved in the job. */
 async function planLevel(job: AgentJob, store: AgentStore, model: Model, tools: UnitTools | undefined, note: Note) {

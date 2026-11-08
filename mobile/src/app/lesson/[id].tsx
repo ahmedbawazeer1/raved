@@ -1,3 +1,4 @@
+import { videoKey } from "@shared/lesson/video-part";
 import { useEffect, useMemo, useState } from "react";
 import { ScrollView, View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
@@ -235,7 +236,7 @@ function BlockView({
       return block.markdown_ar ? <Markdown source={block.markdown_ar} /> : null;
     case "video":
       return block.youtube_id ? (
-        <LessonVideo block={block} words={d.words} status={videos[block.youtube_id]} onStatus={(v) => setVideo(block.youtube_id!, v)} />
+        <LessonVideo block={block} words={d.words} status={videos[videoKey(block)]} onStatus={(v) => setVideo(videoKey(block), v)} />
       ) : null;
     case "exercise":
       return block.exercise ? <Exercise q={block.exercise} solved={solved.has(block.exercise.id)} /> : null;

@@ -16,7 +16,6 @@ import { getTaskLesson } from "@/lib/practice/server";
 import { countWords, lessonSummary } from "@/lib/practice/text";
 import { createAdminClient } from "@/lib/supabase/admin";
 
-
 const uuid = z.uuid();
 
 function aiMessage(e: unknown): string {
@@ -307,7 +306,10 @@ export async function askRoleplay(input: z.infer<typeof roleplayInput>): Promise
         scenario: role.scenario_en,
         level: unit.levels?.code ?? "A1",
         grammar: unit.grammar_point,
-        words: (unit.vocab_items ?? []).filter((v) => !v.archived).map((v) => v.word).slice(0, 15),
+        words: (unit.vocab_items ?? [])
+          .filter((v) => !v.archived)
+          .map((v) => v.word)
+          .slice(0, 15),
       }),
       messages: history.map((m) => ({ role: m.role, content: m.role === "user" ? redact(m.content, { knownNames: [profile.full_name] }) : m.content })),
     });

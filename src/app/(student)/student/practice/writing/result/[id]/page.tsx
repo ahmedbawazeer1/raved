@@ -85,7 +85,9 @@ export default async function WritingResultPage(props: PageProps<"/student/pract
               <ol className="flex flex-col gap-2">
                 {f.errors.map((e, i) => (
                   <li key={i} className="flex gap-2 rounded-xl bg-card p-3 text-sm">
-                    <span className="flex size-6 flex-none items-center justify-center rounded-full bg-warning-tint text-xs font-bold text-warning">{i + 1}</span>
+                    <span className="flex size-6 flex-none items-center justify-center rounded-full bg-warning-tint text-xs font-bold text-warning">
+                      {i + 1}
+                    </span>
                     <div className="flex flex-col gap-1">
                       <p>
                         <En className="text-destructive">{e.text}</En> ← <En className="font-semibold text-success">{e.correction}</En>
