@@ -54,7 +54,6 @@ supabase/migrations/   SQL migrations (+ RLS policies + tests)
 content/<path>/units/  unit JSON packages, e.g. content/english/units/A1-01.json
 shared/                code used by web AND mobile: theme, Yemen helpers, schemas, SRS, app config
 mobile/                React Native app (Expo): src/app = screens (Expo Router), src/ui = UI kit, src/lib = data
-android/               temporary TWA app (until the React Native app ships)
 docs/ARCHITECTURE.md   how the project is organised for future changes (read before structural work)
 ```
 
@@ -73,7 +72,7 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 ## Owner decisions on scope
 - **Platform first (2026-11-02):** build and polish the platform; course content is added later (by «عقل رفد»), so never block platform work on content.
 - **No low-bandwidth / offline rule (2026-11-08):** the owner dropped the whole rule — no JS budget, no data-saver requirement, offline study is not required. Existing offline code (Serwist, IndexedDB queue, unit downloads) stays while it works, but do not build new offline features and do not let it block changes; it may be removed when it gets in the way. Rich UI, animation, sound and vibration are welcome (design reference: the «النموذج الثاني» prototype). Art lives in `src/lib/art/` + `src/components/art/`; effects in `src/lib/fx.ts` (student can turn them off). Rive needs a paid plan to export — ask before using it.
-- **Android/iOS app = React Native (2026-11-08):** Expo (SDK 58) + Expo Router in `mobile/`, same Supabase project and accounts as the web. Admin and «عقل رفد» stay on the web. The TWA in `android/` is temporary until the React Native app replaces it (same package `com.raved.learn` and signing key, so it updates in place).
+- **Android/iOS app = React Native (2026-11-08):** Expo (SDK 58) + Expo Router in `mobile/`, same Supabase project and accounts as the web. Admin and «عقل رفد» stay on the web. It replaced the temporary TWA (same package `com.raved.learn` and signing key, so installed apps update in place); `.github/workflows/mobile.yml` publishes the signed APK/AAB on the `android` release used by /app.
 - **The project must stay easy to change (2026-11-08):** the owner will keep proposing changes. Follow `docs/ARCHITECTURE.md` (shared code, remote config, versioned DB API, feature modules).
 
 ## Learning rules

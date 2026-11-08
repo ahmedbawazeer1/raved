@@ -23,7 +23,6 @@ back without a new app release**. Read this before structural work.
 | `src/`      | The web app (Next.js): public pages, student web app, admin, agent UI                                             | Imports shared code as `@shared/...`. Old paths (`@/lib/yemen` …) re-export `shared/` so nothing breaks.                |
 | `mobile/`   | The student app (Expo, Expo Router)                                                                               | Screens in `src/app`, UI kit in `src/ui`, data/session in `src/lib`. Imports `@shared/...` (Metro watches `../shared`). |
 | `supabase/` | Migrations, RLS tests                                                                                             | Every table: RLS + a test in `supabase/tests/`.                                                                         |
-| `android/`  | Temporary TWA wrapper                                                                                             | Removed once the React Native app ships.                                                                                |
 
 ## 2. Rules that keep changes cheap
 

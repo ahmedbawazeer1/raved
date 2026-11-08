@@ -2,6 +2,7 @@
 export { Art } from "./art";
 export { Button } from "./button";
 export { Card, ProgressBar } from "./card";
+export { Choice } from "./choice";
 export { CompanionGreeting } from "./companion";
 export { Field } from "./field";
 export { Header } from "./header";

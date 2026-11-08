@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Image, Linking, Pressable, View } from "react-native";
-import { Redirect } from "expo-router";
+import { Redirect, router } from "expo-router";
 import { WEB_URL } from "@/config";
 import { authErrorAr } from "@/lib/auth-errors";
+import { googleEnabled, signInWithGoogle } from "@/lib/google";
 import { useSession } from "@/lib/session";
 import { supabase } from "@/lib/supabase";
 import { Button, colors, Field, Screen, Text } from "@/ui";
@@ -13,6 +14,10 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [google, setGoogle] = useState(false);
+  useEffect(() => {
+    void googleEnabled().then(setGoogle);
+  }, []);
 
   if (session) return <Redirect href="/today" />;
 
@@ -46,6 +51,16 @@ export default function LoginScreen() {
           </View>
         ) : null}
         <Button title="تسجيل الدخول" onPress={signIn} loading={busy} />
+        {google ? (
+          <Button
+            title="الدخول بحساب Google"
+            variant="secondary"
+            onPress={async () => {
+              const e = await signInWithGoogle();
+              if (e) setError(e);
+            }}
+          />
+        ) : null}
         <Pressable onPress={() => Linking.openURL(`${WEB_URL}/forgot`)} style={{ minHeight: 44, justifyContent: "center" }}>
           <Text style={{ color: colors.primary, textAlign: "center" }}>نسيت كلمة المرور؟</Text>
         </Pressable>
@@ -55,7 +70,7 @@ export default function LoginScreen() {
         <Text variant="muted" style={{ textAlign: "center" }}>
           ليس عندك حساب؟
         </Text>
-        <Button title="أنشئ حساباً مجاناً" variant="secondary" onPress={() => Linking.openURL(`${WEB_URL}/signup`)} />
+        <Button title="أنشئ حساباً مجاناً" variant="secondary" onPress={() => router.push("/signup")} />
       </View>
     </Screen>
   );

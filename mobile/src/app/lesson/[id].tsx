@@ -14,6 +14,7 @@ import { Exercise } from "@/features/lesson/exercise";
 import { Markdown } from "@/features/lesson/markdown";
 import { markSolved, useSolved } from "@/features/lesson/solved";
 import { LessonVideo, type VideoStatus } from "@/features/lesson/video";
+import { useAppConfig } from "@/lib/app-config";
 import { fx } from "@/lib/fx";
 import { supabase } from "@/lib/supabase";
 import { Button, Card, colors, Header, LoadError, Loading, radius, Text } from "@/ui";
@@ -38,6 +39,7 @@ export default function LessonScreen() {
   const q = useLesson(id);
   const queryClient = useQueryClient();
   const solved = useSolved();
+  const { on } = useAppConfig();
   const [step, setStep] = useState(0);
   /** Video progress reported during this visit, on top of what the server sent. */
   const [liveVideos, setLiveVideos] = useState<Record<string, VideoStatus>>({});
@@ -200,7 +202,7 @@ export default function LessonScreen() {
           </Card>
         ) : null}
 
-        <Button title="🤖 عندك سؤال؟ اسأل المساعد" variant="secondary" onPress={() => router.push(`/assistant/${d.lesson.id}`)} />
+        {on("assistant") ? <Button title="🤖 عندك سؤال؟ اسأل المساعد" variant="secondary" onPress={() => router.push(`/assistant/${d.lesson.id}`)} /> : null}
 
         {s && s.kind !== "finish" ? (
           <View style={{ borderRadius: radius.lg, gap: 6 }}>

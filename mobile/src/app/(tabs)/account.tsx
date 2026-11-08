@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Linking, Pressable, ScrollView, Switch, TextInput, View } from "react-native";
+import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { companionMarkup, COMPANIONS } from "@shared/art/companion";
 import { WEB_URL } from "@/config";
@@ -35,6 +36,8 @@ export default function AccountScreen() {
         <Text variant="en" style={{ color: colors.muted }}>
           {session?.user.email}
         </Text>
+
+        <Button title="🏅 تقدّمي: المستوى والشارات والطوابع" variant="secondary" onPress={() => router.push("/progress")} />
 
         <Card>
           <Text variant="heading">رفيقك في الرحلة</Text>

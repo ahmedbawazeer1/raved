@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Download, ShieldCheck, Smartphone, WifiOff } from "lucide-react";
+import { Download, RefreshCw, ShieldCheck, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ANDROID_APK_URL } from "@/lib/android";
 
 export const metadata: Metadata = {
   title: "تطبيق رفد لأندرويد",
-  description: "حمّل تطبيق رفد لأندرويد: نفس حسابك ودروسك، يفتح بلمسة من الشاشة الرئيسية ويعمل بلا إنترنت.",
+  description: "حمّل تطبيق رفد لأندرويد: نفس حسابك ودروسك وتقدمك في تطبيق سريع على جوالك.",
 };
 
 const STEPS = [
-  "اضغط «حمّل التطبيق» من جوالك الأندرويد، وانتظر حتى ينتهي التنزيل (أقل من 1 ميغابايت).",
+  "اضغط «حمّل التطبيق» من جوالك الأندرويد، وانتظر حتى ينتهي التنزيل (حوالي 30 ميغابايت).",
   "افتح الملف raved.apk من الإشعارات أو من مجلد التنزيلات.",
   "إذا ظهرت رسالة «لا يُسمح بتثبيت تطبيقات من هذا المصدر»: اضغط «الإعدادات» ثم فعّل «السماح من هذا المصدر» وارجع.",
   "اضغط «تثبيت»، ثم «فتح». ادخل بنفس بريدك وكلمة مرورك.",
@@ -26,7 +26,7 @@ export default function AndroidAppPage() {
         </span>
         <h1 className="text-[28px] font-bold md:text-4xl">رفد على جوالك الأندرويد</h1>
         <p className="max-w-[520px] text-[15px] leading-[1.9] text-muted-foreground md:text-lg">
-          نفس حسابك ودروسك وتقدمك. يفتح بلمسة من الشاشة الرئيسية بملء الشاشة، ويعمل بلا إنترنت مثل الموقع تماماً.
+          نفس حسابك ودروسك وتقدمك. رحلة حضرموت والدروس والألعاب والمساعد في تطبيق سريع على جوالك.
         </p>
         <Button asChild variant="accent" size="lg" className="w-full md:w-auto">
           <a href={ANDROID_APK_URL} download>
@@ -34,7 +34,7 @@ export default function AndroidAppPage() {
             حمّل التطبيق (APK)
           </a>
         </Button>
-        <p className="text-xs text-muted-foreground">مجاني · أندرويد 5 فما فوق · يحتاج متصفح Chrome على الجوال</p>
+        <p className="text-xs text-muted-foreground">مجاني · أندرويد 7 فما فوق · حوالي 30 ميغابايت</p>
       </header>
 
       <Card className="flex flex-col gap-3 p-5">
@@ -51,15 +51,15 @@ export default function AndroidAppPage() {
 
       <div className="grid gap-3 md:grid-cols-2">
         <Card className="flex gap-3 p-4">
-          <WifiOff className="size-6 flex-none text-primary" aria-hidden="true" />
+          <RefreshCw className="size-6 flex-none text-primary" aria-hidden="true" />
           <p className="text-sm leading-[1.8]">
-            <b>بلا إنترنت:</b> نزّل الوحدات من داخل التطبيق كما في الموقع، وادرس في أي مكان. تقدمك يُرسل عند عودة الاتصال.
+            <b>حساب واحد:</b> ادرس في التطبيق أو الموقع، وتقدمك ونقاطك وأختامك نفسها في الاثنين.
           </p>
         </Card>
         <Card className="flex gap-3 p-4">
           <ShieldCheck className="size-6 flex-none text-primary" aria-hidden="true" />
           <p className="text-sm leading-[1.8]">
-            <b>آمن:</b> التطبيق موقّع من رفد، ولا يطلب صلاحيات غير الإنترنت والإشعارات. حمّله فقط من هذه الصفحة.
+            <b>آمن:</b> التطبيق موقّع من رفد، ولا يطلب صلاحيات غير الإنترنت والميكروفون (لتدريب المحادثة فقط). حمّله فقط من هذه الصفحة.
           </p>
         </Card>
       </div>
