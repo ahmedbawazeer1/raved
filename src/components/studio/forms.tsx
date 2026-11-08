@@ -4,7 +4,7 @@ import { useActionState } from "react";
 import { Alert, Checkbox, Field, Input, Select, Textarea } from "@/components/ui/form";
 import { SubmitButton } from "@/components/ui/submit-button";
 import type { AdminFormState } from "@/app/(admin)/admin/actions";
-import { addVideoSource, approveMap, planLevelMap, saveLevelProfile, saveMapUnit, saveVideoRules } from "@/app/(studio)/studio/actions";
+import { addLevel, addVideoSource, approveMap, createPath, planLevelMap, saveLevelProfile, saveMapUnit, saveVideoRules } from "@/app/(studio)/studio/actions";
 import { FRAMEWORK_LABELS, LANGUAGE_LABELS, type LevelProfile, type PathProfile } from "@/lib/factory/profile";
 
 function Status({ state }: { state: AdminFormState }) {
@@ -262,6 +262,102 @@ export function MapUnitForm({ unit, locked }: { unit: EditableUnit; locked: bool
           </SubmitButton>
         )}
       </fieldset>
+    </form>
+  );
+}
+
+/** A new path (admin): name, link and icon; levels come next. */
+export function CreatePathForm() {
+  const [state, action] = useActionState<AdminFormState, FormData>(createPath, {});
+  return (
+    <form action={action} className="flex flex-col gap-4">
+      <Status state={state} />
+      <Field id="path-title" label="اسم المسار" hint="كما يراه الطالب، مثل: تطوير الويب من الصفر">
+        <Input id="path-title" name="title" required maxLength={120} />
+      </Field>
+      <Field id="path-slug" label="رابط المسار (بالإنجليزية)" hint="حروف صغيرة وأرقام وشرطة، مثل web-dev. يظهر في رابط الصفحة.">
+        <Input id="path-slug" name="slug" required dir="ltr" placeholder="web-dev" />
+      </Field>
+      <Field id="path-summary" label="وصف قصير" optional>
+        <Input id="path-summary" name="summary" maxLength={300} />
+      </Field>
+      <Field id="path-icon" label="الأيقونة">
+        <Select id="path-icon" name="icon" defaultValue="book">
+          <option value="book">كتاب (لغات)</option>
+          <option value="code">برمجة</option>
+          <option value="database">بيانات</option>
+          <option value="pen">تصميم</option>
+        </Select>
+      </Field>
+      <SubmitButton className="self-start" pendingLabel="جارٍ الإنشاء…">
+        أنشئ المسار
+      </SubmitButton>
+    </form>
+  );
+}
+
+/** Adds a level to a path by hand (admin), with its factory settings. */
+export function AddLevelForm({ pathId, unitTemplates, nextCode }: { pathId: string; unitTemplates: { key: string; title_ar: string }[]; nextCode: string }) {
+  const [state, action] = useActionState<AdminFormState, FormData>(addLevel, {});
+  return (
+    <form action={action} className="flex flex-col gap-3 rounded-xl bg-background p-4">
+      <input type="hidden" name="path_id" value={pathId} />
+      <Status state={state} />
+      <div className="grid gap-3 sm:grid-cols-3">
+        <Field id="lvl-code" label="رمز المستوى" hint="مثل A1 أو L1">
+          <Input id="lvl-code" name="code" required dir="ltr" defaultValue={nextCode} maxLength={10} />
+        </Field>
+        <Field id="lvl-title" label="اسم المستوى" className="sm:col-span-2">
+          <Input id="lvl-title" name="title" required maxLength={80} placeholder="الأساسيات" />
+        </Field>
+      </div>
+      <Field id="lvl-desc" label="ماذا يستطيع الطالب في نهايته" optional>
+        <Textarea id="lvl-desc" name="description" rows={2} maxLength={400} />
+      </Field>
+      <div className="grid gap-3 sm:grid-cols-4">
+        <Field id="lvl-units" label="عدد الوحدات">
+          <Input id="lvl-units" name="planned_units" type="number" min={3} max={60} defaultValue={12} />
+        </Field>
+        <Field id="lvl-fw" label="الإطار">
+          <Select id="lvl-fw" name="framework" defaultValue="custom">
+            {Object.entries(FRAMEWORK_LABELS).map(([k, v]) => (
+              <option key={k} value={k}>
+                {v}
+              </option>
+            ))}
+          </Select>
+        </Field>
+        <Field id="lvl-lang" label="لغة الفيديو">
+          <Select id="lvl-lang" name="video_language" defaultValue="ar">
+            {Object.entries(LANGUAGE_LABELS).map(([k, v]) => (
+              <option key={k} value={k}>
+                {v}
+              </option>
+            ))}
+          </Select>
+        </Field>
+        <Field id="lvl-tpl" label="قالب الوحدة">
+          <Select id="lvl-tpl" name="unit_template" defaultValue="standard">
+            {unitTemplates.map((t) => (
+              <option key={t.key} value={t.key}>
+                {t.title_ar}
+              </option>
+            ))}
+          </Select>
+        </Field>
+      </div>
+      <Field id="lvl-kind" label="نوع المستوى">
+        <Select id="lvl-kind" name="kind" defaultValue="general">
+          <option value="general">عام</option>
+          <option value="exam">استعداد لاختبار</option>
+        </Select>
+      </Field>
+      <Field id="lvl-pl" label="قائمة تشغيل يوتيوب ترتّب المستوى (وحدة لكل فيديو)" optional>
+        <Input id="lvl-pl" name="source_playlist" dir="ltr" placeholder="https://www.youtube.com/playlist?list=…" />
+      </Field>
+      <SubmitButton size="sm" className="self-start" pendingLabel="جارٍ الإضافة…">
+        أضف المستوى
+      </SubmitButton>
     </form>
   );
 }

@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowDown, ArrowUp, Trash2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { AddSourceForm, LevelProfileForm, VideoRulesForm } from "@/components/studio/forms";
+import { AddLevelForm, AddSourceForm, LevelProfileForm, VideoRulesForm } from "@/components/studio/forms";
+import { Alert } from "@/components/ui/form";
 import { requireStaff } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
 import { FRAMEWORK_LABELS, LANGUAGE_LABELS, parseProfile } from "@/lib/factory/profile";
@@ -12,8 +13,9 @@ import { moveVideoSource, removeVideoSource } from "../../actions";
 
 export const metadata: Metadata = { title: "ملف المسار" };
 
-export default async function PathProfilePage({ params }: PageProps<"/studio/paths/[slug]">) {
+export default async function PathProfilePage({ params, searchParams }: PageProps<"/studio/paths/[slug]">) {
   const { slug } = await params;
+  const isNew = (await searchParams).new === "1";
   const { isAdmin } = await requireStaff();
   const supabase = await createClient();
   const { data: path } = await supabase.from("paths").select("id, title, levels(id, code, title, position)").eq("slug", slug).maybeSingle();
@@ -38,8 +40,44 @@ export default async function PathProfilePage({ params }: PageProps<"/studio/pat
         </p>
       </header>
 
-      <Card className="flex flex-col gap-4 p-5">
-        <h2 className="text-lg font-semibold">المستويات</h2>
+      {isNew && <Alert tone="success">أُنشئ المسار وهو مخفي عن الطلاب. الخطوة التالية: أضف مستوياته من الأسفل.</Alert>}
+      {isAdmin && (
+        <p className="text-sm text-muted-foreground">
+          ظهور المسار للطلاب (مخفي، «قريباً»، منشور) ووصفه يُضبطان من{" "}
+          <Link href={`/admin/paths?edit=${slug}`} className="font-semibold">
+            إعدادات المسار في الإدارة
+          </Link>
+          .
+        </p>
+      )}
+
+      <Card id="levels" className="flex scroll-mt-4 flex-col gap-4 p-5">
+        <div className="flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-lg font-semibold">المستويات ({levels.length})</h2>
+        </div>
+        {levels.length === 0 && <p className="text-muted-foreground">لا توجد مستويات بعد.{isAdmin ? " أضف المستوى الأول من النموذج في الأسفل." : ""}</p>}
+        {levels.length > 0 && (
+          <div className="flex flex-wrap gap-2">
+            {levels.map((l) => (
+              <Link
+                key={l.id}
+                href={`/studio/levels/${l.id}`}
+                className="rounded-xl border border-border px-3 py-2 text-sm font-semibold no-underline hover:bg-primary-tint"
+              >
+                <span dir="ltr">{l.code}</span> · {l.title} ← خريطته
+              </Link>
+            ))}
+          </div>
+        )}
+        {isAdmin && (
+          <details open={levels.length === 0} className="rounded-xl border border-dashed border-border p-3">
+            <summary className="cursor-pointer font-semibold">＋ أضف مستوى</summary>
+            <div className="pt-3">
+              <AddLevelForm pathId={path.id} unitTemplates={unitTemplates ?? []} nextCode={`L${levels.length + 1}`} />
+            </div>
+          </details>
+        )}
+        {isAdmin && levels.length > 0 && <h3 className="mt-2 font-semibold">إعدادات كل مستوى</h3>}
         {isAdmin ? (
           <div className="grid gap-4 lg:grid-cols-2">
             {levels.map((l) => (
