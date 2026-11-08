@@ -3,6 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { compareVersions, parseAppConfig } from "@shared/app-config";
 import { createClient } from "@/lib/supabase/server";
 import { requireAdmin } from "@/lib/auth/session";
 import { dbErrorMessage } from "@/lib/auth/errors";
@@ -329,6 +330,42 @@ export async function saveExam(_prev: AdminFormState, formData: FormData): Promi
   revalidatePath("/admin/settings");
   revalidatePath("/student/progress");
   return { ok: true, message: "حُفظت معلومات الامتحان، وسُجّل تاريخ التحقق اليوم." };
+}
+
+const APP_FEATURES = ["games", "league", "duel", "roleplay", "assistant", "speaking", "writing"] as const;
+
+/** Remote config of the mobile app (shared/app-config.ts): switches, notice, minimum/latest version. */
+export async function saveAppConfig(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const version = z.string().trim().regex(/^\d+\.\d+\.\d+$/, "اكتب النسخة مثل 1.0.0");
+  const parsed = z
+    .object({
+      min_version: version,
+      latest_version: version,
+      notice_ar: z.string().trim().max(300, "الرسالة طويلة جداً"),
+      store_url: z.union([z.literal(""), z.url("رابط غير صحيح")]),
+    })
+    .safeParse({
+      min_version: formData.get("min_version"),
+      latest_version: formData.get("latest_version"),
+      notice_ar: formData.get("notice_ar") ?? "",
+      store_url: String(formData.get("store_url") ?? "").trim(),
+    });
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "تحقق من البيانات." };
+  const value = parseAppConfig({
+    min_version: parsed.data.min_version,
+    latest_version: parsed.data.latest_version,
+    notice_ar: parsed.data.notice_ar || null,
+    store_url: parsed.data.store_url || null,
+    features: Object.fromEntries(APP_FEATURES.map((f) => [f, formData.get(`feature_${f}`) === "on"])),
+  });
+  if (compareVersions(value.min_version, value.latest_version) > 0) return { error: "أقل نسخة مسموحة لا تكون أحدث من آخر نسخة." };
+  const supabase = await createClient();
+  const { error } = await supabase.from("app_config").upsert({ id: "mobile", value });
+  if (error) return { error: "تعذر الحفظ." };
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "settings.app_config", target: "mobile", data: value });
+  revalidatePath("/admin/settings");
+  return { ok: true, message: "حُفظت إعدادات التطبيق. تصل للطلاب عند فتح التطبيق." };
 }
 
 export async function saveDefaults(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {

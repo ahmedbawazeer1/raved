@@ -1,7 +1,8 @@
 name: Mobile app
 
-# The React Native app (mobile/). Checks every change to mobile/ or shared/, and builds an installable
-# APK (artifact "raved-mobile") to try on a phone. Store releases come later (docs/ARCHITECTURE.md §3).
+# The React Native app (mobile/). Checks every change to mobile/ or shared/ and builds a signed APK
+# (artifact "raved-mobile"). On main it also publishes the APK on the "android" release, the stable
+# download link of /app: https://github.com/ahmedbawazeer1/raved/releases/download/android/raved.apk
 on:
   push:
     branches: [main]
@@ -9,6 +10,9 @@ on:
   pull_request:
     paths: ["mobile/**", "shared/**", ".github/workflows/mobile.yml"]
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   checks:
@@ -51,7 +55,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - run: npm ci
       - name: Generate the native Android project
-        run: npx expo prebuild --platform android --no-install
+        run: |
+          export RAVED_VERSION_CODE=$((100 + ${{ github.run_number }}))
+          npx expo prebuild --platform android --no-install
         env:
           CI: "1"
       - name: Signing key
@@ -68,10 +74,20 @@ jobs:
         working-directory: mobile/android
         env:
           RAVED_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-        run: ./gradlew --no-daemon assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
-      - run: cp android/app/build/outputs/apk/release/app-release.apk raved-mobile.apk && ls -la raved-mobile.apk
+        run: ./gradlew --no-daemon assembleRelease bundleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
+      - run: cp android/app/build/outputs/apk/release/app-release.apk raved-mobile.apk && cp android/app/build/outputs/bundle/release/app-release.aab raved.aab && ls -la raved-mobile.apk raved.aab
       - uses: actions/upload-artifact@v4
         with:
           name: raved-mobile
-          path: mobile/raved-mobile.apk
+          path: |
+            mobile/raved-mobile.apk
+            mobile/raved.aab
           retention-days: 30
+      - name: Publish the download link
+        if: github.ref == 'refs/heads/main' && env.RAVED_KEYSTORE_FILE != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp raved-mobile.apk raved.apk
+          gh release view android >/dev/null 2>&1 || gh release create android --title "رفد لأندرويد" --notes "أحدث نسخة من تطبيق رفد لأندرويد." --latest=false
+          gh release upload android raved.apk raved.aab --clobber

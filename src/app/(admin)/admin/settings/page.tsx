@@ -4,6 +4,8 @@ import { En } from "@/components/en";
 import { AiSettingsForm } from "@/components/admin/ai-settings-form";
 import { DefaultsForm, ExamForm } from "@/components/admin/exam-form";
 import { SettingsForm } from "@/components/admin/settings-form";
+import { AppConfigForm } from "@/components/admin/app-config-form";
+import { parseAppConfig } from "@shared/app-config";
 import { getAiSettings } from "@/lib/ai/limits";
 import { aiConfigured } from "@/lib/ai/provider";
 import { createClient } from "@/lib/supabase/server";
@@ -12,10 +14,11 @@ export const metadata: Metadata = { title: "الإعدادات" };
 
 export default async function AdminSettingsPage() {
   const supabase = await createClient();
-  const [{ data: setting }, { data: exams }, { data: saver }] = await Promise.all([
+  const [{ data: setting }, { data: exams }, { data: saver }, { data: appConfig }] = await Promise.all([
     supabase.from("settings").select("value").eq("key", "admission_mode").maybeSingle(),
     supabase.from("exams").select("code, name, availability_ye, locations, fee_note, payment_note, official_practice_url, verified_at").order("position"),
     supabase.from("settings").select("value").eq("key", "data_saver_default").maybeSingle(),
+    supabase.from("app_config").select("value").eq("id", "mobile").maybeSingle(),
   ]);
   const mode = typeof setting?.value === "string" ? setting.value : "review";
   const ai = await getAiSettings();
@@ -42,6 +45,11 @@ export default async function AdminSettingsPage() {
           alert={ai.alertPercent}
           paused={ai.paused}
         />
+      </Card>
+      <Card className="p-5 md:p-6">
+        <h2 className="mb-1 text-lg font-bold">تطبيق الجوال</h2>
+        <p className="mb-3 text-sm text-muted-foreground">تتحكم في التطبيق دون إصدار نسخة جديدة: تصل التغييرات للطلاب عند فتحهم التطبيق.</p>
+        <AppConfigForm config={parseAppConfig(appConfig?.value)} />
       </Card>
       <Card className="p-5 md:p-6">
         <h2 className="mb-3 text-lg font-bold">الإعدادات الافتراضية</h2>

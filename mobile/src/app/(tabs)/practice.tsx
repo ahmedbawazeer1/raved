@@ -6,6 +6,7 @@ import { fetchLearnedWords, fetchPrimaryPath } from "@shared/data/student";
 import { GAME_TITLES, type GameKind, type GameWord } from "@shared/games/logic";
 import { useUserId } from "@/data/student";
 import { Game } from "@/features/games/game";
+import { useAppConfig } from "@/lib/app-config";
 import { supabase } from "@/lib/supabase";
 import { Button, Card, colors, LoadError, Loading, radius, Text } from "@/ui";
 
@@ -14,6 +15,7 @@ const KINDS = Object.keys(GAME_TITLES) as GameKind[];
 /** «التدريب»: the games hub with the words the student has learned (5 points per game per day). */
 export default function PracticeScreen() {
   const userId = useUserId();
+  const { on } = useAppConfig();
   const queryClient = useQueryClient();
   const q = useQuery({
     queryKey: ["learned-words", userId],
@@ -58,6 +60,11 @@ export default function PracticeScreen() {
               }}
             />
           </>
+        ) : !on("games") ? (
+          <Card>
+            <Text variant="heading">الألعاب متوقفة مؤقتاً</Text>
+            <Text variant="muted">ستعود قريباً.</Text>
+          </Card>
         ) : words.length < 4 ? (
           <Card>
             <Text variant="heading">الألعاب تنتظر كلماتك</Text>

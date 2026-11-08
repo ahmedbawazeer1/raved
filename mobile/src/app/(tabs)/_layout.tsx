@@ -1,7 +1,5 @@
-import { Linking } from "react-native";
 import { Redirect, Tabs } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
-import { WEB_URL } from "@/config";
 import { useSession } from "@/lib/session";
 import { supabase } from "@/lib/supabase";
 import { Button, colors, fonts, Screen, Text } from "@/ui";
@@ -19,16 +17,16 @@ const TABS: { name: string; title: string; icon: IconName }[] = [
 export default function TabsLayout() {
   const { session, profile } = useSession();
   if (!session) return <Redirect href="/login" />;
-  if (profile && profile.status !== "active") {
+  if (profile && profile.status === "suspended") {
     return (
       <Screen>
-        <Text variant="title">أكمل طلب الالتحاق</Text>
-        <Text variant="muted">حسابك لم يُفعَّل بعد. أكمل خطوات التسجيل في الموقع، وستصلك رسالة عند قبولك.</Text>
-        <Button title="أكمل التسجيل" onPress={() => Linking.openURL(`${WEB_URL}/apply`)} />
+        <Text variant="title">الحساب موقوف</Text>
+        <Text variant="muted">تواصل مع فريق رفد لمعرفة السبب.</Text>
         <Button title="تسجيل الخروج" variant="secondary" onPress={() => supabase.auth.signOut()} />
       </Screen>
     );
   }
+  if (profile && profile.status !== "active") return <Redirect href="/apply" />;
   return (
     <Tabs
       screenOptions={{

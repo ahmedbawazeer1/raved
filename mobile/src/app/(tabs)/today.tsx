@@ -3,6 +3,7 @@ import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useHome } from "@/data/student";
 import { JourneyMap } from "@/features/journey/journey-map";
+import { useAppConfig } from "@/lib/app-config";
 import { appRoute } from "@/lib/routes";
 import { useSession } from "@/lib/session";
 import { Button, Card, colors, CompanionGreeting, LoadError, Loading, ProgressBar, Text } from "@/ui";
@@ -16,6 +17,7 @@ function greeting(): string {
 export default function TodayScreen() {
   const { profile } = useSession();
   const home = useHome();
+  const { on } = useAppConfig();
   if (home.isLoading) return <Loading />;
   if (home.isError || !home.data) return <LoadError onRetry={() => void home.refetch()} />;
   const d = home.data;
@@ -41,7 +43,14 @@ export default function TodayScreen() {
         <View style={{ flexDirection: "row", gap: 8 }}>
           <Stat label="أيام متتالية" value={`🔥 ${d.streak}`} />
           <Stat label="نقاطك" value={`⭐ ${d.xp}`} />
-          <Stat label="إشعارات" value={`🔔 ${d.unread}`} />
+          <Pressable
+            style={{ flex: 1 }}
+            onPress={() => router.push("/notifications")}
+            accessibilityRole="button"
+            accessibilityLabel={`الإشعارات، ${d.unread} جديدة`}
+          >
+            <Stat label="إشعارات" value={`🔔 ${d.unread}`} />
+          </Pressable>
         </View>
 
         <CompanionGreeting>{bubble}</CompanionGreeting>
@@ -107,6 +116,37 @@ export default function TodayScreen() {
         ) : null}
 
         {mapUnits.length ? <JourneyMap units={mapUnits} /> : null}
+
+        <View style={{ flexDirection: "row", gap: 8 }}>
+          {[
+            { show: on("league"), icon: "🏆", label: "الدوري", to: "/league" as const },
+            { show: on("duel"), icon: "⚔️", label: "تحدي صديق", to: "/duel" as const },
+            { show: on("games"), icon: "🎮", label: "الألعاب", to: "/practice" as const },
+            { show: true, icon: "🏅", label: "تقدّمي", to: "/progress" as const },
+          ]
+            .filter((l) => l.show)
+            .map((l) => (
+              <Pressable
+                key={l.to}
+                onPress={() => router.push(l.to)}
+                style={{
+                  flex: 1,
+                  minHeight: 64,
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: 16,
+                  backgroundColor: colors.card,
+                  borderWidth: 1,
+                  borderColor: colors.border,
+                }}
+              >
+                <Text style={{ fontSize: 20, textAlign: "center" }}>{l.icon}</Text>
+                <Text variant="small" style={{ textAlign: "center" }}>
+                  {l.label}
+                </Text>
+              </Pressable>
+            ))}
+        </View>
 
         {d.vocabToday > 0 ? (
           <Pressable onPress={() => router.push("/vocab")}>
