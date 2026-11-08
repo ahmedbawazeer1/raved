@@ -3,6 +3,9 @@ export const JOB_KIND_AR: Record<string, string> = {
   plan_path: "تصميم المسار",
   build_unit: "بناء وحدة",
   improve_unit: "تحسين وحدة",
+  plan_level: "تخطيط خريطة مستوى",
+  factory_unit: "المصنع: بناء وحدة",
+  factory_lesson: "المصنع: إعادة درس",
 };
 
 export const JOB_STATUS_AR: Record<string, { label: string; tone: "muted" | "warning" | "success" | "destructive" | "primary" }> = {

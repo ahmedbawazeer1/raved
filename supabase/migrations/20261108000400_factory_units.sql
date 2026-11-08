@@ -151,3 +151,86 @@ begin
   return null;
 end;
 $$;
+
+-- ---------------------------------------------------------------------------
+-- Reviewing built units: teachers edit a unit build (its job output) and ask for one lesson to be
+-- rebuilt; publishing stays with the admin (import_unit_package / publish_unit are admin-only).
+-- ---------------------------------------------------------------------------
+create policy agent_jobs_staff_update on public.agent_jobs for update to authenticated
+  using ((select public.is_staff()) and kind in ('factory_unit', 'factory_lesson'))
+  with check ((select public.is_staff()) and kind in ('factory_unit', 'factory_lesson'));
+create policy agent_jobs_staff_insert on public.agent_jobs for insert to authenticated
+  with check ((select public.is_staff()) and kind = 'factory_lesson');
+
+-- An approved map stays locked, but the build fields of its units (status, review) keep changing.
+create or replace function private.guard_curriculum_rows()
+returns trigger
+language plpgsql
+set search_path = ''
+as $$
+declare
+  v_level uuid := coalesce(new.level_id, old.level_id);
+begin
+  if private.is_privileged_session() or public.is_admin() then
+    return coalesce(new, old);
+  end if;
+  if not exists (select 1 from public.curriculum_levels where level_id = v_level and status = 'approved') then
+    return coalesce(new, old);
+  end if;
+  if tg_table_name = 'curriculum_units' and tg_op = 'UPDATE'
+     and (to_jsonb(new) - array['build_status', 'build_job_id', 'teacher_ok_by', 'teacher_ok_at', 'review_note', 'unit_id', 'updated_at'])
+       = (to_jsonb(old) - array['build_status', 'build_job_id', 'teacher_ok_by', 'teacher_ok_at', 'review_note', 'unit_id', 'updated_at']) then
+    return new;
+  end if;
+  raise exception 'map_locked';
+end;
+$$;
+
+-- The job guard: a person may approve/reject a finished job (as before) and, for a built unit waiting
+-- for review, staff may edit its output (the reviewer's corrections); nothing else.
+create or replace function private.agent_jobs_guard()
+returns trigger
+language plpgsql
+set search_path = ''
+as $$
+begin
+  if private.is_privileged_session() then
+    new.updated_at := now();
+    return new;
+  end if;
+  if tg_op = 'INSERT' then
+    new.status := 'queued';
+    new.step := null;
+    new.progress := 0;
+    new.log := '[]'::jsonb;
+    new.output := null;
+    new.error := null;
+    new.model := null;
+    new.review_note := null;
+    new.reviewed_by := null;
+    new.reviewed_at := null;
+    new.created_by := (select auth.uid());
+    new.started_at := null;
+    new.finished_at := null;
+    return new;
+  end if;
+  if old.kind in ('factory_unit', 'factory_lesson') and old.status = 'needs_review' and new.status = 'needs_review' then
+    if new.input is distinct from old.input or new.kind <> old.kind or new.path_id <> old.path_id or new.log is distinct from old.log then
+      raise exception 'agent_job_locked' using errcode = '42501';
+    end if;
+    new.updated_at := now();
+    return new;
+  end if;
+  if old.status <> 'needs_review' or new.status not in ('approved', 'rejected') then
+    raise exception 'agent_job_not_reviewable' using errcode = 'P0001';
+  end if;
+  if new.output is distinct from old.output or new.input is distinct from old.input or new.kind <> old.kind
+     or new.path_id <> old.path_id or new.log is distinct from old.log then
+    raise exception 'agent_job_locked' using errcode = '42501';
+  end if;
+  new.reviewed_by := (select auth.uid());
+  new.reviewed_at := now();
+  new.updated_at := now();
+  return new;
+end;
+$$;

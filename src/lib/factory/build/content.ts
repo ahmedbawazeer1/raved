@@ -126,3 +126,80 @@ export const roleplaySchema = z.object({
   scenario_en: z.string().trim().min(20).max(600),
   opening_en: z.string().trim().min(2).max(200),
 });
+
+// ---------------------------------------------------------------------------------------------
+// Plain-text editing of a section in the review studio (one simple format per block type).
+// ---------------------------------------------------------------------------------------------
+
+export const EDIT_HINTS: Record<WrittenBlock, string> = {
+  text: "شرح بالعربية (يقبل markdown).",
+  table: "سطر لكل صف، والخلايا مفصولة بـ |. السطر الأول عناوين الأعمدة.",
+  audio: "جملة إنجليزية في كل سطر (يقرؤها التطبيق بالصوت).",
+  reading: "نص القراءة بالإنجليزية.",
+  story: "سطر لكل جملة: المتحدث | English | العربية. السطر الأول عنوان الحوار (اختياري، يبدأ بـ #).",
+  speaking_task: "السطر الأول: المهمة بالإنجليزية. ثم عبارة مساعدة في كل سطر.",
+  writing_task: "السطر الأول: المهمة بالإنجليزية. السطر الثاني: أقل وأكثر عدد كلمات مثل 20-60.",
+};
+
+const lines = (t: string) =>
+  t
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+const cells = (l: string) => l.split("|").map((c) => c.trim());
+
+export function sectionToText(c: SectionContent): string {
+  switch (c.block) {
+    case "text":
+      return c.markdown_ar;
+    case "table":
+      return [c.headers, ...c.rows].map((r) => r.join(" | ")).join("\n");
+    case "audio":
+      return c.sentences_en.join("\n");
+    case "reading":
+      return c.text_en;
+    case "story":
+      return [...(c.title_ar ? [`# ${c.title_ar}`] : []), ...c.panels.map((p) => `${p.speaker} | ${p.text_en} | ${p.text_ar}`)].join("\n");
+    case "speaking_task":
+      return [c.prompt_en, ...c.helpful_phrases].join("\n");
+    case "writing_task":
+      return [c.prompt_en, `${c.min_words}-${c.max_words}`].join("\n");
+  }
+}
+
+/** Parses an edited section back; returns Arabic errors when the text does not fit the format. */
+export function textToSection(block: WrittenBlock, text: string): { ok: true; value: SectionContent } | { ok: false; error: string } {
+  let raw: Record<string, unknown>;
+  const ls = lines(text);
+  switch (block) {
+    case "text":
+      raw = { markdown_ar: text.trim() };
+      break;
+    case "table":
+      raw = { headers: ls[0] ? cells(ls[0]) : [], rows: ls.slice(1).map(cells) };
+      break;
+    case "audio":
+      raw = { sentences_en: ls };
+      break;
+    case "reading":
+      raw = { text_en: text.trim() };
+      break;
+    case "story": {
+      const title = ls[0]?.startsWith("#") ? ls[0].replace(/^#+\s*/, "") : "";
+      const rows = (title ? ls.slice(1) : ls).map(cells);
+      if (rows.some((r) => r.length !== 3)) return { ok: false, error: "كل سطر في الحوار: المتحدث | English | العربية" };
+      raw = { title_ar: title, panels: rows.map(([speaker, text_en, text_ar]) => ({ speaker, text_en, text_ar })) };
+      break;
+    }
+    case "speaking_task":
+      raw = { prompt_en: ls[0] ?? "", helpful_phrases: ls.slice(1) };
+      break;
+    case "writing_task": {
+      const m = /^(\d+)\s*-\s*(\d+)$/.exec(ls[1] ?? "");
+      raw = { prompt_en: ls[0] ?? "", ...(m ? { min_words: Number(m[1]), max_words: Number(m[2]) } : {}) };
+      break;
+    }
+  }
+  const r = CONTENT_SCHEMAS[block].safeParse({ ...raw, block });
+  return r.success ? { ok: true, value: r.data as SectionContent } : { ok: false, error: `النص لا يطابق الشكل المطلوب: ${EDIT_HINTS[block]}` };
+}

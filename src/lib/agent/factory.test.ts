@@ -175,3 +175,23 @@ describe("factory_unit", () => {
     expect(issues.some((i) => i.message.includes("فيديو"))).toBe(true);
   });
 });
+
+describe("section editing", () => {
+  it("round-trips every block type through its plain-text format", async () => {
+    const { sectionToText, textToSection } = await import("../factory/build/content");
+    const samples = [
+      { block: "text", markdown_ar: "شرح القاعدة بالعربية مع مثال واضح." },
+      { block: "table", headers: ["Subject", "Verb"], rows: [["I", "am"], ["He", "is"]] },
+      { block: "audio", sentences_en: ["I am Hamza.", "She is Reem."] },
+      { block: "story", title_ar: "التعارف", panels: [{ speaker: "Hamza", text_en: "Hello!", text_ar: "مرحباً!" }, { speaker: "Reem", text_en: "Hi!", text_ar: "أهلاً!" }, { speaker: "Hamza", text_en: "Bye!", text_ar: "مع السلامة!" }] },
+      { block: "speaking_task", prompt_en: "Introduce yourself to a new student.", helpful_phrases: ["My name is…"], rubric_focus: [] },
+      { block: "writing_task", prompt_en: "Write about your family in Mukalla.", min_words: 20, max_words: 60, rubric_focus: [] },
+    ] as const;
+    for (const s of samples) {
+      const r = textToSection(s.block, sectionToText(s as never));
+      expect(r.ok, s.block).toBe(true);
+      if (r.ok) expect(r.value).toEqual(s);
+    }
+    expect(textToSection("story", "Hamza | Hello").ok).toBe(false);
+  });
+});
