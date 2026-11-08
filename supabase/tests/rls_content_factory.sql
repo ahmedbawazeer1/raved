@@ -57,6 +57,19 @@ select set_config('request.jwt.claims', json_build_object('sub', :'te', 'role', 
 select tests.throws('update public.curriculum_units set stop_ar = ''تريم'' where code = ''A1-01''', 'an approved map is locked for teachers');
 reset role;
 
+-- a draft path being built in the studio: the teacher sees it, students do not
+insert into public.paths (slug, title, status) values ('studio-draft', 'مسار تجريبي', 'draft') returning id as draft \gset
+insert into public.levels (path_id, code, title, position) values (:'draft', 'L1', 'الأساسيات', 1);
+set local role authenticated;
+select set_config('request.jwt.claims', json_build_object('sub', :'te', 'role', 'authenticated')::text, true);
+select tests.ok(tests.count(format('select * from public.levels where path_id = %L', :'draft')) = 1, 'teacher sees the levels of a draft path');
+select tests.throws(format('insert into public.levels (path_id, code, title, position) values (%L, ''L2'', ''x'', 2)', :'draft'), 'teacher cannot add levels');
+reset role;
+set local role authenticated;
+select set_config('request.jwt.claims', json_build_object('sub', :'st', 'role', 'authenticated')::text, true);
+select tests.ok(tests.count('select * from public.paths where slug = ''studio-draft''') = 0, 'student cannot see a draft path');
+reset role;
+
 -- students see none of it
 set local role authenticated;
 select set_config('request.jwt.claims', json_build_object('sub', :'st', 'role', 'authenticated')::text, true);

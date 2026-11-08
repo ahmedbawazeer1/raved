@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 import { z } from "zod";
 import { requireAdmin, requireStaff } from "@/lib/auth/session";
 import { dbErrorMessage } from "@/lib/auth/errors";
@@ -8,7 +9,7 @@ import { createClient } from "@/lib/supabase/server";
 import { blocking, mapWordSchema, WORD, wordCode } from "@/lib/factory/curriculum";
 import { refreshIssues } from "@/lib/factory/load";
 import { queueNextUnit } from "@/lib/factory/queue";
-import { channelFromUrl, FRAMEWORKS, LANGUAGES, parseProfile, pathProfileSchema, playlistFromUrl } from "@/lib/factory/profile";
+import { channelFromUrl, DEFAULT_PROFILE, FRAMEWORKS, LANGUAGES, parseProfile, pathProfileSchema, playlistFromUrl } from "@/lib/factory/profile";
 import { DEFAULT_TEMPLATES, lessonTemplateSpec, templateErrors, unitTemplateSpec } from "@/lib/factory/templates";
 import type { AdminFormState } from "@/app/(admin)/admin/actions";
 
@@ -354,4 +355,83 @@ export async function approveMap(_prev: AdminFormState, formData: FormData): Pro
   revalidatePath(`/studio/levels/${levelId.data}`);
   revalidatePath("/studio");
   return { ok: true, message: `اعتُمدت خريطة المستوى. ${first ? `بدأ المصنع ببناء ${first}، وستصلك وحدة وحدة للمراجعة.` : ""}` };
+}
+
+// ---------------------------------------------------------------------------
+// New paths and levels, built entirely in the studio
+// ---------------------------------------------------------------------------
+
+/** A new path (hidden from students until the admin publishes it) with an empty path profile. */
+export async function createPath(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const parsed = z
+    .object({
+      title: z.string().trim().min(2, "اكتب اسم المسار").max(120),
+      slug: z
+        .string()
+        .trim()
+        .toLowerCase()
+        .regex(/^[a-z0-9][a-z0-9-]{1,40}$/, "الرابط: حروف إنجليزية صغيرة وأرقام وشرطة فقط، مثل web-dev"),
+      summary: z.string().trim().max(300).default(""),
+      icon: z.enum(["book", "code", "database", "pen"]).catch("book"),
+    })
+    .safeParse(Object.fromEntries(formData));
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "راجع الحقول." };
+  const supabase = await createClient();
+  const { count } = await supabase.from("paths").select("id", { count: "exact", head: true });
+  const { data: path, error } = await supabase
+    .from("paths")
+    .insert({ ...parsed.data, status: "draft", position: (count ?? 0) + 1 })
+    .select("id, slug")
+    .single();
+  if (error || !path) return { error: error?.code === "23505" ? "هذا الرابط مستخدم لمسار آخر." : "تعذر إنشاء المسار." };
+  await supabase.from("path_profiles").insert({ path_id: path.id, profile: DEFAULT_PROFILE as never, updated_by: userId });
+  revalidatePath("/studio", "layout");
+  redirect(`/studio/paths/${path.slug}?new=1`);
+}
+
+/** A level added by hand (code, title, goal) together with its settings in the path profile. */
+export async function addLevel(_prev: AdminFormState, formData: FormData): Promise<AdminFormState> {
+  const { userId } = await requireAdmin();
+  const pathId = uuid.safeParse(formData.get("path_id"));
+  const parsed = z
+    .object({
+      code: z
+        .string()
+        .trim()
+        .toUpperCase()
+        .regex(/^[A-Z0-9]{1,10}$/, "رمز المستوى: حروف إنجليزية وأرقام فقط، مثل A1 أو L1"),
+      title: z.string().trim().min(2, "اكتب اسم المستوى").max(80),
+      description: z.string().trim().max(400).default(""),
+      kind: z.enum(["general", "exam"]).catch("general"),
+      planned_units: z.coerce.number().int().min(3, "الوحدات 3 على الأقل").max(60),
+      framework: z.enum(FRAMEWORKS).catch("custom"),
+      video_language: z.enum(LANGUAGES).catch("ar"),
+    })
+    .safeParse(Object.fromEntries(formData));
+  if (!pathId.success) return { error: "بيانات غير صالحة." };
+  if (!parsed.success) return { error: parsed.error.issues[0]?.message ?? "راجع الحقول." };
+  const playlistRaw = String(formData.get("source_playlist") ?? "").trim();
+  const playlist = playlistRaw ? playlistFromUrl(playlistRaw) : null;
+  if (playlistRaw && !playlist) return { error: "رابط قائمة التشغيل غير صحيح. انسخه من يوتيوب (فيه list=)." };
+  const supabase = await createClient();
+  const { data: existing } = await supabase.from("levels").select("code, position").eq("path_id", pathId.data);
+  if ((existing ?? []).some((l) => l.code === parsed.data.code)) return { error: `يوجد مستوى بالرمز ${parsed.data.code}.` };
+  const position = Math.max(0, ...(existing ?? []).map((l) => l.position)) + 1;
+  const { code, title, description, kind, planned_units, framework, video_language } = parsed.data;
+  const { error } = await supabase.from("levels").insert({ path_id: pathId.data, code, title, description, kind, planned_units, position });
+  if (error) return { error: dbErrorMessage(error) };
+  const { data: prof } = await supabase.from("path_profiles").select("profile").eq("path_id", pathId.data).maybeSingle();
+  const profile = parseProfile(prof?.profile);
+  const level = {
+    code,
+    framework,
+    video_language,
+    unit_template: String(formData.get("unit_template") ?? "standard"),
+    ...(playlist ? { source_playlist: playlist } : {}),
+  };
+  const next = pathProfileSchema.parse({ ...profile, levels: [...profile.levels.filter((l) => l.code !== code), level] });
+  await supabase.from("path_profiles").upsert({ path_id: pathId.data, profile: next as never, updated_by: userId });
+  revalidatePath("/studio", "layout");
+  return { ok: true, message: `أُضيف المستوى ${code}. الخطوة التالية: افتحه واطلب تخطيط خريطته.` };
 }

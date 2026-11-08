@@ -100,10 +100,11 @@ export async function reviewJob(_prev: AdminFormState, formData: FormData): Prom
     const plan = pathPlanSchema.safeParse(job.output);
     const { data: path } = await supabase.from("paths").select("slug").eq("id", job.path_id).single();
     if (plan.success && path) {
+      // Content factory: the plan only creates the levels; each level is then mapped and built in the studio.
       await ensureLevels(supabase, job.path_id, plan.data);
-      const n = await queueLevel(supabase, job.path_id, path.slug, plan.data, 0, job.id);
       revalidatePath("/admin/agent");
-      return { ok: true, message: `اعتمدت الخطة. بدأ الوكيل ببناء ${n} وحدة من المستوى الأول، وستصلك واحدة واحدة للمراجعة.` };
+      revalidatePath("/studio", "layout");
+      return { ok: true, message: `اعتمدت الخطة وأُضيفت ${plan.data.levels.length} مستويات. أكمل من «استوديو المحتوى»: اضبط كل مستوى ثم اطلب تخطيط خريطته.` };
     }
   }
   if (decision === "approved" && (job.kind === "build_unit" || job.kind === "improve_unit")) {
