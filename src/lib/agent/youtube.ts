@@ -60,7 +60,10 @@ interface VideosResponse {
   }[];
 }
 
-export async function searchYouTube(query: string, opts: { apiKey?: string; max?: number; minSec?: number; maxSec?: number } = {}): Promise<VideoCandidate[]> {
+export async function searchYouTube(
+  query: string,
+  opts: { apiKey?: string; max?: number; minSec?: number; maxSec?: number; channelId?: string; language?: "ar" | "en" } = {},
+): Promise<VideoCandidate[]> {
   // Trimmed: a key pasted into GitHub secrets often carries a trailing space or newline.
   const key = (opts.apiKey ?? process.env.YOUTUBE_API_KEY)?.trim();
   if (!key) throw new Error("YOUTUBE_API_KEY is missing");
@@ -71,7 +74,8 @@ export async function searchYouTube(query: string, opts: { apiKey?: string; max?
     maxResults: String(opts.max ?? 8),
     videoEmbeddable: "true",
     safeSearch: "strict",
-    relevanceLanguage: "en",
+    relevanceLanguage: opts.language ?? "en",
+    ...(opts.channelId ? { channelId: opts.channelId } : {}),
     key,
   });
   const res = await fetch(`https://www.googleapis.com/youtube/v3/search?${params}`, { signal: AbortSignal.timeout(20_000) });
@@ -131,4 +135,18 @@ export async function playlistVideos(playlistId: string, max = 60): Promise<{ yo
     page = body.nextPageToken;
   }
   return out.slice(0, max);
+}
+
+/** A channel id from a stored source reference (UC… as is, @handle through channels?forHandle: 1 unit). */
+export async function resolveChannel(ref: string): Promise<string | null> {
+  if (/^UC[A-Za-z0-9_-]{22}$/.test(ref)) return ref;
+  if (!ref.startsWith("@")) return null;
+  const key = process.env.YOUTUBE_API_KEY?.trim();
+  if (!key) throw new YouTubeError("config", "YOUTUBE_API_KEY is not set");
+  const res = await fetch(`https://www.googleapis.com/youtube/v3/channels?${new URLSearchParams({ part: "id", forHandle: ref, key })}`, {
+    signal: AbortSignal.timeout(20_000),
+  });
+  if (!res.ok) throw await youtubeError(res, "channels");
+  const body = (await res.json()) as { items?: { id?: string }[] };
+  return body.items?.[0]?.id ?? null;
 }

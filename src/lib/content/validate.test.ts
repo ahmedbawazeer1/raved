@@ -49,10 +49,10 @@ describe("validateUnitPackage", () => {
     expect(r.errors.some((e) => e.path.endsWith("checkpoints[1].at_sec"))).toBe(true);
   });
 
-  it("requires videos to be optional", () => {
+  it("accepts mandatory videos (owner decision: every lesson has a video)", () => {
     const pkg = clone();
     pkg.lessons[0].blocks[3].optional = false;
-    expect(validateUnitPackage(pkg).errors.some((e) => e.path.endsWith(".optional"))).toBe(true);
+    expect(validateUnitPackage(pkg).errors.some((e) => e.path.endsWith(".optional"))).toBe(false);
   });
 
   it("rejects too few vocabulary items", () => {

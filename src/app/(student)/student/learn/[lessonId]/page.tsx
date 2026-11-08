@@ -18,6 +18,7 @@ import { requireActiveStudent } from "@/lib/auth/session";
 import { parseFeatures } from "@/lib/paths/features";
 import { createClient } from "@/lib/supabase/server";
 import type { LessonBlock, PackageLesson } from "@/lib/content/types";
+import { isVideoPart, progressByKey, videoKey, type VideoProgressRow } from "@shared/lesson/video-part";
 
 export const metadata: Metadata = { title: "الدرس" };
 
@@ -36,7 +37,11 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
   if (!lesson || !lesson.units) notFound();
 
   const blocks = (lesson.blocks ?? []) as unknown as LessonBlock[];
-  const trackedVideos = [...new Set(blocks.flatMap((b) => (b.type === "video" && b.youtube_id && !b.needs_check ? [b.youtube_id] : [])))];
+  const videoBlocks = blocks.flatMap((b) => (b.type === "video" && b.youtube_id && !b.needs_check ? [b] : []));
+  // Keys: "id" for a whole video, "id@start" for a part (shared/lesson/video-part.ts).
+  const trackedVideos = [...new Set(videoBlocks.map(videoKey))];
+  const wholeIds = [...new Set(videoBlocks.filter((b) => !isVideoPart(b)).map((b) => b.youtube_id!))];
+  const partIds = [...new Set(videoBlocks.filter(isVideoPart).map((b) => b.youtube_id!))];
   // Exercises, games and the story episode of the lesson: all mandatory.
   const exerciseIds = blocks.flatMap((b) =>
     b.type === "exercise" && b.exercise
@@ -52,9 +57,14 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
       supabase.from("lessons").select("id, position").eq("unit_id", lesson.unit_id).order("position"),
       supabase.from("lesson_progress").select("status, rating").eq("student_id", userId).eq("lesson_id", lesson.id).maybeSingle(),
       supabase.rpc("my_lesson_blocker", { p_lesson_id: lesson.id }),
-      trackedVideos.length
-        ? supabase.from("video_views").select("youtube_id, watched_sec, duration_sec, completed_at").eq("student_id", userId).in("youtube_id", trackedVideos)
-        : Promise.resolve({ data: [] as { youtube_id: string; watched_sec: number; duration_sec: number; completed_at: string | null }[] }),
+      Promise.all([
+        wholeIds.length
+          ? supabase.from("video_views").select("youtube_id, watched_sec, duration_sec, completed_at").eq("student_id", userId).in("youtube_id", wholeIds)
+          : Promise.resolve({ data: [] as VideoProgressRow[] }),
+        partIds.length
+          ? supabase.from("video_part_views").select("youtube_id, start_sec, watched_sec, duration_sec, completed_at").eq("student_id", userId).in("youtube_id", partIds)
+          : Promise.resolve({ data: [] as VideoProgressRow[] }),
+      ]).then(([w, p]) => ({ data: progressByKey(w.data ?? [], p.data ?? []) })),
       supabase.from("speaking_attempts").select("id").eq("student_id", userId).eq("lesson_id", lesson.id).limit(1),
       supabase.from("writing_submissions").select("id").eq("student_id", userId).eq("lesson_id", lesson.id).limit(1),
       getAiSettings(),
@@ -95,7 +105,7 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
   }
 
   const videos: Record<string, VideoStatus> = {};
-  for (const v of views ?? []) videos[v.youtube_id] = { watched: v.watched_sec, duration: v.duration_sec, done: Boolean(v.completed_at) };
+  Object.assign(videos, views ?? {});
   const tasksRequired = !ai.paused;
 
   const speakingTask = features.speaking ? (lesson.speaking_task as PackageLesson["speaking_task"] | null) : null;

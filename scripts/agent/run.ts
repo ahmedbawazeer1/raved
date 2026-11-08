@@ -8,10 +8,10 @@ import path from "node:path";
 import { createClient } from "@supabase/supabase-js";
 import { callGemini } from "../../src/lib/agent/gemini";
 import { runNextJob, type AgentJob, type AgentStore, type UnitTools } from "../../src/lib/agent/runner";
-import { playlistVideos, searchYouTube } from "../../src/lib/agent/youtube";
+import { playlistVideos, resolveChannel, searchYouTube } from "../../src/lib/agent/youtube";
 import { levelProfile, parseProfile } from "../../src/lib/factory/profile";
-import { DEFAULT_TEMPLATES, unitTemplateSpec } from "../../src/lib/factory/templates";
-import { mapToRows } from "../../src/lib/factory/rows";
+import { DEFAULT_TEMPLATES, lessonTemplateSpec, unitTemplateSpec, type LessonTemplateSpec } from "../../src/lib/factory/templates";
+import { mapToRows, rowsToMap } from "../../src/lib/factory/rows";
 import { validateUnitPackage } from "../../src/lib/content/validate";
 
 const MAX_JOBS = 3;
@@ -139,6 +139,76 @@ async function main() {
       });
       if (e3) throw e3;
     },
+    async unitContext(curriculumUnitId) {
+      const { data: row, error } = await db.from("curriculum_units").select("*").eq("id", curriculumUnitId).single();
+      if (error) throw error;
+      const { data: level } = await db.from("levels").select("id, code, position, path_id, paths(slug, title)").eq("id", row.level_id).single();
+      if (!level) throw new Error("level not found");
+      const path = level.paths as unknown as { slug: string; title: string };
+      const [{ data: items }, { data: units }, { data: prof }, { data: earlier }, { data: templates }, { data: sources }] = await Promise.all([
+        db.from("curriculum_items").select("kind, code, text_en, text_ar, detail, unit_code, position").eq("level_id", row.level_id),
+        db.from("curriculum_units").select("code, position").eq("level_id", row.level_id),
+        db.from("path_profiles").select("profile").eq("path_id", level.path_id).maybeSingle(),
+        db.from("levels").select("id").eq("path_id", level.path_id).lt("position", level.position),
+        db.from("content_templates").select("kind, key, title_ar, spec").eq("active", true),
+        db.from("video_sources").select("kind, ref, title, language, levels").eq("path_id", level.path_id).eq("active", true).order("position"),
+      ]);
+      const profile = parseProfile(prof?.profile);
+      const lp = levelProfile(profile, level.code) ?? null;
+      const unitTpl = (templates ?? []).find((t) => t.kind === "unit" && t.key === (lp?.unit_template ?? "standard"));
+      const unitTemplate = unitTemplateSpec.safeParse(unitTpl?.spec).success
+        ? unitTemplateSpec.parse(unitTpl!.spec)
+        : unitTemplateSpec.parse(DEFAULT_TEMPLATES.find((t) => t.key === "standard")!.spec);
+      const lessonTemplates: Record<string, { title_ar: string; spec: LessonTemplateSpec }> = {};
+      for (const t of templates ?? []) {
+        const r = lessonTemplateSpec.safeParse(t.spec);
+        if (t.kind === "lesson" && r.success) lessonTemplates[t.key] = { title_ar: t.title_ar, spec: r.data };
+      }
+      const map = rowsToMap(level.code, "", items ?? [], [row]);
+      const unit = map.units[0];
+      const words = (items ?? []).filter((i) => i.kind === "word");
+      const before = new Set((units ?? []).filter((u) => u.position <= row.position).map((u) => u.code));
+      const earlierIds = (earlier ?? []).map((l) => l.id);
+      const { data: earlierWords } = earlierIds.length
+        ? await db.from("curriculum_items").select("text_en, text_ar, detail").eq("kind", "word").in("level_id", earlierIds)
+        : { data: [] as { text_en: string; text_ar: string; detail: unknown }[] };
+      const pool = [...words, ...(earlierWords ?? [])];
+      const review = row.review_words.flatMap((w: string) => {
+        const found = pool.find((p) => p.text_en.toLowerCase() === w.toLowerCase());
+        const d = (found?.detail ?? {}) as { pos?: string; example_en?: string };
+        return found
+          ? [{ word: found.text_en, pos: (d.pos ?? "other") as never, meaning_ar: found.text_ar, example_en: d.example_en ?? "", review: true }]
+          : [];
+      });
+      return {
+        pathSlug: path.slug,
+        pathTitle: path.title,
+        level: { id: level.id, code: level.code },
+        unitRowId: row.id,
+        unit,
+        objectives: (items ?? []).filter((i) => i.kind === "objective" && row.objectives.includes(i.code)).map((i) => i.text_ar),
+        grammar: (items ?? [])
+          .filter((i) => i.kind === "grammar" && row.grammar.includes(i.code))
+          .map((g) => ({ text_en: g.text_en, text_ar: g.text_ar, example_en: String((g.detail as { example_en?: string })?.example_en ?? "") })),
+        review,
+        known: [...words.filter((w) => w.unit_code && before.has(w.unit_code)).map((w) => w.text_en), ...(earlierWords ?? []).map((w) => w.text_en)],
+        profile,
+        levelProfile: lp,
+        unitTemplate,
+        lessonTemplates,
+        sources: (sources ?? [])
+          .filter((s) => !s.levels.length || s.levels.includes(level.code))
+          .map((s) => ({ kind: s.kind as "playlist" | "channel", ref: s.ref, title: s.title, language: s.language as "ar" | "en" })),
+      };
+    },
+    async jobOutput(jobId) {
+      const { data } = await db.from("agent_jobs").select("output").eq("id", jobId).maybeSingle();
+      return data?.output ?? null;
+    },
+    async setBuildStatus(curriculumUnitId, status, jobId) {
+      const { error } = await db.from("curriculum_units").update({ build_status: status, build_job_id: jobId }).eq("id", curriculumUnitId);
+      if (error) throw error;
+    },
     async memory(pathId) {
       const { data } = await db
         .from("agent_memory")
@@ -153,10 +223,11 @@ async function main() {
 
   const root = path.join(__dirname, "..", "..");
   const tools: UnitTools = {
-    search: (q) => {
+    search: (q, opts) => {
       if (!process.env.YOUTUBE_API_KEY) throw new Error("مفتاح YouTube غير مضاف بعد (YOUTUBE_API_KEY).");
-      return searchYouTube(q);
+      return searchYouTube(q, opts);
     },
+    resolveChannel: (ref) => resolveChannel(ref),
     playlist: (id) => playlistVideos(id),
     validate: (pkg) => {
       const r = validateUnitPackage(pkg);

@@ -6,6 +6,7 @@ import type { VideoBlock } from "@shared/content/types";
 import type { GameWord } from "@shared/games/logic";
 import { addSecond, watchedSeconds, type WatchRanges } from "@shared/gamification/watch";
 import { checkpointsFor, dueCheckpoint, formatTime, type Checkpoint } from "@shared/lesson/player";
+import { isVideoPart, videoKey } from "@shared/lesson/video-part";
 import { WEB_URL } from "@/config";
 import { fx } from "@/lib/fx";
 import { supabase } from "@/lib/supabase";
@@ -62,7 +63,9 @@ export function LessonVideo({
   const answered = useRef(new Set<number>());
   const prev = useRef(0);
   const lastSent = useRef(0);
-  const key = `raved:watch:${id}`;
+  // A part of a video (one episode split across lessons) is tracked on its own.
+  const part = isVideoPart(block);
+  const key = `raved:watch:${videoKey(block)}`;
   const checkpoints = useMemo(() => checkpointsFor(id, duration, block.checkpoints, words), [id, duration, block.checkpoints, words]);
 
   useEffect(() => {
@@ -81,7 +84,9 @@ export function LessonVideo({
     const seconds = watchedSeconds(next);
     if (seconds - lastSent.current < 10) return;
     lastSent.current = seconds;
-    const { data } = await supabase.rpc("record_video_watch", { p_youtube_id: id, p_watched_sec: Math.floor(seconds) });
+    const { data } = part
+      ? await supabase.rpc("record_video_part", { p_youtube_id: id, p_start_sec: start, p_watched_sec: Math.floor(seconds) })
+      : await supabase.rpc("record_video_watch", { p_youtube_id: id, p_watched_sec: Math.floor(seconds) });
     const d = data as { watched_sec: number; duration_sec: number; done: boolean } | null;
     if (d) onStatus({ watched: d.watched_sec, duration: d.duration_sec, done: d.done });
   }
