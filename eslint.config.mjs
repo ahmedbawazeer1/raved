@@ -16,6 +16,9 @@ const eslintConfig = defineConfig([
     "public/sw.js",
     "playwright-report/**",
     "test-results/**",
+    // The mobile app has its own lint setup (mobile/).
+    "mobile/**",
+    "android/**",
   ]),
 ]);
 

@@ -30,7 +30,8 @@ A free, Arabic (RTL) **multi-path learning platform for secondary-school student
 - Next.js (App Router) + TypeScript strict + Tailwind CSS + shadcn/ui. `<html lang="ar" dir="rtl">`; logical properties only (`ms-`, `pe-`, `start`, `end`).
 - Supabase: Postgres + Auth (email/password + Google OAuth) + Storage + RLS. Migrations in `supabase/migrations/`; generated types in `src/types/db.ts`.
 - Hosting: Vercel Hobby (preview per PR).
-- Offline: Service Worker via Serwist (or Workbox) + IndexedDB (via `idb`). See `docs/OFFLINE.md`.
+- Mobile app: React Native with Expo SDK 58 + Expo Router (`mobile/`), built by GitHub Actions (`expo prebuild` + Gradle), updates over the air with `expo-updates`. Code used by both apps lives in `shared/` (pure TypeScript + zod, imported as `@shared/...`).
+- Offline (legacy, no longer required): Serwist service worker + IndexedDB. See `docs/OFFLINE.md`.
 - AI: Vercel AI SDK behind `src/lib/ai/` so the provider is switchable from admin settings.
   - **Groq (Llama)** = the only provider allowed to receive student text/transcripts.
   - **Gemini free tier** = public, non-student content only (its free tier may train on inputs).
@@ -51,6 +52,10 @@ src/lib/srs/           spaced repetition (SM-2 style)
 src/lib/content/       import + validation of unit packages
 supabase/migrations/   SQL migrations (+ RLS policies + tests)
 content/<path>/units/  unit JSON packages, e.g. content/english/units/A1-01.json
+shared/                code used by web AND mobile: theme, Yemen helpers, schemas, SRS, app config
+mobile/                React Native app (Expo): src/app = screens (Expo Router), src/ui = UI kit, src/lib = data
+android/               temporary TWA app (until the React Native app ships)
+docs/ARCHITECTURE.md   how the project is organised for future changes (read before structural work)
 ```
 
 ## Roles
@@ -65,16 +70,17 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 - No prices in Yemeni rial in the UI. Exam info (availability, locations, fees note, payment note) lives in the `exams` table, editable by admin, with `verified_at`. Never hard-code exam fees.
 - Content (examples, names, places, prices in exercises) should reflect Yemeni daily life.
 
-## Low-bandwidth & offline rules (non-negotiable)
-- **Owner decisions (2026-11-02):** (1) **platform first** — build and polish the platform now; course content is added later, so never block platform work on content. (2) Internet is no longer the main constraint: rich illustrated UI, SVG/CSS animation, sounds and vibration are welcome (design reference: the «النموذج الثاني» prototype — Hadramout map home, video-first lesson with surprise questions, step-by-step exercises, guardian battle, stamp album). Offline study, data saver for video and the JS budget below still apply. Art lives in `src/lib/art/` + `src/components/art/` (inline SVG, no image downloads); effects in `src/lib/fx.ts` (student can turn them off). Rive needs a paid plan to export — ask before using it.
-- **Data saver ON by default**: no autoplay video, YouTube iframe loads only after tap (show a thumbnail-free placeholder with duration and approx. size).
-- Initial JS < 200KB gzipped on student pages; self-host fonts with `next/font` and subset; no heavy client libraries.
-- **Videos are mandatory (owner decision, 2026-10-29):** a lesson completes only after 80% of its video was really played (skipping ahead does not count; tracked per YouTube video in `video_views`, enforced by `complete_lesson()`). Videos still load only after a tap, and every lesson still carries its full Arabic explanation, exercises and TTS listening. A video marked `needs_check` does not block.
+## Owner decisions on scope
+- **Platform first (2026-11-02):** build and polish the platform; course content is added later (by «عقل رفد»), so never block platform work on content.
+- **No low-bandwidth / offline rule (2026-11-08):** the owner dropped the whole rule — no JS budget, no data-saver requirement, offline study is not required. Existing offline code (Serwist, IndexedDB queue, unit downloads) stays while it works, but do not build new offline features and do not let it block changes; it may be removed when it gets in the way. Rich UI, animation, sound and vibration are welcome (design reference: the «النموذج الثاني» prototype). Art lives in `src/lib/art/` + `src/components/art/`; effects in `src/lib/fx.ts` (student can turn them off). Rive needs a paid plan to export — ask before using it.
+- **Android/iOS app = React Native (2026-11-08):** Expo (SDK 58) + Expo Router in `mobile/`, same Supabase project and accounts as the web. Admin and «عقل رفد» stay on the web. The TWA in `android/` is temporary until the React Native app replaces it (same package `com.raved.learn` and signing key, so it updates in place).
+- **The project must stay easy to change (2026-11-08):** the owner will keep proposing changes. Follow `docs/ARCHITECTURE.md` (shared code, remote config, versioned DB API, feature modules).
+
+## Learning rules
+- **Videos are mandatory (owner decision, 2026-10-29):** a lesson completes only after 80% of its video was really played (skipping ahead does not count; tracked per YouTube video in `video_views`, enforced by `complete_lesson()`). Every lesson still carries its full Arabic explanation, exercises and TTS listening. A video marked `needs_check` does not block.
 - **Everything is mandatory and in order:** lessons open one after another, the unit quiz opens after all lessons, the next unit after passing the quiz (`private.unit_open/lesson_open/quiz_open`). In-lesson exercises must all be solved, and the speaking/writing task sent (unless AI is paused).
 - **Gamification** (`src/lib/gamification/`): points in `xp_events` (written only by DB functions/triggers), player levels, Hadrami-named badges, the «رحلة حضرموت» journey map (`units.stop_ar`, from the package field `stop_ar`). Games (`src/components/games/`, lesson block `game`, games hub with 5 points per game per day), the unit quiz as a battle with the stop's guardian, questions that pause mandatory videos, the story «رحلة حمزة وريم» (lesson block `story`), weekly league (opt-in, first name + initial only), friend duels (answer key only in the DB), and AI role-play with the unit's Hadrami character (package field `roleplay`, docs/AI_PROMPTS.md §6).
-- Units downloadable for offline (< 2MB without video). Progress, quiz answers and writing drafts are queued in IndexedDB and synced later; the server re-grades quizzes (never trust client scores).
-- Show a clear offline banner and pending-sync count. Never lose user input.
-- Details: `docs/OFFLINE.md`.
+- The server grades quizzes (never trust client scores). Never lose user input.
 
 ## Content agent «عقل رفد» (owner decision, 2026-11-03)
 - The platform builds its own content: an agent designs paths and builds units; the owner **only reviews** (approve, or reject with a note). Nothing reaches students before approval.
@@ -101,7 +107,8 @@ PRD section 11. Generic for all paths: `paths`, `enrollments`, `levels`, `units`
 - Fonts: IBM Plex Sans Arabic (UI), Inter (English). Wrap English text in an element with `dir="ltr"`.
 - Mobile-first for students (from 360px, touch targets ≥ 44px, bottom tabs: اليوم، التعلّم، المفردات، التدريب، حسابي). Desktop-first for admin (dark sidebar).
 - WCAG 2.2 AA, high contrast. PWA installable.
+- The mobile app uses the same tokens (`shared/theme.ts`) and only its UI kit (`mobile/src/ui`), never raw colours or fonts in screens.
 - Logos: `design/assets/raved-logo-green.svg` (light bg), `raved-logo-green-white.svg` (dark bg).
 
 ## Quality gates (every PR)
-`npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`, and from phase 2 `npm run test:e2e` (Playwright, including one offline test) must pass in CI. Add RLS tests for every new table.
+`npm run lint`, `npm run typecheck`, `npm run test`, `npm run build`, `npm run test:e2e` (Playwright) and, for `mobile/`, `npm run lint` + `npm run typecheck` + an Android bundle must pass in CI. Add RLS tests for every new table.

@@ -71,6 +71,11 @@ The artifact links are private to the owner; Claude Code cannot open them. Use t
 - Done (2026-11-02): (1) PR #17 map home + companion + HUD + effects; (2) PR #18 video-first player (own controls, no skipping, `checkpoints` surprise questions, word preview), step-by-step exercises, «تدرّب على أخطائك» (device-only list in `src/lib/mistakes.ts`); (3) PR #19 guardians (`src/lib/art/guardians.ts`), battle scene, stamp drop + share image, stamp album on the progress page, wardrobe unlocked by stamps; (4) daily quests from today's `xp_events`, «fog lifts» moment on the map after a new stamp.
 - Surprise questions tied to the moment in the video need time-coded questions per video; until content has them, the player asks about the unit words (as today). An admin tool to add them while watching is planned.
 
+## 6d. MVP, mobile app and change-friendly structure (2026-11-07/08)
+- PR #29: student feedback («ملاحظاتك تهمّنا»), free error log (`app_errors`, /api/errors, `onRequestError`), agent safety (pause switch, per-job budget, `agent_traces`, `<external>` wrapping), a temporary TWA Android app (`android/`, /app download page, release `android`).
+- Owner decisions (2026-11-08): **drop the low-bandwidth/offline rule entirely**; the Android/iOS app is **React Native (Expo)** in `mobile/` (Flutter and Capacitor were discussed and declined); the owner will keep proposing changes, so the project is organised for change — see `docs/ARCHITECTURE.md` (`shared/`, `app_config` remote config, additive DB API, UI kit).
+- Mobile plan: (1) base: auth, sign-up, brand, remote config/force update; (2) learning core: today, journey map, video lesson, exercises; (3) quizzes/guardian battle, vocab, games, stamps; (4) speaking/writing, assistant, role-play, league/duels, push notifications; (5) polish + Google Play ($25 one-time — ask the owner before paying).
+
 ## 7. Working style the owner expects
 - Reply in simple Arabic, step by step, click-by-click for any dashboard action.
 - One phase per session and per PR; give phone test steps (including airplane mode from phase 3).
