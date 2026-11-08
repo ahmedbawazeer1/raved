@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   BadgeCheck,
   Bot,
+  Factory,
   FileJson,
   Flag,
   GraduationCap,
@@ -49,6 +50,7 @@ const ADMIN: Group[] = [
     title: "المحتوى",
     items: [
       { href: "/studio", label: "الاستوديو", icon: Layers, exact: true, also: ["/studio/paths", "/studio/levels", "/studio/units"] },
+      { href: "/studio/line", label: "خط الإنتاج", icon: Factory },
       { href: "/studio/templates", label: "القوالب", icon: LayoutTemplate },
       { href: "/studio/insights", label: "نتائج الوحدات", icon: LineChart },
     ],
@@ -76,6 +78,7 @@ const TEACHER: Group[] = [
     items: [
       { href: "/studio/review", label: "المراجعة", icon: BadgeCheck, badge: "review" },
       { href: "/studio", label: "الاستوديو", icon: Layers, exact: true, also: ["/studio/paths", "/studio/levels", "/studio/units"] },
+      { href: "/studio/line", label: "خط الإنتاج", icon: Factory },
       { href: "/studio/templates", label: "القوالب", icon: LayoutTemplate },
       { href: "/studio/insights", label: "نتائج الوحدات", icon: LineChart },
     ],

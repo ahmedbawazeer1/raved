@@ -191,8 +191,8 @@ export async function improveUnit(_prev: AdminFormState, formData: FormData): Pr
   const supabase = await createClient();
   const { data: cu } = await supabase.from("curriculum_units").select("id, code, level_id, build_status").eq("unit_id", unitId.data).maybeSingle();
   if (!cu) return { error: "هذه الوحدة لم يبنها المصنع (وحدة قديمة)، فلا يعيد بناءها." };
-  const { data: busy } = await supabase.from("curriculum_units").select("code").eq("level_id", cu.level_id).in("build_status", ["building", "review"]).limit(1);
-  if (busy?.length) return { error: `المصنع مشغول بالوحدة ${busy[0].code}. أنهِ مراجعتها أولاً.` };
+  const { data: busy } = await supabase.from("curriculum_units").select("code").eq("level_id", cu.level_id).eq("build_status", "building").limit(1);
+  if (busy?.length) return { error: `المصنع يبني الوحدة ${busy[0].code} الآن. أرسلها بعد أن ينتهي.` };
   const { data: lvl } = await supabase.from("levels").select("path_id").eq("id", cu.level_id).single();
   if (!lvl) return { error: "المستوى غير موجود." };
   const { data: job, error } = await supabase

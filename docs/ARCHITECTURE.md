@@ -33,6 +33,11 @@ for a decision is read once per request by `loadConsoleSummary()` (`src/lib/cons
 page building blocks (cards, icon tiles, numbers, empty states) in `src/components/console/ui.tsx`. Status colours mean
 the same everywhere: green = done, gold = waits for you, purple = the agent, red = a problem, blue = information.
 
+The studio shows the factory as a **production line** (`/studio/levels/<id>?tab=line`, stations in `src/lib/factory/line.ts`):
+planned → video → writing → checks → teacher → admin → published. **Build-ahead** (`src/lib/factory/next-unit.ts`, setting
+`factory_build_ahead`, on by default): while one unit waits for review the factory builds the next one; never two at once,
+never more than one ahead, publishing stays in order. Both the web queue and the agent runner (`store.queueNext`) use it.
+
 ## 2. Rules that keep changes cheap
 
 1. **One source of truth per idea.** A rule (phone format, sign-up fields, SRS intervals, colours) is written

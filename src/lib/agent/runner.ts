@@ -79,6 +79,8 @@ export interface AgentStore {
   unitContext?(curriculumUnitId: string): Promise<UnitContext>;
   /** factory_unit: the unit's build status in the level map. */
   setBuildStatus?(curriculumUnitId: string, status: "building" | "review" | "failed", jobId: string): Promise<void>;
+  /** factory_unit: after a unit reaches review, start the next one if the rules allow (build one ahead). */
+  queueNext?(curriculumUnitId: string): Promise<void>;
   /** factory_lesson: the output of the unit build it revises. */
   jobOutput?(jobId: string): Promise<unknown>;
 }
@@ -371,6 +373,7 @@ async function factoryUnit(job: AgentJob, store: AgentStore, model: Model, tools
     (partial) => store.update(job.id, { input: { ...job.input, partial } }),
   );
   await store.setBuildStatus?.(id, "review", job.id);
+  await store.queueNext?.(id).catch(() => {});
   if (baseId) await store.update(baseId, { status: "rejected", review_note: "استُبدلت بنسخة معدّلة من المراجعة." });
   const errors = output.factory.qa.issues.filter((i) => i.severity === "error").length;
   await note(`الوحدة ${ctx.unit.code} جاهزة للمراجعة${errors ? ` (${errors} ملاحظة يجب إصلاحها)` : ""}`, {

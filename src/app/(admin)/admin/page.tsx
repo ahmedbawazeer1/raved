@@ -206,7 +206,17 @@ export default async function AdminTodayPage() {
         <p className="text-muted-foreground">
           {dateAr}
           {" · "}
-          <b className="text-warning">{firstDay ? "لنجهّز المنصة معاً" : decisions ? `${decisions} أشياء تنتظر قرارك` : "لا شيء ينتظرك الآن"}</b>
+          <b className="text-warning">
+            {firstDay
+              ? "لنجهّز المنصة معاً"
+              : decisions === 1
+                ? "شيء واحد ينتظر قرارك"
+                : decisions === 2
+                  ? "شيئان ينتظران قرارك"
+                  : decisions
+                    ? `${decisions} أشياء تنتظر قرارك`
+                    : "لا شيء ينتظرك الآن"}
+          </b>
         </p>
       </header>
 

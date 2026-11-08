@@ -5,7 +5,7 @@ import { login, TEACHER } from "./fixtures";
 // and cannot reach the admin area.
 test("a teacher works in the content studio", async ({ page }) => {
   await login(page, TEACHER, /\/studio$/);
-  await expect(page.getByRole("heading", { name: "المسارات والمناهج" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "الاستوديو", level: 1 })).toBeVisible();
   await expect(page.getByRole("heading", { name: "الإنجليزية" })).toBeVisible();
 
   await page.getByRole("link", { name: "القوالب" }).first().click();
