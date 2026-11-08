@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BarChart3, Bot, FileCheck2, FileJson, Home, Route, Settings, Sparkles, Users } from "lucide-react";
+import { BarChart3, Bot, FileCheck2, FileJson, GraduationCap, Home, Layers, Route, Settings, Sparkles, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const ITEMS = [
@@ -10,6 +10,8 @@ const ITEMS = [
   { href: "/admin/applications", label: "طلبات الالتحاق", icon: FileCheck2, badgeKey: "applications" as const },
   { href: "/admin/students", label: "الطلاب", icon: Users },
   { href: "/admin/paths", label: "المسارات", icon: Route },
+  { href: "/studio", label: "استوديو المحتوى", icon: Layers },
+  { href: "/admin/teachers", label: "المعلمون", icon: GraduationCap },
   { href: "/admin/agent", label: "عقل رفد", icon: Bot },
   { href: "/admin/content", label: "المحتوى", icon: FileJson },
   { href: "/admin/ai-review", label: "مراجعة التقييم الآلي", icon: Sparkles },
@@ -20,10 +22,7 @@ const ITEMS = [
 export function AdminNav({ pendingApplications, variant }: { pendingApplications: number; variant: "sidebar" | "bar" }) {
   const pathname = usePathname();
   return (
-    <nav
-      aria-label="تنقل الإدارة"
-      className={cn(variant === "sidebar" ? "flex flex-col gap-0.5" : "flex gap-1 overflow-x-auto px-2 pb-2")}
-    >
+    <nav aria-label="تنقل الإدارة" className={cn(variant === "sidebar" ? "flex flex-col gap-0.5" : "flex gap-1 overflow-x-auto px-2 pb-2")}>
       {ITEMS.map(({ href, label, icon: Icon, exact, badgeKey }) => {
         const active = exact ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
         const badge = badgeKey === "applications" && pendingApplications > 0 ? pendingApplications : null;
@@ -39,9 +38,7 @@ export function AdminNav({ pendingApplications, variant }: { pendingApplications
           >
             <Icon className="size-5" aria-hidden="true" />
             {label}
-            {badge && (
-              <span className="ms-auto rounded-full bg-accent px-2 text-xs leading-5 font-bold text-accent-foreground">{badge}</span>
-            )}
+            {badge && <span className="ms-auto rounded-full bg-accent px-2 text-xs leading-5 font-bold text-accent-foreground">{badge}</span>}
           </Link>
         );
       })}

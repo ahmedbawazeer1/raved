@@ -13,6 +13,13 @@ export const APPLICANT = {
   name: "متقدم الاختبار",
 };
 
+/** A volunteer teacher (content studio only). */
+export const TEACHER = {
+  email: "e2e-teacher@example.com",
+  password: "e2e-Password-789",
+  name: "معلم الاختبار",
+};
+
 export async function login(page: Page, account: { email: string; password: string } = STUDENT, home: RegExp = /\/student$/) {
   await page.goto("/login");
   await page.getByLabel("البريد الإلكتروني").fill(account.email);

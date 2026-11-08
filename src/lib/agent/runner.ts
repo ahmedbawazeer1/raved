@@ -34,9 +34,25 @@ import {
   type ClipChoice,
 } from "./unit";
 
+import {
+  batchErrors,
+  batchPrompt,
+  BATCH,
+  batchSchema,
+  frameSchema,
+  framePrompt,
+  partialMap,
+  placeBatch,
+  unitCount,
+  type LevelContext,
+  type LevelFrame,
+  type PlaylistVideo,
+} from "./level";
+import { checkLevelMap, type LevelMap, type MapIssue, type MapUnit } from "../factory/curriculum";
+
 export interface AgentJob {
   id: string;
-  kind: "plan_path" | "build_unit" | "improve_unit";
+  kind: "plan_path" | "build_unit" | "improve_unit" | "plan_level";
   path_id: string;
   input: Record<string, unknown>;
   log: { at: string; msg: string }[];
@@ -54,6 +70,10 @@ export interface AgentStore {
   paused?(): Promise<boolean>;
   /** Saves one trace row (model or search call). */
   trace?(row: AgentTrace): Promise<void>;
+  /** plan_level: what the level map is planned from (path profile, unit template, earlier levels). */
+  levelContext?(levelId: string): Promise<LevelContext>;
+  /** plan_level: replaces the level's draft map and puts it in review. */
+  saveLevelMap?(levelId: string, map: LevelMap, issues: MapIssue[], jobId: string): Promise<void>;
 }
 
 export interface AgentTrace {
@@ -71,6 +91,8 @@ export interface AgentTrace {
 
 /** Hard limits for one job: a loop or a stuck provider stops here instead of using up the free quota. */
 export const JOB_BUDGET = { modelCalls: 20, searches: 12, minutes: 25 };
+/** A level map is planned in ~6 short steps with up to two retries each. */
+export const LEVEL_BUDGET = { modelCalls: 30, searches: 4, minutes: 25 };
 
 /** Thrown when a job goes over JOB_BUDGET or the owner pauses the agent mid-job. */
 export class AgentStop extends Error {
@@ -87,6 +109,8 @@ export type Model = (req: GeminiRequest) => Promise<GeminiResult>;
 /** Tools for building units (YouTube search, the package validator and the format reference). */
 export interface UnitTools {
   search: (query: string) => Promise<VideoCandidate[]>;
+  /** The videos of a YouTube playlist, in order (cheap: no search quota). */
+  playlist?: (playlistId: string) => Promise<PlaylistVideo[]>;
   validate: (pkg: unknown) => { ok: boolean; errors: { path: string; message: string }[] };
   schema: string;
   example: string;
@@ -122,11 +146,12 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
   let searches = 0;
   const trace = (row: Omit<AgentTrace, "job_id" | "step" | "prompt_version">) =>
     store.trace?.({ job_id: job.id, step, prompt_version: PROMPT_VERSION, ...row }).catch(() => {});
+  const budget = job.kind === "plan_level" ? LEVEL_BUDGET : JOB_BUDGET;
   const guard = async (kind: "model" | "search") => {
     const count = kind === "model" ? ++modelCalls : ++searches;
-    const max = kind === "model" ? JOB_BUDGET.modelCalls : JOB_BUDGET.searches;
+    const max = kind === "model" ? budget.modelCalls : budget.searches;
     if (count > max) throw new AgentStop("budget", `${kind === "model" ? "Gemini" : "YouTube"} calls > ${max}`);
-    if (now().getTime() - startedAt > JOB_BUDGET.minutes * 60_000) throw new AgentStop("budget", `> ${JOB_BUDGET.minutes} min`);
+    if (now().getTime() - startedAt > budget.minutes * 60_000) throw new AgentStop("budget", `> ${budget.minutes} min`);
     if (await store.paused?.()) throw new AgentStop("paused", "paused by the owner");
   };
   const model: Model = async (req) => {
@@ -172,6 +197,15 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
         throw e;
       }
     },
+    playlist:
+      rawTools.playlist &&
+      (async (id) => {
+        await guard("search");
+        const t0 = Date.now();
+        const found = await rawTools.playlist!(id);
+        await trace({ kind: "search", model: null, input_chars: id.length, output_chars: found.length, ms: Date.now() - t0, ok: true, error: null });
+        return found;
+      }),
   };
 
   await note("بدأ العمل", { status: "running", started_at: now().toISOString(), progress: 5, step: "start" });
@@ -184,6 +218,10 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
     if (job.kind === "improve_unit") {
       if (!tools) throw new Error("unit tools are not available");
       await improveUnit(job, store, model, tools, note, now);
+      return job.id;
+    }
+    if (job.kind === "plan_level") {
+      await planLevel(job, store, model, tools, note);
       return job.id;
     }
     if (job.kind !== "plan_path") throw new Error(`unsupported job kind: ${job.kind}`);
@@ -263,6 +301,92 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
 }
 
 type Note = (msg: string, patch?: Record<string, unknown>) => Promise<void>;
+
+/** plan_level: the frame first, then the units five at a time; every finished step is saved in the job. */
+async function planLevel(job: AgentJob, store: AgentStore, model: Model, tools: UnitTools | undefined, note: Note) {
+  const levelId = typeof job.input.level_id === "string" ? job.input.level_id : "";
+  if (!levelId || !store.levelContext || !store.saveLevelMap) throw new Error("level tools are not available");
+  const [ctx, memory] = await Promise.all([store.levelContext(levelId), store.memory(job.path_id)]);
+  const feedback = typeof job.input.feedback === "string" ? job.input.feedback : undefined;
+  const system = systemPrompt(memory);
+  const level = ctx.level.code;
+  const partial = (job.input.partial ?? {}) as { playlist?: PlaylistVideo[]; frame?: unknown; units?: MapUnit[]; model?: string };
+  const save = (p: typeof partial) => store.update(job.id, { input: { ...job.input, partial: p } });
+
+  let playlist = Array.isArray(partial.playlist) ? partial.playlist : null;
+  if (!playlist) {
+    const id = ctx.profile?.source_playlist;
+    if (id && tools?.playlist) {
+      await note("أقرأ قائمة فيديوهات المستوى بالترتيب", { progress: 10, step: "playlist" });
+      playlist = await tools.playlist(id);
+    } else playlist = [];
+    await save({ ...partial, playlist });
+  }
+  const total = unitCount(ctx, playlist);
+
+  const savedFrame = frameSchema.safeParse(partial.frame);
+  let frame: LevelFrame;
+  let modelName = partial.model ?? "";
+  if (savedFrame.success) frame = savedFrame.data;
+  else {
+    await note(`أصمّم أهداف المستوى ${level} وتسلسل قواعده (${total} وحدة)`, { progress: 15, step: "frame" });
+    const res = await askJson(model, { system, prompt: framePrompt(ctx, total, playlist, feedback), json: true, temperature: 0.4 }, zodCheck(frameSchema));
+    frame = res.value;
+    modelName = res.model;
+    await save({ playlist, frame, units: [], model: modelName });
+  }
+
+  const units: MapUnit[] = Array.isArray(partial.units) && savedFrame.success ? [...partial.units] : [];
+  if (units.length) await note(`أكمل من حيث توقفت: ${units.length} من ${total} وحدات جاهزة`, { progress: 20, step: "units" });
+  while (units.length < total) {
+    const from = units.length + 1;
+    const size = Math.min(BATCH, total - units.length);
+    await note(`أخطط الوحدات ${from}–${from + size - 1} من ${total}`, { progress: 20 + Math.round((70 * units.length) / total), step: "units" });
+    const req = { system, prompt: batchPrompt(ctx, frame, units, from, size, total, playlist, feedback), json: true, temperature: 0.5 };
+    const parse = (v: unknown) => {
+      const r = batchSchema.safeParse(v);
+      if (!r.success) return { ok: false as const, errors: r.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`) };
+      if (r.data.units.length !== size) return { ok: false as const, errors: [`expected exactly ${size} units`] };
+      return { ok: true as const, value: placeBatch(level, r.data.units, from, playlist) };
+    };
+    let batch: MapUnit[];
+    try {
+      // Strict: the batch must also pass the map checks (no repeated word, review words already taught…).
+      batch = (
+        await askJson(model, req, (v) => {
+          const r = parse(v);
+          if (!r.ok) return r;
+          const errors = batchErrors(level, frame, units, r.value, ctx);
+          return errors.length ? { ok: false as const, errors } : r;
+        })
+      ).value;
+    } catch (e) {
+      if (e instanceof GeminiError || e instanceof AgentStop) throw e;
+      // Still imperfect after a retry: keep it; the checks show the problems to the teacher.
+      batch = (await askJson(model, req, parse)).value;
+    }
+    units.push(...batch);
+    await save({ playlist, frame, units, model: modelName });
+  }
+
+  const map: LevelMap = partialMap(level, frame, units);
+  const issues = checkLevelMap(map, ctx.unitTemplate, ctx.earlierWords);
+  await store.saveLevelMap(levelId, map, issues, job.id);
+  const errors = issues.filter((i) => i.severity === "error").length;
+  await note(
+    `خريطة المستوى ${level} جاهزة للمراجعة: ${units.length} وحدة، ${frame.objectives.length} هدفاً، ${units.reduce((n, u) => n + u.words.length, 0)} كلمة${
+      errors ? `، و${errors} ملاحظة يجب إصلاحها` : ""
+    }`,
+    {
+      status: "needs_review",
+      progress: 100,
+      step: "review",
+      output: { level, units: units.length, issues: issues.length },
+      model: modelName,
+      finished_at: new Date().toISOString(),
+    },
+  );
+}
 
 /** Asks for JSON, validates it with `check`, and retries once with the problems. */
 async function askJson<T>(

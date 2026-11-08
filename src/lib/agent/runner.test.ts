@@ -238,3 +238,69 @@ describe("runNextJob", () => {
     expect(String(last().error)).toContain("GEMINI_API_KEY");
   });
 });
+
+describe("plan_level", () => {
+  const playlist = Array.from({ length: 6 }, (_, i) => ({ youtube_id: `vid${i}abcdefg`.slice(0, 11), title: `Episode ${i + 1}` }));
+  const template = {
+    lessons: [{ template: "vocab" }],
+    objectives: [1, 3] as [number, number],
+    new_words: [3, 4] as [number, number],
+    review_words: [0, 2] as [number, number],
+    quiz: { min: 8, max: 10, pass_percent: 70 },
+  };
+  const frame = {
+    summary_ar: "يستطيع الطالب التعارف والحديث عن عائلته",
+    objectives: [
+      { code: "O01", text_ar: "أحيّي وأعرّف بنفسي" },
+      { code: "O02", text_ar: "أتحدث عن عائلتي" },
+      { code: "O03", text_ar: "أسأل عن المهن" },
+    ],
+    grammar: Array.from({ length: 6 }, (_, i) => ({ code: `G0${i + 1}`, text_en: "be", text_ar: "فعل الكون", example_en: "I am Hamza." })),
+  };
+  let n = 0;
+  const unitAnswer = (i: number) => ({
+    title_en: `Unit ${i}`,
+    title_ar: `الوحدة ${i}`,
+    stop_ar: `محطة ${i}`,
+    situation_ar: "موقف يومي في المكلا",
+    task_ar: "مهمة حقيقية في المكلا",
+    objectives: ["O01"],
+    grammar: [`G0${i}`],
+    words: ["a", "b", "c"].map((w) => ({ word: `${w}word${String.fromCharCode(96 + i)}`, pos: "noun", meaning_ar: "معنى", example_en: "An example." })),
+    review: [],
+  });
+
+  it("plans the frame, then units in batches that follow the playlist, and saves the map", async () => {
+    const { store, last } = fakeStore({ id: "j2", kind: "plan_level", path_id: "p1", input: { level_id: "l1" }, log: [] });
+    let saved: { map: { units: { code: string; source_video?: { youtube_id: string } | null }[] }; issues: unknown[] } | null = null;
+    store.levelContext = async () => ({
+      pathTitle: "الإنجليزية",
+      level: { id: "l1", code: "A1", title: "البداية", description: "", kind: "general", planned_units: 25 },
+      profile: { code: "A1", framework: "cefr", video_language: "ar", unit_template: "standard", source_playlist: "PLp22-4PivYmIFAnru_L7fnMhSV5YffLTZ" },
+      unitTemplate: template,
+      earlierWords: [],
+      earlierLevels: [],
+    });
+    store.saveLevelMap = async (_id, map, issues) => {
+      saved = { map, issues };
+    };
+    const prompts: string[] = [];
+    n = 0;
+    await runNextJob(
+      store,
+      async (req) => {
+        prompts.push(req.prompt);
+        if (req.prompt.startsWith("Plan the curriculum frame")) return { text: JSON.stringify(frame), model: "m", sources: [] };
+        const size = req.prompt.includes("units 6 of 6") || req.prompt.includes("units 6 of") ? 1 : 5;
+        const units = Array.from({ length: size }, () => unitAnswer(++n));
+        return { text: JSON.stringify({ units }), model: "m", sources: [] };
+      },
+      { search: async () => [], playlist: async () => playlist, validate: () => ({ ok: true, errors: [] }), schema: "", example: "" },
+    );
+    expect(String(last().error ?? "")).toBe("");
+    expect(prompts).toHaveLength(3);
+    expect(saved!.map.units.map((u) => u.code)).toEqual(["A1-01", "A1-02", "A1-03", "A1-04", "A1-05", "A1-06"]);
+    expect(saved!.map.units[2].source_video?.youtube_id).toBe(playlist[2].youtube_id);
+    expect(last()).toMatchObject({ status: "needs_review", progress: 100 });
+  });
+});

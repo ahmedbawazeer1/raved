@@ -68,11 +68,14 @@ export const lessonTemplateSpec = z
       keys.add(s.key);
     });
     if (!t.sections.some((s) => s.phase === "apply")) ctx.addIssue({ code: "custom", path: ["sections"], message: "الدرس يحتاج قسماً للتطبيق" });
+    // Owner decision (2026-11-08): every lesson has a mandatory video.
+    if (t.sections.filter((s) => s.block === "video").length !== 1)
+      ctx.addIssue({ code: "custom", path: ["sections"], message: "كل درس يحتاج قسم فيديو واحداً بالضبط" });
   });
 
 export const unitTemplateSpec = z.object({
   lessons: z
-    .array(z.object({ template: z.string().regex(TEMPLATE_KEY), when: z.enum(["always", "has_video"]).default("always") }))
+    .array(z.object({ template: z.string().regex(TEMPLATE_KEY) }))
     .min(2)
     .max(8),
   objectives: range,
@@ -106,18 +109,23 @@ export function missingLessonTemplates(unit: UnitTemplateSpec, lessonKeys: Itera
 }
 
 // ---------------------------------------------------------------------------------------------
-// The default templates (seeded by migration 20261108000200_content_factory.sql).
+// The default templates (seeded by migration 20261108000200_content_factory.sql; a test keeps them equal).
 // ---------------------------------------------------------------------------------------------
+
+/** The mandatory video section every lesson template has (chosen per lesson by the factory). */
+function watch(guide_en: string): TemplateSection {
+  return { key: "watch", title_ar: "شاهد", block: "video", source: "video", phase: "demonstrate", guide_en };
+}
 
 export const DEFAULT_TEMPLATES: TemplateRow[] = [
   {
     kind: "lesson",
     key: "vocab",
     title_ar: "درس مفردات",
-    description_ar: "يعرّف بكلمات الوحدة الجديدة في موقفها الحضرمي، ثم يثبّتها بالتمارين والألعاب.",
+    description_ar: "يعرّف بكلمات الوحدة في موقفها الحضرمي بفيديو وجدول وجمل، ثم يثبّتها بالتمارين والألعاب.",
     spec: {
       skill: "vocab",
-      est_minutes: 12,
+      est_minutes: 15,
       sections: [
         {
           key: "warmup",
@@ -128,6 +136,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           guide_en:
             "2–3 short Arabic lines that set the unit's Hadramout scene and ask the student what they already know or would say in it. No new English yet.",
         },
+        watch("A 2–8 minute part of a video that teaches or uses this lesson's new words, with 2–3 surprise questions about what was just said."),
         {
           key: "words",
           title_ar: "الكلمات",
@@ -170,10 +179,10 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
     kind: "lesson",
     key: "grammar",
     title_ar: "درس قاعدة",
-    description_ar: "يشرح قاعدة الوحدة بالعربية بأمثلة من الموقف، ثم تمارين ترتيب وإكمال.",
+    description_ar: "فيديو يشرح القاعدة، ثم شرح بالعربية بأمثلة من الموقف، وتمارين ترتيب وإكمال.",
     spec: {
       skill: "grammar",
-      est_minutes: 12,
+      est_minutes: 15,
       sections: [
         {
           key: "notice",
@@ -183,6 +192,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           phase: "activate",
           guide_en: "3–4 English sentences from the unit's situation that contain the grammar point (read aloud).",
         },
+        watch("A 2–8 minute part of a video that explains this grammar point, with 2–3 surprise questions."),
         {
           key: "rule",
           title_ar: "القاعدة",
@@ -190,7 +200,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           source: "model",
           phase: "demonstrate",
           guide_en:
-            "Explain the grammar point in simple Arabic (markdown): when we use it, the form, and the most common mistake of Arabic speakers. Use only the sentences above as examples.",
+            "Explain the grammar point in simple Arabic (markdown): when we use it, the form, and the most common mistake of Arabic speakers. Use the sentences above and from the video as examples.",
         },
         {
           key: "form",
@@ -226,10 +236,10 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
     kind: "lesson",
     key: "dialogue",
     title_ar: "درس حوار",
-    description_ar: "حوار قصير في الموقف بين شخصيات حضرمية، أسئلة فهم، ثم مهمة تحدث.",
+    description_ar: "مقطع محادثة، ثم حوار قصير في الموقف بين شخصيات حضرمية، أسئلة فهم، ومهمة تحدث.",
     spec: {
       skill: "listening",
-      est_minutes: 12,
+      est_minutes: 15,
       sections: [
         {
           key: "before",
@@ -239,6 +249,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           phase: "activate",
           guide_en: "One Arabic line: who is talking, where, and what to listen for.",
         },
+        watch("A 1–6 minute part of a video with a real conversation in a similar everyday situation, with 2–3 surprise questions."),
         {
           key: "dialogue",
           title_ar: "الحوار",
@@ -271,51 +282,14 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
   },
   {
     kind: "lesson",
-    key: "video",
-    title_ar: "درس فيديو",
-    description_ar: "يُستخدم فقط عندما تملك الوحدة فيديو مناسباً: مشاهدة إلزامية، شرح لما قيل، وتمارين عليه.",
-    spec: {
-      skill: "listening",
-      est_minutes: 15,
-      sections: [
-        {
-          key: "watch",
-          title_ar: "شاهد",
-          block: "video",
-          source: "video",
-          phase: "demonstrate",
-          guide_en: "The unit's video (or its part), with 2–3 surprise questions about what was just said.",
-        },
-        {
-          key: "explain",
-          title_ar: "افهم",
-          block: "text",
-          source: "model",
-          phase: "demonstrate",
-          guide_en: "Explain in simple Arabic what was said in the video, linking it to the unit's words and grammar.",
-        },
-        {
-          key: "practice",
-          title_ar: "تدرّب",
-          block: "exercise",
-          source: "code",
-          phase: "apply",
-          count: [3, 5],
-          kinds: ["mcq", "fill_blank", "order_words"],
-          guide_en: "Generated from the video's key sentences.",
-        },
-      ],
-    },
-  },
-  {
-    kind: "lesson",
     key: "review",
     title_ar: "درس مراجعة",
-    description_ar: "حلقة من قصة حمزة وريم تجمع الوحدة، تمارين مختلطة، ومهمة حقيقية.",
+    description_ar: "مقطع مراجعة، حلقة من قصة حمزة وريم تجمع الوحدة، تمارين مختلطة، ومهمة حقيقية.",
     spec: {
       skill: "review",
-      est_minutes: 15,
+      est_minutes: 18,
       sections: [
+        watch("A 2–8 minute part of a video that reviews the unit's language, or an authentic scene in a similar situation, with 2–3 surprise questions."),
         {
           key: "story",
           title_ar: "رحلة حمزة وريم",
@@ -359,15 +333,9 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
     kind: "unit",
     key: "standard",
     title_ar: "الوحدة القياسية",
-    description_ar: "مفردات ← قاعدة ← حوار ← فيديو (إن وُجد) ← مراجعة، ثم اختبار الوحدة.",
+    description_ar: "مفردات ← قاعدة ← حوار ← مراجعة، كل درس بفيديو، ثم اختبار الوحدة.",
     spec: {
-      lessons: [
-        { template: "vocab", when: "always" },
-        { template: "grammar", when: "always" },
-        { template: "dialogue", when: "always" },
-        { template: "video", when: "has_video" },
-        { template: "review", when: "always" },
-      ],
+      lessons: [{ template: "vocab" }, { template: "grammar" }, { template: "dialogue" }, { template: "review" }],
       objectives: [2, 4],
       new_words: [8, 12],
       review_words: [2, 4],

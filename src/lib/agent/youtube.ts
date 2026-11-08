@@ -98,3 +98,37 @@ export async function searchYouTube(query: string, opts: { apiKey?: string; max?
     }))
     .filter((v) => v.durationSec >= minSec && v.durationSec <= maxSec);
 }
+
+interface PlaylistResponse {
+  nextPageToken?: string;
+  items?: { snippet?: { title?: string; position?: number; resourceId?: { videoId?: string } } }[];
+}
+
+/** The videos of a playlist in order (playlistItems costs 1 unit per page of 50, not 100 like a search). */
+export async function playlistVideos(playlistId: string, max = 60): Promise<{ youtube_id: string; title: string }[]> {
+  const key = process.env.YOUTUBE_API_KEY?.trim();
+  if (!key) throw new YouTubeError("config", "YOUTUBE_API_KEY is not set");
+  const out: { youtube_id: string; title: string }[] = [];
+  let page = "";
+  for (let i = 0; i < 3 && out.length < max; i++) {
+    const url = new URL("https://www.googleapis.com/youtube/v3/playlistItems");
+    url.search = new URLSearchParams({ part: "snippet", maxResults: "50", playlistId, key, ...(page ? { pageToken: page } : {}) }).toString();
+    let res: Response;
+    try {
+      res = await fetch(url);
+    } catch (e) {
+      throw new YouTubeError("network", `YouTube playlist: ${e instanceof Error ? e.message : String(e)}`);
+    }
+    if (!res.ok) throw await youtubeError(res, "playlist");
+    const body = (await res.json()) as PlaylistResponse;
+    for (const item of body.items ?? []) {
+      const id = item.snippet?.resourceId?.videoId;
+      const title = item.snippet?.title ?? "";
+      // Deleted or private videos stay in playlists with these titles: skip them.
+      if (id && /^[A-Za-z0-9_-]{11}$/.test(id) && !/^(Deleted|Private) video$/.test(title)) out.push({ youtube_id: id, title });
+    }
+    if (!body.nextPageToken) break;
+    page = body.nextPageToken;
+  }
+  return out.slice(0, max);
+}

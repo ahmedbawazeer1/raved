@@ -18,6 +18,7 @@ export function isStep1Complete(profile: RoutingProfile): boolean {
 export function homePathFor(profile: RoutingProfile | null, application: RoutingApplication | null): string {
   if (!profile) return "/apply";
   if (profile.role === "admin") return "/admin";
+  if (profile.role === "teacher" && profile.status !== "suspended") return "/studio";
   if (profile.status === "suspended") return "/apply/status";
   if (profile.status === "active") return "/student";
   if (!application || application.status === "draft") {
