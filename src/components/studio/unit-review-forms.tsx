@@ -1,7 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { Alert, Field, Input, Textarea } from "@/components/ui/form";
+import { Button } from "@/components/ui/button";
 import { SubmitButton } from "@/components/ui/submit-button";
 import type { AdminFormState } from "@/app/(admin)/admin/actions";
 import { publishBuiltUnit, rebuildLesson, rejectBuiltUnit, saveSection } from "@/app/(studio)/studio/units/actions";
@@ -105,15 +106,27 @@ export function RebuildLessonForm({
   );
 }
 
+/** Publishing asks once more: the unit reaches every student of the level at once. */
 export function PublishUnitForm({ unitId, disabled }: { unitId: string; disabled: boolean }) {
   const [state, action] = useActionState<AdminFormState, FormData>(publishBuiltUnit, {});
+  const [sure, setSure] = useState(false);
   return (
-    <form action={action} className="flex flex-col gap-2">
+    <form action={action} className="flex flex-wrap items-center gap-2">
       <input type="hidden" name="unit_id" value={unitId} />
       <Status state={state} />
-      <SubmitButton className="self-start" disabled={disabled} pendingLabel="جارٍ النشر…">
-        انشر الوحدة للطلاب
-      </SubmitButton>
+      {!sure ? (
+        <Button type="button" disabled={disabled} onClick={() => setSure(true)}>
+          انشر الوحدة للطلاب
+        </Button>
+      ) : (
+        <>
+          <span className="text-sm font-semibold">تظهر لكل طلاب المستوى فوراً. متأكد؟</span>
+          <SubmitButton pendingLabel="جارٍ النشر…">نعم، انشر</SubmitButton>
+          <Button type="button" variant="secondary" onClick={() => setSure(false)}>
+            إلغاء
+          </Button>
+        </>
+      )}
     </form>
   );
 }

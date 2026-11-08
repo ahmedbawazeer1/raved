@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Eye } from "lucide-react";
+import { PageHead, Panel } from "@/components/console/ui";
+import { BlockFlow } from "@/components/studio/block-chip";
 import { LessonTemplateEditor, UnitTemplateEditor } from "@/components/studio/template-editor";
 import { requireStaff } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
@@ -25,15 +27,18 @@ export default async function TemplatePage({ params }: PageProps<"/studio/templa
   const unit = kind === "unit" ? unitTemplateSpec.safeParse(row.spec) : null;
 
   return (
-    <div className="mx-auto flex max-w-4xl flex-col gap-6">
-      <header className="flex flex-col gap-1">
-        <p className="text-sm text-muted-foreground">
-          <Link href="/studio/templates">القوالب</Link> ← {row.title_ar}
-        </p>
-        <h1 className="text-2xl font-bold">{row.title_ar}</h1>
-        <p className="text-sm text-muted-foreground">النسخة {row.version}. يطبَّق التعديل على الوحدات التي تُبنى بعد الحفظ فقط.</p>
-      </header>
-      <Card className="p-5">
+    <div className="mx-auto flex max-w-4xl flex-col gap-5">
+      <PageHead
+        crumbs={[{ label: "القوالب", href: "/studio/templates" }]}
+        title={row.title_ar}
+        sub={`النسخة ${row.version}. يطبَّق التعديل على الوحدات التي تُبنى بعد الحفظ فقط.`}
+      />
+      {lesson?.success && (
+        <Panel title="شكل الدرس" icon={Eye}>
+          <BlockFlow sections={lesson.data.sections} />
+        </Panel>
+      )}
+      <Card className="rounded-[18px] p-5">
         {lesson?.success && (
           <LessonTemplateEditor templateKey={key} title={row.title_ar} description={row.description_ar} spec={lesson.data} readOnly={!isAdmin} />
         )}

@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Badge } from "@/components/ui/badge";
-import { Card } from "@/components/ui/card";
+import { AlertTriangle, LineChart, Swords, ThumbsDown, WandSparkles } from "lucide-react";
+import { Empty, IconTile, Kpi, PageHead, Panel } from "@/components/console/ui";
 import { ImproveUnitForm } from "@/components/studio/improve-form";
 import { requireStaff } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
 import { improvementNote, ITEM_FLAG_AR, type ItemStat } from "@/lib/agent/improve";
+import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "التحسين" };
+export const metadata: Metadata = { title: "نتائج الوحدات" };
 
 export default async function InsightsPage() {
   const { isAdmin } = await requireStaff();
@@ -19,73 +20,128 @@ export default async function InsightsPage() {
   const unitOf = new Map((units ?? []).map((u) => [u.id, u]));
 
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-6">
-      <header className="flex flex-col gap-1">
-        <h1 className="text-2xl font-bold">التحسين الأسبوعي</h1>
-        <p className="max-w-3xl text-muted-foreground">
-          كل جمعة يحلل النظام إجابات الطلاب في اختبارات الوحدات وتقييمهم للدروس، بلا أسماء. لكل سؤال: نسبة من أجاب صح، وهل يميّز بين من فهم ومن لم يفهم. يظهر
-          هنا ما يحتاج تحسيناً، ويمكن إرسال الوحدة للمصنع ليعيد بناءها بهذه الملاحظات.
-        </p>
-      </header>
+    <div className="flex flex-col gap-5">
+      <PageHead
+        title="نتائج الوحدات والتحسين"
+        sub="كل جمعة يحلل النظام إجابات الطلاب وتقييمهم للدروس، بلا أسماء: نسبة من أجاب صح عن كل سؤال، وهل يميّز بين من فهم ومن لم يفهم."
+      />
       {!rows?.length ? (
-        <Card className="p-5 text-muted-foreground">لا توجد نتائج بعد. تظهر بعد أن يدرس الطلاب الوحدات المنشورة ويحلوا اختباراتها.</Card>
+        <Panel>
+          <Empty icon={LineChart} tone="gold" title="لا نتائج بعد">
+            تظهر نتائج كل وحدة بعد أن يدرسها الطلاب ويحلوا اختبارها.
+          </Empty>
+        </Panel>
       ) : (
         rows.map((r) => {
           const u = unitOf.get(r.unit_id);
           const items = (Array.isArray(r.items) ? r.items : []) as unknown as ItemStat[];
           const lessons = (Array.isArray(r.lessons) ? r.lessons : []) as unknown as { lesson: string; share: number; votes: number }[];
-          const flagged = items.filter((i) => i.flag);
           const note = improvementNote(items, lessons);
+          const pass = Math.round(Number(r.pass_rate) * 100);
           return (
-            <Card key={r.unit_id} className="flex flex-col gap-3 p-5">
-              <div className="flex flex-wrap items-center gap-3">
-                <h2 className="text-lg font-semibold" dir="ltr">
+            <section key={r.unit_id} className="flex flex-col gap-4">
+              <h2 className="flex flex-wrap items-center gap-2 text-lg font-bold">
+                <span dir="ltr" className="font-en">
                   {u?.code} · {u?.title}
-                </h2>
-                <Badge tone={r.flagged ? "warning" : "success"}>{r.flagged ? `${r.flagged} ملاحظة` : "لا ملاحظات"}</Badge>
-                <span className="text-sm text-muted-foreground tabular-nums">
-                  {r.attempts} محاولة · النجاح {Math.round(Number(r.pass_rate) * 100)}%
                 </span>
+                <span
+                  className={cn(
+                    "rounded-full px-2.5 py-0.5 text-[13px] font-semibold",
+                    r.flagged ? "bg-warning-tint text-warning" : "bg-success-tint text-success",
+                  )}
+                >
+                  {r.flagged ? `${r.flagged} تحتاج انتباهك` : "لا ملاحظات"}
+                </span>
+              </h2>
+              <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
+                <Kpi label="محاولات الاختبار" value={r.attempts} />
+                <Kpi label="نجحوا" value={`${pass}%`} />
+                <Kpi label="آخر تحليل" value={new Date(r.computed_at).toLocaleDateString("ar", { day: "numeric", month: "short" })} />
               </div>
-              {flagged.length > 0 && (
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="text-muted-foreground">
-                        <th className="py-1 text-start font-semibold">السؤال</th>
-                        <th className="px-2 text-center font-semibold">أجاب صح</th>
-                        <th className="px-2 text-center font-semibold">التمييز</th>
-                        <th className="py-1 text-start font-semibold">المشكلة</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {flagged.map((i) => (
-                        <tr key={i.id} className="border-t border-border">
-                          <td className="py-2" dir="ltr">
+
+              {items.length > 0 && (
+                <Panel title="أسئلة الاختبار" icon={Swords} action={<span className="text-xs text-muted-foreground">الأصفر يحتاج انتباهك</span>}>
+                  <ol className="flex flex-col">
+                    {items.map((i, k) => (
+                      <li
+                        key={i.id}
+                        className="grid grid-cols-[34px_1fr] items-center gap-3 border-b border-dashed border-border py-3 last:border-b-0 md:grid-cols-[34px_1fr_170px]"
+                      >
+                        <span
+                          className={cn(
+                            "flex size-[34px] items-center justify-center rounded-xl font-en font-bold",
+                            i.flag ? "bg-warning-tint text-warning" : "bg-muted",
+                          )}
+                        >
+                          {k + 1}
+                        </span>
+                        <div className="min-w-0">
+                          <b dir="ltr" className="block text-start font-en text-sm">
                             {i.prompt}
-                          </td>
-                          <td className="px-2 text-center tabular-nums">{Math.round(i.p * 100)}%</td>
-                          <td className={`px-2 text-center tabular-nums ${i.discrimination < 0 ? "font-bold text-destructive" : ""}`}>{i.discrimination}</td>
-                          <td className="py-2">{ITEM_FLAG_AR[i.flag!]}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-              {lessons.some((l) => l.votes >= 5 && l.share >= 0.3) && (
-                <ul className="text-sm">
-                  {lessons
-                    .filter((l) => l.votes >= 5 && l.share >= 0.3)
-                    .map((l) => (
-                      <li key={l.lesson}>
-                        «{l.lesson}»: {Math.round(l.share * 100)}% من {l.votes} طالباً قيّموه «غير مفيد»
+                          </b>
+                          {i.flag && (
+                            <p className="mt-1.5 flex gap-1.5 rounded-xl bg-warning-tint px-2.5 py-1.5 text-[13px] text-warning">
+                              <AlertTriangle className="mt-0.5 size-4 flex-none" aria-hidden="true" />
+                              {ITEM_FLAG_AR[i.flag]}
+                            </p>
+                          )}
+                        </div>
+                        <div className="col-start-2 flex flex-col gap-1 text-xs text-muted-foreground md:col-start-auto">
+                          <span>
+                            أجابوا صح: <b className="font-en text-foreground">{Math.round(i.p * 100)}%</b>
+                          </span>
+                          <span className="h-1.5 overflow-hidden rounded-full bg-muted">
+                            <span
+                              className={cn("block h-full rounded-full", i.p < 0.5 ? "bg-destructive" : "bg-success")}
+                              style={{ width: `${Math.round(i.p * 100)}%` }}
+                            />
+                          </span>
+                          <span>
+                            يميّز: <b className={cn("font-en", i.discrimination < 0.15 ? "text-destructive" : "text-foreground")}>{i.discrimination}</b>
+                            {i.discrimination < 0.15 ? " (ضعيف)" : ""}
+                          </span>
+                        </div>
                       </li>
                     ))}
-                </ul>
+                  </ol>
+                </Panel>
               )}
-              {isAdmin && note && <ImproveUnitForm unitId={r.unit_id} note={note} />}
-            </Card>
+
+              {lessons.length > 0 && (
+                <Panel title="رأي الطلاب في الدروس" icon={ThumbsDown}>
+                  <ul className="flex flex-col gap-2">
+                    {lessons.map((l) => {
+                      const bad = l.votes >= 5 && l.share >= 0.3;
+                      return (
+                        <li key={l.lesson} className="grid grid-cols-[minmax(0,140px)_1fr_auto] items-center gap-3 text-sm">
+                          <b className="truncate">{l.lesson}</b>
+                          <span className="h-2 overflow-hidden rounded-full bg-muted">
+                            <span
+                              className={cn("block h-full rounded-full", bad ? "bg-accent" : "bg-success")}
+                              style={{ width: `${Math.round((1 - l.share) * 100)}%` }}
+                            />
+                          </span>
+                          <span className={cn("text-xs", bad ? "font-semibold text-warning" : "text-muted-foreground")}>
+                            {Math.round(l.share * 100)}٪ «غير مفيد» من {l.votes}
+                          </span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </Panel>
+              )}
+
+              {isAdmin && note && (
+                <Panel className="flex flex-wrap items-center gap-3 bg-ai-tint">
+                  <IconTile icon={WandSparkles} tone="ai" />
+                  <div className="min-w-[220px] flex-1">
+                    <b>أرسلها للمصنع ليحسّنها</b>
+                    <p className="text-sm whitespace-pre-line text-muted-foreground">{note}</p>
+                  </div>
+                  <ImproveUnitForm unitId={r.unit_id} note={note} />
+                </Panel>
+              )}
+            </section>
           );
         })
       )}

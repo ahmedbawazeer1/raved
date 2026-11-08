@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Plus } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, Check, Code2, Eye, EyeOff, Languages, LayoutTemplate, LineChart, Plus, Sparkles, MonitorPlay } from "lucide-react";
+import { IconTile, PageHead } from "@/components/console/ui";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { requireStaff } from "@/lib/auth/session";
 import { createClient } from "@/lib/supabase/server";
-import { LANGUAGE_LABELS, parseProfile } from "@/lib/factory/profile";
-import { MAP_STATUS } from "@/lib/factory/labels";
+import { parseProfile } from "@/lib/factory/profile";
 
 export const metadata: Metadata = { title: "المسارات والمناهج" };
 
 const STEPS = [
-  { n: 1, title: "المسار ومستوياته", text: "أنشئ المسار وأضف مستوياته، ولكل مستوى لغة فيديو وقالب." },
-  { n: 2, title: "خريطة كل مستوى", text: "«عقل رفد» يخطط الوحدات بأهدافها وكلماتها. المعلم يراجع وأنت تعتمد." },
-  { n: 3, title: "الوحدات واحدة واحدة", text: "المصنع يبني كل وحدة بفيديوهاتها وتمارينها. تراجعها وتنشرها." },
-  { n: 4, title: "التحسين", text: "كل أسبوع تظهر الأسئلة والدروس التي تحتاج تحسيناً من نتائج الطلاب." },
+  { n: 1, title: "ملف المسار", text: "المستويات، لغة الفيديو، القوالب" },
+  { n: 2, title: "خريطة كل مستوى", text: "يرسمها «عقل رفد» وتعتمدها" },
+  { n: 3, title: "الوحدات بالترتيب", text: "يبنيها المصنع وتراجعها" },
+  { n: 4, title: "التحسين الأسبوعي", text: "من نتائج الطلاب" },
 ];
+const COVERS = ["from-[#0E6E5C] via-[#13866f] to-[#c98a1d]", "from-[#1D63C9] to-[#6941C6]", "from-[#8A5A00] to-[#B42318]", "from-[#087443] to-[#1D63C9]"];
 
 interface Next {
   label: string;
@@ -56,13 +56,16 @@ export default async function StudioHome({ searchParams }: PageProps<"/studio">)
     return null;
   }
 
+  const totalPub = (paths ?? []).reduce(
+    (n, p) => n + (p.levels ?? []).reduce((m, l) => m + unitsOf(l.id).filter((u) => u.build_status === "approved").length, 0),
+    0,
+  );
+  const anyMap = (maps ?? []).some((m) => m.status !== "draft");
+  const stage = totalPub > 0 ? 4 : anyMap ? 3 : (paths ?? []).length ? 2 : 1;
+
   return (
-    <div className="mx-auto flex max-w-5xl flex-col gap-6">
-      <header className="flex flex-wrap items-start justify-between gap-3">
-        <div className="flex flex-col gap-1">
-          <h1 className="text-2xl font-bold">المسارات والمناهج</h1>
-          <p className="max-w-2xl text-muted-foreground">هنا يُبنى كل مسار بنفس الخطوات. كل مسار يظهر معه «الخطوة التالية»: اضغطها لتكمل.</p>
-        </div>
+    <div className="flex flex-col gap-5">
+      <PageHead title="الاستوديو" sub="كل مسار بطاقة: تقدّمه، مستوياته، والخطوة التالية.">
         {isAdmin && (
           <Button asChild>
             <Link href="/studio/paths/new" className="no-underline">
@@ -70,92 +73,177 @@ export default async function StudioHome({ searchParams }: PageProps<"/studio">)
             </Link>
           </Button>
         )}
-      </header>
+      </PageHead>
 
       {deleted && <p className="rounded-xl bg-success-tint px-4 py-3 text-sm font-semibold text-success">حُذف المسار.</p>}
 
-      <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {STEPS.map((s) => (
-          <li key={s.n} className="flex flex-col gap-1 rounded-2xl border border-border bg-card p-4">
-            <span className="flex size-8 items-center justify-center rounded-full bg-primary-tint text-sm font-bold text-primary">{s.n}</span>
-            <b>{s.title}</b>
-            <span className="text-sm text-muted-foreground">{s.text}</span>
-          </li>
-        ))}
+      <ol className="grid grid-cols-2 gap-2 lg:grid-cols-4">
+        {STEPS.map((st) => {
+          const done = st.n < stage;
+          const now = st.n === stage;
+          return (
+            <li
+              key={st.n}
+              className={cn(
+                "flex items-center gap-2.5 rounded-2xl border bg-card p-3",
+                now ? "border-accent shadow-[0_0_0_3px_var(--color-warning-tint)]" : "border-border",
+              )}
+            >
+              <span
+                className={cn(
+                  "flex size-8 flex-none items-center justify-center rounded-xl font-en text-sm font-bold",
+                  done ? "bg-success-tint text-success" : now ? "bg-accent text-accent-foreground" : "bg-muted text-muted-foreground",
+                )}
+              >
+                {done ? <Check className="size-4" aria-hidden="true" /> : st.n}
+              </span>
+              <span className="min-w-0">
+                <b className="block text-sm">{st.title}</b>
+                <span className="text-xs text-muted-foreground">{st.text}</span>
+              </span>
+            </li>
+          );
+        })}
       </ol>
 
-      {(paths ?? []).map((p) => {
-        const profile = profileOf.get(p.id);
-        const levels = [...(p.levels ?? [])].sort((a, b) => a.position - b.position);
-        const next = nextStep({ slug: p.slug, levels });
-        const published = levels.reduce((n, l) => n + unitsOf(l.id).filter((u) => u.build_status === "approved").length, 0);
-        const approvedMaps = levels.filter((l) => mapOf.get(l.id)?.status === "approved").length;
-        return (
-          <Card key={p.id} className="flex flex-col gap-4 p-5">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex flex-wrap items-center gap-2">
-                <h2 className="text-xl font-semibold">{p.title}</h2>
-                <Badge tone={p.status === "published" ? "success" : p.status === "soon" ? "warning" : "muted"}>
-                  {p.status === "published" ? "ظاهر للطلاب" : p.status === "soon" ? "«قريباً» للطلاب" : "مخفي عن الطلاب"}
-                </Badge>
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {(paths ?? []).map((p, idx) => {
+          const profile = profileOf.get(p.id);
+          const levels = [...(p.levels ?? [])].sort((a, b) => a.position - b.position);
+          const next = nextStep({ slug: p.slug, levels });
+          const all = levels.flatMap((l) => unitsOf(l.id));
+          const published = all.filter((u) => u.build_status === "approved").length;
+          const pct = all.length ? Math.round((published / all.length) * 100) : 0;
+          const approvedMaps = levels.filter((l) => mapOf.get(l.id)?.status === "approved").length;
+          const english = p.slug === "english";
+          return (
+            <article
+              key={p.id}
+              className="flex flex-col overflow-hidden rounded-[18px] border border-border bg-card shadow-[0_1px_2px_rgba(18,32,29,.05),0_6px_18px_-8px_rgba(18,32,29,.12)]"
+            >
+              <div className={cn("flex h-24 items-start justify-between bg-gradient-to-l p-4 text-white", COVERS[idx % COVERS.length])}>
+                <span className="flex size-11 items-center justify-center rounded-2xl bg-white/20">
+                  {english ? <Languages className="size-6" aria-hidden="true" /> : <Code2 className="size-6" aria-hidden="true" />}
+                </span>
+                <span
+                  className="flex size-12 items-center justify-center rounded-full"
+                  style={{ background: `conic-gradient(#fff ${pct}%, rgba(255,255,255,.28) 0)` }}
+                  role="img"
+                  aria-label={`${pct}% من الوحدات منشورة`}
+                >
+                  <span className="flex size-[38px] items-center justify-center rounded-full bg-black/20 font-en text-xs font-bold">{pct}%</span>
+                </span>
               </div>
-              <Link href={`/studio/paths/${p.slug}`} className="text-sm font-semibold">
-                إعدادات المسار ومستوياته ←
-              </Link>
-            </div>
-            <p className="text-sm text-muted-foreground tabular-nums">
-              {levels.length} مستويات · {approvedMaps} خرائط معتمدة · {published} وحدة منشورة
-            </p>
-            {next ? (
-              <Link
-                href={next.href}
-                className="flex min-h-12 items-center justify-between gap-2 rounded-xl bg-primary-tint px-4 font-semibold text-primary no-underline hover:bg-primary hover:text-white"
-              >
-                <span>الخطوة التالية: {next.label}</span>
-                <span aria-hidden="true">←</span>
-              </Link>
-            ) : (
-              <p className="rounded-xl bg-success-tint px-4 py-3 text-sm font-semibold text-success">كل وحدات هذا المسار منشورة.</p>
-            )}
-            {levels.length > 0 && (
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-border text-muted-foreground">
-                      <th className="py-2 text-start font-semibold">المستوى</th>
-                      <th className="py-2 text-start font-semibold">لغة الفيديو</th>
-                      <th className="py-2 text-start font-semibold">الخريطة</th>
-                      <th className="py-2 text-start font-semibold">الوحدات المنشورة</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+              <div className="flex flex-1 flex-col gap-3 p-4">
+                <div>
+                  <h2 className="text-[17px] font-bold">{p.title}</h2>
+                  <span
+                    className={cn(
+                      "mt-1.5 inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-[13px] font-semibold",
+                      p.status === "published"
+                        ? "bg-success-tint text-success"
+                        : p.status === "soon"
+                          ? "bg-warning-tint text-warning"
+                          : "bg-muted text-muted-foreground",
+                    )}
+                  >
+                    {p.status === "published" ? <Eye className="size-3.5" aria-hidden="true" /> : <EyeOff className="size-3.5" aria-hidden="true" />}
+                    {p.status === "published" ? "ظاهر للطلاب" : p.status === "soon" ? "«قريباً» للطلاب" : "مسودة · مخفي عن الطلاب"}
+                  </span>
+                </div>
+                {levels.length > 0 && (
+                  <ul className="flex flex-wrap gap-1.5" aria-label="المستويات">
                     {levels.map((l) => {
                       const m = mapOf.get(l.id);
-                      const st = MAP_STATUS[m?.status ?? "none"];
-                      const lp = profile?.levels.find((x) => x.code === l.code);
                       const us = unitsOf(l.id);
+                      const dot =
+                        us.length && us.every((u) => u.build_status === "approved")
+                          ? "bg-success"
+                          : m?.status === "approved"
+                            ? "bg-accent"
+                            : m?.status === "review" || m?.status === "planning"
+                              ? "bg-ai"
+                              : "bg-border";
                       return (
-                        <tr key={l.id} className="border-b border-border last:border-0">
-                          <td className="py-3">
-                            <Link href={`/studio/levels/${l.id}`} className="font-semibold">
-                              <span dir="ltr">{l.code}</span> · {l.title}
-                            </Link>
-                          </td>
-                          <td className="py-3">{lp ? LANGUAGE_LABELS[lp.video_language] : <span className="text-warning">لم تُضبط</span>}</td>
-                          <td className="py-3">
-                            <Badge tone={st.tone}>{st.label}</Badge>
-                          </td>
-                          <td className="py-3 tabular-nums">{us.length ? `${us.filter((u) => u.build_status === "approved").length} من ${us.length}` : "—"}</td>
-                        </tr>
+                        <li key={l.id}>
+                          <Link
+                            href={`/studio/levels/${l.id}`}
+                            className="inline-flex min-h-8 items-center gap-1.5 rounded-xl border border-border px-2.5 text-[13px] font-semibold text-foreground no-underline hover:border-primary hover:text-foreground"
+                          >
+                            <span className={cn("size-2 rounded-full", dot)} aria-hidden="true" />
+                            <span dir="ltr">{l.code}</span>
+                            {profile?.levels.find((x) => x.code === l.code)?.video_language === "ar" ? (
+                              <span className="text-[11px] text-muted-foreground">عربي</span>
+                            ) : null}
+                          </Link>
+                        </li>
                       );
                     })}
-                  </tbody>
-                </table>
+                  </ul>
+                )}
+                <p className="text-[13px] text-muted-foreground">
+                  {levels.length} مستويات · {approvedMaps} خرائط معتمدة · {published} من {all.length || "—"} وحدة منشورة
+                </p>
+                <div className="mt-auto flex flex-col gap-2">
+                  {next ? (
+                    <Link
+                      href={next.href}
+                      className="flex min-h-12 items-center gap-2 rounded-xl bg-primary-tint px-3 font-bold text-primary no-underline hover:bg-primary hover:text-white"
+                    >
+                      <Sparkles className="size-4 flex-none" aria-hidden="true" />
+                      <span className="flex-1">{next.label}</span>
+                      <ArrowLeft className="size-4" aria-hidden="true" />
+                    </Link>
+                  ) : (
+                    <p className="rounded-xl bg-success-tint px-3 py-3 text-sm font-semibold text-success">كل وحدات هذا المسار منشورة.</p>
+                  )}
+                  <Link href={`/studio/paths/${p.slug}`} className="text-sm font-semibold">
+                    ملف المسار ومستوياته ←
+                  </Link>
+                </div>
               </div>
-            )}
-          </Card>
-        );
-      })}
+            </article>
+          );
+        })}
+        {isAdmin && (
+          <Link
+            href="/studio/paths/new"
+            className="flex min-h-[260px] flex-col items-center justify-center gap-2 rounded-[18px] border-2 border-dashed border-border bg-card p-6 text-center text-foreground no-underline hover:border-primary hover:text-foreground"
+          >
+            <IconTile icon={Plus} tone="green" size="lg" />
+            <b>مسار جديد</b>
+            <span className="max-w-[240px] text-sm text-muted-foreground">
+              تحليل البيانات؟ التصميم الرقمي؟ أضف المسار ومستوياته، ثم يرسم «عقل رفد» الخرائط.
+            </span>
+          </Link>
+        )}
+      </div>
+
+      <div className="grid gap-3 md:grid-cols-3">
+        {[
+          { href: "/studio/templates", icon: LayoutTemplate, tone: "ai" as const, title: "قوالب الدروس", sub: "ترتيب أقسام كل درس" },
+          {
+            href: "/studio/paths/english#sources",
+            icon: MonitorPlay,
+            tone: "red" as const,
+            title: "مصادر الفيديو الموثوقة",
+            sub: "قوائم وقنوات يبحث فيها المصنع أولاً",
+          },
+          { href: "/studio/insights", icon: LineChart, tone: "gold" as const, title: "نتائج الوحدات والتحسين", sub: "من نتائج الطلاب كل أسبوع" },
+        ].map((c) => (
+          <Link
+            key={c.href}
+            href={c.href}
+            className="flex items-center gap-3 rounded-[18px] border border-border bg-card p-4 text-foreground no-underline hover:border-primary hover:text-foreground"
+          >
+            <IconTile icon={c.icon} tone={c.tone} />
+            <span>
+              <b className="block">{c.title}</b>
+              <span className="text-[13px] text-muted-foreground">{c.sub}</span>
+            </span>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ import { levelProfile, parseProfile } from "../../src/lib/factory/profile";
 import { DEFAULT_TEMPLATES, lessonTemplateSpec, unitTemplateSpec, type LessonTemplateSpec } from "../../src/lib/factory/templates";
 import { mapToRows, rowsToMap } from "../../src/lib/factory/rows";
 import { validateUnitPackage } from "../../src/lib/content/validate";
+import { queueNextUnitWith } from "../../src/lib/factory/next-unit";
 
 const MAX_JOBS = 3;
 
@@ -208,6 +209,10 @@ async function main() {
     async setBuildStatus(curriculumUnitId, status, jobId) {
       const { error } = await db.from("curriculum_units").update({ build_status: status, build_job_id: jobId }).eq("id", curriculumUnitId);
       if (error) throw error;
+    },
+    async queueNext(curriculumUnitId) {
+      const { data } = await db.from("curriculum_units").select("level_id").eq("id", curriculumUnitId).maybeSingle();
+      if (data?.level_id) await queueNextUnitWith(db as unknown as Parameters<typeof queueNextUnitWith>[0], data.level_id);
     },
     async memory(pathId) {
       const { data } = await db

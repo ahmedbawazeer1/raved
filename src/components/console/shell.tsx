@@ -12,6 +12,7 @@ const PAGES_ADMIN = [
   { label: "الطلاب", href: "/admin/students" },
   { label: "المعلمون", href: "/admin/teachers" },
   { label: "الاستوديو", href: "/studio" },
+  { label: "خط الإنتاج", href: "/studio/line" },
   { label: "القوالب", href: "/studio/templates" },
   { label: "نتائج الوحدات", href: "/studio/insights" },
   { label: "عقل رفد", href: "/admin/agent" },

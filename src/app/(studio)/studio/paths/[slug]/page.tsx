@@ -109,7 +109,7 @@ export default async function PathProfilePage({ params, searchParams }: PageProp
         )}
       </Card>
 
-      <Card className="flex flex-col gap-4 p-5">
+      <Card id="sources" className="flex scroll-mt-20 flex-col gap-4 p-5">
         <div>
           <h2 className="text-lg font-semibold">مصادر الفيديو الموثوقة</h2>
           <p className="text-sm text-muted-foreground">يبحث المصنع فيها بهذا الترتيب لكل درس، ولا يلجأ للبحث العام إلا إذا لم يجد فيها فيديو مناسباً.</p>

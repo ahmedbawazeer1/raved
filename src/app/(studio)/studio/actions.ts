@@ -457,3 +457,19 @@ export async function deletePath(_prev: AdminFormState, formData: FormData): Pro
   revalidatePath("/", "layout");
   redirect("/studio?deleted=1");
 }
+
+// ---------------------------------------------------------------------------
+// Production line
+// ---------------------------------------------------------------------------
+
+/** «البناء للأمام»: while one unit waits for review, the factory builds the next (on by default). */
+export async function setBuildAhead(formData: FormData): Promise<void> {
+  const { userId } = await requireAdmin();
+  const on = formData.get("on") === "1";
+  const levelId = uuid.safeParse(formData.get("level_id"));
+  const supabase = await createClient();
+  await supabase.from("settings").upsert({ key: "factory_build_ahead", value: on });
+  await supabase.from("audit_log").insert({ actor_id: userId, action: "settings.factory_build_ahead", target: null, data: { on } });
+  if (on && levelId.success) await queueNextUnit(supabase, levelId.data);
+  revalidatePath("/studio", "layout");
+}
