@@ -55,10 +55,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - run: npm ci
       - name: Generate the native Android project
-        run: npx expo prebuild --platform android --no-install
+        run: |
+          export RAVED_VERSION_CODE=$((100 + ${{ github.run_number }}))
+          npx expo prebuild --platform android --no-install
         env:
           CI: "1"
-          RAVED_VERSION_CODE: ${{ 100 + github.run_number }}
       - name: Signing key
         env:
           KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
