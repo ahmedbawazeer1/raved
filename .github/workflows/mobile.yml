@@ -1,0 +1,77 @@
+name: Mobile app
+
+# The React Native app (mobile/). Checks every change to mobile/ or shared/, and builds an installable
+# APK (artifact "raved-mobile") to try on a phone. Store releases come later (docs/ARCHITECTURE.md §3).
+on:
+  push:
+    branches: [main]
+    paths: ["mobile/**", "shared/**", ".github/workflows/mobile.yml"]
+  pull_request:
+    paths: ["mobile/**", "shared/**", ".github/workflows/mobile.yml"]
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - name: Android bundle builds
+        run: npx expo export --platform android --output-dir dist
+
+  apk:
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: mobile
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mobile/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - uses: gradle/actions/setup-gradle@v4
+      - run: npm ci
+      - name: Generate the native Android project
+        run: npx expo prebuild --platform android --no-install
+        env:
+          CI: "1"
+      - name: Signing key
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | tr -d ' \n\r' | base64 -d > "$RUNNER_TEMP/raved.jks"
+            echo "RAVED_KEYSTORE_FILE=$RUNNER_TEMP/raved.jks" >> "$GITHUB_ENV"
+          else
+            echo "::warning::ANDROID_KEYSTORE_B64 is not set: the APK is signed with a debug key."
+          fi
+      - name: Build the APK
+        working-directory: mobile/android
+        env:
+          RAVED_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: ./gradlew --no-daemon assembleRelease -PreactNativeArchitectures=arm64-v8a,armeabi-v7a
+      - run: cp android/app/build/outputs/apk/release/app-release.apk raved-mobile.apk && ls -la raved-mobile.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: raved-mobile
+          path: mobile/raved-mobile.apk
+          retention-days: 30
