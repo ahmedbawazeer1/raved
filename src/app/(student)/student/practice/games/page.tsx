@@ -10,7 +10,7 @@ import { getGameWords } from "@/lib/games/queries";
 import { getPrimaryPath } from "@/lib/student/queries";
 import { createClient } from "@/lib/supabase/server";
 
-export const metadata: Metadata = { title: "ساحة الألعاب" };
+export const metadata: Metadata = { title: "ألعاب التدريب" };
 
 const ORDER: GameKind[] = ["speed", "memory", "match", "swipe", "listen", "spell", "dictation", "pronounce", "flashcards"];
 
@@ -24,7 +24,7 @@ export default async function GamesPage() {
 
   return (
     <>
-      <TopBar backHref="/student/practice" title="ساحة الألعاب" subtitle={<>كل لعبة تنهيها اليوم = 5 قطرات</>} />
+      <TopBar backHref="/student/practice" title="ألعاب التدريب" subtitle={<>كل لعبة تنهيها اليوم = 5 قطرات</>} />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-3 px-4 py-5">
         {words.length < 4 ? (
           <Card className="p-5 text-sm leading-relaxed text-muted-foreground">الألعاب تستعمل الكلمات التي تعلمتها. أكمل أول درس في رحلتك، ثم تعال والعب.</Card>

@@ -167,7 +167,7 @@ export default async function TodayPage() {
         {[
           { href: "/student/league", icon: "🏆", label: "الدوري" },
           { href: "/student/duel", icon: "⚔️", label: "تحدي صديق" },
-          { href: "/student/practice/games", icon: "🎮", label: "الساحة" },
+          { href: "/student/arena", icon: "🎮", label: "الساحة" },
         ].map((l) => (
           <Link
             key={l.href}

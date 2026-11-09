@@ -1456,7 +1456,9 @@ export type Database = {
       };
       profiles: {
         Row: {
+          avatar: Json | null;
           league_opt_in: boolean;
+          league_tier: number;
           birth_date: string | null;
           city: string | null;
           created_at: string;
@@ -1478,7 +1480,9 @@ export type Database = {
           updated_at: string;
         };
         Insert: {
+          avatar?: Json | null;
           league_opt_in?: boolean;
+          league_tier?: number;
           birth_date?: string | null;
           city?: string | null;
           created_at?: string;
@@ -1500,7 +1504,9 @@ export type Database = {
           updated_at?: string;
         };
         Update: {
+          avatar?: Json | null;
           league_opt_in?: boolean;
+          league_tier?: number;
           birth_date?: string | null;
           city?: string | null;
           created_at?: string;
@@ -2346,6 +2352,17 @@ export type Database = {
         Args: { p_application_id: string; p_decision: string; p_note?: string };
         Returns: Json;
       };
+      arena_answer: { Args: { p_answer: string; p_index: number; p_run: string }; Returns: Json };
+      arena_finish: { Args: { p_run: string }; Returns: Json };
+      arena_start: { Args: { p_game: string; p_mode?: string }; Returns: Json };
+      arena_today: { Args: never; Returns: Json };
+      create_circle: { Args: { p_name: string }; Returns: string };
+      join_circle: { Args: { p_code: string }; Returns: undefined };
+      league_result_seen: { Args: never; Returns: undefined };
+      leave_circle: { Args: never; Returns: undefined };
+      monthly_champions: { Args: never; Returns: Json };
+      my_circle: { Args: never; Returns: Json };
+      set_avatar: { Args: { p_avatar: Json }; Returns: undefined };
       set_league_opt_in: { Args: { p_join: boolean }; Returns: undefined };
       submit_application: {
         Args: { p_guardian_consent: boolean; p_privacy_consent: boolean };

@@ -64,7 +64,7 @@ export default async function SettingsPage() {
         <FeedbackForm />
       </Card>
 
-      <ExperienceForm progress={progress} />
+      <ExperienceForm progress={progress} savedAvatar={profile.avatar != null} />
 
       <Card className="p-5">
         <h2 className="mb-3 font-bold">دراستي</h2>
