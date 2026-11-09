@@ -81,7 +81,7 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
         <section aria-label="نتيجة المعركة" className="flex flex-col gap-2">
           <BattleScene guardian={guardian} hp={Math.max(0, 100 - attempt.score)} outcome={attempt.passed ? "won" : "lost"} />
           <p className="text-center font-bold">
-            {attempt.passed ? `هزمت ${guardian.name} وعبرت السدّ! طابع ${stopName} لك` : `${guardian.name} صمد هذه المرة`}
+            {attempt.passed ? `هزمت ${guardian.name} وعبرت السدّ!` : `${guardian.name} صمد هذه المرة`}
             <span className="block text-xs font-normal text-muted-foreground">
               {attempt.correct} ضربات صحيحة من {attempt.total}
             </span>
@@ -89,10 +89,10 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
         </section>
 
         {attempt.passed && unit && (
-          <section aria-label="طابع المحطة" className="flex flex-col items-center gap-3 rounded-3xl border border-border bg-card p-4">
+          <section aria-label="زهرة الوحدة" className="flex flex-col items-center gap-3 rounded-3xl border border-border bg-card p-4">
             <Celebrate id={attempt.id} />
             <Stamp name={stopName} position={unit.position} earned className="w-32 motion-safe:animate-[stamp-drop_.7s_cubic-bezier(.3,1.6,.5,1)]" />
-            <p className="text-sm text-muted-foreground">أضيف إلى ألبوم طوابعك في «التقدم»</p>
+            <p className="text-sm text-muted-foreground">أُضيفت إلى ألبوم وحداتك في «التقدم»</p>
             <ShareStamp name={stopName} position={unit.position} />
           </section>
         )}

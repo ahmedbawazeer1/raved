@@ -26,8 +26,13 @@ test("the public certificate check rejects an unknown code", async ({ page }) =>
 
 test("the weekly league, games hub and friend duels open", async ({ page }) => {
   await login(page);
-  await page.getByRole("link", { name: /الدوري/ }).first().click();
+  await page
+    .getByRole("link", { name: /الدوري/ })
+    .first()
+    .click();
   await expect(page.getByText("ترتيبك:")).toBeVisible();
+  // (A local re-run may find the student already in the league.)
+  if (await page.getByRole("button", { name: "اخرج من الدوري" }).isVisible()) await page.getByRole("button", { name: "اخرج من الدوري" }).click();
   await page.getByRole("button", { name: "شارك في الدوري" }).click();
   await expect(page.getByRole("button", { name: "اخرج من الدوري" })).toBeVisible();
 

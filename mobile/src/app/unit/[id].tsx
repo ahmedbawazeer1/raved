@@ -41,7 +41,7 @@ export default function UnitScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }} edges={["top", "bottom"]}>
-      <Header title={`${unit.stop ? `${unit.stop} · ` : ""}الوحدة ${unit.position}`} subtitle={unit.levelCode} />
+      <Header title={`الوحدة ${unit.position}`} subtitle={unit.levelCode} />
       <ScrollView contentContainerStyle={{ padding: 16, gap: 12 }}>
         <Text variant="title">{unit.title}</Text>
         <Text variant="muted">

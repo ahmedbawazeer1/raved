@@ -51,19 +51,19 @@ interface BadgeRule {
   goal: number;
 }
 
-/** Badge names come from Hadramout, like the journey. */
+/** Badge names come from the water-and-growth world of Raved. */
 const RULES: BadgeRule[] = [
   { id: "first-step", title: "أول خطوة", description: "أكملت أول درس", icon: "👣", stat: "lessons", goal: 1 },
-  { id: "mukalla-ambassador", title: "سفير المكلا", description: "نجحت في أول وحدة", icon: "⚓", stat: "unitsPassed", goal: 1 },
-  { id: "shibam-builder", title: "باني شبام", description: "نجحت في 5 وحدات", icon: "🏰", stat: "unitsPassed", goal: 5 },
-  { id: "doan-bee", title: "نحلة دوعن", description: "7 أيام متتالية من الدراسة", icon: "🐝", stat: "streak", goal: 7 },
-  { id: "desert-camel", title: "جمل الصحراء", description: "30 يوماً متتالية من الدراسة", icon: "🐪", stat: "streak", goal: 30 },
+  { id: "mukalla-ambassador", title: "أول زهرة", description: "نجحت في أول وحدة", icon: "🌸", stat: "unitsPassed", goal: 1 },
+  { id: "shibam-builder", title: "باني الجسور", description: "نجحت في 5 وحدات", icon: "🌉", stat: "unitsPassed", goal: 5 },
+  { id: "doan-bee", title: "ساقي الأسبوع", description: "7 أيام سقاية", icon: "💧", stat: "streak", goal: 7 },
+  { id: "desert-camel", title: "النهر الدائم", description: "30 يوم سقاية", icon: "🌊", stat: "streak", goal: 30 },
   { id: "word-fisher", title: "صياد الكلمات", description: "راجعت 50 كلمة", icon: "🎣", stat: "wordReviews", goal: 50 },
   { id: "loyal-viewer", title: "المشاهد المخلص", description: "شاهدت 10 فيديوهات كاملة", icon: "🎬", stat: "videos", goal: 10 },
   { id: "eloquent", title: "اللسان الفصيح", description: "أنجزت 5 مهام محادثة", icon: "🎤", stat: "speaking", goal: 5 },
-  { id: "hadrami-pen", title: "القلم الحضرمي", description: "أنجزت 5 مهام كتابة", icon: "✍️", stat: "writing", goal: 5 },
+  { id: "hadrami-pen", title: "القلم الجاري", description: "أنجزت 5 مهام كتابة", icon: "✍️", stat: "writing", goal: 5 },
   { id: "full-mark", title: "العلامة الكاملة", description: "حصلت على 100% في اختبار وحدة", icon: "💯", stat: "perfectQuizzes", goal: 1 },
-  { id: "seiyun-star", title: "نجم سيئون", description: "جمعت 1000 نقطة", icon: "⭐", stat: "xp", goal: 1000 },
+  { id: "seiyun-star", title: "ألف قطرة", description: "جمعت 1000 قطرة", icon: "⭐", stat: "xp", goal: 1000 },
 ];
 
 export function badges(stats: BadgeStats): Badge[] {

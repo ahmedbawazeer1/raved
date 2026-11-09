@@ -1,4 +1,3 @@
-import { stopIcon } from "@/lib/art/journey";
 import { cn } from "@/lib/utils";
 
 const PALETTE: [string, string][] = [
@@ -12,7 +11,7 @@ const PALETTE: [string, string][] = [
 
 const PERFORATION = "linear-gradient(#000 0 0) content-box, radial-gradient(circle at 5px 5px, transparent 2.6px, #000 3px) -5px -5px / 10px 10px";
 
-/** A postage stamp for a journey stop: coloured when earned, a grey outline when not yet. */
+/** A unit stamp (a blooming lily on water): coloured when earned, a grey outline when not yet. */
 export function Stamp({ name, position, earned, className }: { name: string; position: number; earned: boolean; className?: string }) {
   const [light, dark] = PALETTE[(position - 1) % PALETTE.length];
   return (
@@ -28,7 +27,10 @@ export function Stamp({ name, position, earned, className }: { name: string; pos
         style={earned ? { background: `linear-gradient(160deg, ${light}, ${dark})` } : undefined}
       >
         <svg viewBox="0 0 48 48" className={cn("size-11", earned ? "drop-shadow-[0_2px_2px_rgba(0,0,0,.25)]" : "opacity-35")} aria-hidden="true">
-          <use href={`#${stopIcon(name, position - 1)}`} filter={earned ? undefined : "url(#art-gray)"} />
+          <path d="M24 6C24 6 10 22 10 30a14 14 0 0 0 28 0C38 22 24 6 24 6Z" fill={earned ? "#fff" : "currentColor"} opacity={earned ? 0.95 : 0.5} />
+          <text x="24" y="36" textAnchor="middle" fontSize="13" fontWeight="800" fontFamily="Inter, sans-serif" fill={earned ? dark : "#fff"}>
+            {position}
+          </text>
         </svg>
         <span>{name}</span>
         <span className="font-en text-[9px] font-semibold opacity-85">UNIT {position}</span>

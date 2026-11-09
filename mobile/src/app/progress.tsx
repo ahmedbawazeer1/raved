@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useQuery } from "@tanstack/react-query";
 import { fetchActivityDates, fetchCurriculum, fetchPrimaryPath, fetchXpRows } from "@shared/data/student";
 import { badges, playerLevel, statsFromXp } from "@shared/gamification/xp";
-import { streakDays } from "@shared/student/stats";
+import { watering } from "@shared/student/watering";
 import { useUserId } from "@/data/student";
 import { supabase } from "@/lib/supabase";
 import { Card, colors, fonts, Header, LoadError, Loading, ProgressBar, radius, Text } from "@/ui";
@@ -21,7 +21,7 @@ export default function ProgressScreen() {
         fetchPrimaryPath(supabase, userId!),
       ]);
       const curriculum = path ? await fetchCurriculum(supabase, userId!, path.id) : null;
-      const streak = streakDays(activity);
+      const streak = watering(activity).days;
       const stats = statsFromXp(rows, streak);
       return { stats, level: playerLevel(stats.xp), badges: badges(stats), units: curriculum?.units ?? [] };
     },
@@ -43,7 +43,7 @@ export default function ProgressScreen() {
             </Text>
           </View>
           <Text variant="muted">
-            ⭐ {stats.xp} نقطة · 🔥 {stats.streak} يوم متتالٍ · 📚 {stats.lessons} درس
+            💧 {stats.xp} قطرة · {stats.streak} يوم سقاية · 📚 {stats.lessons} درس
           </Text>
         </Card>
 
@@ -90,7 +90,7 @@ export default function ProgressScreen() {
             >
               <Text style={{ fontSize: 22 }}>{u.state === "done" ? "🏅" : "·"}</Text>
               <Text style={{ fontSize: 11, textAlign: "center" }} numberOfLines={2}>
-                {u.stop ?? `الوحدة ${u.position}`}
+                {`الوحدة ${u.position}`}
               </Text>
             </View>
           ))}

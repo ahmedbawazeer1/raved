@@ -7,7 +7,7 @@ import { fetchActivityDates, fetchCurriculum, fetchPrimaryPath, fetchVocabDeck, 
 import { parseFeatures } from "@shared/paths/features";
 import { dailyQuests } from "@shared/gamification/quests";
 import { nextStep } from "@shared/student/progress";
-import { streakDays } from "@shared/student/stats";
+import { watering } from "@shared/student/watering";
 import { useSession } from "@/lib/session";
 import { supabase } from "@/lib/supabase";
 
@@ -49,7 +49,7 @@ export function useHome() {
         curriculum,
         step,
         xp: xpRows.reduce((n, r) => n + r.points, 0),
-        streak: streakDays(activity),
+        watering: watering(activity),
         quests: path ? dailyQuests(xpRows, features) : [],
         vocabToday: deck?.cards.length ?? 0,
         unread: unread.count ?? 0,

@@ -3,7 +3,7 @@ import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import type { UnitView } from "@shared/student/progress";
 import { useCurriculum } from "@/data/student";
-import { JourneyMap } from "@/features/journey/journey-map";
+import { RiverMap } from "@/features/journey/river-map";
 import { Card, colors, LoadError, Loading, Text } from "@/ui";
 
 const STATE: Record<UnitView["state"], { icon: string; label: string }> = {
@@ -13,7 +13,7 @@ const STATE: Record<UnitView["state"], { icon: string; label: string }> = {
   locked: { icon: "🔒", label: "مقفلة" },
 };
 
-/** «التعلّم»: the journey of the current level and every level's units. */
+/** «التعلّم»: the river map of the current level and every level's units. */
 export default function LearnScreen() {
   const q = useCurriculum();
   if (q.isLoading) return <Loading />;
@@ -36,7 +36,7 @@ export default function LearnScreen() {
             <Text variant="muted">سننشر أول وحدة قريباً.</Text>
           </Card>
         ) : null}
-        {mapUnits.length ? <JourneyMap units={mapUnits} /> : null}
+        {mapUnits.length && current ? <RiverMap units={mapUnits} levelCode={current.levelCode} /> : null}
         {(curriculum?.levels ?? []).map((level) => {
           const list = units.filter((u) => u.levelCode === level.code);
           if (!list.length) return null;
@@ -66,10 +66,7 @@ export default function LearnScreen() {
                 >
                   <Text style={{ fontSize: 22 }}>{STATE[u.state].icon}</Text>
                   <View style={{ flex: 1 }}>
-                    <Text style={{ fontWeight: "700" }}>
-                      الوحدة {u.position}
-                      {u.stop ? ` · ${u.stop}` : ""}
-                    </Text>
+                    <Text style={{ fontWeight: "700" }}>الوحدة {u.position}</Text>
                     <Text variant="muted" numberOfLines={1}>
                       {u.title}
                     </Text>

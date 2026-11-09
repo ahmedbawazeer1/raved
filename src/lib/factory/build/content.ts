@@ -115,10 +115,10 @@ key sentences: ${external(p.video.sentences.join(" / "), 1200)}
 }${p.before.length ? `Lessons already written in this unit: ${p.before.join(" | ")} — do not repeat their content.\n` : ""}
 Write these sections (keys and what each contains):
 ${sections.map((s) => `- "${s.key}" (${s.title_ar}): ${s.guide_en}\n  shape: ${SHAPES[s.block]}`).join("\n")}
-English sentences must be short, correct and at level ${p.level}; Arabic in simple Modern Standard Arabic. Names, places, food and prices from Hadramout.
+English sentences must be short, correct and at level ${p.level}; Arabic in simple Modern Standard Arabic. Names, places, food and prices from everyday life in Yemen (common Yemeni names; no single city or region).
 ${p.feedback ? `\nThe reviewer's note on the previous version of this lesson: ${p.feedback}\n` : ""}${
     p.withRoleplay
-      ? `\nAlso write "roleplay": the unit's conversation partner — a Hadrami character at ${p.unit.stop_ar} in the unit's situation: {"character_ar": "...", "scenario_en": "You are … (instructions for the AI partner, 1–3 sentences)", "opening_en": "the partner's first line"}.\n`
+      ? `\nAlso write "roleplay": the unit's conversation partner — a character at ${p.unit.stop_ar} in the unit's situation: {"character_ar": "...", "scenario_en": "You are … (instructions for the AI partner, 1–3 sentences)", "opening_en": "the partner's first line"}.\n`
       : ""
   }
 Return JSON: {"title_ar": "<Arabic lesson title>", "sections": {${sections.map((s) => `"${s.key}": ${SHAPES[s.block]}`).join(", ")}}${p.withRoleplay ? ', "roleplay": {...}' : ""}}`;

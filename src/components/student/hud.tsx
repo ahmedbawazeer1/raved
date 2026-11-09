@@ -1,43 +1,33 @@
 import Link from "next/link";
-import { playerLevel } from "@/lib/gamification/xp";
+import type { Watering } from "@shared/student/watering";
 
-/** Streak, points and player level as game-like chips (links to the progress page). */
-export function Hud({ streak, xp }: { streak: number; xp: number }) {
-  const lvl = playerLevel(xp);
-  const percent = Math.round((lvl.into / lvl.span) * 100);
+const DROP = (
+  <svg viewBox="0 0 20 26" className="h-6 w-5" aria-hidden="true">
+    <path d="M10 1C10 1 2 12 2 17a8 8 0 0 0 16 0C18 12 10 1 10 1Z" fill="#2E9BD6" />
+    <ellipse cx="7" cy="16" rx="2" ry="3.5" fill="#fff" opacity=".6" />
+  </svg>
+);
+
+/** Drops (points) and watering days as game-like chips (link to the progress page). */
+export function Hud({ watering, drops }: { watering: Watering; drops: number }) {
   const chip =
-    "flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-card px-3 font-en text-[15px] font-extrabold tabular-nums no-underline shadow-sm";
+    "flex min-h-11 items-center gap-1.5 rounded-2xl rounded-es-md border border-border bg-card px-3 font-en text-[15px] font-extrabold tabular-nums no-underline shadow-sm";
+  const restLabel = watering.state === "rest" ? "، اليوم راحة" : "";
   return (
     <nav aria-label="إنجازاتك" className="flex items-center gap-2">
-      <Link href="/student/progress" className={`${chip} text-[#E8590C] hover:text-[#E8590C]`} aria-label={`${streak} أيام متتالية`}>
-        <svg className="size-6" aria-hidden="true">
-          <use href="#art-i-flame" />
+      <Link href="/student/progress" className={`${chip} text-[#1C6FA3] hover:text-[#1C6FA3]`} aria-label={`${watering.days} أيام سقاية${restLabel}`}>
+        <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
+          <path d="M4 11h11a3 3 0 0 1 3 3v1H4z" fill="#2E9BD6" />
+          <path d="M18 12l4-3" stroke="#1C6FA3" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M6 11V8a3 3 0 0 1 6 0" stroke="#1C6FA3" strokeWidth="2" fill="none" />
+          <circle cx="21" cy="14" r="1.4" fill="#6CCBF2" />
+          <circle cx="22.5" cy="17" r="1" fill="#6CCBF2" />
         </svg>
-        {streak}
+        {watering.days}
       </Link>
-      <Link href="/student/progress#badges" className={`${chip} text-warning hover:text-warning`} aria-label={`${xp} نقطة`}>
-        <svg className="size-6" aria-hidden="true">
-          <use href="#art-i-coin" />
-        </svg>
-        {xp}
-      </Link>
-      <Link
-        href="/student/progress#badges"
-        className="ms-auto flex min-h-11 items-center gap-2 rounded-full border border-border bg-card ps-1 pe-3 text-xs font-semibold text-muted-foreground no-underline shadow-sm hover:text-foreground"
-        aria-label={`المستوى ${lvl.level}، ${percent}% إلى المستوى التالي`}
-      >
-        <span className="relative flex size-9 items-center justify-center">
-          <svg className="absolute inset-0 size-9" viewBox="0 0 42 42" aria-hidden="true">
-            <use href="#art-i-shield" />
-          </svg>
-          <span className="relative font-en text-sm font-extrabold text-white">{lvl.level}</span>
-        </span>
-        <span className="flex w-14 flex-col gap-1">
-          المستوى
-          <span className="h-1.5 overflow-hidden rounded-full bg-muted">
-            <span className="block h-full rounded-full bg-accent" style={{ width: `${percent}%` }} />
-          </span>
-        </span>
+      <Link href="/student/progress#badges" className={`${chip} text-[#1C6FA3] hover:text-[#1C6FA3]`} aria-label={`${drops} قطرة`}>
+        {DROP}
+        {drops}
       </Link>
     </nav>
   );

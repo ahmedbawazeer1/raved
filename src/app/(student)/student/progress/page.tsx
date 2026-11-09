@@ -10,7 +10,8 @@ import { targetDateLabel, targetExamLabel } from "@/lib/apply/options";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { parseFeatures } from "@/lib/paths/features";
 import { LEVELS, monthsToB2, SKILL_LABELS_AR, SKILLS, type Level } from "@/lib/placement/engine";
-import { examTrackOpen, streakDays } from "@/lib/student/stats";
+import { examTrackOpen } from "@/lib/student/stats";
+import { watering } from "@shared/student/watering";
 import { BadgeGrid } from "@/components/student/badge-grid";
 import { Stamp } from "@/components/art/stamp";
 import { XpBar } from "@/components/student/xp-bar";
@@ -57,13 +58,13 @@ export default async function ProgressPage() {
     getXpRows(userId),
   ]);
 
-  const streak = streakDays([
+  const streak = watering([
     ...(lessons.data ?? []).map((l) => l.completed_at),
     ...(quizzes.data ?? []).map((q) => q.created_at),
     ...(words.data ?? []).map((w) => w.last_reviewed_at),
     ...(speaking.data ?? []).map((s) => s.created_at),
     ...(writing.data ?? []).map((w) => w.created_at),
-  ]);
+  ]).days;
   const passedQuizzes = new Set((quizzes.data ?? []).filter((q) => q.passed).map((q) => q.quiz_id)).size;
   const skillMap = new Map((skills.data ?? []).map((s) => [s.skill, s.level]));
   const overall = (placement.data?.overall_level ?? null) as Level | null;
@@ -92,7 +93,7 @@ export default async function ProgressPage() {
           </div>
           <span className="flex items-center gap-1.5 rounded-full bg-warning-tint px-3 py-1.5 text-sm font-semibold text-warning">
             <Flame className="size-4" aria-hidden="true" />
-            {streak} {streak === 1 ? "يوم" : "أيام"} متتالية
+            {streak} {streak === 1 ? "يوم سقاية" : "أيام سقاية"}
           </span>
         </div>
         {/* CEFR timeline */}
@@ -132,7 +133,7 @@ export default async function ProgressPage() {
         <section aria-labelledby="album-title" className="flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <h2 id="album-title" className="font-bold">
-              ألبوم الطوابع
+              ألبوم الوحدات
             </h2>
             <span className="text-xs text-muted-foreground">
               {curriculum.units.filter((u) => u.state === "done").length} من {curriculum.units.length}
@@ -140,7 +141,7 @@ export default async function ProgressPage() {
           </div>
           <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
             {curriculum.units.map((u) => (
-              <Stamp key={u.id} name={u.stop ?? `الوحدة ${u.position}`} position={u.position} earned={u.state === "done"} />
+              <Stamp key={u.id} name={`الوحدة ${u.position}`} position={u.position} earned={u.state === "done"} />
             ))}
           </div>
         </section>

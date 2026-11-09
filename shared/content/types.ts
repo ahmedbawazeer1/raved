@@ -112,7 +112,7 @@ export interface UnitPackage {
   context_note?: string;
   /** Arabic name of the stop on the journey map (e.g. «المكلا»). */
   stop_ar?: string;
-  /** AI conversation partner of the unit (a Hadrami character). */
+  /** AI conversation partner of the unit (a character from the unit's situation). */
   roleplay?: { character_ar: string; scenario_en: string; opening_en: string };
 }
 

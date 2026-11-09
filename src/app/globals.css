@@ -288,3 +288,51 @@
     opacity: 0;
   }
 }
+
+/* Raved identity motion (see shared/motion.ts) */
+@keyframes slide-in-ltr {
+  from {
+    transform: translateX(-28px);
+    opacity: 0;
+  }
+}
+@keyframes sheet-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0.4;
+  }
+}
+@keyframes water-wave {
+  to {
+    transform: translateX(-20px);
+  }
+}
+.water-fill::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 200%;
+  height: 12px;
+  background: radial-gradient(circle at 10px -2px, transparent 9px, rgba(255, 255, 255, 0.45) 10px) 0 0 / 20px 12px repeat-x;
+  animation: water-wave 1.4s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .water-fill::before {
+    animation: none;
+  }
+}
+@keyframes wave-wipe {
+  from {
+    transform: translateX(105%);
+  }
+  to {
+    transform: translateX(-105%);
+  }
+}
+@keyframes slide-in-rtl {
+  from {
+    transform: translateX(28px);
+    opacity: 0;
+  }
+}

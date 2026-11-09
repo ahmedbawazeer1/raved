@@ -59,7 +59,7 @@ For every level give: code, title_ar, goal_ar (what the student can do at the en
 For every unit give:
 - code like "A1-01" (level code + two digits),
 - title_en and title_ar,
-- stop_ar: the Hadramout place that is this unit's stop on the «رحلة حضرموت» journey map (towns, markets, ports, valleys; avoid repeating a stop inside a level),
+- stop_ar: a short Arabic label for the everyday place of the unit's situation (e.g. السوق، المدرسة، العيادة، البيت); generic, never a specific city; avoid repeating one inside a level,
 - situation_ar: the one everyday situation the whole unit is built around, set in that place,
 - objectives_ar: 2–5 can-do statements in Arabic,
 - grammar: the one grammar point (progressive across units),
@@ -119,7 +119,7 @@ Units already planned in earlier levels (build on them, do not repeat): ${before
 For every unit give:
 - code "${level.code}-01", "${level.code}-02", … in teaching order,
 - title_en and title_ar,
-- stop_ar: the Hadramout place that is this unit's stop on the «رحلة حضرموت» journey map (towns, markets, ports, valleys; no repeated stop inside the level),
+- stop_ar: a short Arabic label for the everyday place of the unit's situation (e.g. السوق، المدرسة، العيادة، البيت); generic, never a specific city; no repeats inside the level,
 - situation_ar: the one everyday situation the whole unit is built around, set in that place,
 - objectives_ar: 2–5 can-do statements in Arabic,
 - grammar: the one grammar point (progressive across units),

@@ -5,19 +5,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
-import { RafedGreeting } from "@/components/art/rafed-greeting";
 import { Hud } from "@/components/student/hud";
 import { DailyQuests } from "@/components/student/daily-quests";
 import { dailyQuests } from "@/lib/gamification/quests";
 import { MistakesLink } from "@/components/student/mistakes-link";
-import { JourneyMap } from "@/components/student/journey-map";
+import { RiverMap } from "@/components/student/river-map";
+import { WateringCard } from "@/components/student/watering-card";
+import { stageFor } from "@shared/art/rafed";
+import { watering as wateringOf } from "@shared/student/watering";
 import { ProgressBar } from "@/components/student/progress-bar";
 import { getXpRows } from "@/lib/gamification/queries";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { parseFeatures } from "@/lib/paths/features";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
 import { nextStep } from "@/lib/student/progress";
-import { streakDays } from "@/lib/student/stats";
 import { createClient } from "@/lib/supabase/server";
 import { getVocabDeck } from "@/lib/vocab/queries";
 
@@ -63,11 +64,15 @@ export default async function TodayPage() {
     ]),
   ]);
   const [lessonDays, quizDays, vocabDays] = activity;
-  const streak = streakDays([
+  const water = wateringOf([
     ...(lessonDays.data ?? []).map((r) => r.completed_at),
     ...(quizDays.data ?? []).map((r) => r.created_at),
     ...(vocabDays.data ?? []).map((r) => r.last_reviewed_at),
   ]);
+  const levelsDone = curriculum
+    ? new Set(curriculum.units.map((u) => u.levelCode)).size - new Set(curriculum.units.filter((u) => u.state !== "done").map((u) => u.levelCode)).size
+    : 0;
+  const stage = stageFor(levelsDone);
   const xp = xpRows.reduce((sum, r) => sum + r.points, 0);
   const placementCard = path && features.placement && placement?.status !== "completed";
   const vocabToday = deck ? deck.cards.length : 0;
@@ -78,10 +83,14 @@ export default async function TodayPage() {
   const levelCode = unit?.levelCode ?? curriculum?.units.at(-1)?.levelCode;
   const mapUnits = curriculum ? curriculum.units.filter((u) => u.levelCode === levelCode) : [];
   const first = profile.full_name.split(" ")[0];
-  const bubble =
-    step.kind === "lesson" || step.kind === "quiz"
-      ? `${greeting()} يا ${first}! محطتك اليوم: ${unit?.stop ?? `الوحدة ${unit?.position}`}. ${step.kind === "quiz" ? "الحارس في انتظارك ⚔️" : "يلا نكمل الرحلة 🚀"}`
-      : `${greeting()} يا ${first}!`;
+  const next = step.kind === "quiz" ? "حارس السدّ ينتظرك في اختبار الوحدة." : step.kind === "lesson" ? `درس اليوم في الوحدة ${unit?.position}.` : "";
+  const bubble = {
+    watered: `أحسنت يا ${first}! سقيت رافد اليوم.`,
+    waiting: `${greeting()} يا ${first}! رافد ينتظر سقاية اليوم. ${next}`,
+    thirsty: `فاتك يوم يا ${first}… رافد عطشان قليلاً. درس واحد يرويه.`,
+    rest: `الجمعة راحة يا ${first}. سقايتك محفوظة.`,
+    new: `${greeting()} يا ${first}! أنا رافد، وكل درس تتعلمه يسقيني. ${next}`,
+  }[water.state];
   const href = step.kind === "lesson" ? `/student/learn/${step.lessonId}` : step.kind === "quiz" ? `/student/quiz/${step.quizId}` : null;
 
   return (
@@ -89,7 +98,7 @@ export default async function TodayPage() {
       <header className="flex items-center gap-2">
         <h1 className="sr-only">اليوم</h1>
         <div className="min-w-0 flex-1">
-          <Hud streak={streak} xp={xp} />
+          <Hud watering={water} drops={xp} />
         </div>
         <Link
           href="/student/notifications"
@@ -101,7 +110,9 @@ export default async function TodayPage() {
         </Link>
       </header>
 
-      <RafedGreeting>{bubble}</RafedGreeting>
+      <WateringCard watering={water} stage={stage}>
+        {bubble}
+      </WateringCard>
 
       {placementCard && (
         <Card className="flex items-center gap-3 border-accent p-4">
@@ -134,7 +145,7 @@ export default async function TodayPage() {
         <section className="relative flex flex-col gap-3 overflow-hidden rounded-3xl bg-[radial-gradient(120%_90%_at_85%_0%,#18A383_0%,#0E6E5C_45%,#08392F_100%)] p-5 text-white">
           <p className="text-sm text-primary-tint">جلسة اليوم · {profile.daily_goal_minutes} دقيقة</p>
           <h2 className="text-xl font-bold">
-            {unit.stop ? `${unit.stop} · ` : ""}الوحدة {unit.position}: <En>{unit.title}</En>
+            الوحدة {unit.position}: <En>{unit.title}</En>
           </h2>
           <div className="flex items-center gap-3 [&_[role=progressbar]]:bg-white/25 [&_[role=progressbar]>span]:bg-accent">
             <ProgressBar value={done} max={lessons.length} label="تقدم الوحدة" />
@@ -143,20 +154,20 @@ export default async function TodayPage() {
             </span>
           </div>
           <Button asChild variant="accent" size="lg" className="shadow-[0_5px_0_#C98210] active:translate-y-[5px] active:shadow-none">
-            <Link href={href}>{step.kind === "quiz" ? "واجه حارس المحطة" : done === 0 ? "ابدأ جلسة اليوم" : "أكمل جلسة اليوم"}</Link>
+            <Link href={href}>{step.kind === "quiz" ? "واجه حارس السدّ" : done === 0 ? "ابدأ درس اليوم" : "أكمل درس اليوم"}</Link>
           </Button>
         </section>
       )}
 
       {path && <DailyQuests quests={dailyQuests(xpRows, features)} />}
 
-      {path && mapUnits.length > 0 && <JourneyMap units={mapUnits} pathSlug={path.slug} />}
+      {path && levelCode && mapUnits.length > 0 && <RiverMap units={mapUnits} pathSlug={path.slug} levelCode={levelCode} stage={stage} />}
 
       <nav aria-label="تحديات" className="grid grid-cols-3 gap-2">
         {[
           { href: "/student/league", icon: "🏆", label: "الدوري" },
           { href: "/student/duel", icon: "⚔️", label: "تحدي صديق" },
-          { href: "/student/practice/games", icon: "🎮", label: "الألعاب" },
+          { href: "/student/practice/games", icon: "🎮", label: "الساحة" },
         ].map((l) => (
           <Link
             key={l.href}

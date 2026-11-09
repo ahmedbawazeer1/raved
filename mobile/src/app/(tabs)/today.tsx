@@ -2,7 +2,8 @@ import { Pressable, RefreshControl, ScrollView, View } from "react-native";
 import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useHome } from "@/data/student";
-import { JourneyMap } from "@/features/journey/journey-map";
+import { RiverMap } from "@/features/journey/river-map";
+import { stageFor } from "@shared/art/rafed";
 import { useAppConfig } from "@/lib/app-config";
 import { appRoute } from "@/lib/routes";
 import { useSession } from "@/lib/session";
@@ -13,7 +14,7 @@ function greeting(): string {
   return hour < 12 ? "صباح الخير" : "مساء الخير";
 }
 
-/** «اليوم»: points and streak, today's session, quests and the journey map (as on the website). */
+/** «اليوم»: drops and watering, Rafed, today's lesson, quests and the river map (as on the website). */
 export default function TodayScreen() {
   const { profile } = useSession();
   const home = useHome();
@@ -26,9 +27,18 @@ export default function TodayScreen() {
   const unit = step.kind === "lesson" || step.kind === "quiz" ? step.unit : null;
   const levelCode = unit?.levelCode ?? d.curriculum?.units.at(-1)?.levelCode;
   const mapUnits = d.curriculum ? d.curriculum.units.filter((u) => u.levelCode === levelCode) : [];
-  const bubble = unit
-    ? `${greeting()} يا ${first}! محطتك اليوم: ${unit.stop ?? `الوحدة ${unit.position}`}. ${step.kind === "quiz" ? "الحارس في انتظارك ⚔️" : "يلا نكمل الرحلة 🚀"}`
-    : `${greeting()} يا ${first}!`;
+  const w = d.watering;
+  const next = step.kind === "quiz" ? "حارس السدّ ينتظرك في اختبار الوحدة." : unit ? `درس اليوم في الوحدة ${unit.position}.` : "";
+  const bubble = {
+    watered: `أحسنت يا ${first}! سقيت رافد اليوم.`,
+    waiting: `${greeting()} يا ${first}! رافد ينتظر سقاية اليوم. ${next}`,
+    thirsty: `فاتك يوم يا ${first}… رافد عطشان قليلاً. درس واحد يرويه.`,
+    rest: `الجمعة راحة يا ${first}. سقايتك محفوظة.`,
+    new: `${greeting()} يا ${first}! أنا رافد، وكل درس تتعلمه يسقيني. ${next}`,
+  }[w.state];
+  const units = d.curriculum?.units ?? [];
+  const levelsDone = new Set(units.map((u) => u.levelCode)).size - new Set(units.filter((u) => u.state !== "done").map((u) => u.levelCode)).size;
+  const mood = w.state === "thirsty" ? "wilt" : w.state === "rest" ? "sleep" : "happy";
   const go = () => {
     if (step.kind === "lesson") router.push(`/lesson/${step.lessonId}`);
     else if (step.kind === "quiz") router.push(`/quiz/${step.quizId}`);
@@ -41,8 +51,8 @@ export default function TodayScreen() {
         refreshControl={<RefreshControl refreshing={home.isRefetching} onRefresh={() => void home.refetch()} tintColor={colors.primary} />}
       >
         <View style={{ flexDirection: "row", gap: 8 }}>
-          <Stat label="أيام متتالية" value={`🔥 ${d.streak}`} />
-          <Stat label="نقاطك" value={`⭐ ${d.xp}`} />
+          <Stat label="أيام السقاية" value={`💧 ${w.days}`} />
+          <Stat label="قطراتك" value={`${d.xp}`} />
           <Pressable
             style={{ flex: 1 }}
             onPress={() => router.push("/notifications")}
@@ -53,7 +63,9 @@ export default function TodayScreen() {
           </Pressable>
         </View>
 
-        <RafedGreeting>{bubble}</RafedGreeting>
+        <RafedGreeting mood={mood} stage={stageFor(levelsDone)}>
+          {bubble}
+        </RafedGreeting>
 
         {d.placementPending ? (
           <Card tone="warning">
@@ -78,9 +90,9 @@ export default function TodayScreen() {
 
         {unit ? (
           <View style={{ backgroundColor: colors.primary, borderRadius: 24, padding: 20, gap: 12 }}>
-            <Text style={{ color: colors.primaryTint, fontSize: 14 }}>جلسة اليوم</Text>
+            <Text style={{ color: colors.primaryTint, fontSize: 14 }}>درس اليوم</Text>
             <Text variant="heading" style={{ color: "#fff" }}>
-              {unit.stop ? `${unit.stop} · ` : ""}الوحدة {unit.position}: {unit.title}
+              الوحدة {unit.position}: {unit.title}
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
               <ProgressBar value={unit.lessonsDone} max={unit.lessons.length} />
@@ -90,7 +102,7 @@ export default function TodayScreen() {
             </View>
             <Button
               variant="accent"
-              title={step.kind === "quiz" ? "واجه حارس المحطة" : unit.lessonsDone === 0 ? "ابدأ جلسة اليوم" : "أكمل جلسة اليوم"}
+              title={step.kind === "quiz" ? "واجه حارس السدّ" : unit.lessonsDone === 0 ? "ابدأ درس اليوم" : "أكمل درس اليوم"}
               onPress={go}
             />
           </View>
@@ -115,7 +127,7 @@ export default function TodayScreen() {
           </Card>
         ) : null}
 
-        {mapUnits.length ? <JourneyMap units={mapUnits} /> : null}
+        {mapUnits.length && levelCode ? <RiverMap units={mapUnits} levelCode={levelCode} /> : null}
 
         <View style={{ flexDirection: "row", gap: 8 }}>
           {[

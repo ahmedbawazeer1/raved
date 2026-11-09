@@ -4,6 +4,7 @@ import { useState, useSyncExternalStore } from "react";
 import { CheckCircle2, RotateCcw, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Rafed } from "@/components/art/rafed";
+import { WaterBar } from "@/components/lesson/water-bar";
 import { MixedText } from "@/components/mixed-text";
 import { checkAnswer, shuffleWords } from "@/lib/content/check-answer";
 import { confetti } from "@/lib/confetti";
@@ -77,11 +78,11 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
         {streak >= 2 && !finished && (
           <span
             key={streak}
-            className="flex items-center gap-1 font-en text-sm font-extrabold text-[#E8590C] motion-safe:animate-[pop-in_.35s]"
+            className="flex items-center gap-1 font-en text-sm font-extrabold text-[#1C6FA3] motion-safe:animate-[pop-in_.35s]"
             aria-live="polite"
           >
-            <svg className="size-5" aria-hidden="true">
-              <use href="#art-i-flame" />
+            <svg viewBox="0 0 20 26" className="h-5 w-4" aria-hidden="true">
+              <path d="M10 1C10 1 2 12 2 17a8 8 0 0 0 16 0C18 12 10 1 10 1Z" fill="#2E9BD6" />
             </svg>
             ×{streak}
           </span>
@@ -90,14 +91,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
           {finished ? `${exercises.length} من ${exercises.length}` : `التمرين ${index + 1} من ${exercises.length}`}
         </span>
       </div>
-      <div className="flex gap-1" aria-hidden="true">
-        {exercises.map((e, i) => (
-          <span
-            key={e.id}
-            className={cn("h-2.5 flex-1 rounded-full transition-colors", solved.has(e.id) ? "bg-success" : i === index ? "bg-primary/40" : "bg-muted")}
-          />
-        ))}
-      </div>
+      <WaterBar value={exercises.filter((e) => solved.has(e.id)).length} max={exercises.length} />
 
       {finished ? (
         <div className="flex flex-col items-center gap-2 py-3 text-center motion-safe:animate-[rise-in_.4s]">
@@ -121,7 +115,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
         </div>
       ) : (
         <>
-          <p className="text-[17px] leading-relaxed font-semibold">
+          <p key={`q-${exercise.id}`} className="text-[17px] leading-relaxed font-semibold motion-safe:animate-[slide-in-ltr_.38s_cubic-bezier(.2,.8,.2,1)]">
             <MixedText text={exercise.prompt} />
           </p>
           <QuestionInput
@@ -134,38 +128,51 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
             }}
             disabled={result === "right"}
           />
-          {result && (
+          {result ? (
             <div
               role="status"
               className={cn(
-                "flex items-start gap-2 rounded-2xl p-3 text-sm motion-safe:animate-[rise-in_.25s]",
+                "sticky bottom-0 z-20 -mx-4 -mb-4 flex flex-col gap-3 rounded-b-3xl px-4 pt-3 pb-4 motion-safe:animate-[sheet-up_.4s_cubic-bezier(.34,1.4,.64,1)]",
                 result === "right" ? "bg-success-tint" : "bg-destructive-tint",
               )}
             >
-              <Rafed
-                mood={result === "right" ? "happy" : "sad"}
-                move={result === "right" ? "hop" : "oops"}
-                moveKey={`${index}-${result}`}
-                idle={false}
-                size={40}
-              />
-              <div className="min-w-0 flex-1">
-                <p className={cn("flex items-center gap-1.5 font-bold", result === "right" ? "text-success" : "text-destructive")}>
-                  {result === "right" ? <CheckCircle2 className="size-4" aria-hidden="true" /> : <XCircle className="size-4" aria-hidden="true" />}
-                  {result === "right" ? `إجابة صحيحة · ${PRAISE[index % PRAISE.length]}` : "ليست الإجابة الصحيحة"}
-                </p>
-                <p className="mt-1 leading-relaxed">{result === "right" ? <MixedText text={exercise.explanation_ar} /> : "فكّر مرة أخرى وجرّب."}</p>
+              <div className="flex items-start gap-2">
+                <Rafed
+                  mood={result === "right" ? "happy" : "sad"}
+                  move={result === "right" ? "hop" : "oops"}
+                  moveKey={`${index}-${result}`}
+                  idle={false}
+                  size={46}
+                />
+                <div className="min-w-0 flex-1 text-sm">
+                  <p className={cn("flex items-center gap-1.5 text-base font-bold", result === "right" ? "text-success" : "text-destructive")}>
+                    {result === "right" ? <CheckCircle2 className="size-5" aria-hidden="true" /> : <XCircle className="size-5" aria-hidden="true" />}
+                    {result === "right" ? `أحسنت · ${PRAISE[index % PRAISE.length]}` : "ليست الإجابة الصحيحة"}
+                  </p>
+                  <p className="mt-1 leading-relaxed">
+                    {result === "right" ? <MixedText text={exercise.explanation_ar} /> : "فكّر مرة أخرى وجرّب. أُضيف السؤال إلى «دفتر أخطائي» لتراجعه لاحقاً."}
+                  </p>
+                </div>
               </div>
+              {result === "right" ? (
+                <Button
+                  type="button"
+                  className="min-h-12 bg-success shadow-[0_4px_0_#05502E] hover:bg-success active:translate-y-1 active:shadow-none"
+                  onClick={next}
+                >
+                  {exercises.some((e, i) => i > index && !solved.has(e.id)) ? "متابعة" : "إنهاء التمارين"}
+                </Button>
+              ) : (
+                <Button
+                  type="button"
+                  className="min-h-12 bg-destructive shadow-[0_4px_0_#7A1A10] hover:bg-destructive active:translate-y-1 active:shadow-none"
+                  disabled={!isAnswered(value)}
+                  onClick={check}
+                >
+                  تحقق مرة أخرى
+                </Button>
+              )}
             </div>
-          )}
-          {result === "right" ? (
-            <Button
-              type="button"
-              className="min-h-12 bg-success shadow-[0_4px_0_#05502E] hover:bg-success active:translate-y-1 active:shadow-none"
-              onClick={next}
-            >
-              {exercises.some((e, i) => i > index && !solved.has(e.id)) ? "السؤال التالي" : "إنهاء التمارين"}
-            </Button>
           ) : (
             <Button
               type="button"
@@ -173,7 +180,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
               disabled={!isAnswered(value)}
               onClick={check}
             >
-              تحقق من الإجابة
+              تحقّق
             </Button>
           )}
         </>

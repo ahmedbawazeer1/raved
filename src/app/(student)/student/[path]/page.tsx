@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
-import { JourneyMap } from "@/components/student/journey-map";
+import { RiverMap } from "@/components/student/river-map";
 import { ProgressBar } from "@/components/student/progress-bar";
 import { requireActiveStudent } from "@/lib/auth/session";
 import { getCurriculum, getPrimaryPath } from "@/lib/student/queries";
@@ -67,7 +67,7 @@ export default async function CurriculumPage({ params, searchParams }: PageProps
       {units.length === 0 ? (
         <Card className="p-4 text-sm text-muted-foreground">وحدات هذا المستوى قيد الإعداد.</Card>
       ) : (
-        <JourneyMap units={units} pathSlug={path.slug} />
+        <RiverMap units={units} pathSlug={path.slug} levelCode={level?.code ?? ""} />
       )}
     </main>
   );
