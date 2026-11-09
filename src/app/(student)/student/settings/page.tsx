@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Award, Bell, ChevronLeft, Download, LineChart, Route } from "lucide-react";
+import { Award, Bell, ChevronLeft, Download, FileText, LineChart, Route, Trophy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ExperienceForm } from "@/components/student/experience-form";
+import { getAvatarProgress } from "@/lib/student/avatar-progress";
 import { FeedbackForm } from "@/components/student/feedback-form";
 import { DeleteAccountForm, PasswordForm, ProfileForm, StudyForm } from "@/components/student/settings-forms";
 import { requireActiveStudent } from "@/lib/auth/session";
@@ -17,18 +18,18 @@ const LINKS = [
   { href: "/student/paths", label: "مساراتي", icon: Route },
   { href: "/student/certificates", label: "شهاداتي", icon: Award },
   { href: "/student/notifications", label: "الإشعارات", icon: Bell },
+  { href: "/student/settings/report", label: "تقرير ولي الأمر", icon: FileText },
+  { href: "/student/league", label: "الدوري والمشاركة فيه", icon: Trophy },
 ];
 
 export default async function SettingsPage() {
   const { profile, userId } = await requireActiveStudent();
   const supabase = await createClient();
-  const [{ data: governorates }, { count: unread }, { data: passed }] = await Promise.all([
+  const [{ data: governorates }, { count: unread }, progress] = await Promise.all([
     supabase.from("governorates").select("code, name_ar").order("position"),
     supabase.from("notifications").select("id", { count: "exact", head: true }).eq("student_id", userId).is("read_at", null),
-    supabase.from("quiz_attempts").select("quiz_id, quizzes!inner(kind)").eq("student_id", userId).eq("passed", true),
+    getAvatarProgress(userId),
   ]);
-  const passedOf = (kind: string) => new Set((passed ?? []).filter((p) => p.quizzes?.kind === kind).map((p) => p.quiz_id)).size;
-  const progress = { unitsPassed: passedOf("unit"), levelsDone: passedOf("level_end"), gamesWon: 0, bestWatering: 0, champion: false, pathDone: false };
   const governorate = governorates?.find((g) => g.code === profile.governorate)?.name_ar;
 
   return (

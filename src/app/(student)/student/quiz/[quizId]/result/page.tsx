@@ -10,6 +10,8 @@ import { MixedText } from "@/components/mixed-text";
 import { TopBar } from "@/components/student/top-bar";
 import { BattleScene } from "@/components/art/battle-scene";
 import { Celebrate } from "@/components/art/celebrate";
+import { NewWorld } from "@/components/student/new-world";
+import { stageFor, type RafedStage } from "@shared/art/rafed";
 import { ShareStamp } from "@/components/art/share-stamp";
 import { Stamp } from "@/components/art/stamp";
 import { guardianFor } from "@/lib/art/guardians";
@@ -61,12 +63,21 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
 
   // Next unit, when this one is passed.
   let nextHref: string | null = null;
+  // A finished level: the next open unit is in another level (or nothing is left).
+  let world: { from: string; to: string | null; stage: RafedStage } | null = null;
   if (attempt.passed) {
     const path = await getPrimaryPath(userId);
     if (path) {
       const curriculum = await getCurriculum(userId, path.id);
       const now = curriculum.units.find((u) => u.state === "now");
       if (now) nextHref = `/student/${path.slug}/unit/${now.id}`;
+      const code = unit?.levels?.code;
+      const levelDone = code && curriculum.units.filter((u) => u.levelCode === code).every((u) => u.state === "done");
+      if (code && levelDone) {
+        const levels = new Set(curriculum.units.map((u) => u.levelCode));
+        const open = new Set(curriculum.units.filter((u) => u.state !== "done").map((u) => u.levelCode));
+        world = { from: code, to: now && now.levelCode !== code ? now.levelCode : null, stage: stageFor(levels.size - open.size, open.size === 0) };
+      }
     }
   }
   const results = (attempt.results as unknown as ResultItem[]) ?? [];
@@ -77,6 +88,7 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
   return (
     <>
       <TopBar backHref={unitHref} title={<>نتيجة اختبار الوحدة {unit?.position ?? ""}</>} />
+      {world && <NewWorld fromLevel={world.from} toLevel={world.to} stage={world.stage} />}
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
         <section aria-label="نتيجة المعركة" className="flex flex-col gap-2">
           <BattleScene guardian={guardian} hp={Math.max(0, 100 - attempt.score)} outcome={attempt.passed ? "won" : "lost"} />

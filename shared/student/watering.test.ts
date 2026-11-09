@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isFriday, watering } from "./watering";
+import { isFriday, longestWatering, watering } from "./watering";
 
 // 2026-11-06 is a Friday. Times at noon UTC = 3pm in Aden.
 const at = (d: string) => `${d}T12:00:00Z`;
@@ -36,5 +36,11 @@ describe("watering", () => {
     const w = watering([at("2026-11-07"), at("2026-11-09")], now("2026-11-09"));
     expect(w.todayIndex).toBe(2); // Monday
     expect(w.week).toEqual([true, false, true, false, false, false, false]);
+  });
+
+  it("finds the longest run ever (Friday does not break it)", () => {
+    expect(longestWatering([])).toBe(0);
+    // Wed, Thu, (Fri rest), Sat, then a gap, then Tue.
+    expect(longestWatering([at("2026-11-04"), at("2026-11-05"), at("2026-11-07"), at("2026-11-10")])).toBe(3);
   });
 });

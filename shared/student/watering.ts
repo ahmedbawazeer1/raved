@@ -55,3 +55,29 @@ export function watering(activity: (string | null | undefined)[], now: Date = ne
   for (let i = todayIndex + 1; i < 7; i++) week[i] = false;
   return { days: count, state, week, todayIndex };
 }
+
+/** The longest run ever (for avatar items): consecutive watered days, Fridays never break it. */
+export function longestWatering(activity: (string | null | undefined)[]): number {
+  const days = [...new Set(activity.filter((a): a is string => Boolean(a)).map((a) => yemenDate(a)))].sort();
+  let best = 0,
+    run = 0,
+    last: string | null = null;
+  for (const day of days) {
+    if (last) {
+      // Walk from the day before back to the last watered day; any missed non-Friday breaks the run.
+      let d = prev(day),
+        broken = false;
+      while (d > last) {
+        if (!isFriday(d)) {
+          broken = true;
+          break;
+        }
+        d = prev(d);
+      }
+      run = broken ? 1 : run + 1;
+    } else run = 1;
+    best = Math.max(best, run);
+    last = day;
+  }
+  return best;
+}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { router } from "expo-router";
 import { Pressable, ScrollView, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
@@ -38,6 +39,7 @@ export default function PracticeScreen() {
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.bg }} edges={["top"]}>
       <ScrollView contentContainerStyle={{ padding: 16, gap: 14 }}>
         <Text variant="title">التدريب</Text>
+        {on("games") ? <Button title="🎮 ساحة رفد · خمس ألعاب ضد خصم من مستواك" onPress={() => router.push("/arena")} /> : null}
         {kind ? (
           <>
             <Game
@@ -46,7 +48,7 @@ export default function PracticeScreen() {
               words={words}
               onDone={async () => {
                 const { data } = await supabase.rpc("record_game", { p_game: kind });
-                setPlayed(typeof data === "number" ? `لعبت ${data} ألعاب اليوم · +5 نقاط للعبة الجديدة` : null);
+                setPlayed(typeof data === "number" ? `لعبت ${data} ألعاب اليوم · +5 قطرات للعبة الجديدة` : null);
                 void queryClient.invalidateQueries({ queryKey: ["home"] });
               }}
             />
@@ -68,7 +70,7 @@ export default function PracticeScreen() {
         ) : words.length < 4 ? (
           <Card>
             <Text variant="heading">الألعاب تنتظر كلماتك</Text>
-            <Text variant="muted">أكمل أول درس لتلعب بكلماته. كل لعبة جديدة في اليوم تعطيك 5 نقاط.</Text>
+            <Text variant="muted">أكمل أول درس لتلعب بكلماته. كل لعبة جديدة في اليوم تعطيك 5 قطرات.</Text>
           </Card>
         ) : (
           <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>

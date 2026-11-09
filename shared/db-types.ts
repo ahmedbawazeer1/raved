@@ -2361,6 +2361,7 @@ export type Database = {
       league_result_seen: { Args: never; Returns: undefined };
       leave_circle: { Args: never; Returns: undefined };
       monthly_champions: { Args: never; Returns: Json };
+      my_avatar_progress: { Args: never; Returns: Json };
       my_circle: { Args: never; Returns: Json };
       set_avatar: { Args: { p_avatar: Json }; Returns: undefined };
       set_league_opt_in: { Args: { p_join: boolean }; Returns: undefined };

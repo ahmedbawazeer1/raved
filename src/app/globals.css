@@ -377,3 +377,13 @@
     opacity: 0;
   }
 }
+@keyframes page-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes tab-hop {
+  40% {
+    transform: translateY(-5px) scale(1.12);
+  }
+}
