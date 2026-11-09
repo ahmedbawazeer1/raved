@@ -3,7 +3,8 @@
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { ArrowLeft, ArrowRight, Check, Lock } from "lucide-react";
 import { VIDEO_DONE, solvedStore } from "@/lib/gamification/events";
-import { fx } from "@/lib/fx";
+import { WaterBar } from "@/components/lesson/water-bar";
+import { calmMotion, fx } from "@/lib/fx";
 import { cn } from "@/lib/utils";
 
 export interface LessonStep {
@@ -54,6 +55,7 @@ export function LessonSteps({
   );
   const [picked, setPicked] = useState<number | null>(null);
   const [videoDone, setVideoDone] = useState(initialVideoDone);
+  const [move, setMove] = useState<{ dir: 1 | -1; wave: boolean; n: number }>({ dir: 1, wave: false, n: 0 });
 
   useEffect(() => {
     const onVideo = () => setVideoDone(true);
@@ -71,13 +73,16 @@ export function LessonSteps({
   const canNext = Boolean(next) && doneStep(step);
 
   const go = (to: number) => {
+    const fromVideo = Boolean(steps[index]?.video) && to > index;
+    setMove((m) => ({ dir: to >= index ? 1 : -1, wave: fromVideo && !calmMotion(), n: m.n + 1 }));
+    if (fromVideo) fx("pour");
     setPicked(to);
     try {
       localStorage.setItem(stepKey(lessonId), String(to));
     } catch {
       // storage unavailable: the lesson opens at the first step next time
     }
-    fx("pop");
+    if (!(Boolean(steps[index]?.video) && to > index)) fx("whoosh");
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -114,14 +119,42 @@ export function LessonSteps({
             );
           })}
         </ol>
-        <div className="mt-1 flex gap-1" aria-hidden="true">
-          {steps.map((s, i) => (
-            <span key={s.key} className={cn("h-1.5 flex-1 rounded-full transition-colors duration-300", i <= index ? "bg-accent" : "bg-muted")} />
-          ))}
+        <div className="mt-1">
+          <WaterBar value={index + (doneStep(step) ? 1 : 0)} max={steps.length} label="تقدم الدرس" />
         </div>
       </nav>
 
-      <section key={step.key} aria-label={step.title} className="flex flex-col gap-4 motion-safe:animate-[rise-in_.35s]">
+      {move.wave && (
+        <div
+          key={`wave-${move.n}`}
+          aria-hidden="true"
+          className="pointer-events-none fixed inset-y-0 start-0 z-50 w-[150%] motion-safe:animate-[wave-wipe_.8s_cubic-bezier(.45,0,.2,1)_forwards]"
+          style={{ transform: "translateX(105%)" }}
+        >
+          <svg viewBox="0 0 150 100" preserveAspectRatio="none" className="size-full">
+            <defs>
+              <linearGradient id="lessonWave" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0" stopColor="#6CCBF2" />
+                <stop offset="1" stopColor="#1C6FA3" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M12 0 C4 12 20 24 10 36 C2 48 18 62 8 76 C2 86 14 94 10 100 L140 100 C146 90 132 80 140 66 C148 52 134 40 142 26 C148 14 136 6 140 0 Z"
+              fill="url(#lessonWave)"
+            />
+          </svg>
+        </div>
+      )}
+      <section
+        key={step.key}
+        aria-label={step.title}
+        className={cn(
+          "flex flex-col gap-4",
+          move.dir > 0
+            ? "motion-safe:animate-[slide-in-ltr_.38s_cubic-bezier(.2,.8,.2,1)]"
+            : "motion-safe:animate-[slide-in-rtl_.38s_cubic-bezier(.2,.8,.2,1)]",
+        )}
+      >
         <p className="text-xs font-semibold text-muted-foreground">
           الخطوة {index + 1} من {steps.length}
         </p>

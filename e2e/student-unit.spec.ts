@@ -4,15 +4,18 @@ import { login, openLessonStep } from "./fixtures";
 test("a student completes today's lessons and passes the unit quiz", async ({ page }) => {
   await login(page);
 
-  // The journey map: the first stop is open, the quiz waits for the lessons.
+  // The river map: the first unit is open, the quiz waits for the lessons.
   await page.goto("/student/english");
-  await expect(page.getByRole("heading", { name: "رحلتك" })).toBeVisible();
-  await page.getByRole("link", { name: /الوحدة 1/ }).first().click();
+  await expect(page.getByRole("region", { name: /خريطة النبع/ })).toBeVisible();
+  await page
+    .getByRole("link", { name: /الوحدة 1/ })
+    .first()
+    .click();
   await expect(page.getByText("بعد إكمال الدروس")).toBeVisible();
   await page.goto("/student");
 
   // Today's session → first lesson (grammar).
-  await page.getByRole("link", { name: "ابدأ جلسة اليوم" }).click();
+  await page.getByRole("link", { name: "ابدأ درس اليوم" }).click();
   await expect(page).toHaveURL(/\/student\/learn\//);
   await expect(page.getByText("am / is / are").first()).toBeVisible();
 
@@ -20,14 +23,18 @@ test("a student completes today's lessons and passes the unit quiz", async ({ pa
   await openLessonStep(page, "التمارين");
   // The in-lesson exercise is checked on the device.
   await page.getByRole("radio", { name: "are" }).click();
-  await page.getByRole("button", { name: "تحقق من الإجابة" }).click();
-  await expect(page.getByText("إجابة صحيحة")).toBeVisible();
+  await page.getByRole("button", { name: "تحقّق", exact: true }).click();
+  await expect(page.getByText(/أحسنت ·/)).toBeVisible();
 
   await openLessonStep(page, "إنهاء الدرس");
   await page.getByRole("button", { name: /أكملت الدرس · التالي/ }).click();
+  // The reward screen, then on to the next lesson.
+  await expect(page.getByRole("heading", { name: "أحسنت!" })).toBeVisible();
+  await page.getByRole("button", { name: "متابعة" }).click();
   await expect(page.getByText("عرّف نفسك").first()).toBeVisible();
   await openLessonStep(page, "إنهاء الدرس");
   await page.getByRole("button", { name: /إلى الاختبار/ }).click();
+  await page.getByRole("button", { name: "متابعة" }).click();
 
   // Unit quiz: answers are graded on the server after submitting.
   await expect(page.getByText("السؤال 1 من 5")).toBeVisible();

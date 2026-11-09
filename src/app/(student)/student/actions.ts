@@ -25,7 +25,8 @@ export async function completeLesson(_prev: CompleteLessonState, formData: FormD
   const { error } = await supabase.rpc("complete_lesson", { p_lesson_id: lessonId.data });
   if (error) return { error: LESSON_BLOCKERS_AR[error.message] ?? "تعذر الحفظ. حاول مرة أخرى." };
   revalidatePath("/student", "layout");
-  redirect(next.startsWith("/student") ? next : "/student");
+  const to = next.startsWith("/student") ? next : "/student";
+  redirect(`/student/learn/${lessonId.data}/done?next=${encodeURIComponent(to)}`);
 }
 
 const youtubeId = z.string().regex(/^[A-Za-z0-9_-]{11}$/);

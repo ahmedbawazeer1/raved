@@ -1,6 +1,8 @@
 "use client";
 
-import { X } from "lucide-react";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { calmMotion, fx } from "@/lib/fx";
 import { MixedText } from "@/components/mixed-text";
 import { cn } from "@/lib/utils";
 
@@ -84,46 +86,70 @@ export function QuestionInput({
     );
   }
 
-  // order_words: tap words to build the sentence, tap again to remove.
+  return <WordBank words={question.words ?? []} value={value} onChange={onChange} disabled={disabled} />;
+}
+
+/**
+ * order_words: tap words to build the sentence, tap again to send them back. Each tile flies to its
+ * place (FLIP) and leaves an empty slot in the bank, so the bank never jumps around.
+ */
+function WordBank({ words, value, onChange, disabled }: { words: string[]; value: Answer; onChange: (value: Answer) => void; disabled?: boolean }) {
+  const box = useRef<HTMLDivElement>(null);
+  const before = useRef<Map<string, DOMRect>>(new Map());
   const chosen = Array.isArray(value) ? value : [];
-  const remaining = [...(question.words ?? [])];
-  for (const w of chosen) {
-    const idx = remaining.indexOf(w);
-    if (idx >= 0) remaining.splice(idx, 1);
-  }
+  // Give every tile a stable id (its index in `words`) so it can be followed between the two rows.
+  const used = new Set<number>();
+  const chosenIds = chosen.map((w) => {
+    const i = words.findIndex((x, k) => x === w && !used.has(k));
+    used.add(i);
+    return i;
+  });
+  const set = (ids: number[]) => {
+    before.current = new Map(
+      [...(box.current?.querySelectorAll<HTMLElement>("[data-tile]") ?? [])].map((el) => [el.dataset.tile ?? "", el.getBoundingClientRect()]),
+    );
+    fx("pop");
+    onChange(ids.map((k) => words[k]));
+  };
+  useLayoutEffect(() => {
+    if (!before.current.size || calmMotion()) return;
+    box.current?.querySelectorAll<HTMLElement>("[data-tile]").forEach((el) => {
+      const r0 = before.current.get(el.dataset.tile ?? "");
+      if (!r0) return;
+      const r1 = el.getBoundingClientRect();
+      if (Math.abs(r0.left - r1.left) + Math.abs(r0.top - r1.top) < 2) return;
+      gsap.fromTo(el, { x: r0.left - r1.left, y: r0.top - r1.top }, { x: 0, y: 0, duration: 0.4, ease: "back.out(1.3)" });
+    });
+    before.current = new Map();
+  }, [value]);
+  const tile =
+    "min-h-11 rounded-xl rounded-es-sm border-2 border-border bg-card px-3.5 font-en text-[15px] shadow-[0_3px_0_var(--color-border)] active:translate-y-0.5";
   return (
-    <div className="flex flex-col gap-3">
-      <div dir="ltr" aria-label="جملتك" className="flex min-h-14 flex-wrap items-center gap-2 rounded-xl border border-dashed border-input bg-card p-2.5">
+    <div ref={box} className="flex flex-col gap-3">
+      <div dir="ltr" aria-label="جملتك" className="flex min-h-[3.75rem] flex-wrap items-end gap-2 border-b-2 border-border pb-2">
         {chosen.length === 0 && (
           <span dir="rtl" className="text-sm text-muted-foreground">
             اضغط الكلمات بالترتيب
           </span>
         )}
-        {chosen.map((w, i) => (
-          <button
-            key={`${w}-${i}`}
-            type="button"
-            disabled={disabled}
-            onClick={() => onChange(chosen.filter((_, j) => j !== i))}
-            className="inline-flex min-h-10 items-center gap-1 rounded-lg bg-primary px-3 font-en text-[15px] text-white"
-          >
-            {w}
-            <X className="size-3.5" aria-hidden="true" />
+        {chosenIds.map((k, i) => (
+          <button key={k} data-tile={k} type="button" disabled={disabled} onClick={() => set(chosenIds.filter((_, j) => j !== i))} className={tile}>
+            {words[k]}
           </button>
         ))}
       </div>
-      <div dir="ltr" className="flex flex-wrap gap-2">
-        {remaining.map((w, i) => (
-          <button
-            key={`${w}-${i}`}
-            type="button"
-            disabled={disabled}
-            onClick={() => onChange([...chosen, w])}
-            className="min-h-11 rounded-lg border border-input bg-card px-3.5 font-en text-[15px]"
-          >
-            {w}
-          </button>
-        ))}
+      <div dir="ltr" className="flex flex-wrap justify-center gap-2">
+        {words.map((w, k) =>
+          used.has(k) ? (
+            <span key={k} aria-hidden="true" className="min-h-11 rounded-xl rounded-es-sm bg-muted px-3.5 font-en text-[15px] text-transparent select-none">
+              {w}
+            </span>
+          ) : (
+            <button key={k} data-tile={k} type="button" disabled={disabled} onClick={() => set([...chosenIds, k])} className={tile}>
+              {w}
+            </button>
+          ),
+        )}
       </div>
     </div>
   );

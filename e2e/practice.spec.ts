@@ -4,11 +4,11 @@ import { login, openLessonStep } from "./fixtures";
 // CI runs the app with RAVED_AI_FAKE=1: deterministic AI answers, no provider calls.
 test("writing: draft survives a reload, then it is corrected with numbered errors", async ({ page }) => {
   await login(page);
-  await page.getByRole("link", { name: "ابدأ جلسة اليوم" }).click();
+  await page.getByRole("link", { name: "ابدأ درس اليوم" }).click();
   // The task is a later step of the lesson: solve the exercise first.
   await openLessonStep(page, "التمارين");
   await page.getByRole("radio", { name: "are" }).click();
-  await page.getByRole("button", { name: "تحقق من الإجابة" }).click();
+  await page.getByRole("button", { name: "تحقّق", exact: true }).click();
   await openLessonStep(page, "المهمة");
   await page.getByRole("link", { name: "اكتب واحصل على تصحيح" }).click();
   await expect(page).toHaveURL(/\/student\/practice\/writing\//);
@@ -28,7 +28,7 @@ test("writing: draft survives a reload, then it is corrected with numbered error
 
 test("the lesson assistant answers about the lesson and counts the daily limit", async ({ page }) => {
   await login(page);
-  await page.getByRole("link", { name: "ابدأ جلسة اليوم" }).click();
+  await page.getByRole("link", { name: "ابدأ درس اليوم" }).click();
   await page.getByRole("link", { name: /اسأل المساعد/ }).click();
   await expect(page.getByText("15 سؤالاً متبقياً اليوم", { exact: false })).toBeVisible();
   await page.getByLabel("سؤالك").fill("متى أستخدم am؟");
