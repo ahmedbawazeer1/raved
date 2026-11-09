@@ -6,7 +6,7 @@ import { JourneyMap } from "@/features/journey/journey-map";
 import { useAppConfig } from "@/lib/app-config";
 import { appRoute } from "@/lib/routes";
 import { useSession } from "@/lib/session";
-import { Button, Card, colors, CompanionGreeting, LoadError, Loading, ProgressBar, Text } from "@/ui";
+import { Button, Card, colors, RafedGreeting, LoadError, Loading, ProgressBar, Text } from "@/ui";
 
 function greeting(): string {
   const hour = Number(new Intl.DateTimeFormat("en-GB", { hour: "numeric", hour12: false, timeZone: "Asia/Aden" }).format(new Date()));
@@ -53,7 +53,7 @@ export default function TodayScreen() {
           </Pressable>
         </View>
 
-        <CompanionGreeting>{bubble}</CompanionGreeting>
+        <RafedGreeting>{bubble}</RafedGreeting>
 
         {d.placementPending ? (
           <Card tone="warning">

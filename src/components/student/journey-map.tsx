@@ -4,10 +4,10 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "reac
 import Link from "next/link";
 import { Volume2, X } from "lucide-react";
 import { En } from "@/components/en";
-import { companionMarkup } from "@/lib/art/companion";
+import { RAFED_VIEWBOX, rafedMarkup } from "@shared/art/rafed";
 import { journeyLayout, landmarks, roadPath, sceneryMarkup, stopIcon, type Landmark } from "@/lib/art/journey";
 import { confetti } from "@/lib/confetti";
-import { fx, prefsStore } from "@/lib/fx";
+import { fx } from "@/lib/fx";
 import type { UnitView } from "@/lib/student/progress";
 import { speak } from "@/lib/tts";
 
@@ -153,7 +153,6 @@ function StopNode({ unit, index, x, y }: { unit: UnitView; index: number; x: num
  * locked ones wait under the fog. Landmarks teach a word when tapped.
  */
 export function JourneyMap({ units, pathSlug }: { units: UnitView[]; pathSlug: string }) {
-  const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const foundRaw = useSyncExternalStore(foundStore.subscribe, foundStore.get, () => "[]");
   const found = useMemo(() => new Set(parseFound(foundRaw)), [foundRaw]);
   const layout = useMemo(() => journeyLayout(units.length), [units.length]);
@@ -290,14 +289,9 @@ export function JourneyMap({ units, pathSlug }: { units: UnitView[]; pathSlug: s
                     <svg
                       width="54"
                       height="72"
-                      viewBox="0 0 120 160"
-                      dangerouslySetInnerHTML={{
-                        __html: companionMarkup({
-                          who: prefs.companion,
-                          mood: "happy",
-                          wave: true,
-                        }),
-                      }}
+                      viewBox={RAFED_VIEWBOX}
+                      overflow="visible"
+                      dangerouslySetInnerHTML={{ __html: rafedMarkup({ id: "rjm", mood: "happy", wave: true }) }}
                     />
                   </g>
                 </g>
@@ -335,11 +329,10 @@ export function JourneyMap({ units, pathSlug }: { units: UnitView[]; pathSlug: s
               <svg
                 width="96"
                 height="128"
-                viewBox="0 0 120 160"
+                viewBox={RAFED_VIEWBOX}
+                overflow="visible"
                 aria-hidden="true"
-                dangerouslySetInnerHTML={{
-                  __html: companionMarkup({ who: prefs.companion, headwear: prefs.headwear, hijab: prefs.hijab, mood: "happy", wave: true }),
-                }}
+                dangerouslySetInnerHTML={{ __html: rafedMarkup({ id: "rjc", mood: "happy", wave: true }) }}
               />
               <p className="text-lg font-bold">انقشع الضباب! 🌤️</p>
               <p className="text-sm text-muted-foreground">

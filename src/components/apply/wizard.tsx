@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { Companion } from "@/components/art/companion";
+import { Rafed } from "@/components/art/rafed";
 import { Alert } from "@/components/ui/form";
 import { SubmitButton } from "@/components/ui/submit-button";
-import { fx, prefsStore } from "@/lib/fx";
+import { fx } from "@/lib/fx";
 import { cn } from "@/lib/utils";
 
 export interface WizardStep {
@@ -48,7 +48,6 @@ export function Wizard({
   errorFields?: string[];
   footerNote?: React.ReactNode;
 }) {
-  const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const [picked, setPicked] = useState(0);
   const [localError, setLocalError] = useState<string | null>(null);
   const [seenErrors, setSeenErrors] = useState<string[]>([]);
@@ -100,14 +99,7 @@ export function Wizard({
             ))}
           </div>
           <div className="flex items-end gap-2">
-            <Companion
-              who={prefs.companion}
-              headwear={prefs.headwear}
-              hijab={prefs.hijab}
-              mood={last ? "happy" : "idle"}
-              wave={index === 0 || last}
-              size={64}
-            />
+            <Rafed stage={1} mood={last ? "happy" : "idle"} move={index === 0 || last ? "wave" : "nod"} moveKey={index} size={60} />
             <div className="mb-2 min-w-0 flex-1 rounded-2xl bg-white px-3.5 py-2.5 text-sm leading-relaxed font-semibold text-foreground shadow-lg">
               <h1 className="text-lg font-bold">{step.title}</h1>
               <p className="font-normal text-muted-foreground">{step.hint}</p>

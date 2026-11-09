@@ -1,10 +1,8 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
-import { Companion } from "@/components/art/companion";
+import { Rafed } from "@/components/art/rafed";
 import { GuardianArt } from "@/components/art/guardian";
 import type { Guardian } from "@/lib/art/guardians";
-import { prefsStore } from "@/lib/fx";
 import { cn } from "@/lib/utils";
 
 /**
@@ -25,7 +23,6 @@ export function BattleScene({
   outcome?: "won" | "lost";
   compact?: boolean;
 }) {
-  const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const ko = outcome === "won";
   return (
     <div className={cn("relative overflow-hidden rounded-3xl text-white", compact ? "h-36" : "h-60")}>
@@ -80,12 +77,10 @@ export function BattleScene({
         <GuardianArt id={guardian.id} ko={ko} size={compact ? 92 : 150} />
       </div>
       <div className={cn("absolute start-5 bottom-1", compact && "hidden")}>
-        <Companion
-          who={prefs.companion}
-          headwear={prefs.headwear}
-          hijab={prefs.hijab}
-          mood={outcome === "won" ? "happy" : outcome === "lost" ? "sad" : "think"}
-          wave={outcome === "won"}
+        <Rafed
+          mood={outcome === "won" ? "happy" : outcome === "lost" ? "sad" : "idle"}
+          move={outcome === "won" ? "cheer" : outcome === "lost" ? "sad" : undefined}
+          moveKey={outcome ?? undefined}
           size={84}
         />
       </div>

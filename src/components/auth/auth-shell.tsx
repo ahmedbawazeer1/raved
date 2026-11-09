@@ -1,21 +1,23 @@
 import Link from "next/link";
 import { signInWithGoogle } from "@/app/(auth)/actions";
-import { ArtDefs } from "@/components/art/art-defs";
-import { Companion } from "@/components/art/companion";
+import { DEFAULT_AVATAR } from "@shared/art/avatar";
+import { Avatar } from "@/components/art/avatar";
+import { Rafed } from "@/components/art/rafed";
+
+const GIRL = { ...DEFAULT_AVATAR, face: "oval" as const, skin: "#E9BC96", hair: "hijab" as const, hairColor: "#7A52D6", top: "#F5A524" };
 
 /** Layout for login / signup / password pages (design: Login, LoginM). */
 export function AuthShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-dvh flex-col bg-card md:flex-row">
-      <ArtDefs />
       <div className="relative flex h-48 flex-none items-end justify-between overflow-hidden rounded-b-[32px] bg-[radial-gradient(120%_90%_at_85%_0%,#18A383_0%,#0E6E5C_45%,#08392F_100%)] px-6 md:hidden">
-        <Dunes />
-        <Companion who="hamza" mood="happy" wave size={78} className="relative" />
+        <Waves />
+        <Rafed stage={3} mood="happy" move="wave" moveKey="hi" size={74} className="relative" />
         <Link href="/" aria-label="رفد — الرئيسية" className="relative mb-auto pt-6">
           {/* eslint-disable-next-line @next/next/no-img-element -- tiny static SVG */}
           <img src="/brand/raved-logo-green-white.svg" alt="شعار رفد" width={85} height={100} className="h-20 w-auto" />
         </Link>
-        <Companion who="reem" mood="happy" size={78} className="relative" />
+        <Avatar config={GIRL} size={56} className="relative" />
       </div>
       <main className="flex flex-1 items-start justify-center px-5 py-8 md:items-center md:px-10">
         <div className="flex w-full max-w-[420px] flex-col gap-6">
@@ -30,16 +32,17 @@ export function AuthShell({ children }: { children: React.ReactNode }) {
         aria-label="عن رفد"
         className="relative hidden flex-1 flex-col justify-center gap-6 overflow-hidden bg-[radial-gradient(120%_90%_at_85%_0%,#18A383_0%,#0E6E5C_45%,#08392F_100%)] px-14 text-white md:flex"
       >
-        <Dunes />
-        <div className="absolute end-10 bottom-0 flex items-end gap-2">
-          <Companion who="reem" mood="happy" size={120} />
-          <Companion who="hamza" mood="happy" wave size={120} />
+        <Waves />
+        <div className="absolute end-10 bottom-6 flex items-end gap-3">
+          <Avatar config={GIRL} size={90} />
+          <Rafed stage={3} mood="happy" move="wave" moveKey="hi" size={130} />
+          <Avatar config={DEFAULT_AVATAR} size={90} />
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element -- tiny static SVG */}
         <img src="/brand/raved-logo-green-white.svg" alt="" width={100} height={118} className="relative h-28 w-auto self-start" />
         <p className="relative max-w-md text-3xl leading-normal font-bold">كل درس تكمله اليوم خطوة نحو مهارة تبقى معك.</p>
         <ul className="relative flex flex-wrap gap-2 text-sm">
-          {["رحلة حضرموت", "ألعاب وتحديات", "يعمل بلا إنترنت", "مجاني بالكامل"].map((t) => (
+          {["رحلة النهر", "ألعاب وتحديات", "رافد يكبر معك", "مجاني بالكامل"].map((t) => (
             <li key={t} className="rounded-full bg-white/15 px-3 py-1.5">
               {t}
             </li>
@@ -84,11 +87,11 @@ export function OrDivider({ label = "أو بالبريد" }: { label?: string })
 }
 
 /** Soft sand dunes at the bottom of the green panels. */
-function Dunes() {
+function Waves() {
   return (
     <svg viewBox="0 0 400 120" preserveAspectRatio="none" className="pointer-events-none absolute inset-x-0 bottom-0 h-24 w-full" aria-hidden="true">
-      <path d="M0 70 Q100 30 200 62 T400 50 V120 H0Z" fill="#F5E6C4" opacity=".18" />
-      <path d="M0 95 Q120 60 240 90 T400 80 V120 H0Z" fill="#F5E6C4" opacity=".28" />
+      <path d="M0 70 Q100 30 200 62 T400 50 V120 H0Z" fill="#6CCBF2" opacity=".2" />
+      <path d="M0 95 Q120 60 240 90 T400 80 V120 H0Z" fill="#6CCBF2" opacity=".32" />
     </svg>
   );
 }

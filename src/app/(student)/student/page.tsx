@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { En } from "@/components/en";
-import { CompanionGreeting } from "@/components/art/companion-greeting";
+import { RafedGreeting } from "@/components/art/rafed-greeting";
 import { Hud } from "@/components/student/hud";
 import { DailyQuests } from "@/components/student/daily-quests";
 import { dailyQuests } from "@/lib/gamification/quests";
@@ -101,7 +101,7 @@ export default async function TodayPage() {
         </Link>
       </header>
 
-      <CompanionGreeting>{bubble}</CompanionGreeting>
+      <RafedGreeting>{bubble}</RafedGreeting>
 
       {placementCard && (
         <Card className="flex items-center gap-3 border-accent p-4">

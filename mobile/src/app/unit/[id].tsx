@@ -1,7 +1,7 @@
 import { Pressable, ScrollView, View } from "react-native";
 import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { guardianFor, guardianMarkup } from "@shared/art/guardians";
+import { GUARDIAN_VIEWBOX, guardianFor, guardianMarkup } from "@shared/art/guardians";
 import { useCurriculum } from "@/data/student";
 import { Art, Button, Card, colors, Header, LoadError, Loading, Text } from "@/ui";
 
@@ -36,7 +36,7 @@ export default function UnitScreen() {
   const lessons = [...unit.lessons].sort((a, b) => a.position - b.position);
   const nextIndex = lessons.findIndex((l) => !curriculum.completedLessonIds.has(l.id));
   const allDone = nextIndex < 0;
-  const guardian = guardianFor(unit.stop, unit.position);
+  const guardian = guardianFor(unit.levelCode);
   const unitOpen = unit.state !== "locked";
 
   return (
@@ -85,7 +85,7 @@ export default function UnitScreen() {
 
         {unit.quizId ? (
           <Card tone={allDone ? "warning" : "plain"} style={{ alignItems: "center" }}>
-            <Art markup={guardianMarkup(guardian.id)} viewBox="0 0 160 170" width={110} height={117} />
+            <Art markup={guardianMarkup(guardian.id)} viewBox={GUARDIAN_VIEWBOX} width={110} height={128} />
             <Text variant="heading" style={{ textAlign: "center" }}>
               {unit.quizPassed ? `هزمت ${guardian.name} 🏅` : `حارس المحطة: ${guardian.name}`}
             </Text>

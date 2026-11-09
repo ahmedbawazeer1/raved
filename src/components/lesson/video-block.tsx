@@ -1,16 +1,16 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CheckCircle2, Maximize, Pause, Play, RotateCcw, Volume2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Companion } from "@/components/art/companion";
+import { Rafed } from "@/components/art/rafed";
 import { En } from "@/components/en";
 import { recordVideoPart, recordVideoWatch } from "@/app/(student)/student/actions";
 import { isVideoPart, videoKey } from "@shared/lesson/video-part";
 import { VIDEO_DONE } from "@/lib/gamification/events";
 import { addSecond, parseRanges, videoDone, watchedPercent, watchedSeconds, type WatchRanges } from "@/lib/gamification/watch";
 import { canSeek, checkpointsFor, dueCheckpoint, formatTime, frontierOf, rangesGradient, rewindTarget, type Checkpoint } from "@/lib/lesson/player";
-import { fx, prefsStore } from "@/lib/fx";
+import { fx } from "@/lib/fx";
 import { speak } from "@/lib/tts";
 import type { GameWord } from "@/lib/games/logic";
 import type { VideoBlock as VideoBlockData } from "@/lib/content/types";
@@ -92,7 +92,6 @@ export function VideoBlock({
   /** The unit's words: a preview before the video, and fallback questions. */
   words?: GameWord[];
 }) {
-  const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const [open, setOpen] = useState(false);
   const duration = block.duration_sec ?? (block.end_sec && block.start_sec !== undefined ? block.end_sec - block.start_sec : 0);
   const tracking = required && !block.needs_check && Boolean(block.youtube_id);
@@ -311,7 +310,12 @@ export function VideoBlock({
   return (
     <section aria-label="فيديو الدرس" className="flex flex-col gap-3">
       <div className="flex items-end gap-2">
-        <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood={done ? "happy" : open ? "think" : "idle"} wave={done} size={52} />
+        <Rafed
+          mood={done ? "happy" : open ? "think" : "idle"}
+          move={done ? "hop" : open ? "listen" : undefined}
+          moveKey={done ? "done" : open ? "open" : undefined}
+          size={52}
+        />
         <p className="relative mb-2 min-w-0 flex-1 rounded-2xl border-2 border-border bg-card px-3 py-2 text-sm leading-relaxed font-semibold">{coach}</p>
       </div>
 

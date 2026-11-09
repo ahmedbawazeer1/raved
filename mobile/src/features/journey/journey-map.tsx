@@ -5,7 +5,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { journeyLayout, landmarks, MAP_WIDTH, type Landmark } from "@shared/art/journey";
 import type { UnitView } from "@shared/student/progress";
 import { fx } from "@/lib/fx";
-import { usePrefs } from "@/lib/prefs";
 import { speak } from "@/lib/speech";
 import { Art, colors, Text } from "@/ui";
 import { journeyMarkup } from "./markup";
@@ -16,7 +15,6 @@ const FOUND_KEY = "raved:map-words";
 export function JourneyMap({ units }: { units: UnitView[] }) {
   const { width: screen } = useWindowDimensions();
   const width = Math.min(screen - 32, 520);
-  const prefs = usePrefs();
   const [found, setFound] = useState<Set<string>>(new Set());
   const [word, setWord] = useState<Landmark | null>(null);
   const scroller = useRef<ScrollViewInstance>(null);
@@ -33,7 +31,7 @@ export function JourneyMap({ units }: { units: UnitView[] }) {
 
   const layout = useMemo(() => journeyLayout(units.length), [units.length]);
   const marks = useMemo(() => landmarks(layout), [layout]);
-  const markup = useMemo(() => journeyMarkup(units, layout, marks, found, prefs.companion), [units, layout, marks, found, prefs.companion]);
+  const markup = useMemo(() => journeyMarkup(units, layout, marks, found), [units, layout, marks, found]);
   const scale = width / MAP_WIDTH;
   const height = layout.height * scale;
   const viewport = Math.min(height, 560);

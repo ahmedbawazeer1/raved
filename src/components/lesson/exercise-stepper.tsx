@@ -3,11 +3,11 @@
 import { useState, useSyncExternalStore } from "react";
 import { CheckCircle2, RotateCcw, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Companion } from "@/components/art/companion";
+import { Rafed } from "@/components/art/rafed";
 import { MixedText } from "@/components/mixed-text";
 import { checkAnswer, shuffleWords } from "@/lib/content/check-answer";
 import { confetti } from "@/lib/confetti";
-import { fx, prefsStore } from "@/lib/fx";
+import { fx } from "@/lib/fx";
 import { markSolved, solvedStore } from "@/lib/gamification/events";
 import { addMistake, removeMistake } from "@/lib/mistakes";
 import type { PackageQuestion } from "@/lib/content/types";
@@ -23,7 +23,6 @@ const PRAISE = ["أحسنت!", "ممتاز!", "كذا الشغل!", "رائع!"]
  * In `review` mode it replays saved mistakes; a right answer removes the mistake.
  */
 export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: PackageQuestion[]; mode?: "lesson" | "review" }) {
-  const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const stored = solvedStore.parse(useSyncExternalStore(solvedStore.subscribe, solvedStore.getSnapshot, solvedStore.getServerSnapshot));
   const [session, setSession] = useState<Set<string>>(new Set());
   const solved = mode === "lesson" ? new Set([...stored, ...session]) : session;
@@ -102,7 +101,7 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
 
       {finished ? (
         <div className="flex flex-col items-center gap-2 py-3 text-center motion-safe:animate-[rise-in_.4s]">
-          <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood="happy" wave size={84} />
+          <Rafed mood="happy" move="cheer" moveKey="done" size={84} />
           <p className="text-lg font-bold">{mode === "review" ? "راجعت كل أخطائك 🎉" : "أنهيت كل التمارين 🎉"}</p>
           <p className="text-sm text-muted-foreground">{mode === "review" ? "الأخطاء التي صحّحتها خرجت من القائمة." : "اضغط «التالي» لتكمل الدرس."}</p>
           <Button
@@ -143,7 +142,13 @@ export function ExerciseStepper({ exercises, mode = "lesson" }: { exercises: Pac
                 result === "right" ? "bg-success-tint" : "bg-destructive-tint",
               )}
             >
-              <Companion who={prefs.companion} headwear={prefs.headwear} hijab={prefs.hijab} mood={result === "right" ? "happy" : "sad"} size={40} />
+              <Rafed
+                mood={result === "right" ? "happy" : "sad"}
+                move={result === "right" ? "hop" : "oops"}
+                moveKey={`${index}-${result}`}
+                idle={false}
+                size={40}
+              />
               <div className="min-w-0 flex-1">
                 <p className={cn("flex items-center gap-1.5 font-bold", result === "right" ? "text-success" : "text-destructive")}>
                   {result === "right" ? <CheckCircle2 className="size-4" aria-hidden="true" /> : <XCircle className="size-4" aria-hidden="true" />}
