@@ -88,6 +88,15 @@ select tests.ok(public.my_circle() is null, 'leaving works');
 select tests.ok(tests.count('select * from public.circles') = 0, 'non-members cannot read the circle');
 
 select tests.ok(public.monthly_champions() ? 'levels', 'monthly champions answer');
+select tests.ok((public.my_avatar_progress() ->> 'games_won')::int >= 0, 'own arena wins for the avatar');
+reset role;
+-- Last month: s1 earned the most drops.
+update public.xp_events set created_at = date_trunc('month', now()) - interval '10 days' where student_id = :'s1';
+set local role authenticated;
+select set_config('request.jwt.claims', json_build_object('sub', :'s1')::text, true);
+select tests.ok((public.my_avatar_progress() ->> 'champion')::boolean, 'a monthly champion unlocks the medal');
+select tests.ok(public.monthly_champions() -> 'levels' -> 'A1' -> 'drops' ->> 'name' = 'سالم أ.', 'champions show a short name');
+select set_config('request.jwt.claims', json_build_object('sub', :'s2')::text, true);
 select public.set_avatar('{"face":"round","nested":{"x":1}}');
 reset role;
 select tests.ok((select avatar from public.profiles where id = :'s2') = '{"face":"round"}'::jsonb, 'avatars keep short strings only');

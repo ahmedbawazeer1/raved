@@ -133,7 +133,7 @@ export default function TodayScreen() {
           {[
             { show: on("league"), icon: "🏆", label: "الدوري", to: "/league" as const },
             { show: on("duel"), icon: "⚔️", label: "تحدي صديق", to: "/duel" as const },
-            { show: on("games"), icon: "🎮", label: "الألعاب", to: "/practice" as const },
+            { show: on("games"), icon: "🎮", label: "الساحة", to: "/arena" as const },
             { show: true, icon: "🏅", label: "تقدّمي", to: "/progress" as const },
           ]
             .filter((l) => l.show)

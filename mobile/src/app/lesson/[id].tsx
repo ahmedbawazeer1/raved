@@ -117,7 +117,9 @@ export default function LessonScreen() {
     fx("coin");
     void AsyncStorage.removeItem(stepKey);
     await queryClient.invalidateQueries();
-    goNext();
+    // The reward screen first, then on to the next step.
+    const next = d!.nextId ? `/lesson/${d!.nextId}` : d!.quizId ? `/quiz/${d!.quizId}` : `/unit/${d!.unit.id}`;
+    router.replace({ pathname: "/lesson-done", params: { next } });
   }
 
   if (d.locked && !d.completed) {

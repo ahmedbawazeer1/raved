@@ -12,6 +12,9 @@ import { MistakesLink } from "@/components/student/mistakes-link";
 import { RiverMap } from "@/components/student/river-map";
 import { WateringCard } from "@/components/student/watering-card";
 import { stageFor } from "@shared/art/rafed";
+import { AVATAR_ITEMS } from "@shared/art/avatar";
+import { AvatarGift } from "@/components/student/avatar-gift";
+import { getAvatarProgress } from "@/lib/student/avatar-progress";
 import { watering as wateringOf } from "@shared/student/watering";
 import { ProgressBar } from "@/components/student/progress-bar";
 import { getXpRows } from "@/lib/gamification/queries";
@@ -64,15 +67,19 @@ export default async function TodayPage() {
     ]),
   ]);
   const [lessonDays, quizDays, vocabDays] = activity;
-  const water = wateringOf([
+  const studied = [
     ...(lessonDays.data ?? []).map((r) => r.completed_at),
     ...(quizDays.data ?? []).map((r) => r.created_at),
     ...(vocabDays.data ?? []).map((r) => r.last_reviewed_at),
-  ]);
+  ];
+  const water = wateringOf(studied);
   const levelsDone = curriculum
     ? new Set(curriculum.units.map((u) => u.levelCode)).size - new Set(curriculum.units.filter((u) => u.state !== "done").map((u) => u.levelCode)).size
     : 0;
   const stage = stageFor(levelsDone);
+  const avatarProgress = await getAvatarProgress(userId, { activity: studied, pathDone: step.kind === "finished" });
+  // Glasses are there from the start: only items earned later come as a gift.
+  const unlocked = AVATAR_ITEMS.filter((i) => i.key !== "glasses" && i.unlocked(avatarProgress)).map((i) => i.key);
   const xp = xpRows.reduce((sum, r) => sum + r.points, 0);
   const placementCard = path && features.placement && placement?.status !== "completed";
   const vocabToday = deck ? deck.cards.length : 0;
@@ -95,6 +102,7 @@ export default async function TodayPage() {
 
   return (
     <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
+      <AvatarGift unlocked={unlocked} />
       <header className="flex items-center gap-2">
         <h1 className="sr-only">اليوم</h1>
         <div className="min-w-0 flex-1">

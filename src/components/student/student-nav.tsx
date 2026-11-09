@@ -7,7 +7,12 @@ import { cn } from "@/lib/utils";
 
 const TABS = [
   { href: "/student", label: "اليوم", icon: Home, match: (p: string) => p === "/student" },
-  { href: "/student/learn", label: "التعلّم", icon: BookOpen, match: (p: string) => p.startsWith("/student/learn") || p.startsWith("/student/quiz") || /^\/student\/(?!vocab|practice|settings)[^/]+/.test(p) },
+  {
+    href: "/student/learn",
+    label: "التعلّم",
+    icon: BookOpen,
+    match: (p: string) => p.startsWith("/student/learn") || p.startsWith("/student/quiz") || /^\/student\/(?!vocab|practice|settings)[^/]+/.test(p),
+  },
   { href: "/student/vocab", label: "المفردات", icon: Languages, match: (p: string) => p.startsWith("/student/vocab") },
   { href: "/student/practice", label: "التدريب", icon: Dumbbell, match: (p: string) => p.startsWith("/student/practice") },
   { href: "/student/settings", label: "حسابي", icon: User, match: (p: string) => p.startsWith("/student/settings") },
@@ -32,10 +37,16 @@ export function StudentNav({ learnHref }: { learnHref: string }) {
               aria-current={active ? "page" : undefined}
               className={cn(
                 "relative flex min-h-12 min-w-[60px] flex-col items-center justify-center gap-0.5 text-[11px] font-semibold no-underline",
-                active ? "text-primary after:absolute after:bottom-1 after:size-1.5 after:rounded-full after:bg-current" : "text-muted-foreground hover:text-foreground",
+                active
+                  ? "text-primary after:absolute after:bottom-1 after:size-1.5 after:rounded-full after:bg-current"
+                  : "text-muted-foreground hover:text-foreground",
               )}
             >
-              <Icon className={cn("size-6 transition-transform", active && "-translate-y-0.5 scale-110")} strokeWidth={active ? 2.4 : 2} aria-hidden="true" />
+              <Icon
+                className={cn("size-6 transition-transform", active && "-translate-y-0.5 scale-110 motion-safe:animate-[tab-hop_.35s_ease-out]")}
+                strokeWidth={active ? 2.4 : 2}
+                aria-hidden="true"
+              />
               {label}
             </Link>
           );
