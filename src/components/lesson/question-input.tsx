@@ -93,7 +93,7 @@ export function QuestionInput({
  * order_words: tap words to build the sentence, tap again to send them back. Each tile flies to its
  * place (FLIP) and leaves an empty slot in the bank, so the bank never jumps around.
  */
-function WordBank({ words, value, onChange, disabled }: { words: string[]; value: Answer; onChange: (value: Answer) => void; disabled?: boolean }) {
+export function WordBank({ words, value, onChange, disabled }: { words: string[]; value: Answer; onChange: (value: Answer) => void; disabled?: boolean }) {
   const box = useRef<HTMLDivElement>(null);
   const before = useRef<Map<string, DOMRect>>(new Map());
   const chosen = Array.isArray(value) ? value : [];

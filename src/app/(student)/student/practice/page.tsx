@@ -1,6 +1,7 @@
 import { MistakesLink } from "@/components/student/mistakes-link";
 import type { Metadata } from "next";
 import Link from "next/link";
+import { GameIcon } from "@/components/arena/game-icon";
 import { Gamepad2, Headphones, Mic, PenLine } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -72,14 +73,22 @@ export default async function PracticePage() {
       <MistakesLink />
 
       <Link
-        href="/student/practice/games"
-        className="flex min-h-16 items-center gap-3 rounded-2xl bg-primary p-4 text-white no-underline hover:bg-primary-hover hover:text-white"
+        href="/student/arena"
+        className="flex min-h-20 items-center gap-3 rounded-3xl rounded-es-md p-4 text-white no-underline shadow-[0_5px_0_#0A5446] hover:text-white active:translate-y-1 active:shadow-none"
+        style={{ background: "linear-gradient(135deg,#1C6FA3,#0E6E5C)" }}
       >
-        <Gamepad2 className="size-7 flex-none" aria-hidden="true" />
+        <GameIcon game="drops" size={52} />
         <span className="flex-1">
-          <span className="block font-bold">ساحة الألعاب</span>
-          <span className="block text-sm text-primary-tint">سباق الدقيقة، الذاكرة، وصّل الأزواج… بالكلمات التي تعلمتها</span>
+          <span className="block text-lg font-bold">ساحة رفد</span>
+          <span className="block text-sm text-white/85">خمس ألعاب ضد خصم من مستواك: سباق القطرات، جسر الكلمات، شبكة الصيّاد…</span>
         </span>
+      </Link>
+      <Link
+        href="/student/practice/games"
+        className="flex min-h-14 items-center gap-3 rounded-2xl border border-border bg-card p-4 text-foreground no-underline hover:text-foreground"
+      >
+        <Gamepad2 className="size-6 flex-none text-primary" aria-hidden="true" />
+        <span className="flex-1 font-semibold">ألعاب التدريب · الذاكرة، وصّل الأزواج، الإملاء…</span>
       </Link>
 
       {visible.length === 0 && <Card className="p-5 text-sm leading-relaxed text-muted-foreground">مهام المحادثة والكتابة تظهر هنا عندما تصل إلى دروسها.</Card>}

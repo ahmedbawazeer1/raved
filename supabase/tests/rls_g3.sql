@@ -18,20 +18,21 @@ select tests.ok((select roleplay ->> 'opening_en' from public.units where id = :
 -- a and b finished the unit's lessons
 insert into public.lesson_progress (student_id, lesson_id, status, completed_at)
 select s, l.id, 'completed', now() from public.lessons l, unnest(array[:'a', :'b']::uuid[]) s where l.unit_id = :'unit_id';
+-- Everyone is in the league by default; c opted out before earning drops.
+update public.profiles set league_opt_in = false where id = :'c';
 insert into public.xp_events (student_id, kind, ref, points) values (:'a', 'lesson', 'x1', 30), (:'b', 'lesson', 'x2', 50), (:'c', 'lesson', 'x3', 70);
-update public.profiles set league_opt_in = true where id = :'b';
 
 -- league
 set local role authenticated;
 select set_config('request.jwt.claims', json_build_object('sub', :'a')::text, true);
-select tests.ok(jsonb_array_length(public.weekly_league('all') -> 'rows') = 2, 'league shows joined students and me only');
+select tests.ok(jsonb_array_length(public.weekly_league('all') -> 'rows') = 2, 'the group shows its members (opted-out students are not in it)');
 select tests.ok((public.weekly_league('all') -> 'me' ->> 'rank')::int = 2, 'my rank among them');
 select tests.ok(public.weekly_league('all')::text like '%علي ب.%', 'others appear as first name + initial');
 select tests.ok(not (public.weekly_league('all')::text like '%باوزير%'), 'full names never appear');
-select tests.ok(not (public.weekly_league('all')::text like '%منى%'), 'students who did not join are hidden');
-select public.set_league_opt_in(true);
+select tests.ok(not (public.weekly_league('all')::text like '%منى%'), 'students who opted out are hidden');
+select public.set_league_opt_in(false);
 reset role;
-select tests.ok((select league_opt_in from public.profiles where id = :'a'), 'student joins the league');
+select tests.ok(not (select league_opt_in from public.profiles where id = :'a'), 'student leaves the league');
 
 -- duels
 set local role authenticated;

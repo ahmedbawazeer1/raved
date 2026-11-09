@@ -1,12 +1,13 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useRef, useSyncExternalStore } from "react";
 import { Lock } from "lucide-react";
 import { AVATAR_ITEMS, FACES, HAIR_COLORS, HAIR_STYLES, SKINS, TOPS, type AvatarConfig, type AvatarProgress } from "@shared/art/avatar";
 import { Avatar } from "@/components/art/avatar";
 import { Card } from "@/components/ui/card";
 import { fx, prefsStore, setPrefs } from "@/lib/fx";
 import { cn } from "@/lib/utils";
+import { saveAvatar } from "@/app/(student)/student/settings/actions";
 
 const chip = (on: boolean) =>
   cn(
@@ -15,11 +16,22 @@ const chip = (on: boolean) =>
   );
 
 /** The avatar builder and sounds/vibration, saved on this device. Items unlock only with real progress. */
-export function ExperienceForm({ progress }: { progress: AvatarProgress }) {
+export function ExperienceForm({ progress, savedAvatar }: { progress: AvatarProgress; savedAvatar?: boolean }) {
   const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const cfg = prefs.avatar;
+  const timer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  // Others see the avatar (league, arena, circles): save it on the account a moment after a change.
+  const push = (next: AvatarConfig) => {
+    clearTimeout(timer.current);
+    timer.current = setTimeout(() => void saveAvatar(next), 700);
+  };
+  useEffect(() => {
+    if (!savedAvatar) void saveAvatar(prefsStore.getSnapshot().avatar);
+  }, [savedAvatar]);
   const set = (patch: Partial<AvatarConfig>) => {
-    setPrefs({ avatar: { ...cfg, ...patch } });
+    const next = { ...cfg, ...patch };
+    setPrefs({ avatar: next });
+    push(next);
     fx("pop");
   };
   const swatches = (list: string[], key: "skin" | "hairColor" | "top", label: string) => (

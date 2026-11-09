@@ -3,6 +3,8 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
+import { parseAvatar } from "@shared/art/avatar";
+import type { Json } from "@shared/db-types";
 import { step1Schema } from "@/lib/apply/schemas";
 import { DAILY_MINUTES } from "@/lib/apply/options";
 import { requireActiveStudent } from "@/lib/auth/session";
@@ -82,4 +84,11 @@ export async function deleteAccount(_prev: SettingsState, formData: FormData): P
   const supabase = await createClient();
   await supabase.auth.signOut();
   redirect("/?deleted=1");
+}
+
+/** The avatar other students see (league, arena, circles). The builder saves it on the device too. */
+export async function saveAvatar(avatar: unknown): Promise<void> {
+  await requireActiveStudent();
+  const supabase = await createClient();
+  await supabase.rpc("set_avatar", { p_avatar: parseAvatar(avatar) as unknown as Json });
 }

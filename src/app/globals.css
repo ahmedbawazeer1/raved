@@ -336,3 +336,44 @@
     opacity: 0;
   }
 }
+
+/* Arena */
+@keyframes river-flow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 50px;
+  }
+}
+@keyframes leaf-bob {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(-2deg);
+  }
+  50% {
+    transform: translate(-6px, 4px) rotate(2deg);
+  }
+}
+@keyframes search-ring {
+  from {
+    transform: scale(0.4);
+    opacity: 0.9;
+  }
+  to {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes vs-in-start {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+}
+@keyframes vs-in-end {
+  from {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+}
