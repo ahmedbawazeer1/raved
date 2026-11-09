@@ -4,7 +4,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Crypto from "expo-crypto";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { guardianFor, guardianMarkup } from "@shared/art/guardians";
+import { GUARDIAN_VIEWBOX, guardianFor, guardianMarkup } from "@shared/art/guardians";
 import { fx } from "@/lib/fx";
 import { supabase } from "@/lib/supabase";
 import { Art, Button, Card, colors, fonts, Header, LoadError, Loading, radius, Text } from "@/ui";
@@ -42,7 +42,7 @@ export default function QuizScreen() {
     queryFn: async () => {
       const [quiz, meta, open] = await Promise.all([
         supabase.rpc("get_quiz", { p_quiz_id: id }),
-        supabase.from("quizzes").select("pass_percent, units(id, position, stop_ar)").eq("id", id).maybeSingle(),
+        supabase.from("quizzes").select("pass_percent, units(id, position, levels(code))").eq("id", id).maybeSingle(),
         supabase.rpc("my_quiz_open", { p_quiz_id: id }),
       ]);
       if (quiz.error) throw quiz.error;
@@ -64,8 +64,8 @@ export default function QuizScreen() {
   if (q.isLoading) return <Loading />;
   if (q.isError || !q.data) return <LoadError onRetry={() => void q.refetch()} />;
   const { questions, unit, open, pass } = q.data;
-  const guardian = guardianFor(unit?.stop_ar, unit?.position ?? 1);
-  const stopName = unit?.stop_ar ?? `الوحدة ${unit?.position ?? ""}`;
+  const guardian = guardianFor(unit?.levels?.code);
+  const stopName = `الوحدة ${unit?.position ?? ""}`;
   const back = () => (unit ? router.replace(`/unit/${unit.id}`) : router.replace("/today"));
 
   if (!open) {
@@ -90,7 +90,7 @@ export default function QuizScreen() {
         <Header title="نتيجة المعركة" />
         <ScrollView contentContainerStyle={{ padding: 16, gap: 14 }}>
           <View style={{ alignItems: "center", gap: 6 }}>
-            <Art markup={guardianMarkup(guardian.id, result.passed)} viewBox="0 0 160 170" width={150} height={160} />
+            <Art markup={guardianMarkup(guardian.id, result.passed)} viewBox={GUARDIAN_VIEWBOX} width={150} height={175} />
             <Text variant="heading" style={{ textAlign: "center" }}>
               {result.passed ? `هزمت ${guardian.name}! طابع ${stopName} لك 🏅` : `${guardian.name} صمد هذه المرة`}
             </Text>
@@ -169,7 +169,7 @@ export default function QuizScreen() {
       <Header title={`معركة ${stopName}`} subtitle={`السؤال ${index + 1} من ${questions.length}`} />
       <ScrollView contentContainerStyle={{ padding: 16, gap: 14 }} keyboardShouldPersistTaps="handled">
         <View style={{ alignItems: "center" }}>
-          <Art markup={guardianMarkup(guardian.id)} viewBox="0 0 160 170" width={110} height={117} />
+          <Art markup={guardianMarkup(guardian.id)} viewBox={GUARDIAN_VIEWBOX} width={110} height={128} />
           <Text variant="small">{guardian.name}</Text>
         </View>
         <Card>

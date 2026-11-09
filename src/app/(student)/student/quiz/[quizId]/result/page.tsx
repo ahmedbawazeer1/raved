@@ -52,7 +52,7 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
 
   const { data: quiz } = await supabase
     .from("quizzes")
-    .select("pass_percent, units(id, title, position, stop_ar, levels(paths(slug)))")
+    .select("pass_percent, units(id, title, position, levels(code, paths(slug)))")
     .eq("id", quizId)
     .maybeSingle();
   const unit = quiz?.units;
@@ -70,8 +70,8 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
     }
   }
   const results = (attempt.results as unknown as ResultItem[]) ?? [];
-  const guardian = guardianFor(unit?.stop_ar, unit?.position ?? 1);
-  const stopName = unit?.stop_ar ?? `الوحدة ${unit?.position ?? ""}`;
+  const guardian = guardianFor(unit?.levels?.code);
+  const stopName = `الوحدة ${unit?.position ?? ""}`;
   const wrong = results.filter((r) => !r.correct);
 
   return (
@@ -81,7 +81,7 @@ export default async function QuizResultPage({ params, searchParams }: PageProps
         <section aria-label="نتيجة المعركة" className="flex flex-col gap-2">
           <BattleScene guardian={guardian} hp={Math.max(0, 100 - attempt.score)} outcome={attempt.passed ? "won" : "lost"} />
           <p className="text-center font-bold">
-            {attempt.passed ? `هزمت ${guardian.name}! طابع ${stopName} لك 🏅` : `${guardian.name} صمد هذه المرة`}
+            {attempt.passed ? `هزمت ${guardian.name} وعبرت السدّ! طابع ${stopName} لك` : `${guardian.name} صمد هذه المرة`}
             <span className="block text-xs font-normal text-muted-foreground">
               {attempt.correct} ضربات صحيحة من {attempt.total}
             </span>

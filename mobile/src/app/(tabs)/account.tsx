@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Linking, Pressable, ScrollView, Switch, TextInput, View } from "react-native";
 import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { companionMarkup, COMPANIONS } from "@shared/art/companion";
+import { AVATAR_VIEWBOX, HAIR_STYLES, SKINS, avatarMarkup } from "@shared/art/avatar";
 import { WEB_URL } from "@/config";
 import { APP_VERSION } from "@/lib/app-config";
 import { useFxPrefs } from "@/lib/fx";
@@ -11,7 +11,7 @@ import { useSession } from "@/lib/session";
 import { supabase } from "@/lib/supabase";
 import { Art, Button, Card, colors, fonts, radius, Text } from "@/ui";
 
-/** «حسابي»: companion, effects, a note for the Raved team, account links and sign out. */
+/** «حسابي»: avatar, effects, a note for the Raved team, account links and sign out. */
 export default function AccountScreen() {
   const { profile, session } = useSession();
   const prefs = usePrefs();
@@ -40,29 +40,51 @@ export default function AccountScreen() {
         <Button title="🏅 تقدّمي: المستوى والشارات والطوابع" variant="secondary" onPress={() => router.push("/progress")} />
 
         <Card>
-          <Text variant="heading">رفيقك في الرحلة</Text>
-          <View style={{ flexDirection: "row", gap: 12 }}>
-            {COMPANIONS.map((c) => (
+          <Text variant="heading">شخصيتك</Text>
+          <View style={{ alignItems: "center", backgroundColor: colors.primaryTint, borderRadius: radius.lg, paddingVertical: 10 }}>
+            <Art markup={avatarMarkup(prefs.avatar, { id: "me", filters: false })} viewBox={AVATAR_VIEWBOX} width={84} height={140} />
+          </View>
+          <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
+            {HAIR_STYLES.map((h) => (
               <Pressable
-                key={c.id}
-                onPress={() => setPrefs({ companion: c.id })}
+                key={h.key}
+                onPress={() => setPrefs({ avatar: { ...prefs.avatar, hair: h.key } })}
                 accessibilityRole="radio"
-                accessibilityState={{ checked: prefs.companion === c.id }}
+                accessibilityState={{ checked: prefs.avatar.hair === h.key }}
                 style={{
-                  flex: 1,
-                  alignItems: "center",
-                  padding: 8,
-                  borderRadius: radius.lg,
+                  minHeight: 44,
+                  justifyContent: "center",
+                  paddingHorizontal: 12,
+                  borderRadius: radius.md,
                   borderWidth: 2,
-                  borderColor: prefs.companion === c.id ? colors.primary : colors.border,
-                  backgroundColor: prefs.companion === c.id ? colors.primaryTint : colors.card,
+                  borderColor: prefs.avatar.hair === h.key ? colors.primary : colors.border,
+                  backgroundColor: prefs.avatar.hair === h.key ? colors.primaryTint : colors.card,
                 }}
               >
-                <Art markup={companionMarkup({ who: c.id, mood: "happy" })} viewBox="0 0 120 160" width={70} height={93} />
-                <Text style={{ fontFamily: fonts.semibold }}>{c.name}</Text>
+                <Text style={{ fontFamily: fonts.semibold }}>{h.label}</Text>
               </Pressable>
             ))}
           </View>
+          <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
+            {SKINS.map((c) => (
+              <Pressable
+                key={c}
+                onPress={() => setPrefs({ avatar: { ...prefs.avatar, skin: c } })}
+                accessibilityRole="radio"
+                accessibilityLabel={c}
+                accessibilityState={{ checked: prefs.avatar.skin === c }}
+                style={{
+                  width: 44,
+                  height: 44,
+                  borderRadius: 12,
+                  backgroundColor: c,
+                  borderWidth: 3,
+                  borderColor: prefs.avatar.skin === c ? colors.primary : colors.card,
+                }}
+              />
+            ))}
+          </View>
+          <Text variant="muted">باقي الألوان والإضافات من حسابك على الموقع.</Text>
           <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", minHeight: 44 }}>
             <Text>الاهتزاز والمؤثرات</Text>
             <Switch value={effects} onValueChange={setEffects} trackColor={{ true: colors.primary }} />

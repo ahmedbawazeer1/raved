@@ -21,21 +21,19 @@ function newClientId(): string {
 
 /**
  * One question per screen; answers are graded on the server only after the last question.
- * Shown as a battle with the guardian of the journey stop: each answer charges the attack,
+ * Shown as a battle with the dam guardian of the level's world: each answer charges the wave,
  * and the result page shows the hits once the server has graded.
  */
 export function QuizRunner({
   quizId,
   questions,
   closeHref,
-  stop,
-  position = 1,
+  levelCode,
 }: {
   quizId: string;
   questions: QuestionView[];
   closeHref: string;
-  stop?: string | null;
-  position?: number;
+  levelCode?: string | null;
 }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Answer>>({});
@@ -95,10 +93,10 @@ export function QuizRunner({
       <main className="mx-auto flex w-full max-w-[640px] flex-1 flex-col gap-5 px-4 py-6">
         <BattleScene
           compact
-          guardian={guardianFor(stop, position)}
+          guardian={guardianFor(levelCode)}
           meter={{
             value: (Object.values(answers).filter((a) => isAnswered(a)).length / questions.length) * 100,
-            label: `معركة ${stop ?? "المحطة"} · كل إجابة تشحن ضربتك`,
+            label: `معركة ${guardianFor(levelCode).name} · كل إجابة تشحن موجتك`,
           }}
         />
         <h1 className="text-xl leading-relaxed font-bold">

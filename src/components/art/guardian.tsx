@@ -1,13 +1,13 @@
-import { guardianMarkup, type Guardian } from "@/lib/art/guardians";
+import { GUARDIAN_RATIO, GUARDIAN_VIEWBOX, guardianMarkup, type GuardianId } from "@/lib/art/guardians";
 import { cn } from "@/lib/utils";
 
-/** A stop guardian (decorative). */
-export function GuardianArt({ id, ko = false, size = 140, className }: { id: Guardian["id"]; ko?: boolean; size?: number; className?: string }) {
+/** A dam guardian (decorative). */
+export function GuardianArt({ id, ko = false, size = 140, className }: { id: GuardianId; ko?: boolean; size?: number; className?: string }) {
   return (
     <svg
       width={size}
-      height={(size * 170) / 160}
-      viewBox="0 -8 160 178"
+      height={Math.round(size / GUARDIAN_RATIO)}
+      viewBox={GUARDIAN_VIEWBOX}
       aria-hidden="true"
       className={cn("flex-none overflow-visible", className)}
       // Fixed internal markup (no user input).

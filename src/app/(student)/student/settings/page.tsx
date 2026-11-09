@@ -25,9 +25,10 @@ export default async function SettingsPage() {
   const [{ data: governorates }, { count: unread }, { data: passed }] = await Promise.all([
     supabase.from("governorates").select("code, name_ar").order("position"),
     supabase.from("notifications").select("id", { count: "exact", head: true }).eq("student_id", userId).is("read_at", null),
-    supabase.from("quiz_attempts").select("quiz_id, quizzes!inner(kind)").eq("student_id", userId).eq("passed", true).eq("quizzes.kind", "unit"),
+    supabase.from("quiz_attempts").select("quiz_id, quizzes!inner(kind)").eq("student_id", userId).eq("passed", true),
   ]);
-  const stamps = new Set((passed ?? []).map((p) => p.quiz_id)).size;
+  const passedOf = (kind: string) => new Set((passed ?? []).filter((p) => p.quizzes?.kind === kind).map((p) => p.quiz_id)).size;
+  const progress = { unitsPassed: passedOf("unit"), levelsDone: passedOf("level_end"), gamesWon: 0, bestWatering: 0, champion: false, pathDone: false };
   const governorate = governorates?.find((g) => g.code === profile.governorate)?.name_ar;
 
   return (
@@ -63,7 +64,7 @@ export default async function SettingsPage() {
         <FeedbackForm />
       </Card>
 
-      <ExperienceForm stamps={stamps} />
+      <ExperienceForm progress={progress} />
 
       <Card className="p-5">
         <h2 className="mb-3 font-bold">دراستي</h2>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Pressable, View } from "react-native";
 import type { AudioBlock, ReadingBlock, StoryBlock, TableBlock } from "@shared/content/types";
-import { companionMarkup } from "@shared/art/companion";
+import { AVATAR_VIEWBOX, DEFAULT_AVATAR, avatarMarkup } from "@shared/art/avatar";
 import { fx } from "@/lib/fx";
 import { speak } from "@/lib/speech";
 import { Art, Button, colors, fonts, radius, Text } from "@/ui";
@@ -79,7 +79,15 @@ export function Story({ block, solved }: { block: StoryBlock; solved: boolean })
     <View style={{ backgroundColor: colors.card, borderRadius: radius.xl, padding: 16, gap: 12, borderWidth: 1, borderColor: colors.border }}>
       {block.title_ar ? <Text variant="heading">{block.title_ar}</Text> : null}
       <View style={{ flexDirection: "row", gap: 10, alignItems: "flex-end" }}>
-        <Art markup={companionMarkup({ who: reem ? "reem" : "hamza", mood: "happy" })} viewBox="0 0 120 160" width={60} height={80} />
+        <Art
+          markup={avatarMarkup(
+            reem ? { ...DEFAULT_AVATAR, face: "oval", skin: "#E9BC96", hair: "hijab", hairColor: "#7A52D6", top: "#F5A524" } : DEFAULT_AVATAR,
+            { id: reem ? "sr" : "sh", mouth: "big", filters: false },
+          )}
+          viewBox={AVATAR_VIEWBOX}
+          width={52}
+          height={87}
+        />
         <View style={{ flex: 1, backgroundColor: colors.primaryTint, borderRadius: 16, padding: 12, gap: 4 }}>
           <Text variant="small">{p.speaker}</Text>
           <Text variant="en" style={{ fontFamily: fonts.enBold }}>

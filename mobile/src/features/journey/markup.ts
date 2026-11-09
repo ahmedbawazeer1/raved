@@ -2,7 +2,7 @@
  * «رحلة حضرموت» as one SVG string (same drawing as the web map in src/components/student/journey-map.tsx,
  * from shared/art). Tapping is handled by views laid over the stops.
  */
-import { companionMarkup, type CompanionId } from "@shared/art/companion";
+import { rafedMarkup } from "@shared/art/rafed";
 import { roadPath, sceneryMarkup, stopIcon, type JourneyLayout, type Landmark } from "@shared/art/journey";
 import type { UnitView } from "@shared/student/progress";
 
@@ -34,7 +34,7 @@ ${unit.state === "now" ? `<g transform="translate(0 -70)"><rect x="-30" y="-15" 
 </g>`;
 }
 
-export function journeyMarkup(units: UnitView[], layout: JourneyLayout, marks: Landmark[], found: Set<string>, who: CompanionId): string {
+export function journeyMarkup(units: UnitView[], layout: JourneyLayout, marks: Landmark[], found: Set<string>): string {
   const stamps = units.filter((u) => u.state === "done").length;
   const nowIndex = units.findIndex((u) => u.state === "now");
   const focus = nowIndex >= 0 ? nowIndex : Math.max(0, stamps - 1);
@@ -67,7 +67,7 @@ export function journeyMarkup(units: UnitView[], layout: JourneyLayout, marks: L
     fogY > 0 ? `<rect width="390" height="${fogY}" fill="url(#art-fog)"/>${clouds}` : "",
     ...units.map((u, i) => stopNode(u, i, layout.stops[i].x, layout.stops[i].y)),
     companion
-      ? `<g transform="translate(${companion.x + (companion.x > 195 ? -100 : 46)} ${companion.y - 58}) scale(0.45)">${companionMarkup({ who, mood: "happy", wave: true })}</g>`
+      ? `<g transform="translate(${companion.x + (companion.x > 195 ? -100 : 46)} ${companion.y - 50}) scale(0.24)">${rafedMarkup({ id: "rjm", mood: "happy", wave: true, filters: false })}</g>`
       : "",
   ].join("\n");
 }
