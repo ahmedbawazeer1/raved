@@ -17,12 +17,21 @@ export function XpBar({ xp }: { xp: number }) {
       <span className="flex flex-1 flex-col gap-1">
         <span className="flex justify-between text-sm">
           <span className="font-bold">المستوى {lvl.level}</span>
-          <span className="font-en font-semibold">{xp} XP</span>
+          <span className="font-en font-semibold">{xp} قطرة</span>
         </span>
-        <span className="h-2 overflow-hidden rounded-full bg-muted" role="progressbar" aria-valuenow={percent} aria-valuemin={0} aria-valuemax={100} aria-label="التقدم إلى المستوى التالي">
+        <span
+          className="h-2 overflow-hidden rounded-full bg-muted"
+          role="progressbar"
+          aria-valuenow={percent}
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-label="التقدم إلى المستوى التالي"
+        >
           <span className="block h-full rounded-full bg-accent" style={{ width: `${percent}%` }} />
         </span>
-        <span className="text-xs text-muted-foreground">{lvl.span - lvl.into} نقطة للمستوى {lvl.level + 1} · شاهد أوسمتك</span>
+        <span className="text-xs text-muted-foreground">
+          {lvl.span - lvl.into} قطرة للمستوى {lvl.level + 1} · شاهد أوسمتك
+        </span>
       </span>
     </Link>
   );

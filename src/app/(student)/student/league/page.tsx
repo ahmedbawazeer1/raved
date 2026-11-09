@@ -35,13 +35,13 @@ export default async function LeaguePage({ searchParams }: PageProps<"/student/l
 
   return (
     <>
-      <TopBar backHref="/student" title="الدوري الأسبوعي" subtitle={<>نقاط هذا الأسبوع · يبدأ كل سبت</>} />
+      <TopBar backHref="/student" title="الدوري الأسبوعي" subtitle={<>قطرات هذا الأسبوع · يبدأ كل سبت</>} />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-4 px-4 py-5">
         <Card className="flex items-center gap-3 bg-foreground p-4 text-white">
           <Trophy className="size-9 flex-none text-accent" aria-hidden="true" />
           <div className="flex-1">
             <p className="font-bold">ترتيبك: {league.me?.rank ?? "—"}</p>
-            <p className="text-sm text-white/70">{league.me?.xp ?? 0} نقطة هذا الأسبوع</p>
+            <p className="text-sm text-white/70">{league.me?.xp ?? 0} قطرة هذا الأسبوع</p>
           </div>
         </Card>
 

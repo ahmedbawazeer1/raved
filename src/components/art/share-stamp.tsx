@@ -4,19 +4,17 @@ import { useState } from "react";
 import { Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ART_DEFS } from "@/lib/art/defs";
-import { stopIcon } from "@/lib/art/journey";
 
 function stampSvg(name: string, position: number): string {
-  const icon = stopIcon(name, position - 1);
   // Fixed layout; the only text is the stop name from our own content.
   const safe = name.replace(/[<>&"]/g, "");
   return `<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350"><defs>${ART_DEFS}</defs>
 <rect width="1080" height="1350" fill="#0E6E5C"/><circle cx="900" cy="160" r="320" fill="#18A383" opacity=".5"/>
 <rect x="190" y="210" width="700" height="860" rx="18" fill="#fff"/><rect x="225" y="245" width="630" height="790" rx="10" fill="url(#art-gold)"/>
-<use href="#${icon}" x="340" y="330" width="400" height="400"/>
+<path d="M540 330C540 330 380 520 380 610a160 160 0 0 0 320 0C700 520 540 330 540 330Z" fill="#2E9BD6"/><ellipse cx="480" cy="600" rx="24" ry="44" fill="#fff" opacity=".55"/><text x="540" y="670" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="140" font-weight="800" fill="#fff">${position}</text>
 <text x="540" y="850" text-anchor="middle" font-family="IBM Plex Sans Arabic, Tahoma, sans-serif" font-size="96" font-weight="700" fill="#12201D">${safe}</text>
 <text x="540" y="940" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700" fill="#3A2400">UNIT ${position}</text>
-<text x="540" y="1180" text-anchor="middle" font-family="IBM Plex Sans Arabic, Tahoma, sans-serif" font-size="58" font-weight="700" fill="#fff">أنهيت محطة ${safe} في رحلة حضرموت</text>
+<text x="540" y="1180" text-anchor="middle" font-family="IBM Plex Sans Arabic, Tahoma, sans-serif" font-size="58" font-weight="700" fill="#fff">أنهيت ${safe} في رحلة النهر</text>
 <text x="540" y="1260" text-anchor="middle" font-family="IBM Plex Sans Arabic, Tahoma, sans-serif" font-size="44" fill="#FFE38F">رفد · منصة تعليمية مجانية</text></svg>`;
 }
 
@@ -48,7 +46,7 @@ export function ShareStamp({ name, position }: { name: string; position: number 
     if (!blob) return;
     const file = new File([blob], `raved-${position}.png`, { type: "image/png" });
     if (navigator.canShare?.({ files: [file] })) {
-      await navigator.share({ files: [file], text: `أنهيت محطة ${name} في رحلة حضرموت على منصة رفد 🏅` }).catch(() => {});
+      await navigator.share({ files: [file], text: `أنهيت ${name} في رحلة النهر على منصة رفد` }).catch(() => {});
       return;
     }
     const a = document.createElement("a");

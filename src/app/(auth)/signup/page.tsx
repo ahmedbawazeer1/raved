@@ -18,7 +18,7 @@ export default async function SignupPage() {
     <AuthShell>
       <div className="flex flex-col gap-3">
         <h1 className="text-2xl font-bold">ابدأ رحلتك مع رفد</h1>
-        <p className="text-sm text-muted-foreground">مجاني بالكامل. خطوات قصيرة، ثم تبدأ أول محطة في رحلة حضرموت.</p>
+        <p className="text-sm text-muted-foreground">مجاني بالكامل. خطوات قصيرة، ثم تبدأ رحلتك على النهر مع رافد.</p>
         <ol className="grid grid-cols-4 gap-1.5 text-center text-[11px] font-semibold text-muted-foreground" aria-label="خطوات التسجيل">
           {["حسابك", "بياناتك", "هدفك", "مستواك"].map((label, i) => (
             <li key={label} className="flex flex-col items-center gap-1">

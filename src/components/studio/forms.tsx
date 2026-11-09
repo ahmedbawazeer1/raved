@@ -236,7 +236,7 @@ export function MapUnitForm({ unit, locked }: { unit: EditableUnit; locked: bool
             <Input id={id("tar")} name="title_ar" defaultValue={unit.title_ar} />
           </Field>
         </div>
-        <Field id={id("stop")} label="المحطة في رحلة حضرموت">
+        <Field id={id("stop")} label="مكان الموقف (مثل: السوق)">
           <Input id={id("stop")} name="stop_ar" defaultValue={unit.stop_ar} />
         </Field>
         <Field id={id("sit")} label="الموقف">

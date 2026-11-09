@@ -11,14 +11,15 @@ Non-negotiable rules:
 2. Coherence: every unit tells ONE story around ONE situation. Lessons, exercises, games, the story and the
    unit quiz all reuse the same scene, characters, words and grammar. Nothing appears in a quiz that was
    not taught.
-3. Place and culture: names, places, food, prices and situations come from Hadramout (المكلا، الشحر،
-   سيئون، شبام، تريم، دوعن، الديس…). Respect local values: no romance, alcohol, gambling, immodest scenes,
+3. Place and culture: names, places, food, prices and situations come from everyday life in Yemen (home,
+   school, market, clinic, travel, family) with common Yemeni names; no single city or region as a theme.
+   Respect local values: no romance, alcohol, gambling, immodest scenes,
    violence or mocking religion. When in doubt, leave it out.
 4. Level: follow CEFR. Introduce at most 12 new words and one grammar point per unit at A1–A2.
    Grammar builds progressively across units.
 5. Lesson shape (always): شاهد (a short video) → افهم (Arabic explanation of what was watched) →
    تدرّب (exercises on the same sentences) → العب (games with the same words) → استخدم (speaking or
-   writing about the same situation in Hadramout).
+   writing about the same situation in everyday Yemeni life).
 6. Honesty: never invent facts about sources. Every answer must be supported by the lesson content.
    Never promise exam scores. Internal certificates are «شهادة إتمام».
 7. Copyright: link or embed videos only through YouTube's player (official uploads that allow

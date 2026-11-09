@@ -24,7 +24,7 @@ export default async function GamesPage() {
 
   return (
     <>
-      <TopBar backHref="/student/practice" title="ساحة الألعاب" subtitle={<>كل لعبة تنهيها اليوم = 5 نقاط</>} />
+      <TopBar backHref="/student/practice" title="ساحة الألعاب" subtitle={<>كل لعبة تنهيها اليوم = 5 قطرات</>} />
       <main className="mx-auto flex w-full max-w-[640px] flex-col gap-3 px-4 py-5">
         {words.length < 4 ? (
           <Card className="p-5 text-sm leading-relaxed text-muted-foreground">الألعاب تستعمل الكلمات التي تعلمتها. أكمل أول درس في رحلتك، ثم تعال والعب.</Card>
@@ -50,7 +50,7 @@ export default async function GamesPage() {
                         لعبتها اليوم
                       </span>
                     ) : (
-                      <span className="text-xs text-warning">+5 نقاط</span>
+                      <span className="text-xs text-warning">+5 قطرات</span>
                     )}
                   </Link>
                 </li>

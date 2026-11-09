@@ -60,7 +60,8 @@ export function RoleplayChat({
     <div className="flex flex-1 flex-col">
       <main className="mx-auto flex w-full max-w-[640px] flex-1 flex-col gap-3 p-4" aria-live="polite">
         <p className="rounded-2xl bg-card p-4 text-sm leading-relaxed text-muted-foreground">
-          تحدث بالإنجليزية مع <strong className="text-foreground">{character}</strong>. اكتب جملاً قصيرة، والشخصية تصحح أخطاءك بلطف. بعد 4 رسائل تحصل على 5 نقاط.
+          تحدث بالإنجليزية مع <strong className="text-foreground">{character}</strong>. اكتب جملاً قصيرة، والشخصية تصحح أخطاءك بلطف. بعد 4 رسائل تحصل على 5
+          قطرات.
         </p>
         {messages.map((m, i) =>
           m.role === "user" ? (
@@ -83,7 +84,7 @@ export function RoleplayChat({
         {counted && (
           <p role="status" className="flex items-center gap-1.5 rounded-xl bg-warning-tint p-2.5 text-sm font-semibold text-warning">
             <Star className="size-4 fill-current" aria-hidden="true" />
-            أحسنت! حُسبت لك نقاط المحادثة
+            أحسنت! حُسبت لك قطرات المحادثة
           </p>
         )}
         {error && <Alert tone="warning">{error}</Alert>}

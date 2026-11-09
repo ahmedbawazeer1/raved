@@ -1,15 +1,15 @@
 /** docs/AI_PROMPTS.md §6. Bump the version whenever the prompt changes. */
-export const ROLEPLAY_PROMPT_VERSION = "roleplay-v1";
+export const ROLEPLAY_PROMPT_VERSION = "roleplay-v2";
 export const ROLEPLAY_HISTORY = 8;
 /** Student messages that make a conversation count (points once per unit). */
 export const ROLEPLAY_MIN_TURNS = 4;
 
 /**
- * A Hadrami character from the unit talks with the student in very simple English.
+ * A character from the unit's situation talks with the student in very simple English.
  * Student text is redacted before it reaches the model (see the action).
  */
 export function roleplaySystem(v: { scenario: string; level: string; grammar: string; words: string[] }): string {
-  return `You are a friendly character in a role-play for a secondary-school student in Hadramout, Yemen, learning English at level ${v.level}.
+  return `You are a friendly character in a role-play for a secondary-school student in Yemen, learning English at level ${v.level}.
 Scenario: ${v.scenario}
 Rules:
 - Speak only simple English for level ${v.level}: short sentences (max 2 sentences, under 30 words), common words.

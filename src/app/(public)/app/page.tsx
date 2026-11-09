@@ -26,7 +26,7 @@ export default function AndroidAppPage() {
         </span>
         <h1 className="text-[28px] font-bold md:text-4xl">رفد على جوالك الأندرويد</h1>
         <p className="max-w-[520px] text-[15px] leading-[1.9] text-muted-foreground md:text-lg">
-          نفس حسابك ودروسك وتقدمك. رحلة حضرموت والدروس والألعاب والمساعد في تطبيق سريع على جوالك.
+          نفس حسابك ودروسك وتقدمك. رحلة النهر مع رافد والدروس والألعاب والمساعد في تطبيق سريع على جوالك.
         </p>
         <Button asChild variant="accent" size="lg" className="w-full md:w-auto">
           <a href={ANDROID_APK_URL} download>

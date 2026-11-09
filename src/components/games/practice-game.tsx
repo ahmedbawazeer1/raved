@@ -25,7 +25,7 @@ export function PracticeGame({ kind, words }: { kind: GameKind; words: GameWord[
       {earned && (
         <p role="status" className="flex items-center justify-center gap-1.5 rounded-xl bg-warning-tint p-3 font-semibold text-warning">
           <Star className="size-5 fill-current" aria-hidden="true" />
-          نقاط اللعبة محسوبة لك اليوم
+          قطرات اللعبة محسوبة لك اليوم
         </p>
       )}
     </div>

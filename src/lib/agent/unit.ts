@@ -112,12 +112,12 @@ Rules for this package:
   start_sec, asking in Arabic about what was just said), then a "text" block explaining that part in simple Arabic
   (markdown), then 3–5 "exercise" blocks using the sentences from that part, then one "game" block (games: flashcards,
   match, listen_choose, memory, speed_round, spell_word, swipe_cards, dictation, pronounce).
-- The last lesson is a review lesson with a "story" block that retells the video's situation in Hadramout
-  (${input.unit.stop_ar}) with Hamza and Reem, in short panels (speaker, text_en, text_ar).
+- The last lesson is a review lesson with a "story" block that retells the video's situation (${input.unit.stop_ar})
+  with two Yemeni students (common first names, vary them between units), in short panels (speaker, text_en, text_ar).
 - One lesson has a speaking_task and one a writing_task about the same situation set in ${input.unit.stop_ar}.
 - vocab: 8–12 words from the video, with Arabic meanings, IPA and example sentences.
 - quiz: 8–10 questions only about what the lessons taught, each with exactly one right answer and an Arabic explanation.
-- stop_ar "${input.unit.stop_ar}"; roleplay with a Hadrami character in that place.
+- stop_ar "${input.unit.stop_ar}"; roleplay with a character from that everyday place.
 - Every id must be unique and stable (e.g. "${input.unit.code}-L1-e1"). version 1.
 
 The JSON schema the package must follow:
@@ -174,6 +174,6 @@ ${timelineLines(clip.timeline)}
 Add one more lesson at the end titled «مشهد من الحياة» (skill "listening") with: a video block for this scene (youtube_id
 "${clip.id}", start_sec ${clip.start_sec}, end_sec ${clip.end_sec}, duration_sec ${clip.end_sec - clip.start_sec},
 optional: true, 2 checkpoints), a short Arabic text block about what to notice, and 3–4 exercises on what was said.
-Set the unit "roleplay" to the same situation at the unit's Hadramout stop: the Hadrami character the student talks to
+Set the unit "roleplay" to the same situation: the character the student talks to
 afterwards plays the other person of this scene.`;
 }

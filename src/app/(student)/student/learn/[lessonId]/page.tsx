@@ -150,7 +150,7 @@ export default async function LessonPage({ params }: PageProps<"/student/learn/[
               </span>
               <span className="flex-1">
                 <span className="block font-semibold">تحدث مع {roleplay}</span>
-                <span className="block text-[13px] text-muted-foreground">محادثة بالإنجليزية مع شخصية من الرحلة · +5 نقاط · يحتاج اتصالاً</span>
+                <span className="block text-[13px] text-muted-foreground">محادثة بالإنجليزية مع شخصية من الرحلة · +5 قطرات · يحتاج اتصالاً</span>
               </span>
             </Link>
           )}

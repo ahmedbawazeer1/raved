@@ -115,7 +115,7 @@ Now write units ${list.join(", ")} of ${total}, in order.${
   }
 For every unit give:
 - title_en and title_ar,
-- stop_ar: the Hadramout place that is the unit's stop on «رحلة حضرموت» (towns, markets, ports, valleys; not one already used),
+- stop_ar: a short Arabic label for the everyday place of the unit's situation (e.g. السوق، المدرسة، العيادة، البيت); generic, never a specific city; not one already used,
 - situation_ar: the one everyday situation the whole unit is built around, set in that place,
 - task_ar: the real-world task the student can do at the end (Arabic),
 - objectives: ${range(t.objectives)} codes from the objectives list,

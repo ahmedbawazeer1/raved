@@ -122,7 +122,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
     kind: "lesson",
     key: "vocab",
     title_ar: "درس مفردات",
-    description_ar: "يعرّف بكلمات الوحدة في موقفها الحضرمي بفيديو وجدول وجمل، ثم يثبّتها بالتمارين والألعاب.",
+    description_ar: "يعرّف بكلمات الوحدة في موقفها اليومي بفيديو وجدول وجمل، ثم يثبّتها بالتمارين والألعاب.",
     spec: {
       skill: "vocab",
       est_minutes: 15,
@@ -134,7 +134,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           source: "model",
           phase: "activate",
           guide_en:
-            "2–3 short Arabic lines that set the unit's Hadramout scene and ask the student what they already know or would say in it. No new English yet.",
+            "2–3 short Arabic lines that set the unit's everyday scene and ask the student what they already know or would say in it. No new English yet.",
         },
         watch("A 2–8 minute part of a video that teaches or uses this lesson's new words, with 2–3 surprise questions about what was just said."),
         {
@@ -227,7 +227,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           source: "model",
           phase: "integrate",
           optional: true,
-          guide_en: "A 2–3 sentence writing task about the student's own life in Hadramout using the grammar point.",
+          guide_en: "A 2–3 sentence writing task about the student's own everyday life using the grammar point.",
         },
       ],
     },
@@ -236,7 +236,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
     kind: "lesson",
     key: "dialogue",
     title_ar: "درس حوار",
-    description_ar: "مقطع محادثة، ثم حوار قصير في الموقف بين شخصيات حضرمية، أسئلة فهم، ومهمة تحدث.",
+    description_ar: "مقطع محادثة، ثم حوار قصير في الموقف بين شخصيات يمنية، أسئلة فهم، ومهمة تحدث.",
     spec: {
       skill: "listening",
       est_minutes: 15,
@@ -257,7 +257,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           source: "model",
           phase: "demonstrate",
           guide_en:
-            "A 6–10 line dialogue in the unit's situation between Hadrami characters (speaker, text_en, text_ar). Uses the new words and the grammar point; nothing above the level.",
+            "A 6–10 line dialogue in the unit's situation between Yemeni characters (speaker, text_en, text_ar). Uses the new words and the grammar point; nothing above the level.",
         },
         {
           key: "check",
@@ -284,7 +284,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
     kind: "lesson",
     key: "review",
     title_ar: "درس مراجعة",
-    description_ar: "مقطع مراجعة، حلقة من قصة حمزة وريم تجمع الوحدة، تمارين مختلطة، ومهمة حقيقية.",
+    description_ar: "مقطع مراجعة، حلقة من قصة الوحدة تجمع ما تعلّمه الطالب، تمارين مختلطة، ومهمة حقيقية.",
     spec: {
       skill: "review",
       est_minutes: 18,
@@ -292,12 +292,12 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
         watch("A 2–8 minute part of a video that reviews the unit's language, or an authentic scene in a similar situation, with 2–3 surprise questions."),
         {
           key: "story",
-          title_ar: "رحلة حمزة وريم",
+          title_ar: "قصة الوحدة",
           block: "story",
           source: "model",
           phase: "activate",
           guide_en:
-            "An episode of the story «رحلة حمزة وريم» at the unit's stop: 6–10 panels (speaker, text_en, text_ar) using the unit's words, grammar and 2–3 review words from earlier units.",
+            "An episode of the unit's story with two Yemeni students (common first names, varied between units) in the unit's situation: 6–10 panels (speaker, text_en, text_ar) using the unit's words, grammar and 2–3 review words from earlier units.",
         },
         {
           key: "mixed",
@@ -324,7 +324,7 @@ export const DEFAULT_TEMPLATES: TemplateRow[] = [
           block: "speaking_task",
           source: "model",
           phase: "integrate",
-          guide_en: "The unit's real-world task (from the curriculum) as a speaking task set in Hadramout.",
+          guide_en: "The unit's real-world task (from the curriculum) as a speaking task set in everyday Yemeni life.",
         },
       ],
     },

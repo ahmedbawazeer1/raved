@@ -189,11 +189,11 @@
     "stop_ar": {
       "type": "string",
       "maxLength": 40,
-      "description": "Arabic name of the unit's stop on the journey map, e.g. المكلا"
+      "description": "Arabic label of the everyday place of the unit's situation, e.g. السوق"
     },
     "roleplay": {
       "type": "object",
-      "description": "AI conversation partner of the unit (Hadrami character)",
+      "description": "AI conversation partner of the unit (a character from its everyday situation)",
       "required": [
         "character_ar",
         "scenario_en",
