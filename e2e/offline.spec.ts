@@ -28,6 +28,6 @@ test("airplane mode shows the offline page instead of a browser error", async ({
 
   // Pages already visited still open from the cache.
   await page.goto("/").catch(() => undefined);
-  await expect(page.getByRole("heading", { level: 1 })).toContainText("مسارات تعليمية");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("تعلّم كل يوم قليلاً");
   await context.unrouteAll({ behavior: "ignoreErrors" });
 });

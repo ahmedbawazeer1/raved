@@ -30,9 +30,7 @@ export default async function PathsPage({ searchParams }: PageProps<"/paths">) {
     <main className="mx-auto flex max-w-[1200px] flex-col gap-6 px-4 py-7 md:px-6 md:py-14">
       <div>
         <h1 className="text-2xl font-bold md:text-[34px]">المسارات التعليمية</h1>
-        <p className="mt-1.5 text-[15px] text-muted-foreground md:text-base">
-          كل مسار مقسم إلى مستويات ووحدات قصيرة، مع اختبارات وشهادة إتمام لكل مستوى
-        </p>
+        <p className="mt-1.5 text-[15px] text-muted-foreground md:text-base">كل مسار مقسم إلى مستويات ووحدات قصيرة، مع اختبارات وشهادة إتمام لكل مستوى</p>
       </div>
       <nav aria-label="تصفية المسارات" className="flex flex-wrap gap-2">
         {FILTERS.map((x) => (
@@ -59,9 +57,7 @@ export default async function PathsPage({ searchParams }: PageProps<"/paths">) {
         <span className="flex size-11 flex-none items-center justify-center rounded-xl bg-warning-tint text-warning">
           <Lightbulb className="size-5" aria-hidden="true" />
         </span>
-        <p className="flex-1 text-[15px] leading-relaxed">
-          تقترح مساراً جديداً؟ أخبرنا بالمهارة التي تحتاجها، فالمسارات القادمة نختارها حسب طلب الطلاب.
-        </p>
+        <p className="flex-1 text-[15px] leading-relaxed">تقترح مساراً جديداً؟ أخبرنا بالمهارة التي تحتاجها، فالمسارات القادمة نختارها حسب طلب الطلاب.</p>
       </div>
     </main>
   );

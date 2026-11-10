@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: "رفد — منصة المسارات التعليمية لطلاب اليمن",
     template: "%s · رفد",
   },
-  description: "منصة تعليمية مجانية لطلاب الثانوية في اليمن. مسارات واضحة تبدأ من الصفر وتعمل حتى بلا إنترنت، أولها الإنجليزية حتى الشهادة الدولية.",
+  description: "منصة تعليمية مجانية لطلاب الثانوية في اليمن. دروس قصيرة بشرح عربي، وألعاب وتحديات، أولها الإنجليزية من الصفر حتى الامتحان الدولي.",
   applicationName: "رفد",
   appleWebApp: { capable: true, title: "رفد", statusBarStyle: "default" },
   icons: { apple: "/icons/apple-touch-icon.png" },

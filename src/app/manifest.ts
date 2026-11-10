@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "رفد — مسارات تعليمية لطلاب اليمن",
     short_name: "رفد",
-    description: "منصة تعليمية مجانية لطلاب الثانوية في اليمن، تعمل حتى بلا إنترنت.",
+    description: "منصة تعليمية مجانية لطلاب الثانوية في اليمن: دروس قصيرة، وألعاب، وتحديات.",
     lang: "ar",
     dir: "rtl",
     start_url: "/",
