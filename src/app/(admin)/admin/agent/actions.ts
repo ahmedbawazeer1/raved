@@ -1,5 +1,6 @@
 "use server";
 
+import { wakeAgent } from "@/lib/agent/wake";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
@@ -29,6 +30,7 @@ async function queueLevel(supabase: Db, pathId: string, pathSlug: string, plan: 
     },
   }));
   await supabase.from("agent_jobs").insert(rows);
+  await wakeAgent();
   return rows.length;
 }
 
@@ -67,6 +69,7 @@ export async function queuePlan(_prev: AdminFormState, formData: FormData): Prom
   const { data: busy } = await supabase.from("agent_jobs").select("id").eq("path_id", pathId.data).in("status", ["queued", "running"]).limit(1);
   if (busy?.length) return { error: "الوكيل يعمل على هذا المسار الآن. انتظر حتى ينتهي." };
   const { data, error } = await supabase.from("agent_jobs").insert({ kind: "plan_path", path_id: pathId.data }).select("id").single();
+  await wakeAgent();
   if (error) return { error: dbErrorMessage(error) };
   revalidatePath("/admin/agent");
   redirect(`/admin/agent/${data.id}`);
@@ -138,6 +141,7 @@ export async function reviewJob(_prev: AdminFormState, formData: FormData): Prom
       .insert({ kind: job.kind, path_id: job.path_id, input: { ...(job.input as Record<string, unknown>), feedback: note, previous_job: job.id } })
       .select("id")
       .single();
+    await wakeAgent();
     revalidatePath("/admin/agent");
     if (again) redirect(`/admin/agent/${again.id}`);
   }
@@ -177,6 +181,7 @@ export async function retryJob(formData: FormData): Promise<void> {
   const { data: job } = await supabase.from("agent_jobs").select("kind, path_id, input, status").eq("id", id.data).single();
   if (!job || job.status !== "failed") return;
   const { data } = await supabase.from("agent_jobs").insert({ kind: job.kind, path_id: job.path_id, input: job.input }).select("id").single();
+  await wakeAgent();
   revalidatePath("/admin/agent");
   if (data) redirect(`/admin/agent/${data.id}`);
 }

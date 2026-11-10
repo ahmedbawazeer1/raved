@@ -141,7 +141,7 @@ export default async function LevelPage({ params, searchParams }: PageProps<"/st
           </span>
           {lastLog && <p className="text-sm">{lastLog}</p>}
           {job?.status === "failed" && <p className="text-sm text-destructive">توقف: {job.error}</p>}
-          <p className="text-xs text-muted-foreground">يعمل الوكيل كل نصف ساعة. حدّث الصفحة لترى التقدم.</p>
+          <p className="text-xs text-muted-foreground">يبدأ الوكيل خلال دقائق. حدّث الصفحة لترى التقدم.</p>
         </Panel>
       )}
 

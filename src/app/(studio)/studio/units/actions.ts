@@ -1,5 +1,6 @@
 "use server";
 
+import { wakeAgent } from "@/lib/agent/wake";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
 import { requireAdmin, requireStaff } from "@/lib/auth/session";
@@ -105,6 +106,7 @@ export async function rebuildLesson(_prev: AdminFormState, formData: FormData): 
     })
     .select("id")
     .single();
+  await wakeAgent();
   if (error || !again) return { error: error ? dbErrorMessage(error) : "تعذر الإرسال." };
   await supabase.from("curriculum_units").update({ build_status: "building", build_job_id: again.id }).eq("id", unit.id);
   revalidatePath(`/studio/units/${id.data}`);
@@ -162,6 +164,7 @@ export async function rejectBuiltUnit(_prev: AdminFormState, formData: FormData)
     .insert({ kind: "factory_unit", path_id: job.path_id, input: { curriculum_unit_id: unit.id, unit_code: unit.code, feedback: note } })
     .select("id")
     .single();
+  await wakeAgent();
   await supabase
     .from("curriculum_units")
     .update({ build_status: "building", build_job_id: again?.id ?? null, teacher_ok_by: null, teacher_ok_at: null })
@@ -200,6 +203,7 @@ export async function improveUnit(_prev: AdminFormState, formData: FormData): Pr
     .insert({ kind: "factory_unit", path_id: lvl.path_id, input: { curriculum_unit_id: cu.id, unit_code: cu.code, feedback: note } })
     .select("id")
     .single();
+  await wakeAgent();
   if (error || !job) return { error: error ? dbErrorMessage(error) : "تعذر الإرسال." };
   await supabase.from("curriculum_units").update({ build_status: "building", build_job_id: job.id, teacher_ok_by: null, teacher_ok_at: null }).eq("id", cu.id);
   revalidatePath("/studio", "layout");

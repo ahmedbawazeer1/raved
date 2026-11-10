@@ -1,3 +1,4 @@
+import { wakeAgent } from "../agent/wake";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database } from "../../types/db";
 
@@ -44,6 +45,7 @@ export async function queueNextUnitWith(db: Db, levelId: string): Promise<string
     .insert({ kind: "factory_unit", path_id: level.path_id, input: { curriculum_unit_id: next.id, unit_code: next.code } })
     .select("id")
     .single();
+  await wakeAgent();
   if (error || !job) return null;
   await db.from("curriculum_units").update({ build_status: "building", build_job_id: job.id }).eq("id", next.id);
   return next.code;

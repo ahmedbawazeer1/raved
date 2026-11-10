@@ -87,7 +87,7 @@ export default async function UnitReviewPage({ params, searchParams }: PageProps
             <span className="block h-full rounded-full bg-ai" style={{ width: `${Math.max(4, job?.progress ?? 0)}%` }} />
           </span>
           {lastLog && <p className="text-sm">{lastLog}</p>}
-          <p className="text-xs text-muted-foreground">يعمل «عقل رفد» كل نصف ساعة. حدّث الصفحة لترى التقدم.</p>
+          <p className="text-xs text-muted-foreground">يبدأ «عقل رفد» خلال دقائق. حدّث الصفحة لترى التقدم.</p>
         </Panel>
       )}
       {unit.build_status === "failed" && (

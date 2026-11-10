@@ -1,5 +1,6 @@
 "use server";
 
+import { wakeAgent } from "@/lib/agent/wake";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
@@ -244,6 +245,7 @@ export async function planLevelMap(_prev: AdminFormState, formData: FormData): P
     .insert({ kind: "plan_level", path_id: level.path_id, input: { level_id: level.id, level_code: level.code, ...(feedback ? { feedback } : {}) } })
     .select("id")
     .single();
+  await wakeAgent();
   if (error) return { error: dbErrorMessage(error) };
   await supabase.from("curriculum_levels").upsert({ level_id: level.id, status: "planning", job_id: job.id });
   const { data: paused } = await supabase.from("settings").select("value").eq("key", "agent_paused").maybeSingle();
@@ -253,7 +255,7 @@ export async function planLevelMap(_prev: AdminFormState, formData: FormData): P
     message:
       paused?.value === true
         ? "أُضيفت المهمة، لكن «عقل رفد» موقوف الآن. شغّله من صفحة «عقل رفد» في الإدارة ليبدأ."
-        : "بدأ «عقل رفد» تخطيط المستوى. يأخذ ذلك عادة أقل من ساعة (يعمل كل نصف ساعة).",
+        : "بدأ «عقل رفد» تخطيط المستوى. يأخذ ذلك عادة أقل من ساعة.",
   };
 }
 
