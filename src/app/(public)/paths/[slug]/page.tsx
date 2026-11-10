@@ -147,9 +147,7 @@ async function PublishedPath({ slug }: { slug: string }) {
                 </div>
               ))}
             </div>
-            <p className="text-sm text-muted-foreground">
-              اختر حسب ما تطلبه الجامعة أو المنحة. الرسوم وطرق الدفع تتغير، ونحدّثها في المنصة.
-            </p>
+            <p className="text-sm text-muted-foreground">اختر حسب ما تطلبه الجامعة أو المنحة. الرسوم وطرق الدفع تتغير، ونحدّثها في المنصة.</p>
           </div>
         </section>
       )}
@@ -204,9 +202,7 @@ async function SoonPath({ slug }: { slug: string }) {
         </Card>
       )}
 
-      {featured && (
-        <Link href={`/paths/${featured.slug}`}>في الأثناء: ابدأ مسار الإنجليزي، فهو مفيد لأي مسار تقني ←</Link>
-      )}
+      {featured && <Link href={`/paths/${featured.slug}`}>في الأثناء: ابدأ مسار الإنجليزي، فهو مفيد لأي مسار تقني ←</Link>}
     </main>
   );
 }
