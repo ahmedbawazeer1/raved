@@ -1,8 +1,9 @@
 import type { ReactNode } from "react";
-import { Pressable, View } from "react-native";
+import { Pressable, View, type ViewStyle } from "react-native";
 import { AVATAR_HEAD_VIEWBOX, AVATAR_VIEWBOX, avatarMarkup, parseAvatar } from "@shared/art/avatar";
 import { RAFED_VIEWBOX, rafedMarkup, type RafedMood, type RafedStage } from "@shared/art/rafed";
 import { tierOf } from "@shared/gamification/league";
+import { SvgXml } from "react-native-svg";
 import { Art } from "./art";
 import { Text } from "./text";
 import { colors, radius, TOUCH } from "./theme";
@@ -110,4 +111,40 @@ export function Bottle({ value, total, color, label }: { value: number; total: n
 
 export function Row({ children, gap = 8 }: { children: ReactNode; gap?: number }) {
   return <View style={{ flexDirection: "row", alignItems: "center", gap }}>{children}</View>;
+}
+
+/** A box with a gradient background (drawn with SVG, stretched to the box). Children sit on top. */
+export function GradientBox({
+  from,
+  to,
+  radial = false,
+  radius: r = 24,
+  style,
+  children,
+}: {
+  from: string;
+  to: string;
+  radial?: boolean;
+  radius?: number;
+  style?: ViewStyle;
+  children?: ReactNode;
+}) {
+  const grad = radial
+    ? `<radialGradient id="g" cx=".85" cy="0" r="1.2"><stop offset="0" stop-color="${from}"/><stop offset="1" stop-color="${to}"/></radialGradient>`
+    : `<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${from}"/><stop offset="1" stop-color="${to}"/></linearGradient>`;
+  const xml = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs>${grad}</defs><rect width="100" height="100" fill="url(#g)"/></svg>`;
+  return (
+    <View style={[{ borderRadius: r, overflow: "hidden", backgroundColor: to }, style]}>
+      <View style={{ position: "absolute", left: 0, right: 0, top: 0, bottom: 0 }} pointerEvents="none">
+        <SvgXml xml={xml} width="100%" height="100%" />
+      </View>
+      {children}
+    </View>
+  );
+}
+
+/** A glossy water drop (watered day, drops counter). */
+export function Drop({ size = 22, color = "#2E9BD6" }: { size?: number; color?: string }) {
+  const markup = `<defs><radialGradient id="dr" cx=".34" cy=".3" r=".9"><stop offset="0" stop-color="#C9F1FF"/><stop offset=".5" stop-color="${color}"/><stop offset="1" stop-color="#1C6FA3"/></radialGradient></defs><path d="M12 2C12 2 4 12 4 17a8 8 0 0 0 16 0C20 12 12 2 12 2Z" fill="url(#dr)"/><ellipse cx="9" cy="16" rx="1.8" ry="3.2" fill="#fff" opacity=".55"/>`;
+  return <Art markup={markup} viewBox="0 0 24 26" width={size} height={size * 1.08} />;
 }

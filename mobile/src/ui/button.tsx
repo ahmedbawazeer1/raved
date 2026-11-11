@@ -5,6 +5,7 @@ import { colors, fonts, radius, TOUCH } from "./theme";
 type Variant = "primary" | "accent" | "secondary";
 
 const BG: Record<Variant, string> = { primary: colors.primary, accent: colors.accent, secondary: colors.card };
+const EDGE: Record<Variant, string> = { primary: colors.primaryHover, accent: "#C98210", secondary: colors.border };
 const FG: Record<Variant, string> = { primary: "#FFFFFF", accent: colors.ink, secondary: colors.ink };
 
 export function Button({
@@ -28,10 +29,12 @@ export function Button({
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: BG[variant],
-        borderWidth: variant === "secondary" ? 1 : 0,
-        borderColor: colors.border,
+        // A pressable "3D" key: a darker edge under the button that flattens when pressed.
+        borderWidth: variant === "secondary" ? 2 : 0,
+        borderBottomWidth: pressed ? (variant === "secondary" ? 2 : 0) : 5,
+        marginTop: pressed ? 5 - (variant === "secondary" ? 2 : 0) : 0,
+        borderColor: EDGE[variant],
         opacity: off ? 0.6 : 1,
-        transform: [{ translateY: pressed ? 2 : 0 }],
       })}
     >
       {loading ? (

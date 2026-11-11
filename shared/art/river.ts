@@ -207,8 +207,8 @@ export function riverMarkup({ world, nodes, avatar, id = "rv", labels = true }: 
   const boat = avatar
     ? `<g class="boat" transform="translate(${boatAt.x + 40} ${boatAt.y + 2})"><g class="boatB"><path d="M-26 6 C-20 22 20 22 28 4 C10 10 -10 10 -26 6Z" fill="${P.rg("#F5A524", 0.4, -0.3)}"/><path d="M-20 8 L22 6" stroke="#C77F06" stroke-width="2"/><svg x="-20" y="-42" width="40" height="46" viewBox="36 14 108 124" overflow="hidden">${avatarMarkup(avatar, { id: id + "a", filters: false })}</svg></g></g>`
     : "";
-  const markup = `<defs>${P.defs()}</defs>
-<rect width="${W}" height="${L.height}" fill="${world.sky}"/>${banks}
+  // The body first: its gradients are collected while it is drawn, then emitted in <defs>.
+  const body = `<rect width="${W}" height="${L.height}" fill="${world.sky}"/>${banks}
 <path d="${L.path}" stroke="${world.land2}" stroke-width="80" stroke-linecap="round" fill="none"/>
 <path d="${L.path}" stroke="${world.water}" stroke-width="64" stroke-linecap="round" fill="none"/>
 <path d="${L.path}" stroke="${world.water2}" stroke-width="36" stroke-linecap="round" fill="none" opacity=".55"/>
@@ -218,5 +218,7 @@ export function riverMarkup({ world, nodes, avatar, id = "rv", labels = true }: 
 ${scenery.join("")}
 ${nodes.map((n, i) => pad(n, L.points[i].x, L.points[i].y, i)).join("")}
 ${boat}`;
+  const markup = `<defs>${P.defs()}</defs>
+${body}`;
   return { markup, layout: L };
 }

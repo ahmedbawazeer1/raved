@@ -3,6 +3,7 @@ import { AVATAR_ITEMS, DEFAULT_AVATAR, avatarMarkup, parseAvatar, wearableItems 
 import { GUARDIANS, guardianFor, guardianMarkup } from "./guardians";
 import { mix, paint } from "./paint";
 import { RAFED_MOUTHS, rafedMarkup, stageFor } from "./rafed";
+import { WORLDS, riverMarkup } from "./river";
 
 const noProgress = { unitsPassed: 0, levelsDone: 0, gamesWon: 0, bestWatering: 0, champion: false, pathDone: false };
 
@@ -61,5 +62,32 @@ describe("guardians", () => {
     expect(guardianFor("IELTS").id).toBe("sea");
     expect(guardianFor(null).id).toBe("spring");
     expect(guardianMarkup("river", true)).toContain("stroke-linecap");
+  });
+});
+
+describe("every drawing is self-contained", () => {
+  // A fill that points to a gradient the drawing does not define is drawn black by the mobile app
+  // (and invisible on the web), so every url(#id) must have its id inside the same markup.
+  const undefinedFills = (markup: string) => {
+    const ids = new Set([...markup.matchAll(/id="([^"]+)"/g)].map((m) => m[1]));
+    return [...new Set([...markup.matchAll(/url\(#([^)]+)\)/g)].map((m) => m[1]))].filter((u) => !ids.has(u));
+  };
+
+  it("river map, in every world and node state", () => {
+    for (const world of Object.values(WORLDS)) {
+      const { markup } = riverMarkup({
+        world,
+        id: "t",
+        avatar: { ...DEFAULT_AVATAR, hair: "hijab" },
+        nodes: (["done", "now", "open", "locked"] as const).map((state) => ({ state, label: "x" })),
+      });
+      expect(undefinedFills(markup)).toEqual([]);
+    }
+  });
+
+  it("rafed, the avatar and the guardians", () => {
+    for (const stage of [1, 2, 3, 4, 5] as const) expect(undefinedFills(rafedMarkup({ stage, id: "r" }))).toEqual([]);
+    expect(undefinedFills(avatarMarkup({ ...DEFAULT_AVATAR, items: AVATAR_ITEMS.map((i) => i.key) }, { id: "a" }))).toEqual([]);
+    for (const g of GUARDIANS) expect(undefinedFills(guardianMarkup(g.id, false, "g"))).toEqual([]);
   });
 });
