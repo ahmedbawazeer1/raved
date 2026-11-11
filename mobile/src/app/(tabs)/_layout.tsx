@@ -6,7 +6,7 @@ import { Button, colors, fonts, Screen, Text } from "@/ui";
 
 type IconName = keyof typeof Ionicons.glyphMap;
 const TABS: { name: string; title: string; icon: IconName }[] = [
-  { name: "today", title: "اليوم", icon: "sunny" },
+  { name: "today", title: "اليوم", icon: "water-outline" },
   { name: "learn", title: "التعلّم", icon: "map" },
   { name: "vocab", title: "المفردات", icon: "layers" },
   { name: "practice", title: "التدريب", icon: "game-controller" },
@@ -33,8 +33,8 @@ export default function TabsLayout() {
         headerShown: false,
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.muted,
-        tabBarLabelStyle: { fontFamily: fonts.semibold, fontSize: 12 },
-        tabBarStyle: { minHeight: 62, paddingTop: 6 },
+        tabBarLabelStyle: { fontFamily: fonts.semibold, fontSize: 11 },
+        tabBarStyle: { minHeight: 62, paddingTop: 6, backgroundColor: colors.card, borderTopWidth: 1, borderTopColor: colors.border, elevation: 0 },
       }}
     >
       {TABS.map((t) => (

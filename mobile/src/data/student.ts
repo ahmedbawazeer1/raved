@@ -25,7 +25,7 @@ export function useHome() {
       const uid = userId!;
       const path = await fetchPrimaryPath(supabase, uid);
       const features = parseFeatures(path?.features);
-      const [curriculum, xpRows, activity, deck, unread, placement] = await Promise.all([
+      const [curriculum, xpRows, activity, deck, unread, placement, me] = await Promise.all([
         path ? fetchCurriculum(supabase, uid, path.id) : Promise.resolve(null),
         fetchXpRows(supabase, uid),
         fetchActivityDates(supabase, uid),
@@ -41,6 +41,7 @@ export function useHome() {
               .limit(1)
               .maybeSingle()
           : Promise.resolve({ data: null }),
+        supabase.from("profiles").select("league_tier").eq("id", uid).maybeSingle(),
       ]);
       const step = curriculum ? nextStep(curriculum.units, curriculum) : ({ kind: "empty" } as const);
       return {
@@ -55,6 +56,7 @@ export function useHome() {
         unread: unread.count ?? 0,
         placementPending: Boolean(path && features.placement && placement.data?.status !== "completed"),
         placementStarted: Boolean(placement.data),
+        tier: me.data?.league_tier ?? 0,
       };
     },
   });
