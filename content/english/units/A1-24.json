@@ -1,0 +1,848 @@
+{
+  "path": "english",
+  "code": "A1-24",
+  "version": 1,
+  "level": "A1",
+  "position": 24,
+  "title": "My Daily Routine",
+  "topic": "في باحة المنزل تحكي هدى لصديقتها عن يومها منذ الاستيقاظ لصلاة الفجر حتى النوم، وتسأل عن يوم صديقتها.",
+  "grammar_point": "he / she + verb-s (He wakes up at six)",
+  "can_do": [
+    "أصف روتيني اليومي بالإنجليزية",
+    "أضيف s إلى الفعل مع he / she",
+    "أستخدم always و every day"
+  ],
+  "vocab": [
+    {
+      "id": "A1-24-v1",
+      "word": "wake up",
+      "part_of_speech": "verb",
+      "meaning_ar": "يستيقظ",
+      "example_en": "I wake up at six."
+    },
+    {
+      "id": "A1-24-v2",
+      "word": "get up",
+      "part_of_speech": "verb",
+      "meaning_ar": "ينهض من السرير",
+      "example_en": "He gets up at six."
+    },
+    {
+      "id": "A1-24-v3",
+      "word": "wash",
+      "part_of_speech": "verb",
+      "meaning_ar": "يغسل / يغتسل",
+      "example_en": "I wash my face."
+    },
+    {
+      "id": "A1-24-v4",
+      "word": "pray",
+      "part_of_speech": "verb",
+      "meaning_ar": "يصلّي",
+      "example_en": "We pray in the morning."
+    },
+    {
+      "id": "A1-24-v5",
+      "word": "breakfast",
+      "part_of_speech": "noun",
+      "meaning_ar": "فطور",
+      "example_en": "I eat breakfast at seven."
+    },
+    {
+      "id": "A1-24-v6",
+      "word": "lunch",
+      "part_of_speech": "noun",
+      "meaning_ar": "غداء",
+      "example_en": "We have lunch at two o'clock."
+    },
+    {
+      "id": "A1-24-v7",
+      "word": "dinner",
+      "part_of_speech": "noun",
+      "meaning_ar": "عشاء",
+      "example_en": "She eats dinner at eight."
+    },
+    {
+      "id": "A1-24-v8",
+      "word": "study",
+      "part_of_speech": "verb",
+      "meaning_ar": "يذاكر / يدرس",
+      "example_en": "He studies in the evening."
+    },
+    {
+      "id": "A1-24-v9",
+      "word": "come home",
+      "part_of_speech": "verb",
+      "meaning_ar": "يعود إلى البيت",
+      "example_en": "She comes home at two."
+    },
+    {
+      "id": "A1-24-v10",
+      "word": "sleep",
+      "part_of_speech": "verb",
+      "meaning_ar": "ينام",
+      "example_en": "I sleep at ten."
+    },
+    {
+      "id": "A1-24-v11",
+      "word": "every day",
+      "part_of_speech": "adverb",
+      "meaning_ar": "كل يوم",
+      "example_en": "I study every day."
+    },
+    {
+      "id": "A1-24-v12",
+      "word": "always",
+      "part_of_speech": "adverb",
+      "meaning_ar": "دائماً",
+      "example_en": "I always pray in the morning."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-24-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: روتيني اليومي",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "كل يوم تقريباً يشبه الذي قبله: نستيقظ، نصلّي، نفطر، نذهب إلى المدرسة. هذا هو **الروتين**. في هذا الدرس ستحكي روتينك بالإنجليزية، وستتعلم أن تتحدث أيضاً عن روتين شخص آخر."
+        },
+        {
+          "type": "video",
+          "youtube_id": "nRA4y5Xe-eY",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 24",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "wake up",
+              "يستيقظ",
+              "I wake up at six."
+            ],
+            [
+              "get up",
+              "ينهض من السرير",
+              "He gets up at six."
+            ],
+            [
+              "wash",
+              "يغسل / يغتسل",
+              "I wash my face."
+            ],
+            [
+              "pray",
+              "يصلّي",
+              "We pray in the morning."
+            ],
+            [
+              "breakfast",
+              "فطور",
+              "I eat breakfast at seven."
+            ],
+            [
+              "lunch",
+              "غداء",
+              "We have lunch at two o'clock."
+            ],
+            [
+              "dinner",
+              "عشاء",
+              "She eats dinner at eight."
+            ],
+            [
+              "study",
+              "يذاكر / يدرس",
+              "He studies in the evening."
+            ],
+            [
+              "come home",
+              "يعود إلى البيت",
+              "She comes home at two."
+            ],
+            [
+              "sleep",
+              "ينام",
+              "I sleep at ten."
+            ],
+            [
+              "every day",
+              "كل يوم",
+              "I study every day."
+            ],
+            [
+              "always",
+              "دائماً",
+              "I always pray in the morning."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "I wake up at six. I wash my face. We pray in the morning. I eat breakfast at seven. She comes home at two. We have lunch. He studies in the evening. She eats dinner at eight. I sleep at ten every day. I always pray in the morning."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «every day» mean?",
+            "options": [
+              "سيارة",
+              "ينام",
+              "غداء",
+              "كل يوم"
+            ],
+            "answer": 3,
+            "explanation_ar": "«every day» تعني «كل يوم». مثال: I study every day."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I ___ at ten.",
+            "answer": "sleep",
+            "explanation_ar": "الكلمة الناقصة «sleep» (ينام)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «come home» mean?",
+            "options": [
+              "سيارة",
+              "يعود إلى البيت",
+              "ينهض من السرير",
+              "يصلّي"
+            ],
+            "answer": 1,
+            "explanation_ar": "«come home» تعني «يعود إلى البيت». مثال: She comes home at two."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I ___ at six. I wash my face.",
+            "answer": "wake up",
+            "explanation_ar": "الكلمة الناقصة «wake up» (يستيقظ)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «sleep» mean?",
+            "options": [
+              "حافلة",
+              "ينام",
+              "عشاء",
+              "كل يوم"
+            ],
+            "answer": 1,
+            "explanation_ar": "«sleep» تعني «ينام». مثال: I sleep at ten."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-24-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-24-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: he / she + verb-s (He wakes up at six)",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "I wake up at six. He wakes up at six. She studies every day. We always eat breakfast."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "مع **I / you / we / they** الفعل يبقى كما هو: I **wake** up, we **study**.\n\nأما مع **he / she / it** فنضيف **s** في آخر الفعل:\n- I wake up → He wake**s** up.\n- I study → She stud**ies** (ننقل y إلى ies).\n- I wash → He wash**es** (بعد sh و ch نضيف es).\n\nكلمات التكرار:\n- **every day** = كل يوم (تأتي في آخر الجملة)\n- **always** = دائماً (تأتي قبل الفعل): I **always** pray.\n\n**الخطأ الشائع:** «He wake up». الصحيح: **He wakes up**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "I / we / they",
+            "he / she",
+            "القاعدة"
+          ],
+          "rows": [
+            [
+              "wake up",
+              "wakes up",
+              "+ s"
+            ],
+            [
+              "eat",
+              "eats",
+              "+ s"
+            ],
+            [
+              "wash",
+              "washes",
+              "+ es"
+            ],
+            [
+              "study",
+              "studies",
+              "y → ies"
+            ],
+            [
+              "sleep",
+              "sleeps",
+              "+ s"
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: sleep / I / ten / at",
+            "answer": [
+              "I",
+              "sleep",
+              "at",
+              "ten"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I sleep at ten"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We ___ in the morning.",
+            "answer": "pray",
+            "explanation_ar": "الكلمة الناقصة «pray» (يصلّي)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pray» mean?",
+            "options": [
+              "يغسل / يغتسل",
+              "كل يوم",
+              "سيارة",
+              "يصلّي"
+            ],
+            "answer": 3,
+            "explanation_ar": "«pray» تعني «يصلّي». مثال: We pray in the morning."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: study / every / day / I",
+            "answer": [
+              "I",
+              "study",
+              "every",
+              "day"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I study every day"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I eat ___ at seven.",
+            "answer": "breakfast",
+            "explanation_ar": "الكلمة الناقصة «breakfast» (فطور)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 4 sentences about your daily routine and 2 about the routine of someone in your family. Use times and every day.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-24-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "هدى تحكي لصديقتها منى عن يومها. **استمع:** متى تستيقظ هدى؟ وماذا تفعل بعد المدرسة؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-24-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Huda, what is your day like?",
+              "text_ar": "يا هدى، كيف يكون يومك؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I wake up at six and I pray.",
+              "text_ar": "أستيقظ في السادسة وأصلّي."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Then?",
+              "text_ar": "ثم؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I wash my face and eat breakfast at seven.",
+              "text_ar": "أغسل وجهي وأتناول الفطور في السابعة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I come home at two and have lunch.",
+              "text_ar": "أعود إلى البيت في الثانية وأتناول الغداء."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "My brother studies every day.",
+              "text_ar": "أخي يذاكر كل يوم."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "He is a good student. He always studies in the evening.",
+              "text_ar": "إنه طالب جيد. هو دائماً يذاكر في المساء."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We sleep at ten.",
+              "text_ar": "نحن ننام في العاشرة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"We sleep at ten.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «We sleep at ten.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «come home» mean?",
+            "options": [
+              "يستيقظ",
+              "يعود إلى البيت",
+              "ينهض من السرير",
+              "غداء"
+            ],
+            "answer": 1,
+            "explanation_ar": "«come home» تعني «يعود إلى البيت». مثال: She comes home at two."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Huda, what is your day like?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Huda, what is your day like?» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pray» mean?",
+            "options": [
+              "يصلّي",
+              "ينام",
+              "سيارة",
+              "يغسل / يغتسل"
+            ],
+            "answer": 0,
+            "explanation_ar": "«pray» تعني «يصلّي». مثال: We pray in the morning."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell us your day from morning to night: wake up, school, lunch, study, dinner, sleep. Then tell the day of a person in your family.",
+        "helpful_phrases": [
+          "I wake up at ...",
+          "She eats ...",
+          "He studies ...",
+          "every day"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-24-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-24-L4-s1",
+          "title_ar": "يوم سالم",
+          "panels": [
+            {
+              "speaker": "Bilal",
+              "text_en": "Salem, what time do you wake up?",
+              "text_ar": "يا سالم، متى تستيقظ؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I wake up at five for the Fajr prayer.",
+              "text_ar": "أستيقظ في الخامسة لصلاة الفجر."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "My father wakes up at five too.",
+              "text_ar": "أبي يستيقظ في الخامسة أيضاً."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I wash my face and eat breakfast.",
+              "text_ar": "أغسل وجهي وأتناول الفطور."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "I go to school by bus.",
+              "text_ar": "أذهب إلى المدرسة بالحافلة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "My sister comes home at two.",
+              "text_ar": "أختي تعود إلى البيت في الثانية."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "We always play football in the evening.",
+              "text_ar": "نحن دائماً نلعب كرة القدم في المساء."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I sleep at ten every day.",
+              "text_ar": "أنام في العاشرة كل يوم."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «breakfast» mean?",
+            "options": [
+              "فطور",
+              "كل يوم",
+              "يصلّي",
+              "حافلة"
+            ],
+            "answer": 0,
+            "explanation_ar": "«breakfast» تعني «فطور». مثال: I eat breakfast at seven."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We ___ play football in the evening.",
+            "answer": "always",
+            "explanation_ar": "الكلمة الناقصة «always» (دائماً)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: time / you / Salem, / up / what / wake / do",
+            "answer": [
+              "Salem,",
+              "what",
+              "time",
+              "do",
+              "you",
+              "wake",
+              "up"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Salem, what time do you wake up"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"I wake up at five for the Fajr prayer.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «I wake up at five for the Fajr prayer.» هو Salem."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pray» mean?",
+            "options": [
+              "عشاء",
+              "فطور",
+              "حافلة",
+              "يصلّي"
+            ],
+            "answer": 3,
+            "explanation_ar": "«pray» تعني «يصلّي». مثال: We pray in the morning."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-24-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I ___ at six.",
+            "answer": "wake up",
+            "explanation_ar": "الكلمة الناقصة «wake up» (يستيقظ)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-24-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe your day: at least 6 sentences with times. Then say two sentences about a person in your family (he / she + verb-s).",
+        "helpful_phrases": [
+          "I wake up at ...",
+          "He / She ...s ...",
+          "every day",
+          "always"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-24-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «lunch» mean?",
+        "options": [
+          "كل يوم",
+          "فطور",
+          "غداء",
+          "يعود إلى البيت"
+        ],
+        "answer": 2,
+        "explanation_ar": "«lunch» تعني «غداء». مثال: We have lunch at two o'clock."
+      },
+      {
+        "id": "A1-24-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We ___ at ten.",
+        "answer": "sleep",
+        "explanation_ar": "الكلمة الناقصة «sleep» (ينام)."
+      },
+      {
+        "id": "A1-24-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: at / eats / dinner / eight / She",
+        "answer": [
+          "She",
+          "eats",
+          "dinner",
+          "at",
+          "eight"
+        ],
+        "explanation_ar": "الترتيب الصحيح: She eats dinner at eight"
+      },
+      {
+        "id": "A1-24-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «study» mean?",
+        "options": [
+          "دائماً",
+          "يذاكر / يدرس",
+          "يستيقظ",
+          "كل يوم"
+        ],
+        "answer": 1,
+        "explanation_ar": "«study» تعني «يذاكر / يدرس». مثال: He studies in the evening."
+      },
+      {
+        "id": "A1-24-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I always ___ in the morning.",
+        "answer": "pray",
+        "explanation_ar": "الكلمة الناقصة «pray» (يصلّي)."
+      },
+      {
+        "id": "A1-24-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Salem says: \"I sleep at ten every day.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation_ar": "الذي قال «I sleep at ten every day.» هو Salem."
+      },
+      {
+        "id": "A1-24-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «dinner» mean?",
+        "options": [
+          "عشاء",
+          "كل يوم",
+          "يعود إلى البيت",
+          "غداء"
+        ],
+        "answer": 0,
+        "explanation_ar": "«dinner» تعني «عشاء». مثال: She eats dinner at eight."
+      },
+      {
+        "id": "A1-24-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "He is a good student. He ___ studies in the evening.",
+        "answer": "always",
+        "explanation_ar": "الكلمة الناقصة «always» (دائماً)."
+      },
+      {
+        "id": "A1-24-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: at / up / He / gets / six",
+        "answer": [
+          "He",
+          "gets",
+          "up",
+          "at",
+          "six"
+        ],
+        "explanation_ar": "الترتيب الصحيح: He gets up at six"
+      },
+      {
+        "id": "A1-24-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «every day» mean?",
+        "options": [
+          "يعود إلى البيت",
+          "كل يوم",
+          "دائماً",
+          "ينهض من السرير"
+        ],
+        "answer": 1,
+        "explanation_ar": "«every day» تعني «كل يوم». مثال: I study every day."
+      }
+    ]
+  },
+  "stop_ar": "باحة المنزل",
+  "roleplay": {
+    "character_ar": "صديقتك التي تسأل عن يومك",
+    "scenario_en": "You are a friend in Yemen. Ask the student about his or her daily routine: when he or she wakes up, prays, eats breakfast, goes to school, studies and sleeps. Talk about your own day too (he / she + verb-s for your family). Use only very simple English.",
+    "opening_en": "Hello! What time do you wake up every day?"
+  },
+  "context_note": "روتيني اليومي"
+}

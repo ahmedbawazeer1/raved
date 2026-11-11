@@ -1,0 +1,85 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-16",
+  position: 16,
+  title_en: "Fruits We Like",
+  title_ar: "فواكه نحبها",
+  stop_ar: "محل الفواكه الطازجة",
+  situation_ar: "تشتري منى وأخوها فواكه من محل الفواكه الطازجة، ويسألهما البائع عن الفاكهة التي يحبانها.",
+  grammar_en: "Do you like ...? Yes, I do. / No, I don't.",
+  can_do: ["أسمّي عشر فواكه بالإنجليزية", "أسأل «هل تحب؟» بـ Do you like", "أجيب بـ Yes, I do / No, I don't"],
+  video: { id: "NDuK8lpN-mI", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 16", checked: false },
+  words: [
+    ["fruit", "noun", "فاكهة", "I like fruit."],
+    ["apple", "noun", "تفاحة", "I eat an apple every day."],
+    ["banana", "noun", "موزة", "Do you like bananas?"],
+    ["orange", "noun", "برتقالة", "The orange is sweet."],
+    ["grapes", "noun", "عنب", "I like grapes."],
+    ["mango", "noun", "مانجو", "Mango is my favourite fruit."],
+    ["watermelon", "noun", "بطيخ", "We eat watermelon in summer."],
+    ["pomegranate", "noun", "رمّان", "Pomegranates are red."],
+    ["dates", "noun", "تمر", "We eat dates in Ramadan."],
+    ["lemon", "noun", "ليمون", "The lemon is sour."],
+  ],
+  warmup_ar:
+    "اليمن بلد الفواكه الجميلة: العنب في صنعاء، والرمان، والمانجو في تهامة، والتمر في حضرموت. ما فاكهتك المفضلة؟ في هذا الدرس ستسمّي الفواكه وتسأل زميلك: **Do you like ...?**",
+  in_context: [
+    "I like fruit.",
+    "I eat an apple every day.",
+    "Do you like bananas? Yes, I do.",
+    "The orange is sweet, but the lemon is sour.",
+    "I like grapes and mango.",
+    "We eat watermelon in summer.",
+    "Pomegranates are red.",
+    "We eat dates in Ramadan.",
+  ],
+  notice: ["Do you like grapes? Yes, I do.", "Do you like lemons? No, I don't.", "Do they like mango? Yes, they do.", "Do we like dates? Yes, we do."],
+  rule_ar:
+    "لنسأل «هل تحب...؟» نضع **Do** في **أول** الجملة:\n\n- You like grapes. → **Do** you like grapes? (هل تحب العنب؟)\n\nونجيب إجابة قصيرة:\n- **Yes, I do.** (نعم أحب)\n- **No, I don't.** (لا، لا أحب)\n\nمع they و we: **Do they** like mango? **Yes, they do.** **Do we** like dates? **Yes, we do.**\n\n**الخطأ الشائع:** أن نجيب «Yes, I like» أو «Yes, I am». الجواب القصير يرد بـ **do**: **Yes, I do.**",
+  form: {
+    headers: ["السؤال", "نعم", "لا"],
+    rows: [
+      ["Do you like apples?", "Yes, I do.", "No, I don't."],
+      ["Do they like mango?", "Yes, they do.", "No, they don't."],
+      ["Do we like dates?", "Yes, we do.", "No, we don't."],
+    ],
+  },
+  write_prompt: "Write 3 questions with Do you like ...? Then answer: Yes, I do. / No, I don't.",
+  before_ar: "منى وأخوها في محل الفواكه. **استمع:** ما الفاكهة التي يحبها كل منهما؟ وأيها لا يحب؟",
+  dialogue: [
+    ["Seller", "Good morning! The fruit is fresh.", "صباح الخير! الفاكهة طازجة."],
+    ["Mona", "Good morning! Do you have mango?", "صباح الخير! هل عندكم مانجو؟"],
+    ["Seller", "Yes, I do. Do you like mango?", "نعم. هل تحبين المانجو؟"],
+    ["Mona", "Yes, I do. My brother likes grapes.", "نعم. وأخي يحب العنب."],
+    ["Seller", "Do you like pomegranates, boy?", "هل تحب الرمّان يا ولد؟"],
+    ["Brother", "Yes, I do. And dates.", "نعم. والتمر."],
+    ["Seller", "Do you like lemons?", "هل تحبون الليمون؟"],
+    ["Mona", "No, we don't. Thank you!", "لا. شكراً لك!"],
+  ],
+  speak: {
+    prompt: "Ask your friend three questions: Do you like ...? Then answer two questions about your favourite fruit.",
+    phrases: ["Do you like ...?", "Yes, I do.", "No, I don't.", "My favourite fruit is ..."],
+  },
+  story_title_ar: "سلة الفاكهة",
+  story: [
+    ["Huda", "Mona, look at the fruit basket!", "يا منى، انظري إلى سلة الفاكهة!"],
+    ["Mona", "Do you like apples?", "هل تحبين التفاح؟"],
+    ["Huda", "Yes, I do. And bananas.", "نعم. والموز."],
+    ["Mona", "Do you like oranges?", "هل تحبين البرتقال؟"],
+    ["Huda", "No, I don't. They are sour.", "لا. إنه حامض."],
+    ["Mona", "The watermelon is sweet.", "البطيخ حلو."],
+    ["Huda", "Yes, we like watermelon!", "نعم، نحن نحب البطيخ!"],
+    ["Mona", "Do we have dates?", "هل عندنا تمر؟"],
+  ],
+  task: {
+    prompt: "Ask a friend 5 questions about fruit: Do you like ...? Then say what you like and don't like.",
+    phrases: ["Do you like ...?", "Yes, I do.", "No, I don't.", "I like ..."],
+  },
+  roleplay: {
+    character_ar: "بائع الفواكه الطازجة",
+    scenario_en: "You are a fruit seller in a Yemeni market. Ask the customer: Do you like ...? about different fruits (apple, banana, orange, grapes, mango, watermelon, pomegranate, dates, lemon). Use only very simple English.",
+    opening_en: "Good morning! Fresh fruit! Do you like mango?",
+  },
+};
+export default unit;

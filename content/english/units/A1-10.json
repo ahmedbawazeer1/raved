@@ -1,856 +1,695 @@
 {
   "path": "english",
   "code": "A1-10",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 10,
-  "title": "Time",
-  "topic": "الوقت ويوم طالب حضرمي من الفجر إلى المساء",
-  "grammar_point": "present simple (I / you / we / they) + telling the time",
+  "title": "What Time Is It?",
+  "topic": "يقف طارق وسالم في موقف الحافلات في الصباح، ويسألان عن الوقت وموعد وصول الحافلة إلى المدرسة.",
+  "grammar_point": "What time is it? / at + time",
   "can_do": [
-    "أصف روتيني اليومي",
-    "أسأل عن الوقت وأخبر به",
-    "أفهم وصفاً قصيراً ليوم شخص آخر"
+    "أسأل عن الساعة وأجيب عنها",
+    "أقول موعد حدث باستخدام at",
+    "أفرّق بين الصباح والمساء والليل"
   ],
   "vocab": [
     {
       "id": "A1-10-v1",
-      "word": "get up",
-      "ipa": "/ɡet ʌp/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يستيقظ / ينهض",
-      "example_en": "I get up at five o'clock."
+      "word": "time",
+      "part_of_speech": "noun",
+      "meaning_ar": "وقت / ساعة",
+      "example_en": "What time is it?"
     },
     {
       "id": "A1-10-v2",
-      "word": "pray",
-      "ipa": "/preɪ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يصلّي",
-      "example_en": "We pray the dawn prayer at home."
+      "word": "hour",
+      "part_of_speech": "noun",
+      "meaning_ar": "ساعة (60 دقيقة)",
+      "example_en": "The bus comes in one hour."
     },
     {
       "id": "A1-10-v3",
-      "word": "have breakfast",
-      "ipa": "/hæv ˈbrekfəst/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يتناول الفطور",
-      "example_en": "I have breakfast with my family."
+      "word": "minute",
+      "part_of_speech": "noun",
+      "meaning_ar": "دقيقة",
+      "example_en": "Wait ten minutes."
     },
     {
       "id": "A1-10-v4",
-      "word": "go to school",
-      "ipa": "/ɡəʊ tə skuːl/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يذهب إلى المدرسة",
-      "example_en": "We go to school by bus."
+      "word": "o'clock",
+      "part_of_speech": "adverb",
+      "meaning_ar": "تماماً (الساعة)",
+      "example_en": "It is seven o'clock."
     },
     {
       "id": "A1-10-v5",
-      "word": "start",
-      "ipa": "/stɑːt/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يبدأ",
-      "example_en": "Lessons start at seven thirty."
+      "word": "half past",
+      "part_of_speech": "phrase",
+      "meaning_ar": "والنصف",
+      "example_en": "It is half past seven."
     },
     {
       "id": "A1-10-v6",
-      "word": "finish",
-      "ipa": "/ˈfɪnɪʃ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "ينهي / ينتهي",
-      "example_en": "We finish school at one o'clock."
+      "word": "morning",
+      "part_of_speech": "noun",
+      "meaning_ar": "صباح",
+      "example_en": "I go to school in the morning."
     },
     {
       "id": "A1-10-v7",
-      "word": "have lunch",
-      "ipa": "/hæv lʌntʃ/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يتناول الغداء",
-      "example_en": "I have lunch at two."
+      "word": "afternoon",
+      "part_of_speech": "noun",
+      "meaning_ar": "بعد الظهر",
+      "example_en": "I am at home in the afternoon."
     },
     {
       "id": "A1-10-v8",
-      "word": "do homework",
-      "ipa": "/duː ˈhəʊmwɜːk/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يحل الواجب",
-      "example_en": "I do my homework in the afternoon."
+      "word": "evening",
+      "part_of_speech": "noun",
+      "meaning_ar": "مساء",
+      "example_en": "We eat dinner in the evening."
     },
     {
       "id": "A1-10-v9",
-      "word": "help",
-      "ipa": "/help/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يساعد",
-      "example_en": "I help my mother at home."
+      "word": "night",
+      "part_of_speech": "noun",
+      "meaning_ar": "ليل",
+      "example_en": "I sleep at night."
     },
     {
       "id": "A1-10-v10",
-      "word": "go to bed",
-      "ipa": "/ɡəʊ tə bed/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يذهب إلى النوم",
-      "example_en": "I go to bed at ten o'clock."
+      "word": "early",
+      "part_of_speech": "adverb",
+      "meaning_ar": "مبكراً",
+      "example_en": "I am early today."
     },
     {
       "id": "A1-10-v11",
-      "word": "morning",
-      "ipa": "/ˈmɔːnɪŋ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "صباح",
-      "example_en": "I study in the morning."
-    },
-    {
-      "id": "A1-10-v12",
-      "word": "afternoon",
-      "ipa": "/ˌɑːftəˈnuːn/",
-      "part_of_speech": "noun",
-      "meaning_ar": "بعد الظهر / العصر",
-      "example_en": "We play football in the afternoon."
-    },
-    {
-      "id": "A1-10-v13",
-      "word": "evening",
-      "ipa": "/ˈiːvnɪŋ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مساء",
-      "example_en": "We watch TV in the evening."
-    },
-    {
-      "id": "A1-10-v14",
-      "word": "o'clock",
-      "ipa": "/əˈklɒk/",
-      "part_of_speech": "other",
-      "meaning_ar": "تماماً (للساعة)",
-      "example_en": "It's six o'clock."
+      "word": "late",
+      "part_of_speech": "adverb",
+      "meaning_ar": "متأخراً",
+      "example_en": "The bus is late."
     }
   ],
   "lessons": [
     {
-      "id": "A1-10-l1",
+      "id": "A1-10-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "يومي من الفجر إلى المساء",
-      "est_minutes": 20,
+      "title": "مفردات: كم الساعة؟",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "كيف يمضي يومك؟ تعلّم أفعال الروتين اليومي، وأوقات اليوم: **morning** (الصباح)، **afternoon** (بعد الظهر)، **evening** (المساء)."
+          "markdown_ar": "كم الساعة الآن؟ ومتى تبدأ مدرستك؟ في الصباح الباكر ينتظر الطلاب الحافلة ويسألون بعضهم عن الوقت كثيراً. في هذا الدرس تتعلم كيف تقول الساعة بالإنجليزية وتسأل: **What time is it?**"
         },
         {
           "type": "video",
           "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
+          "video_title": "كلمات انجليزية عن الوقت : كورس تعلم اللغة الانجليزية من الصفر: ١٠",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "get up",
-              "/ɡet ʌp/",
-              "يستيقظ / ينهض",
-              "I get up at five o'clock."
+              "time",
+              "وقت / ساعة",
+              "What time is it?"
             ],
             [
-              "pray",
-              "/preɪ/",
-              "يصلّي",
-              "We pray the dawn prayer at home."
+              "hour",
+              "ساعة (60 دقيقة)",
+              "The bus comes in one hour."
             ],
             [
-              "have breakfast",
-              "/hæv ˈbrekfəst/",
-              "يتناول الفطور",
-              "I have breakfast with my family."
-            ],
-            [
-              "go to school",
-              "/ɡəʊ tə skuːl/",
-              "يذهب إلى المدرسة",
-              "We go to school by bus."
-            ],
-            [
-              "start",
-              "/stɑːt/",
-              "يبدأ",
-              "Lessons start at seven thirty."
-            ],
-            [
-              "finish",
-              "/ˈfɪnɪʃ/",
-              "ينهي / ينتهي",
-              "We finish school at one o'clock."
-            ],
-            [
-              "have lunch",
-              "/hæv lʌntʃ/",
-              "يتناول الغداء",
-              "I have lunch at two."
-            ],
-            [
-              "do homework",
-              "/duː ˈhəʊmwɜːk/",
-              "يحل الواجب",
-              "I do my homework in the afternoon."
-            ],
-            [
-              "help",
-              "/help/",
-              "يساعد",
-              "I help my mother at home."
-            ],
-            [
-              "go to bed",
-              "/ɡəʊ tə bed/",
-              "يذهب إلى النوم",
-              "I go to bed at ten o'clock."
-            ],
-            [
-              "morning",
-              "/ˈmɔːnɪŋ/",
-              "صباح",
-              "I study in the morning."
-            ],
-            [
-              "afternoon",
-              "/ˌɑːftəˈnuːn/",
-              "بعد الظهر / العصر",
-              "We play football in the afternoon."
-            ],
-            [
-              "evening",
-              "/ˈiːvnɪŋ/",
-              "مساء",
-              "We watch TV in the evening."
+              "minute",
+              "دقيقة",
+              "Wait ten minutes."
             ],
             [
               "o'clock",
-              "/əˈklɒk/",
-              "تماماً (للساعة)",
-              "It's six o'clock."
+              "تماماً (الساعة)",
+              "It is seven o'clock."
+            ],
+            [
+              "half past",
+              "والنصف",
+              "It is half past seven."
+            ],
+            [
+              "morning",
+              "صباح",
+              "I go to school in the morning."
+            ],
+            [
+              "afternoon",
+              "بعد الظهر",
+              "I am at home in the afternoon."
+            ],
+            [
+              "evening",
+              "مساء",
+              "We eat dinner in the evening."
+            ],
+            [
+              "night",
+              "ليل",
+              "I sleep at night."
+            ],
+            [
+              "early",
+              "مبكراً",
+              "I am early today."
+            ],
+            [
+              "late",
+              "متأخراً",
+              "The bus is late."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "get up. I get up at five o'clock.\npray. We pray the dawn prayer at home.\nhave breakfast. I have breakfast with my family.\ngo to school. We go to school by bus.\nstart. Lessons start at seven thirty.\nfinish. We finish school at one o'clock.\nhave lunch. I have lunch at two.\ndo homework. I do my homework in the afternoon.\nhelp. I help my mother at home.\ngo to bed. I go to bed at ten o'clock.\nmorning. I study in the morning.\nafternoon. We play football in the afternoon.\nevening. We watch TV in the evening.\no'clock. It's six o'clock."
+          "text_en": "What time is it? It is seven o'clock. It is half past seven. I go to school in the morning. I am at home in the afternoon. We eat dinner in the evening. I sleep at night. The bus comes in one hour. Wait ten minutes. I am early today, but the bus is late."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e1",
+            "id": "A1-10-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "I ___ at ten o'clock at night. I'm tired.",
+            "prompt": "What does «o'clock» mean?",
             "options": [
-              "get up",
-              "go to bed",
-              "have breakfast"
+              "واحد",
+              "تماماً (الساعة)",
+              "بعد الظهر",
+              "اثنان"
             ],
             "answer": 1,
-            "explanation_ar": "في الليل نذهب للنوم: go to bed."
+            "explanation_ar": "«o'clock» تعني «تماماً (الساعة)». مثال: It is seven o'clock."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "We eat ___ in the morning.",
-            "options": [
-              "lunch",
-              "breakfast",
-              "homework"
-            ],
-            "answer": 1,
-            "explanation_ar": "وجبة الصباح breakfast."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e3",
+            "id": "A1-10-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I do my ___ after school. (الواجب)",
-            "answer": "homework",
-            "explanation_ar": "الواجب المدرسي = homework."
+            "prompt": "I am at home in the ___.",
+            "answer": "afternoon",
+            "explanation_ar": "الكلمة الناقصة «afternoon» (بعد الظهر)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «one» mean?",
+            "options": [
+              "واحد",
+              "وقت / ساعة",
+              "متأخراً",
+              "صباح"
+            ],
+            "answer": 0,
+            "explanation_ar": "«one» تعني «واحد». مثال: I have one pen."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We eat dinner in the ___.",
+            "answer": "evening",
+            "explanation_ar": "الكلمة الناقصة «evening» (مساء)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «afternoon» mean?",
+            "options": [
+              "والنصف",
+              "ساعة (60 دقيقة)",
+              "بعد الظهر",
+              "اثنان"
+            ],
+            "answer": 2,
+            "explanation_ar": "«afternoon» تعني «بعد الظهر». مثال: I am at home in the afternoon."
           }
         },
         {
           "type": "game",
-          "id": "A1-10-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g4",
-          "game": "pronounce"
+          "id": "A1-10-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-10-l2",
+      "id": "A1-10-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "المضارع البسيط + الوقت",
-      "est_minutes": 30,
+      "title": "قاعدة: What time is it? / at + time",
+      "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "تعرّفنا على **المضارع البسيط** في الوحدة 5 مع he و she. في هذه الوحدة نستعمله لنحكي **يومنا نحن** مع الوقت.\n\nمع **I, you, we, they** نستخدم الفعل كما هو بدون إضافة: «I **get up** at six.» «We **go** to school.»"
+          "type": "audio",
+          "text_en": "What time is it? It is two o'clock. It is half past three. School is at seven o'clock. The bus is at half past seven."
         },
         {
-          "type": "video",
-          "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
+          "type": "text",
+          "markdown_ar": "لنسأل عن الساعة نقول: **What time is it?** ونجيب بـ **It is** + الوقت:\n\n- **It is seven o'clock.** = الساعة السابعة تماماً.\n- **It is half past seven.** = السابعة والنصف.\n\nلنقول **موعد** حدث ما نستخدم حرف الجر **at** قبل الساعة:\n- School starts **at** seven o'clock.\n- The bus is **at** half past seven.\n\nومع أجزاء اليوم نستخدم **in**: **in** the morning, **in** the afternoon, **in** the evening. أما الليل فنقول **at** night.\n\n**الخطأ الشائع:** أن نقول «in seven o'clock». الصحيح: **at** seven o'clock."
         },
         {
           "type": "table",
           "headers": [
-            "",
-            "الصيغة",
+            "الكلمة",
+            "تُستخدم مع",
             "مثال"
           ],
           "rows": [
             [
-              "إثبات",
-              "I / you / we / they + الفعل",
-              "They play football."
+              "at",
+              "الساعة",
+              "at seven o'clock"
             ],
             [
-              "نفي",
-              "don't (do not) + الفعل",
-              "I don't watch TV in the morning."
+              "at",
+              "night",
+              "at night"
             ],
             [
-              "سؤال",
-              "Do + الفاعل + الفعل؟",
-              "Do you walk to school?"
+              "in",
+              "the morning",
+              "in the morning"
             ],
             [
-              "إجابة",
-              "Yes, I do. / No, I don't.",
-              "Do they live in Tarim? — Yes, they do."
-            ],
-            [
-              "سؤال بأداة",
-              "What time / When + do + …؟",
-              "What time do you get up?"
+              "in",
+              "the afternoon / evening",
+              "in the evening"
             ]
           ]
         },
         {
-          "type": "text",
-          "markdown_ar": "**قول الوقت:**\n\n- **What time is it?** = كم الساعة؟\n- 6:00 = It's **six o'clock**.\n- 6:30 = It's **six thirty** (أو half past six).\n- 6:15 = It's **six fifteen** (أو quarter past six).\n- مع الوقت نستخدم **at**: at seven o'clock. ومع أجزاء اليوم **in**: in the morning, in the evening. لكن **at night**."
-        },
-        {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "We ___ to school at seven o'clock.",
-            "options": [
-              "go",
-              "goes",
-              "going"
-            ],
-            "answer": 0,
-            "explanation_ar": "مع we يبقى الفعل كما هو: go."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "I ___ drink coffee. I drink tea.",
-            "options": [
-              "not",
-              "don't",
-              "doesn't"
-            ],
-            "answer": 1,
-            "explanation_ar": "النفي مع I: don't + الفعل."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e6",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ you have breakfast at home? — Yes, I do.",
-            "answer": "Do",
-            "explanation_ar": "السؤال يبدأ بـ Do مع you."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e7",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "I study ___ the evening.",
-            "options": [
-              "at",
-              "in",
-              "on"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع أجزاء اليوم نستخدم in: in the evening."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "7:30 تُقرأ:",
-            "options": [
-              "seven thirteen",
-              "seven thirty",
-              "thirty seven"
-            ],
-            "answer": 1,
-            "explanation_ar": "7:30 = seven thirty."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e9",
+            "id": "A1-10-L2-e4-1",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: time / you / get up / what / do",
+            "prompt": "رتب الكلمات: half / past / seven / It / is",
             "answer": [
-              "What",
-              "time",
-              "do",
-              "you",
-              "get up"
+              "It",
+              "is",
+              "half",
+              "past",
+              "seven"
             ],
-            "explanation_ar": "What time + do + you + الفعل؟"
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-10-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "يوم مازن",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "استمع إلى **مازن** من **تريم** وهو يحكي عن يومه الدراسي. انتبه للأوقات."
-        },
-        {
-          "type": "video",
-          "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
-        },
-        {
-          "type": "audio",
-          "text_en": "Hi, I'm Mazen. I'm from Tarim and I'm in the third grade. On school days, I get up at five o'clock. I pray and then I have breakfast with my family. We have bread, beans and tea. I walk to school with my cousin. Lessons start at seven thirty. We finish at one o'clock and I have lunch at home at two. In the afternoon, I do my homework and I help my father in his shop. In the evening, I read or I talk to my friends. I go to bed at ten o'clock. I don't stay up late."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What time does Mazen get up?",
-            "options": [
-              "five o'clock",
-              "seven thirty",
-              "ten o'clock"
-            ],
-            "answer": 0,
-            "explanation_ar": "قال: I get up at five o'clock."
+            "explanation_ar": "الترتيب الصحيح: It is half past seven"
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Mazen goes to school by bus.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: I walk to school with my cousin."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e12",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What does Mazen do in the afternoon?",
-            "options": [
-              "He plays football.",
-              "He helps his father.",
-              "He goes to bed."
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: I help my father in his shop."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-10-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "يوم في قرية قرب تريم",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن يوم عائلة تعيش في قرية قرب **تريم**، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
-        },
-        {
-          "type": "reading",
-          "text_en": "The Al-Kaff family live in a village near Tarim. Their day starts early. They get up at half past four. The father and the sons go to the mosque for the dawn prayer. Then they have breakfast together. The children walk to school. It is two kilometres from their house. In the afternoon, the girls help their mother, and the boys help their father on the date farm. They don't have a TV, but they have a radio. In the evening, they listen to the news and talk. They go to bed early, at nine o'clock, because they get up very early.",
-          "word_count": 102
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What time do they get up?",
-            "options": [
-              "4:30",
-              "5:30",
-              "9:00"
-            ],
-            "answer": 0,
-            "explanation_ar": "half past four = 4:30."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e14",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "The children go to school by car.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "المدرسة على بعد 2 كم، ويمشي الأطفال إليها (walk)."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e15",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What do they do in the evening?",
-            "options": [
-              "They watch TV.",
-              "They listen to the radio.",
-              "They go to the market."
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: they listen to the news (على الراديو)."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-10-e16",
-            "skill": "reading",
+            "id": "A1-10-L2-e4-2",
+            "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "They go to bed at nine because they get up very ___.",
-            "answer": "early",
-            "explanation_ar": "في النص: because they get up very early."
+            "prompt": "It is ___ three.",
+            "answer": "half past",
+            "explanation_ar": "الكلمة الناقصة «half past» (والنصف)."
           }
-        }
-      ]
-    },
-    {
-      "id": "A1-10-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "احكِ عن يومك",
-      "est_minutes": 15,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "احكِ عن يومك الدراسي من الصباح إلى المساء في 5 إلى 7 جمل. **اذكر الوقت** مع كل نشاط، واستعمل first و then."
         },
         {
-          "type": "video",
-          "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
-        },
-        {
-          "type": "table",
-          "headers": [
-            "لتقول",
-            "العبارة"
-          ],
-          "rows": [
-            [
-              "أستيقظ الساعة…",
-              "I get up at…"
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «one» mean?",
+            "options": [
+              "دقيقة",
+              "واحد",
+              "مبكراً",
+              "والنصف"
             ],
-            [
-              "ثم…",
-              "Then I…"
-            ],
-            [
-              "بعد الظهر",
-              "In the afternoon, I…"
-            ],
-            [
-              "لا أفعل",
-              "I don't…"
-            ]
-          ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Talk about your school day from morning to evening. Say the time for each activity.",
-        "helpful_phrases": [
-          "I get up at…",
-          "Then I…",
-          "Lessons start at…",
-          "In the afternoon, I…",
-          "I go to bed at…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 75,
-        "rubric_focus": [
-          "present simple (I)",
-          "telling the time",
-          "time expressions"
-        ]
-      }
-    },
-    {
-      "id": "A1-10-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "اكتب جدول يومك",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة عن يومك (40 إلى 80 كلمة) مع الأوقات. اقرأ المثال أولاً.\n\n**تذكّر:** at + الساعة، in the morning / afternoon / evening، و don't للنفي."
+            "answer": 1,
+            "explanation_ar": "«one» تعني «واحد». مثال: I have one pen."
+          }
         },
         {
-          "type": "video",
-          "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: Wait / minutes / ten",
+            "answer": [
+              "Wait",
+              "ten",
+              "minutes"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Wait ten minutes"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "I get up at half past five. I pray and I have breakfast at six. I go to school by bus in Mukalla. Lessons start at seven fifteen. We finish at twelve thirty. I have lunch at home. In the afternoon, I do my homework and I play football with my friends. In the evening, I read. I don't watch TV a lot. I go to bed at ten.",
-          "word_count": 69
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "What ___ is it?",
+            "answer": "time",
+            "explanation_ar": "الكلمة الناقصة «time» (وقت / ساعة)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about your daily routine. Use the present simple and times (at six o'clock, in the morning).",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write 3 sentences about your day. Use: I go to school at ... I am at home in the ... I sleep at ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "present simple (I / we)",
-          "telling the time",
-          "at / in"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-10-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-10-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- المضارع البسيط مع I / you / we / they: الفعل كما هو.\n- النفي **don't**، والسؤال **Do…?**\n- **What time do you…?** ← **at** seven o'clock.\n- **in** the morning / afternoon / evening، و **at** night."
-        },
-        {
-          "type": "video",
-          "youtube_id": "q_bAo_n0pDU",
-          "video_title": "كلمات انجليزية عن الوقت — الحلقة 10",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 829,
-          "optional": true,
-          "approx_size_mb": 55
+          "markdown_ar": "طارق وسالم ينتظران الحافلة. **استمع:** كم الساعة؟ وهل الحافلة مبكرة أم متأخرة؟"
         },
         {
           "type": "story",
-          "id": "A1-10-s1",
-          "title_ar": "الحلقة 10: يوم في تريم",
+          "id": "A1-10-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Reem",
-              "text_en": "Hamza, what time do you get up in Seiyun?",
-              "text_ar": "حمزة، متى تستيقظ في سيئون؟"
+              "speaker": "Tariq",
+              "text_en": "Good morning, Salem! What time is it?",
+              "text_ar": "صباح الخير يا سالم! كم الساعة؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "I get up at five o'clock for the dawn prayer.",
-              "text_ar": "أستيقظ الساعة الخامسة لصلاة الفجر."
+              "speaker": "Salem",
+              "text_en": "It is seven o'clock.",
+              "text_ar": "الساعة السابعة."
             },
             {
-              "speaker": "Reem",
-              "text_en": "And what time do lessons start?",
-              "text_ar": "ومتى تبدأ الدروس؟"
+              "speaker": "Tariq",
+              "text_en": "School is at half past seven.",
+              "text_ar": "المدرسة في السابعة والنصف."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "They start at seven thirty. We finish at one.",
-              "text_ar": "تبدأ الساعة السابعة والنصف. وننتهي الساعة الواحدة."
+              "speaker": "Salem",
+              "text_en": "The bus is late today.",
+              "text_ar": "الحافلة متأخرة اليوم."
             },
             {
-              "speaker": "Reem",
-              "text_en": "In the afternoon, let's visit the old mosques!",
-              "text_ar": "بعد الظهر، لنزر المساجد القديمة!"
+              "speaker": "Tariq",
+              "text_en": "No, I am early. The bus is at seven o'clock.",
+              "text_ar": "لا، أنا الذي جئت مبكراً. الحافلة في السابعة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Look! The bus is here.",
+              "text_ar": "انظر! الحافلة وصلت."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Good. We go to school in the morning and come home in the afternoon.",
+              "text_ar": "جيد. نذهب إلى المدرسة صباحاً ونعود بعد الظهر."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, and we sleep early at night.",
+              "text_ar": "نعم، وننام مبكرين في الليل."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "They ___ live in Seiyun. They live in Mukalla.",
+            "id": "A1-10-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"No, I am early. The bus is at seven o'clock.\"",
             "options": [
-              "don't",
-              "doesn't",
-              "aren't"
+              "True",
+              "False"
             ],
             "answer": 0,
-            "explanation_ar": "النفي مع they: don't + الفعل."
+            "explanation_ar": "الذي قال «No, I am early. The bus is at seven o'clock.» هو Tariq."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e18",
-            "skill": "grammar",
+            "id": "A1-10-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "9:15 تُقرأ:",
+            "prompt": "What does «afternoon» mean?",
             "options": [
-              "nine fifty",
-              "nine fifteen",
-              "fifteen nine"
+              "ساعة (60 دقيقة)",
+              "بعد الظهر",
+              "اثنان",
+              "واحد"
             ],
             "answer": 1,
-            "explanation_ar": "9:15 = nine fifteen."
+            "explanation_ar": "«afternoon» تعني «بعد الظهر». مثال: I am at home in the afternoon."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-10-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-10-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "We sleep ___ night.",
-            "answer": "at",
-            "explanation_ar": "نقول at night."
+            "id": "A1-10-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"Yes, and we sleep early at night.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Yes, and we sleep early at night.» هو Salem."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «early» mean?",
+            "options": [
+              "مبكراً",
+              "صباح",
+              "دقيقة",
+              "مساء"
+            ],
+            "answer": 0,
+            "explanation_ar": "«early» تعني «مبكراً». مثال: I am early today."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Say what time you do three things in your day: school, lunch and sleep. Use at ... o'clock.",
+        "helpful_phrases": [
+          "It is ... o'clock.",
+          "at half past ...",
+          "in the morning",
+          "at night"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-10-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-10-L4-s1",
+          "title_ar": "الحافلة المتأخرة",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Hello, Huda! What time is it?",
+              "text_ar": "مرحباً يا هدى! كم الساعة؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "It is seven o'clock.",
+              "text_ar": "الساعة السابعة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "The bus is late.",
+              "text_ar": "الحافلة متأخرة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "It is at half past seven.",
+              "text_ar": "هي في السابعة والنصف."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We are early, then.",
+              "text_ar": "إذاً نحن مبكرتان."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "School is in the morning, and I am home in the afternoon.",
+              "text_ar": "المدرسة في الصباح وأنا في البيت بعد الظهر."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We study in the evening too.",
+              "text_ar": "ونحن ندرس في المساء أيضاً."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Look, the bus is here!",
+              "text_ar": "انظري، الحافلة وصلت!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «afternoon» mean?",
+            "options": [
+              "متأخراً",
+              "بعد الظهر",
+              "صباح",
+              "مبكراً"
+            ],
+            "answer": 1,
+            "explanation_ar": "«afternoon» تعني «بعد الظهر». مثال: I am at home in the afternoon."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We are ___, then.",
+            "answer": "early",
+            "explanation_ar": "الكلمة الناقصة «early» (مبكراً)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: late / The / is / bus",
+            "answer": [
+              "The",
+              "bus",
+              "is",
+              "late"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The bus is late"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Look, the bus is here!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Look, the bus is here!» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «night» mean?",
+            "options": [
+              "ليل",
+              "تماماً (الساعة)",
+              "وقت / ساعة",
+              "ساعة (60 دقيقة)"
+            ],
+            "answer": 0,
+            "explanation_ar": "«night» تعني «ليل». مثال: I sleep at night."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-10-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The bus is ___.",
+            "answer": "late",
+            "explanation_ar": "الكلمة الناقصة «late» (متأخراً)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-10-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Ask a friend: What time is it? Then tell him or her the time of five things in your day (school, lunch, home, dinner, sleep).",
+        "helpful_phrases": [
+          "What time is it?",
+          "It is ... o'clock.",
+          "at half past ...",
+          "in the evening"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -858,131 +697,132 @@
     "questions": [
       {
         "id": "A1-10-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "I ___ up at six o'clock.",
+        "prompt": "What does «time» mean?",
         "options": [
-          "get",
-          "gets",
-          "getting"
+          "مبكراً",
+          "وقت / ساعة",
+          "دقيقة",
+          "متأخراً"
         ],
-        "answer": 0,
-        "explanation_ar": "مع I يبقى الفعل كما هو."
+        "answer": 1,
+        "explanation_ar": "«time» تعني «وقت / ساعة». مثال: What time is it?"
       },
       {
         "id": "A1-10-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "We ___ watch TV in the morning.",
-        "options": [
-          "doesn't",
-          "don't",
-          "not"
-        ],
-        "answer": 1,
-        "explanation_ar": "النفي مع we: don't."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The bus comes in one ___.",
+        "answer": "hour",
+        "explanation_ar": "الكلمة الناقصة «hour» (ساعة (60 دقيقة))."
       },
       {
         "id": "A1-10-q3",
         "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "___ they go to school by bus? — No, they don't.",
-        "answer": "Do",
-        "explanation_ar": "السؤال مع they يبدأ بـ Do."
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: bus / The / is / Look! / here",
+        "answer": [
+          "Look!",
+          "The",
+          "bus",
+          "is",
+          "here"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Look! The bus is here"
       },
       {
         "id": "A1-10-q4",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "Lessons start ___ seven thirty.",
+        "prompt": "What does «evening» mean?",
         "options": [
-          "in",
-          "on",
-          "at"
+          "ليل",
+          "وقت / ساعة",
+          "مساء",
+          "تماماً (الساعة)"
         ],
         "answer": 2,
-        "explanation_ar": "مع الساعة نستخدم at."
+        "explanation_ar": "«evening» تعني «مساء». مثال: We eat dinner in the evening."
       },
       {
         "id": "A1-10-q5",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "I do my homework ___ the afternoon.",
-        "options": [
-          "at",
-          "in",
-          "on"
-        ],
-        "answer": 1,
-        "explanation_ar": "مع أجزاء اليوم: in the afternoon."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We are ___, then.",
+        "answer": "early",
+        "explanation_ar": "الكلمة الناقصة «early» (مبكراً)."
       },
       {
         "id": "A1-10-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "10:30 تُقرأ:",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Salem says: \"Look! The bus is here.\"",
         "options": [
-          "ten thirteen",
-          "ten thirty",
-          "thirty ten"
+          "True",
+          "False"
         ],
-        "answer": 1,
-        "explanation_ar": "10:30 = ten thirty أو half past ten."
+        "answer": 0,
+        "explanation_ar": "الذي قال «Look! The bus is here.» هو Salem."
       },
       {
         "id": "A1-10-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: breakfast / you / have / do",
-        "answer": [
-          "Do",
-          "you",
-          "have",
-          "breakfast"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «morning» mean?",
+        "options": [
+          "صباح",
+          "وقت / ساعة",
+          "بعد الظهر",
+          "ليل"
         ],
-        "explanation_ar": "السؤال: Do + الفاعل + الفعل؟"
+        "answer": 0,
+        "explanation_ar": "«morning» تعني «صباح». مثال: I go to school in the morning."
       },
       {
         "id": "A1-10-q8",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "The meal in the middle of the day is:",
-        "options": [
-          "breakfast",
-          "lunch",
-          "bed"
-        ],
-        "answer": 1,
-        "explanation_ar": "وجبة منتصف النهار lunch."
+        "kind": "fill_blank",
+        "prompt": "It is seven ___.",
+        "answer": "o'clock",
+        "explanation_ar": "الكلمة الناقصة «o'clock» (تماماً (الساعة))."
       },
       {
         "id": "A1-10-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «I get up at 6, I go to school at 7 and I finish at 1.» When does the writer finish school?",
-        "options": [
-          "at 6",
-          "at 7",
-          "at 1"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: study / We / too / the / evening / in",
+        "answer": [
+          "We",
+          "study",
+          "in",
+          "the",
+          "evening",
+          "too"
         ],
-        "answer": 2,
-        "explanation_ar": "في الجملة: I finish at 1."
+        "explanation_ar": "الترتيب الصحيح: We study in the evening too"
       },
       {
         "id": "A1-10-q10",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "What time do you go to bed? — I ___ to bed at ten.",
-        "answer": "go",
-        "explanation_ar": "مع I: go to bed."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «night» mean?",
+        "options": [
+          "ليل",
+          "صباح",
+          "وقت / ساعة",
+          "والنصف"
+        ],
+        "answer": 0,
+        "explanation_ar": "«night» تعني «ليل». مثال: I sleep at night."
       }
     ]
   },
-  "context_note": "صلاة الفجر في تريم، الفطور العائلي (خبز وفول وشاي)، العمل في الدكان أو مزرعة النخيل بعد المدرسة.",
-  "stop_ar": "تريم",
+  "stop_ar": "موقف الحافلات",
   "roleplay": {
-    "character_ar": "طالب من تريم",
-    "scenario_en": "You are Mazen, a student from Tarim. Ask the student about their daily routine and times.",
-    "opening_en": "Hi! I get up at five o'clock. What time do you get up?"
-  }
+    "character_ar": "سائق الحافلة",
+    "scenario_en": "You are a bus driver in a Yemeni city. A student asks you what time it is and when the bus goes. Answer with simple times (o'clock, half past), and words morning, afternoon, evening, night, early, late.",
+    "opening_en": "Good morning! The bus is at seven o'clock. What time is it for you?"
+  },
+  "context_note": "كم الساعة؟"
 }

@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-22",
+  position: 22,
+  title_en: "Weather and Seasons",
+  title_ar: "الطقس وفصول السنة",
+  stop_ar: "شرفة المنزل",
+  situation_ar: "على شرفة البيت تتحدث العائلة عن طقس اليوم وعن فصول السنة، وعن الأمطار في المرتفعات والحر في تهامة.",
+  grammar_en: "It is sunny / What is the weather like?",
+  can_do: ["أصف الطقس بالإنجليزية", "أسأل «كيف الطقس؟» وأجيب", "أسمّي فصول السنة"],
+  video: { id: "HwKM7TBWHe0", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 22", checked: false },
+  words: [
+    ["weather", "noun", "الطقس", "What is the weather like?"],
+    ["sunny", "adjective", "مشمس", "It is sunny today."],
+    ["cloudy", "adjective", "غائم", "It is cloudy in Ibb."],
+    ["rainy", "adjective", "ممطر", "It is rainy in summer."],
+    ["windy", "adjective", "عاصف", "It is windy at night."],
+    ["warm", "adjective", "دافئ", "It is warm in Aden."],
+    ["cool", "adjective", "معتدل البرودة", "It is cool in the evening."],
+    ["rain", "noun", "مطر", "I like the rain."],
+    ["sun", "noun", "شمس", "The sun is hot."],
+    ["wind", "noun", "ريح", "The wind is strong."],
+    ["summer", "noun", "صيف", "Summer is hot."],
+    ["winter", "noun", "شتاء", "Winter is cold."],
+  ],
+  warmup_ar:
+    "الطقس في اليمن يختلف من مكان لآخر: حرارة شديدة في تهامة، وأمطار الصيف في إب، وبرد الشتاء في صنعاء. ما حال الطقس اليوم عندك؟ في هذا الدرس ستصفه بالإنجليزية.",
+  in_context: [
+    "What is the weather like today?",
+    "It is sunny today.",
+    "It is cloudy in Ibb.",
+    "It is rainy in summer. I like the rain.",
+    "It is windy at night. The wind is strong.",
+    "It is warm in Aden, and cool in the evening.",
+    "The sun is hot. Summer is hot.",
+    "Winter is cold.",
+  ],
+  notice: ["It is sunny.", "It is cloudy and cool.", "What is the weather like?", "Winter is cold."],
+  rule_ar:
+    "لنسأل عن الطقس نقول: **What is the weather like?** (كيف الطقس؟) ونجيب بـ **It is** + الصفة:\n\n- **It is** sunny. = الجو مشمس.\n- **It is** rainy. = ممطر.\n- **It is** windy. = عاصف.\n\nكلمة **It** هنا لا تعني شيئاً محدداً؛ هي فقط تملأ مكان الفاعل لأن الجملة في الإنجليزية لا تكون بدون فاعل.\n\nومع الفصول نقول: **in** summer, **in** winter (وليس on).\n\n**الخطأ الشائع:** «Is sunny today». الصحيح: **It is** sunny today.",
+  form: {
+    headers: ["اسم", "صفة", "مثال"],
+    rows: [
+      ["sun", "sunny", "It is sunny."],
+      ["rain", "rainy", "It is rainy."],
+      ["wind", "windy", "It is windy."],
+      ["cloud", "cloudy", "It is cloudy."],
+    ],
+  },
+  write_prompt: "Write 3 sentences about the weather in your city in summer and winter.",
+  before_ar: "العائلة على الشرفة تتحدث عن الطقس. **استمع:** كيف الطقس اليوم؟ وكيف هو في الصيف؟",
+  dialogue: [
+    ["Father", "What is the weather like today?", "كيف الطقس اليوم؟"],
+    ["Mona", "It is cloudy and cool.", "غائم ومعتدل البرودة."],
+    ["Father", "Is it rainy?", "هل هو ممطر؟"],
+    ["Mona", "Not now, but it is windy.", "ليس الآن، لكنه عاصف."],
+    ["Father", "In summer it is rainy in Ibb.", "في الصيف يمطر في إب."],
+    ["Mona", "And in Aden it is hot and sunny.", "وفي عدن حار ومشمس."],
+    ["Father", "I like winter. It is cold.", "أنا أحب الشتاء. إنه بارد."],
+    ["Mona", "I like the rain!", "وأنا أحب المطر!"],
+  ],
+  speak: {
+    prompt: "Describe the weather today and in summer and winter in your city. Say what you like.",
+    phrases: ["It is sunny.", "It is cold in winter.", "I like the rain.", "What is the weather like?"],
+  },
+  story_title_ar: "يوم ماطر",
+  story: [
+    ["Salem", "Hello, Bilal! What is the weather like?", "مرحباً يا بلال! كيف الطقس؟"],
+    ["Bilal", "It is rainy.", "ممطر."],
+    ["Salem", "Is it cold?", "هل هو بارد؟"],
+    ["Bilal", "No, it is cool. It is summer.", "لا، معتدل. نحن في الصيف."],
+    ["Salem", "I like the rain.", "أنا أحب المطر."],
+    ["Bilal", "The wind is strong, though.", "لكن الريح قوية."],
+    ["Salem", "Let us stay home today.", "لنبقَ في البيت اليوم."],
+    ["Bilal", "OK. Tomorrow it is sunny.", "حسناً. غداً سيكون مشمساً."],
+  ],
+  task: {
+    prompt: "Tell a friend about the weather: today, in summer, in winter. Say what you like and don't like. Say at least 5 sentences.",
+    phrases: ["It is ... today.", "In summer it is ...", "In winter it is ...", "I like ..."],
+  },
+  roleplay: {
+    character_ar: "جدّتك على شرفة البيت",
+    scenario_en: "You are a Yemeni grandmother on the balcony. Ask the child about today's weather and what he or she likes in summer and winter. Use only very simple English (sunny, cloudy, rainy, windy, warm, cool, hot, cold, summer, winter).",
+    opening_en: "Good morning! What is the weather like today?",
+  },
+};
+export default unit;

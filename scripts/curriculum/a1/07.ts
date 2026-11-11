@@ -1,0 +1,87 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-07",
+  position: 7,
+  title_en: "Things Around the Shop",
+  title_ar: "أشياء في دكان الحي",
+  stop_ar: "دكان الحي",
+  situation_ar: "يرافق بلال أمه إلى دكان الحي ليشتريا أغراضاً، ويصفان الأشياء بالصفات المتضادة: كبير وصغير، رخيص وغالٍ، جديد وقديم.",
+  grammar_en: "adjectives: The bag is big / a big bag",
+  can_do: ["أصف الأشياء بصفات متضادة", "أضع الصفة في مكانها الصحيح في الجملة", "أسأل عن السعر بصفة cheap و expensive"],
+  video: { id: "gZBAXCRrl_U", title: "تعلم الصفات المضادة في اللغة الإنجليزية : كورس تعلم اللغة الانجليزية للمبتدئين من الصفر : ٧", checked: true },
+  words: [
+    ["big", "adjective", "كبير", "This is a big bag."],
+    ["small", "adjective", "صغير", "That is a small bag."],
+    ["new", "adjective", "جديد", "I have a new notebook."],
+    ["old", "adjective", "قديم / كبير في السن", "My bag is old."],
+    ["hot", "adjective", "حار / ساخن", "The tea is hot."],
+    ["cold", "adjective", "بارد", "The water is cold."],
+    ["cheap", "adjective", "رخيص", "The bread is cheap."],
+    ["expensive", "adjective", "غالٍ", "The phone is expensive."],
+    ["heavy", "adjective", "ثقيل", "The box is heavy."],
+    ["light", "adjective", "خفيف", "My bag is light."],
+    ["clean", "adjective", "نظيف", "The shop is clean."],
+    ["dirty", "adjective", "وسخ", "The floor is dirty."],
+  ],
+  warmup_ar:
+    "في الدكان نسمع الجمل: «هذا غالٍ!» «أريد واحداً أصغر.» «هذا قديم.» كلها **صفات** تصف الأشياء. في الإنجليزية الصفات تأتي في أزواج متضادة، فإذا حفظت واحدة حفظت ضدها. شاهد الفيديو، ثم تعلّم الأزواج.",
+  in_context: [
+    "This is a big bag. That is a small bag.",
+    "I have a new notebook. My bag is old.",
+    "The tea is hot. The water is cold.",
+    "The bread is cheap. The phone is expensive.",
+    "The box is heavy. My bag is light.",
+    "The shop is clean. The floor is dirty.",
+  ],
+  notice: ["The bag is big.", "It is a big bag.", "The tea is hot.", "I have a new notebook."],
+  rule_ar:
+    "الصفة تصف الاسم، ولها **مكانان**:\n\n1. **بعد الفعل be**: The bag **is big**. (الحقيبة كبيرة)\n2. **قبل الاسم**: It is a **big** bag. (إنها حقيبة كبيرة)\n\nمهم: الصفة في الإنجليزية **لا تتغير** مع المفرد أو الجمع أو المذكر أو المؤنث: a big bag, big bags, a big house.\n\n**الخطأ الشائع:** في العربية الصفة تأتي **بعد** الاسم (حقيبة كبيرة)، فيقول بعضنا «a bag big». الصحيح: **a big bag** (الصفة قبل الاسم).",
+  form: {
+    headers: ["بعد be", "قبل الاسم", "ضدها"],
+    rows: [
+      ["The bag is big.", "a big bag", "small"],
+      ["The phone is new.", "a new phone", "old"],
+      ["The tea is hot.", "hot tea", "cold"],
+      ["The bread is cheap.", "cheap bread", "expensive"],
+      ["The box is heavy.", "a heavy box", "light"],
+    ],
+  },
+  write_prompt: "Write 3 sentences about things in a shop. Use opposite adjectives: big / small, cheap / expensive, new / old.",
+  before_ar: "بلال وأمه في دكان الحي. **استمع:** ما هي الأشياء التي يصفانها؟ وأيها غالٍ؟",
+  dialogue: [
+    ["Bilal", "Mother, look at this bag. It is big.", "يا أمي، انظري إلى هذه الحقيبة. إنها كبيرة."],
+    ["Mother", "Yes, but it is expensive.", "نعم، لكنها غالية."],
+    ["Bilal", "That small bag is cheap.", "تلك الحقيبة الصغيرة رخيصة."],
+    ["Mother", "Is it new?", "هل هي جديدة؟"],
+    ["Shopkeeper", "Yes, it is a new bag. It is light.", "نعم، هي حقيبة جديدة. وهي خفيفة."],
+    ["Bilal", "My old bag is heavy.", "حقيبتي القديمة ثقيلة."],
+    ["Mother", "OK, we take the small bag.", "حسناً، نأخذ الحقيبة الصغيرة."],
+    ["Shopkeeper", "Thank you. Your shop is clean, good.", "شكراً لكم."],
+  ],
+  speak: {
+    prompt: "Describe two things you have at home (a bag, a phone, a book). Use opposite adjectives: It is big. That is small.",
+    phrases: ["It is big.", "It is new.", "It is cheap.", "It is heavy."],
+  },
+  story_title_ar: "الدكان الجديد",
+  story: [
+    ["Salem", "Mona, look! A new shop is in our street.", "يا منى، انظري! دكان جديد في شارعنا."],
+    ["Mona", "It is big and clean.", "إنه كبير ونظيف."],
+    ["Salem", "The bread is hot.", "الخبز ساخن."],
+    ["Mona", "And the water is cold.", "والماء بارد."],
+    ["Salem", "The fruit is cheap.", "الفاكهة رخيصة."],
+    ["Mona", "The phones are expensive.", "الجوالات غالية."],
+    ["Salem", "My old bag is heavy.", "حقيبتي القديمة ثقيلة."],
+    ["Mona", "Take a new light bag.", "خذ حقيبة جديدة خفيفة."],
+  ],
+  task: {
+    prompt: "You are in a shop. Describe five things to a friend using adjectives (big, small, cheap, expensive, new, old, hot, cold).",
+    phrases: ["It is a ... bag.", "The ... is expensive.", "It is cheap.", "The shop is clean."],
+  },
+  roleplay: {
+    character_ar: "صاحب دكان الحي",
+    scenario_en: "You are a shopkeeper in a Yemeni neighbourhood shop. A customer asks about things in your shop. Describe them with simple adjectives (big, small, new, old, hot, cold, cheap, expensive, heavy, light, clean, dirty).",
+    opening_en: "Welcome to my shop! This bag is big and new. Do you like it?",
+  },
+};
+export default unit;

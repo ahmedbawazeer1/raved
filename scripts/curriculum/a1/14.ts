@@ -1,0 +1,87 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-14",
+  position: 14,
+  title_en: "Clothes We Wear",
+  title_ar: "ملابس نرتديها",
+  stop_ar: "متجر الملابس",
+  situation_ar: "قبل العيد تذهب هدى وأمها إلى متجر الملابس لشراء ملابس جديدة، وتسألان عن الألوان والأحجام.",
+  grammar_en: "this / these, that / those; colours",
+  can_do: ["أسمّي الملابس وألوانها بالإنجليزية", "أستخدم these و those مع الجمع", "أسأل البائع عن لون الملابس وسعرها"],
+  video: { id: "pqGg9MiP2ic", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 14", checked: false },
+  words: [
+    ["shirt", "noun", "قميص", "This is a white shirt."],
+    ["trousers", "noun", "بنطلون", "These trousers are black."],
+    ["dress", "noun", "فستان", "That dress is beautiful."],
+    ["shoes", "noun", "حذاء", "Those shoes are new."],
+    ["socks", "noun", "جوارب", "These socks are white."],
+    ["hat", "noun", "قبعة", "That hat is small."],
+    ["jacket", "noun", "سترة", "This jacket is blue."],
+    ["scarf", "noun", "وشاح", "That scarf is red."],
+    ["wear", "verb", "يرتدي", "I wear a white shirt."],
+    ["red", "adjective", "أحمر", "The scarf is red."],
+    ["blue", "adjective", "أزرق", "The jacket is blue."],
+    ["white", "adjective", "أبيض", "The shirt is white."],
+    ["black", "adjective", "أسود", "The shoes are black."],
+  ],
+  warmup_ar:
+    "قبل العيد تمتلئ متاجر الملابس بالناس. ماذا ترتدي أنت في العيد؟ وما لونك المفضل؟ في هذا الدرس ستسمّي الملابس والألوان، وتتعلم كيف تقول «هذا» و«هؤلاء» بالإنجليزية.",
+  in_context: [
+    "I wear a white shirt.",
+    "This is a blue jacket.",
+    "These trousers are black.",
+    "That dress is beautiful.",
+    "Those shoes are new.",
+    "These socks are white. That hat is small.",
+    "The scarf is red.",
+  ],
+  notice: ["This shirt is white.", "These shirts are white.", "That scarf is red.", "Those scarves are red."],
+  rule_ar:
+    "عرفنا في وحدة سابقة **this / that** مع الشيء الواحد. وللجمع (أكثر من واحد) نستخدم:\n\n- **this** (هذا، قريب، واحد) → **these** (هؤلاء، قريب، جمع)\n- **that** (ذلك، بعيد، واحد) → **those** (أولئك، بعيد، جمع)\n\nمثال: **This** shirt is white. = **These** shirts are white. وكذلك **That** scarf → **Those** scarves.\n\nنقول: **These shoes are black.** (is → are مع الجمع). والألوان صفات تأتي **قبل الاسم**: a **red** scarf.\n\n**الخطأ الشائع:** «This shoes». الصحيح: **These shoes** لأن shoes جمع.",
+  form: {
+    headers: ["المفرد", "الجمع", "مثال"],
+    rows: [
+      ["this", "these", "These socks are white."],
+      ["that", "those", "Those shoes are black."],
+      ["is", "are", "This shirt is blue. These shirts are blue."],
+    ],
+  },
+  write_prompt: "Write 3 sentences about clothes and colours. Use this / these: This shirt is ... These shoes are ...",
+  before_ar: "هدى وأمها في متجر الملابس. **استمع:** ما الملابس التي تختارها هدى؟ وما ألوانها؟",
+  dialogue: [
+    ["Huda", "Good morning! I need a dress for Eid.", "صباح الخير! أحتاج فستاناً للعيد."],
+    ["Seller", "Look at this dress. It is blue.", "انظري إلى هذا الفستان. إنه أزرق."],
+    ["Huda", "I like it. What about those shoes?", "أعجبني. وماذا عن تلك الأحذية؟"],
+    ["Seller", "These shoes are black. Those shoes are white.", "هذه سوداء وتلك بيضاء."],
+    ["Huda", "I like the white shoes.", "أحب الأحذية البيضاء."],
+    ["Mother", "And a scarf, Huda?", "وماذا عن وشاح يا هدى؟"],
+    ["Huda", "Yes, that red scarf is nice.", "نعم، ذلك الوشاح الأحمر جميل."],
+    ["Seller", "Thank you. Happy Eid!", "شكراً. عيد مبارك!"],
+  ],
+  speak: {
+    prompt: "You are in a clothes shop. Say what you want to buy and what colour: I need a ... This ... is ...",
+    phrases: ["I need a ...", "This shirt is ...", "These shoes are ...", "I like it."],
+  },
+  story_title_ar: "ملابس المدرسة",
+  story: [
+    ["Mona", "Good morning, Salem! This is my new bag.", "صباح الخير يا سالم! هذه حقيبتي الجديدة."],
+    ["Salem", "It is nice. I wear a white shirt to school.", "إنها جميلة. أنا أرتدي قميصاً أبيض إلى المدرسة."],
+    ["Mona", "And black trousers?", "وبنطلوناً أسود؟"],
+    ["Salem", "Yes. These are my school clothes.", "نعم. هذه ملابس المدرسة."],
+    ["Mona", "Those shoes are new, right?", "تلك الأحذية جديدة، أليس كذلك؟"],
+    ["Salem", "Yes, they are new.", "نعم، هي جديدة."],
+    ["Mona", "My hat is red.", "قبعتي حمراء."],
+    ["Salem", "I like red.", "أحب اللون الأحمر."],
+  ],
+  task: {
+    prompt: "Describe the clothes you wear to school and for Eid. Say the colours. Use this / these / that / those at least twice.",
+    phrases: ["I wear a ...", "This ... is ...", "These ... are ...", "I like ..."],
+  },
+  roleplay: {
+    character_ar: "بائع في متجر الملابس",
+    scenario_en: "You are a seller in a clothes shop in Yemen before Eid. A customer wants clothes. Show items (shirt, trousers, dress, shoes, socks, hat, jacket, scarf) and say colours (red, blue, white, black). Use this / these / that / those. Use only very simple English.",
+    opening_en: "Welcome! Look at this blue shirt. Do you like it?",
+  },
+};
+export default unit;

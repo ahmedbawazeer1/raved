@@ -1,934 +1,734 @@
 {
   "path": "english",
   "code": "A1-09",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 9,
-  "title": "Numbers",
-  "topic": "الأرقام والشراء في سوق سيئون القديم",
-  "grammar_point": "numbers 1–1000 + how much / how many + this / these / that / those",
+  "title": "Counting at the Stationery",
+  "topic": "قبل بدء الدراسة يشتري طارق وبلال أدوات مدرسية من المكتبة، ويعدّان الأقلام والدفاتر ويسألان عن الأسعار.",
+  "grammar_point": "How many ...? / numbers 1–20",
   "can_do": [
-    "أسأل عن سعر شيء وأفهم الإجابة",
-    "أقول وأفهم الأرقام حتى 1000 وأكثر",
-    "أشتري شيئاً بسيطاً من البائع بعبارات مهذبة"
+    "أعدّ من واحد إلى عشرين وأقرأ الأعداد الكبيرة الأساسية",
+    "أسأل «كم عدد؟» بـ How many",
+    "أقول كم قطعة أريد أن أشتري"
   ],
   "vocab": [
     {
       "id": "A1-09-v1",
-      "word": "market",
-      "ipa": "/ˈmɑːkɪt/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سوق",
-      "example_en": "The market is very busy today."
+      "word": "one",
+      "part_of_speech": "other",
+      "meaning_ar": "واحد",
+      "example_en": "I have one pen."
     },
     {
       "id": "A1-09-v2",
-      "word": "shop",
-      "ipa": "/ʃɒp/",
-      "part_of_speech": "noun",
-      "meaning_ar": "دكان / متجر",
-      "example_en": "My uncle has a small shop."
+      "word": "two",
+      "part_of_speech": "other",
+      "meaning_ar": "اثنان",
+      "example_en": "I have two pencils."
     },
     {
       "id": "A1-09-v3",
-      "word": "price",
-      "ipa": "/praɪs/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سعر",
-      "example_en": "What's the price of this bag?"
+      "word": "three",
+      "part_of_speech": "other",
+      "meaning_ar": "ثلاثة",
+      "example_en": "Three notebooks, please."
     },
     {
       "id": "A1-09-v4",
-      "word": "rial",
-      "ipa": "/riˈɑːl/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ريال",
-      "example_en": "It's five hundred rials."
+      "word": "four",
+      "part_of_speech": "other",
+      "meaning_ar": "أربعة",
+      "example_en": "I have four books."
     },
     {
       "id": "A1-09-v5",
-      "word": "cheap",
-      "ipa": "/tʃiːp/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "رخيص",
-      "example_en": "These oranges are cheap."
+      "word": "five",
+      "part_of_speech": "other",
+      "meaning_ar": "خمسة",
+      "example_en": "Five pens are in my bag."
     },
     {
       "id": "A1-09-v6",
-      "word": "expensive",
-      "ipa": "/ɪkˈspensɪv/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "غالٍ",
-      "example_en": "This phone is expensive."
+      "word": "six",
+      "part_of_speech": "other",
+      "meaning_ar": "ستة",
+      "example_en": "I have six rulers."
     },
     {
       "id": "A1-09-v7",
-      "word": "buy",
-      "ipa": "/baɪ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يشتري",
-      "example_en": "I want to buy some bread."
+      "word": "seven",
+      "part_of_speech": "other",
+      "meaning_ar": "سبعة",
+      "example_en": "Seven students are here."
     },
     {
       "id": "A1-09-v8",
-      "word": "sell",
-      "ipa": "/sel/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يبيع",
-      "example_en": "He sells honey from Doan."
+      "word": "eight",
+      "part_of_speech": "other",
+      "meaning_ar": "ثمانية",
+      "example_en": "I have eight pencils."
     },
     {
       "id": "A1-09-v9",
-      "word": "bread",
-      "ipa": "/bred/",
-      "part_of_speech": "noun",
-      "meaning_ar": "خبز",
-      "example_en": "Two pieces of bread, please."
+      "word": "nine",
+      "part_of_speech": "other",
+      "meaning_ar": "تسعة",
+      "example_en": "Nine bags are on the shelf."
     },
     {
       "id": "A1-09-v10",
-      "word": "honey",
-      "ipa": "/ˈhʌni/",
-      "part_of_speech": "noun",
-      "meaning_ar": "عسل",
-      "example_en": "Yemeni honey is famous."
+      "word": "ten",
+      "part_of_speech": "other",
+      "meaning_ar": "عشرة",
+      "example_en": "Ten pens, please."
     },
     {
       "id": "A1-09-v11",
-      "word": "dates",
-      "ipa": "/deɪts/",
-      "part_of_speech": "noun",
-      "meaning_ar": "تمر",
-      "example_en": "These dates are sweet."
+      "word": "twenty",
+      "part_of_speech": "other",
+      "meaning_ar": "عشرون",
+      "example_en": "We are twenty students."
     },
     {
       "id": "A1-09-v12",
-      "word": "kilo",
-      "ipa": "/ˈkiːləʊ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "كيلو",
-      "example_en": "A kilo of tomatoes, please."
+      "word": "hundred",
+      "part_of_speech": "other",
+      "meaning_ar": "مئة",
+      "example_en": "One hundred riyals."
     },
     {
       "id": "A1-09-v13",
-      "word": "hundred",
-      "ipa": "/ˈhʌndrəd/",
-      "part_of_speech": "other",
-      "meaning_ar": "مئة",
-      "example_en": "One hundred rials."
-    },
-    {
-      "id": "A1-09-v14",
-      "word": "thousand",
-      "ipa": "/ˈθaʊznd/",
-      "part_of_speech": "other",
-      "meaning_ar": "ألف",
-      "example_en": "It's two thousand rials."
+      "word": "how many",
+      "part_of_speech": "phrase",
+      "meaning_ar": "كم عدد",
+      "example_en": "How many pens do you have?"
     }
   ],
   "lessons": [
     {
-      "id": "A1-09-l1",
+      "id": "A1-09-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "في السوق والأرقام",
-      "est_minutes": 25,
+      "title": "مفردات: العدّ في مكتبة الأدوات المدرسية",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نذهب اليوم إلى **السوق القديم في سيئون** وإلى **سوق السمك في المكلا**. تعلّم الأرقام وكلمات الشراء والبيع."
+          "markdown_ar": "الأرقام نستخدمها كل يوم: عدد الطلاب في الفصل، سعر الدفتر، رقم الباص. هل تعرف أن تعدّ إلى عشرة بالإنجليزية؟ في هذا الدرس سنتعلم الأرقام من 1 إلى 10، ثم عشرين ومئة، وسؤال مهم: **How many?**"
         },
         {
           "type": "video",
           "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
+          "video_title": "تعلم الأرقام الإنجليزية : كورس تعليم اللغة الإنجليزية للمبتدئين من الصفر : ٩",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "market",
-              "/ˈmɑːkɪt/",
-              "سوق",
-              "The market is very busy today."
+              "one",
+              "واحد",
+              "I have one pen."
             ],
             [
-              "shop",
-              "/ʃɒp/",
-              "دكان / متجر",
-              "My uncle has a small shop."
+              "two",
+              "اثنان",
+              "I have two pencils."
             ],
             [
-              "price",
-              "/praɪs/",
-              "سعر",
-              "What's the price of this bag?"
+              "three",
+              "ثلاثة",
+              "Three notebooks, please."
             ],
             [
-              "rial",
-              "/riˈɑːl/",
-              "ريال",
-              "It's five hundred rials."
+              "four",
+              "أربعة",
+              "I have four books."
             ],
             [
-              "cheap",
-              "/tʃiːp/",
-              "رخيص",
-              "These oranges are cheap."
+              "five",
+              "خمسة",
+              "Five pens are in my bag."
             ],
             [
-              "expensive",
-              "/ɪkˈspensɪv/",
-              "غالٍ",
-              "This phone is expensive."
+              "six",
+              "ستة",
+              "I have six rulers."
             ],
             [
-              "buy",
-              "/baɪ/",
-              "يشتري",
-              "I want to buy some bread."
+              "seven",
+              "سبعة",
+              "Seven students are here."
             ],
             [
-              "sell",
-              "/sel/",
-              "يبيع",
-              "He sells honey from Doan."
+              "eight",
+              "ثمانية",
+              "I have eight pencils."
             ],
             [
-              "bread",
-              "/bred/",
-              "خبز",
-              "Two pieces of bread, please."
+              "nine",
+              "تسعة",
+              "Nine bags are on the shelf."
             ],
             [
-              "honey",
-              "/ˈhʌni/",
-              "عسل",
-              "Yemeni honey is famous."
+              "ten",
+              "عشرة",
+              "Ten pens, please."
             ],
             [
-              "dates",
-              "/deɪts/",
-              "تمر",
-              "These dates are sweet."
-            ],
-            [
-              "kilo",
-              "/ˈkiːləʊ/",
-              "كيلو",
-              "A kilo of tomatoes, please."
+              "twenty",
+              "عشرون",
+              "We are twenty students."
             ],
             [
               "hundred",
-              "/ˈhʌndrəd/",
               "مئة",
-              "One hundred rials."
+              "One hundred riyals."
             ],
             [
-              "thousand",
-              "/ˈθaʊznd/",
-              "ألف",
-              "It's two thousand rials."
+              "how many",
+              "كم عدد",
+              "How many pens do you have?"
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "market. The market is very busy today.\nshop. My uncle has a small shop.\nprice. What's the price of this bag?\nrial. It's five hundred rials.\ncheap. These oranges are cheap.\nexpensive. This phone is expensive.\nbuy. I want to buy some bread.\nsell. He sells honey from Doan.\nbread. Two pieces of bread, please.\nhoney. Yemeni honey is famous.\ndates. These dates are sweet.\nkilo. A kilo of tomatoes, please.\nhundred. One hundred rials.\nthousand. It's two thousand rials."
+          "text_en": "I have one pen and two pencils. Three notebooks, please. I have four books and five pens. Six rulers and seven bags are on the shelf. I have eight pencils. Nine and ten are big numbers. We are twenty students. How many pens do you have?"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «twenty» mean?",
+            "options": [
+              "عشرون",
+              "خمسة",
+              "واحد",
+              "تسعة"
+            ],
+            "answer": 0,
+            "explanation_ar": "«twenty» تعني «عشرون». مثال: We are twenty students."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ bags are on the shelf.",
+            "answer": "Nine",
+            "explanation_ar": "الكلمة الناقصة «Nine» (تسعة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «four» mean?",
+            "options": [
+              "مئة",
+              "طماطم",
+              "كم عدد",
+              "أربعة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«four» تعني «أربعة». مثال: I have four books."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I have ___ pen and two pencils.",
+            "answer": "one",
+            "explanation_ar": "الكلمة الناقصة «one» (واحد)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hundred» mean?",
+            "options": [
+              "ثلاثة",
+              "أربعة",
+              "تسعة",
+              "مئة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«hundred» تعني «مئة». مثال: One hundred riyals."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-09-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-09-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: How many ...? / numbers 1–20",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "I have one pen. I have two pens. How many pens do you have? I have ten pens."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنسأل عن **العدد** نقول **How many** ثم الاسم **بصيغة الجمع**:\n\n- **How many** pens do you have? (كم قلماً عندك؟)\n- **How many** students are in your class? (كم طالباً في فصلك؟)\n\nنجيب برقم: I have **five** pens. أو **Five.**\n\nتذكّر: مع الرقم **one** نستخدم المفرد (one pen)، ومع باقي الأرقام نستخدم الجمع (two pen**s**، ten book**s**).\n\n**الخطأ الشائع:** أن نقول «two book». الصحيح: **two books**."
         },
         {
           "type": "table",
           "headers": [
             "الرقم",
-            "بالإنجليزية",
-            "الرقم",
-            "بالإنجليزية"
+            "الكتابة",
+            "مثال"
           ],
           "rows": [
             [
               "1",
               "one",
-              "11",
-              "eleven"
+              "one pen"
             ],
             [
               "2",
               "two",
-              "12",
-              "twelve"
-            ],
-            [
-              "3",
-              "three",
-              "13",
-              "thirteen"
-            ],
-            [
-              "4",
-              "four",
-              "20",
-              "twenty"
+              "two pencils"
             ],
             [
               "5",
               "five",
-              "30",
-              "thirty"
-            ],
-            [
-              "6",
-              "six",
-              "40",
-              "forty"
-            ],
-            [
-              "7",
-              "seven",
-              "50",
-              "fifty"
-            ],
-            [
-              "8",
-              "eight",
-              "100",
-              "one hundred"
-            ],
-            [
-              "9",
-              "nine",
-              "500",
-              "five hundred"
+              "five books"
             ],
             [
               "10",
               "ten",
-              "1,000",
-              "one thousand"
+              "ten notebooks"
+            ],
+            [
+              "20",
+              "twenty",
+              "twenty students"
+            ],
+            [
+              "100",
+              "one hundred",
+              "one hundred riyals"
             ]
           ]
         },
         {
-          "type": "audio",
-          "text_en": "one, two, three, four, five, six, seven, eight, nine, ten. eleven, twelve, thirteen. twenty, thirty, forty, fifty. one hundred. five hundred. one thousand."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**انتبه للفرق في النطق:** **thirteen** (13) نشدد على آخرها، و**thirty** (30) نشدد على أولها. وكذلك fourteen / forty و fifteen / fifty.\n\n**الأعداد الكبيرة:** 250 = two hundred **and** fifty، و 1,500 = one thousand five hundred."
-        },
-        {
           "type": "exercise",
           "exercise": {
-            "id": "A1-09-e1",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "40 بالإنجليزية:",
-            "options": [
-              "fourteen",
-              "forty",
-              "four"
-            ],
-            "answer": 1,
-            "explanation_ar": "40 = forty، أما 14 = fourteen."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "The opposite of «cheap» is:",
-            "options": [
-              "expensive",
-              "sweet",
-              "busy"
-            ],
-            "answer": 0,
-            "explanation_ar": "عكس رخيص cheap هو غالٍ expensive."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e3",
-            "skill": "vocab",
-            "kind": "fill_blank",
-            "prompt": "I want to ___ some honey. (يشتري)",
-            "answer": "buy",
-            "explanation_ar": "يشتري = buy."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g4",
-          "game": "pronounce"
-        }
-      ]
-    },
-    {
-      "id": "A1-09-l2",
-      "position": 2,
-      "skill": "grammar",
-      "title": "How much / How many + this / these",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**How much** و **How many** للسؤال عن الكمية:\n\n- **How much is it?** = بكم؟ (للسؤال عن السعر)\n- **How many** + اسم جمع = كم عدد…؟: How many oranges?\n\n**this / these / that / those** للإشارة:"
-        },
-        {
-          "type": "video",
-          "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
-        },
-        {
-          "type": "table",
-          "headers": [
-            "",
-            "قريب",
-            "بعيد"
-          ],
-          "rows": [
-            [
-              "مفرد",
-              "this (هذا/هذه)",
-              "that (ذلك/تلك)"
-            ],
-            [
-              "جمع",
-              "these (هؤلاء/هذه)",
-              "those (أولئك/تلك)"
-            ]
-          ]
-        },
-        {
-          "type": "table",
-          "headers": [
-            "السؤال",
-            "الإجابة"
-          ],
-          "rows": [
-            [
-              "How much is this bag?",
-              "It's two thousand rials."
-            ],
-            [
-              "How much are these dates?",
-              "They're one thousand rials a kilo."
-            ],
-            [
-              "How many students are there?",
-              "There are forty."
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**لاحظ:** مع المفرد نقول **How much is…? / It's…**، ومع الجمع **How much are…? / They're…**."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "How ___ is this notebook? — It's 300 rials.",
-            "options": [
-              "much",
-              "many",
-              "old"
-            ],
-            "answer": 0,
-            "explanation_ar": "للسؤال عن السعر نستخدم How much."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "How ___ desks are there in the classroom?",
-            "options": [
-              "much",
-              "many",
-              "is"
-            ],
-            "answer": 1,
-            "explanation_ar": "desks جمع يُعدّ فنستخدم How many."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "___ apples here are fresh. (قريبة، جمع)",
-            "options": [
-              "This",
-              "These",
-              "That"
-            ],
-            "answer": 1,
-            "explanation_ar": "للجمع القريب نستخدم these."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "How much ___ these oranges?",
-            "answer": "are",
-            "explanation_ar": "oranges جمع فنستخدم are."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e8",
+            "id": "A1-09-L2-e4-1",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات: is / much / how / bread / the",
+            "prompt": "رتب الكلمات: bag / are / in / my / pens / Five",
             "answer": [
-              "How",
-              "much",
-              "is",
-              "the",
-              "bread"
+              "Five",
+              "pens",
+              "are",
+              "in",
+              "my",
+              "bag"
             ],
-            "explanation_ar": "How much + is + الشيء."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-09-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "عند بائع التمر والعسل",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**أسماء** تشتري من بائع في السوق. استمع وانتبه **للأرقام والأسعار**."
-        },
-        {
-          "type": "video",
-          "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
-        },
-        {
-          "type": "audio",
-          "text_en": "Seller: Good morning! Welcome.\nAsma: Good morning. How much is this honey?\nSeller: This is sidr honey from Doan. It's ten thousand rials.\nAsma: Oh, that's expensive. And how much are those dates?\nSeller: These dates? They're one thousand five hundred rials a kilo.\nAsma: OK. Two kilos of dates, please.\nSeller: Here you are. That's three thousand rials.\nAsma: Here you are. Thank you!\nSeller: Thank you. Goodbye."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e9",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How much is the honey?",
-            "options": [
-              "1,500 rials",
-              "3,000 rials",
-              "10,000 rials"
-            ],
-            "answer": 2,
-            "explanation_ar": "قال البائع: It's ten thousand rials."
+            "explanation_ar": "الترتيب الصحيح: Five pens are in my bag"
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-09-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How many kilos of dates does Asma buy?",
-            "options": [
-              "one",
-              "two",
-              "three"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: Two kilos of dates, please."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Asma buys the honey.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت إن العسل غالٍ، واشترت التمر فقط."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-09-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "يوم الخميس في السوق القديم",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ النص عن **فيصل** في سوق سيئون القديم، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
-        },
-        {
-          "type": "reading",
-          "text_en": "Every Thursday, Faisal goes to the old market in Seiyun with his father. The market is busy and noisy. There are many shops. Some shops sell spices, and some sell clothes and shoes. Faisal's father buys bread, tomatoes and onions. A kilo of tomatoes is eight hundred rials. Faisal wants a new notebook for school. The notebook is five hundred rials. It is cheap. He also wants a football, but it is seven thousand rials. That is too expensive for him. At the end, they buy a cup of tea and drink it near the shop of their friend, Uncle Awadh.",
-          "word_count": 101
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e12",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "When does Faisal go to the market?",
-            "options": [
-              "every Friday",
-              "every Thursday",
-              "every day"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: Every Thursday."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "How much is the notebook?",
-            "options": [
-              "500 rials",
-              "800 rials",
-              "7,000 rials"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: The notebook is five hundred rials."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e14",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Faisal buys a football.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "الكرة غالية عليه (too expensive)، فلم يشترها."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e15",
-            "skill": "reading",
+            "id": "A1-09-L2-e4-2",
+            "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "The football is too ___ for Faisal.",
-            "answer": "expensive",
-            "explanation_ar": "في النص: That is too expensive for him."
+            "prompt": "I have ___ pencils.",
+            "answer": "eight",
+            "explanation_ar": "الكلمة الناقصة «eight» (ثمانية)."
           }
-        }
-      ]
-    },
-    {
-      "id": "A1-09-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "اشترِ من البائع",
-      "est_minutes": 15,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "أنت في السوق وتريد شراء شيئين. **حيِّ البائع، اسأل عن السعر، اطلب الكمية، واشكره.** قل الأسعار بالإنجليزية."
         },
         {
-          "type": "video",
-          "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «four» mean?",
+            "options": [
+              "اثنان",
+              "ثلاثة",
+              "تسعة",
+              "أربعة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«four» تعني «أربعة». مثال: I have four books."
+          }
         },
         {
-          "type": "table",
-          "headers": [
-            "لتقول",
-            "العبارة"
-          ],
-          "rows": [
-            [
-              "بكم هذا؟",
-              "How much is this…?"
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: pencils / have / two / I",
+            "answer": [
+              "I",
+              "have",
+              "two",
+              "pencils"
             ],
-            [
-              "بكم هذه (جمع)؟",
-              "How much are these…?"
-            ],
-            [
-              "أريد…",
-              "… please. / I'd like…"
-            ],
-            [
-              "تفضل",
-              "Here you are."
-            ],
-            [
-              "شكراً",
-              "Thank you."
-            ]
-          ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "You are at the market. Greet the seller, ask the price of two things, say how many you want and thank the seller.",
-        "helpful_phrases": [
-          "Good morning.",
-          "How much is this…?",
-          "How much are these…?",
-          "Two kilos, please.",
-          "Here you are. Thank you."
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "how much / how many",
-          "numbers",
-          "this / these"
-        ]
-      }
-    },
-    {
-      "id": "A1-09-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "قائمة مشترياتك",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة قصيرة (30 إلى 70 كلمة) عن ذهابك للسوق: **ماذا تشتري، وكم العدد، وكم السعر**. اكتب الأعداد بالحروف."
+            "explanation_ar": "الترتيب الصحيح: I have two pencils"
+          }
         },
         {
-          "type": "video",
-          "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
-        },
-        {
-          "type": "reading",
-          "text_en": "On Saturday, I go to the market with my mother. We buy three kilos of potatoes. They are nine hundred rials a kilo. We also buy bread and some dates. The dates are cheap. I want a new bag for school, but it is expensive. It is six thousand rials.",
-          "word_count": 50
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I have ___ pens.",
+            "answer": "ten",
+            "explanation_ar": "الكلمة الناقصة «ten» (عشرة)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about a trip to the market: what you buy, how many and how much. Write the numbers in words.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 3 sentences about things you have in your bag. Use numbers: I have two pens. I have one ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "numbers in words",
-          "how much / how many",
-          "this / these"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-09-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-09-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **How much is…? / How much are…?** للسعر.\n- **How many** + جمع للعدد.\n- **this / these** للقريب، **that / those** للبعيد.\n- الأرقام: thirteen ≠ thirty، hundred، thousand."
-        },
-        {
-          "type": "video",
-          "youtube_id": "pI3CrFMsduY",
-          "video_title": "تعلم الأرقام الإنجليزية — الحلقة 9",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 843,
-          "optional": true,
-          "approx_size_mb": 56
+          "markdown_ar": "طارق وبلال في مكتبة الأدوات المدرسية. **استمع:** كم قلماً وكم دفتراً يريد كل منهما؟"
         },
         {
           "type": "story",
-          "id": "A1-09-s1",
-          "title_ar": "الحلقة 9: سوق سيئون",
+          "id": "A1-09-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Hamza",
-              "text_en": "How much is this honey?",
-              "text_ar": "بكم هذا العسل؟"
+              "speaker": "Tariq",
+              "text_en": "Good morning! I need three notebooks, please.",
+              "text_ar": "صباح الخير! أحتاج ثلاثة دفاتر من فضلك."
             },
             {
               "speaker": "Seller",
-              "text_en": "It's ten thousand rials. It's sidr honey from Doan.",
-              "text_ar": "بعشرة آلاف ريال. هذا عسل سدر من دوعن."
+              "text_en": "OK. How many pens do you need?",
+              "text_ar": "حسناً. كم قلماً تحتاج؟"
             },
             {
-              "speaker": "Reem",
-              "text_en": "That's expensive! How much are these dates?",
-              "text_ar": "هذا غالٍ! بكم هذا التمر؟"
+              "speaker": "Tariq",
+              "text_en": "I need five pens.",
+              "text_ar": "أحتاج خمسة أقلام."
             },
             {
-              "speaker": "Seller",
-              "text_en": "They're one thousand rials a kilo.",
-              "text_ar": "بألف ريال للكيلو."
-            },
-            {
-              "speaker": "Hamza",
-              "text_en": "Two kilos of dates, please.",
-              "text_ar": "كيلوان من التمر من فضلك."
+              "speaker": "Bilal",
+              "text_en": "I need ten pencils and two rulers.",
+              "text_ar": "وأنا أحتاج عشرة أقلام رصاص ومسطرتين."
             },
             {
               "speaker": "Seller",
-              "text_en": "Here you are. That's two thousand rials.",
-              "text_ar": "تفضل. المجموع ألفا ريال."
+              "text_en": "How many bags do you want?",
+              "text_ar": "كم حقيبة تريد؟"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "One bag, please.",
+              "text_ar": "حقيبة واحدة من فضلك."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Thank you. That is one hundred riyals.",
+              "text_ar": "شكراً. المجموع مئة ريال."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Thank you. Goodbye!",
+              "text_ar": "شكراً. مع السلامة!"
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-09-e16",
+            "id": "A1-09-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"I need five pens.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «I need five pens.» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L3-e3-2",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "250 بالإنجليزية:",
+            "prompt": "What does «two» mean?",
             "options": [
-              "two hundred and fifty",
-              "twenty-five",
-              "two thousand and fifty"
-            ],
-            "answer": 0,
-            "explanation_ar": "250 = two hundred and fifty."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-09-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Look at ___ mountains! They're beautiful. (بعيدة، جمع)",
-            "options": [
-              "this",
-              "these",
-              "those"
+              "تسعة",
+              "أربعة",
+              "اثنان",
+              "سبعة"
             ],
             "answer": 2,
-            "explanation_ar": "للجمع البعيد نستخدم those."
+            "explanation_ar": "«two» تعني «اثنان». مثال: I have two pencils."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-09-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-09-e18",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "How ___ kilos do you want? — Two, please.",
-            "answer": "many",
-            "explanation_ar": "kilos جمع يُعدّ فنستخدم How many."
+            "id": "A1-09-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"Thank you. That is one hundred riyals.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Thank you. That is one hundred riyals.» هو Seller."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «twenty» mean?",
+            "options": [
+              "مئة",
+              "اثنان",
+              "ثمانية",
+              "عشرون"
+            ],
+            "answer": 3,
+            "explanation_ar": "«twenty» تعني «عشرون». مثال: We are twenty students."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "You are at the stationery shop. Ask for things with numbers: I need three notebooks, five pens. Ask: How many ...?",
+        "helpful_phrases": [
+          "I need ...",
+          "How many ...?",
+          "One, two, three...",
+          "Thank you."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-09-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-09-L4-s1",
+          "title_ar": "كم طالباً في الفصل؟",
+          "panels": [
+            {
+              "speaker": "Ms. Huda",
+              "text_en": "Good morning, students!",
+              "text_ar": "صباح الخير يا طلاب!"
+            },
+            {
+              "speaker": "Ms. Huda",
+              "text_en": "How many students are in the class?",
+              "text_ar": "كم طالباً في الفصل؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We are twenty students.",
+              "text_ar": "نحن عشرون طالباً."
+            },
+            {
+              "speaker": "Ms. Huda",
+              "text_en": "How many girls are in the class?",
+              "text_ar": "كم فتاة في الفصل؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Ten girls.",
+              "text_ar": "عشر فتيات."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "And ten boys.",
+              "text_ar": "وعشرة أولاد."
+            },
+            {
+              "speaker": "Ms. Huda",
+              "text_en": "Good! Open your books, please.",
+              "text_ar": "جيد! افتحوا كتبكم من فضلكم."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I have five books in my bag.",
+              "text_ar": "عندي خمسة كتب في حقيبتي."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «nine» mean?",
+            "options": [
+              "عشرة",
+              "ثمانية",
+              "عشرون",
+              "تسعة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«nine» تعني «تسعة». مثال: Nine bags are on the shelf."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We are ___ students.",
+            "answer": "twenty",
+            "explanation_ar": "الكلمة الناقصة «twenty» (عشرون)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: my / I / books / bag / five / have / in",
+            "answer": [
+              "I",
+              "have",
+              "five",
+              "books",
+              "in",
+              "my",
+              "bag"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I have five books in my bag"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Ms. Huda says: \"How many girls are in the class?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «How many girls are in the class?» هو Ms. Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «six» mean?",
+            "options": [
+              "مئة",
+              "سبعة",
+              "ستة",
+              "ثمانية"
+            ],
+            "answer": 2,
+            "explanation_ar": "«six» تعني «ستة». مثال: I have six rulers."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-09-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I have ___ rulers.",
+            "answer": "six",
+            "explanation_ar": "الكلمة الناقصة «six» (ستة)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-09-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Count the things you have: pens, pencils, notebooks, books. Say the numbers and ask a friend: How many pens do you have?",
+        "helpful_phrases": [
+          "I have ...",
+          "How many ...?",
+          "Three pens",
+          "Ten books"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -936,132 +736,128 @@
     "questions": [
       {
         "id": "A1-09-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "How ___ is this pen? — It's 200 rials.",
+        "prompt": "What does «ten» mean?",
         "options": [
-          "many",
-          "much",
-          "old"
+          "اثنان",
+          "سبعة",
+          "عشرة",
+          "كم عدد"
         ],
-        "answer": 1,
-        "explanation_ar": "للسعر نستخدم How much."
+        "answer": 2,
+        "explanation_ar": "«ten» تعني «عشرة». مثال: Ten pens, please."
       },
       {
         "id": "A1-09-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "How ___ students are there in your class?",
-        "options": [
-          "many",
-          "much",
-          "is"
-        ],
-        "answer": 0,
-        "explanation_ar": "students جمع يُعدّ فنستخدم How many."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "___ and ten are big numbers.",
+        "answer": "Nine",
+        "explanation_ar": "الكلمة الناقصة «Nine» (تسعة)."
       },
       {
         "id": "A1-09-q3",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "15 بالإنجليزية:",
-        "options": [
-          "fifty",
-          "fifteen",
-          "five"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: are / students / here / Seven",
+        "answer": [
+          "Seven",
+          "students",
+          "are",
+          "here"
         ],
-        "answer": 1,
-        "explanation_ar": "15 = fifteen، و 50 = fifty."
+        "explanation_ar": "الترتيب الصحيح: Seven students are here"
       },
       {
         "id": "A1-09-q4",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "___ shoes are nice. (قريبة، جمع)",
+        "prompt": "What does «six» mean?",
         "options": [
-          "This",
-          "These",
-          "That"
+          "عشرة",
+          "مئة",
+          "خمسة",
+          "ستة"
         ],
-        "answer": 1,
-        "explanation_ar": "للجمع القريب: these."
+        "answer": 3,
+        "explanation_ar": "«six» تعني «ستة». مثال: I have six rulers."
       },
       {
         "id": "A1-09-q5",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "fill_blank",
-        "prompt": "How much ___ the dates? — They're 1,000 rials.",
-        "answer": "are",
-        "explanation_ar": "dates جمع فنستخدم are."
+        "prompt": "We are ___ students.",
+        "answer": "twenty",
+        "explanation_ar": "الكلمة الناقصة «twenty» (عشرون)."
       },
       {
         "id": "A1-09-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "The opposite of «sell» is:",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Tariq says: \"One bag, please.\"",
         "options": [
-          "buy",
-          "cheap",
-          "want"
+          "True",
+          "False"
         ],
-        "answer": 0,
-        "explanation_ar": "عكس يبيع sell هو يشتري buy."
+        "answer": 1,
+        "explanation_ar": "الذي قال «One bag, please.» هو Bilal."
       },
       {
         "id": "A1-09-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات: are / these / how / oranges / much",
-        "answer": [
-          "How",
-          "much",
-          "are",
-          "these",
-          "oranges"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «seven» mean?",
+        "options": [
+          "واحد",
+          "سبعة",
+          "ستة",
+          "اثنان"
         ],
-        "explanation_ar": "How much + are + these + الاسم الجمع."
+        "answer": 1,
+        "explanation_ar": "«seven» تعني «سبعة». مثال: Seven students are here."
       },
       {
         "id": "A1-09-q8",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "3,000 بالإنجليزية:",
-        "options": [
-          "three hundred",
-          "thirty thousand",
-          "three thousand"
-        ],
-        "answer": 2,
-        "explanation_ar": "3,000 = three thousand."
+        "kind": "fill_blank",
+        "prompt": "___ pens are in my bag.",
+        "answer": "Five",
+        "explanation_ar": "الكلمة الناقصة «Five» (خمسة)."
       },
       {
         "id": "A1-09-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «The bread is 100 rials and the honey is 9,000 rials.» Which is expensive?",
-        "options": [
-          "the bread",
-          "the honey",
-          "both"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: And / boys / ten",
+        "answer": [
+          "And",
+          "ten",
+          "boys"
         ],
-        "answer": 1,
-        "explanation_ar": "العسل 9,000 ريال، وهو الغالي."
+        "explanation_ar": "الترتيب الصحيح: And ten boys"
       },
       {
         "id": "A1-09-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "This phone is very cheap. It isn't ___.",
-        "answer": "expensive",
-        "explanation_ar": "عكس cheap هو expensive."
+        "kind": "mcq",
+        "prompt": "What does «how many» mean?",
+        "options": [
+          "ستة",
+          "أربعة",
+          "كم عدد",
+          "عشرة"
+        ],
+        "answer": 2,
+        "explanation_ar": "«how many» تعني «كم عدد». مثال: How many pens do you have?"
       }
     ]
   },
-  "context_note": "السوق القديم في سيئون، عسل السدر من دوعن، تمور الوادي. الأسعار بالريال أمثلة تقريبية للتدريب فقط.",
-  "stop_ar": "سوق سيئون",
+  "stop_ar": "مكتبة الأدوات المدرسية",
   "roleplay": {
-    "character_ar": "بائع العسل في سوق سيئون",
-    "scenario_en": "You are a honey and dates seller in the old market of Seiyun. Prices are in rials. The student asks about prices and buys.",
-    "opening_en": "Welcome! Sidr honey and fresh dates. What do you want?"
-  }
+    "character_ar": "صاحب مكتبة الأدوات المدرسية",
+    "scenario_en": "You are a stationery shop owner in Yemen. A student wants to buy school things. Ask how many pens, notebooks, pencils and rulers he or she needs. Use only simple English and numbers one to ten, twenty and one hundred.",
+    "opening_en": "Good morning! What do you need? How many pens?"
+  },
+  "context_note": "العدّ في مكتبة الأدوات المدرسية"
 }

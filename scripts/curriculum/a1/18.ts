@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-18",
+  position: 18,
+  title_en: "Inside My Bedroom",
+  title_ar: "داخل غرفة نومي",
+  stop_ar: "غرفة النوم",
+  situation_ar: "يرتب سالم غرفة نومه قبل وصول ضيف، ويسأل أخاه أين توجد أغراضه: بجانب السرير، خلف الباب، بين الخزانة والنافذة.",
+  grammar_en: "next to / behind / between / in front of",
+  can_do: ["أسمّي أثاث غرفة النوم بالإنجليزية", "أصف مكان الأشياء بحروف الجر", "أسأل «أين...؟» بـ Where is"],
+  video: { id: "l51hYjeR-K8", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 18", checked: false },
+  words: [
+    ["bedroom", "noun", "غرفة نوم", "My bedroom is small."],
+    ["bed", "noun", "سرير", "The bed is next to the window."],
+    ["pillow", "noun", "وسادة", "The pillow is on the bed."],
+    ["blanket", "noun", "بطانية", "The blanket is warm."],
+    ["wardrobe", "noun", "خزانة ملابس", "My clothes are in the wardrobe."],
+    ["lamp", "noun", "مصباح", "The lamp is next to the bed."],
+    ["mirror", "noun", "مرآة", "The mirror is behind the door."],
+    ["carpet", "noun", "سجّادة", "The carpet is under the bed."],
+    ["curtain", "noun", "ستارة", "The curtain is blue."],
+    ["clock", "noun", "ساعة حائط", "The clock is on the wall."],
+    ["next to", "phrase", "بجانب", "The lamp is next to the bed."],
+    ["behind", "other", "خلف", "The mirror is behind the door."],
+  ],
+  warmup_ar:
+    "غرفة النوم مكانك الخاص. هل ترتّبها كل يوم؟ أين سريرك؟ وأين خزانتك؟ في هذا الدرس ستصف غرفة نومك بالإنجليزية وتقول أين كل شيء بدقة: بجانب، خلف، بين.",
+  in_context: [
+    "This is my bedroom.",
+    "The bed is next to the window.",
+    "The pillow and the blanket are on the bed.",
+    "My clothes are in the wardrobe.",
+    "The lamp is next to the bed.",
+    "The mirror is behind the door.",
+    "The carpet is under the bed.",
+    "The clock is on the wall, and the curtain is blue.",
+  ],
+  notice: ["The bed is next to the window.", "The mirror is behind the door.", "The lamp is on the table.", "Where is the clock?"],
+  rule_ar:
+    "تعلّمنا in و on و under. وهذه حروف جر جديدة لوصف المكان:\n\n- **next to** = بجانب: The lamp is **next to** the bed.\n- **behind** = خلف: The mirror is **behind** the door.\n- **in front of** = أمام: The carpet is **in front of** the bed.\n- **between** = بين: The bed is **between** the wardrobe and the window.\n\nلنسأل عن المكان نقول: **Where is** the lamp? (أين المصباح؟) ونجيب: **It is** next to the bed.\n\n**الخطأ الشائع:** أن ننسى **the** قبل اسم معروف. نقول: **the** bed, **the** lamp عندما نتحدث عن شيء محدد.",
+  form: {
+    headers: ["الكلمة", "المعنى", "مثال"],
+    rows: [
+      ["next to", "بجانب", "The lamp is next to the bed."],
+      ["behind", "خلف", "The mirror is behind the door."],
+      ["in front of", "أمام", "The carpet is in front of the bed."],
+      ["between", "بين", "The bed is between the wardrobe and the window."],
+    ],
+  },
+  write_prompt: "Write 3 sentences about your bedroom. Where is your bed? Where is your wardrobe? Use next to / behind / in front of.",
+  before_ar: "سالم يرتب غرفته. **استمع:** أين المصباح؟ وأين المرآة؟",
+  dialogue: [
+    ["Salem", "Brother, where is my blanket?", "يا أخي، أين بطانيتي؟"],
+    ["Brother", "It is on the bed.", "هي على السرير."],
+    ["Salem", "Where is the lamp?", "وأين المصباح؟"],
+    ["Brother", "It is next to the bed.", "بجانب السرير."],
+    ["Salem", "And my mirror?", "وأين مرآتي؟"],
+    ["Brother", "It is behind the door.", "خلف الباب."],
+    ["Salem", "Where is the carpet?", "وأين السجّادة؟"],
+    ["Brother", "It is in front of the wardrobe. Your room is clean.", "أمام الخزانة. غرفتك نظيفة."],
+  ],
+  speak: {
+    prompt: "Describe your bedroom: say where the bed, the wardrobe, the lamp and the mirror are.",
+    phrases: ["The bed is next to ...", "The ... is behind ...", "in front of", "between"],
+  },
+  story_title_ar: "غرفة الضيف",
+  story: [
+    ["Mona", "Huda, the guest comes today.", "يا هدى، الضيف يأتي اليوم."],
+    ["Huda", "I clean her bedroom.", "أنا أنظّف غرفتها."],
+    ["Mona", "The bed is next to the window.", "السرير بجانب النافذة."],
+    ["Huda", "The pillow and the blanket are on the bed.", "الوسادة والبطانية على السرير."],
+    ["Mona", "Where is the lamp?", "أين المصباح؟"],
+    ["Huda", "It is between the bed and the wardrobe.", "بين السرير والخزانة."],
+    ["Mona", "The curtain is blue. It is nice.", "الستارة زرقاء. إنها جميلة."],
+    ["Huda", "Now the room is ready.", "الآن الغرفة جاهزة."],
+  ],
+  task: {
+    prompt: "Show a friend around your bedroom. Say where five things are using next to, behind, in front of, between, on, in and under.",
+    phrases: ["The ... is next to ...", "Where is the ...?", "It is behind ...", "in front of"],
+  },
+  roleplay: {
+    character_ar: "أخوك الذي يساعدك في ترتيب الغرفة",
+    scenario_en: "You are the student's older brother or sister helping to tidy a bedroom in Yemen. Ask where things are (bed, pillow, blanket, wardrobe, lamp, mirror, carpet, curtain, clock) and say where they are using next to, behind, in front of, between. Use only very simple English.",
+    opening_en: "Let us clean your bedroom! Where is the lamp?",
+  },
+};
+export default unit;

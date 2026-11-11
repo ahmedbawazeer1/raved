@@ -1,931 +1,722 @@
 {
   "path": "english",
   "code": "A1-11",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 11,
-  "title": "Dates",
-  "topic": "التواريخ ومواسم حضرموت: جني التمر وموسم عسل دوعن",
-  "grammar_point": "ordinal numbers + days and months + on / in / at",
+  "title": "Days and Dates",
+  "topic": "في إدارة المدرسة يقرأ الطلاب جدول الأسبوع وتاريخ الاختبار، ويسألون عن أيام الدراسة وموعد الإجازة.",
+  "grammar_point": "on + day / in + month",
   "can_do": [
-    "أقول تاريخ اليوم ويوم ميلادي",
-    "أسأل عن موعد شيء وأفهم الإجابة",
-    "أفهم نصاً قصيراً عن مواسم السنة"
+    "أسمّي أيام الأسبوع بالإنجليزية",
+    "أسأل «ما هو اليوم؟» وأجيب",
+    "أستخدم on مع الأيام و in مع الأشهر"
   ],
   "vocab": [
     {
       "id": "A1-11-v1",
-      "word": "date",
-      "ipa": "/deɪt/",
+      "word": "Saturday",
       "part_of_speech": "noun",
-      "meaning_ar": "تاريخ",
-      "example_en": "What's the date today?"
+      "meaning_ar": "السبت",
+      "example_en": "School starts on Saturday."
     },
     {
       "id": "A1-11-v2",
-      "word": "day",
-      "ipa": "/deɪ/",
+      "word": "Sunday",
       "part_of_speech": "noun",
-      "meaning_ar": "يوم",
-      "example_en": "Friday is my favourite day."
+      "meaning_ar": "الأحد",
+      "example_en": "We have English on Sunday."
     },
     {
       "id": "A1-11-v3",
+      "word": "Monday",
+      "part_of_speech": "noun",
+      "meaning_ar": "الاثنين",
+      "example_en": "I have maths on Monday."
+    },
+    {
+      "id": "A1-11-v4",
+      "word": "Tuesday",
+      "part_of_speech": "noun",
+      "meaning_ar": "الثلاثاء",
+      "example_en": "The test is on Tuesday."
+    },
+    {
+      "id": "A1-11-v5",
+      "word": "Wednesday",
+      "part_of_speech": "noun",
+      "meaning_ar": "الأربعاء",
+      "example_en": "Wednesday is a long day."
+    },
+    {
+      "id": "A1-11-v6",
+      "word": "Thursday",
+      "part_of_speech": "noun",
+      "meaning_ar": "الخميس",
+      "example_en": "School is short on Thursday."
+    },
+    {
+      "id": "A1-11-v7",
+      "word": "Friday",
+      "part_of_speech": "noun",
+      "meaning_ar": "الجمعة",
+      "example_en": "Friday is a holiday."
+    },
+    {
+      "id": "A1-11-v8",
+      "word": "today",
+      "part_of_speech": "adverb",
+      "meaning_ar": "اليوم",
+      "example_en": "What day is it today?"
+    },
+    {
+      "id": "A1-11-v9",
+      "word": "tomorrow",
+      "part_of_speech": "adverb",
+      "meaning_ar": "غداً",
+      "example_en": "Tomorrow is Friday."
+    },
+    {
+      "id": "A1-11-v10",
+      "word": "yesterday",
+      "part_of_speech": "adverb",
+      "meaning_ar": "أمس",
+      "example_en": "Yesterday was Wednesday."
+    },
+    {
+      "id": "A1-11-v11",
       "word": "week",
-      "ipa": "/wiːk/",
       "part_of_speech": "noun",
       "meaning_ar": "أسبوع",
       "example_en": "There are seven days in a week."
     },
     {
-      "id": "A1-11-v4",
+      "id": "A1-11-v12",
       "word": "month",
-      "ipa": "/mʌnθ/",
       "part_of_speech": "noun",
       "meaning_ar": "شهر",
-      "example_en": "July is a hot month in Seiyun."
-    },
-    {
-      "id": "A1-11-v5",
-      "word": "year",
-      "ipa": "/jɪə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سنة",
-      "example_en": "There are twelve months in a year."
-    },
-    {
-      "id": "A1-11-v6",
-      "word": "birthday",
-      "ipa": "/ˈbɜːθdeɪ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "يوم الميلاد",
-      "example_en": "My birthday is on the fifth of May."
-    },
-    {
-      "id": "A1-11-v7",
-      "word": "today",
-      "ipa": "/təˈdeɪ/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "اليوم",
-      "example_en": "Today is Sunday."
-    },
-    {
-      "id": "A1-11-v8",
-      "word": "tomorrow",
-      "ipa": "/təˈmɒrəʊ/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "غداً",
-      "example_en": "Tomorrow is a holiday."
-    },
-    {
-      "id": "A1-11-v9",
-      "word": "holiday",
-      "ipa": "/ˈhɒlədeɪ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "عطلة / إجازة",
-      "example_en": "The summer holiday starts in June."
-    },
-    {
-      "id": "A1-11-v10",
-      "word": "first",
-      "ipa": "/fɜːst/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "الأول",
-      "example_en": "January is the first month."
-    },
-    {
-      "id": "A1-11-v11",
-      "word": "second",
-      "ipa": "/ˈsekənd/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "الثاني",
-      "example_en": "February is the second month."
-    },
-    {
-      "id": "A1-11-v12",
-      "word": "third",
-      "ipa": "/θɜːd/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "الثالث",
-      "example_en": "My exam is on the third of June."
+      "example_en": "A month has four weeks."
     },
     {
       "id": "A1-11-v13",
-      "word": "harvest",
-      "ipa": "/ˈhɑːvɪst/",
+      "word": "birthday",
       "part_of_speech": "noun",
-      "meaning_ar": "موسم الحصاد / الجني",
-      "example_en": "The date harvest is in summer."
-    },
-    {
-      "id": "A1-11-v14",
-      "word": "season",
-      "ipa": "/ˈsiːzn/",
-      "part_of_speech": "noun",
-      "meaning_ar": "موسم / فصل",
-      "example_en": "Winter is the honey season in Doan."
+      "meaning_ar": "عيد ميلاد",
+      "example_en": "My birthday is in May."
     }
   ],
   "lessons": [
     {
-      "id": "A1-11-l1",
+      "id": "A1-11-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "الأيام والشهور",
-      "est_minutes": 25,
+      "title": "مفردات: الأيام والتواريخ",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "نتعلم في هذه الوحدة كيف نقول **التاريخ**: الأيام، والشهور، والأعداد الترتيبية (الأول، الثاني…). أسماء الأيام والشهور في الإنجليزية تُكتب دائماً **بحرف كبير**."
+          "markdown_ar": "ما اليوم؟ وما اليوم الذي تفضّله؟ في اليمن يبدأ أسبوع الدراسة يوم السبت ونرتاح يوم الجمعة. في هذا الدرس ستتعلم أسماء الأيام (وكل يوم يبدأ بحرف كبير في الإنجليزية) وكيف تقول متى يحدث شيء."
         },
         {
           "type": "video",
           "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
+          "video_title": "تعلم كلمات انجليزية عن التاريخ : كورس تعليم اللغة الانجليزية للمبتدئين من الصفر : ١١",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "date",
-              "/deɪt/",
-              "تاريخ",
-              "What's the date today?"
+              "Saturday",
+              "السبت",
+              "School starts on Saturday."
             ],
             [
-              "day",
-              "/deɪ/",
-              "يوم",
-              "Friday is my favourite day."
+              "Sunday",
+              "الأحد",
+              "We have English on Sunday."
+            ],
+            [
+              "Monday",
+              "الاثنين",
+              "I have maths on Monday."
+            ],
+            [
+              "Tuesday",
+              "الثلاثاء",
+              "The test is on Tuesday."
+            ],
+            [
+              "Wednesday",
+              "الأربعاء",
+              "Wednesday is a long day."
+            ],
+            [
+              "Thursday",
+              "الخميس",
+              "School is short on Thursday."
+            ],
+            [
+              "Friday",
+              "الجمعة",
+              "Friday is a holiday."
+            ],
+            [
+              "today",
+              "اليوم",
+              "What day is it today?"
+            ],
+            [
+              "tomorrow",
+              "غداً",
+              "Tomorrow is Friday."
+            ],
+            [
+              "yesterday",
+              "أمس",
+              "Yesterday was Wednesday."
             ],
             [
               "week",
-              "/wiːk/",
               "أسبوع",
               "There are seven days in a week."
             ],
             [
               "month",
-              "/mʌnθ/",
               "شهر",
-              "July is a hot month in Seiyun."
-            ],
-            [
-              "year",
-              "/jɪə/",
-              "سنة",
-              "There are twelve months in a year."
+              "A month has four weeks."
             ],
             [
               "birthday",
-              "/ˈbɜːθdeɪ/",
-              "يوم الميلاد",
-              "My birthday is on the fifth of May."
-            ],
-            [
-              "today",
-              "/təˈdeɪ/",
-              "اليوم",
-              "Today is Sunday."
-            ],
-            [
-              "tomorrow",
-              "/təˈmɒrəʊ/",
-              "غداً",
-              "Tomorrow is a holiday."
-            ],
-            [
-              "holiday",
-              "/ˈhɒlədeɪ/",
-              "عطلة / إجازة",
-              "The summer holiday starts in June."
-            ],
-            [
-              "first",
-              "/fɜːst/",
-              "الأول",
-              "January is the first month."
-            ],
-            [
-              "second",
-              "/ˈsekənd/",
-              "الثاني",
-              "February is the second month."
-            ],
-            [
-              "third",
-              "/θɜːd/",
-              "الثالث",
-              "My exam is on the third of June."
-            ],
-            [
-              "harvest",
-              "/ˈhɑːvɪst/",
-              "موسم الحصاد / الجني",
-              "The date harvest is in summer."
-            ],
-            [
-              "season",
-              "/ˈsiːzn/",
-              "موسم / فصل",
-              "Winter is the honey season in Doan."
+              "عيد ميلاد",
+              "My birthday is in May."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "date. What's the date today?\nday. Friday is my favourite day.\nweek. There are seven days in a week.\nmonth. July is a hot month in Seiyun.\nyear. There are twelve months in a year.\nbirthday. My birthday is on the fifth of May.\ntoday. Today is Sunday.\ntomorrow. Tomorrow is a holiday.\nholiday. The summer holiday starts in June.\nfirst. January is the first month.\nsecond. February is the second month.\nthird. My exam is on the third of June.\nharvest. The date harvest is in summer.\nseason. Winter is the honey season in Doan."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "الشهر",
-            "بالإنجليزية",
-            "الشهر",
-            "بالإنجليزية"
-          ],
-          "rows": [
-            [
-              "1 يناير",
-              "January",
-              "7 يوليو",
-              "July"
-            ],
-            [
-              "2 فبراير",
-              "February",
-              "8 أغسطس",
-              "August"
-            ],
-            [
-              "3 مارس",
-              "March",
-              "9 سبتمبر",
-              "September"
-            ],
-            [
-              "4 أبريل",
-              "April",
-              "10 أكتوبر",
-              "October"
-            ],
-            [
-              "5 مايو",
-              "May",
-              "11 نوفمبر",
-              "November"
-            ],
-            [
-              "6 يونيو",
-              "June",
-              "12 ديسمبر",
-              "December"
-            ]
-          ]
-        },
-        {
-          "type": "audio",
-          "text_en": "January, February, March, April, May, June, July, August, September, October, November, December. Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday."
+          "text_en": "What day is it today? Today is Saturday. School starts on Saturday. We have English on Sunday and maths on Monday. The test is on Tuesday. Wednesday is a long day, but Thursday is short. Tomorrow is Friday. Friday is a holiday. Yesterday was Wednesday. There are seven days in a week, and four weeks in a month. My birthday is in May."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-11-e1",
+            "id": "A1-11-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "The first month of the year is:",
+            "prompt": "What does «birthday» mean?",
             "options": [
-              "June",
-              "January",
-              "July"
+              "الاثنين",
+              "عيد ميلاد",
+              "شهر",
+              "الثلاثاء"
             ],
             "answer": 1,
-            "explanation_ar": "الشهر الأول January."
+            "explanation_ar": "«birthday» تعني «عيد ميلاد». مثال: My birthday is in May."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-11-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "There are ___ days in a week.",
-            "options": [
-              "five",
-              "seven",
-              "twelve"
-            ],
-            "answer": 1,
-            "explanation_ar": "في الأسبوع سبعة أيام."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e3",
+            "id": "A1-11-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Today is Monday. ___ is Tuesday. (غداً)",
-            "answer": "Tomorrow",
-            "explanation_ar": "غداً = tomorrow."
+            "prompt": "We have English on ___ and maths on Monday.",
+            "answer": "Sunday",
+            "explanation_ar": "الكلمة الناقصة «Sunday» (الأحد)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Monday» mean?",
+            "options": [
+              "وقت / ساعة",
+              "الاثنين",
+              "غداً",
+              "ساعة (60 دقيقة)"
+            ],
+            "answer": 1,
+            "explanation_ar": "«Monday» تعني «الاثنين». مثال: I have maths on Monday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ is a long day.",
+            "answer": "Wednesday",
+            "explanation_ar": "الكلمة الناقصة «Wednesday» (الأربعاء)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «tomorrow» mean?",
+            "options": [
+              "السبت",
+              "الجمعة",
+              "غداً",
+              "اليوم"
+            ],
+            "answer": 2,
+            "explanation_ar": "«tomorrow» تعني «غداً». مثال: Tomorrow is Friday."
           }
         },
         {
           "type": "game",
-          "id": "A1-11-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g4",
-          "game": "pronounce"
+          "id": "A1-11-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-11-l2",
+      "id": "A1-11-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "الأعداد الترتيبية + in / on / at",
-      "est_minutes": 30,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**الأعداد الترتيبية** نستخدمها للتاريخ: «the **fifth** of May» (الخامس من مايو)."
-        },
-        {
-          "type": "video",
-          "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
-        },
-        {
-          "type": "table",
-          "headers": [
-            "العدد",
-            "الترتيبي",
-            "المختصر"
-          ],
-          "rows": [
-            [
-              "1",
-              "first",
-              "1st"
-            ],
-            [
-              "2",
-              "second",
-              "2nd"
-            ],
-            [
-              "3",
-              "third",
-              "3rd"
-            ],
-            [
-              "4",
-              "fourth",
-              "4th"
-            ],
-            [
-              "5",
-              "fifth",
-              "5th"
-            ],
-            [
-              "10",
-              "tenth",
-              "10th"
-            ],
-            [
-              "12",
-              "twelfth",
-              "12th"
-            ],
-            [
-              "20",
-              "twentieth",
-              "20th"
-            ],
-            [
-              "21",
-              "twenty-first",
-              "21st"
-            ],
-            [
-              "30",
-              "thirtieth",
-              "30th"
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**قاعدة:** معظمها نضيف **th**: four**th**، six**th**. والشاذ: **first, second, third**، و fifth، و twelfth.\n\n**حروف الزمن:**\n\n- **on** + يوم أو تاريخ: on Friday، on the fifth of May.\n- **in** + شهر أو سنة أو فصل: in July، in 2026، in winter.\n- **at** + ساعة: at 7 o'clock.\n\n**السؤال:** What's the date today? ← It's the tenth of March. / When is your birthday? ← It's on the second of April."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My birthday is ___ June.",
-            "options": [
-              "on",
-              "in",
-              "at"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع الشهر: in June."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "The exam is ___ Sunday.",
-            "options": [
-              "on",
-              "in",
-              "at"
-            ],
-            "answer": 0,
-            "explanation_ar": "مع اليوم: on Sunday."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "3rd تُقرأ:",
-            "options": [
-              "three",
-              "third",
-              "thirth"
-            ],
-            "answer": 1,
-            "explanation_ar": "3rd = third."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "January is the ___ month. (الأول)",
-            "answer": "first",
-            "explanation_ar": "الأول = first."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "«الخامس من مايو» بالإنجليزية:",
-            "options": [
-              "the five of May",
-              "the fifth of May",
-              "May the five"
-            ],
-            "answer": 1,
-            "explanation_ar": "نستخدم العدد الترتيبي: the fifth of May."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e9",
-            "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: birthday / is / when / your",
-            "answer": [
-              "When",
-              "is",
-              "your",
-              "birthday"
-            ],
-            "explanation_ar": "When + is + your birthday؟"
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-11-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "متى الاختبار؟",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "المعلمة تسأل الطالبة **بشرى** عن التاريخ، وتخبر الفصل بموعد الاختبار. استمع وانتبه **للأرقام الترتيبية**."
-        },
-        {
-          "type": "video",
-          "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
-        },
-        {
-          "type": "audio",
-          "text_en": "Teacher: Good morning, class. What's the date today?\nBushra: It's the twenty-first of October.\nTeacher: Very good. And what day is it?\nBushra: It's Tuesday.\nTeacher: Our English test is next week, on Monday, the twenty-seventh of October.\nBushra: Excuse me, teacher. When is the winter holiday?\nTeacher: It's in January. It starts on the fifteenth.\nBushra: And my birthday is on the second of January! Before the holiday.\nTeacher: Happy early birthday, Bushra!"
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What's the date today?",
-            "options": [
-              "the 21st of October",
-              "the 27th of October",
-              "the 2nd of January"
-            ],
-            "answer": 0,
-            "explanation_ar": "قالت بشرى: It's the twenty-first of October."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e11",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "When is the English test?",
-            "options": [
-              "on Tuesday",
-              "on Monday",
-              "in January"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت المعلمة: on Monday, the twenty-seventh of October."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e12",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Bushra's birthday is on the second of January.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 0,
-            "explanation_ar": "قالت: my birthday is on the second of January."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-11-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "مواسم حضرموت",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن **مواسم السنة** في حضرموت: متى جني التمر؟ ومتى موسم العسل؟ ثم أجب."
-        },
-        {
-          "type": "video",
-          "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
-        },
-        {
-          "type": "reading",
-          "text_en": "In Hadramout, every season has its work. In summer, in July and August, it is very hot in the valley. This is the date harvest. Farmers climb the palm trees and cut the dates. In autumn, in October and November, the beekeepers of Wadi Doan are very busy. The sidr trees have flowers, and the bees make the famous sidr honey. In winter, in December and January, the weather is cool in the valley. Many families visit their relatives. On the coast, from January to June, sea turtles come to Sharma beach. The school year usually starts in September and ends in June. The summer holiday is long, so many students help their families at work.",
-          "word_count": 116
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "When is the date harvest?",
-            "options": [
-              "in July and August",
-              "in December and January",
-              "in October and November"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: In summer, in July and August… This is the date harvest."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e14",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "When are the beekeepers very busy?",
-            "options": [
-              "in summer",
-              "in autumn",
-              "in spring"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: In autumn, in October and November, the beekeepers… are very busy."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e15",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "The school year starts in June.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: starts in September and ends in June."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-11-e16",
-            "skill": "reading",
-            "kind": "fill_blank",
-            "prompt": "Sea turtles come to Sharma beach from January to ___.",
-            "answer": "June",
-            "explanation_ar": "في النص: from January to June."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-11-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "تواريخ مهمة لك",
+      "title": "قاعدة: on + day / in + month",
       "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "تحدث عن **تواريخ مهمة** لك: **تاريخ اليوم، يوم ميلادك، موعد الاختبارات، العطلة، وشهرك المفضل ولماذا.** استعمل on و in مع الأعداد الترتيبية."
+          "type": "audio",
+          "text_en": "Today is Monday. The test is on Tuesday. My birthday is in May. We have English on Sunday."
         },
         {
-          "type": "video",
-          "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
+          "type": "text",
+          "markdown_ar": "في الإنجليزية نسأل: **What day is it today?** ونجيب: **It is Monday.** أو **Today is Monday.**\n\nلنقول متى يحدث شيء:\n- مع **الأيام** نستخدم **on**: **on** Monday, **on** Friday.\n- مع **الأشهر** نستخدم **in**: **in** May, **in** January.\n\nوأسماء الأيام والأشهر تبدأ دائماً بـ **حرف كبير**: Monday وليس monday.\n\n**الخطأ الشائع:** أن نقول «in Monday». الصحيح: **on** Monday. و«on May» خطأ أيضاً، الصحيح: **in** May."
         },
         {
           "type": "table",
           "headers": [
-            "لتقول",
-            "العبارة"
+            "الحرف",
+            "مع",
+            "مثال"
           ],
           "rows": [
             [
-              "اليوم",
-              "Today is… It's the … of …"
+              "on",
+              "يوم",
+              "on Sunday"
             ],
             [
-              "ميلادي",
-              "My birthday is on the … of …"
+              "on",
+              "يوم + صباح/مساء",
+              "on Monday morning"
             ],
             [
-              "العطلة",
-              "The holiday is in…"
+              "in",
+              "شهر",
+              "in May"
             ],
             [
-              "شهري المفضل",
-              "My favourite month is… because…"
+              "in",
+              "سنة",
+              "in 2026"
             ]
           ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Talk about important dates for you: today's date, your birthday, your exams, the holiday and your favourite month.",
-        "helpful_phrases": [
-          "Today is…",
-          "It's the … of …",
-          "My birthday is on…",
-          "The holiday starts in…",
-          "My favourite month is…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "ordinal numbers",
-          "on / in with dates",
-          "days and months"
-        ]
-      }
-    },
-    {
-      "id": "A1-11-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "تقويمك الشخصي",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن تواريخ مهمة في سنتك. اقرأ المثال أولاً.\n\n**تذكّر:** on + يوم/تاريخ، in + شهر/فصل، والأيام والشهور بحرف كبير."
         },
         {
-          "type": "video",
-          "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: on / short / School / Thursday / is",
+            "answer": [
+              "School",
+              "is",
+              "short",
+              "on",
+              "Thursday"
+            ],
+            "explanation_ar": "الترتيب الصحيح: School is short on Thursday"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "My name is Abeer. My birthday is on the ninth of March. My favourite month is November because it is the honey season in Doan, and my uncle gives us fresh honey. Our final exams are in June. The summer holiday starts on the twentieth of June. In August, we visit my grandmother in Shibam.",
-          "word_count": 55
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ is a long day.",
+            "answer": "Wednesday",
+            "explanation_ar": "الكلمة الناقصة «Wednesday» (الأربعاء)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Thursday» mean?",
+            "options": [
+              "وقت / ساعة",
+              "أسبوع",
+              "عيد ميلاد",
+              "الخميس"
+            ],
+            "answer": 3,
+            "explanation_ar": "«Thursday» تعني «الخميس». مثال: School is short on Thursday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: maths / have / I / Monday / on",
+            "answer": [
+              "I",
+              "have",
+              "maths",
+              "on",
+              "Monday"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I have maths on Monday"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "What day is it ___?",
+            "answer": "today",
+            "explanation_ar": "الكلمة الناقصة «today» (اليوم)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about important dates in your year: your birthday, exams, holidays and your favourite month. Use on, in and ordinal numbers.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 3 sentences about your week: your favourite day, a day with English, and your birthday month.",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "ordinal numbers",
-          "on / in with dates",
-          "capital letters for days and months"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-11-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-11-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- الأعداد الترتيبية: first, second, third, fourth, fifth… twentieth, twenty-first.\n- **on** + يوم/تاريخ، **in** + شهر/سنة/فصل، **at** + ساعة.\n- **What's the date today? When is your birthday?**\n- الأيام والشهور بحرف كبير."
-        },
-        {
-          "type": "video",
-          "youtube_id": "HIz-rb0lMAY",
-          "video_title": "تعلم كلمات انجليزية عن التاريخ — الحلقة 11",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 809,
-          "optional": true,
-          "approx_size_mb": 54
+          "markdown_ar": "طلاب أمام لوحة الإعلانات في إدارة المدرسة. **استمع:** متى الاختبار؟ ومتى الإجازة؟"
         },
         {
           "type": "story",
-          "id": "A1-11-s1",
-          "title_ar": "الحلقة 11: موسم العسل في دوعن",
+          "id": "A1-11-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Hamza",
-              "text_en": "When is the honey season in Doan?",
-              "text_ar": "متى موسم العسل في دوعن؟"
+              "speaker": "Salem",
+              "text_en": "Excuse me, what day is it today?",
+              "text_ar": "عفواً، ما اليوم؟"
             },
             {
-              "speaker": "Beekeeper",
-              "text_en": "It's in October and November.",
-              "text_ar": "في أكتوبر ونوفمبر."
+              "speaker": "Clerk",
+              "text_en": "Today is Tuesday.",
+              "text_ar": "اليوم الثلاثاء."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Today is the fifth of November. We are lucky!",
-              "text_ar": "اليوم هو الخامس من نوفمبر. نحن محظوظون!"
+              "speaker": "Salem",
+              "text_en": "When is the English test?",
+              "text_ar": "متى اختبار الإنجليزية؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "My birthday is on the twelfth of November.",
-              "text_ar": "يوم ميلادي في الثاني عشر من نوفمبر."
+              "speaker": "Clerk",
+              "text_en": "The test is on Thursday.",
+              "text_ar": "الاختبار يوم الخميس."
             },
             {
-              "speaker": "Beekeeper",
-              "text_en": "Then this honey is a gift for you, Hamza!",
-              "text_ar": "إذن هذا العسل هدية لك يا حمزة!"
+              "speaker": "Salem",
+              "text_en": "Is school open on Friday?",
+              "text_ar": "هل المدرسة مفتوحة يوم الجمعة؟"
+            },
+            {
+              "speaker": "Clerk",
+              "text_en": "No, Friday is a holiday.",
+              "text_ar": "لا، الجمعة إجازة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Thank you. My birthday is in May.",
+              "text_ar": "شكراً. عيد ميلادي في مايو."
+            },
+            {
+              "speaker": "Clerk",
+              "text_en": "Happy birthday in May, Salem!",
+              "text_ar": "كل عام وأنت بخير في مايو يا سالم!"
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-11-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "We visit our grandmother ___ Fridays.",
+            "id": "A1-11-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Clerk says: \"No, Friday is a holiday.\"",
             "options": [
-              "in",
-              "on",
-              "at"
+              "True",
+              "False"
             ],
-            "answer": 1,
-            "explanation_ar": "مع الأيام: on."
+            "answer": 0,
+            "explanation_ar": "الذي قال «No, Friday is a holiday.» هو Clerk."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-11-e18",
-            "skill": "grammar",
+            "id": "A1-11-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "12th تُقرأ:",
+            "prompt": "What does «Thursday» mean?",
             "options": [
-              "twelveth",
-              "twelfth",
-              "twelve"
+              "الخميس",
+              "الثلاثاء",
+              "أمس",
+              "الجمعة"
             ],
-            "answer": 1,
-            "explanation_ar": "12th = twelfth (شاذة)."
+            "answer": 0,
+            "explanation_ar": "«Thursday» تعني «الخميس». مثال: School is short on Thursday."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-11-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-11-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "The date harvest is ___ summer.",
-            "answer": "in",
-            "explanation_ar": "مع الفصول: in."
+            "id": "A1-11-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"Happy birthday in May, Salem!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Happy birthday in May, Salem!» هو Clerk."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «month» mean?",
+            "options": [
+              "وقت / ساعة",
+              "شهر",
+              "الثلاثاء",
+              "ساعة (60 دقيقة)"
+            ],
+            "answer": 1,
+            "explanation_ar": "«month» تعني «شهر». مثال: A month has four weeks."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell us about your week: which days you go to school, which day is a holiday, and when your birthday is.",
+        "helpful_phrases": [
+          "Today is ...",
+          "on Sunday",
+          "in May",
+          "Friday is a holiday."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-11-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-11-L4-s1",
+          "title_ar": "موعد الاختبار",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Mona, what day is it today?",
+              "text_ar": "يا منى، ما اليوم؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Today is Wednesday.",
+              "text_ar": "اليوم الأربعاء."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Tomorrow is Thursday. We have a test.",
+              "text_ar": "غداً الخميس. عندنا اختبار."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yesterday was Tuesday. I study on Tuesday.",
+              "text_ar": "أمس كان الثلاثاء. أنا أذاكر يوم الثلاثاء."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is Friday a holiday?",
+              "text_ar": "هل الجمعة إجازة؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, it is. We rest on Friday.",
+              "text_ar": "نعم. نرتاح يوم الجمعة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "My birthday is next month.",
+              "text_ar": "عيد ميلادي الشهر القادم."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Happy birthday in advance!",
+              "text_ar": "كل عام وأنت بخير مقدماً!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «today» mean?",
+            "options": [
+              "اليوم",
+              "أمس",
+              "الأربعاء",
+              "الاثنين"
+            ],
+            "answer": 0,
+            "explanation_ar": "«today» تعني «اليوم». مثال: What day is it today?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My ___ is in May.",
+            "answer": "birthday",
+            "explanation_ar": "الكلمة الناقصة «birthday» (عيد ميلاد)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: What / it / is / today / day",
+            "answer": [
+              "What",
+              "day",
+              "is",
+              "it",
+              "today"
+            ],
+            "explanation_ar": "الترتيب الصحيح: What day is it today"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Is Friday a holiday?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Is Friday a holiday?» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «tomorrow» mean?",
+            "options": [
+              "شهر",
+              "أمس",
+              "الأربعاء",
+              "غداً"
+            ],
+            "answer": 3,
+            "explanation_ar": "«tomorrow» تعني «غداً». مثال: Tomorrow is Friday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-11-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There are seven days in a ___.",
+            "answer": "week",
+            "explanation_ar": "الكلمة الناقصة «week» (أسبوع)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-11-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Say what day it is today, what day it is tomorrow, and what you do on three days of the week. Say when your birthday is.",
+        "helpful_phrases": [
+          "Today is ...",
+          "Tomorrow is ...",
+          "on Monday",
+          "My birthday is in ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -933,131 +724,131 @@
     "questions": [
       {
         "id": "A1-11-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "My birthday is ___ the tenth of April.",
+        "prompt": "What does «Friday» mean?",
         "options": [
-          "in",
-          "on",
-          "at"
+          "الثلاثاء",
+          "غداً",
+          "اليوم",
+          "الجمعة"
         ],
-        "answer": 1,
-        "explanation_ar": "مع التاريخ: on."
+        "answer": 3,
+        "explanation_ar": "«Friday» تعني «الجمعة». مثال: Friday is a holiday."
       },
       {
         "id": "A1-11-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "School starts ___ September.",
-        "options": [
-          "in",
-          "on",
-          "at"
-        ],
-        "answer": 0,
-        "explanation_ar": "مع الشهر: in."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "My birthday is next ___.",
+        "answer": "month",
+        "explanation_ar": "الكلمة الناقصة «month» (شهر)."
       },
       {
         "id": "A1-11-q3",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "2nd تُقرأ:",
-        "options": [
-          "two",
-          "second",
-          "twoth"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: What / is / time / it",
+        "answer": [
+          "What",
+          "time",
+          "is",
+          "it"
         ],
-        "answer": 1,
-        "explanation_ar": "2nd = second."
+        "explanation_ar": "الترتيب الصحيح: What time is it"
       },
       {
         "id": "A1-11-q4",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "The last month of the year is ___.",
-        "answer": "December",
-        "explanation_ar": "الشهر الأخير December."
+        "kind": "mcq",
+        "prompt": "What does «tomorrow» mean?",
+        "options": [
+          "عيد ميلاد",
+          "الجمعة",
+          "غداً",
+          "أمس"
+        ],
+        "answer": 2,
+        "explanation_ar": "«tomorrow» تعني «غداً». مثال: Tomorrow is Friday."
       },
       {
         "id": "A1-11-q5",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "Today is Thursday. Tomorrow is ___.",
-        "options": [
-          "Wednesday",
-          "Friday",
-          "Saturday"
-        ],
-        "answer": 1,
-        "explanation_ar": "بعد الخميس الجمعة Friday."
+        "kind": "fill_blank",
+        "prompt": "Thank you. My ___ is in May.",
+        "answer": "birthday",
+        "explanation_ar": "الكلمة الناقصة «birthday» (عيد ميلاد)."
       },
       {
         "id": "A1-11-q6",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "«الثالث من يونيو» بالإنجليزية:",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Mona says: \"Yesterday was Tuesday. I study on Tuesday.\"",
         "options": [
-          "the three of June",
-          "the third of June",
-          "June three"
+          "True",
+          "False"
         ],
-        "answer": 1,
-        "explanation_ar": "العدد الترتيبي: the third of June."
+        "answer": 0,
+        "explanation_ar": "الذي قال «Yesterday was Tuesday. I study on Tuesday.» هو Mona."
       },
       {
         "id": "A1-11-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: the / what's / today / date",
-        "answer": [
-          "What's",
-          "the",
-          "date",
-          "today"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «yesterday» mean?",
+        "options": [
+          "أمس",
+          "الجمعة",
+          "الأربعاء",
+          "الاثنين"
         ],
-        "explanation_ar": "What's the date today?"
+        "answer": 0,
+        "explanation_ar": "«yesterday» تعني «أمس». مثال: Yesterday was Wednesday."
       },
       {
         "id": "A1-11-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "My exam is in Monday.",
-          "My exam is on Monday.",
-          "My exam is at Monday."
-        ],
-        "answer": 1,
-        "explanation_ar": "مع الأيام: on Monday."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Tomorrow is ___. We have a test.",
+        "answer": "Thursday",
+        "explanation_ar": "الكلمة الناقصة «Thursday» (الخميس)."
       },
       {
         "id": "A1-11-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «The honey season in Doan is in October and November.» When is the honey season?",
-        "options": [
-          "in summer",
-          "in October and November",
-          "in January"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: comes / The / in / bus / hour / one",
+        "answer": [
+          "The",
+          "bus",
+          "comes",
+          "in",
+          "one",
+          "hour"
         ],
-        "answer": 1,
-        "explanation_ar": "in October and November."
+        "explanation_ar": "الترتيب الصحيح: The bus comes in one hour"
       },
       {
         "id": "A1-11-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "There are twelve ___ in a year.",
-        "answer": "months",
-        "explanation_ar": "في السنة اثنا عشر شهراً months."
+        "kind": "mcq",
+        "prompt": "What does «Tuesday» mean?",
+        "options": [
+          "الأربعاء",
+          "الثلاثاء",
+          "غداً",
+          "الأحد"
+        ],
+        "answer": 1,
+        "explanation_ar": "«Tuesday» تعني «الثلاثاء». مثال: The test is on Tuesday."
       }
     ]
   },
-  "context_note": "جني التمر في الصيف، موسم عسل السدر في دوعن، سلاحف شرمة، العام الدراسي.",
-  "stop_ar": "دوعن",
+  "stop_ar": "إدارة المدرسة",
   "roleplay": {
-    "character_ar": "النحّال في دوعن",
-    "scenario_en": "You are a beekeeper in Wadi Doan. Talk about dates: ask the student about their birthday, favourite month and important dates.",
-    "opening_en": "Hello! The honey season is in October. When is your birthday?"
-  }
+    "character_ar": "موظف إدارة المدرسة",
+    "scenario_en": "You are a clerk at a school office in Yemen. A student asks you about days, the weekly timetable and the test date. Answer with days of the week, today, tomorrow, yesterday, and the words on / in.",
+    "opening_en": "Good morning! Today is Sunday. How can I help you?"
+  },
+  "context_note": "الأيام والتواريخ"
 }

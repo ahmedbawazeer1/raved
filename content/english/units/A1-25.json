@@ -1,0 +1,822 @@
+{
+  "path": "english",
+  "code": "A1-25",
+  "version": 1,
+  "level": "A1",
+  "position": 25,
+  "title": "Putting It All Together",
+  "topic": "في حفل نهاية المستوى بقاعة الأنشطة، يقدّم كل طالب نفسه وعائلته ويومه بالإنجليزية أمام الضيوف، ويطلب المساعدة عند الحاجة.",
+  "grammar_point": "Can you ...? / I can / I can't (requests and ability)",
+  "can_do": [
+    "أطلب المساعدة وأعتذر وأشكر بالإنجليزية",
+    "أقول ما أستطيع وما لا أستطيع بـ can / can't",
+    "أقدّم نفسي بجمل متصلة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-25-v1",
+      "word": "please",
+      "part_of_speech": "phrase",
+      "meaning_ar": "من فضلك",
+      "example_en": "Open the door, please."
+    },
+    {
+      "id": "A1-25-v2",
+      "word": "thank you",
+      "part_of_speech": "phrase",
+      "meaning_ar": "شكراً",
+      "example_en": "Thank you very much."
+    },
+    {
+      "id": "A1-25-v3",
+      "word": "sorry",
+      "part_of_speech": "phrase",
+      "meaning_ar": "آسف",
+      "example_en": "I am sorry, I am late."
+    },
+    {
+      "id": "A1-25-v4",
+      "word": "excuse me",
+      "part_of_speech": "phrase",
+      "meaning_ar": "عفواً",
+      "example_en": "Excuse me, can you help me?"
+    },
+    {
+      "id": "A1-25-v5",
+      "word": "welcome",
+      "part_of_speech": "phrase",
+      "meaning_ar": "أهلاً بك",
+      "example_en": "Welcome to our school."
+    },
+    {
+      "id": "A1-25-v6",
+      "word": "help",
+      "part_of_speech": "verb",
+      "meaning_ar": "يساعد",
+      "example_en": "Can you help me?"
+    },
+    {
+      "id": "A1-25-v7",
+      "word": "speak",
+      "part_of_speech": "verb",
+      "meaning_ar": "يتكلم",
+      "example_en": "I can speak English."
+    },
+    {
+      "id": "A1-25-v8",
+      "word": "understand",
+      "part_of_speech": "verb",
+      "meaning_ar": "يفهم",
+      "example_en": "I don't understand."
+    },
+    {
+      "id": "A1-25-v9",
+      "word": "again",
+      "part_of_speech": "adverb",
+      "meaning_ar": "مرة أخرى",
+      "example_en": "Please say it again."
+    },
+    {
+      "id": "A1-25-v10",
+      "word": "slowly",
+      "part_of_speech": "adverb",
+      "meaning_ar": "ببطء",
+      "example_en": "Please speak slowly."
+    },
+    {
+      "id": "A1-25-v11",
+      "word": "can",
+      "part_of_speech": "verb",
+      "meaning_ar": "يستطيع",
+      "example_en": "I can swim."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-25-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: حصاد البداية والتواصل الشامل",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "وصلت إلى نهاية المستوى الأول! ستقف الآن أمام الضيوف لتقدّم نفسك، وقد تحتاج أن تطلب المساعدة أو تقول «آسف» أو تطلب أن يعيد أحدهم كلامه ببطء. هذه عبارات تحتاجها في كل مكان. شاهد فيديو المراجعة أولاً."
+        },
+        {
+          "type": "video",
+          "youtube_id": "5VQJOtRNiFU",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية للمبتدئين من الصفر : الحلقة 25 مراجعة بالصوت والصورة",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "please",
+              "من فضلك",
+              "Open the door, please."
+            ],
+            [
+              "thank you",
+              "شكراً",
+              "Thank you very much."
+            ],
+            [
+              "sorry",
+              "آسف",
+              "I am sorry, I am late."
+            ],
+            [
+              "excuse me",
+              "عفواً",
+              "Excuse me, can you help me?"
+            ],
+            [
+              "welcome",
+              "أهلاً بك",
+              "Welcome to our school."
+            ],
+            [
+              "help",
+              "يساعد",
+              "Can you help me?"
+            ],
+            [
+              "speak",
+              "يتكلم",
+              "I can speak English."
+            ],
+            [
+              "understand",
+              "يفهم",
+              "I don't understand."
+            ],
+            [
+              "again",
+              "مرة أخرى",
+              "Please say it again."
+            ],
+            [
+              "slowly",
+              "ببطء",
+              "Please speak slowly."
+            ],
+            [
+              "can",
+              "يستطيع",
+              "I can swim."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "Welcome to our school. Excuse me, can you help me? Please say it again. I am sorry. I don't understand. Please speak slowly. I can speak English. I can swim. Thank you very much."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «wake up» mean?",
+            "options": [
+              "عفواً",
+              "أهلاً بك",
+              "مرة أخرى",
+              "يستيقظ"
+            ],
+            "answer": 3,
+            "explanation_ar": "«wake up» تعني «يستيقظ». مثال: I wake up at six."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___, can you help me?",
+            "answer": "Excuse me",
+            "explanation_ar": "الكلمة الناقصة «Excuse me» (عفواً)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «get up» mean?",
+            "options": [
+              "ينهض من السرير",
+              "آسف",
+              "شكراً",
+              "عفواً"
+            ],
+            "answer": 0,
+            "explanation_ar": "«get up» تعني «ينهض من السرير». مثال: He gets up at six."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I can ___ English.",
+            "answer": "speak",
+            "explanation_ar": "الكلمة الناقصة «speak» (يتكلم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «speak» mean?",
+            "options": [
+              "ببطء",
+              "ينهض من السرير",
+              "عفواً",
+              "يتكلم"
+            ],
+            "answer": 3,
+            "explanation_ar": "«speak» تعني «يتكلم». مثال: I can speak English."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-25-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-25-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: Can you ...? / I can / I can't (requests and ability)",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "Can you help me? I can speak English. I can't swim. Please say it again."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "الفعل **can** يعني «أستطيع / يمكنني». له شكل واحد مع الجميع (بدون s):\n\n- I **can** swim. = أستطيع السباحة.\n- She **can** speak English. = هي تستطيع التحدث بالإنجليزية.\n- I **can't** swim. = لا أستطيع. (can't = cannot)\n\nنستخدمه للطلب بأدب: **Can you** help me, **please**? (هل يمكنك مساعدتي من فضلك؟)\n\nوبعد can نضع الفعل **بدون to وبدون s**: She **can speak**.\n\n**الخطأ الشائع:** «She can speaks» أو «I can to swim». الصحيح: **She can speak**, **I can swim**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الغرض",
+            "الجملة",
+            "الجواب"
+          ],
+          "rows": [
+            [
+              "القدرة",
+              "I can speak English.",
+              "—"
+            ],
+            [
+              "عدم القدرة",
+              "I can't swim.",
+              "—"
+            ],
+            [
+              "طلب",
+              "Can you help me, please?",
+              "Yes, I can."
+            ],
+            [
+              "اعتذار",
+              "I am sorry.",
+              "It is OK."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: English / can / speak / I",
+            "answer": [
+              "I",
+              "can",
+              "speak",
+              "English"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I can speak English"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___, can you help me?",
+            "answer": "Excuse me",
+            "explanation_ar": "الكلمة الناقصة «Excuse me» (عفواً)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «get up» mean?",
+            "options": [
+              "آسف",
+              "ينهض من السرير",
+              "يفهم",
+              "عفواً"
+            ],
+            "answer": 1,
+            "explanation_ar": "«get up» تعني «ينهض من السرير». مثال: He gets up at six."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: I / swim / can",
+            "answer": [
+              "I",
+              "can",
+              "swim"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I can swim"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ speak slowly.",
+            "answer": "Please",
+            "explanation_ar": "الكلمة الناقصة «Please» (من فضلك)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 4 sentences: 2 things you can do, 1 thing you can't do, and 1 polite request using Can you ...?",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-25-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "حفل نهاية المستوى. **استمع:** كيف يقدّم الطالب نفسه؟ وماذا يطلب من الضيف؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-25-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Tariq",
+              "text_en": "Good morning! Welcome to our school.",
+              "text_ar": "صباح الخير! أهلاً بكم في مدرستنا."
+            },
+            {
+              "speaker": "Guest",
+              "text_en": "Thank you. What is your name?",
+              "text_ar": "شكراً. ما اسمك؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "My name is Tariq. I am a student in the first year.",
+              "text_ar": "اسمي طارق. أنا طالب في السنة الأولى."
+            },
+            {
+              "speaker": "Guest",
+              "text_en": "Can you speak English?",
+              "text_ar": "هل تستطيع التحدث بالإنجليزية؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Yes, I can, but please speak slowly.",
+              "text_ar": "نعم، لكن من فضلك تكلم ببطء."
+            },
+            {
+              "speaker": "Guest",
+              "text_en": "Do you play football?",
+              "text_ar": "هل تلعب كرة القدم؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Yes, I play football every day. Sorry, can you say it again?",
+              "text_ar": "نعم، ألعب كل يوم. آسف، هل يمكنك أن تعيد؟"
+            },
+            {
+              "speaker": "Guest",
+              "text_en": "No problem. Thank you, Tariq!",
+              "text_ar": "لا مشكلة. شكراً يا طارق!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Guest says: \"Good morning! Welcome to our school.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Good morning! Welcome to our school.» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «please» mean?",
+            "options": [
+              "ببطء",
+              "يساعد",
+              "مرة أخرى",
+              "من فضلك"
+            ],
+            "answer": 3,
+            "explanation_ar": "«please» تعني «من فضلك». مثال: Open the door, please."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"My name is Tariq. I am a student in the first year.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «My name is Tariq. I am a student in the first year.» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «sorry» mean?",
+            "options": [
+              "شكراً",
+              "آسف",
+              "من فضلك",
+              "عفواً"
+            ],
+            "answer": 1,
+            "explanation_ar": "«sorry» تعني «آسف». مثال: I am sorry, I am late."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Introduce yourself to a guest in 6–8 sentences: name, family, school, what you like, what you can do. Ask for help once.",
+        "helpful_phrases": [
+          "My name is ...",
+          "I can ...",
+          "I can't ...",
+          "Excuse me, can you help me?"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-25-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-25-L4-s1",
+          "title_ar": "حفل الختام",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Excuse me, Mona. Can you help me?",
+              "text_ar": "عفواً يا منى. هل تستطيعين مساعدتي؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, I can. What do you need?",
+              "text_ar": "نعم. ماذا تحتاجين؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I can't find my notebook.",
+              "text_ar": "لا أستطيع إيجاد دفتري."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "It is on the chair. Look!",
+              "text_ar": "هو على الكرسي. انظري!"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Thank you very much.",
+              "text_ar": "شكراً جزيلاً."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "You are welcome. Can you speak English at the party?",
+              "text_ar": "على الرحب والسعة. هل ستتحدثين بالإنجليزية في الحفل؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, I can, but I am a little afraid.",
+              "text_ar": "نعم، لكني خائفة قليلاً."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Do not worry. You can do it!",
+              "text_ar": "لا تقلقي. أنت تستطيعين!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «please» mean?",
+            "options": [
+              "يفهم",
+              "من فضلك",
+              "أهلاً بك",
+              "يساعد"
+            ],
+            "answer": 1,
+            "explanation_ar": "«please» تعني «من فضلك». مثال: Open the door, please."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Can you ___ me?",
+            "answer": "help",
+            "explanation_ar": "الكلمة الناقصة «help» (يساعد)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: don't / understand / I",
+            "answer": [
+              "I",
+              "don't",
+              "understand"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I don't understand"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"You are welcome. Can you speak English at the party?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «You are welcome. Can you speak English at the party?» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «welcome» mean?",
+            "options": [
+              "شكراً",
+              "ينهض من السرير",
+              "أهلاً بك",
+              "ببطء"
+            ],
+            "answer": 2,
+            "explanation_ar": "«welcome» تعني «أهلاً بك». مثال: Welcome to our school."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-25-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Do not worry. You ___ do it!",
+            "answer": "can",
+            "explanation_ar": "الكلمة الناقصة «can» (يستطيع)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-25-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Introduce yourself in 8 sentences: your name, your family, your day, what you like, what you can and can't do. Be polite: please, thank you, sorry.",
+        "helpful_phrases": [
+          "My name is ...",
+          "I can ...",
+          "I can't ...",
+          "Please speak slowly."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-25-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «please» mean?",
+        "options": [
+          "عفواً",
+          "من فضلك",
+          "يساعد",
+          "يستطيع"
+        ],
+        "answer": 1,
+        "explanation_ar": "«please» تعني «من فضلك». مثال: Open the door, please."
+      },
+      {
+        "id": "A1-25-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I ___ swim.",
+        "answer": "can",
+        "explanation_ar": "الكلمة الناقصة «can» (يستطيع)."
+      },
+      {
+        "id": "A1-25-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: I / swim / can't",
+        "answer": [
+          "I",
+          "can't",
+          "swim"
+        ],
+        "explanation_ar": "الترتيب الصحيح: I can't swim"
+      },
+      {
+        "id": "A1-25-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «thank you» mean?",
+        "options": [
+          "أهلاً بك",
+          "شكراً",
+          "آسف",
+          "ببطء"
+        ],
+        "answer": 1,
+        "explanation_ar": "«thank you» تعني «شكراً». مثال: Thank you very much."
+      },
+      {
+        "id": "A1-25-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Can you ___ English?",
+        "answer": "speak",
+        "explanation_ar": "الكلمة الناقصة «speak» (يتكلم)."
+      },
+      {
+        "id": "A1-25-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Guest says: \"Can you speak English?\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation_ar": "الذي قال «Can you speak English?» هو Guest."
+      },
+      {
+        "id": "A1-25-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «welcome» mean?",
+        "options": [
+          "شكراً",
+          "يساعد",
+          "يتكلم",
+          "أهلاً بك"
+        ],
+        "answer": 3,
+        "explanation_ar": "«welcome» تعني «أهلاً بك». مثال: Welcome to our school."
+      },
+      {
+        "id": "A1-25-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I am ___, I am late.",
+        "answer": "sorry",
+        "explanation_ar": "الكلمة الناقصة «sorry» (آسف)."
+      },
+      {
+        "id": "A1-25-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: very / much / you / Thank",
+        "answer": [
+          "Thank",
+          "you",
+          "very",
+          "much"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Thank you very much"
+      },
+      {
+        "id": "A1-25-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «excuse me» mean?",
+        "options": [
+          "عفواً",
+          "من فضلك",
+          "يستطيع",
+          "يتكلم"
+        ],
+        "answer": 0,
+        "explanation_ar": "«excuse me» تعني «عفواً». مثال: Excuse me, can you help me?"
+      }
+    ]
+  },
+  "stop_ar": "قاعة الأنشطة المدرسية",
+  "roleplay": {
+    "character_ar": "ضيفة في حفل نهاية المستوى",
+    "scenario_en": "You are a guest at a school party in Yemen, meeting a student at the end of the first English level. Ask his or her name, family, favourite subject, what he or she can do. Use very simple English (can, can't, please, thank you, sorry, again, slowly).",
+    "opening_en": "Hello! Welcome to the party. What is your name?"
+  },
+  "context_note": "حصاد البداية والتواصل الشامل"
+}

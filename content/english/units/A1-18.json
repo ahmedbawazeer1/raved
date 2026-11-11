@@ -1,0 +1,847 @@
+{
+  "path": "english",
+  "code": "A1-18",
+  "version": 1,
+  "level": "A1",
+  "position": 18,
+  "title": "Inside My Bedroom",
+  "topic": "يرتب سالم غرفة نومه قبل وصول ضيف، ويسأل أخاه أين توجد أغراضه: بجانب السرير، خلف الباب، بين الخزانة والنافذة.",
+  "grammar_point": "next to / behind / between / in front of",
+  "can_do": [
+    "أسمّي أثاث غرفة النوم بالإنجليزية",
+    "أصف مكان الأشياء بحروف الجر",
+    "أسأل «أين...؟» بـ Where is"
+  ],
+  "vocab": [
+    {
+      "id": "A1-18-v1",
+      "word": "bedroom",
+      "part_of_speech": "noun",
+      "meaning_ar": "غرفة نوم",
+      "example_en": "My bedroom is small."
+    },
+    {
+      "id": "A1-18-v2",
+      "word": "bed",
+      "part_of_speech": "noun",
+      "meaning_ar": "سرير",
+      "example_en": "The bed is next to the window."
+    },
+    {
+      "id": "A1-18-v3",
+      "word": "pillow",
+      "part_of_speech": "noun",
+      "meaning_ar": "وسادة",
+      "example_en": "The pillow is on the bed."
+    },
+    {
+      "id": "A1-18-v4",
+      "word": "blanket",
+      "part_of_speech": "noun",
+      "meaning_ar": "بطانية",
+      "example_en": "The blanket is warm."
+    },
+    {
+      "id": "A1-18-v5",
+      "word": "wardrobe",
+      "part_of_speech": "noun",
+      "meaning_ar": "خزانة ملابس",
+      "example_en": "My clothes are in the wardrobe."
+    },
+    {
+      "id": "A1-18-v6",
+      "word": "lamp",
+      "part_of_speech": "noun",
+      "meaning_ar": "مصباح",
+      "example_en": "The lamp is next to the bed."
+    },
+    {
+      "id": "A1-18-v7",
+      "word": "mirror",
+      "part_of_speech": "noun",
+      "meaning_ar": "مرآة",
+      "example_en": "The mirror is behind the door."
+    },
+    {
+      "id": "A1-18-v8",
+      "word": "carpet",
+      "part_of_speech": "noun",
+      "meaning_ar": "سجّادة",
+      "example_en": "The carpet is under the bed."
+    },
+    {
+      "id": "A1-18-v9",
+      "word": "curtain",
+      "part_of_speech": "noun",
+      "meaning_ar": "ستارة",
+      "example_en": "The curtain is blue."
+    },
+    {
+      "id": "A1-18-v10",
+      "word": "clock",
+      "part_of_speech": "noun",
+      "meaning_ar": "ساعة حائط",
+      "example_en": "The clock is on the wall."
+    },
+    {
+      "id": "A1-18-v11",
+      "word": "next to",
+      "part_of_speech": "phrase",
+      "meaning_ar": "بجانب",
+      "example_en": "The lamp is next to the bed."
+    },
+    {
+      "id": "A1-18-v12",
+      "word": "behind",
+      "part_of_speech": "other",
+      "meaning_ar": "خلف",
+      "example_en": "The mirror is behind the door."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-18-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: داخل غرفة نومي",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "غرفة النوم مكانك الخاص. هل ترتّبها كل يوم؟ أين سريرك؟ وأين خزانتك؟ في هذا الدرس ستصف غرفة نومك بالإنجليزية وتقول أين كل شيء بدقة: بجانب، خلف، بين."
+        },
+        {
+          "type": "video",
+          "youtube_id": "l51hYjeR-K8",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 18",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "bedroom",
+              "غرفة نوم",
+              "My bedroom is small."
+            ],
+            [
+              "bed",
+              "سرير",
+              "The bed is next to the window."
+            ],
+            [
+              "pillow",
+              "وسادة",
+              "The pillow is on the bed."
+            ],
+            [
+              "blanket",
+              "بطانية",
+              "The blanket is warm."
+            ],
+            [
+              "wardrobe",
+              "خزانة ملابس",
+              "My clothes are in the wardrobe."
+            ],
+            [
+              "lamp",
+              "مصباح",
+              "The lamp is next to the bed."
+            ],
+            [
+              "mirror",
+              "مرآة",
+              "The mirror is behind the door."
+            ],
+            [
+              "carpet",
+              "سجّادة",
+              "The carpet is under the bed."
+            ],
+            [
+              "curtain",
+              "ستارة",
+              "The curtain is blue."
+            ],
+            [
+              "clock",
+              "ساعة حائط",
+              "The clock is on the wall."
+            ],
+            [
+              "next to",
+              "بجانب",
+              "The lamp is next to the bed."
+            ],
+            [
+              "behind",
+              "خلف",
+              "The mirror is behind the door."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "This is my bedroom. The bed is next to the window. The pillow and the blanket are on the bed. My clothes are in the wardrobe. The lamp is next to the bed. The mirror is behind the door. The carpet is under the bed. The clock is on the wall, and the curtain is blue."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bedroom» mean?",
+            "options": [
+              "خزانة ملابس",
+              "مرآة",
+              "غرفة نوم",
+              "سرير"
+            ],
+            "answer": 2,
+            "explanation_ar": "«bedroom» تعني «غرفة نوم». مثال: My bedroom is small."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The carpet is under the ___.",
+            "answer": "bed",
+            "explanation_ar": "الكلمة الناقصة «bed» (سرير)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «curtain» mean?",
+            "options": [
+              "ستارة",
+              "خزانة ملابس",
+              "موقد",
+              "بطانية"
+            ],
+            "answer": 0,
+            "explanation_ar": "«curtain» تعني «ستارة». مثال: The curtain is blue."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is warm.",
+            "answer": "blanket",
+            "explanation_ar": "الكلمة الناقصة «blanket» (بطانية)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pillow» mean?",
+            "options": [
+              "وسادة",
+              "سجّادة",
+              "مرآة",
+              "بطانية"
+            ],
+            "answer": 0,
+            "explanation_ar": "«pillow» تعني «وسادة». مثال: The pillow is on the bed."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-18-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-18-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: next to / behind / between / in front of",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "The bed is next to the window. The mirror is behind the door. The lamp is on the table. Where is the clock?"
+        },
+        {
+          "type": "text",
+          "markdown_ar": "تعلّمنا in و on و under. وهذه حروف جر جديدة لوصف المكان:\n\n- **next to** = بجانب: The lamp is **next to** the bed.\n- **behind** = خلف: The mirror is **behind** the door.\n- **in front of** = أمام: The carpet is **in front of** the bed.\n- **between** = بين: The bed is **between** the wardrobe and the window.\n\nلنسأل عن المكان نقول: **Where is** the lamp? (أين المصباح؟) ونجيب: **It is** next to the bed.\n\n**الخطأ الشائع:** أن ننسى **the** قبل اسم معروف. نقول: **the** bed, **the** lamp عندما نتحدث عن شيء محدد."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "next to",
+              "بجانب",
+              "The lamp is next to the bed."
+            ],
+            [
+              "behind",
+              "خلف",
+              "The mirror is behind the door."
+            ],
+            [
+              "in front of",
+              "أمام",
+              "The carpet is in front of the bed."
+            ],
+            [
+              "between",
+              "بين",
+              "The bed is between the wardrobe and the window."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: The / the / is / on / wall / clock",
+            "answer": [
+              "The",
+              "clock",
+              "is",
+              "on",
+              "the",
+              "wall"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The clock is on the wall"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is next to the window.",
+            "answer": "bed",
+            "explanation_ar": "الكلمة الناقصة «bed» (سرير)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «clock» mean?",
+            "options": [
+              "سرير",
+              "مرآة",
+              "خلف",
+              "ساعة حائط"
+            ],
+            "answer": 3,
+            "explanation_ar": "«clock» تعني «ساعة حائط». مثال: The clock is on the wall."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: next / bed / to / the / is / The / lamp",
+            "answer": [
+              "The",
+              "lamp",
+              "is",
+              "next",
+              "to",
+              "the",
+              "bed"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The lamp is next to the bed"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My clothes are in the ___.",
+            "answer": "wardrobe",
+            "explanation_ar": "الكلمة الناقصة «wardrobe» (خزانة ملابس)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about your bedroom. Where is your bed? Where is your wardrobe? Use next to / behind / in front of.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-18-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "سالم يرتب غرفته. **استمع:** أين المصباح؟ وأين المرآة؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-18-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "Brother, where is my blanket?",
+              "text_ar": "يا أخي، أين بطانيتي؟"
+            },
+            {
+              "speaker": "Brother",
+              "text_en": "It is on the bed.",
+              "text_ar": "هي على السرير."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Where is the lamp?",
+              "text_ar": "وأين المصباح؟"
+            },
+            {
+              "speaker": "Brother",
+              "text_en": "It is next to the bed.",
+              "text_ar": "بجانب السرير."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "And my mirror?",
+              "text_ar": "وأين مرآتي؟"
+            },
+            {
+              "speaker": "Brother",
+              "text_en": "It is behind the door.",
+              "text_ar": "خلف الباب."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Where is the carpet?",
+              "text_ar": "وأين السجّادة؟"
+            },
+            {
+              "speaker": "Brother",
+              "text_en": "It is in front of the wardrobe. Your room is clean.",
+              "text_ar": "أمام الخزانة. غرفتك نظيفة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Brother says: \"It is behind the door.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «It is behind the door.» هو Brother."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «carpet» mean?",
+            "options": [
+              "مصباح",
+              "بجانب",
+              "سجّادة",
+              "ساعة حائط"
+            ],
+            "answer": 2,
+            "explanation_ar": "«carpet» تعني «سجّادة». مثال: The carpet is under the bed."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"Where is the lamp?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Where is the lamp?» هو Salem."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «lamp» mean?",
+            "options": [
+              "بجانب",
+              "مصباح",
+              "مرآة",
+              "بطانية"
+            ],
+            "answer": 1,
+            "explanation_ar": "«lamp» تعني «مصباح». مثال: The lamp is next to the bed."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe your bedroom: say where the bed, the wardrobe, the lamp and the mirror are.",
+        "helpful_phrases": [
+          "The bed is next to ...",
+          "The ... is behind ...",
+          "in front of",
+          "between"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-18-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-18-L4-s1",
+          "title_ar": "غرفة الضيف",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Huda, the guest comes today.",
+              "text_ar": "يا هدى، الضيف يأتي اليوم."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I clean her bedroom.",
+              "text_ar": "أنا أنظّف غرفتها."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "The bed is next to the window.",
+              "text_ar": "السرير بجانب النافذة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "The pillow and the blanket are on the bed.",
+              "text_ar": "الوسادة والبطانية على السرير."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Where is the lamp?",
+              "text_ar": "أين المصباح؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "It is between the bed and the wardrobe.",
+              "text_ar": "بين السرير والخزانة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "The curtain is blue. It is nice.",
+              "text_ar": "الستارة زرقاء. إنها جميلة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Now the room is ready.",
+              "text_ar": "الآن الغرفة جاهزة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «blanket» mean?",
+            "options": [
+              "مصباح",
+              "بجانب",
+              "ستارة",
+              "بطانية"
+            ],
+            "answer": 3,
+            "explanation_ar": "«blanket» تعني «بطانية». مثال: The blanket is warm."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "It is between the ___ and the wardrobe.",
+            "answer": "bed",
+            "explanation_ar": "الكلمة الناقصة «bed» (سرير)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / on / pillow / the / bed / The",
+            "answer": [
+              "The",
+              "pillow",
+              "is",
+              "on",
+              "the",
+              "bed"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The pillow is on the bed"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Huda, the guest comes today.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Huda, the guest comes today.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «clock» mean?",
+            "options": [
+              "وسادة",
+              "سرير",
+              "ساعة حائط",
+              "خزانة ملابس"
+            ],
+            "answer": 2,
+            "explanation_ar": "«clock» تعني «ساعة حائط». مثال: The clock is on the wall."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-18-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is blue. It is nice.",
+            "answer": "curtain",
+            "explanation_ar": "الكلمة الناقصة «curtain» (ستارة)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-18-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Show a friend around your bedroom. Say where five things are using next to, behind, in front of, between, on, in and under.",
+        "helpful_phrases": [
+          "The ... is next to ...",
+          "Where is the ...?",
+          "It is behind ...",
+          "in front of"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-18-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «lamp» mean?",
+        "options": [
+          "خلف",
+          "ستارة",
+          "مصباح",
+          "مرآة"
+        ],
+        "answer": 2,
+        "explanation_ar": "«lamp» تعني «مصباح». مثال: The lamp is next to the bed."
+      },
+      {
+        "id": "A1-18-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The lamp is next to the ___.",
+        "answer": "bed",
+        "explanation_ar": "الكلمة الناقصة «bed» (سرير)."
+      },
+      {
+        "id": "A1-18-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: My / the / is / in / kitchen / mother",
+        "answer": [
+          "My",
+          "mother",
+          "is",
+          "in",
+          "the",
+          "kitchen"
+        ],
+        "explanation_ar": "الترتيب الصحيح: My mother is in the kitchen"
+      },
+      {
+        "id": "A1-18-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «wardrobe» mean?",
+        "options": [
+          "خزانة ملابس",
+          "مصباح",
+          "بجانب",
+          "غرفة نوم"
+        ],
+        "answer": 0,
+        "explanation_ar": "«wardrobe» تعني «خزانة ملابس». مثال: My clothes are in the wardrobe."
+      },
+      {
+        "id": "A1-18-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The ___ is behind the door.",
+        "answer": "mirror",
+        "explanation_ar": "الكلمة الناقصة «mirror» (مرآة)."
+      },
+      {
+        "id": "A1-18-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Brother says: \"Where is the carpet?\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation_ar": "الذي قال «Where is the carpet?» هو Salem."
+      },
+      {
+        "id": "A1-18-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «next to» mean?",
+        "options": [
+          "بجانب",
+          "بطانية",
+          "خلف",
+          "سجّادة"
+        ],
+        "answer": 0,
+        "explanation_ar": "«next to» تعني «بجانب». مثال: The lamp is next to the bed."
+      },
+      {
+        "id": "A1-18-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Where is the ___?",
+        "answer": "carpet",
+        "explanation_ar": "الكلمة الناقصة «carpet» (سجّادة)."
+      },
+      {
+        "id": "A1-18-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: the / lamp / Where / is",
+        "answer": [
+          "Where",
+          "is",
+          "the",
+          "lamp"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Where is the lamp"
+      },
+      {
+        "id": "A1-18-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «clock» mean?",
+        "options": [
+          "وسادة",
+          "خلف",
+          "خزانة ملابس",
+          "ساعة حائط"
+        ],
+        "answer": 3,
+        "explanation_ar": "«clock» تعني «ساعة حائط». مثال: The clock is on the wall."
+      }
+    ]
+  },
+  "stop_ar": "غرفة النوم",
+  "roleplay": {
+    "character_ar": "أخوك الذي يساعدك في ترتيب الغرفة",
+    "scenario_en": "You are the student's older brother or sister helping to tidy a bedroom in Yemen. Ask where things are (bed, pillow, blanket, wardrobe, lamp, mirror, carpet, curtain, clock) and say where they are using next to, behind, in front of, between. Use only very simple English.",
+    "opening_en": "Let us clean your bedroom! Where is the lamp?"
+  },
+  "context_note": "داخل غرفة نومي"
+}

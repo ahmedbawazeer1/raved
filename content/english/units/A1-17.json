@@ -1,0 +1,878 @@
+{
+  "path": "english",
+  "code": "A1-17",
+  "version": 1,
+  "level": "A1",
+  "position": 17,
+  "title": "In the Kitchen",
+  "topic": "تساعد هدى أمها في مطبخ البيت، فتسأل أين الأشياء، وتصف أماكنها: في الثلاجة، على الموقد، تحت الطاولة.",
+  "grammar_point": "There is / There are + in, on, under",
+  "can_do": [
+    "أسمّي أدوات المطبخ بالإنجليزية",
+    "أقول أين الأشياء بـ in و on و under",
+    "أستخدم There is و There are"
+  ],
+  "vocab": [
+    {
+      "id": "A1-17-v1",
+      "word": "kitchen",
+      "part_of_speech": "noun",
+      "meaning_ar": "مطبخ",
+      "example_en": "My mother is in the kitchen."
+    },
+    {
+      "id": "A1-17-v2",
+      "word": "stove",
+      "part_of_speech": "noun",
+      "meaning_ar": "موقد",
+      "example_en": "There is a pot on the stove."
+    },
+    {
+      "id": "A1-17-v3",
+      "word": "fridge",
+      "part_of_speech": "noun",
+      "meaning_ar": "ثلاجة",
+      "example_en": "There is water in the fridge."
+    },
+    {
+      "id": "A1-17-v4",
+      "word": "knife",
+      "part_of_speech": "noun",
+      "meaning_ar": "سكين",
+      "example_en": "There is a knife on the table."
+    },
+    {
+      "id": "A1-17-v5",
+      "word": "spoon",
+      "part_of_speech": "noun",
+      "meaning_ar": "ملعقة",
+      "example_en": "There is a spoon in the cup."
+    },
+    {
+      "id": "A1-17-v6",
+      "word": "fork",
+      "part_of_speech": "noun",
+      "meaning_ar": "شوكة",
+      "example_en": "There is a fork next to the plate."
+    },
+    {
+      "id": "A1-17-v7",
+      "word": "plate",
+      "part_of_speech": "noun",
+      "meaning_ar": "صحن",
+      "example_en": "There are five plates."
+    },
+    {
+      "id": "A1-17-v8",
+      "word": "cup",
+      "part_of_speech": "noun",
+      "meaning_ar": "كوب",
+      "example_en": "There are two cups on the table."
+    },
+    {
+      "id": "A1-17-v9",
+      "word": "glass",
+      "part_of_speech": "noun",
+      "meaning_ar": "كأس",
+      "example_en": "There is a glass of water."
+    },
+    {
+      "id": "A1-17-v10",
+      "word": "pot",
+      "part_of_speech": "noun",
+      "meaning_ar": "قدر",
+      "example_en": "There is a pot on the stove."
+    },
+    {
+      "id": "A1-17-v11",
+      "word": "bottle",
+      "part_of_speech": "noun",
+      "meaning_ar": "زجاجة",
+      "example_en": "There is a bottle in the fridge."
+    },
+    {
+      "id": "A1-17-v12",
+      "word": "on",
+      "part_of_speech": "other",
+      "meaning_ar": "على",
+      "example_en": "The pot is on the stove."
+    },
+    {
+      "id": "A1-17-v13",
+      "word": "in",
+      "part_of_speech": "other",
+      "meaning_ar": "في",
+      "example_en": "The water is in the fridge."
+    },
+    {
+      "id": "A1-17-v14",
+      "word": "under",
+      "part_of_speech": "other",
+      "meaning_ar": "تحت",
+      "example_en": "The bag is under the table."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-17-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: في المطبخ",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "المطبخ قلب البيت. تخيّل أن أمك تقول لك: «هات القدر الذي على الموقد» أو «الماء في الثلاجة». كي تفهم وتجيب بالإنجليزية تحتاج كلمات المطبخ وكلمات المكان: **in** و **on** و **under**."
+        },
+        {
+          "type": "video",
+          "youtube_id": "qQAgJxSSnbw",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 17",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "kitchen",
+              "مطبخ",
+              "My mother is in the kitchen."
+            ],
+            [
+              "stove",
+              "موقد",
+              "There is a pot on the stove."
+            ],
+            [
+              "fridge",
+              "ثلاجة",
+              "There is water in the fridge."
+            ],
+            [
+              "knife",
+              "سكين",
+              "There is a knife on the table."
+            ],
+            [
+              "spoon",
+              "ملعقة",
+              "There is a spoon in the cup."
+            ],
+            [
+              "fork",
+              "شوكة",
+              "There is a fork next to the plate."
+            ],
+            [
+              "plate",
+              "صحن",
+              "There are five plates."
+            ],
+            [
+              "cup",
+              "كوب",
+              "There are two cups on the table."
+            ],
+            [
+              "glass",
+              "كأس",
+              "There is a glass of water."
+            ],
+            [
+              "pot",
+              "قدر",
+              "There is a pot on the stove."
+            ],
+            [
+              "bottle",
+              "زجاجة",
+              "There is a bottle in the fridge."
+            ],
+            [
+              "on",
+              "على",
+              "The pot is on the stove."
+            ],
+            [
+              "in",
+              "في",
+              "The water is in the fridge."
+            ],
+            [
+              "under",
+              "تحت",
+              "The bag is under the table."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "My mother is in the kitchen. There is a pot on the stove. There is a bottle in the fridge. There is a knife and a fork on the table. There is a spoon in the cup. There are two cups and five plates. There is a glass under the table."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cup» mean?",
+            "options": [
+              "قدر",
+              "فاكهة",
+              "كوب",
+              "على"
+            ],
+            "answer": 2,
+            "explanation_ar": "«cup» تعني «كوب». مثال: There are two cups on the table."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There are two cups ___ the table.",
+            "answer": "on",
+            "explanation_ar": "الكلمة الناقصة «on» (على)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «on» mean?",
+            "options": [
+              "في",
+              "على",
+              "تفاحة",
+              "تحت"
+            ],
+            "answer": 1,
+            "explanation_ar": "«on» تعني «على». مثال: The pot is on the stove."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There is a ___ on the table.",
+            "answer": "knife",
+            "explanation_ar": "الكلمة الناقصة «knife» (سكين)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «fridge» mean?",
+            "options": [
+              "موقد",
+              "ثلاجة",
+              "قدر",
+              "شوكة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«fridge» تعني «ثلاجة». مثال: There is water in the fridge."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-17-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-17-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: There is / There are + in, on, under",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "There is a pot on the stove. There are two cups on the table. There is water in the fridge. There is a bag under the table."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنقول «يوجد» نستخدم:\n\n- **There is** + شيء **واحد**: There **is** a pot on the stove. (يوجد قدر على الموقد)\n- **There are** + **أكثر من واحد**: There **are** two cups on the table. (يوجد كوبان)\n\nولنقول **أين** الشيء نستخدم حروف الجر:\n- **in** (داخل): in the fridge\n- **on** (فوق ولامس): on the stove\n- **under** (تحت): under the table\n\n**الخطأ الشائع:** «There is two cups». الصحيح: **There are** two cups."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الصيغة",
+            "مع",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "There is",
+              "واحد",
+              "There is a pot on the stove."
+            ],
+            [
+              "There are",
+              "أكثر من واحد",
+              "There are two plates."
+            ],
+            [
+              "in",
+              "داخل",
+              "in the fridge"
+            ],
+            [
+              "on",
+              "فوق",
+              "on the table"
+            ],
+            [
+              "under",
+              "تحت",
+              "under the table"
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: table / the / cups / There / are / two / on",
+            "answer": [
+              "There",
+              "are",
+              "two",
+              "cups",
+              "on",
+              "the",
+              "table"
+            ],
+            "explanation_ar": "الترتيب الصحيح: There are two cups on the table"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There is a ___ of water.",
+            "answer": "glass",
+            "explanation_ar": "الكلمة الناقصة «glass» (كأس)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «glass» mean?",
+            "options": [
+              "كأس",
+              "على",
+              "تفاحة",
+              "شوكة"
+            ],
+            "answer": 0,
+            "explanation_ar": "«glass» تعني «كأس». مثال: There is a glass of water."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / the / on / pot / stove / The",
+            "answer": [
+              "The",
+              "pot",
+              "is",
+              "on",
+              "the",
+              "stove"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The pot is on the stove"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The pot is on the ___.",
+            "answer": "stove",
+            "explanation_ar": "الكلمة الناقصة «stove» (موقد)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about your kitchen. Use There is / There are and in, on, under.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-17-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "هدى تساعد أمها في المطبخ. **استمع:** أين القدر؟ وأين الماء؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-17-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Mother",
+              "text_en": "Huda, please come to the kitchen.",
+              "text_ar": "يا هدى، تعالي إلى المطبخ من فضلك."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, Mother. What do you need?",
+              "text_ar": "نعم يا أمي. ماذا تحتاجين؟"
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "There is a pot on the stove. Look.",
+              "text_ar": "هناك قدر على الموقد. انظري."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, it is hot.",
+              "text_ar": "نعم، إنه ساخن."
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "Is there water in the fridge?",
+              "text_ar": "هل يوجد ماء في الثلاجة؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, there is a bottle in the fridge.",
+              "text_ar": "نعم، توجد زجاجة في الثلاجة."
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "Where are the cups?",
+              "text_ar": "أين الأكواب؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "There are two cups on the table, and a glass under it.",
+              "text_ar": "يوجد كوبان على الطاولة وكأس تحتها."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"There are two cups on the table, and a glass under it.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «There are two cups on the table, and a glass under it.» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «spoon» mean?",
+            "options": [
+              "فاكهة",
+              "تحت",
+              "ملعقة",
+              "زجاجة"
+            ],
+            "answer": 2,
+            "explanation_ar": "«spoon» تعني «ملعقة». مثال: There is a spoon in the cup."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mother says: \"Yes, Mother. What do you need?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Yes, Mother. What do you need?» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «kitchen» mean?",
+            "options": [
+              "في",
+              "تحت",
+              "مطبخ",
+              "صحن"
+            ],
+            "answer": 2,
+            "explanation_ar": "«kitchen» تعني «مطبخ». مثال: My mother is in the kitchen."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe your kitchen. Say what there is on the stove, in the fridge and on the table.",
+        "helpful_phrases": [
+          "There is a ...",
+          "There are ...",
+          "in the fridge",
+          "on the table"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-17-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-17-L4-s1",
+          "title_ar": "عشاء الضيوف",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Mother, the guests are here!",
+              "text_ar": "يا أمي، الضيوف وصلوا!"
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "Go to the kitchen, Mona.",
+              "text_ar": "اذهبي إلى المطبخ يا منى."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "There are five plates on the table.",
+              "text_ar": "يوجد خمسة صحون على الطاولة."
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "There is a knife and a fork for each one.",
+              "text_ar": "هناك سكين وشوكة لكل واحد."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "There is water in the fridge.",
+              "text_ar": "هناك ماء في الثلاجة."
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "Good. The pot is on the stove.",
+              "text_ar": "جيد. القدر على الموقد."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Is the food ready?",
+              "text_ar": "هل الطعام جاهز؟"
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "Yes, it is. We are happy!",
+              "text_ar": "نعم. نحن سعداء!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «fruit» mean?",
+            "options": [
+              "على",
+              "فاكهة",
+              "سكين",
+              "تحت"
+            ],
+            "answer": 1,
+            "explanation_ar": "«fruit» تعني «فاكهة». مثال: I like fruit."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There is a ___ next to the plate.",
+            "answer": "fork",
+            "explanation_ar": "الكلمة الناقصة «fork» (شوكة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: on / pot / stove / There / the / a / is",
+            "answer": [
+              "There",
+              "is",
+              "a",
+              "pot",
+              "on",
+              "the",
+              "stove"
+            ],
+            "explanation_ar": "الترتيب الصحيح: There is a pot on the stove"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mother says: \"Mother, the guests are here!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Mother, the guests are here!» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «spoon» mean?",
+            "options": [
+              "زجاجة",
+              "تفاحة",
+              "ملعقة",
+              "كأس"
+            ],
+            "answer": 2,
+            "explanation_ar": "«spoon» تعني «ملعقة». مثال: There is a spoon in the cup."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-17-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "There is a ___ in the cup.",
+            "answer": "spoon",
+            "explanation_ar": "الكلمة الناقصة «spoon» (ملعقة)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-17-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend what is in your kitchen: what is on the stove, in the fridge, on and under the table. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "There is a ...",
+          "There are ...",
+          "on the stove",
+          "in the fridge"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-17-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «plate» mean?",
+        "options": [
+          "ثلاجة",
+          "موقد",
+          "ملعقة",
+          "صحن"
+        ],
+        "answer": 3,
+        "explanation_ar": "«plate» تعني «صحن». مثال: There are five plates."
+      },
+      {
+        "id": "A1-17-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "There is a ___ and a fork on the table.",
+        "answer": "knife",
+        "explanation_ar": "الكلمة الناقصة «knife» (سكين)."
+      },
+      {
+        "id": "A1-17-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: need / Yes, / What / you / Mother. / do",
+        "answer": [
+          "Yes,",
+          "Mother.",
+          "What",
+          "do",
+          "you",
+          "need"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Yes, Mother. What do you need"
+      },
+      {
+        "id": "A1-17-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «glass» mean?",
+        "options": [
+          "كأس",
+          "كوب",
+          "شوكة",
+          "في"
+        ],
+        "answer": 0,
+        "explanation_ar": "«glass» تعني «كأس». مثال: There is a glass of water."
+      },
+      {
+        "id": "A1-17-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "There is water in the ___.",
+        "answer": "fridge",
+        "explanation_ar": "الكلمة الناقصة «fridge» (ثلاجة)."
+      },
+      {
+        "id": "A1-17-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Mother says: \"Yes, Mother. What do you need?\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation_ar": "الذي قال «Yes, Mother. What do you need?» هو Huda."
+      },
+      {
+        "id": "A1-17-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «pot» mean?",
+        "options": [
+          "قدر",
+          "زجاجة",
+          "كوب",
+          "تحت"
+        ],
+        "answer": 0,
+        "explanation_ar": "«pot» تعني «قدر». مثال: There is a pot on the stove."
+      },
+      {
+        "id": "A1-17-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "There is a ___ of water.",
+        "answer": "glass",
+        "explanation_ar": "الكلمة الناقصة «glass» (كأس)."
+      },
+      {
+        "id": "A1-17-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: the / are / guests / here / Mother,",
+        "answer": [
+          "Mother,",
+          "the",
+          "guests",
+          "are",
+          "here"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Mother, the guests are here"
+      },
+      {
+        "id": "A1-17-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «bottle» mean?",
+        "options": [
+          "سكين",
+          "زجاجة",
+          "مطبخ",
+          "تحت"
+        ],
+        "answer": 1,
+        "explanation_ar": "«bottle» تعني «زجاجة». مثال: There is a bottle in the fridge."
+      }
+    ]
+  },
+  "stop_ar": "مطبخ المنزل",
+  "roleplay": {
+    "character_ar": "أمّ هدى في المطبخ",
+    "scenario_en": "You are a Yemeni mother cooking in the kitchen. Ask your daughter or son where things are (pot, stove, fridge, cups, plates, knife, fork, spoon, bottle) and say where there are things. Use there is / there are and in, on, under. Use only very simple English.",
+    "opening_en": "Please help me in the kitchen! Where is the pot?"
+  },
+  "context_note": "في المطبخ"
+}

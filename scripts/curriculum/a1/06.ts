@@ -1,0 +1,86 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-06",
+  position: 6,
+  title_en: "Animals on the Farm",
+  title_ar: "حيوانات في المزرعة",
+  stop_ar: "مزرعة القرية",
+  situation_ar: "يزور طارق مزرعة جدّه في القرية مع أخيه الصغير، ويسألان عن الحيوانات: هل هذا جمل؟ هل هذه أغنام؟",
+  grammar_en: "Is it ...? / Are they ...? (yes / no questions with be)",
+  can_do: ["أسمّي حيوانات المزرعة بالإنجليزية", "أسأل أسئلة نعم/لا بـ Is و Are", "أجيب بـ Yes, it is / No, it isn't"],
+  video: { id: "Th9S81mblxo", title: "تعلم اللغة الإنجليزية للمبتدئين : الدرس السادس : مفردات عن الحيوانات", checked: true },
+  words: [
+    ["cow", "noun", "بقرة", "The cow is brown."],
+    ["sheep", "noun", "خروف / غنم", "The sheep are in the field."],
+    ["goat", "noun", "ماعز", "The goat is small."],
+    ["camel", "noun", "جمل", "The camel is big."],
+    ["donkey", "noun", "حمار", "The donkey is with my grandfather."],
+    ["horse", "noun", "حصان", "Is it a horse?"],
+    ["chicken", "noun", "دجاجة", "A chicken is in the yard."],
+    ["bird", "noun", "طائر", "The bird is on the tree."],
+    ["cat", "noun", "قطة", "The cat is at home."],
+    ["dog", "noun", "كلب", "The dog is at the door."],
+  ],
+  warmup_ar:
+    "في القرى اليمنية تجد الماعز والأبقار والحمير حول البيوت. عندما نرى حيواناً من بعيد نسأل: «هل هذا جمل؟» ونجيب: «نعم» أو «لا». في هذا الدرس ستسأل وتجيب بالإنجليزية. شاهد الفيديو، ثم تعلّم أسماء الحيوانات.",
+  in_context: [
+    "This is a cow. The cow is brown.",
+    "The goat is small.",
+    "The camel is big.",
+    "The donkey is with my grandfather.",
+    "A chicken is in the yard.",
+    "The bird is on the tree.",
+    "The cat is at home. The dog is at the door.",
+    "The sheep are in the field.",
+  ],
+  notice: ["Is it a goat? Yes, it is.", "Is it a cow? No, it is not.", "Are they sheep? Yes, they are.", "Are they horses? No, they are not."],
+  rule_ar:
+    "لنسأل سؤال «نعم/لا» بالإنجليزية **نقدّم الفعل be** على الفاعل:\n\n- It **is** a goat. → **Is** it a goat? (هل هو ماعز؟)\n- They **are** sheep. → **Are** they sheep? (هل هم غنم؟)\n\nنجيب إجابة قصيرة:\n- **Yes, it is.** / **No, it isn't.** (it is not)\n- **Yes, they are.** / **No, they aren't.** (they are not)\n\n**الخطأ الشائع:** أن نرفع النغمة فقط ونقول «It is a goat?». الصحيح تقديم الفعل: **Is it a goat?**\n\n**ملاحظة:** كلمة sheep مفرد وجمع بنفس الشكل: one sheep, two sheep.",
+  form: {
+    headers: ["الجملة الخبرية", "السؤال", "الجواب"],
+    rows: [
+      ["It is a goat.", "Is it a goat?", "Yes, it is."],
+      ["It is not a cow.", "Is it a cow?", "No, it isn't."],
+      ["They are sheep.", "Are they sheep?", "Yes, they are."],
+      ["They are not horses.", "Are they horses?", "No, they aren't."],
+    ],
+  },
+  write_prompt: "Write 3 questions about animals and give short answers. Example: Is it a camel? Yes, it is.",
+  before_ar: "طارق وأخوه الصغير في مزرعة جدّهم. **استمع:** أي الحيوانات يرونها؟ وبماذا يجيب الجد؟",
+  dialogue: [
+    ["Tariq", "Grandfather, is it a cow?", "يا جدي، هل هذه بقرة؟"],
+    ["Grandfather", "Yes, it is. The cow is brown.", "نعم. البقرة بنيّة."],
+    ["Tariq", "Are they goats?", "هل هم ماعز؟"],
+    ["Grandfather", "No, they aren't. They are sheep.", "لا، بل هم أغنام."],
+    ["Tariq", "Is that a camel?", "هل ذلك جمل؟"],
+    ["Grandfather", "Yes, it is. The camel is big.", "نعم. الجمل كبير."],
+    ["Tariq", "Is the dog your dog?", "هل الكلب كلبك؟"],
+    ["Grandfather", "Yes, it is. He is a good dog.", "نعم. إنه كلب جيد."],
+  ],
+  speak: {
+    prompt: "Ask your friend four yes/no questions about animals. Then answer two questions. Use Is it ...? Are they ...?",
+    phrases: ["Is it a ...?", "Are they ...?", "Yes, it is.", "No, it isn't."],
+  },
+  story_title_ar: "حيوان في الحقل",
+  story: [
+    ["Huda", "Mona, look! Is it a horse?", "يا منى، انظري! هل هذا حصان؟"],
+    ["Mona", "No, it isn't. It is a donkey.", "لا، إنه حمار."],
+    ["Huda", "Are the birds on the tree?", "هل الطيور على الشجرة؟"],
+    ["Mona", "Yes, they are.", "نعم، هي كذلك."],
+    ["Huda", "Is the cat at home?", "هل القطة في البيت؟"],
+    ["Mona", "Yes, it is, with my brother.", "نعم، مع أخي."],
+    ["Huda", "Are the chickens in the yard?", "هل الدجاج في الفناء؟"],
+    ["Mona", "No, they aren't. They are in the farm.", "لا، هم في المزرعة."],
+  ],
+  task: {
+    prompt: "You are at a farm. Ask your friend 4 questions about animals (Is it ...? Are they ...?) and answer with Yes or No.",
+    phrases: ["Is it a ...?", "Are they ...?", "Yes, it is.", "No, they aren't."],
+  },
+  roleplay: {
+    character_ar: "الجدّ في المزرعة",
+    scenario_en: "You are a Yemeni grandfather on a farm. Your grandchild asks about the animals (cow, sheep, goat, camel, donkey, horse, chicken, bird, cat, dog). Answer with yes/no questions and short answers. Use only very simple English.",
+    opening_en: "Welcome to the farm! Look at the animals. Is it a cow?",
+  },
+};
+export default unit;

@@ -1,854 +1,684 @@
 {
   "path": "english",
   "code": "A1-08",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 8,
-  "title": "Vegetables",
-  "topic": "خضروات وادي حضرموت وغيل باوزير وسوق سيئون",
-  "grammar_point": "countable / uncountable nouns + some / any + like / don't like",
+  "title": "Buying Fresh Vegetables",
+  "topic": "تذهب منى مع أمها إلى مبسط الخضار، فتسمّي الخضروات وتقول ما تحبه وما لا تحبه.",
+  "grammar_point": "I like / I don't like",
   "can_do": [
-    "أسمّي الخضروات الشائعة",
-    "أشتري خضاراً وأسأل عما هو متوفر",
-    "أعبّر عما أحب وما لا أحب من الطعام"
+    "أسمّي عشر خضروات بالإنجليزية",
+    "أقول ما أحب وما لا أحب",
+    "أنفي جملة بـ don't"
   ],
   "vocab": [
     {
       "id": "A1-08-v1",
-      "word": "vegetables",
-      "ipa": "/ˈvedʒtəblz/",
+      "word": "vegetable",
       "part_of_speech": "noun",
-      "meaning_ar": "خضروات",
-      "example_en": "We buy vegetables at the market in Seiyun."
+      "meaning_ar": "خضار",
+      "example_en": "I eat vegetables every day."
     },
     {
       "id": "A1-08-v2",
       "word": "tomato",
-      "ipa": "/təˈmɑːtəʊ/",
       "part_of_speech": "noun",
       "meaning_ar": "طماطم",
-      "example_en": "I want two kilos of tomatoes."
+      "example_en": "I like tomatoes."
     },
     {
       "id": "A1-08-v3",
       "word": "potato",
-      "ipa": "/pəˈteɪtəʊ/",
       "part_of_speech": "noun",
       "meaning_ar": "بطاطس",
-      "example_en": "My mother cooks potatoes with meat."
+      "example_en": "She likes potatoes."
     },
     {
       "id": "A1-08-v4",
       "word": "onion",
-      "ipa": "/ˈʌnjən/",
       "part_of_speech": "noun",
       "meaning_ar": "بصل",
-      "example_en": "There are some onions in the kitchen."
+      "example_en": "I don't like onions."
     },
     {
       "id": "A1-08-v5",
       "word": "carrot",
-      "ipa": "/ˈkærət/",
       "part_of_speech": "noun",
       "meaning_ar": "جزر",
-      "example_en": "Carrots are good for your eyes."
+      "example_en": "The carrot is orange."
     },
     {
       "id": "A1-08-v6",
       "word": "cucumber",
-      "ipa": "/ˈkjuːkʌmbə/",
       "part_of_speech": "noun",
       "meaning_ar": "خيار",
-      "example_en": "I like cucumber in my salad."
+      "example_en": "We like cucumber."
     },
     {
       "id": "A1-08-v7",
       "word": "pepper",
-      "ipa": "/ˈpepə/",
       "part_of_speech": "noun",
       "meaning_ar": "فلفل",
-      "example_en": "Green peppers are hot."
+      "example_en": "The pepper is hot."
     },
     {
       "id": "A1-08-v8",
       "word": "garlic",
-      "ipa": "/ˈɡɑːlɪk/",
       "part_of_speech": "noun",
       "meaning_ar": "ثوم",
-      "example_en": "There isn't any garlic."
+      "example_en": "I don't like garlic."
     },
     {
       "id": "A1-08-v9",
-      "word": "okra",
-      "ipa": "/ˈəʊkrə/",
+      "word": "cabbage",
       "part_of_speech": "noun",
-      "meaning_ar": "بامية",
-      "example_en": "Okra with meat is delicious."
+      "meaning_ar": "ملفوف",
+      "example_en": "My mother likes cabbage."
     },
     {
       "id": "A1-08-v10",
-      "word": "aubergine",
-      "ipa": "/ˈəʊbəʒiːn/",
+      "word": "lettuce",
       "part_of_speech": "noun",
-      "meaning_ar": "باذنجان",
-      "example_en": "Do you like aubergine?"
-    },
-    {
-      "id": "A1-08-v11",
-      "word": "salad",
-      "ipa": "/ˈsæləd/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سلطة",
-      "example_en": "We eat salad every day."
-    },
-    {
-      "id": "A1-08-v12",
-      "word": "fresh",
-      "ipa": "/freʃ/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "طازج",
-      "example_en": "These vegetables are fresh from the farm."
-    },
-    {
-      "id": "A1-08-v13",
-      "word": "kilo",
-      "ipa": "/ˈkiːləʊ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "كيلو",
-      "example_en": "A kilo of onions, please."
-    },
-    {
-      "id": "A1-08-v14",
-      "word": "like",
-      "ipa": "/laɪk/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يحب",
-      "example_en": "I like carrots, but I don't like garlic."
+      "meaning_ar": "خسّ",
+      "example_en": "The lettuce is fresh."
     }
   ],
   "lessons": [
     {
-      "id": "A1-08-l1",
+      "id": "A1-08-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "خضروات الوادي",
-      "est_minutes": 20,
+      "title": "مفردات: شراء خضروات طازجة",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في **وادي حضرموت** و**غيل باوزير** مزارع كثيرة للخضروات. تعلّم أسماء الخضروات التي نشتريها من السوق كل أسبوع."
+          "markdown_ar": "أي الخضروات تحب أكثر؟ الطماطم في السلطة؟ البطاطس مقلية؟ وأيها لا تحبه أبداً؟ في هذا الدرس ستسمّي الخضروات وتقول رأيك بجملة بسيطة: **I like ...** أو **I don't like ...**."
         },
         {
           "type": "video",
           "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
+          "video_title": "تعلم كلمات إنجليزية عن الخضروات : كورس شامل لتعلم الانجليزي من الصفر : ٨",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "vegetables",
-              "/ˈvedʒtəblz/",
-              "خضروات",
-              "We buy vegetables at the market in Seiyun."
+              "vegetable",
+              "خضار",
+              "I eat vegetables every day."
             ],
             [
               "tomato",
-              "/təˈmɑːtəʊ/",
               "طماطم",
-              "I want two kilos of tomatoes."
+              "I like tomatoes."
             ],
             [
               "potato",
-              "/pəˈteɪtəʊ/",
               "بطاطس",
-              "My mother cooks potatoes with meat."
+              "She likes potatoes."
             ],
             [
               "onion",
-              "/ˈʌnjən/",
               "بصل",
-              "There are some onions in the kitchen."
+              "I don't like onions."
             ],
             [
               "carrot",
-              "/ˈkærət/",
               "جزر",
-              "Carrots are good for your eyes."
+              "The carrot is orange."
             ],
             [
               "cucumber",
-              "/ˈkjuːkʌmbə/",
               "خيار",
-              "I like cucumber in my salad."
+              "We like cucumber."
             ],
             [
               "pepper",
-              "/ˈpepə/",
               "فلفل",
-              "Green peppers are hot."
+              "The pepper is hot."
             ],
             [
               "garlic",
-              "/ˈɡɑːlɪk/",
               "ثوم",
-              "There isn't any garlic."
+              "I don't like garlic."
             ],
             [
-              "okra",
-              "/ˈəʊkrə/",
-              "بامية",
-              "Okra with meat is delicious."
+              "cabbage",
+              "ملفوف",
+              "My mother likes cabbage."
             ],
             [
-              "aubergine",
-              "/ˈəʊbəʒiːn/",
-              "باذنجان",
-              "Do you like aubergine?"
-            ],
-            [
-              "salad",
-              "/ˈsæləd/",
-              "سلطة",
-              "We eat salad every day."
-            ],
-            [
-              "fresh",
-              "/freʃ/",
-              "طازج",
-              "These vegetables are fresh from the farm."
-            ],
-            [
-              "kilo",
-              "/ˈkiːləʊ/",
-              "كيلو",
-              "A kilo of onions, please."
-            ],
-            [
-              "like",
-              "/laɪk/",
-              "يحب",
-              "I like carrots, but I don't like garlic."
+              "lettuce",
+              "خسّ",
+              "The lettuce is fresh."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "vegetables. We buy vegetables at the market in Seiyun.\ntomato. I want two kilos of tomatoes.\npotato. My mother cooks potatoes with meat.\nonion. There are some onions in the kitchen.\ncarrot. Carrots are good for your eyes.\ncucumber. I like cucumber in my salad.\npepper. Green peppers are hot.\ngarlic. There isn't any garlic.\nokra. Okra with meat is delicious.\naubergine. Do you like aubergine?\nsalad. We eat salad every day.\nfresh. These vegetables are fresh from the farm.\nkilo. A kilo of onions, please.\nlike. I like carrots, but I don't like garlic."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**جمع tomato و potato:** نضيف **es**: tomato**es**، potato**es**."
+          "text_en": "I eat vegetables every day. I like tomatoes. I like potatoes. I don't like onions. The carrot is orange. We like cucumber, and the pepper is hot. I don't like garlic. My mother likes cabbage. The lettuce is fresh."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-08-e1",
+            "id": "A1-08-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "«بصل» بالإنجليزية:",
+            "prompt": "What does «pepper» mean?",
             "options": [
-              "garlic",
-              "onion",
-              "okra"
+              "بصل",
+              "صغير",
+              "خضار",
+              "فلفل"
             ],
-            "answer": 1,
-            "explanation_ar": "البصل = onion، والثوم = garlic."
+            "answer": 3,
+            "explanation_ar": "«pepper» تعني «فلفل». مثال: The pepper is hot."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-08-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "We make ___ with tomatoes, cucumbers and onions.",
-            "options": [
-              "salad",
-              "tea",
-              "bread"
-            ],
-            "answer": 0,
-            "explanation_ar": "السلطة salad من الطماطم والخيار والبصل."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e3",
+            "id": "A1-08-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "جمع potato: ___",
-            "answer": "potatoes",
-            "explanation_ar": "نضيف es: potatoes."
+            "prompt": "I don't like ___.",
+            "answer": "garlic",
+            "explanation_ar": "الكلمة الناقصة «garlic» (ثوم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cucumber» mean?",
+            "options": [
+              "خسّ",
+              "خيار",
+              "جزر",
+              "ملفوف"
+            ],
+            "answer": 1,
+            "explanation_ar": "«cucumber» تعني «خيار». مثال: We like cucumber."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is hot.",
+            "answer": "pepper",
+            "explanation_ar": "الكلمة الناقصة «pepper» (فلفل)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «tomato» mean?",
+            "options": [
+              "طماطم",
+              "صغير",
+              "ملفوف",
+              "خسّ"
+            ],
+            "answer": 0,
+            "explanation_ar": "«tomato» تعني «طماطم». مثال: I like tomatoes."
           }
         },
         {
           "type": "game",
-          "id": "A1-08-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g4",
-          "game": "pronounce"
+          "id": "A1-08-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-08-l2",
+      "id": "A1-08-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "some / any + like",
-      "est_minutes": 30,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**الأسماء المعدودة** نعدّها ولها جمع: a carrot ← three carrots، a tomato ← tomatoes.\n\n**الأسماء غير المعدودة** لا نعدّها ولا جمع لها: garlic, salad, water, rice. نقول «some garlic» وليس «a garlic»."
-        },
-        {
-          "type": "video",
-          "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
-        },
-        {
-          "type": "table",
-          "headers": [
-            "",
-            "مع المعدود (جمع)",
-            "مع غير المعدود"
-          ],
-          "rows": [
-            [
-              "إثبات: some",
-              "There are some carrots.",
-              "There is some garlic."
-            ],
-            [
-              "نفي: any",
-              "There aren't any onions.",
-              "There isn't any salad."
-            ],
-            [
-              "سؤال: any",
-              "Are there any tomatoes?",
-              "Is there any rice?"
-            ],
-            [
-              "طلب: some",
-              "Can I have some peppers?",
-              "Can I have some salad, please?"
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**التعبير عن الحب:** like / don't like:\n\n- I **like** okra. / I **don't like** garlic.\n- He **likes** carrots. / She **doesn't like** onions.\n- **Do you like** aubergine? — Yes, I do. / No, I don't.\n\nمع الأسماء المعدودة نستخدم الجمع بعد like: «I like **tomatoes**.»"
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "There are ___ potatoes in the bag.",
-            "options": [
-              "any",
-              "some",
-              "a"
-            ],
-            "answer": 1,
-            "explanation_ar": "في الإثبات: some."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "There isn't ___ garlic in the kitchen.",
-            "options": [
-              "some",
-              "any",
-              "a"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النفي: any."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e6",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "Are there ___ cucumbers? I want to make a salad.",
-            "answer": "any",
-            "explanation_ar": "في السؤال: any."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e7",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My brother ___ okra.",
-            "options": [
-              "like",
-              "likes",
-              "liking"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع he: likes."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "اختر الجملة الصحيحة:",
-            "options": [
-              "I like carrot.",
-              "I like carrots.",
-              "I likes carrots."
-            ],
-            "answer": 1,
-            "explanation_ar": "مع المعدود نستخدم الجمع بعد like."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e9",
-            "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: tomatoes / are / any / there",
-            "answer": [
-              "Are",
-              "there",
-              "any",
-              "tomatoes"
-            ],
-            "explanation_ar": "Are there any + جمع؟"
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-08-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "عند بائع الخضار",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**هدى** تشتري خضروات من بائع في سوق **سيئون**. استمع: ماذا اشترت؟ وماذا لم تجد؟"
-        },
-        {
-          "type": "video",
-          "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
-        },
-        {
-          "type": "audio",
-          "text_en": "Seller: Good morning! Fresh vegetables from Ghail Ba Wazir!\nHuda: Good morning. Do you have any okra today?\nSeller: Yes, I do. It's very fresh.\nHuda: One kilo of okra, please. And some tomatoes.\nSeller: How many kilos of tomatoes?\nHuda: Two kilos. Do you have any carrots?\nSeller: Sorry, there aren't any carrots today. But there are some nice cucumbers.\nHuda: OK, three cucumbers, please. My children like salad.\nSeller: Here you are. Anything else?\nHuda: No, thank you."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How many kilos of tomatoes does Huda want?",
-            "options": [
-              "one",
-              "two",
-              "three"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: Two kilos."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "There are carrots today.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال البائع: there aren't any carrots today."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e12",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "Why does Huda buy cucumbers?",
-            "options": [
-              "Her children like salad.",
-              "They are cheap.",
-              "She likes okra."
-            ],
-            "answer": 0,
-            "explanation_ar": "قالت: My children like salad."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-08-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "مزرعة في الوادي",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن مزارع في **وادي حضرموت** قرب سيئون، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
-        },
-        {
-          "type": "reading",
-          "text_en": "Mr. Omar Bin Sumait is a farmer in Wadi Hadramout, near Seiyun. He has a big farm with palm trees and vegetables. In winter, he grows tomatoes, onions, carrots and peppers. In summer, it is very hot, so he grows okra and aubergines. He gets up early every day and he waters the plants before the sun is hot. His sons help him on the farm after school. On Thursday, they take the fresh vegetables to the market in Seiyun. People like his vegetables because they are fresh and cheap. Mr. Omar doesn't use a lot of chemicals. He says, «Good food comes from good soil and clean water.»",
-          "word_count": 109
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What does Mr. Omar grow in summer?",
-            "options": [
-              "tomatoes and onions",
-              "okra and aubergines",
-              "carrots and peppers"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: In summer… he grows okra and aubergines."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e14",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "When do they take the vegetables to the market?",
-            "options": [
-              "on Thursday",
-              "on Friday",
-              "every day"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: On Thursday, they take the fresh vegetables to the market."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e15",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Mr. Omar uses a lot of chemicals.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: Mr. Omar doesn't use a lot of chemicals."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-08-e16",
-            "skill": "reading",
-            "kind": "fill_blank",
-            "prompt": "People like his vegetables because they are ___ and cheap.",
-            "answer": "fresh",
-            "explanation_ar": "في النص: because they are fresh and cheap."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-08-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "اشترِ خضارك",
+      "title": "قاعدة: I like / I don't like",
       "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "أنت في سوق الخضار. **اسأل البائع هل عنده خضروات معيّنة، واطلب الكميات، ثم قل ما تحبه وما لا تحبه من الخضار.**"
+          "type": "audio",
+          "text_en": "I like tomatoes. You like potatoes. We don't like onions. They don't like garlic."
         },
         {
-          "type": "video",
-          "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
+          "type": "text",
+          "markdown_ar": "لنقول ما نحب نستخدم الفعل **like**:\n\n- **I like** tomatoes. = أنا أحب الطماطم.\n- **You like** potatoes. = أنت تحب البطاطس.\n\nولنقول ما **لا** نحب نضع **don't** (do not) قبل الفعل:\n\n- I **don't like** onions. = أنا لا أحب البصل.\n- We **don't like** garlic. = نحن لا نحب الثوم.\n\nمع الخضروات نستخدم الجمع غالباً عند التعميم: I like tomato**es**, I like potato**es**.\n\n**الخطأ الشائع:** أن نقول «I no like onions». الصحيح: **I don't like onions**."
         },
         {
           "type": "table",
           "headers": [
-            "لتقول",
-            "العبارة"
+            "الفاعل",
+            "الإيجاب",
+            "النفي"
           ],
           "rows": [
             [
-              "هل عندك؟",
-              "Do you have any…?"
+              "I",
+              "I like tomatoes.",
+              "I don't like onions."
             ],
             [
-              "أريد",
-              "One kilo of…, please. / Some…, please."
+              "you",
+              "You like potatoes.",
+              "You don't like garlic."
             ],
             [
-              "أحب",
-              "I like… / I don't like…"
+              "we",
+              "We like cucumber.",
+              "We don't like cabbage."
             ],
             [
-              "شكراً",
-              "Thank you."
+              "they",
+              "They like carrots.",
+              "They don't like pepper."
             ]
           ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "You are at the vegetable market. Ask the seller if he has some vegetables, ask for amounts, then say which vegetables you like and don't like.",
-        "helpful_phrases": [
-          "Do you have any…?",
-          "One kilo of…, please.",
-          "Some…, please.",
-          "I like…",
-          "I don't like…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "some / any",
-          "countable and uncountable nouns",
-          "like / don't like"
-        ]
-      }
-    },
-    {
-      "id": "A1-08-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "سلطتك المفضلة",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن الخضروات التي تحبها والتي لا تحبها، أو عن طبق خضار تصنعه عائلتكم. اقرأ المثال أولاً."
         },
         {
-          "type": "video",
-          "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: carrot / is / orange / The",
+            "answer": [
+              "The",
+              "carrot",
+              "is",
+              "orange"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The carrot is orange"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "I like vegetables. My favourite is okra with meat. My mother cooks it on Friday. I also like salad with tomatoes, cucumbers and some lemon. I don't like garlic, but my father likes it very much. Today, there aren't any potatoes at home, so my brother is at the market now.",
-          "word_count": 51
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We like ___.",
+            "answer": "cucumber",
+            "explanation_ar": "الكلمة الناقصة «cucumber» (خيار)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «tomato» mean?",
+            "options": [
+              "جزر",
+              "خيار",
+              "خضار",
+              "طماطم"
+            ],
+            "answer": 3,
+            "explanation_ar": "«tomato» تعني «طماطم». مثال: I like tomatoes."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: pepper / The / hot / is",
+            "answer": [
+              "The",
+              "pepper",
+              "is",
+              "hot"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The pepper is hot"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is hot.",
+            "answer": "pepper",
+            "explanation_ar": "الكلمة الناقصة «pepper» (فلفل)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about the vegetables you like and don't like, or a vegetable dish your family makes. Use some, any, like and don't like.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 3 sentences: two vegetables you like and one you don't like. Use I like ... and I don't like ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "some / any",
-          "plural nouns",
-          "like / don't like"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-08-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-08-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- المعدود: a carrot, two carrots, tomatoes, potatoes. غير المعدود: garlic, salad, rice.\n- **some** في الإثبات والطلب، **any** في النفي والسؤال.\n- **like / likes / don't like / doesn't like** + الجمع."
-        },
-        {
-          "type": "video",
-          "youtube_id": "63Riw1SEDPk",
-          "video_title": "تعلم كلمات إنجليزية عن الخضروات — الحلقة 8",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 660,
-          "optional": true,
-          "approx_size_mb": 44
+          "markdown_ar": "منى وأمها في مبسط الخضار. **استمع:** ما الذي تحبه منى؟ وما الذي لا تحبه؟"
         },
         {
           "type": "story",
-          "id": "A1-08-s1",
-          "title_ar": "الحلقة 8: مزرعة في غيل باوزير",
+          "id": "A1-08-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Reem",
-              "text_en": "These tomatoes are very fresh!",
-              "text_ar": "هذه الطماطم طازجة جداً!"
+              "speaker": "Mona",
+              "text_en": "Good morning! I like your vegetables.",
+              "text_ar": "صباح الخير! أحب خضرواتك."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Are there any cucumbers?",
-              "text_ar": "هل يوجد خيار؟"
+              "speaker": "Seller",
+              "text_en": "Thank you! The tomatoes are fresh.",
+              "text_ar": "شكراً لك! الطماطم طازجة."
             },
             {
-              "speaker": "Farmer",
-              "text_en": "Sorry, there aren't any cucumbers today. But there are some carrots.",
-              "text_ar": "آسف، لا يوجد خيار اليوم. لكن يوجد بعض الجزر."
+              "speaker": "Mona",
+              "text_en": "I like tomatoes and potatoes.",
+              "text_ar": "أحب الطماطم والبطاطس."
             },
             {
-              "speaker": "Reem",
-              "text_en": "I like carrots! Can I have some, please?",
-              "text_ar": "أحب الجزر! هل آخذ بعضاً منه من فضلك؟"
+              "speaker": "Mother",
+              "text_en": "I like carrots. Do you like cabbage, Mona?",
+              "text_ar": "أنا أحب الجزر. وأنت يا منى هل تحبين الملفوف؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "I don't like carrots, but I like okra.",
-              "text_ar": "لا أحب الجزر، لكني أحب البامية."
+              "speaker": "Mona",
+              "text_en": "No, I don't like cabbage.",
+              "text_ar": "لا، لا أحب الملفوف."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "What about onions?",
+              "text_ar": "وماذا عن البصل؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "I don't like onions, but my mother likes them.",
+              "text_ar": "لا أحب البصل لكن أمي تحبه."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "OK. Here is your bag.",
+              "text_ar": "حسناً. تفضلوا الكيس."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-08-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Can I have ___ peppers, please?",
+            "id": "A1-08-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"Thank you! The tomatoes are fresh.\"",
             "options": [
-              "any",
-              "some",
-              "a"
+              "True",
+              "False"
             ],
-            "answer": 1,
-            "explanation_ar": "في الطلب: some."
+            "answer": 0,
+            "explanation_ar": "الذي قال «Thank you! The tomatoes are fresh.» هو Seller."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-08-e18",
-            "skill": "grammar",
+            "id": "A1-08-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "She ___ like onions.",
+            "prompt": "What does «big» mean?",
             "options": [
-              "don't",
-              "doesn't",
-              "isn't"
+              "طماطم",
+              "خيار",
+              "خسّ",
+              "كبير"
             ],
-            "answer": 1,
-            "explanation_ar": "النفي مع she: doesn't like."
+            "answer": 3,
+            "explanation_ar": "«big» تعني «كبير». مثال: This is a big bag."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-08-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-08-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "جمع tomato: ___",
-            "answer": "tomatoes",
-            "explanation_ar": "نضيف es: tomatoes."
+            "id": "A1-08-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"I don't like onions, but my mother likes them.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «I don't like onions, but my mother likes them.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «lettuce» mean?",
+            "options": [
+              "بطاطس",
+              "خسّ",
+              "خضار",
+              "ملفوف"
+            ],
+            "answer": 1,
+            "explanation_ar": "«lettuce» تعني «خسّ». مثال: The lettuce is fresh."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend about vegetables: say three you like and two you don't like.",
+        "helpful_phrases": [
+          "I like ...",
+          "I don't like ...",
+          "My mother likes ...",
+          "The ... is fresh."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-08-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-08-L4-s1",
+          "title_ar": "غداء العائلة",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Mona, what is for lunch?",
+              "text_ar": "يا منى، ما الغداء؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We have potatoes and tomatoes.",
+              "text_ar": "عندنا بطاطس وطماطم."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I like potatoes!",
+              "text_ar": "أحب البطاطس!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "I don't like onions.",
+              "text_ar": "أنا لا أحب البصل."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is the lettuce fresh?",
+              "text_ar": "هل الخسّ طازج؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, it is. It is from the market.",
+              "text_ar": "نعم، هو من السوق."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I like your family, Mona.",
+              "text_ar": "أحب عائلتك يا منى."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Thank you, Huda.",
+              "text_ar": "شكراً يا هدى."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «onion» mean?",
+            "options": [
+              "صغير",
+              "بصل",
+              "خسّ",
+              "ثوم"
+            ],
+            "answer": 1,
+            "explanation_ar": "«onion» تعني «بصل». مثال: I don't like onions."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I don't like ___.",
+            "answer": "garlic",
+            "explanation_ar": "الكلمة الناقصة «garlic» (ثوم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: potatoes / have / and / tomatoes / We",
+            "answer": [
+              "We",
+              "have",
+              "potatoes",
+              "and",
+              "tomatoes"
+            ],
+            "explanation_ar": "الترتيب الصحيح: We have potatoes and tomatoes"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Is the lettuce fresh?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Is the lettuce fresh?» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cabbage» mean?",
+            "options": [
+              "خسّ",
+              "ملفوف",
+              "بصل",
+              "صغير"
+            ],
+            "answer": 1,
+            "explanation_ar": "«cabbage» تعني «ملفوف». مثال: My mother likes cabbage."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-08-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We like ___.",
+            "answer": "cucumber",
+            "explanation_ar": "الكلمة الناقصة «cucumber» (خيار)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-08-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are at the vegetable market. Tell the seller which vegetables you like and which you don't like. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "I like ...",
+          "I don't like ...",
+          "Good morning!",
+          "The ... is fresh."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -856,131 +686,133 @@
     "questions": [
       {
         "id": "A1-08-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "There are ___ onions on the table.",
+        "prompt": "What does «pepper» mean?",
         "options": [
-          "some",
-          "any",
-          "a"
+          "بطاطس",
+          "خيار",
+          "ملفوف",
+          "فلفل"
         ],
-        "answer": 0,
-        "explanation_ar": "في الإثبات: some."
+        "answer": 3,
+        "explanation_ar": "«pepper» تعني «فلفل». مثال: The pepper is hot."
       },
       {
         "id": "A1-08-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "There aren't ___ carrots today.",
-        "options": [
-          "some",
-          "any",
-          "an"
-        ],
-        "answer": 1,
-        "explanation_ar": "في النفي: any."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "My mother likes ___. The lettuce is fresh.",
+        "answer": "cabbage",
+        "explanation_ar": "الكلمة الناقصة «cabbage» (ملفوف)."
       },
       {
         "id": "A1-08-q3",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "«باذنجان» بالإنجليزية:",
-        "options": [
-          "okra",
-          "aubergine",
-          "cucumber"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: you / Do / Mona / I / carrots. / cabbage, / like / like",
+        "answer": [
+          "I",
+          "like",
+          "carrots.",
+          "Do",
+          "you",
+          "like",
+          "cabbage,",
+          "Mona"
         ],
-        "answer": 1,
-        "explanation_ar": "الباذنجان = aubergine."
+        "explanation_ar": "الترتيب الصحيح: I like carrots. Do you like cabbage, Mona"
       },
       {
         "id": "A1-08-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "Do you like okra? — Yes, I ___.",
-        "answer": "do",
-        "explanation_ar": "الإجابة القصيرة: Yes, I do."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «garlic» mean?",
+        "options": [
+          "بطاطس",
+          "بصل",
+          "ثوم",
+          "جزر"
+        ],
+        "answer": 2,
+        "explanation_ar": "«garlic» تعني «ثوم». مثال: I don't like garlic."
       },
       {
         "id": "A1-08-q5",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "My father ___ salad very much.",
-        "options": [
-          "like",
-          "likes",
-          "liking"
-        ],
-        "answer": 1,
-        "explanation_ar": "مع he: likes."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "My mother likes cabbage. The ___ is fresh.",
+        "answer": "lettuce",
+        "explanation_ar": "الكلمة الناقصة «lettuce» (خسّ)."
       },
       {
         "id": "A1-08-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "These vegetables are from the farm today. They're very ___.",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Mona says: \"Good morning! I like your vegetables.\"",
         "options": [
-          "fresh",
-          "dirty",
-          "slow"
+          "True",
+          "False"
         ],
         "answer": 0,
-        "explanation_ar": "طازج = fresh."
+        "explanation_ar": "الذي قال «Good morning! I like your vegetables.» هو Mona."
       },
       {
         "id": "A1-08-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: any / is / there / garlic",
-        "answer": [
-          "Is",
-          "there",
-          "any",
-          "garlic"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «onion» mean?",
+        "options": [
+          "خسّ",
+          "فلفل",
+          "طماطم",
+          "بصل"
         ],
-        "explanation_ar": "Is there any + غير المعدود؟"
+        "answer": 3,
+        "explanation_ar": "«onion» تعني «بصل». مثال: I don't like onions."
       },
       {
         "id": "A1-08-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "I want a garlic.",
-          "I want some garlic.",
-          "I want garlics."
-        ],
-        "answer": 1,
-        "explanation_ar": "garlic غير معدود: some garlic."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "They don't like ___.",
+        "answer": "garlic",
+        "explanation_ar": "الكلمة الناقصة «garlic» (ثوم)."
       },
       {
         "id": "A1-08-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Nada likes carrots but she doesn't like peppers.» What doesn't Nada like?",
-        "options": [
-          "carrots",
-          "peppers",
-          "salad"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: The / lettuce / fresh / is",
+        "answer": [
+          "The",
+          "lettuce",
+          "is",
+          "fresh"
         ],
-        "answer": 1,
-        "explanation_ar": "she doesn't like peppers."
+        "explanation_ar": "الترتيب الصحيح: The lettuce is fresh"
       },
       {
         "id": "A1-08-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "جمع potato: ___",
-        "answer": "potatoes",
-        "explanation_ar": "نضيف es: potatoes."
+        "kind": "mcq",
+        "prompt": "What does «potato» mean?",
+        "options": [
+          "فلفل",
+          "بطاطس",
+          "خسّ",
+          "جزر"
+        ],
+        "answer": 1,
+        "explanation_ar": "«potato» تعني «بطاطس». مثال: She likes potatoes."
       }
     ]
   },
-  "context_note": "مزارع وادي حضرموت وغيل باوزير، سوق الخضار في سيئون، البامية باللحم.",
-  "stop_ar": "غيل باوزير",
+  "stop_ar": "مبسط الخضار",
   "roleplay": {
-    "character_ar": "مزارع في غيل باوزير",
-    "scenario_en": "You are a vegetable farmer in Ghail Ba Wazir. The student wants to buy vegetables. Use some/any and ask what they like.",
-    "opening_en": "Good morning! Fresh vegetables! What do you want today?"
-  }
+    "character_ar": "بائع الخضار",
+    "scenario_en": "You are a vegetable seller in a Yemeni market. Ask the customer which vegetables he or she likes (tomato, potato, onion, carrot, cucumber, pepper, garlic, cabbage, lettuce). Use only very simple English.",
+    "opening_en": "Good morning! My vegetables are fresh. Do you like tomatoes?"
+  },
+  "context_note": "شراء خضروات طازجة"
 }
