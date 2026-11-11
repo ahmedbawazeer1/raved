@@ -1,0 +1,28 @@
+name: Import curriculum
+
+# Sends the hand-written units in content/english/units to the database, in «review» (never published).
+on:
+  push:
+    branches: [main]
+    paths: ["content/english/units/**"]
+  workflow_dispatch:
+
+concurrency:
+  group: raved-curriculum
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npx tsx scripts/curriculum/import.ts
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}

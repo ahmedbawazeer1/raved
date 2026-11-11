@@ -1,54 +1,49 @@
 {
   "path": "english",
   "code": "A1-03",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 3,
-  "title": "My Family",
-  "topic": "عائلة حضرمية كبيرة في سيئون",
-  "grammar_point": "possessive adjectives (my, your, his, her, our, their) + possessive 's",
+  "title": "My Dear Family",
+  "topic": "يستضيف بلال زميله طارق في مجلس بيته، ويعرض عليه صورة عائلية ليعرّفه بأفراد أسرته وأدوارهم.",
+  "grammar_point": "my / your / his / her",
   "can_do": [
-    "أقدّم أفراد عائلتي بأسمائهم وأعمارهم",
-    "أسأل عن عائلة شخص آخر وأفهم إجابته",
-    "أفهم نصاً قصيراً عن عائلة"
+    "أسمّي أفراد أسرتي بالإنجليزية",
+    "أقدّم أحد أقاربي لزميلي",
+    "أستخدم my و your و his و her بشكل صحيح"
   ],
   "vocab": [
     {
       "id": "A1-03-v1",
       "word": "family",
-      "ipa": "/ˈfæməli/",
       "part_of_speech": "noun",
       "meaning_ar": "عائلة",
-      "example_en": "My family is big."
+      "example_en": "This is my family."
     },
     {
       "id": "A1-03-v2",
       "word": "father",
-      "ipa": "/ˈfɑːðə/",
       "part_of_speech": "noun",
       "meaning_ar": "أب",
-      "example_en": "My father is a date farmer."
+      "example_en": "He is my father."
     },
     {
       "id": "A1-03-v3",
       "word": "mother",
-      "ipa": "/ˈmʌðə/",
       "part_of_speech": "noun",
       "meaning_ar": "أم",
-      "example_en": "My mother is at home."
+      "example_en": "She is my mother."
     },
     {
       "id": "A1-03-v4",
       "word": "brother",
-      "ipa": "/ˈbrʌðə/",
       "part_of_speech": "noun",
       "meaning_ar": "أخ",
-      "example_en": "My brother is twelve."
+      "example_en": "This is my brother."
     },
     {
       "id": "A1-03-v5",
       "word": "sister",
-      "ipa": "/ˈsɪstə/",
       "part_of_speech": "noun",
       "meaning_ar": "أخت",
       "example_en": "Her sister is a nurse."
@@ -56,292 +51,236 @@
     {
       "id": "A1-03-v6",
       "word": "grandfather",
-      "ipa": "/ˈɡrænfɑːðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "جد",
-      "example_en": "My grandfather is from Seiyun."
+      "meaning_ar": "جدّ",
+      "example_en": "My grandfather is a farmer."
     },
     {
       "id": "A1-03-v7",
       "word": "grandmother",
-      "ipa": "/ˈɡrænmʌðə/",
       "part_of_speech": "noun",
-      "meaning_ar": "جدة",
-      "example_en": "Our grandmother is kind."
+      "meaning_ar": "جدّة",
+      "example_en": "His grandmother is in the village."
     },
     {
       "id": "A1-03-v8",
       "word": "uncle",
-      "ipa": "/ˈʌŋkl/",
       "part_of_speech": "noun",
-      "meaning_ar": "عم / خال",
-      "example_en": "My uncle is a driver."
+      "meaning_ar": "عمّ / خال",
+      "example_en": "My uncle is an engineer."
     },
     {
       "id": "A1-03-v9",
       "word": "aunt",
-      "ipa": "/ɑːnt/",
       "part_of_speech": "noun",
-      "meaning_ar": "عمة / خالة",
-      "example_en": "My aunt is a teacher."
+      "meaning_ar": "عمّة / خالة",
+      "example_en": "Her aunt is a teacher."
     },
     {
       "id": "A1-03-v10",
-      "word": "cousin",
-      "ipa": "/ˈkʌzn/",
+      "word": "parents",
       "part_of_speech": "noun",
-      "meaning_ar": "ابن/بنت العم أو الخال",
-      "example_en": "Khaled is my cousin."
+      "meaning_ar": "الوالدان",
+      "example_en": "My parents are at home."
     },
     {
       "id": "A1-03-v11",
-      "word": "son",
-      "ipa": "/sʌn/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ابن",
-      "example_en": "Ahmed is their son."
-    },
-    {
-      "id": "A1-03-v12",
-      "word": "daughter",
-      "ipa": "/ˈdɔːtə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ابنة",
-      "example_en": "Maha is their daughter."
-    },
-    {
-      "id": "A1-03-v13",
-      "word": "young",
-      "ipa": "/jʌŋ/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "صغير السن",
-      "example_en": "My sister is young. She is six."
-    },
-    {
-      "id": "A1-03-v14",
-      "word": "old",
-      "ipa": "/əʊld/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "كبير السن / قديم",
-      "example_en": "My grandfather is old."
+      "word": "who",
+      "part_of_speech": "other",
+      "meaning_ar": "مَن",
+      "example_en": "Who is he?"
     }
   ],
   "lessons": [
     {
-      "id": "A1-03-l1",
+      "id": "A1-03-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "أفراد العائلة",
-      "est_minutes": 20,
+      "title": "مفردات: عائلتي الكريمة",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "العائلة في حضرموت غالباً كبيرة: الأب والأم والإخوة والجد والجدة وأحياناً الأعمام في بيت واحد. تعلّم أسماءهم بالإنجليزية واستمع لنطقها."
+          "markdown_ar": "في الأعراس والأعياد تجتمع العائلة كلها في المجلس، ويسأل الضيف: «من هذا؟». سنتعلم الآن كيف نعرّف بأفراد العائلة بالإنجليزية. قبل أن تبدأ، فكّر: كم فرداً في عائلتك؟ من أكبرهم؟ شاهد الفيديو ثم تابع."
         },
         {
           "type": "video",
           "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كلمات عن العائلة : الحلقة 3",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
               "family",
-              "/ˈfæməli/",
               "عائلة",
-              "My family is big."
+              "This is my family."
             ],
             [
               "father",
-              "/ˈfɑːðə/",
               "أب",
-              "My father is a date farmer."
+              "He is my father."
             ],
             [
               "mother",
-              "/ˈmʌðə/",
               "أم",
-              "My mother is at home."
+              "She is my mother."
             ],
             [
               "brother",
-              "/ˈbrʌðə/",
               "أخ",
-              "My brother is twelve."
+              "This is my brother."
             ],
             [
               "sister",
-              "/ˈsɪstə/",
               "أخت",
               "Her sister is a nurse."
             ],
             [
               "grandfather",
-              "/ˈɡrænfɑːðə/",
-              "جد",
-              "My grandfather is from Seiyun."
+              "جدّ",
+              "My grandfather is a farmer."
             ],
             [
               "grandmother",
-              "/ˈɡrænmʌðə/",
-              "جدة",
-              "Our grandmother is kind."
+              "جدّة",
+              "His grandmother is in the village."
             ],
             [
               "uncle",
-              "/ˈʌŋkl/",
-              "عم / خال",
-              "My uncle is a driver."
+              "عمّ / خال",
+              "My uncle is an engineer."
             ],
             [
               "aunt",
-              "/ɑːnt/",
-              "عمة / خالة",
-              "My aunt is a teacher."
+              "عمّة / خالة",
+              "Her aunt is a teacher."
             ],
             [
-              "cousin",
-              "/ˈkʌzn/",
-              "ابن/بنت العم أو الخال",
-              "Khaled is my cousin."
+              "parents",
+              "الوالدان",
+              "My parents are at home."
             ],
             [
-              "son",
-              "/sʌn/",
-              "ابن",
-              "Ahmed is their son."
-            ],
-            [
-              "daughter",
-              "/ˈdɔːtə/",
-              "ابنة",
-              "Maha is their daughter."
-            ],
-            [
-              "young",
-              "/jʌŋ/",
-              "صغير السن",
-              "My sister is young. She is six."
-            ],
-            [
-              "old",
-              "/əʊld/",
-              "كبير السن / قديم",
-              "My grandfather is old."
+              "who",
+              "مَن",
+              "Who is he?"
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "family. My family is big.\nfather. My father is a date farmer.\nmother. My mother is at home.\nbrother. My brother is twelve.\nsister. Her sister is a nurse.\ngrandfather. My grandfather is from Seiyun.\ngrandmother. Our grandmother is kind.\nuncle. My uncle is a driver.\naunt. My aunt is a teacher.\ncousin. Khaled is my cousin.\nson. Ahmed is their son.\ndaughter. Maha is their daughter.\nyoung. My sister is young. She is six.\nold. My grandfather is old."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**ملاحظة:** في الإنجليزية كلمة واحدة **uncle** للعم والخال، و**aunt** للعمة والخالة، و**cousin** لأبناء العم والخال والعمة والخالة كلهم."
+          "text_en": "This is my family. Who is he? He is my father. She is my mother. This is my brother, and this is my sister. My grandfather is a farmer. His grandmother is in the village. My uncle is an engineer. Her aunt is a teacher. My parents are at home."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-03-e1",
+            "id": "A1-03-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "My father's father is my ___.",
+            "prompt": "What does «family» mean?",
             "options": [
-              "uncle",
-              "grandfather",
-              "brother"
+              "وظيفة / مهنة",
+              "مَن",
+              "معلم",
+              "عائلة"
             ],
-            "answer": 1,
-            "explanation_ar": "أبو الأب هو الجد grandfather."
+            "answer": 3,
+            "explanation_ar": "«family» تعني «عائلة». مثال: This is my family."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-03-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "My mother's sister is my ___.",
-            "options": [
-              "aunt",
-              "cousin",
-              "daughter"
-            ],
-            "answer": 0,
-            "explanation_ar": "أخت الأم هي الخالة aunt."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e3",
+            "id": "A1-03-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "My uncle's son is my ___.",
-            "answer": "cousin",
-            "explanation_ar": "ابن العم أو الخال هو cousin."
+            "prompt": "My ___ is an engineer.",
+            "answer": "uncle",
+            "explanation_ar": "الكلمة الناقصة «uncle» (عمّ / خال)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «teacher» mean?",
+            "options": [
+              "أخت",
+              "معلم",
+              "عمّ / خال",
+              "أم"
+            ],
+            "answer": 1,
+            "explanation_ar": "«teacher» تعني «معلم». مثال: Mr. Ali is a teacher."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "She is my ___.",
+            "answer": "mother",
+            "explanation_ar": "الكلمة الناقصة «mother» (أم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «grandfather» mean?",
+            "options": [
+              "جدّ",
+              "الوالدان",
+              "عائلة",
+              "عمّ / خال"
+            ],
+            "answer": 0,
+            "explanation_ar": "«grandfather» تعني «جدّ». مثال: My grandfather is a farmer."
           }
         },
         {
           "type": "game",
-          "id": "A1-03-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g4",
-          "game": "pronounce"
+          "id": "A1-03-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-03-l2",
+      "id": "A1-03-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "my / your / his / her + 's",
-      "est_minutes": 25,
+      "title": "قاعدة: my / your / his / her",
+      "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "نستخدم **صفات الملكية** قبل الاسم لنقول لمن الشيء. هي لا تتغير مع المفرد أو الجمع: «my brother» و«my brothers»."
+          "type": "audio",
+          "text_en": "This is my brother. Your sister is a nurse. His name is Ahmed. Her name is Huda."
         },
         {
-          "type": "video",
-          "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
+          "type": "text",
+          "markdown_ar": "نستخدم كلمات الملكية لنقول «هذا يخص من؟»:\n\n- **my** = ـي (يخصني): my father (أبي)\n- **your** = ـك (يخصك): your sister (أختك)\n- **his** = ـه (يخص رجلاً أو ولداً): his name (اسمه)\n- **her** = ـها (يخص امرأة أو بنتاً): her name (اسمها)\n\nالكلمة تأتي **قبل** الاسم دائماً: **my** brother وليس brother my.\n\n**الخطأ الشائع:** الخلط بين his و her. تذكّر: **his** لصاحب مذكّر (هو) و**her** لصاحبة مؤنثة (هي)، بغض النظر عن الشيء الذي يملكه. فنقول: Bilal's father → **his** father. Mona's father → **her** father."
         },
         {
           "type": "table",
           "headers": [
-            "الضمير",
-            "صفة الملكية",
+            "صاحب الشيء",
+            "الكلمة",
             "مثال"
           ],
           "rows": [
@@ -353,501 +292,405 @@
             [
               "you",
               "your",
-              "your sister"
+              "your mother"
             ],
             [
               "he",
               "his",
-              "his mother"
+              "his brother"
             ],
             [
               "she",
               "her",
-              "her brother"
-            ],
-            [
-              "it",
-              "its",
-              "its name"
-            ],
-            [
-              "we",
-              "our",
-              "our family"
-            ],
-            [
-              "they",
-              "their",
-              "their son"
+              "her sister"
             ]
           ]
         },
         {
-          "type": "text",
-          "markdown_ar": "**ملكية الأسماء ('s):** نضيف **'s** بعد اسم الشخص: «**Ali's** sister» = أخت علي، «**my father's** car» = سيارة أبي.\n\n**انتبه:** his للمذكر و her للمؤنث، حسب صاحب الشيء وليس الشيء نفسه: «Ali and **his** mother».\n\n**تنبيه:** لا تخلط بين **his** (له) و **he's** (هو يكون = he is)."
-        },
-        {
           "type": "exercise",
           "exercise": {
-            "id": "A1-03-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Maha is a student. ___ school is in Seiyun.",
-            "options": [
-              "His",
-              "Her",
-              "Their"
-            ],
-            "answer": 1,
-            "explanation_ar": "Maha مؤنث فنستخدم her."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "We love ___ grandmother.",
-            "options": [
-              "our",
-              "their",
-              "my"
-            ],
-            "answer": 0,
-            "explanation_ar": "مع we نستخدم our."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e6",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "Salem and ___ brother are in class two.",
-            "answer": "his",
-            "explanation_ar": "Salem مذكر فنستخدم his."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e7",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "«أخت أحمد» بالإنجليزية:",
-            "options": [
-              "Ahmed sister",
-              "Ahmed's sister",
-              "sister Ahmed's"
-            ],
-            "answer": 1,
-            "explanation_ar": "نضيف 's بعد اسم المالك: Ahmed's sister."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e8",
+            "id": "A1-03-L2-e4-1",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات (ابدأ بـ My): name / brother's / is / my / Omar",
+            "prompt": "رتب الكلمات: is / father / my / He",
+            "answer": [
+              "He",
+              "is",
+              "my",
+              "father"
+            ],
+            "explanation_ar": "الترتيب الصحيح: He is my father"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ is he?",
+            "answer": "Who",
+            "explanation_ar": "الكلمة الناقصة «Who» (مَن)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «aunt» mean?",
+            "options": [
+              "عمّة / خالة",
+              "الوالدان",
+              "أخ",
+              "معلم"
+            ],
+            "answer": 0,
+            "explanation_ar": "«aunt» تعني «عمّة / خالة». مثال: Her aunt is a teacher."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: home / at / parents / My / are",
             "answer": [
               "My",
-              "brother's",
-              "name",
-              "is",
-              "Omar"
+              "parents",
+              "are",
+              "at",
+              "home"
             ],
-            "explanation_ar": "My brother's name = اسم أخي، ثم is Omar."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-03-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "صورة عائلة لينا",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**لينا** تُري صديقتها **ندى** صورة عائلتها. استمع للحوار وأجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "audio",
-          "text_en": "Nada: Is this your family photo, Lina?\nLina: Yes, it is. This is my father. His name is Abdullah. He is a date farmer in Seiyun.\nNada: And who is this?\nLina: That's my mother, Fatima. She is a teacher.\nNada: Are these your brothers?\nLina: Yes. Their names are Yahya and Ali. Yahya is ten and Ali is seven.\nNada: And the old man?\nLina: He's my grandfather. He lives with us. His house is our house!\nNada: Your family is big and lovely."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e9",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What is Lina's father's job?",
-            "options": [
-              "teacher",
-              "farmer",
-              "driver"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: He is a date farmer in Seiyun."
+            "explanation_ar": "الترتيب الصحيح: My parents are at home"
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-03-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How old is Ali?",
-            "options": [
-              "seven",
-              "ten",
-              "twelve"
-            ],
-            "answer": 0,
-            "explanation_ar": "قالت: Ali is seven."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Lina's grandfather lives with the family.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 0,
-            "explanation_ar": "قالت: He lives with us."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-03-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "عائلة الحداد",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ النص عن عائلة من مدينة **سيئون** في وادي حضرموت، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "reading",
-          "text_en": "This is the Al-Haddad family from Seiyun. Mr. Saeed Al-Haddad is the father. He is forty-five years old. His wife's name is Khadija. She is a nurse at the hospital. They have three children: two sons and one daughter. Their sons are Mohammed and Hassan. Mohammed is eighteen and Hassan is fourteen. Their daughter is Asma. She is nine. Mr. Saeed's mother lives with them. The children love their grandmother. On Fridays, their uncle and his family visit them. The cousins play together in the garden.",
-          "word_count": 86
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e12",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What is Khadija's job?",
-            "options": [
-              "teacher",
-              "nurse",
-              "farmer"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: She is a nurse at the hospital."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "How many children do Saeed and Khadija have?",
-            "options": [
-              "two",
-              "three",
-              "four"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: They have three children."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e14",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Asma is the oldest child.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "أكبرهم Mohammed (18)، أما Asma فعمرها 9."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e15",
-            "skill": "reading",
+            "id": "A1-03-L2-e4-5",
+            "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Mr. Saeed's mother is the children's ___.",
-            "answer": "grandmother",
-            "explanation_ar": "أم الأب هي الجدة grandmother."
+            "prompt": "Your ___ is a nurse.",
+            "answer": "sister",
+            "explanation_ar": "الكلمة الناقصة «sister» (أخت)."
           }
-        }
-      ]
-    },
-    {
-      "id": "A1-03-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "قدّم عائلتك",
-      "est_minutes": 15,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "تخيّل أنك تُري صديقك صورة عائلتك. قدّم 3 أو 4 أفراد من عائلتك: **الاسم، العمر أو العمل**. استعمل my و his و her."
-        },
-        {
-          "type": "video",
-          "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "table",
-          "headers": [
-            "لتقول",
-            "العبارة"
-          ],
-          "rows": [
-            [
-              "هذا / هذه",
-              "This is my…"
-            ],
-            [
-              "اسمه / اسمها",
-              "His name is… / Her name is…"
-            ],
-            [
-              "عمره",
-              "He's … years old."
-            ],
-            [
-              "عمله",
-              "She's a teacher."
-            ]
-          ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Show a photo of your family and introduce three or four family members: their names, ages or jobs.",
-        "helpful_phrases": [
-          "This is my…",
-          "His name is…",
-          "Her name is…",
-          "He's … years old.",
-          "She's a…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "possessive adjectives",
-          "family vocabulary"
-        ]
-      }
-    },
-    {
-      "id": "A1-03-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "اكتب عن عائلتك",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة عن عائلتك (30 إلى 70 كلمة). اقرأ المثال أولاً.\n\n**تذكّر:** his للمذكر، her للمؤنث، their للجمع، و 's للملكية."
-        },
-        {
-          "type": "video",
-          "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "reading",
-          "text_en": "My name is Waleed. My family is from Tarim. My father's name is Ali. He is a driver. My mother is a housewife. I have two sisters. Their names are Noor and Huda. Noor is twelve and Huda is eight. My grandmother lives with us. Her name is Maryam.",
-          "word_count": 49
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about your family in 5–7 sentences. Use my, his, her, their and 's.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 3 sentences about your family. Use my. Example: My father is a ... My sister's name is ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "possessive adjectives",
-          "possessive 's",
-          "family vocabulary"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-03-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-03-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **my, your, his, her, its, our, their** قبل الاسم.\n- **'s** للملكية: Ali's brother.\n- أفراد العائلة: father, mother, brother, sister, grandfather, grandmother, uncle, aunt, cousin, son, daughter."
-        },
-        {
-          "type": "video",
-          "youtube_id": "S_deJPyvtfo",
-          "video_title": "كلمات عن العائلة — الحلقة 3",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 738,
-          "optional": true,
-          "approx_size_mb": 49
+          "markdown_ar": "بلال يعرض على طارق صورة عائلته في المجلس. **استمع:** من هم أفراد العائلة في الصورة؟ وما اسم كل واحد؟"
         },
         {
           "type": "story",
-          "id": "A1-03-s1",
-          "title_ar": "الحلقة 3: بيت حمزة في سيئون",
+          "id": "A1-03-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Hamza",
-              "text_en": "Welcome to my family's house in Seiyun, Reem!",
-              "text_ar": "أهلاً بكِ في بيت عائلتي في سيئون يا ريم!"
+              "speaker": "Bilal",
+              "text_en": "This is my family.",
+              "text_ar": "هذه عائلتي."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Thank you! Who is this?",
-              "text_ar": "شكراً! من هذا؟"
+              "speaker": "Tariq",
+              "text_en": "Who is he?",
+              "text_ar": "من هو؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "This is my grandfather. His name is Ahmed.",
-              "text_ar": "هذا جدي. اسمه أحمد."
+              "speaker": "Bilal",
+              "text_en": "He is my father. His name is Ahmed.",
+              "text_ar": "هذا أبي. اسمه أحمد."
             },
             {
-              "speaker": "Reem",
+              "speaker": "Tariq",
               "text_en": "And who is she?",
               "text_ar": "ومن هي؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "She's my sister. Her name is Maha. Our family is big!",
-              "text_ar": "هي أختي. اسمها مها. عائلتنا كبيرة!"
+              "speaker": "Bilal",
+              "text_en": "She is my mother. Her name is Huda.",
+              "text_ar": "هذه أمي. اسمها هدى."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Is this your sister?",
+              "text_ar": "هل هذه أختك؟"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "Yes, her name is Mona.",
+              "text_ar": "نعم، اسمها منى."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "You have a nice family, Bilal.",
+              "text_ar": "عندك عائلة جميلة يا بلال."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-03-e16",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Ahmed and Sami are brothers. ___ father is a doctor.",
+            "id": "A1-03-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Who is he?\"",
             "options": [
-              "His",
-              "Our",
-              "Their"
-            ],
-            "answer": 2,
-            "explanation_ar": "Ahmed and Sami = they فنستخدم their."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-03-e17",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "My father's brother is my ___.",
-            "options": [
-              "uncle",
-              "cousin",
-              "son"
+              "True",
+              "False"
             ],
             "answer": 0,
-            "explanation_ar": "أخو الأب هو العم uncle."
+            "explanation_ar": "الذي قال «Who is he?» هو Tariq."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-03-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-03-e18",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "Is this ___ book, Sara? — Yes, it's my book.",
-            "answer": "your",
-            "explanation_ar": "عند مخاطبة Sara نستخدم your."
+            "id": "A1-03-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «brother» mean?",
+            "options": [
+              "جدّ",
+              "أخ",
+              "عمّ / خال",
+              "عائلة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«brother» تعني «أخ». مثال: This is my brother."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Bilal says: \"He is my father. His name is Ahmed.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «He is my father. His name is Ahmed.» هو Bilal."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «mother» mean?",
+            "options": [
+              "عمّ / خال",
+              "وظيفة / مهنة",
+              "أم",
+              "معلم"
+            ],
+            "answer": 2,
+            "explanation_ar": "«mother» تعني «أم». مثال: She is my mother."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Show a photo of your family to a friend. Say who each person is and their name. Use: This is my ... His name is ... Her name is ...",
+        "helpful_phrases": [
+          "This is my ...",
+          "His name is ...",
+          "Her name is ...",
+          "My parents are ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-03-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-03-L4-s1",
+          "title_ar": "زيارة إلى بيت الجدّ",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Hello, Grandfather!",
+              "text_ar": "مرحباً يا جدّي!"
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Hello, Huda! Who is this?",
+              "text_ar": "مرحباً يا هدى! من هذا؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "This is my friend Mona.",
+              "text_ar": "هذه صديقتي منى."
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Nice to meet you, Mona.",
+              "text_ar": "تشرفت بمعرفتك يا منى."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Nice to meet you. Your house is nice.",
+              "text_ar": "تشرفت بك. بيتك جميل."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "My grandmother is in the kitchen.",
+              "text_ar": "جدتي في المطبخ."
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Her name is Fatima.",
+              "text_ar": "اسمها فاطمة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Good morning, Grandmother!",
+              "text_ar": "صباح الخير يا جدتي!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «who» mean?",
+            "options": [
+              "معلم",
+              "أم",
+              "مَن",
+              "جدّ"
+            ],
+            "answer": 2,
+            "explanation_ar": "«who» تعني «مَن». مثال: Who is he?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My ___ is an engineer.",
+            "answer": "uncle",
+            "explanation_ar": "الكلمة الناقصة «uncle» (عمّ / خال)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: my / is / brother / This",
+            "answer": [
+              "This",
+              "is",
+              "my",
+              "brother"
+            ],
+            "explanation_ar": "الترتيب الصحيح: This is my brother"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Grandfather says: \"Her name is Fatima.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Her name is Fatima.» هو Grandfather."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «mother» mean?",
+            "options": [
+              "عمّ / خال",
+              "أم",
+              "أخ",
+              "عائلة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«mother» تعني «أم». مثال: She is my mother."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-03-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "She is my ___.",
+            "answer": "mother",
+            "explanation_ar": "الكلمة الناقصة «mother» (أم)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-03-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend about your family: who is in it, what their names are. Use my, his and her. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "My family is ...",
+          "My father is ...",
+          "His name is ...",
+          "Her name is ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -857,130 +700,132 @@
         "id": "A1-03-q1",
         "skill": "vocab",
         "kind": "mcq",
-        "prompt": "My mother's mother is my ___.",
+        "prompt": "What does «grandmother» mean?",
         "options": [
-          "aunt",
-          "grandmother",
-          "sister"
+          "الوالدان",
+          "مَن",
+          "جدّة",
+          "جدّ"
         ],
-        "answer": 1,
-        "explanation_ar": "أم الأم هي الجدة grandmother."
+        "answer": 2,
+        "explanation_ar": "«grandmother» تعني «جدّة». مثال: His grandmother is in the village."
       },
       {
         "id": "A1-03-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "Hassan is my friend. ___ sister is in my class.",
-        "options": [
-          "Her",
-          "His",
-          "Its"
-        ],
-        "answer": 1,
-        "explanation_ar": "Hassan مذكر فنستخدم his."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "She is my ___.",
+        "answer": "mother",
+        "explanation_ar": "الكلمة الناقصة «mother» (أم)."
       },
       {
         "id": "A1-03-q3",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "Mona loves ___ mother.",
-        "options": [
-          "his",
-          "her",
-          "their"
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: Nice / to / nice / meet / you. / house / Your / is",
+        "answer": [
+          "Nice",
+          "to",
+          "meet",
+          "you.",
+          "Your",
+          "house",
+          "is",
+          "nice"
         ],
-        "answer": 1,
-        "explanation_ar": "Mona مؤنث فنستخدم her."
+        "explanation_ar": "الترتيب الصحيح: Nice to meet you. Your house is nice"
       },
       {
         "id": "A1-03-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "We are from Seiyun. ___ house is near the market.",
-        "answer": "Our",
-        "explanation_ar": "مع we نستخدم our."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «sister» mean?",
+        "options": [
+          "جدّ",
+          "الوالدان",
+          "عمّة / خالة",
+          "أخت"
+        ],
+        "answer": 3,
+        "explanation_ar": "«sister» تعني «أخت». مثال: Her sister is a nurse."
       },
       {
         "id": "A1-03-q5",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "«كتاب أبي» بالإنجليزية:",
-        "options": [
-          "my father book",
-          "my father's book",
-          "my book's father"
-        ],
-        "answer": 1,
-        "explanation_ar": "نضيف 's بعد المالك: my father's book."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "My ___ is an engineer.",
+        "answer": "uncle",
+        "explanation_ar": "الكلمة الناقصة «uncle» (عمّ / خال)."
       },
       {
         "id": "A1-03-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "A girl is her parents' ___.",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Bilal says: \"Her name is Fatima.\"",
         "options": [
-          "son",
-          "daughter",
-          "uncle"
+          "True",
+          "False"
         ],
         "answer": 1,
-        "explanation_ar": "البنت بالنسبة لوالديها daughter."
+        "explanation_ar": "الذي قال «Her name is Fatima.» هو Grandfather."
       },
       {
         "id": "A1-03-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات (ابدأ بـ Their): is / their / Tarim / in / house",
-        "answer": [
-          "Their",
-          "house",
-          "is",
-          "in",
-          "Tarim"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «aunt» mean?",
+        "options": [
+          "أب",
+          "عمّة / خالة",
+          "عائلة",
+          "جدّ"
         ],
-        "explanation_ar": "Their house = بيتهم، ثم is in Tarim."
+        "answer": 1,
+        "explanation_ar": "«aunt» تعني «عمّة / خالة». مثال: Her aunt is a teacher."
       },
       {
         "id": "A1-03-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "She is Ali sister.",
-          "She is Ali's sister.",
-          "She is sister's Ali."
-        ],
-        "answer": 1,
-        "explanation_ar": "الملكية: Ali's sister."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Is this your ___?",
+        "answer": "sister",
+        "explanation_ar": "الكلمة الناقصة «sister» (أخت)."
       },
       {
         "id": "A1-03-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Salma has two brothers and no sisters.» How many brothers does Salma have?",
-        "options": [
-          "one",
-          "two",
-          "three"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: farmer / is / My / grandfather / a",
+        "answer": [
+          "My",
+          "grandfather",
+          "is",
+          "a",
+          "farmer"
         ],
-        "answer": 1,
-        "explanation_ar": "two brothers = أخوان."
+        "explanation_ar": "الترتيب الصحيح: My grandfather is a farmer"
       },
       {
         "id": "A1-03-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "My aunt's daughter is my ___.",
-        "answer": "cousin",
-        "explanation_ar": "بنت الخالة أو العمة cousin."
+        "kind": "mcq",
+        "prompt": "What does «parents» mean?",
+        "options": [
+          "الوالدان",
+          "أخ",
+          "أخت",
+          "مَن"
+        ],
+        "answer": 0,
+        "explanation_ar": "«parents» تعني «الوالدان». مثال: My parents are at home."
       }
     ]
   },
-  "context_note": "عائلة حضرمية ممتدة في سيئون يعيش معها الجد أو الجدة، وزيارة الأعمام يوم الجمعة.",
-  "stop_ar": "سيئون",
+  "stop_ar": "البيت",
   "roleplay": {
-    "character_ar": "الجدة فاطمة في سيئون",
-    "scenario_en": "You are Grandmother Fatima in Seiyun. Ask the student about their family members: names and ages.",
-    "opening_en": "Welcome, my child! Tell me about your family. Do you have brothers?"
-  }
+    "character_ar": "بلال في مجلس بيته",
+    "scenario_en": "You are Bilal. A friend visits your house in Yemen. Show him or her a family picture. Say who each person is (father, mother, brother, sister, grandfather, grandmother, uncle, aunt) and their names. Use only very simple English.",
+    "opening_en": "Welcome to my house! This is my family. Who is your father?"
+  },
+  "context_note": "عائلتي الكريمة"
 }

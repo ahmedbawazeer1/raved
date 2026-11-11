@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-01",
+  position: 1,
+  title_en: "Meeting a New Friend",
+  title_ar: "لقاء صديق جديد",
+  stop_ar: "فناء المدرسة",
+  situation_ar: "طارق طالب جديد يلتقي بزميله بلال في فناء المدرسة في أول يوم دراسي، فيحييه ويتعرف كل منهما على اسم الآخر.",
+  grammar_en: "I am / you are / he is",
+  can_do: ["ألقي التحية وأودّع بالإنجليزية", "أقول اسمي وأسأل عن اسم زميلي", "أقول «أنا طالب» و«هو صديقي» بجمل صحيحة"],
+  video: { id: "77IK9T45kiU", title: "تعلم اللغة الإنجليزية من الصفر للمبتدئين بأفضل طريقة من أكبر قناة في العالم", checked: true },
+  words: [
+    ["hello", "phrase", "مرحباً", "Hello! I am Tariq."],
+    ["good morning", "phrase", "صباح الخير", "Good morning, Bilal."],
+    ["goodbye", "phrase", "مع السلامة", "Goodbye, Bilal!"],
+    ["name", "noun", "اسم", "My name is Tariq."],
+    ["my", "other", "ـي (ملكية المتكلم)", "Bilal is my friend."],
+    ["your", "other", "ـك (ملكية المخاطب)", "What is your name?"],
+    ["friend", "noun", "صديق", "You are my friend."],
+    ["student", "noun", "طالب", "I am a student."],
+    ["school", "noun", "مدرسة", "This is my school."],
+    ["nice to meet you", "phrase", "تشرفت بمعرفتك", "Nice to meet you!"],
+  ],
+  warmup_ar:
+    "تخيّل أنك في **أول يوم دراسي** وتقف في فناء المدرسة. بجانبك طالب لا تعرفه. ماذا تقول له بالعربية؟ غالباً «صباح الخير، اسمي …، ما اسمك؟». في هذا الدرس ستتعلم أن تقول الشيء نفسه بالإنجليزية. شاهد الفيديو أولاً، ثم راجع الكلمات في الجدول.",
+  in_context: [
+    "Hello! I am Tariq.",
+    "Good morning, Bilal. What is your name?",
+    "My name is Tariq. I am a student.",
+    "This is my school.",
+    "Bilal is my friend.",
+    "Nice to meet you!",
+    "Goodbye, Bilal. Goodbye, Tariq.",
+  ],
+  notice: ["I am Tariq.", "You are my friend.", "Bilal is a student.", "We are in school."],
+  rule_ar:
+    "في الإنجليزية لا تكتمل الجملة بدون فعل، حتى لو كانت بسيطة. في العربية نقول «أنا طالب» بلا فعل، أما في الإنجليزية فنقول **I am a student** أي «أنا **أكون** طالباً». هذا الفعل اسمه **be** ويتغير حسب من نتكلم عنه:\n\n- مع **I** (أنا) نقول **am**: I am Tariq.\n- مع **you** (أنت) نقول **are**: You are my friend.\n- مع **he** (هو) و**she** (هي) نقول **is**: Bilal is a student.\n- مع **we** (نحن) و**they** (هم) نقول **are**: We are in school.\n\n**الخطأ الشائع:** أن ننسى الفعل ونقول «I student». الصحيح: **I am a student**. وقبل المهنة أو الصفة المفردة نضع **a** (طالب واحد = a student).",
+  form: {
+    headers: ["من يتكلم؟", "الفعل", "مثال"],
+    rows: [
+      ["I", "am", "I am a student."],
+      ["you", "are", "You are my friend."],
+      ["he", "is", "He is Bilal."],
+      ["she", "is", "She is my friend."],
+      ["we", "are", "We are in school."],
+      ["they", "are", "They are students."],
+    ],
+  },
+  write_prompt: "Write 2–3 short sentences about yourself. Use: My name is ... I am a student. I am in ... school.",
+  before_ar: "طارق وبلال يلتقيان لأول مرة في فناء المدرسة. **استمع وانتبه:** كيف يحيّي كل منهما الآخر؟ وكيف يسأل بلال عن الاسم؟",
+  dialogue: [
+    ["Tariq", "Good morning!", "صباح الخير!"],
+    ["Bilal", "Good morning! What is your name?", "صباح النور! ما اسمك؟"],
+    ["Tariq", "My name is Tariq. What is your name?", "اسمي طارق. وما اسمك أنت؟"],
+    ["Bilal", "My name is Bilal. Nice to meet you.", "اسمي بلال. تشرفت بمعرفتك."],
+    ["Tariq", "Nice to meet you, Bilal. I am a new student.", "تشرفت بك يا بلال. أنا طالب جديد."],
+    ["Bilal", "You are my friend!", "أنت صديقي!"],
+    ["Tariq", "Goodbye, Bilal!", "مع السلامة يا بلال!"],
+    ["Bilal", "Goodbye, Tariq!", "مع السلامة يا طارق!"],
+  ],
+  speak: {
+    prompt: "You meet a new student at school. Say hello, tell your name, ask for his or her name, and say goodbye.",
+    phrases: ["Hello!", "My name is ...", "What is your name?", "Nice to meet you.", "Goodbye!"],
+  },
+  story_title_ar: "منى تلتقي سالماً",
+  story: [
+    ["Mona", "Good morning! My name is Mona.", "صباح الخير! اسمي منى."],
+    ["Salem", "Hello, Mona. I am Salem.", "مرحباً يا منى. أنا سالم."],
+    ["Mona", "Are you a student?", "هل أنت طالب؟"],
+    ["Salem", "Yes, I am a student. This is my school.", "نعم، أنا طالب. هذه مدرستي."],
+    ["Mona", "Nice to meet you, Salem.", "تشرفت بك يا سالم."],
+    ["Salem", "Nice to meet you too.", "وأنا أيضاً تشرفت بك."],
+    ["Salem", "You are my friend now.", "أنتِ صديقتي الآن."],
+    ["Mona", "Goodbye, Salem!", "مع السلامة يا سالم!"],
+    ["Salem", "Goodbye, Mona!", "مع السلامة يا منى!"],
+  ],
+  task: {
+    prompt: "Introduce yourself to a new friend in 4–5 sentences: greet, say your name, say you are a student, say it is nice to meet him or her, say goodbye.",
+    phrases: ["Hello, I am ...", "I am a student.", "Nice to meet you.", "Goodbye!"],
+  },
+  roleplay: {
+    character_ar: "بلال، زميلك الجديد في المدرسة",
+    scenario_en: "You are Bilal, a friendly student at a school in Yemen. It is the first day of school. Greet the new student, ask his or her name, say your own name, and say goodbye. Use only very simple English (hello, name, my, your, friend, student, school).",
+    opening_en: "Good morning! My name is Bilal. What is your name?",
+  },
+};
+export default unit;
