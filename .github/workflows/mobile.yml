@@ -89,5 +89,6 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           cp raved-mobile.apk raved.apk
+          echo $((100 + ${{ github.run_number }})) > build.txt
           gh release view android >/dev/null 2>&1 || gh release create android --title "رفد لأندرويد" --notes "أحدث نسخة من تطبيق رفد لأندرويد." --latest=false
-          gh release upload android raved.apk raved.aab --clobber
+          gh release upload android raved.apk raved.aab build.txt --clobber

@@ -1,3 +1,4 @@
+import { BUILD_CODE } from "@/lib/build-update";
 import { useState } from "react";
 import { Linking, Pressable, ScrollView, Switch, TextInput, View } from "react-native";
 import { router } from "expo-router";
@@ -126,6 +127,7 @@ export default function AccountScreen() {
         <Button title="تسجيل الخروج" variant="secondary" onPress={() => supabase.auth.signOut()} />
         <Text variant="small" style={{ textAlign: "center" }}>
           رفد · نسخة {APP_VERSION}
+          {BUILD_CODE ? ` (بناء ${BUILD_CODE})` : ""}
         </Text>
       </ScrollView>
     </SafeAreaView>

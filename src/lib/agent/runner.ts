@@ -141,10 +141,26 @@ export const ERROR_AR: Record<string, string> = {
     "مفتاح YouTube لا يعمل: تأكد أن YouTube Data API v3 مفعّلة في مشروع المفتاح على Google Cloud، وأن المفتاح غير مقيّد بمواقع. سيعيد الوكيل المحاولة كل نصف ساعة.",
 };
 
-export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: UnitTools, now: () => Date = () => new Date()): Promise<string | null> {
-  if (await store.paused?.()) return null;
-  const job = await store.nextQueued();
+/** A job that ran out of time but saved new steps is put back in the queue this many times at most. */
+export const MAX_TIME_RESUMES = 4;
+
+export async function runNextJob(rawStore: AgentStore, rawModel: Model, rawTools?: UnitTools, now: () => Date = () => new Date()): Promise<string | null> {
+  if (await rawStore.paused?.()) return null;
+  const job = await rawStore.nextQueued();
   if (!job) return null;
+  // Remember the latest saved input (the finished steps), so a time stop can requeue the job with it.
+  let latestInput = job.input;
+  let savedSteps = false;
+  const store: AgentStore = {
+    ...rawStore,
+    update: (id, patch) => {
+      if (patch.input && typeof patch.input === "object") {
+        latestInput = patch.input as Record<string, unknown>;
+        savedSteps = true;
+      }
+      return rawStore.update(id, patch);
+    },
+  };
   const log = [...job.log];
   let step: string | null = "start";
   const note = async (msg: string, patch: Record<string, unknown> = {}) => {
@@ -303,6 +319,14 @@ export async function runNextJob(store: AgentStore, rawModel: Model, rawTools?: 
     if (e instanceof AgentStop) {
       if (e.code === "paused") {
         await note("أوقفتَ الوكيل، فأعدت المهمة إلى الطابور. ستكمل عند تشغيله من جديد.", { status: "queued", progress: 0, step: "waiting" });
+      } else if (e.message.startsWith(">") && savedSteps && Number(latestInput.time_resumes ?? 0) < MAX_TIME_RESUMES) {
+        // Out of time but steps were saved: continue from them in the next run instead of failing.
+        const resumes = Number(latestInput.time_resumes ?? 0) + 1;
+        await note("انتهى وقت هذا التشغيل. ما بُني محفوظ، وسأكمل من نفس المحطة في التشغيل القادم.", {
+          status: "queued",
+          step: "waiting",
+          input: { ...latestInput, time_resumes: resumes },
+        });
       } else {
         const msg = `تجاوزت المهمة حدها الآمن (${e.message}). أوقفتها حتى لا تستهلك الحصة المجانية. أعد المحاولة، وإن تكرر أخبر المطوّر.`;
         await note(`توقف: ${msg}`, { status: "failed", error: msg, finished_at: now().toISOString() });

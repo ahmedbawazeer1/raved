@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { CONSTITUTION, external, systemPrompt } from "./constitution";
 import { flashModels, GeminiError, parseJsonAnswer, pickFlashModel, readQuota } from "./gemini";
 import { pathPlanSchema, planPathPrompt } from "./plan";
-import { JOB_BUDGET, runNextJob, type AgentJob, type AgentStore, type AgentTrace } from "./runner";
+import { JOB_BUDGET, MAX_TIME_RESUMES, runNextJob, type AgentJob, type AgentStore, type AgentTrace } from "./runner";
 
 const unit = (code: string) => ({
   code,
@@ -150,14 +150,38 @@ describe("agent safety", () => {
 });
 
 describe("agent budget", () => {
-  it("stops a job that runs longer than its time budget", async () => {
+  const outline = { summary_ar: plan.summary_ar, levels: [{ ...plan.levels[0], unit_count: 3 }] };
+  // Each model answer takes 20 minutes, so the third call is past the 25-minute budget.
+  let t = 0;
+  const clock = () => new Date(t);
+  const slowModel = (text: string) => async () => {
+    t += 20 * 60_000;
+    return { text, model: "m", sources: [] };
+  };
+
+  it("puts a job that ran out of time back in the queue with its finished steps", async () => {
     const { store, last } = fakeStore({ ...job });
-    let t = 0;
-    const clock = () => new Date((t += 10 * 60_000));
-    const outline = { summary_ar: plan.summary_ar, levels: [{ ...plan.levels[0], unit_count: 3 }] };
-    await runNextJob(store, async () => ({ text: JSON.stringify(outline), model: "m", sources: [] }), undefined, clock);
+    t = 0;
+    await runNextJob(store, slowModel(JSON.stringify(outline)), undefined, clock);
+    expect(last()).toMatchObject({ status: "queued", step: "waiting" });
+    const input = last().input as { time_resumes?: number; partial?: { outline?: unknown } };
+    expect(input.time_resumes).toBe(1);
+    expect(input.partial?.outline).toBeTruthy();
+  });
+
+  it("stops for good after too many time stops", async () => {
+    const { store, last } = fakeStore({ ...job, input: { ...job.input, time_resumes: MAX_TIME_RESUMES } });
+    t = 0;
+    await runNextJob(store, slowModel(JSON.stringify(outline)), undefined, clock);
     expect(last()).toMatchObject({ status: "failed" });
     expect(String(last().error)).toContain("حدها الآمن");
+  });
+
+  it("stops a job that ran out of time without saving anything", async () => {
+    const { store, last } = fakeStore({ ...job });
+    t = 0;
+    await runNextJob(store, slowModel("not json"), undefined, clock);
+    expect(last()).toMatchObject({ status: "failed" });
   });
 });
 
