@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Pressable, RefreshControl, ScrollView, View } from "react-native";
 import { router } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -7,7 +8,9 @@ import { stageFor } from "@shared/art/rafed";
 import { useAppConfig } from "@/lib/app-config";
 import { appRoute } from "@/lib/routes";
 import { useSession } from "@/lib/session";
-import { Button, Card, colors, RafedGreeting, LoadError, Loading, ProgressBar, Text } from "@/ui";
+import { Button, Card, colors, Drop, GradientBox, RafedGreeting, LoadError, Loading, ProgressBar, Text } from "@/ui";
+
+const DAYS = ["س", "ح", "ن", "ث", "ر", "خ", "ج"];
 
 function greeting(): string {
   const hour = Number(new Intl.DateTimeFormat("en-GB", { hour: "numeric", hour12: false, timeZone: "Asia/Aden" }).format(new Date()));
@@ -50,22 +53,61 @@ export default function TodayScreen() {
         contentContainerStyle={{ padding: 16, gap: 16 }}
         refreshControl={<RefreshControl refreshing={home.isRefetching} onRefresh={() => void home.refetch()} tintColor={colors.primary} />}
       >
-        <View style={{ flexDirection: "row", gap: 8 }}>
-          <Stat label="أيام السقاية" value={`💧 ${w.days}`} />
-          <Stat label="قطراتك" value={`${d.xp}`} />
+        {/* HUD: watering days, drops, notifications */}
+        <View style={{ flexDirection: "row", gap: 8, alignItems: "center" }}>
+          <Pill label="أيام السقاية" value={w.days} icon={<Drop size={22} />} />
+          <Pill label="قطراتك" value={d.xp} icon={<Drop size={22} color="#F5A524" />} />
           <Pressable
-            style={{ flex: 1 }}
             onPress={() => router.push("/notifications")}
             accessibilityRole="button"
             accessibilityLabel={`الإشعارات، ${d.unread} جديدة`}
+            style={{
+              width: 52,
+              height: 52,
+              borderRadius: 26,
+              backgroundColor: colors.card,
+              borderWidth: 1,
+              borderColor: colors.border,
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <Stat label="إشعارات" value={`🔔 ${d.unread}`} />
+            <Text style={{ fontSize: 20 }}>🔔</Text>
+            {d.unread ? (
+              <View style={{ position: "absolute", top: 10, right: 12, width: 10, height: 10, borderRadius: 5, backgroundColor: colors.accent }} />
+            ) : null}
           </Pressable>
         </View>
 
-        <RafedGreeting mood={mood} stage={stageFor(levelsDone)}>
-          {bubble}
-        </RafedGreeting>
+        {/* Watering card: Rafed, his words, and this week (Saturday → Friday, Friday is rest) */}
+        <GradientBox from="#FFFFFF" to="#DDF6EC" style={{ padding: 16, gap: 12, borderWidth: 1, borderColor: colors.border }}>
+          <RafedGreeting mood={mood} stage={stageFor(levelsDone)}>
+            {bubble}
+          </RafedGreeting>
+          <View style={{ flexDirection: "row", gap: 6 }} accessibilityLabel="سقاية هذا الأسبوع">
+            {w.week.map((on, i) => (
+              <View key={i} style={{ flex: 1, alignItems: "center", gap: 4 }}>
+                <View
+                  style={{
+                    width: 36,
+                    height: 36,
+                    borderRadius: 18,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: on ? "#C9F1FF" : i === 6 ? colors.warningTint : colors.card,
+                    borderWidth: i === w.todayIndex ? 2 : 1,
+                    borderColor: i === w.todayIndex ? colors.primary : colors.border,
+                  }}
+                >
+                  {on ? <Drop size={18} /> : i === 6 ? <Text style={{ fontSize: 15 }}>🌙</Text> : null}
+                </View>
+                <Text variant="small" style={{ fontWeight: i === w.todayIndex ? "700" : "400", textAlign: "center" }}>
+                  {DAYS[i]}
+                </Text>
+              </View>
+            ))}
+          </View>
+        </GradientBox>
 
         {d.placementPending ? (
           <Card tone="warning">
@@ -89,10 +131,10 @@ export default function TodayScreen() {
         ) : null}
 
         {unit ? (
-          <View style={{ backgroundColor: colors.primary, borderRadius: 24, padding: 20, gap: 12 }}>
-            <Text style={{ color: colors.primaryTint, fontSize: 14 }}>درس اليوم</Text>
-            <Text variant="heading" style={{ color: "#fff" }}>
-              الوحدة {unit.position}: {unit.title}
+          <GradientBox radial from="#18A383" to="#08392F" style={{ padding: 20, gap: 12 }}>
+            <Text style={{ color: colors.primaryTint, fontSize: 14 }}>جلسة اليوم · الوحدة {unit.position}</Text>
+            <Text variant="en" style={{ color: "#fff", fontSize: 22, lineHeight: 30, fontWeight: "700", textAlign: "right" }}>
+              {unit.title}
             </Text>
             <View style={{ flexDirection: "row", alignItems: "center", gap: 10 }}>
               <ProgressBar value={unit.lessonsDone} max={unit.lessons.length} />
@@ -105,7 +147,7 @@ export default function TodayScreen() {
               title={step.kind === "quiz" ? "واجه حارس السدّ" : unit.lessonsDone === 0 ? "ابدأ درس اليوم" : "أكمل درس اليوم"}
               onPress={go}
             />
-          </View>
+          </GradientBox>
         ) : null}
 
         {d.quests.length ? (
@@ -120,7 +162,20 @@ export default function TodayScreen() {
                 }}
                 style={{ flexDirection: "row", alignItems: "center", gap: 10, minHeight: 44 }}
               >
-                <Text style={{ fontSize: 20 }}>{q.done ? "✅" : "⬜"}</Text>
+                <View
+                  style={{
+                    width: 26,
+                    height: 26,
+                    borderRadius: 13,
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: q.done ? colors.success : colors.card,
+                    borderWidth: 2,
+                    borderColor: q.done ? colors.success : colors.border,
+                  }}
+                >
+                  {q.done ? <Text style={{ color: "#fff", fontSize: 14, fontWeight: "700" }}>✓</Text> : null}
+                </View>
                 <Text style={{ flex: 1, textDecorationLine: q.done ? "line-through" : "none", color: q.done ? colors.muted : colors.ink }}>{q.label}</Text>
               </Pressable>
             ))}
@@ -148,7 +203,8 @@ export default function TodayScreen() {
                   justifyContent: "center",
                   borderRadius: 16,
                   backgroundColor: colors.card,
-                  borderWidth: 1,
+                  borderWidth: 2,
+                  borderBottomWidth: 5,
                   borderColor: colors.border,
                 }}
               >
@@ -173,15 +229,29 @@ export default function TodayScreen() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Pill({ label, value, icon }: { label: string; value: number; icon: ReactNode }) {
   return (
     <View
-      style={{ flex: 1, backgroundColor: colors.card, borderRadius: 16, paddingVertical: 10, alignItems: "center", borderWidth: 1, borderColor: colors.border }}
+      accessible
+      accessibilityLabel={`${label}: ${value}`}
+      style={{
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "center",
+        gap: 8,
+        backgroundColor: colors.card,
+        borderRadius: 26,
+        paddingVertical: 8,
+        paddingHorizontal: 14,
+        borderWidth: 1,
+        borderColor: colors.border,
+      }}
     >
-      <Text style={{ fontWeight: "700", fontSize: 17, textAlign: "center" }}>{value}</Text>
-      <Text variant="small" style={{ textAlign: "center" }}>
-        {label}
-      </Text>
+      {icon}
+      <View style={{ flex: 1 }}>
+        <Text style={{ fontWeight: "700", fontSize: 18, lineHeight: 24 }}>{value}</Text>
+        <Text variant="small">{label}</Text>
+      </View>
     </View>
   );
 }

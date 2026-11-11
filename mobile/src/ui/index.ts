@@ -10,4 +10,4 @@ export { Screen } from "./screen";
 export { LoadError, Loading } from "./states";
 export { Text } from "./text";
 export { colors, fonts, radius, space, TOUCH } from "./theme";
-export { Bottle, Chip, Face, FullAvatar, RafedArt, Row, TierBadge, type ChipState } from "./play";
+export { Bottle, Chip, Drop, Face, GradientBox, FullAvatar, RafedArt, Row, TierBadge, type ChipState } from "./play";
