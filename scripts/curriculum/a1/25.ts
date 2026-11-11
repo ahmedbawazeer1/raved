@@ -1,0 +1,86 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-25",
+  position: 25,
+  title_en: "Putting It All Together",
+  title_ar: "حصاد البداية والتواصل الشامل",
+  stop_ar: "قاعة الأنشطة المدرسية",
+  situation_ar: "في حفل نهاية المستوى بقاعة الأنشطة، يقدّم كل طالب نفسه وعائلته ويومه بالإنجليزية أمام الضيوف، ويطلب المساعدة عند الحاجة.",
+  grammar_en: "Can you ...? / I can / I can't (requests and ability)",
+  can_do: ["أطلب المساعدة وأعتذر وأشكر بالإنجليزية", "أقول ما أستطيع وما لا أستطيع بـ can / can't", "أقدّم نفسي بجمل متصلة"],
+  video: { id: "5VQJOtRNiFU", title: "كورس شامل لتعلم اللغة الانجليزية للمبتدئين من الصفر : الحلقة 25 مراجعة بالصوت والصورة", checked: true },
+  words: [
+    ["please", "phrase", "من فضلك", "Open the door, please."],
+    ["thank you", "phrase", "شكراً", "Thank you very much."],
+    ["sorry", "phrase", "آسف", "I am sorry, I am late."],
+    ["excuse me", "phrase", "عفواً", "Excuse me, can you help me?"],
+    ["welcome", "phrase", "أهلاً بك", "Welcome to our school."],
+    ["help", "verb", "يساعد", "Can you help me?"],
+    ["speak", "verb", "يتكلم", "I can speak English."],
+    ["understand", "verb", "يفهم", "I don't understand."],
+    ["again", "adverb", "مرة أخرى", "Please say it again."],
+    ["slowly", "adverb", "ببطء", "Please speak slowly."],
+    ["can", "verb", "يستطيع", "I can swim."],
+  ],
+  warmup_ar:
+    "وصلت إلى نهاية المستوى الأول! ستقف الآن أمام الضيوف لتقدّم نفسك، وقد تحتاج أن تطلب المساعدة أو تقول «آسف» أو تطلب أن يعيد أحدهم كلامه ببطء. هذه عبارات تحتاجها في كل مكان. شاهد فيديو المراجعة أولاً.",
+  in_context: [
+    "Welcome to our school.",
+    "Excuse me, can you help me?",
+    "Please say it again.",
+    "I am sorry. I don't understand.",
+    "Please speak slowly.",
+    "I can speak English. I can swim.",
+    "Thank you very much.",
+  ],
+  notice: ["Can you help me?", "I can speak English.", "I can't swim.", "Please say it again."],
+  rule_ar:
+    "الفعل **can** يعني «أستطيع / يمكنني». له شكل واحد مع الجميع (بدون s):\n\n- I **can** swim. = أستطيع السباحة.\n- She **can** speak English. = هي تستطيع التحدث بالإنجليزية.\n- I **can't** swim. = لا أستطيع. (can't = cannot)\n\nنستخدمه للطلب بأدب: **Can you** help me, **please**? (هل يمكنك مساعدتي من فضلك؟)\n\nوبعد can نضع الفعل **بدون to وبدون s**: She **can speak**.\n\n**الخطأ الشائع:** «She can speaks» أو «I can to swim». الصحيح: **She can speak**, **I can swim**.",
+  form: {
+    headers: ["الغرض", "الجملة", "الجواب"],
+    rows: [
+      ["القدرة", "I can speak English.", "—"],
+      ["عدم القدرة", "I can't swim.", "—"],
+      ["طلب", "Can you help me, please?", "Yes, I can."],
+      ["اعتذار", "I am sorry.", "It is OK."],
+    ],
+  },
+  write_prompt: "Write 4 sentences: 2 things you can do, 1 thing you can't do, and 1 polite request using Can you ...?",
+  before_ar: "حفل نهاية المستوى. **استمع:** كيف يقدّم الطالب نفسه؟ وماذا يطلب من الضيف؟",
+  dialogue: [
+    ["Tariq", "Good morning! Welcome to our school.", "صباح الخير! أهلاً بكم في مدرستنا."],
+    ["Guest", "Thank you. What is your name?", "شكراً. ما اسمك؟"],
+    ["Tariq", "My name is Tariq. I am a student in the first year.", "اسمي طارق. أنا طالب في السنة الأولى."],
+    ["Guest", "Can you speak English?", "هل تستطيع التحدث بالإنجليزية؟"],
+    ["Tariq", "Yes, I can, but please speak slowly.", "نعم، لكن من فضلك تكلم ببطء."],
+    ["Guest", "Do you play football?", "هل تلعب كرة القدم؟"],
+    ["Tariq", "Yes, I play football every day. Sorry, can you say it again?", "نعم، ألعب كل يوم. آسف، هل يمكنك أن تعيد؟"],
+    ["Guest", "No problem. Thank you, Tariq!", "لا مشكلة. شكراً يا طارق!"],
+  ],
+  speak: {
+    prompt: "Introduce yourself to a guest in 6–8 sentences: name, family, school, what you like, what you can do. Ask for help once.",
+    phrases: ["My name is ...", "I can ...", "I can't ...", "Excuse me, can you help me?"],
+  },
+  story_title_ar: "حفل الختام",
+  story: [
+    ["Huda", "Excuse me, Mona. Can you help me?", "عفواً يا منى. هل تستطيعين مساعدتي؟"],
+    ["Mona", "Yes, I can. What do you need?", "نعم. ماذا تحتاجين؟"],
+    ["Huda", "I can't find my notebook.", "لا أستطيع إيجاد دفتري."],
+    ["Mona", "It is on the chair. Look!", "هو على الكرسي. انظري!"],
+    ["Huda", "Thank you very much.", "شكراً جزيلاً."],
+    ["Mona", "You are welcome. Can you speak English at the party?", "على الرحب والسعة. هل ستتحدثين بالإنجليزية في الحفل؟"],
+    ["Huda", "Yes, I can, but I am a little afraid.", "نعم، لكني خائفة قليلاً."],
+    ["Mona", "Do not worry. You can do it!", "لا تقلقي. أنت تستطيعين!"],
+  ],
+  task: {
+    prompt: "Introduce yourself in 8 sentences: your name, your family, your day, what you like, what you can and can't do. Be polite: please, thank you, sorry.",
+    phrases: ["My name is ...", "I can ...", "I can't ...", "Please speak slowly."],
+  },
+  roleplay: {
+    character_ar: "ضيفة في حفل نهاية المستوى",
+    scenario_en: "You are a guest at a school party in Yemen, meeting a student at the end of the first English level. Ask his or her name, family, favourite subject, what he or she can do. Use very simple English (can, can't, please, thank you, sorry, again, slowly).",
+    opening_en: "Hello! Welcome to the party. What is your name?",
+  },
+};
+export default unit;

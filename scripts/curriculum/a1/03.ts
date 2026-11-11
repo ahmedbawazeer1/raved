@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-03",
+  position: 3,
+  title_en: "My Dear Family",
+  title_ar: "عائلتي الكريمة",
+  stop_ar: "البيت",
+  situation_ar: "يستضيف بلال زميله طارق في مجلس بيته، ويعرض عليه صورة عائلية ليعرّفه بأفراد أسرته وأدوارهم.",
+  grammar_en: "my / your / his / her",
+  can_do: ["أسمّي أفراد أسرتي بالإنجليزية", "أقدّم أحد أقاربي لزميلي", "أستخدم my و your و his و her بشكل صحيح"],
+  video: { id: "S_deJPyvtfo", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كلمات عن العائلة : الحلقة 3", checked: true },
+  words: [
+    ["family", "noun", "عائلة", "This is my family."],
+    ["father", "noun", "أب", "He is my father."],
+    ["mother", "noun", "أم", "She is my mother."],
+    ["brother", "noun", "أخ", "This is my brother."],
+    ["sister", "noun", "أخت", "Her sister is a nurse."],
+    ["grandfather", "noun", "جدّ", "My grandfather is a farmer."],
+    ["grandmother", "noun", "جدّة", "His grandmother is in the village."],
+    ["uncle", "noun", "عمّ / خال", "My uncle is an engineer."],
+    ["aunt", "noun", "عمّة / خالة", "Her aunt is a teacher."],
+    ["parents", "noun", "الوالدان", "My parents are at home."],
+    ["who", "other", "مَن", "Who is he?"],
+  ],
+  warmup_ar:
+    "في الأعراس والأعياد تجتمع العائلة كلها في المجلس، ويسأل الضيف: «من هذا؟». سنتعلم الآن كيف نعرّف بأفراد العائلة بالإنجليزية. قبل أن تبدأ، فكّر: كم فرداً في عائلتك؟ من أكبرهم؟ شاهد الفيديو ثم تابع.",
+  in_context: [
+    "This is my family.",
+    "Who is he? He is my father.",
+    "She is my mother.",
+    "This is my brother, and this is my sister.",
+    "My grandfather is a farmer.",
+    "His grandmother is in the village.",
+    "My uncle is an engineer.",
+    "Her aunt is a teacher.",
+    "My parents are at home.",
+  ],
+  notice: ["This is my brother.", "Your sister is a nurse.", "His name is Ahmed.", "Her name is Huda."],
+  rule_ar:
+    "نستخدم كلمات الملكية لنقول «هذا يخص من؟»:\n\n- **my** = ـي (يخصني): my father (أبي)\n- **your** = ـك (يخصك): your sister (أختك)\n- **his** = ـه (يخص رجلاً أو ولداً): his name (اسمه)\n- **her** = ـها (يخص امرأة أو بنتاً): her name (اسمها)\n\nالكلمة تأتي **قبل** الاسم دائماً: **my** brother وليس brother my.\n\n**الخطأ الشائع:** الخلط بين his و her. تذكّر: **his** لصاحب مذكّر (هو) و**her** لصاحبة مؤنثة (هي)، بغض النظر عن الشيء الذي يملكه. فنقول: Bilal's father → **his** father. Mona's father → **her** father.",
+  form: {
+    headers: ["صاحب الشيء", "الكلمة", "مثال"],
+    rows: [
+      ["I", "my", "my father"],
+      ["you", "your", "your mother"],
+      ["he", "his", "his brother"],
+      ["she", "her", "her sister"],
+    ],
+  },
+  write_prompt: "Write 3 sentences about your family. Use my. Example: My father is a ... My sister's name is ...",
+  before_ar: "بلال يعرض على طارق صورة عائلته في المجلس. **استمع:** من هم أفراد العائلة في الصورة؟ وما اسم كل واحد؟",
+  dialogue: [
+    ["Bilal", "This is my family.", "هذه عائلتي."],
+    ["Tariq", "Who is he?", "من هو؟"],
+    ["Bilal", "He is my father. His name is Ahmed.", "هذا أبي. اسمه أحمد."],
+    ["Tariq", "And who is she?", "ومن هي؟"],
+    ["Bilal", "She is my mother. Her name is Huda.", "هذه أمي. اسمها هدى."],
+    ["Tariq", "Is this your sister?", "هل هذه أختك؟"],
+    ["Bilal", "Yes, her name is Mona.", "نعم، اسمها منى."],
+    ["Tariq", "You have a nice family, Bilal.", "عندك عائلة جميلة يا بلال."],
+  ],
+  speak: {
+    prompt: "Show a photo of your family to a friend. Say who each person is and their name. Use: This is my ... His name is ... Her name is ...",
+    phrases: ["This is my ...", "His name is ...", "Her name is ...", "My parents are ..."],
+  },
+  story_title_ar: "زيارة إلى بيت الجدّ",
+  story: [
+    ["Huda", "Hello, Grandfather!", "مرحباً يا جدّي!"],
+    ["Grandfather", "Hello, Huda! Who is this?", "مرحباً يا هدى! من هذا؟"],
+    ["Huda", "This is my friend Mona.", "هذه صديقتي منى."],
+    ["Grandfather", "Nice to meet you, Mona.", "تشرفت بمعرفتك يا منى."],
+    ["Mona", "Nice to meet you. Your house is nice.", "تشرفت بك. بيتك جميل."],
+    ["Huda", "My grandmother is in the kitchen.", "جدتي في المطبخ."],
+    ["Grandfather", "Her name is Fatima.", "اسمها فاطمة."],
+    ["Mona", "Good morning, Grandmother!", "صباح الخير يا جدتي!"],
+  ],
+  task: {
+    prompt: "Tell a friend about your family: who is in it, what their names are. Use my, his and her. Say at least 5 sentences.",
+    phrases: ["My family is ...", "My father is ...", "His name is ...", "Her name is ..."],
+  },
+  roleplay: {
+    character_ar: "بلال في مجلس بيته",
+    scenario_en: "You are Bilal. A friend visits your house in Yemen. Show him or her a family picture. Say who each person is (father, mother, brother, sister, grandfather, grandmother, uncle, aunt) and their names. Use only very simple English.",
+    opening_en: "Welcome to my house! This is my family. Who is your father?",
+  },
+};
+export default unit;

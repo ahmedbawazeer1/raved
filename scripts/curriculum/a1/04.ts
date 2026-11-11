@@ -1,0 +1,86 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-04",
+  position: 4,
+  title_en: "Inside the Classroom",
+  title_ar: "داخل الفصل الدراسي",
+  stop_ar: "الفصل الدراسي",
+  situation_ar: "في أول حصة، تسأل الأستاذة هدى طلابها عن الأشياء الموجودة في الفصل، ويجيب الطلاب باستخدام this و that.",
+  grammar_en: "What is this? It is a ... (this / that)",
+  can_do: ["أسمّي أدوات الفصل بالإنجليزية", "أسأل «ما هذا؟» وأجيب عنه", "أفرّق بين this (القريب) و that (البعيد)"],
+  video: { id: "m8VUaW1b_z8", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين: كلمات المنزل والفصل : الحلقة 4", checked: true },
+  words: [
+    ["classroom", "noun", "فصل دراسي", "Our classroom is clean."],
+    ["book", "noun", "كتاب", "This is my book."],
+    ["notebook", "noun", "دفتر", "That is a notebook."],
+    ["pen", "noun", "قلم حبر", "I have a blue pen."],
+    ["pencil", "noun", "قلم رصاص", "This is a pencil."],
+    ["bag", "noun", "حقيبة", "My bag is on the chair."],
+    ["desk", "noun", "مكتب الطالب", "That is my desk."],
+    ["chair", "noun", "كرسي", "This is a chair."],
+    ["board", "noun", "سبّورة", "The teacher is at the board."],
+    ["door", "noun", "باب", "That is the door."],
+    ["window", "noun", "نافذة", "The window is open."],
+  ],
+  warmup_ar:
+    "انظر حولك الآن: ما هي الأشياء التي تراها في غرفتك أو في فصلك؟ كتاب؟ قلم؟ كرسي؟ في هذا الدرس ستسمّي هذه الأشياء بالإنجليزية وتسأل عنها بسؤال مهم جداً: **What is this?** (ما هذا؟). شاهد الفيديو أولاً.",
+  in_context: [
+    "This is my classroom.",
+    "This is a book. That is a notebook.",
+    "I have a pen and a pencil.",
+    "My bag is on the chair.",
+    "That is my desk.",
+    "The teacher is at the board.",
+    "That is the door. This is the window.",
+  ],
+  notice: ["What is this? It is a book.", "What is that? It is a door.", "This is my desk.", "That is the board."],
+  rule_ar:
+    "عندما نشير إلى شيء **قريب منا** نقول **this** (هذا / هذه). وعندما يكون **بعيداً** نقول **that** (ذلك / تلك).\n\n- **This** is a pen. = هذا قلم (في يدي أو أمامي).\n- **That** is a board. = تلك سبّورة (في آخر الفصل).\n\nلنسأل نقول: **What is this?** ونجيب: **It is a pen.** (هو قلم). لاحظ أن الجواب يبدأ بـ **It** وليس بـ This.\n\n**الخطأ الشائع:** أن نقول «This is pen» بدون a. الصحيح: **This is a pen**، لأنه شيء واحد.",
+  form: {
+    headers: ["الجملة", "المعنى", "متى؟"],
+    rows: [
+      ["This is a book.", "هذا كتاب.", "شيء قريب"],
+      ["That is a door.", "تلك باب.", "شيء بعيد"],
+      ["What is this?", "ما هذا؟", "سؤال عن شيء قريب"],
+      ["It is a pen.", "إنه قلم.", "الجواب"],
+    ],
+  },
+  write_prompt: "Write 3 sentences about things in your classroom. Use: This is a ... That is a ... It is a ...",
+  before_ar: "الأستاذة هدى تسأل طارق عن الأشياء في الفصل. **استمع:** ما هو الشيء القريب؟ وما هو الشيء البعيد؟",
+  dialogue: [
+    ["Ms. Huda", "Good morning, Tariq. What is this?", "صباح الخير يا طارق. ما هذا؟"],
+    ["Tariq", "It is a book.", "إنه كتاب."],
+    ["Ms. Huda", "Good! And what is that?", "جيد! وما ذلك؟"],
+    ["Tariq", "That is the board.", "تلك هي السبّورة."],
+    ["Ms. Huda", "Is this your pen?", "هل هذا قلمك؟"],
+    ["Tariq", "No, it is a pencil. My pen is in my bag.", "لا، إنه قلم رصاص. قلمي في حقيبتي."],
+    ["Ms. Huda", "Open the window, please.", "افتح النافذة من فضلك."],
+    ["Tariq", "Yes, Ms. Huda.", "حاضر يا أستاذة هدى."],
+  ],
+  speak: {
+    prompt: "Point to things around you. Say what they are: This is a ... That is a ... Say at least four sentences.",
+    phrases: ["This is a ...", "That is a ...", "What is this?", "It is a ..."],
+  },
+  story_title_ar: "الحقيبة المفقودة",
+  story: [
+    ["Salem", "Mona, is this your bag?", "يا منى، هل هذه حقيبتك؟"],
+    ["Mona", "No, it is not my bag.", "لا، ليست حقيبتي."],
+    ["Salem", "Is that your bag on the chair?", "هل تلك حقيبتك على الكرسي؟"],
+    ["Mona", "Yes, that is my bag!", "نعم، تلك حقيبتي!"],
+    ["Salem", "What is in it?", "ماذا فيها؟"],
+    ["Mona", "A book, a notebook and a pen.", "كتاب ودفتر وقلم."],
+    ["Salem", "Good morning, Ms. Huda!", "صباح الخير يا أستاذة هدى!"],
+    ["Mona", "Hello, Ms. Huda!", "مرحباً يا أستاذة هدى!"],
+  ],
+  task: {
+    prompt: "Show your friend your classroom. Say what five things are: This is a ... That is a ... Ask one question: What is this?",
+    phrases: ["This is a ...", "That is the ...", "What is this?", "It is a ..."],
+  },
+  roleplay: {
+    character_ar: "الأستاذة هدى في الفصل",
+    scenario_en: "You are Ms. Huda, an English teacher in a school in Yemen. Point to things in the classroom and ask the student: What is this? Correct kindly. Use only very simple English (book, pen, pencil, bag, desk, chair, board, door, window, this, that).",
+    opening_en: "Good morning! Look at the board. What is this?",
+  },
+};
+export default unit;

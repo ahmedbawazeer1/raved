@@ -1,0 +1,85 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-08",
+  position: 8,
+  title_en: "Buying Fresh Vegetables",
+  title_ar: "شراء خضروات طازجة",
+  stop_ar: "مبسط الخضار",
+  situation_ar: "تذهب منى مع أمها إلى مبسط الخضار، فتسمّي الخضروات وتقول ما تحبه وما لا تحبه.",
+  grammar_en: "I like / I don't like",
+  can_do: ["أسمّي عشر خضروات بالإنجليزية", "أقول ما أحب وما لا أحب", "أنفي جملة بـ don't"],
+  video: { id: "63Riw1SEDPk", title: "تعلم كلمات إنجليزية عن الخضروات : كورس شامل لتعلم الانجليزي من الصفر : ٨", checked: true },
+  words: [
+    ["vegetable", "noun", "خضار", "I eat vegetables every day."],
+    ["tomato", "noun", "طماطم", "I like tomatoes."],
+    ["potato", "noun", "بطاطس", "She likes potatoes."],
+    ["onion", "noun", "بصل", "I don't like onions."],
+    ["carrot", "noun", "جزر", "The carrot is orange."],
+    ["cucumber", "noun", "خيار", "We like cucumber."],
+    ["pepper", "noun", "فلفل", "The pepper is hot."],
+    ["garlic", "noun", "ثوم", "I don't like garlic."],
+    ["cabbage", "noun", "ملفوف", "My mother likes cabbage."],
+    ["lettuce", "noun", "خسّ", "The lettuce is fresh."],
+  ],
+  warmup_ar:
+    "أي الخضروات تحب أكثر؟ الطماطم في السلطة؟ البطاطس مقلية؟ وأيها لا تحبه أبداً؟ في هذا الدرس ستسمّي الخضروات وتقول رأيك بجملة بسيطة: **I like ...** أو **I don't like ...**.",
+  in_context: [
+    "I eat vegetables every day.",
+    "I like tomatoes. I like potatoes.",
+    "I don't like onions.",
+    "The carrot is orange.",
+    "We like cucumber, and the pepper is hot.",
+    "I don't like garlic.",
+    "My mother likes cabbage. The lettuce is fresh.",
+  ],
+  notice: ["I like tomatoes.", "You like potatoes.", "We don't like onions.", "They don't like garlic."],
+  rule_ar:
+    "لنقول ما نحب نستخدم الفعل **like**:\n\n- **I like** tomatoes. = أنا أحب الطماطم.\n- **You like** potatoes. = أنت تحب البطاطس.\n\nولنقول ما **لا** نحب نضع **don't** (do not) قبل الفعل:\n\n- I **don't like** onions. = أنا لا أحب البصل.\n- We **don't like** garlic. = نحن لا نحب الثوم.\n\nمع الخضروات نستخدم الجمع غالباً عند التعميم: I like tomato**es**, I like potato**es**.\n\n**الخطأ الشائع:** أن نقول «I no like onions». الصحيح: **I don't like onions**.",
+  form: {
+    headers: ["الفاعل", "الإيجاب", "النفي"],
+    rows: [
+      ["I", "I like tomatoes.", "I don't like onions."],
+      ["you", "You like potatoes.", "You don't like garlic."],
+      ["we", "We like cucumber.", "We don't like cabbage."],
+      ["they", "They like carrots.", "They don't like pepper."],
+    ],
+  },
+  write_prompt: "Write 3 sentences: two vegetables you like and one you don't like. Use I like ... and I don't like ...",
+  before_ar: "منى وأمها في مبسط الخضار. **استمع:** ما الذي تحبه منى؟ وما الذي لا تحبه؟",
+  dialogue: [
+    ["Mona", "Good morning! I like your vegetables.", "صباح الخير! أحب خضرواتك."],
+    ["Seller", "Thank you! The tomatoes are fresh.", "شكراً لك! الطماطم طازجة."],
+    ["Mona", "I like tomatoes and potatoes.", "أحب الطماطم والبطاطس."],
+    ["Mother", "I like carrots. Do you like cabbage, Mona?", "أنا أحب الجزر. وأنت يا منى هل تحبين الملفوف؟"],
+    ["Mona", "No, I don't like cabbage.", "لا، لا أحب الملفوف."],
+    ["Seller", "What about onions?", "وماذا عن البصل؟"],
+    ["Mona", "I don't like onions, but my mother likes them.", "لا أحب البصل لكن أمي تحبه."],
+    ["Seller", "OK. Here is your bag.", "حسناً. تفضلوا الكيس."],
+  ],
+  speak: {
+    prompt: "Tell a friend about vegetables: say three you like and two you don't like.",
+    phrases: ["I like ...", "I don't like ...", "My mother likes ...", "The ... is fresh."],
+  },
+  story_title_ar: "غداء العائلة",
+  story: [
+    ["Huda", "Mona, what is for lunch?", "يا منى، ما الغداء؟"],
+    ["Mona", "We have potatoes and tomatoes.", "عندنا بطاطس وطماطم."],
+    ["Huda", "I like potatoes!", "أحب البطاطس!"],
+    ["Mona", "I don't like onions.", "أنا لا أحب البصل."],
+    ["Huda", "Is the lettuce fresh?", "هل الخسّ طازج؟"],
+    ["Mona", "Yes, it is. It is from the market.", "نعم، هو من السوق."],
+    ["Huda", "I like your family, Mona.", "أحب عائلتك يا منى."],
+    ["Mona", "Thank you, Huda.", "شكراً يا هدى."],
+  ],
+  task: {
+    prompt: "You are at the vegetable market. Tell the seller which vegetables you like and which you don't like. Say at least 5 sentences.",
+    phrases: ["I like ...", "I don't like ...", "Good morning!", "The ... is fresh."],
+  },
+  roleplay: {
+    character_ar: "بائع الخضار",
+    scenario_en: "You are a vegetable seller in a Yemeni market. Ask the customer which vegetables he or she likes (tomato, potato, onion, carrot, cucumber, pepper, garlic, cabbage, lettuce). Use only very simple English.",
+    opening_en: "Good morning! My vegetables are fresh. Do you like tomatoes?",
+  },
+};
+export default unit;

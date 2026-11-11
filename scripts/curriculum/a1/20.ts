@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-20",
+  position: 20,
+  title_en: "Places in Our Neighborhood",
+  title_ar: "أماكن في حيّنا",
+  stop_ar: "شارع الحي الرئيسي",
+  situation_ar: "يسأل زائر طارق في الشارع الرئيسي عن أماكن في الحي، فيشرح له الطريق: اتجه يميناً، ثم استمر مستقيماً.",
+  grammar_en: "Where is ...? / turn left, go straight",
+  can_do: ["أسمّي أماكن الحي بالإنجليزية", "أسأل «أين...؟» وأفهم الجواب", "أشرح الطريق بـ turn و go straight"],
+  video: { id: "86GViC7Hi44", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 20", checked: false },
+  words: [
+    ["mosque", "noun", "مسجد", "The mosque is near my house."],
+    ["hospital", "noun", "مستشفى", "The hospital is on the right."],
+    ["pharmacy", "noun", "صيدلية", "The pharmacy is next to the bank."],
+    ["bank", "noun", "بنك", "The bank is on the left."],
+    ["bakery", "noun", "مخبز", "The bakery is on the corner."],
+    ["park", "noun", "حديقة", "The park is behind the school."],
+    ["restaurant", "noun", "مطعم", "The restaurant is on the street."],
+    ["street", "noun", "شارع", "The street is long."],
+    ["left", "adverb", "يسار", "Turn left."],
+    ["right", "adverb", "يمين", "Turn right."],
+    ["straight", "adverb", "مستقيماً", "Go straight."],
+    ["turn", "verb", "يلتفّ / ينعطف", "Turn left at the bank."],
+  ],
+  warmup_ar:
+    "هل سألك أحد يوماً: «عفواً، أين الصيدلية؟» في الإنجليزية نجيب بكلمات بسيطة: **Go straight. Turn left.** في هذا الدرس ستتعلم أسماء الأماكن في الحي، وكيف تدلّ شخصاً على الطريق.",
+  in_context: [
+    "The mosque is near my house.",
+    "Where is the hospital? It is on the right.",
+    "The pharmacy is next to the bank.",
+    "The bank is on the left.",
+    "The bakery is on the corner.",
+    "The park is behind the school.",
+    "The restaurant is on the street.",
+    "Go straight. Turn left at the bank. Turn right at the street.",
+  ],
+  notice: ["Where is the bank? It is on the left.", "Go straight.", "Turn left.", "Turn right at the mosque."],
+  rule_ar:
+    "لنسأل عن مكان نقول: **Where is** the bank? ونجيب: **It is** on the left / on the right / next to the pharmacy.\n\nولنشرح الطريق نستخدم **أفعال الأمر** (بدون فاعل):\n- **Go straight.** = اذهب مستقيماً.\n- **Turn left.** = انعطف يساراً.\n- **Turn right.** = انعطف يميناً.\n\nمثال طويل: **Go straight.** Then **turn left** at the mosque. The bank is **on the right**.\n\n**الخطأ الشائع:** أن نقول «You turn left». للأمر نقول مباشرة **Turn left.**",
+  form: {
+    headers: ["الغرض", "الجملة", "المعنى"],
+    rows: [
+      ["السؤال", "Where is the bank?", "أين البنك؟"],
+      ["مكان", "It is on the left.", "على اليسار."],
+      ["أمر", "Go straight.", "اذهب مستقيماً."],
+      ["أمر", "Turn right.", "انعطف يميناً."],
+    ],
+  },
+  write_prompt: "Write 3 sentences to show the way from your school to your house. Use: Go straight. Turn ... at the ...",
+  before_ar: "زائر يسأل طارق عن الطريق في الحي. **استمع:** أين الصيدلية؟ وماذا يقول طارق؟",
+  dialogue: [
+    ["Visitor", "Excuse me, where is the pharmacy?", "عفواً، أين الصيدلية؟"],
+    ["Tariq", "It is next to the bank.", "بجانب البنك."],
+    ["Visitor", "Where is the bank?", "وأين البنك؟"],
+    ["Tariq", "Go straight on this street.", "اذهب مستقيماً في هذا الشارع."],
+    ["Tariq", "Turn left at the mosque.", "ثم انعطف يساراً عند المسجد."],
+    ["Visitor", "Is it far?", "هل هو بعيد؟"],
+    ["Tariq", "No, it is near. The bank is on the right.", "لا، هو قريب. البنك على اليمين."],
+    ["Visitor", "Thank you very much!", "شكراً جزيلاً!"],
+  ],
+  speak: {
+    prompt: "Show someone the way from your house to the mosque, the school or the market. Use Go straight, Turn left, Turn right.",
+    phrases: ["Where is the ...?", "Go straight.", "Turn left.", "It is on the right."],
+  },
+  story_title_ar: "الطريق إلى المستشفى",
+  story: [
+    ["Huda", "Mona, where is the hospital?", "يا منى، أين المستشفى؟"],
+    ["Mona", "It is on the right, next to the park.", "على اليمين بجانب الحديقة."],
+    ["Huda", "Is the pharmacy near?", "هل الصيدلية قريبة؟"],
+    ["Mona", "Yes, it is behind the bakery.", "نعم، خلف المخبز."],
+    ["Huda", "How do I go?", "كيف أذهب؟"],
+    ["Mona", "Go straight. Turn left at the bank.", "اذهبي مستقيمة. ثم انعطفي يساراً عند البنك."],
+    ["Huda", "Thank you, Mona.", "شكراً يا منى."],
+    ["Mona", "You are welcome.", "على الرحب والسعة."],
+  ],
+  task: {
+    prompt: "Give directions to a visitor: tell him how to go from the school to the hospital, the bank and the restaurant. Use Go straight, Turn left, Turn right.",
+    phrases: ["Go straight.", "Turn left at ...", "It is next to ...", "It is on the right."],
+  },
+  roleplay: {
+    character_ar: "زائر يسأل عن الطريق",
+    scenario_en: "You are a visitor lost in a Yemeni neighbourhood. Ask the student where places are (mosque, hospital, pharmacy, bank, bakery, park, restaurant). Listen to the directions (go straight, turn left, turn right). Use only very simple English.",
+    opening_en: "Excuse me, where is the bank?",
+  },
+};
+export default unit;

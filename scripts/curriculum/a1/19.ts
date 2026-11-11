@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-19",
+  position: 19,
+  title_en: "Household Tools We Use",
+  title_ar: "أدوات منزلية نستخدمها",
+  stop_ar: "متجر الأدوات المنزلية",
+  situation_ar: "يذهب بلال وأبوه إلى متجر الأدوات المنزلية لشراء أدوات لإصلاح البيت، ويسألان البائع: هل عندكم...؟ كم سعره؟",
+  grammar_en: "I need ... / Do you have ...? / How much is it?",
+  can_do: ["أسمّي أدوات منزلية شائعة بالإنجليزية", "أطلب ما أحتاجه في متجر", "أسأل عن السعر بـ How much"],
+  video: { id: "80tPPnffuMM", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 19", checked: false },
+  words: [
+    ["tool", "noun", "أداة", "I need a tool."],
+    ["hammer", "noun", "مطرقة", "I need a hammer."],
+    ["screwdriver", "noun", "مفك", "Do you have a screwdriver?"],
+    ["saw", "noun", "منشار", "The saw is expensive."],
+    ["ladder", "noun", "سلّم", "We need a ladder."],
+    ["key", "noun", "مفتاح", "Where is the key?"],
+    ["rope", "noun", "حبل", "The rope is long."],
+    ["bucket", "noun", "دلو", "I need a blue bucket."],
+    ["broom", "noun", "مكنسة", "How much is the broom?"],
+    ["scissors", "noun", "مقص", "Do you have scissors?"],
+    ["torch", "noun", "كشّاف", "I need a torch for the night."],
+    ["battery", "noun", "بطارية", "The torch needs a battery."],
+  ],
+  warmup_ar:
+    "كل بيت يحتاج بين وقت وآخر إلى أدوات: مطرقة لتثبيت مسمار، وكشّاف عندما ينقطع الكهرباء، ودلو للماء. في هذا الدرس ستسمّي هذه الأدوات وتتعلم أن تطلبها من البائع: **I need ...** و **Do you have ...?**",
+  in_context: [
+    "I need a hammer and a screwdriver.",
+    "Do you have a saw?",
+    "We need a ladder and a rope.",
+    "Where is the key?",
+    "I need a blue bucket and a broom.",
+    "Do you have scissors?",
+    "I need a torch and a battery for the night.",
+    "How much is it?",
+  ],
+  notice: ["I need a hammer.", "Do you have a torch?", "How much is the bucket?", "We need a ladder."],
+  rule_ar:
+    "في المتجر نحتاج ثلاثة أنماط من الجمل:\n\n1. **نطلب** ما نريد: **I need** a hammer. (أحتاج مطرقة)\n2. **نسأل إن كان متوفراً**: **Do you have** a torch? (هل عندكم كشّاف؟) والجواب: Yes, I do. / No, I don't.\n3. **نسأل عن السعر**: **How much is** the bucket? (بكم الدلو؟) وللجمع: **How much are** the batteries?\n\nمع الأدوات المفردة نستخدم a (a hammer). أما **scissors** فهي جمع دائماً (مقص واحد = a pair of scissors).\n\n**الخطأ الشائع:** «How many is it?». السؤال عن **السعر** هو **How much**، وعن **العدد** هو How many.",
+  form: {
+    headers: ["الغرض", "الجملة", "الجواب"],
+    rows: [
+      ["الطلب", "I need a hammer.", "OK."],
+      ["السؤال عن التوفر", "Do you have a torch?", "Yes, I do."],
+      ["السعر", "How much is it?", "It is five hundred riyals."],
+      ["السعر (جمع)", "How much are the batteries?", "They are cheap."],
+    ],
+  },
+  write_prompt: "Write 3 sentences you say in a tools shop. Use: I need ... Do you have ...? How much is ...?",
+  before_ar: "بلال وأبوه في متجر الأدوات. **استمع:** ماذا يحتاجان؟ وهل عند البائع كشّاف؟",
+  dialogue: [
+    ["Bilal", "Good morning! I need a hammer, please.", "صباح الخير! أحتاج مطرقة من فضلك."],
+    ["Seller", "Here you are. This hammer is new.", "تفضل. هذه المطرقة جديدة."],
+    ["Father", "Do you have a ladder?", "هل عندكم سلّم؟"],
+    ["Seller", "Yes, I do. It is very long.", "نعم. وهو طويل جداً."],
+    ["Bilal", "How much is the ladder?", "بكم السلّم؟"],
+    ["Seller", "It is expensive. But the rope is cheap.", "غالٍ. لكن الحبل رخيص."],
+    ["Father", "Do you have a torch and batteries?", "هل عندكم كشّاف وبطاريات؟"],
+    ["Seller", "Yes. We have a good torch. Thank you!", "نعم. عندنا كشّاف جيد. شكراً!"],
+  ],
+  speak: {
+    prompt: "You are in a tools shop. Ask for three things and ask the price of one.",
+    phrases: ["I need a ...", "Do you have a ...?", "How much is it?", "Thank you."],
+  },
+  story_title_ar: "انقطاع الكهرباء",
+  story: [
+    ["Salem", "The light is off, Mona!", "الكهرباء انقطعت يا منى!"],
+    ["Mona", "Do you have a torch?", "هل عندك كشّاف؟"],
+    ["Salem", "Yes, I do. But the battery is old.", "نعم. لكن البطارية قديمة."],
+    ["Mona", "We need a new battery.", "نحتاج بطارية جديدة."],
+    ["Salem", "Go to the shop. How much is a battery?", "اذهبي إلى المتجر. بكم البطارية؟"],
+    ["Mona", "It is cheap. I need a bucket too.", "إنها رخيصة. وأحتاج دلواً أيضاً."],
+    ["Salem", "Take the key from the table.", "خذي المفتاح من الطاولة."],
+    ["Mona", "Thank you, Salem.", "شكراً يا سالم."],
+  ],
+  task: {
+    prompt: "You are at the hardware store. Ask for 3 tools, ask if they have two more, and ask the price of one. Say at least 5 sentences.",
+    phrases: ["I need a ...", "Do you have ...?", "How much is ...?", "Thank you."],
+  },
+  roleplay: {
+    character_ar: "بائع في متجر الأدوات المنزلية",
+    scenario_en: "You are a seller in a household tools shop in Yemen. The customer asks for tools (hammer, screwdriver, saw, ladder, key, rope, bucket, broom, scissors, torch, battery). Answer yes or no and say the price in simple numbers. Use only very simple English.",
+    opening_en: "Good morning! What do you need?",
+  },
+};
+export default unit;

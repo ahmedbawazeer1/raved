@@ -1,0 +1,848 @@
+{
+  "path": "english",
+  "code": "A1-20",
+  "version": 1,
+  "level": "A1",
+  "position": 20,
+  "title": "Places in Our Neighborhood",
+  "topic": "يسأل زائر طارق في الشارع الرئيسي عن أماكن في الحي، فيشرح له الطريق: اتجه يميناً، ثم استمر مستقيماً.",
+  "grammar_point": "Where is ...? / turn left, go straight",
+  "can_do": [
+    "أسمّي أماكن الحي بالإنجليزية",
+    "أسأل «أين...؟» وأفهم الجواب",
+    "أشرح الطريق بـ turn و go straight"
+  ],
+  "vocab": [
+    {
+      "id": "A1-20-v1",
+      "word": "mosque",
+      "part_of_speech": "noun",
+      "meaning_ar": "مسجد",
+      "example_en": "The mosque is near my house."
+    },
+    {
+      "id": "A1-20-v2",
+      "word": "hospital",
+      "part_of_speech": "noun",
+      "meaning_ar": "مستشفى",
+      "example_en": "The hospital is on the right."
+    },
+    {
+      "id": "A1-20-v3",
+      "word": "pharmacy",
+      "part_of_speech": "noun",
+      "meaning_ar": "صيدلية",
+      "example_en": "The pharmacy is next to the bank."
+    },
+    {
+      "id": "A1-20-v4",
+      "word": "bank",
+      "part_of_speech": "noun",
+      "meaning_ar": "بنك",
+      "example_en": "The bank is on the left."
+    },
+    {
+      "id": "A1-20-v5",
+      "word": "bakery",
+      "part_of_speech": "noun",
+      "meaning_ar": "مخبز",
+      "example_en": "The bakery is on the corner."
+    },
+    {
+      "id": "A1-20-v6",
+      "word": "park",
+      "part_of_speech": "noun",
+      "meaning_ar": "حديقة",
+      "example_en": "The park is behind the school."
+    },
+    {
+      "id": "A1-20-v7",
+      "word": "restaurant",
+      "part_of_speech": "noun",
+      "meaning_ar": "مطعم",
+      "example_en": "The restaurant is on the street."
+    },
+    {
+      "id": "A1-20-v8",
+      "word": "street",
+      "part_of_speech": "noun",
+      "meaning_ar": "شارع",
+      "example_en": "The street is long."
+    },
+    {
+      "id": "A1-20-v9",
+      "word": "left",
+      "part_of_speech": "adverb",
+      "meaning_ar": "يسار",
+      "example_en": "Turn left."
+    },
+    {
+      "id": "A1-20-v10",
+      "word": "right",
+      "part_of_speech": "adverb",
+      "meaning_ar": "يمين",
+      "example_en": "Turn right."
+    },
+    {
+      "id": "A1-20-v11",
+      "word": "straight",
+      "part_of_speech": "adverb",
+      "meaning_ar": "مستقيماً",
+      "example_en": "Go straight."
+    },
+    {
+      "id": "A1-20-v12",
+      "word": "turn",
+      "part_of_speech": "verb",
+      "meaning_ar": "يلتفّ / ينعطف",
+      "example_en": "Turn left at the bank."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-20-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: أماكن في حيّنا",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "هل سألك أحد يوماً: «عفواً، أين الصيدلية؟» في الإنجليزية نجيب بكلمات بسيطة: **Go straight. Turn left.** في هذا الدرس ستتعلم أسماء الأماكن في الحي، وكيف تدلّ شخصاً على الطريق."
+        },
+        {
+          "type": "video",
+          "youtube_id": "86GViC7Hi44",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 20",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "mosque",
+              "مسجد",
+              "The mosque is near my house."
+            ],
+            [
+              "hospital",
+              "مستشفى",
+              "The hospital is on the right."
+            ],
+            [
+              "pharmacy",
+              "صيدلية",
+              "The pharmacy is next to the bank."
+            ],
+            [
+              "bank",
+              "بنك",
+              "The bank is on the left."
+            ],
+            [
+              "bakery",
+              "مخبز",
+              "The bakery is on the corner."
+            ],
+            [
+              "park",
+              "حديقة",
+              "The park is behind the school."
+            ],
+            [
+              "restaurant",
+              "مطعم",
+              "The restaurant is on the street."
+            ],
+            [
+              "street",
+              "شارع",
+              "The street is long."
+            ],
+            [
+              "left",
+              "يسار",
+              "Turn left."
+            ],
+            [
+              "right",
+              "يمين",
+              "Turn right."
+            ],
+            [
+              "straight",
+              "مستقيماً",
+              "Go straight."
+            ],
+            [
+              "turn",
+              "يلتفّ / ينعطف",
+              "Turn left at the bank."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "The mosque is near my house. Where is the hospital? It is on the right. The pharmacy is next to the bank. The bank is on the left. The bakery is on the corner. The park is behind the school. The restaurant is on the street. Go straight. Turn left at the bank. Turn right at the street."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hospital» mean?",
+            "options": [
+              "أداة",
+              "بنك",
+              "مستشفى",
+              "يسار"
+            ],
+            "answer": 2,
+            "explanation_ar": "«hospital» تعني «مستشفى». مثال: The hospital is on the right."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Turn left at the ___.",
+            "answer": "bank",
+            "explanation_ar": "الكلمة الناقصة «bank» (بنك)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «straight» mean?",
+            "options": [
+              "مستقيماً",
+              "مطرقة",
+              "يمين",
+              "يسار"
+            ],
+            "answer": 0,
+            "explanation_ar": "«straight» تعني «مستقيماً». مثال: Go straight."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Go ___.",
+            "answer": "straight",
+            "explanation_ar": "الكلمة الناقصة «straight» (مستقيماً)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «left» mean?",
+            "options": [
+              "مستقيماً",
+              "يمين",
+              "حديقة",
+              "يسار"
+            ],
+            "answer": 3,
+            "explanation_ar": "«left» تعني «يسار». مثال: Turn left."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-20-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-20-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: Where is ...? / turn left, go straight",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "Where is the bank? It is on the left. Go straight. Turn left. Turn right at the mosque."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنسأل عن مكان نقول: **Where is** the bank? ونجيب: **It is** on the left / on the right / next to the pharmacy.\n\nولنشرح الطريق نستخدم **أفعال الأمر** (بدون فاعل):\n- **Go straight.** = اذهب مستقيماً.\n- **Turn left.** = انعطف يساراً.\n- **Turn right.** = انعطف يميناً.\n\nمثال طويل: **Go straight.** Then **turn left** at the mosque. The bank is **on the right**.\n\n**الخطأ الشائع:** أن نقول «You turn left». للأمر نقول مباشرة **Turn left.**"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الغرض",
+            "الجملة",
+            "المعنى"
+          ],
+          "rows": [
+            [
+              "السؤال",
+              "Where is the bank?",
+              "أين البنك؟"
+            ],
+            [
+              "مكان",
+              "It is on the left.",
+              "على اليسار."
+            ],
+            [
+              "أمر",
+              "Go straight.",
+              "اذهب مستقيماً."
+            ],
+            [
+              "أمر",
+              "Turn right.",
+              "انعطف يميناً."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: right / at / the / Turn / mosque",
+            "answer": [
+              "Turn",
+              "right",
+              "at",
+              "the",
+              "mosque"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Turn right at the mosque"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Turn left at the ___.",
+            "answer": "bank",
+            "explanation_ar": "الكلمة الناقصة «bank» (بنك)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «street» mean?",
+            "options": [
+              "شارع",
+              "بنك",
+              "يلتفّ / ينعطف",
+              "يمين"
+            ],
+            "answer": 0,
+            "explanation_ar": "«street» تعني «شارع». مثال: The street is long."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: left / the / Turn / bank / at",
+            "answer": [
+              "Turn",
+              "left",
+              "at",
+              "the",
+              "bank"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Turn left at the bank"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Turn ___.",
+            "answer": "left",
+            "explanation_ar": "الكلمة الناقصة «left» (يسار)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences to show the way from your school to your house. Use: Go straight. Turn ... at the ...",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-20-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "زائر يسأل طارق عن الطريق في الحي. **استمع:** أين الصيدلية؟ وماذا يقول طارق؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-20-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Visitor",
+              "text_en": "Excuse me, where is the pharmacy?",
+              "text_ar": "عفواً، أين الصيدلية؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "It is next to the bank.",
+              "text_ar": "بجانب البنك."
+            },
+            {
+              "speaker": "Visitor",
+              "text_en": "Where is the bank?",
+              "text_ar": "وأين البنك؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Go straight on this street.",
+              "text_ar": "اذهب مستقيماً في هذا الشارع."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Turn left at the mosque.",
+              "text_ar": "ثم انعطف يساراً عند المسجد."
+            },
+            {
+              "speaker": "Visitor",
+              "text_en": "Is it far?",
+              "text_ar": "هل هو بعيد؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "No, it is near. The bank is on the right.",
+              "text_ar": "لا، هو قريب. البنك على اليمين."
+            },
+            {
+              "speaker": "Visitor",
+              "text_en": "Thank you very much!",
+              "text_ar": "شكراً جزيلاً!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Visitor says: \"It is next to the bank.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «It is next to the bank.» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hammer» mean?",
+            "options": [
+              "يمين",
+              "مطرقة",
+              "يسار",
+              "مستشفى"
+            ],
+            "answer": 1,
+            "explanation_ar": "«hammer» تعني «مطرقة». مثال: I need a hammer."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Visitor says: \"Thank you very much!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Thank you very much!» هو Visitor."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «right» mean?",
+            "options": [
+              "مطعم",
+              "يسار",
+              "يمين",
+              "يلتفّ / ينعطف"
+            ],
+            "answer": 2,
+            "explanation_ar": "«right» تعني «يمين». مثال: Turn right."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Show someone the way from your house to the mosque, the school or the market. Use Go straight, Turn left, Turn right.",
+        "helpful_phrases": [
+          "Where is the ...?",
+          "Go straight.",
+          "Turn left.",
+          "It is on the right."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-20-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-20-L4-s1",
+          "title_ar": "الطريق إلى المستشفى",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Mona, where is the hospital?",
+              "text_ar": "يا منى، أين المستشفى؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "It is on the right, next to the park.",
+              "text_ar": "على اليمين بجانب الحديقة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is the pharmacy near?",
+              "text_ar": "هل الصيدلية قريبة؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, it is behind the bakery.",
+              "text_ar": "نعم، خلف المخبز."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "How do I go?",
+              "text_ar": "كيف أذهب؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Go straight. Turn left at the bank.",
+              "text_ar": "اذهبي مستقيمة. ثم انعطفي يساراً عند البنك."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Thank you, Mona.",
+              "text_ar": "شكراً يا منى."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "You are welcome.",
+              "text_ar": "على الرحب والسعة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «park» mean?",
+            "options": [
+              "يسار",
+              "مخبز",
+              "شارع",
+              "حديقة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«park» تعني «حديقة». مثال: The park is behind the school."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Yes, it is behind the ___.",
+            "answer": "bakery",
+            "explanation_ar": "الكلمة الناقصة «bakery» (مخبز)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: on / is / right, / to / park / next / It / the / the",
+            "answer": [
+              "It",
+              "is",
+              "on",
+              "the",
+              "right,",
+              "next",
+              "to",
+              "the",
+              "park"
+            ],
+            "explanation_ar": "الترتيب الصحيح: It is on the right, next to the park"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"Thank you, Mona.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Thank you, Mona.» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hospital» mean?",
+            "options": [
+              "مخبز",
+              "مسجد",
+              "مستشفى",
+              "مطعم"
+            ],
+            "answer": 2,
+            "explanation_ar": "«hospital» تعني «مستشفى». مثال: The hospital is on the right."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-20-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Turn ___.",
+            "answer": "right",
+            "explanation_ar": "الكلمة الناقصة «right» (يمين)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-20-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Give directions to a visitor: tell him how to go from the school to the hospital, the bank and the restaurant. Use Go straight, Turn left, Turn right.",
+        "helpful_phrases": [
+          "Go straight.",
+          "Turn left at ...",
+          "It is next to ...",
+          "It is on the right."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-20-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «mosque» mean?",
+        "options": [
+          "بنك",
+          "مطعم",
+          "يسار",
+          "مسجد"
+        ],
+        "answer": 3,
+        "explanation_ar": "«mosque» تعني «مسجد». مثال: The mosque is near my house."
+      },
+      {
+        "id": "A1-20-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Yes, it is behind the ___.",
+        "answer": "bakery",
+        "explanation_ar": "الكلمة الناقصة «bakery» (مخبز)."
+      },
+      {
+        "id": "A1-20-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: It / the / is / bank / next / to",
+        "answer": [
+          "It",
+          "is",
+          "next",
+          "to",
+          "the",
+          "bank"
+        ],
+        "explanation_ar": "الترتيب الصحيح: It is next to the bank"
+      },
+      {
+        "id": "A1-20-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «turn» mean?",
+        "options": [
+          "مستشفى",
+          "يلتفّ / ينعطف",
+          "مسجد",
+          "صيدلية"
+        ],
+        "answer": 1,
+        "explanation_ar": "«turn» تعني «يلتفّ / ينعطف». مثال: Turn left at the bank."
+      },
+      {
+        "id": "A1-20-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Where is the ___? It is on the right.",
+        "answer": "hospital",
+        "explanation_ar": "الكلمة الناقصة «hospital» (مستشفى)."
+      },
+      {
+        "id": "A1-20-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Visitor says: \"It is next to the bank.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation_ar": "الذي قال «It is next to the bank.» هو Tariq."
+      },
+      {
+        "id": "A1-20-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «restaurant» mean?",
+        "options": [
+          "مسجد",
+          "مطعم",
+          "يسار",
+          "صيدلية"
+        ],
+        "answer": 1,
+        "explanation_ar": "«restaurant» تعني «مطعم». مثال: The restaurant is on the street."
+      },
+      {
+        "id": "A1-20-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Where is the hospital? It is on the ___.",
+        "answer": "right",
+        "explanation_ar": "الكلمة الناقصة «right» (يمين)."
+      },
+      {
+        "id": "A1-20-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: on / street / Go / this / straight",
+        "answer": [
+          "Go",
+          "straight",
+          "on",
+          "this",
+          "street"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Go straight on this street"
+      },
+      {
+        "id": "A1-20-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «bakery» mean?",
+        "options": [
+          "حديقة",
+          "مسجد",
+          "يسار",
+          "مخبز"
+        ],
+        "answer": 3,
+        "explanation_ar": "«bakery» تعني «مخبز». مثال: The bakery is on the corner."
+      }
+    ]
+  },
+  "stop_ar": "شارع الحي الرئيسي",
+  "roleplay": {
+    "character_ar": "زائر يسأل عن الطريق",
+    "scenario_en": "You are a visitor lost in a Yemeni neighbourhood. Ask the student where places are (mosque, hospital, pharmacy, bank, bakery, park, restaurant). Listen to the directions (go straight, turn left, turn right). Use only very simple English.",
+    "opening_en": "Excuse me, where is the bank?"
+  },
+  "context_note": "أماكن في حيّنا"
+}

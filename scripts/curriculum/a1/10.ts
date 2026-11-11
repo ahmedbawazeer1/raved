@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-10",
+  position: 10,
+  title_en: "What Time Is It?",
+  title_ar: "كم الساعة؟",
+  stop_ar: "موقف الحافلات",
+  situation_ar: "يقف طارق وسالم في موقف الحافلات في الصباح، ويسألان عن الوقت وموعد وصول الحافلة إلى المدرسة.",
+  grammar_en: "What time is it? / at + time",
+  can_do: ["أسأل عن الساعة وأجيب عنها", "أقول موعد حدث باستخدام at", "أفرّق بين الصباح والمساء والليل"],
+  video: { id: "q_bAo_n0pDU", title: "كلمات انجليزية عن الوقت : كورس تعلم اللغة الانجليزية من الصفر: ١٠", checked: true },
+  words: [
+    ["time", "noun", "وقت / ساعة", "What time is it?"],
+    ["hour", "noun", "ساعة (60 دقيقة)", "The bus comes in one hour."],
+    ["minute", "noun", "دقيقة", "Wait ten minutes."],
+    ["o'clock", "adverb", "تماماً (الساعة)", "It is seven o'clock."],
+    ["half past", "phrase", "والنصف", "It is half past seven."],
+    ["morning", "noun", "صباح", "I go to school in the morning."],
+    ["afternoon", "noun", "بعد الظهر", "I am at home in the afternoon."],
+    ["evening", "noun", "مساء", "We eat dinner in the evening."],
+    ["night", "noun", "ليل", "I sleep at night."],
+    ["early", "adverb", "مبكراً", "I am early today."],
+    ["late", "adverb", "متأخراً", "The bus is late."],
+  ],
+  warmup_ar:
+    "كم الساعة الآن؟ ومتى تبدأ مدرستك؟ في الصباح الباكر ينتظر الطلاب الحافلة ويسألون بعضهم عن الوقت كثيراً. في هذا الدرس تتعلم كيف تقول الساعة بالإنجليزية وتسأل: **What time is it?**",
+  in_context: [
+    "What time is it?",
+    "It is seven o'clock.",
+    "It is half past seven.",
+    "I go to school in the morning.",
+    "I am at home in the afternoon.",
+    "We eat dinner in the evening.",
+    "I sleep at night.",
+    "The bus comes in one hour. Wait ten minutes.",
+    "I am early today, but the bus is late.",
+  ],
+  notice: ["What time is it? It is two o'clock.", "It is half past three.", "School is at seven o'clock.", "The bus is at half past seven."],
+  rule_ar:
+    "لنسأل عن الساعة نقول: **What time is it?** ونجيب بـ **It is** + الوقت:\n\n- **It is seven o'clock.** = الساعة السابعة تماماً.\n- **It is half past seven.** = السابعة والنصف.\n\nلنقول **موعد** حدث ما نستخدم حرف الجر **at** قبل الساعة:\n- School starts **at** seven o'clock.\n- The bus is **at** half past seven.\n\nومع أجزاء اليوم نستخدم **in**: **in** the morning, **in** the afternoon, **in** the evening. أما الليل فنقول **at** night.\n\n**الخطأ الشائع:** أن نقول «in seven o'clock». الصحيح: **at** seven o'clock.",
+  form: {
+    headers: ["الكلمة", "تُستخدم مع", "مثال"],
+    rows: [
+      ["at", "الساعة", "at seven o'clock"],
+      ["at", "night", "at night"],
+      ["in", "the morning", "in the morning"],
+      ["in", "the afternoon / evening", "in the evening"],
+    ],
+  },
+  write_prompt: "Write 3 sentences about your day. Use: I go to school at ... I am at home in the ... I sleep at ...",
+  before_ar: "طارق وسالم ينتظران الحافلة. **استمع:** كم الساعة؟ وهل الحافلة مبكرة أم متأخرة؟",
+  dialogue: [
+    ["Tariq", "Good morning, Salem! What time is it?", "صباح الخير يا سالم! كم الساعة؟"],
+    ["Salem", "It is seven o'clock.", "الساعة السابعة."],
+    ["Tariq", "School is at half past seven.", "المدرسة في السابعة والنصف."],
+    ["Salem", "The bus is late today.", "الحافلة متأخرة اليوم."],
+    ["Tariq", "No, I am early. The bus is at seven o'clock.", "لا، أنا الذي جئت مبكراً. الحافلة في السابعة."],
+    ["Salem", "Look! The bus is here.", "انظر! الحافلة وصلت."],
+    ["Tariq", "Good. We go to school in the morning and come home in the afternoon.", "جيد. نذهب إلى المدرسة صباحاً ونعود بعد الظهر."],
+    ["Salem", "Yes, and we sleep early at night.", "نعم، وننام مبكرين في الليل."],
+  ],
+  speak: {
+    prompt: "Say what time you do three things in your day: school, lunch and sleep. Use at ... o'clock.",
+    phrases: ["It is ... o'clock.", "at half past ...", "in the morning", "at night"],
+  },
+  story_title_ar: "الحافلة المتأخرة",
+  story: [
+    ["Mona", "Hello, Huda! What time is it?", "مرحباً يا هدى! كم الساعة؟"],
+    ["Huda", "It is seven o'clock.", "الساعة السابعة."],
+    ["Mona", "The bus is late.", "الحافلة متأخرة."],
+    ["Huda", "It is at half past seven.", "هي في السابعة والنصف."],
+    ["Mona", "We are early, then.", "إذاً نحن مبكرتان."],
+    ["Huda", "School is in the morning, and I am home in the afternoon.", "المدرسة في الصباح وأنا في البيت بعد الظهر."],
+    ["Mona", "We study in the evening too.", "ونحن ندرس في المساء أيضاً."],
+    ["Huda", "Look, the bus is here!", "انظري، الحافلة وصلت!"],
+  ],
+  task: {
+    prompt: "Ask a friend: What time is it? Then tell him or her the time of five things in your day (school, lunch, home, dinner, sleep).",
+    phrases: ["What time is it?", "It is ... o'clock.", "at half past ...", "in the evening"],
+  },
+  roleplay: {
+    character_ar: "سائق الحافلة",
+    scenario_en: "You are a bus driver in a Yemeni city. A student asks you what time it is and when the bus goes. Answer with simple times (o'clock, half past), and words morning, afternoon, evening, night, early, late.",
+    opening_en: "Good morning! The bus is at seven o'clock. What time is it for you?",
+  },
+};
+export default unit;

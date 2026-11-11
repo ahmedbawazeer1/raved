@@ -1,848 +1,706 @@
 {
   "path": "english",
   "code": "A1-12",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 12,
-  "title": "Sports",
-  "topic": "الرياضة والمهارات في حضرموت",
-  "grammar_point": "can / can't (ability, requests, permission)",
+  "title": "Sports We Play",
+  "topic": "يتجمع شباب الحي في الملعب بعد العصر، ويتحدثون عن الرياضات التي يلعبونها ويحبونها.",
+  "grammar_point": "I play / we play (simple present)",
   "can_do": [
-    "أتحدث عما أستطيع وما لا أستطيع فعله",
-    "أطلب طلباً مهذباً وأرد على طلب",
-    "أفهم نصاً قصيراً عن مهارات شخص"
+    "أسمّي رياضات شائعة بالإنجليزية",
+    "أقول ما ألعب باستخدام play",
+    "أسأل وأجيب عن الرياضة المفضلة"
   ],
   "vocab": [
     {
       "id": "A1-12-v1",
-      "word": "swim",
-      "ipa": "/swɪm/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يسبح",
-      "example_en": "I can swim in the sea."
+      "word": "football",
+      "part_of_speech": "noun",
+      "meaning_ar": "كرة القدم",
+      "example_en": "I play football."
     },
     {
       "id": "A1-12-v2",
-      "word": "run",
-      "ipa": "/rʌn/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يركض",
-      "example_en": "He can run very fast."
+      "word": "basketball",
+      "part_of_speech": "noun",
+      "meaning_ar": "كرة السلة",
+      "example_en": "They play basketball."
     },
     {
       "id": "A1-12-v3",
-      "word": "ride a bike",
-      "ipa": "/raɪd ə baɪk/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يركب دراجة",
-      "example_en": "My sister can ride a bike."
+      "word": "volleyball",
+      "part_of_speech": "noun",
+      "meaning_ar": "الكرة الطائرة",
+      "example_en": "We play volleyball."
     },
     {
       "id": "A1-12-v4",
-      "word": "play football",
-      "ipa": "/pleɪ ˈfʊtbɔːl/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يلعب كرة القدم",
-      "example_en": "We play football after school."
+      "word": "swimming",
+      "part_of_speech": "noun",
+      "meaning_ar": "السباحة",
+      "example_en": "I like swimming."
     },
     {
       "id": "A1-12-v5",
-      "word": "draw",
-      "ipa": "/drɔː/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يرسم",
-      "example_en": "Can you draw a map of Yemen?"
+      "word": "team",
+      "part_of_speech": "noun",
+      "meaning_ar": "فريق",
+      "example_en": "We are a good team."
     },
     {
       "id": "A1-12-v6",
-      "word": "cook",
-      "ipa": "/kʊk/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يطبخ",
-      "example_en": "My brother can cook rice."
+      "word": "player",
+      "part_of_speech": "noun",
+      "meaning_ar": "لاعب",
+      "example_en": "He is a good player."
     },
     {
       "id": "A1-12-v7",
-      "word": "speak",
-      "ipa": "/spiːk/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يتكلم",
-      "example_en": "I can speak Arabic and a little English."
+      "word": "ball",
+      "part_of_speech": "noun",
+      "meaning_ar": "كرة",
+      "example_en": "The ball is new."
     },
     {
       "id": "A1-12-v8",
-      "word": "send a message",
-      "ipa": "/send ə ˈmesɪdʒ/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "يرسل رسالة",
-      "example_en": "Can you send me a message?"
+      "word": "play",
+      "part_of_speech": "verb",
+      "meaning_ar": "يلعب",
+      "example_en": "We play after school."
     },
     {
       "id": "A1-12-v9",
-      "word": "call",
-      "ipa": "/kɔːl/",
+      "word": "run",
       "part_of_speech": "verb",
-      "meaning_ar": "يتصل",
-      "example_en": "Call me after school."
+      "meaning_ar": "يركض",
+      "example_en": "I run every day."
     },
     {
       "id": "A1-12-v10",
-      "word": "charge",
-      "ipa": "/tʃɑːdʒ/",
+      "word": "win",
       "part_of_speech": "verb",
-      "meaning_ar": "يشحن",
-      "example_en": "Can I charge my phone here?"
+      "meaning_ar": "يفوز",
+      "example_en": "Our team wins."
     },
     {
       "id": "A1-12-v11",
-      "word": "borrow",
-      "ipa": "/ˈbɒrəʊ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يستعير",
-      "example_en": "Can I borrow your pen?"
+      "word": "goal",
+      "part_of_speech": "noun",
+      "meaning_ar": "هدف",
+      "example_en": "I have one goal."
     },
     {
       "id": "A1-12-v12",
-      "word": "well",
-      "ipa": "/wel/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "جيداً",
-      "example_en": "She can draw very well."
-    },
-    {
-      "id": "A1-12-v13",
-      "word": "a little",
-      "ipa": "/ə ˈlɪtl/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "قليلاً",
-      "example_en": "I can speak English a little."
-    },
-    {
-      "id": "A1-12-v14",
-      "word": "of course",
-      "ipa": "/əv kɔːs/",
-      "part_of_speech": "phrase",
-      "meaning_ar": "طبعاً",
-      "example_en": "Can you help me? — Of course!"
+      "word": "game",
+      "part_of_speech": "noun",
+      "meaning_ar": "مباراة / لعبة",
+      "example_en": "The game is at five o'clock."
     }
   ],
   "lessons": [
     {
-      "id": "A1-12-l1",
+      "id": "A1-12-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "المهارات والهاتف",
-      "est_minutes": 20,
+      "title": "مفردات: رياضات نمارسها",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "ماذا تستطيع أن تفعل؟ تسبح في بحر المكلا؟ تلعب كرة القدم؟ تركب الدراجة؟ تعلّم أفعال الرياضة والمهارات، وكلمات **الهاتف المحمول** التي نستعملها كل يوم."
+          "markdown_ar": "كرة القدم هي الرياضة الأولى في اليمن، وفي كل حي ملعب صغير بعد العصر. ما رياضتك المفضلة؟ ومع من تلعب؟ في هذا الدرس ستتعلم كلمات الرياضة، وطريقة أن تقول: **I play football** (أنا ألعب كرة القدم)."
         },
         {
           "type": "video",
           "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
+          "video_title": "تعلم كلمات انجليزية عن الرياضة : كورس تعلم اللغة الإنجليزية للمبتدئين كامل مجانا : ١٢",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "swim",
-              "/swɪm/",
-              "يسبح",
-              "I can swim in the sea."
+              "football",
+              "كرة القدم",
+              "I play football."
+            ],
+            [
+              "basketball",
+              "كرة السلة",
+              "They play basketball."
+            ],
+            [
+              "volleyball",
+              "الكرة الطائرة",
+              "We play volleyball."
+            ],
+            [
+              "swimming",
+              "السباحة",
+              "I like swimming."
+            ],
+            [
+              "team",
+              "فريق",
+              "We are a good team."
+            ],
+            [
+              "player",
+              "لاعب",
+              "He is a good player."
+            ],
+            [
+              "ball",
+              "كرة",
+              "The ball is new."
+            ],
+            [
+              "play",
+              "يلعب",
+              "We play after school."
             ],
             [
               "run",
-              "/rʌn/",
               "يركض",
-              "He can run very fast."
+              "I run every day."
             ],
             [
-              "ride a bike",
-              "/raɪd ə baɪk/",
-              "يركب دراجة",
-              "My sister can ride a bike."
+              "win",
+              "يفوز",
+              "Our team wins."
             ],
             [
-              "play football",
-              "/pleɪ ˈfʊtbɔːl/",
-              "يلعب كرة القدم",
-              "We play football after school."
+              "goal",
+              "هدف",
+              "I have one goal."
             ],
             [
-              "draw",
-              "/drɔː/",
-              "يرسم",
-              "Can you draw a map of Yemen?"
-            ],
-            [
-              "cook",
-              "/kʊk/",
-              "يطبخ",
-              "My brother can cook rice."
-            ],
-            [
-              "speak",
-              "/spiːk/",
-              "يتكلم",
-              "I can speak Arabic and a little English."
-            ],
-            [
-              "send a message",
-              "/send ə ˈmesɪdʒ/",
-              "يرسل رسالة",
-              "Can you send me a message?"
-            ],
-            [
-              "call",
-              "/kɔːl/",
-              "يتصل",
-              "Call me after school."
-            ],
-            [
-              "charge",
-              "/tʃɑːdʒ/",
-              "يشحن",
-              "Can I charge my phone here?"
-            ],
-            [
-              "borrow",
-              "/ˈbɒrəʊ/",
-              "يستعير",
-              "Can I borrow your pen?"
-            ],
-            [
-              "well",
-              "/wel/",
-              "جيداً",
-              "She can draw very well."
-            ],
-            [
-              "a little",
-              "/ə ˈlɪtl/",
-              "قليلاً",
-              "I can speak English a little."
-            ],
-            [
-              "of course",
-              "/əv kɔːs/",
-              "طبعاً",
-              "Can you help me? — Of course!"
+              "game",
+              "مباراة / لعبة",
+              "The game is at five o'clock."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "swim. I can swim in the sea.\nrun. He can run very fast.\nride a bike. My sister can ride a bike.\nplay football. We play football after school.\ndraw. Can you draw a map of Yemen?\ncook. My brother can cook rice.\nspeak. I can speak Arabic and a little English.\nsend a message. Can you send me a message?\ncall. Call me after school.\ncharge. Can I charge my phone here?\nborrow. Can I borrow your pen?\nwell. She can draw very well.\na little. I can speak English a little.\nof course. Can you help me? — Of course!"
+          "text_en": "I play football after school. They play basketball. We play volleyball. I like swimming. We are a good team. He is a good player. The ball is new. I run every day. Our team wins the game. I have one goal."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-12-e1",
+            "id": "A1-12-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "My phone battery is low. I need to ___ it.",
+            "prompt": "What does «run» mean?",
             "options": [
-              "borrow",
-              "charge",
-              "draw"
+              "هدف",
+              "يركض",
+              "السبت",
+              "الأحد"
             ],
             "answer": 1,
-            "explanation_ar": "البطارية ضعيفة فنحتاج أن نشحن charge."
+            "explanation_ar": "«run» تعني «يركض». مثال: I run every day."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-12-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "Can I ___ your book? I'll give it back tomorrow.",
-            "options": [
-              "borrow",
-              "cook",
-              "swim"
-            ],
-            "answer": 0,
-            "explanation_ar": "نأخذ الشيء ونعيده = borrow (نستعير)."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e3",
+            "id": "A1-12-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Can you help me? — Of ___!",
-            "answer": "course",
-            "explanation_ar": "Of course = طبعاً."
+            "prompt": "We ___ after school.",
+            "answer": "play",
+            "explanation_ar": "الكلمة الناقصة «play» (يلعب)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Saturday» mean?",
+            "options": [
+              "لاعب",
+              "السبت",
+              "يلعب",
+              "كرة القدم"
+            ],
+            "answer": 1,
+            "explanation_ar": "«Saturday» تعني «السبت». مثال: School starts on Saturday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I play ___.",
+            "answer": "football",
+            "explanation_ar": "الكلمة الناقصة «football» (كرة القدم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «goal» mean?",
+            "options": [
+              "السبت",
+              "يفوز",
+              "هدف",
+              "السباحة"
+            ],
+            "answer": 2,
+            "explanation_ar": "«goal» تعني «هدف». مثال: I have one goal."
           }
         },
         {
           "type": "game",
-          "id": "A1-12-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g4",
-          "game": "pronounce"
+          "id": "A1-12-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-12-l2",
+      "id": "A1-12-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "can / can't",
-      "est_minutes": 25,
+      "title": "قاعدة: I play / we play (simple present)",
+      "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "**can** فعل مساعد سهل جداً: **لا يتغير** مع أي فاعل، ولا نضيف له s، ويأتي بعده الفعل **بدون to**.\n\nنستخدمه لـ:\n\n- **القدرة:** I **can** swim. / She **can't** (cannot) cook.\n- **الطلب المهذب:** **Can** I borrow your pen? / **Can** you help me, please?\n- **الإذن:** You **can** use my phone."
+          "type": "audio",
+          "text_en": "I play football. We play volleyball. They play basketball. You play and I run."
         },
         {
-          "type": "video",
-          "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
+          "type": "text",
+          "markdown_ar": "لنتحدث عن شيء نفعله **عادةً** نستخدم **المضارع البسيط**: الفاعل + الفعل.\n\n- **I play** football. = أنا ألعب كرة القدم.\n- **We play** volleyball. = نحن نلعب الكرة الطائرة.\n- **They play** basketball. = هم يلعبون السلة.\n\nمع الرياضات نقول **play** + اسم الرياضة (play football). أما **السباحة** فنقول **I like swimming** أو **I swim**.\n\nللنفي نضع **don't**: I **don't play** basketball.\n\n**الخطأ الشائع:** أن ننسى play ونقول «I football». الصحيح: **I play football**."
         },
         {
           "type": "table",
           "headers": [
-            "",
-            "الصيغة",
+            "الفاعل",
+            "الفعل",
             "مثال"
           ],
           "rows": [
             [
-              "إثبات",
-              "الفاعل + can + الفعل",
-              "He can ride a bike."
+              "I",
+              "play",
+              "I play football."
             ],
             [
-              "نفي",
-              "الفاعل + can't + الفعل",
-              "We can't swim."
+              "you",
+              "play",
+              "You play volleyball."
             ],
             [
-              "سؤال",
-              "Can + الفاعل + الفعل؟",
-              "Can you speak English?"
+              "we",
+              "play",
+              "We play after school."
             ],
             [
-              "إجابة",
-              "Yes, I can. / No, I can't.",
-              "Can she draw? — Yes, she can."
+              "they",
+              "play",
+              "They play basketball."
             ]
           ]
         },
         {
-          "type": "text",
-          "markdown_ar": "**أخطاء شائعة:**\n\n- ✗ He cans swim. ← ✓ He **can** swim.\n- ✗ I can to swim. ← ✓ I can **swim**.\n- ✗ She can swims. ← ✓ She can **swim**.\n\n**للرد على الطلب:** Yes, of course. / Sure. / Sorry, I can't."
-        },
-        {
           "type": "exercise",
           "exercise": {
-            "id": "A1-12-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My sister ___ cook very well.",
-            "options": [
-              "can",
-              "cans",
-              "can to"
-            ],
-            "answer": 0,
-            "explanation_ar": "can لا يتغير مع she."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "I can ___ a bike.",
-            "options": [
-              "ride",
-              "rides",
-              "to ride"
-            ],
-            "answer": 0,
-            "explanation_ar": "بعد can يأتي الفعل بدون to وبدون s."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e6",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ you swim? — No, I can't.",
-            "answer": "Can",
-            "explanation_ar": "السؤال يبدأ بـ Can."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e7",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "«لا أستطيع الرسم» بالإنجليزية:",
-            "options": [
-              "I don't can draw.",
-              "I can't draw.",
-              "I can draw not."
-            ],
-            "answer": 1,
-            "explanation_ar": "النفي: can't + الفعل."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "أي جملة طلب مهذب؟",
-            "options": [
-              "Give me your phone.",
-              "Can I use your phone, please?",
-              "I use your phone."
-            ],
-            "answer": 1,
-            "explanation_ar": "الطلب المهذب: Can I…, please?"
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e9",
+            "id": "A1-12-L2-e4-1",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: you / can / me / help",
+            "prompt": "رتب الكلمات: after / school / play / We",
             "answer": [
-              "Can",
-              "you",
-              "help",
-              "me"
+              "We",
+              "play",
+              "after",
+              "school"
             ],
-            "explanation_ar": "Can + الفاعل + الفعل؟"
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-12-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "فريق المدرسة",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "المدرب يختار لاعبين لفريق مدرسة في المكلا. استمع إلى **زياد** و**أنور**."
-        },
-        {
-          "type": "video",
-          "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
-        },
-        {
-          "type": "audio",
-          "text_en": "Coach: OK, everyone. We need players for the school team. Ziad, can you play football?\nZiad: Yes, I can. I can run fast, but I can't kick the ball very well.\nCoach: That's OK. And you, Anwar?\nAnwar: I can't play football, sir. But I can swim very well. I swim in the sea in Mukalla every summer.\nCoach: Great. We have a swimming race next month. Can you come on Monday?\nAnwar: Yes, of course.\nCoach: Ziad, can you send me your phone number?\nZiad: Sure. I can send it on WhatsApp."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e10",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Ziad can kick the ball very well.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال زياد: I can't kick the ball very well."
+            "explanation_ar": "الترتيب الصحيح: We play after school"
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-12-e11",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What can Anwar do well?",
-            "options": [
-              "play football",
-              "swim",
-              "draw"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال أنور: I can swim very well."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e12",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How can Ziad send his number?",
-            "options": [
-              "on WhatsApp",
-              "by email",
-              "on paper"
-            ],
-            "answer": 0,
-            "explanation_ar": "قال: I can send it on WhatsApp."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-12-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "مهارات يسرى",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن مهارات **يسرى** من سيئون، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
-        },
-        {
-          "type": "reading",
-          "text_en": "Yousra is sixteen and she lives in Seiyun. She is a very good student and she has many skills. She can speak Arabic and English, and she can read a little French. She can draw very well. Her drawings of old Shibam houses are on the wall of her classroom. She can use a computer and she can make short videos on her phone. But Yousra can't swim, because Seiyun is far from the sea. She can't cook well, but she wants to learn. Her grandmother says, «Come on Friday. I can teach you how to make bint al-sahn.»",
-          "word_count": 99
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "How many languages can Yousra speak?",
-            "options": [
-              "one",
-              "two",
-              "three"
-            ],
-            "answer": 1,
-            "explanation_ar": "تتكلم العربية والإنجليزية، وتقرأ قليلاً من الفرنسية."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e14",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What are her drawings of?",
-            "options": [
-              "the sea",
-              "old Shibam houses",
-              "her family"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: Her drawings of old Shibam houses."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e15",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Yousra can swim very well.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: Yousra can't swim."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e16",
-            "skill": "reading",
+            "id": "A1-12-L2-e4-2",
+            "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Her grandmother can ___ her how to make bint al-sahn.",
-            "answer": "teach",
-            "explanation_ar": "في النص: I can teach you."
+            "prompt": "We play ___.",
+            "answer": "volleyball",
+            "explanation_ar": "الكلمة الناقصة «volleyball» (الكرة الطائرة)."
           }
-        }
-      ]
-    },
-    {
-      "id": "A1-12-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "ماذا تستطيع أن تفعل؟",
-      "est_minutes": 15,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "تحدث عن مهاراتك في 5 إلى 7 جمل: **3 أشياء تستطيع فعلها، وشيئان لا تستطيع فعلهما، وشيء تريد أن تتعلمه.** ثم اطلب طلباً مهذباً من زميل."
         },
         {
-          "type": "video",
-          "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
-        },
-        {
-          "type": "table",
-          "headers": [
-            "لتقول",
-            "العبارة"
-          ],
-          "rows": [
-            [
-              "أستطيع",
-              "I can… very well."
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «basketball» mean?",
+            "options": [
+              "مباراة / لعبة",
+              "يركض",
+              "كرة",
+              "كرة السلة"
             ],
-            [
-              "لا أستطيع",
-              "I can't…"
-            ],
-            [
-              "قليلاً",
-              "I can… a little."
-            ],
-            [
-              "طلب",
-              "Can you…, please? / Can I…?"
-            ]
-          ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Talk about your skills: three things you can do, two things you can't do, and one thing you want to learn. Then make a polite request.",
-        "helpful_phrases": [
-          "I can… very well.",
-          "I can… a little.",
-          "I can't…",
-          "I want to learn…",
-          "Can you…, please?"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "can / can't",
-          "polite requests"
-        ]
-      }
-    },
-    {
-      "id": "A1-12-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "رسالة تطلب فيها مساعدة",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب رسالة قصيرة (40 إلى 80 كلمة) إلى صديق: **قل ما تستطيع وما لا تستطيع فعله في مشروع مدرسي، واطلب منه المساعدة.** اقرأ المثال أولاً."
+            "answer": 3,
+            "explanation_ar": "«basketball» تعني «كرة السلة». مثال: They play basketball."
+          }
         },
         {
-          "type": "video",
-          "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: day / every / run / I",
+            "answer": [
+              "I",
+              "run",
+              "every",
+              "day"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I run every day"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "Hi Fares,\nWe have a science project for Sunday. I can write the report and I can draw the pictures, but I can't use the computer well. You can use computers very well. Can you help me, please? Can you come to my house on Thursday afternoon? Can you call me tonight?\nThanks,\nKhaled",
-          "word_count": 54
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I ___ every day.",
+            "answer": "run",
+            "explanation_ar": "الكلمة الناقصة «run» (يركض)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write a short message to a friend about a school project. Say what you can and can't do, and ask for help politely.",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write 3 sentences about sports. Use: I play ... We play ... I like ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "can / can't",
-          "polite requests with can"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-12-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-12-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **can / can't** + الفعل (بدون to وبدون s) مع كل الضمائر.\n- السؤال: **Can you…?** والإجابة **Yes, I can. / No, I can't.**\n- الطلب المهذب: **Can I…? Can you…, please?**"
-        },
-        {
-          "type": "video",
-          "youtube_id": "QQ66VKPsAag",
-          "video_title": "تعلم كلمات انجليزية عن الرياضة — الحلقة 12",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 706,
-          "optional": true,
-          "approx_size_mb": 47
+          "markdown_ar": "بلال وطارق في ملعب الحي بعد العصر. **استمع:** ماذا يلعبان؟ ومن سيفوز؟"
         },
         {
           "type": "story",
-          "id": "A1-12-s1",
-          "title_ar": "الحلقة 12: مباراة في فوّة",
+          "id": "A1-12-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Reem",
-              "text_en": "Can you play football, Hamza?",
-              "text_ar": "هل تستطيع لعب كرة القدم يا حمزة؟"
+              "speaker": "Bilal",
+              "text_en": "Tariq, do you play football?",
+              "text_ar": "يا طارق، هل تلعب كرة القدم؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Yes, I can, but I can't run very fast.",
-              "text_ar": "نعم أستطيع، لكني لا أستطيع الركض بسرعة كبيرة."
+              "speaker": "Tariq",
+              "text_en": "Yes, I play football every day.",
+              "text_ar": "نعم، ألعب كرة القدم كل يوم."
             },
             {
-              "speaker": "Reem",
-              "text_en": "I can't play football, but I can swim very well.",
-              "text_ar": "لا أستطيع لعب كرة القدم، لكني أسبح جيداً جداً."
+              "speaker": "Bilal",
+              "text_en": "We have a team. We play after school.",
+              "text_ar": "عندنا فريق. نلعب بعد المدرسة."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Can you teach me to swim in the sea?",
-              "text_ar": "هل تستطيعين تعليمي السباحة في البحر؟"
+              "speaker": "Tariq",
+              "text_en": "Good! I am a good player.",
+              "text_ar": "جيد! أنا لاعب جيد."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Of course! Come to the beach on Friday.",
-              "text_ar": "طبعاً! تعال إلى الشاطئ يوم الجمعة."
+              "speaker": "Bilal",
+              "text_en": "The game is at five o'clock.",
+              "text_ar": "المباراة في الخامسة."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Is the ball new?",
+              "text_ar": "هل الكرة جديدة؟"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "Yes, it is. Run, Tariq! Goal!",
+              "text_ar": "نعم. اركض يا طارق! هدف!"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "We win!",
+              "text_ar": "فزنا!"
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-12-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "They ___ speak English very well.",
+            "id": "A1-12-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"The game is at five o'clock.\"",
             "options": [
-              "can",
-              "cans",
-              "can to"
-            ],
-            "answer": 0,
-            "explanation_ar": "can لا يتغير."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-12-e18",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Can he ride a bike? — No, he ___.",
-            "options": [
-              "can",
-              "can't",
-              "doesn't"
+              "True",
+              "False"
             ],
             "answer": 1,
-            "explanation_ar": "الإجابة المنفية: No, he can't."
+            "explanation_ar": "الذي قال «The game is at five o'clock.» هو Bilal."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-12-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-12-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "Can I ___ your charger, please? (يستعير)",
-            "answer": "borrow",
-            "explanation_ar": "يستعير = borrow."
+            "id": "A1-12-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Sunday» mean?",
+            "options": [
+              "الأحد",
+              "يلعب",
+              "يفوز",
+              "يركض"
+            ],
+            "answer": 0,
+            "explanation_ar": "«Sunday» تعني «الأحد». مثال: We have English on Sunday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Is the ball new?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Is the ball new?» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «play» mean?",
+            "options": [
+              "يلعب",
+              "الكرة الطائرة",
+              "السباحة",
+              "فريق"
+            ],
+            "answer": 0,
+            "explanation_ar": "«play» تعني «يلعب». مثال: We play after school."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell us about the sports you play and the sports you like. Say who you play with and when.",
+        "helpful_phrases": [
+          "I play ...",
+          "We play ... after school.",
+          "I like ...",
+          "We win!"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-12-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-12-L4-s1",
+          "title_ar": "مباراة الحي",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "Hello, Bilal! Do you play volleyball?",
+              "text_ar": "مرحباً يا بلال! هل تلعب الكرة الطائرة؟"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "No, I play football.",
+              "text_ar": "لا، ألعب كرة القدم."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "We play volleyball at the school.",
+              "text_ar": "نحن نلعب الكرة الطائرة في المدرسة."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "Is your team good?",
+              "text_ar": "هل فريقكم جيد؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, it is. We win every game.",
+              "text_ar": "نعم. نفوز في كل مباراة."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "I run every day with my team.",
+              "text_ar": "أنا أركض كل يوم مع فريقي."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Come and play with us!",
+              "text_ar": "تعال والعب معنا!"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "Thank you, Salem.",
+              "text_ar": "شكراً يا سالم."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «player» mean?",
+            "options": [
+              "لاعب",
+              "كرة القدم",
+              "يفوز",
+              "فريق"
+            ],
+            "answer": 0,
+            "explanation_ar": "«player» تعني «لاعب». مثال: He is a good player."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "They play ___.",
+            "answer": "basketball",
+            "explanation_ar": "الكلمة الناقصة «basketball» (كرة السلة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: They / basketball / play",
+            "answer": [
+              "They",
+              "play",
+              "basketball"
+            ],
+            "explanation_ar": "الترتيب الصحيح: They play basketball"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Bilal says: \"Is your team good?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Is your team good?» هو Bilal."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Sunday» mean?",
+            "options": [
+              "هدف",
+              "يركض",
+              "كرة القدم",
+              "الأحد"
+            ],
+            "answer": 3,
+            "explanation_ar": "«Sunday» تعني «الأحد». مثال: We have English on Sunday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-12-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is new.",
+            "answer": "ball",
+            "explanation_ar": "الكلمة الناقصة «ball» (كرة)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-12-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Invite a friend to play your favourite sport. Say what you play, when you play, and who is on your team.",
+        "helpful_phrases": [
+          "I play ...",
+          "Do you play ...?",
+          "We play at ...",
+          "Come and play!"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -850,132 +708,132 @@
     "questions": [
       {
         "id": "A1-12-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "He ___ swim very well.",
+        "prompt": "What does «swimming» mean?",
         "options": [
-          "can",
-          "cans",
-          "can to"
+          "مباراة / لعبة",
+          "السباحة",
+          "يفوز",
+          "كرة"
         ],
-        "answer": 0,
-        "explanation_ar": "can لا يتغير مع he."
+        "answer": 1,
+        "explanation_ar": "«swimming» تعني «السباحة». مثال: I like swimming."
       },
       {
         "id": "A1-12-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "She can ___ three languages.",
-        "options": [
-          "speaks",
-          "speak",
-          "to speak"
-        ],
-        "answer": 1,
-        "explanation_ar": "بعد can الفعل بدون s."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We have a ___. We play after school.",
+        "answer": "team",
+        "explanation_ar": "الكلمة الناقصة «team» (فريق)."
       },
       {
         "id": "A1-12-q3",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "«هل تستطيع أن تطبخ؟»:",
-        "options": [
-          "Do you can cook?",
-          "Can you cook?",
-          "Can you to cook?"
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: us / and / Come / play / with",
+        "answer": [
+          "Come",
+          "and",
+          "play",
+          "with",
+          "us"
         ],
-        "answer": 1,
-        "explanation_ar": "السؤال: Can + الفاعل + الفعل."
+        "explanation_ar": "الترتيب الصحيح: Come and play with us"
       },
       {
         "id": "A1-12-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "I ___ play the guitar. I don't know how. (لا أستطيع)",
-        "answer": "can't",
-        "explanation_ar": "لا أستطيع = can't."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «ball» mean?",
+        "options": [
+          "كرة السلة",
+          "كرة",
+          "السباحة",
+          "يركض"
+        ],
+        "answer": 1,
+        "explanation_ar": "«ball» تعني «كرة». مثال: The ball is new."
       },
       {
         "id": "A1-12-q5",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "Can I ___ my phone? The battery is low.",
-        "options": [
-          "call",
-          "charge",
-          "borrow"
-        ],
-        "answer": 1,
-        "explanation_ar": "البطارية ضعيفة: charge."
+        "kind": "fill_blank",
+        "prompt": "The ___ is at five o'clock.",
+        "answer": "game",
+        "explanation_ar": "الكلمة الناقصة «game» (مباراة / لعبة)."
       },
       {
         "id": "A1-12-q6",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "Can you help me? — Yes, ___.",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Tariq says: \"Is the ball new?\"",
         "options": [
-          "of course",
-          "I can't",
-          "no"
+          "True",
+          "False"
         ],
         "answer": 0,
-        "explanation_ar": "الموافقة: Yes, of course."
+        "explanation_ar": "الذي قال «Is the ball new?» هو Tariq."
       },
       {
         "id": "A1-12-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: I / your / can / borrow / pen",
-        "answer": [
-          "Can",
-          "I",
-          "borrow",
-          "your",
-          "pen"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «game» mean?",
+        "options": [
+          "كرة السلة",
+          "يفوز",
+          "فريق",
+          "مباراة / لعبة"
         ],
-        "explanation_ar": "الطلب: Can I + الفعل…؟"
+        "answer": 3,
+        "explanation_ar": "«game» تعني «مباراة / لعبة». مثال: The game is at five o'clock."
       },
       {
         "id": "A1-12-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "We can't to come today.",
-          "We can't come today.",
-          "We don't can come today."
-        ],
-        "answer": 1,
-        "explanation_ar": "can't + الفعل بدون to."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We play ___.",
+        "answer": "volleyball",
+        "explanation_ar": "الكلمة الناقصة «volleyball» (الكرة الطائرة)."
       },
       {
         "id": "A1-12-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Nabil can run fast but he can't swim.» What can't Nabil do?",
-        "options": [
-          "run",
-          "swim",
-          "play"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: Yes, / I / play / day / football / every",
+        "answer": [
+          "Yes,",
+          "I",
+          "play",
+          "football",
+          "every",
+          "day"
         ],
-        "answer": 1,
-        "explanation_ar": "he can't swim."
+        "explanation_ar": "الترتيب الصحيح: Yes, I play football every day"
       },
       {
         "id": "A1-12-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "She draws very ___. Her pictures are beautiful. (جيداً)",
-        "answer": "well",
-        "explanation_ar": "جيداً = well."
+        "kind": "mcq",
+        "prompt": "What does «volleyball» mean?",
+        "options": [
+          "هدف",
+          "الكرة الطائرة",
+          "يلعب",
+          "مباراة / لعبة"
+        ],
+        "answer": 1,
+        "explanation_ar": "«volleyball» تعني «الكرة الطائرة». مثال: We play volleyball."
       }
     ]
   },
-  "context_note": "فريق المدرسة في المكلا، السباحة في بحر المكلا، رسم بيوت شبام القديمة، واتساب.",
-  "stop_ar": "فوّة",
+  "stop_ar": "ملعب الحي",
   "roleplay": {
-    "character_ar": "مدرب فريق كرة القدم في فوّة",
-    "scenario_en": "You are a football coach in Fuwwah, Mukalla. Ask the student what sports and activities they can and can't do.",
-    "opening_en": "Hi! I need players for the team. Can you play football?"
-  }
+    "character_ar": "مدرب فريق الحي",
+    "scenario_en": "You are the coach of a neighbourhood team in Yemen. Talk to a new player about the sports they play: football, basketball, volleyball, swimming. Ask when he or she plays. Use only very simple English.",
+    "opening_en": "Welcome to our team! Do you play football?"
+  },
+  "context_note": "رياضات نمارسها"
 }

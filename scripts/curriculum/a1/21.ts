@@ -1,0 +1,87 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-21",
+  position: 21,
+  title_en: "School Subjects and Schedule",
+  title_ar: "المواد الدراسية والجدول الأسبوعي",
+  stop_ar: "مكتبة المدرسة",
+  situation_ar: "في مكتبة المدرسة يقارن الطلاب جداولهم الأسبوعية ويتحدثون عن موادهم المفضلة وأيام حصصهم.",
+  grammar_en: "I have English on Sunday / favourite subject",
+  can_do: ["أسمّي المواد الدراسية بالإنجليزية", "أقول متى عندي كل مادة", "أتحدث عن مادتي المفضلة"],
+  video: { id: "v4QDGr_18v4", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 21", checked: false },
+  words: [
+    ["subject", "noun", "مادة دراسية", "What is your favourite subject?"],
+    ["Arabic", "noun", "اللغة العربية", "We have Arabic on Saturday."],
+    ["English", "noun", "اللغة الإنجليزية", "I have English on Sunday."],
+    ["maths", "noun", "الرياضيات", "Maths is difficult."],
+    ["science", "noun", "العلوم", "Science is my favourite subject."],
+    ["history", "noun", "التاريخ", "We have history on Monday."],
+    ["geography", "noun", "الجغرافيا", "Geography is interesting."],
+    ["art", "noun", "الفنون", "She likes art."],
+    ["computer", "noun", "الحاسوب", "I have computer on Tuesday."],
+    ["timetable", "noun", "الجدول الدراسي", "My timetable is on the wall."],
+    ["favourite", "adjective", "مفضّل", "My favourite subject is English."],
+    ["lesson", "noun", "درس / حصة", "I have six lessons a day."],
+  ],
+  warmup_ar:
+    "ما أصعب مادة بالنسبة لك؟ وما المادة التي تحبها أكثر؟ كل طالب لديه **جدول** أسبوعي فيه المواد والأيام. في هذا الدرس ستتحدث عن جدولك ومادتك المفضلة بالإنجليزية.",
+  in_context: [
+    "What is your favourite subject?",
+    "I have English on Sunday.",
+    "We have Arabic on Saturday.",
+    "Maths is difficult, but science is my favourite subject.",
+    "We have history on Monday and geography on Tuesday.",
+    "She likes art. I have computer on Wednesday.",
+    "My timetable is on the wall.",
+    "I have six lessons a day.",
+  ],
+  notice: ["I have English on Sunday.", "We have maths on Monday.", "My favourite subject is science.", "What is your favourite subject?"],
+  rule_ar:
+    "للحديث عن جدولك نستخدم **have** (عندي) مع المادة واليوم:\n\n- **I have** English **on** Sunday. = عندي إنجليزي يوم الأحد.\n- **We have** maths **on** Monday. = عندنا رياضيات يوم الاثنين.\n\nلنتحدث عن المادة **المفضلة** نقول: **My favourite subject is** science. ونسأل: **What is your favourite subject?**\n\nلاحظ: أسماء اللغات تبدأ بحرف كبير (Arabic, English) أما المواد الأخرى فلا (maths, science).\n\n**الخطأ الشائع:** أن نقول «I have in Sunday». الصحيح: **on** Sunday.",
+  form: {
+    headers: ["الغرض", "الجملة", "مثال"],
+    rows: [
+      ["الجدول", "I have + مادة + on + يوم", "I have English on Sunday."],
+      ["المفضلة", "My favourite subject is ...", "My favourite subject is science."],
+      ["السؤال", "What is your favourite subject?", "Maths."],
+    ],
+  },
+  write_prompt: "Write 3 sentences about your timetable: your subjects on two days and your favourite subject.",
+  before_ar: "سالم ومنى في مكتبة المدرسة. **استمع:** ما هي المادة المفضلة عند كل منهما؟ ومتى عندهما إنجليزي؟",
+  dialogue: [
+    ["Salem", "Mona, what is your favourite subject?", "يا منى، ما مادتك المفضلة؟"],
+    ["Mona", "My favourite subject is science. And you?", "مادتي المفضلة العلوم. وأنت؟"],
+    ["Salem", "I like English. I have English on Sunday.", "أحب الإنجليزية. عندي إنجليزي يوم الأحد."],
+    ["Mona", "We have maths on Monday.", "عندنا رياضيات يوم الاثنين."],
+    ["Salem", "Maths is difficult.", "الرياضيات صعبة."],
+    ["Mona", "Look at my timetable. I have history on Tuesday.", "انظر إلى جدولي. عندي تاريخ يوم الثلاثاء."],
+    ["Salem", "I have geography on Tuesday too.", "وأنا عندي جغرافيا يوم الثلاثاء أيضاً."],
+    ["Mona", "We have six lessons a day. Let us study!", "عندنا ست حصص في اليوم. لنذاكر!"],
+  ],
+  speak: {
+    prompt: "Tell us about your school week: which subjects you have and on which days, and your favourite subject.",
+    phrases: ["I have ... on ...", "My favourite subject is ...", "We have ...", "My timetable"],
+  },
+  story_title_ar: "الجدول الجديد",
+  story: [
+    ["Huda", "Look, the new timetable is on the wall!", "انظري، الجدول الجديد على الجدار!"],
+    ["Mona", "We have English on Sunday and Wednesday.", "عندنا إنجليزي الأحد والأربعاء."],
+    ["Huda", "I have art on Thursday.", "وعندي فنون يوم الخميس."],
+    ["Mona", "Art is my favourite subject.", "الفنون مادتي المفضلة."],
+    ["Huda", "Is computer on Tuesday?", "هل الحاسوب يوم الثلاثاء؟"],
+    ["Mona", "Yes, it is.", "نعم."],
+    ["Huda", "Is geography difficult?", "هل الجغرافيا صعبة؟"],
+    ["Mona", "No, it is interesting.", "لا، هي شيّقة."],
+  ],
+  task: {
+    prompt: "Explain your timetable to a friend: say four subjects, the days, and your favourite subject. Say at least 5 sentences.",
+    phrases: ["I have ... on ...", "My favourite subject is ...", "We have ...", "Maths is ..."],
+  },
+  roleplay: {
+    character_ar: "زميلة في مكتبة المدرسة",
+    scenario_en: "You are a classmate in the school library in Yemen. Ask the student about the timetable and favourite subject (Arabic, English, maths, science, history, geography, art, computer). Use only very simple English.",
+    opening_en: "Hello! What is your favourite subject?",
+  },
+};
+export default unit;

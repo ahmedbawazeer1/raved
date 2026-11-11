@@ -1,0 +1,828 @@
+{
+  "path": "english",
+  "code": "A1-15",
+  "version": 1,
+  "level": "A1",
+  "position": 15,
+  "title": "How Are You Feeling?",
+  "topic": "في ديوان بيت الجد تجتمع العائلة بعد يوم طويل، ويسأل كل واحد الآخر عن حاله ومشاعره.",
+  "grammar_point": "How are you? I am + feeling (very)",
+  "can_do": [
+    "أسأل «كيف حالك؟» وأجيب",
+    "أعبّر عن مشاعري بكلمات بسيطة",
+    "أستخدم very لتقوية الصفة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-15-v1",
+      "word": "happy",
+      "part_of_speech": "adjective",
+      "meaning_ar": "سعيد",
+      "example_en": "I am happy today."
+    },
+    {
+      "id": "A1-15-v2",
+      "word": "sad",
+      "part_of_speech": "adjective",
+      "meaning_ar": "حزين",
+      "example_en": "She is sad."
+    },
+    {
+      "id": "A1-15-v3",
+      "word": "tired",
+      "part_of_speech": "adjective",
+      "meaning_ar": "متعب",
+      "example_en": "I am tired after school."
+    },
+    {
+      "id": "A1-15-v4",
+      "word": "hungry",
+      "part_of_speech": "adjective",
+      "meaning_ar": "جائع",
+      "example_en": "We are hungry."
+    },
+    {
+      "id": "A1-15-v5",
+      "word": "thirsty",
+      "part_of_speech": "adjective",
+      "meaning_ar": "عطشان",
+      "example_en": "I am thirsty."
+    },
+    {
+      "id": "A1-15-v6",
+      "word": "angry",
+      "part_of_speech": "adjective",
+      "meaning_ar": "غاضب",
+      "example_en": "He is angry."
+    },
+    {
+      "id": "A1-15-v7",
+      "word": "sick",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مريض",
+      "example_en": "My brother is sick."
+    },
+    {
+      "id": "A1-15-v8",
+      "word": "fine",
+      "part_of_speech": "adjective",
+      "meaning_ar": "بخير",
+      "example_en": "I am fine, thank you."
+    },
+    {
+      "id": "A1-15-v9",
+      "word": "very",
+      "part_of_speech": "adverb",
+      "meaning_ar": "جداً",
+      "example_en": "I am very tired."
+    },
+    {
+      "id": "A1-15-v10",
+      "word": "how",
+      "part_of_speech": "other",
+      "meaning_ar": "كيف",
+      "example_en": "How are you?"
+    },
+    {
+      "id": "A1-15-v11",
+      "word": "feel",
+      "part_of_speech": "verb",
+      "meaning_ar": "يشعر",
+      "example_en": "How do you feel?"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-15-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: كيف تشعر؟",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "عندما نلتقي بأحد نسأل أول شيء: «كيف حالك؟». الجواب الجميل لا يكون دائماً «الحمد لله». أحياناً نكون متعبين أو جائعين أو سعداء جداً. في هذا الدرس ستتعلم أن تقول كيف تشعر بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "vLUn6_FMw3w",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 15",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "happy",
+              "سعيد",
+              "I am happy today."
+            ],
+            [
+              "sad",
+              "حزين",
+              "She is sad."
+            ],
+            [
+              "tired",
+              "متعب",
+              "I am tired after school."
+            ],
+            [
+              "hungry",
+              "جائع",
+              "We are hungry."
+            ],
+            [
+              "thirsty",
+              "عطشان",
+              "I am thirsty."
+            ],
+            [
+              "angry",
+              "غاضب",
+              "He is angry."
+            ],
+            [
+              "sick",
+              "مريض",
+              "My brother is sick."
+            ],
+            [
+              "fine",
+              "بخير",
+              "I am fine, thank you."
+            ],
+            [
+              "very",
+              "جداً",
+              "I am very tired."
+            ],
+            [
+              "how",
+              "كيف",
+              "How are you?"
+            ],
+            [
+              "feel",
+              "يشعر",
+              "How do you feel?"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "How are you? I am fine, thank you. I am happy today. She is sad. He is angry. I am very tired after school. We are hungry and thirsty. My brother is sick. How do you feel?"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «how» mean?",
+            "options": [
+              "جداً",
+              "بنطلون",
+              "بخير",
+              "كيف"
+            ],
+            "answer": 3,
+            "explanation_ar": "«how» تعني «كيف». مثال: How are you?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ are you?",
+            "answer": "How",
+            "explanation_ar": "الكلمة الناقصة «How» (كيف)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «feel» mean?",
+            "options": [
+              "سعيد",
+              "جائع",
+              "بنطلون",
+              "يشعر"
+            ],
+            "answer": 3,
+            "explanation_ar": "«feel» تعني «يشعر». مثال: How do you feel?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My brother is ___.",
+            "answer": "sick",
+            "explanation_ar": "الكلمة الناقصة «sick» (مريض)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «shirt» mean?",
+            "options": [
+              "قميص",
+              "يشعر",
+              "سعيد",
+              "متعب"
+            ],
+            "answer": 0,
+            "explanation_ar": "«shirt» تعني «قميص». مثال: This is a white shirt."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-15-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-15-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: How are you? I am + feeling (very)",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "How are you? I am fine. I am very tired. He is hungry. We are happy."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنسأل عن حال شخص نقول: **How are you?** (كيف حالك؟) ونجيب: **I am** + الشعور:\n\n- I am **fine**. = أنا بخير.\n- I am **tired**. = أنا متعب.\n- He is **hungry**. = هو جائع.\n\nنستخدم **very** (جداً) قبل الصفة لنقوّيها: I am **very** tired. (أنا متعب جداً).\n\nالفعل **be** يتغير: I **am**, you **are**, he/she **is**, we/they **are**.\n\n**الخطأ الشائع:** أن نقول «I have hungry» أو «I am have hungry». الصحيح: **I am hungry**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "من؟",
+            "be",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "I",
+              "am",
+              "I am very tired."
+            ],
+            [
+              "he / she",
+              "is",
+              "She is happy."
+            ],
+            [
+              "we / you / they",
+              "are",
+              "We are hungry."
+            ],
+            [
+              "How",
+              "are you",
+              "How are you? I am fine."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: hungry / are / We",
+            "answer": [
+              "We",
+              "are",
+              "hungry"
+            ],
+            "explanation_ar": "الترتيب الصحيح: We are hungry"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ are you?",
+            "answer": "How",
+            "explanation_ar": "الكلمة الناقصة «How» (كيف)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «happy» mean?",
+            "options": [
+              "كيف",
+              "بنطلون",
+              "سعيد",
+              "جائع"
+            ],
+            "answer": 2,
+            "explanation_ar": "«happy» تعني «سعيد». مثال: I am happy today."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: do / you / How / feel",
+            "answer": [
+              "How",
+              "do",
+              "you",
+              "feel"
+            ],
+            "explanation_ar": "الترتيب الصحيح: How do you feel"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "She is ___.",
+            "answer": "sad",
+            "explanation_ar": "الكلمة الناقصة «sad» (حزين)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about how you feel today and how your family feels. Use: I am ... My mother is ... We are ...",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-15-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "العائلة في ديوان بيت الجد بعد يوم طويل. **استمع:** كيف حال كل واحد؟ ومن هو المتعب جداً؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-15-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Grandfather",
+              "text_en": "Good evening! How are you, Tariq?",
+              "text_ar": "مساء الخير! كيف حالك يا طارق؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "I am fine, thank you. And you?",
+              "text_ar": "أنا بخير، شكراً. وأنت؟"
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "I am very tired, but happy.",
+              "text_ar": "أنا متعب جداً لكني سعيد."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "My brother is sick.",
+              "text_ar": "أخي مريض."
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Oh, I am sad. How does he feel?",
+              "text_ar": "أنا حزين. كيف يشعر؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "He is very tired and thirsty.",
+              "text_ar": "هو متعب جداً وعطشان."
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Give him water. We are all hungry. Let us eat.",
+              "text_ar": "اعطه ماء. نحن كلنا جائعون. لنأكل."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Yes, I am hungry too!",
+              "text_ar": "نعم، وأنا جائع أيضاً!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"I am fine, thank you. And you?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «I am fine, thank you. And you?» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «fine» mean?",
+            "options": [
+              "بخير",
+              "حزين",
+              "بنطلون",
+              "عطشان"
+            ],
+            "answer": 0,
+            "explanation_ar": "«fine» تعني «بخير». مثال: I am fine, thank you."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Give him water. We are all hungry. Let us eat.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Give him water. We are all hungry. Let us eat.» هو Grandfather."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «tired» mean?",
+            "options": [
+              "متعب",
+              "كيف",
+              "غاضب",
+              "مريض"
+            ],
+            "answer": 0,
+            "explanation_ar": "«tired» تعني «متعب». مثال: I am tired after school."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Ask a friend how he or she feels. Then answer: say how you feel today and why.",
+        "helpful_phrases": [
+          "How are you?",
+          "I am fine.",
+          "I am very ...",
+          "I am tired because ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-15-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-15-L4-s1",
+          "title_ar": "بعد المباراة",
+          "panels": [
+            {
+              "speaker": "Bilal",
+              "text_en": "Hello, Salem! How are you?",
+              "text_ar": "مرحباً يا سالم! كيف حالك؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I am very tired.",
+              "text_ar": "أنا متعب جداً."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "Are you hungry?",
+              "text_ar": "هل أنت جائع؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, and I am thirsty.",
+              "text_ar": "نعم، وعطشان."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "I am happy. We win the game.",
+              "text_ar": "أنا سعيد. فزنا في المباراة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "The other team is sad.",
+              "text_ar": "الفريق الآخر حزين."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "Come home. We eat together.",
+              "text_ar": "تعال إلى البيت. نأكل معاً."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Thank you. I am fine now.",
+              "text_ar": "شكراً. أنا بخير الآن."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «trousers» mean?",
+            "options": [
+              "بنطلون",
+              "مريض",
+              "جائع",
+              "غاضب"
+            ],
+            "answer": 0,
+            "explanation_ar": "«trousers» تعني «بنطلون». مثال: These trousers are black."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ are you?",
+            "answer": "How",
+            "explanation_ar": "الكلمة الناقصة «How» (كيف)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: eat / Come / We / home. / together",
+            "answer": [
+              "Come",
+              "home.",
+              "We",
+              "eat",
+              "together"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Come home. We eat together"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Bilal says: \"Are you hungry?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Are you hungry?» هو Bilal."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «very» mean?",
+            "options": [
+              "غاضب",
+              "جداً",
+              "يشعر",
+              "جائع"
+            ],
+            "answer": 1,
+            "explanation_ar": "«very» تعني «جداً». مثال: I am very tired."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-15-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We are ___.",
+            "answer": "hungry",
+            "explanation_ar": "الكلمة الناقصة «hungry» (جائع)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-15-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend how you and three people in your family feel today. Use very and the words happy, sad, tired, hungry, thirsty, angry, sick, fine.",
+        "helpful_phrases": [
+          "How are you?",
+          "I am very ...",
+          "My ... is ...",
+          "We are ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-15-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «feel» mean?",
+        "options": [
+          "يشعر",
+          "حزين",
+          "غاضب",
+          "جداً"
+        ],
+        "answer": 0,
+        "explanation_ar": "«feel» تعني «يشعر». مثال: How do you feel?"
+      },
+      {
+        "id": "A1-15-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I am ___. We win the game.",
+        "answer": "happy",
+        "explanation_ar": "الكلمة الناقصة «happy» (سعيد)."
+      },
+      {
+        "id": "A1-15-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: fine, / I / am / thank / you",
+        "answer": [
+          "I",
+          "am",
+          "fine,",
+          "thank",
+          "you"
+        ],
+        "explanation_ar": "الترتيب الصحيح: I am fine, thank you"
+      },
+      {
+        "id": "A1-15-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «hungry» mean?",
+        "options": [
+          "سعيد",
+          "مريض",
+          "جائع",
+          "يشعر"
+        ],
+        "answer": 2,
+        "explanation_ar": "«hungry» تعني «جائع». مثال: We are hungry."
+      },
+      {
+        "id": "A1-15-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We are ___.",
+        "answer": "hungry",
+        "explanation_ar": "الكلمة الناقصة «hungry» (جائع)."
+      },
+      {
+        "id": "A1-15-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Grandfather says: \"The other team is sad.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation_ar": "الذي قال «The other team is sad.» هو Salem."
+      },
+      {
+        "id": "A1-15-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «very» mean?",
+        "options": [
+          "سعيد",
+          "جداً",
+          "جائع",
+          "غاضب"
+        ],
+        "answer": 1,
+        "explanation_ar": "«very» تعني «جداً». مثال: I am very tired."
+      },
+      {
+        "id": "A1-15-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Thank you. I am ___ now.",
+        "answer": "fine",
+        "explanation_ar": "الكلمة الناقصة «fine» (بخير)."
+      },
+      {
+        "id": "A1-15-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: is / sad / The / team / other",
+        "answer": [
+          "The",
+          "other",
+          "team",
+          "is",
+          "sad"
+        ],
+        "explanation_ar": "الترتيب الصحيح: The other team is sad"
+      },
+      {
+        "id": "A1-15-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «how» mean?",
+        "options": [
+          "يشعر",
+          "غاضب",
+          "بخير",
+          "كيف"
+        ],
+        "answer": 3,
+        "explanation_ar": "«how» تعني «كيف». مثال: How are you?"
+      }
+    ]
+  },
+  "stop_ar": "ديوان البيت",
+  "roleplay": {
+    "character_ar": "جدّك في ديوان البيت",
+    "scenario_en": "You are a kind grandfather in a Yemeni diwan. Ask your grandchild how he or she feels today, and why. Use only very simple English (happy, sad, tired, hungry, thirsty, angry, sick, fine, very, how).",
+    "opening_en": "Good evening, my dear! How are you today?"
+  },
+  "context_note": "كيف تشعر؟"
+}

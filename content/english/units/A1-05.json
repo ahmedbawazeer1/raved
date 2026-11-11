@@ -1,859 +1,699 @@
 {
   "path": "english",
   "code": "A1-05",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 5,
-  "title": "At Work",
-  "topic": "مهن الناس في المكلا: الميناء والمستشفى والبحر",
-  "grammar_point": "present simple (he / she / it) + does / doesn't",
+  "title": "People at the Market",
+  "topic": "يذهب سالم مع أبيه إلى السوق الشعبي ويتعرف على الباعة والمهن المختلفة، ويعدّ الناس حوله بصيغة الجمع.",
+  "grammar_point": "plural nouns (-s, -es, men / women / children)",
   "can_do": [
-    "أتحدث عن مهنة شخص آخر ومكان عمله",
-    "أسأل عما يعمله شخص وأفهم الإجابة",
-    "أفهم نصاً قصيراً عن يوم عمل"
+    "أسمّي مهن السوق بالإنجليزية",
+    "أحوّل الاسم المفرد إلى جمع",
+    "أصف الناس في السوق بجمل بسيطة"
   ],
   "vocab": [
     {
       "id": "A1-05-v1",
-      "word": "job",
-      "ipa": "/dʒɒb/",
+      "word": "seller",
       "part_of_speech": "noun",
-      "meaning_ar": "وظيفة / عمل",
-      "example_en": "What's your father's job?"
+      "meaning_ar": "بائع",
+      "example_en": "The seller is happy."
     },
     {
       "id": "A1-05-v2",
-      "word": "doctor",
-      "ipa": "/ˈdɒktə/",
+      "word": "customer",
       "part_of_speech": "noun",
-      "meaning_ar": "طبيب",
-      "example_en": "The doctor works at the hospital."
+      "meaning_ar": "زبون",
+      "example_en": "A customer is at the shop."
     },
     {
       "id": "A1-05-v3",
-      "word": "nurse",
-      "ipa": "/nɜːs/",
+      "word": "baker",
       "part_of_speech": "noun",
-      "meaning_ar": "ممرض / ممرضة",
-      "example_en": "My aunt is a nurse."
+      "meaning_ar": "خبّاز",
+      "example_en": "The baker is at the bakery."
     },
     {
       "id": "A1-05-v4",
-      "word": "engineer",
-      "ipa": "/ˌendʒɪˈnɪə/",
+      "word": "butcher",
       "part_of_speech": "noun",
-      "meaning_ar": "مهندس",
-      "example_en": "He is an engineer at the port."
+      "meaning_ar": "جزّار",
+      "example_en": "The butcher has a big shop."
     },
     {
       "id": "A1-05-v5",
-      "word": "fisherman",
-      "ipa": "/ˈfɪʃəmən/",
+      "word": "tailor",
       "part_of_speech": "noun",
-      "meaning_ar": "صياد سمك",
-      "example_en": "The fisherman goes to sea at dawn."
+      "meaning_ar": "خيّاط",
+      "example_en": "A tailor is in the market."
     },
     {
       "id": "A1-05-v6",
-      "word": "farmer",
-      "ipa": "/ˈfɑːmə/",
+      "word": "fisherman",
       "part_of_speech": "noun",
-      "meaning_ar": "مزارع",
-      "example_en": "The farmer grows dates in Wadi Hadramout."
+      "meaning_ar": "صيّاد سمك",
+      "example_en": "The fisherman is from Hodeidah."
     },
     {
       "id": "A1-05-v7",
-      "word": "driver",
-      "ipa": "/ˈdraɪvə/",
+      "word": "mechanic",
       "part_of_speech": "noun",
-      "meaning_ar": "سائق",
-      "example_en": "My uncle is a bus driver."
+      "meaning_ar": "ميكانيكي",
+      "example_en": "My uncle is a mechanic."
     },
     {
       "id": "A1-05-v8",
-      "word": "shopkeeper",
-      "ipa": "/ˈʃɒpkiːpə/",
+      "word": "man",
       "part_of_speech": "noun",
-      "meaning_ar": "صاحب دكان",
-      "example_en": "The shopkeeper opens his shop at eight."
+      "meaning_ar": "رجل",
+      "example_en": "A man is at the shop."
     },
     {
       "id": "A1-05-v9",
-      "word": "work",
-      "ipa": "/wɜːk/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يعمل",
-      "example_en": "She works in a school."
+      "word": "woman",
+      "part_of_speech": "noun",
+      "meaning_ar": "امرأة",
+      "example_en": "A woman is at the shop."
     },
     {
       "id": "A1-05-v10",
-      "word": "hospital",
-      "ipa": "/ˈhɒspɪtl/",
+      "word": "child",
       "part_of_speech": "noun",
-      "meaning_ar": "مستشفى",
-      "example_en": "There is a big hospital in Mukalla."
-    },
-    {
-      "id": "A1-05-v11",
-      "word": "office",
-      "ipa": "/ˈɒfɪs/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مكتب",
-      "example_en": "My mother works in an office."
-    },
-    {
-      "id": "A1-05-v12",
-      "word": "port",
-      "ipa": "/pɔːt/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ميناء",
-      "example_en": "Ships come to the port of Mukalla."
-    },
-    {
-      "id": "A1-05-v13",
-      "word": "teach",
-      "ipa": "/tiːtʃ/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يدرّس / يعلّم",
-      "example_en": "Mr. Fuad teaches maths."
-    },
-    {
-      "id": "A1-05-v14",
-      "word": "sick",
-      "ipa": "/sɪk/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "مريض",
-      "example_en": "The nurse helps sick people."
+      "meaning_ar": "طفل",
+      "example_en": "A child is with his mother."
     }
   ],
   "lessons": [
     {
-      "id": "A1-05-l1",
+      "id": "A1-05-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "المهن وأماكن العمل",
-      "est_minutes": 20,
+      "title": "مفردات: أشخاص في السوق",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في **المكلا** يعمل الناس في الميناء والمستشفيات والمكاتب والبحر، وفي الوادي يعمل كثيرون في الزراعة والنخيل. تعلّم أسماء المهن وأماكن العمل."
+          "markdown_ar": "السوق الشعبي مكان مليء بالناس: بائع ينادي، وخبّاز يخبز، وأطفال مع أمهاتهم. كم شخصاً تراه عادةً في السوق؟ واحد أم كثيرون؟ في هذا الدرس نتعلم كيف نتحدث عن **شخص واحد** وعن **أكثر من شخص** بالإنجليزية."
         },
         {
           "type": "video",
           "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين : تكملة كلمات الوظائف : الحلقة 5",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "job",
-              "/dʒɒb/",
-              "وظيفة / عمل",
-              "What's your father's job?"
+              "seller",
+              "بائع",
+              "The seller is happy."
             ],
             [
-              "doctor",
-              "/ˈdɒktə/",
-              "طبيب",
-              "The doctor works at the hospital."
+              "customer",
+              "زبون",
+              "A customer is at the shop."
             ],
             [
-              "nurse",
-              "/nɜːs/",
-              "ممرض / ممرضة",
-              "My aunt is a nurse."
+              "baker",
+              "خبّاز",
+              "The baker is at the bakery."
             ],
             [
-              "engineer",
-              "/ˌendʒɪˈnɪə/",
-              "مهندس",
-              "He is an engineer at the port."
+              "butcher",
+              "جزّار",
+              "The butcher has a big shop."
+            ],
+            [
+              "tailor",
+              "خيّاط",
+              "A tailor is in the market."
             ],
             [
               "fisherman",
-              "/ˈfɪʃəmən/",
-              "صياد سمك",
-              "The fisherman goes to sea at dawn."
+              "صيّاد سمك",
+              "The fisherman is from Hodeidah."
             ],
             [
-              "farmer",
-              "/ˈfɑːmə/",
-              "مزارع",
-              "The farmer grows dates in Wadi Hadramout."
+              "mechanic",
+              "ميكانيكي",
+              "My uncle is a mechanic."
             ],
             [
-              "driver",
-              "/ˈdraɪvə/",
-              "سائق",
-              "My uncle is a bus driver."
+              "man",
+              "رجل",
+              "A man is at the shop."
             ],
             [
-              "shopkeeper",
-              "/ˈʃɒpkiːpə/",
-              "صاحب دكان",
-              "The shopkeeper opens his shop at eight."
+              "woman",
+              "امرأة",
+              "A woman is at the shop."
             ],
             [
-              "work",
-              "/wɜːk/",
-              "يعمل",
-              "She works in a school."
-            ],
-            [
-              "hospital",
-              "/ˈhɒspɪtl/",
-              "مستشفى",
-              "There is a big hospital in Mukalla."
-            ],
-            [
-              "office",
-              "/ˈɒfɪs/",
-              "مكتب",
-              "My mother works in an office."
-            ],
-            [
-              "port",
-              "/pɔːt/",
-              "ميناء",
-              "Ships come to the port of Mukalla."
-            ],
-            [
-              "teach",
-              "/tiːtʃ/",
-              "يدرّس / يعلّم",
-              "Mr. Fuad teaches maths."
-            ],
-            [
-              "sick",
-              "/sɪk/",
-              "مريض",
-              "The nurse helps sick people."
+              "child",
+              "طفل",
+              "A child is with his mother."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "job. What's your father's job?\ndoctor. The doctor works at the hospital.\nnurse. My aunt is a nurse.\nengineer. He is an engineer at the port.\nfisherman. The fisherman goes to sea at dawn.\nfarmer. The farmer grows dates in Wadi Hadramout.\ndriver. My uncle is a bus driver.\nshopkeeper. The shopkeeper opens his shop at eight.\nwork. She works in a school.\nhospital. There is a big hospital in Mukalla.\noffice. My mother works in an office.\nport. Ships come to the port of Mukalla.\nteach. Mr. Fuad teaches maths.\nsick. The nurse helps sick people."
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**تذكّر:** قبل اسم المهنة نضع **a** أو **an**: «She is **a** nurse.» «He is **an** engineer.»"
+          "text_en": "A seller is at the market. A customer is at the shop. The baker is at the bakery. The butcher has a big shop. A tailor and a mechanic are at the market. The fisherman is from Hodeidah. A man, a woman and a child are at the shop."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e1",
+            "id": "A1-05-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "A ___ catches fish in the sea.",
+            "prompt": "What does «man» mean?",
             "options": [
-              "farmer",
-              "fisherman",
-              "nurse"
+              "رجل",
+              "فصل دراسي",
+              "امرأة",
+              "كتاب"
             ],
-            "answer": 1,
-            "explanation_ar": "صياد السمك fisherman."
+            "answer": 0,
+            "explanation_ar": "«man» تعني «رجل». مثال: A man is at the shop."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "Doctors and nurses work in a ___.",
-            "options": [
-              "port",
-              "hospital",
-              "shop"
-            ],
-            "answer": 1,
-            "explanation_ar": "الأطباء والممرضون في المستشفى hospital."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e3",
+            "id": "A1-05-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "He is ___ engineer.",
-            "answer": "an",
-            "explanation_ar": "engineer تبدأ بحرف علة فنستخدم an."
+            "prompt": "A ___, a woman and a child are at the shop.",
+            "answer": "man",
+            "explanation_ar": "الكلمة الناقصة «man» (رجل)."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g4",
-          "game": "pronounce"
-        }
-      ]
-    },
-    {
-      "id": "A1-05-l2",
-      "position": 2,
-      "skill": "grammar",
-      "title": "he works / she doesn't work",
-      "est_minutes": 30,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "نستخدم **المضارع البسيط (present simple)** للعمل اليومي والعادات. مع **I, you, we, they** يبقى الفعل كما هو: «I **work**». أما مع **he, she, it** (أو اسم شخص واحد) **فنضيف s** إلى الفعل:\n\n- I work ← He **works**.\n- They teach ← She **teaches**.\n- I go ← He **goes**. / I do ← She **does**. / I have ← He **has**."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "table",
-          "headers": [
-            "",
-            "الصيغة",
-            "مثال"
-          ],
-          "rows": [
-            [
-              "إثبات",
-              "he / she / it + فعل + s",
-              "My father works at the port."
-            ],
-            [
-              "نفي",
-              "doesn't + الفعل (بدون s)",
-              "She doesn't work on Friday."
-            ],
-            [
-              "سؤال",
-              "Does + الفاعل + الفعل (بدون s)؟",
-              "Does he drive a bus?"
-            ],
-            [
-              "إجابة",
-              "Yes, he does. / No, he doesn't.",
-              "Does she teach English? — Yes, she does."
-            ],
-            [
-              "سؤال بأداة",
-              "What / Where + does + …؟",
-              "Where does your mother work?"
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**قواعد إضافة s:**\n\n- معظم الأفعال: **s** ← works, drives.\n- بعد s, sh, ch, x, o: **es** ← teaches, washes, goes, does.\n- ساكن + y: **ies** ← study ← studies.\n\n**مهم:** بعد **doesn't** و **Does** يرجع الفعل بدون s: «He doesn't **work**.» وليس «doesn't works»."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e4",
-            "skill": "grammar",
+            "id": "A1-05-L1-e5-3",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "My uncle ___ a taxi in Mukalla.",
+            "prompt": "What does «seller» mean?",
             "options": [
-              "drive",
-              "drives",
-              "driving"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع he (my uncle) نضيف s: drives."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "She ___ English at a school in Al-Dees.",
-            "options": [
-              "teachs",
-              "teaches",
-              "teach"
-            ],
-            "answer": 1,
-            "explanation_ar": "بعد ch نضيف es: teaches."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "He ___ work on Fridays.",
-            "options": [
-              "don't",
-              "doesn't",
-              "isn't"
-            ],
-            "answer": 1,
-            "explanation_ar": "النفي مع he: doesn't + الفعل."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ your sister work in a hospital? — Yes, she does.",
-            "answer": "Does",
-            "explanation_ar": "السؤال مع she يبدأ بـ Does."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "اختر الجملة الصحيحة:",
-            "options": [
-              "She doesn't works here.",
-              "She doesn't work here.",
-              "She don't work here."
-            ],
-            "answer": 1,
-            "explanation_ar": "بعد doesn't يأتي الفعل بدون s."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e9",
-            "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات: does / work / where / father / your",
-            "answer": [
-              "Where",
-              "does",
-              "your",
-              "father",
-              "work"
-            ],
-            "explanation_ar": "Where + does + الفاعل + الفعل؟"
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-05-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "ماذا يعمل والداك؟",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**هدى** و**رشا** تتحدثان عن عمل والديهما. استمع وأجب."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "audio",
-          "text_en": "Huda: What does your father do, Rasha?\nRasha: He's an engineer. He works at the port in Mukalla.\nHuda: Does he work every day?\nRasha: He works from Saturday to Thursday. He doesn't work on Friday.\nHuda: And your mother?\nRasha: She's a doctor. She works at the Ibn Sina Hospital. She helps sick children.\nHuda: That's a great job! My mother is a teacher. She teaches Arabic.\nRasha: And your father?\nHuda: He's a fisherman. He goes to sea very early, at four o'clock."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "Where does Rasha's father work?",
-            "options": [
-              "at the hospital",
-              "at the port",
-              "at a school"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: He works at the port in Mukalla."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e11",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What is Rasha's mother's job?",
-            "options": [
-              "teacher",
-              "nurse",
-              "doctor"
+              "زبون",
+              "فصل دراسي",
+              "بائع",
+              "طفل"
             ],
             "answer": 2,
-            "explanation_ar": "قالت: She's a doctor."
+            "explanation_ar": "«seller» تعني «بائع». مثال: The seller is happy."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e12",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Huda's father goes to sea at four o'clock.",
+            "id": "A1-05-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "A ___ is with his mother.",
+            "answer": "child",
+            "explanation_ar": "الكلمة الناقصة «child» (طفل)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «child» mean?",
             "options": [
-              "True",
-              "False"
+              "رجل",
+              "طفل",
+              "كتاب",
+              "بائع"
             ],
-            "answer": 0,
-            "explanation_ar": "قالت: He goes to sea very early, at four o'clock."
+            "answer": 1,
+            "explanation_ar": "«child» تعني «طفل». مثال: A child is with his mother."
           }
         },
         {
           "type": "game",
-          "id": "A1-05-g5",
-          "game": "dictation"
+          "id": "A1-05-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-05-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "يوم صياد في المكلا",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن **عبدالرحمن**، صياد من المكلا، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
-        },
-        {
-          "type": "reading",
-          "text_en": "Abdulrahman is fifty years old. He is a fisherman in Mukalla. He gets up at three thirty every morning. He doesn't have breakfast at home. He drinks tea on his boat. He goes to sea with his two sons. They catch fish until ten o'clock. Then they come back to the port and sell the fish at the fish market. Abdulrahman doesn't work in the afternoon. He sleeps after lunch. In the evening, he sits with his friends near the sea. He loves his job, but it is hard work.",
-          "word_count": 90
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What time does Abdulrahman get up?",
-            "options": [
-              "3:30",
-              "10:00",
-              "4:00"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: He gets up at three thirty."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e14",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "He has breakfast at home.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: He doesn't have breakfast at home."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e15",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "Where do they sell the fish?",
-            "options": [
-              "on the boat",
-              "at the fish market",
-              "at home"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: sell the fish at the fish market."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-05-e16",
-            "skill": "reading",
-            "kind": "fill_blank",
-            "prompt": "In the afternoon, he ___ after lunch.",
-            "answer": "sleeps",
-            "explanation_ar": "في النص: He sleeps after lunch."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-05-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "عمل أحد أقاربك",
+      "id": "A1-05-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: plural nouns (-s, -es, men / women / children)",
       "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "اختر شخصاً من عائلتك أو حيّك وتحدث عن عمله في 5 إلى 7 جمل: **ما مهنته؟ أين يعمل؟ متى يبدأ؟ ماذا يفعل؟** انتبه لإضافة **s** للفعل."
+          "type": "audio",
+          "text_en": "A seller is here. Sellers are here. A customer is here. Customers are here. A man is here. Men are here. A child is here. Children are here."
         },
         {
-          "type": "video",
-          "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
+          "type": "text",
+          "markdown_ar": "**المفرد** يعني واحداً (a seller). **الجمع** يعني أكثر من واحد (sellers). القاعدة الأساسية: نضيف **s** في آخر الكلمة:\n\n- a seller → seller**s**\n- a customer → customer**s**\n\nإذا انتهت الكلمة بـ **s أو sh أو ch أو x** نضيف **es**: bus → bus**es**, box → box**es**.\n\nوبعض الكلمات **شاذة** (لها جمع خاص) ويجب حفظها:\n- man → **men**\n- woman → **women**\n- child → **children**\n\n**الخطأ الشائع:** أن نقول «two man» أو «three child». الصحيح: **two men**, **three children**. ومع الجمع نستخدم **are** وليس is."
         },
         {
           "type": "table",
           "headers": [
-            "لتقول",
-            "العبارة"
+            "المفرد",
+            "الجمع",
+            "القاعدة"
           ],
           "rows": [
             [
-              "مهنته",
-              "He's a… / She's a…"
+              "a seller",
+              "sellers",
+              "+ s"
             ],
             [
-              "مكان العمل",
-              "He works at / in…"
+              "a customer",
+              "customers",
+              "+ s"
             ],
             [
-              "الوقت",
-              "She starts work at…"
+              "a bus",
+              "buses",
+              "+ es"
             ],
             [
-              "لا يعمل",
-              "He doesn't work on…"
+              "a man",
+              "men",
+              "شاذ"
+            ],
+            [
+              "a woman",
+              "women",
+              "شاذ"
+            ],
+            [
+              "a child",
+              "children",
+              "شاذ"
             ]
           ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Talk about the job of a person in your family or neighbourhood: what they do, where they work and their working day.",
-        "helpful_phrases": [
-          "My uncle is a…",
-          "He works at…",
-          "He starts work at…",
-          "She doesn't work on…",
-          "He likes his job because…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 75,
-        "rubric_focus": [
-          "present simple third person -s",
-          "jobs vocabulary"
-        ]
-      }
-    },
-    {
-      "id": "A1-05-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "اكتب عن مهنة",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) عن عمل شخص تعرفه. اقرأ المثال أولاً.\n\n**تذكّر:** works, teaches, goes, has… و doesn't + الفعل بدون s."
         },
         {
-          "type": "video",
-          "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: big / a / has / shop / butcher / The",
+            "answer": [
+              "The",
+              "butcher",
+              "has",
+              "a",
+              "big",
+              "shop"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The butcher has a big shop"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "My aunt Samira is a nurse. She works at a hospital in Seiyun. She starts work at seven in the morning and she finishes at three. She helps the doctors and she gives medicine to sick people. She doesn't work on Fridays. She likes her job because she helps people.",
-          "word_count": 50
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "A ___ is at the shop.",
+            "answer": "man",
+            "explanation_ar": "الكلمة الناقصة «man» (رجل)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «classroom» mean?",
+            "options": [
+              "امرأة",
+              "خيّاط",
+              "فصل دراسي",
+              "ميكانيكي"
+            ],
+            "answer": 2,
+            "explanation_ar": "«classroom» تعني «فصل دراسي». مثال: Our classroom is clean."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: child / Children / here / A / here. / is / are",
+            "answer": [
+              "A",
+              "child",
+              "is",
+              "here.",
+              "Children",
+              "are",
+              "here"
+            ],
+            "explanation_ar": "الترتيب الصحيح: A child is here. Children are here"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is at the bakery.",
+            "answer": "baker",
+            "explanation_ar": "الكلمة الناقصة «baker» (خبّاز)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about the job of a person you know. Use the present simple with he or she (works, goes, doesn't).",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write 3 sentences about people at a market. Use one plural: Two men are ... Three children are ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "present simple third person -s",
-          "doesn't",
-          "jobs vocabulary"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-05-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-05-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- he / she / it + فعل + **s**: works, teaches, goes, has, studies.\n- النفي **doesn't** + الفعل بدون s.\n- السؤال **Does** he…? / **What does** she do?\n- المهن: doctor, nurse, engineer, farmer, fisherman, driver, shopkeeper."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gBhK2m_CdQc",
-          "video_title": "تكملة كلمات الوظائف — الحلقة 5",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 733,
-          "optional": true,
-          "approx_size_mb": 49
+          "markdown_ar": "سالم وأبوه في السوق. **استمع:** من هم الأشخاص الذين يراهم سالم؟ وكم عددهم؟"
         },
         {
           "type": "story",
-          "id": "A1-05-s1",
-          "title_ar": "الحلقة 5: في ميناء المكلا",
+          "id": "A1-05-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Hamza",
-              "text_en": "Look at the ships! What does your mother do, Reem?",
-              "text_ar": "انظري إلى السفن! ماذا تعمل أمك يا ريم؟"
+              "speaker": "Salem",
+              "text_en": "Look, Father! There are many people at the market.",
+              "text_ar": "انظر يا أبي! أناس كثيرون في السوق."
             },
             {
-              "speaker": "Reem",
-              "text_en": "She's an engineer. She works at the port.",
-              "text_ar": "هي مهندسة. تعمل في الميناء."
+              "speaker": "Father",
+              "text_en": "Yes. The baker is there.",
+              "text_ar": "نعم. الخبّاز هناك."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Does she work on Fridays?",
-              "text_ar": "هل تعمل يوم الجمعة؟"
+              "speaker": "Salem",
+              "text_en": "And the butcher has many customers.",
+              "text_ar": "والجزّار عنده زبائن كثيرون."
             },
             {
-              "speaker": "Reem",
-              "text_en": "No, she doesn't. On Fridays she visits my grandmother.",
-              "text_ar": "لا. يوم الجمعة تزور جدتي."
+              "speaker": "Father",
+              "text_en": "Two men and a woman are at his shop.",
+              "text_ar": "رجلان وامرأة عند دكانه."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "My father doesn't work on Fridays too.",
-              "text_ar": "وأبي أيضاً لا يعمل يوم الجمعة."
+              "speaker": "Salem",
+              "text_en": "The children are with their mothers.",
+              "text_ar": "الأطفال مع أمهاتهم."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "Look at the tailor. He is a good tailor.",
+              "text_ar": "انظر إلى الخيّاط. إنه خيّاط ماهر."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "My uncle is a mechanic. His shop is here.",
+              "text_ar": "عمي ميكانيكي. محله هنا."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "Good. Let us go to the baker.",
+              "text_ar": "جيد. لنذهب إلى الخبّاز."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My brother ___ at university.",
+            "id": "A1-05-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"And the butcher has many customers.\"",
             "options": [
-              "study",
-              "studys",
-              "studies"
+              "True",
+              "False"
             ],
-            "answer": 2,
-            "explanation_ar": "ساكن + y ← ies: studies."
+            "answer": 0,
+            "explanation_ar": "الذي قال «And the butcher has many customers.» هو Salem."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e18",
-            "skill": "grammar",
+            "id": "A1-05-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "What ___ your mother do? — She's a teacher.",
+            "prompt": "What does «customer» mean?",
             "options": [
-              "do",
-              "does",
-              "is"
+              "فصل دراسي",
+              "خبّاز",
+              "خيّاط",
+              "زبون"
             ],
-            "answer": 1,
-            "explanation_ar": "مع your mother (she) نقول What does."
+            "answer": 3,
+            "explanation_ar": "«customer» تعني «زبون». مثال: A customer is at the shop."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-05-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-05-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "My father ___ a shop in the market. (have)",
-            "answer": "has",
-            "explanation_ar": "have مع he تصبح has."
+            "id": "A1-05-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Father says: \"Look at the tailor. He is a good tailor.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Look at the tailor. He is a good tailor.» هو Father."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «classroom» mean?",
+            "options": [
+              "فصل دراسي",
+              "جزّار",
+              "صيّاد سمك",
+              "خيّاط"
+            ],
+            "answer": 0,
+            "explanation_ar": "«classroom» تعني «فصل دراسي». مثال: Our classroom is clean."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe a market you know. Say who is there: sellers, customers, men, women and children. Use plural words.",
+        "helpful_phrases": [
+          "Sellers are ...",
+          "A man is ...",
+          "Women are ...",
+          "Children are ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-05-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-05-L4-s1",
+          "title_ar": "يوم في سوق الحديدة",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Good morning, Salem!",
+              "text_ar": "صباح الخير يا سالم!"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Hello, Mona. Look at the fishermen.",
+              "text_ar": "مرحباً يا منى. انظري إلى الصيّادين."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "They are from Hodeidah.",
+              "text_ar": "هم من الحديدة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Customers are at their shops.",
+              "text_ar": "الزبائن عند محلاتهم."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Women and children are here too.",
+              "text_ar": "النساء والأطفال هنا أيضاً."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "A baker is at the bakery.",
+              "text_ar": "الخبّاز في المخبز."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Is the baker a good man?",
+              "text_ar": "هل الخبّاز رجل طيب؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, he is a very good man.",
+              "text_ar": "نعم، هو رجل طيب جداً."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «butcher» mean?",
+            "options": [
+              "بائع",
+              "جزّار",
+              "كتاب",
+              "رجل"
+            ],
+            "answer": 1,
+            "explanation_ar": "«butcher» تعني «جزّار». مثال: The butcher has a big shop."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Yes, he is a very good ___.",
+            "answer": "man",
+            "explanation_ar": "الكلمة الناقصة «man» (رجل)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / mechanic / a / My / uncle",
+            "answer": [
+              "My",
+              "uncle",
+              "is",
+              "a",
+              "mechanic"
+            ],
+            "explanation_ar": "الترتيب الصحيح: My uncle is a mechanic"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"A baker is at the bakery.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «A baker is at the bakery.» هو Salem."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «baker» mean?",
+            "options": [
+              "امرأة",
+              "جزّار",
+              "خبّاز",
+              "زبون"
+            ],
+            "answer": 2,
+            "explanation_ar": "«baker» تعني «خبّاز». مثال: The baker is at the bakery."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-05-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is from Hodeidah.",
+            "answer": "fisherman",
+            "explanation_ar": "الكلمة الناقصة «fisherman» (صيّاد سمك)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-05-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend about the people you see at a market: say what they do and how many they are. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "A seller is ...",
+          "Two customers are ...",
+          "Women and men are ...",
+          "Children are ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -861,132 +701,132 @@
     "questions": [
       {
         "id": "A1-05-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "She ___ in a hospital.",
+        "prompt": "What does «tailor» mean?",
         "options": [
-          "work",
-          "works",
-          "working"
+          "امرأة",
+          "بائع",
+          "خيّاط",
+          "جزّار"
         ],
-        "answer": 1,
-        "explanation_ar": "مع she نضيف s: works."
+        "answer": 2,
+        "explanation_ar": "«tailor» تعني «خيّاط». مثال: A tailor is in the market."
       },
       {
         "id": "A1-05-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "He ___ to work by bus.",
-        "options": [
-          "go",
-          "gos",
-          "goes"
-        ],
-        "answer": 2,
-        "explanation_ar": "go مع he تصبح goes."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Look at the ___. He is a good tailor.",
+        "answer": "tailor",
+        "explanation_ar": "الكلمة الناقصة «tailor» (خيّاط)."
       },
       {
         "id": "A1-05-q3",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "My father ___ work on Friday.",
-        "options": [
-          "don't",
-          "doesn't",
-          "not"
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: fisherman / Hodeidah / from / The / is",
+        "answer": [
+          "The",
+          "fisherman",
+          "is",
+          "from",
+          "Hodeidah"
         ],
-        "answer": 1,
-        "explanation_ar": "النفي مع he: doesn't."
+        "explanation_ar": "الترتيب الصحيح: The fisherman is from Hodeidah"
       },
       {
         "id": "A1-05-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "___ he teach maths? — No, he doesn't.",
-        "answer": "Does",
-        "explanation_ar": "السؤال مع he يبدأ بـ Does."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «man» mean?",
+        "options": [
+          "امرأة",
+          "رجل",
+          "زبون",
+          "بائع"
+        ],
+        "answer": 1,
+        "explanation_ar": "«man» تعني «رجل». مثال: A man is at the shop."
       },
       {
         "id": "A1-05-q5",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "A ___ grows dates and vegetables.",
-        "options": [
-          "fisherman",
-          "farmer",
-          "doctor"
-        ],
-        "answer": 1,
-        "explanation_ar": "المزارع farmer يزرع."
+        "kind": "fill_blank",
+        "prompt": "A tailor and a ___ are at the market.",
+        "answer": "mechanic",
+        "explanation_ar": "الكلمة الناقصة «mechanic» (ميكانيكي)."
       },
       {
         "id": "A1-05-q6",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Salem says: \"A baker is at the bakery.\"",
         "options": [
-          "Does she works here?",
-          "Does she work here?",
-          "Do she work here?"
+          "True",
+          "False"
         ],
-        "answer": 1,
-        "explanation_ar": "بعد Does يأتي الفعل بدون s."
+        "answer": 0,
+        "explanation_ar": "الذي قال «A baker is at the bakery.» هو Salem."
       },
       {
         "id": "A1-05-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات: does / what / do / your / brother",
-        "answer": [
-          "What",
-          "does",
-          "your",
-          "brother",
-          "do"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «baker» mean?",
+        "options": [
+          "صيّاد سمك",
+          "امرأة",
+          "جزّار",
+          "خبّاز"
         ],
-        "explanation_ar": "What + does + الفاعل + do؟ = ماذا يعمل؟"
+        "answer": 3,
+        "explanation_ar": "«baker» تعني «خبّاز». مثال: The baker is at the bakery."
       },
       {
         "id": "A1-05-q8",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "Ships stop at the ___.",
-        "options": [
-          "office",
-          "port",
-          "hospital"
-        ],
-        "answer": 1,
-        "explanation_ar": "السفن ترسو في الميناء port."
+        "kind": "fill_blank",
+        "prompt": "A ___ is here. Children are here.",
+        "answer": "child",
+        "explanation_ar": "الكلمة الناقصة «child» (طفل)."
       },
       {
         "id": "A1-05-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Ali is a driver. He drives a bus from Seiyun to Mukalla.» What does Ali do?",
-        "options": [
-          "He's a driver.",
-          "He's a farmer.",
-          "He's a teacher."
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: the / And / butcher / many / customers / has",
+        "answer": [
+          "And",
+          "the",
+          "butcher",
+          "has",
+          "many",
+          "customers"
         ],
-        "answer": 0,
-        "explanation_ar": "في النص: Ali is a driver."
+        "explanation_ar": "الترتيب الصحيح: And the butcher has many customers"
       },
       {
         "id": "A1-05-q10",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "Mr. Fuad ___ English. (teach)",
-        "answer": "teaches",
-        "explanation_ar": "بعد ch نضيف es: teaches."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «seller» mean?",
+        "options": [
+          "صيّاد سمك",
+          "امرأة",
+          "ميكانيكي",
+          "بائع"
+        ],
+        "answer": 3,
+        "explanation_ar": "«seller» تعني «بائع». مثال: The seller is happy."
       }
     ]
   },
-  "context_note": "ميناء المكلا، مستشفى ابن سينا، الصيادون وسوق السمك في المكلا، حي الديس.",
-  "stop_ar": "ميناء المكلا",
+  "stop_ar": "السوق الشعبي",
   "roleplay": {
-    "character_ar": "المهندسة سعاد في ميناء المكلا",
-    "scenario_en": "You are Suad, an engineer at the port of Mukalla. Ask the student where people in their family work and what they do.",
-    "opening_en": "Hi! I work at the port. Where does your mother or father work?"
-  }
+    "character_ar": "عمّ سالم صاحب الدكان في السوق",
+    "scenario_en": "You are Salem's uncle, a shopkeeper in a Yemeni market. Talk about the people at the market: sellers, customers, baker, butcher, tailor, men, women, children. Use only very simple English and use plural words.",
+    "opening_en": "Welcome to the market! Look, there are many people here. Who is at the bakery?"
+  },
+  "context_note": "أشخاص في السوق"
 }

@@ -1,0 +1,852 @@
+{
+  "path": "english",
+  "code": "A1-14",
+  "version": 1,
+  "level": "A1",
+  "position": 14,
+  "title": "Clothes We Wear",
+  "topic": "قبل العيد تذهب هدى وأمها إلى متجر الملابس لشراء ملابس جديدة، وتسألان عن الألوان والأحجام.",
+  "grammar_point": "this / these, that / those; colours",
+  "can_do": [
+    "أسمّي الملابس وألوانها بالإنجليزية",
+    "أستخدم these و those مع الجمع",
+    "أسأل البائع عن لون الملابس وسعرها"
+  ],
+  "vocab": [
+    {
+      "id": "A1-14-v1",
+      "word": "shirt",
+      "part_of_speech": "noun",
+      "meaning_ar": "قميص",
+      "example_en": "This is a white shirt."
+    },
+    {
+      "id": "A1-14-v2",
+      "word": "trousers",
+      "part_of_speech": "noun",
+      "meaning_ar": "بنطلون",
+      "example_en": "These trousers are black."
+    },
+    {
+      "id": "A1-14-v3",
+      "word": "dress",
+      "part_of_speech": "noun",
+      "meaning_ar": "فستان",
+      "example_en": "That dress is beautiful."
+    },
+    {
+      "id": "A1-14-v4",
+      "word": "shoes",
+      "part_of_speech": "noun",
+      "meaning_ar": "حذاء",
+      "example_en": "Those shoes are new."
+    },
+    {
+      "id": "A1-14-v5",
+      "word": "socks",
+      "part_of_speech": "noun",
+      "meaning_ar": "جوارب",
+      "example_en": "These socks are white."
+    },
+    {
+      "id": "A1-14-v6",
+      "word": "hat",
+      "part_of_speech": "noun",
+      "meaning_ar": "قبعة",
+      "example_en": "That hat is small."
+    },
+    {
+      "id": "A1-14-v7",
+      "word": "jacket",
+      "part_of_speech": "noun",
+      "meaning_ar": "سترة",
+      "example_en": "This jacket is blue."
+    },
+    {
+      "id": "A1-14-v8",
+      "word": "scarf",
+      "part_of_speech": "noun",
+      "meaning_ar": "وشاح",
+      "example_en": "That scarf is red."
+    },
+    {
+      "id": "A1-14-v9",
+      "word": "wear",
+      "part_of_speech": "verb",
+      "meaning_ar": "يرتدي",
+      "example_en": "I wear a white shirt."
+    },
+    {
+      "id": "A1-14-v10",
+      "word": "red",
+      "part_of_speech": "adjective",
+      "meaning_ar": "أحمر",
+      "example_en": "The scarf is red."
+    },
+    {
+      "id": "A1-14-v11",
+      "word": "blue",
+      "part_of_speech": "adjective",
+      "meaning_ar": "أزرق",
+      "example_en": "The jacket is blue."
+    },
+    {
+      "id": "A1-14-v12",
+      "word": "white",
+      "part_of_speech": "adjective",
+      "meaning_ar": "أبيض",
+      "example_en": "The shirt is white."
+    },
+    {
+      "id": "A1-14-v13",
+      "word": "black",
+      "part_of_speech": "adjective",
+      "meaning_ar": "أسود",
+      "example_en": "The shoes are black."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-14-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: ملابس نرتديها",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "قبل العيد تمتلئ متاجر الملابس بالناس. ماذا ترتدي أنت في العيد؟ وما لونك المفضل؟ في هذا الدرس ستسمّي الملابس والألوان، وتتعلم كيف تقول «هذا» و«هؤلاء» بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "pqGg9MiP2ic",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 14",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "shirt",
+              "قميص",
+              "This is a white shirt."
+            ],
+            [
+              "trousers",
+              "بنطلون",
+              "These trousers are black."
+            ],
+            [
+              "dress",
+              "فستان",
+              "That dress is beautiful."
+            ],
+            [
+              "shoes",
+              "حذاء",
+              "Those shoes are new."
+            ],
+            [
+              "socks",
+              "جوارب",
+              "These socks are white."
+            ],
+            [
+              "hat",
+              "قبعة",
+              "That hat is small."
+            ],
+            [
+              "jacket",
+              "سترة",
+              "This jacket is blue."
+            ],
+            [
+              "scarf",
+              "وشاح",
+              "That scarf is red."
+            ],
+            [
+              "wear",
+              "يرتدي",
+              "I wear a white shirt."
+            ],
+            [
+              "red",
+              "أحمر",
+              "The scarf is red."
+            ],
+            [
+              "blue",
+              "أزرق",
+              "The jacket is blue."
+            ],
+            [
+              "white",
+              "أبيض",
+              "The shirt is white."
+            ],
+            [
+              "black",
+              "أسود",
+              "The shoes are black."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "I wear a white shirt. This is a blue jacket. These trousers are black. That dress is beautiful. Those shoes are new. These socks are white. That hat is small. The scarf is red."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hat» mean?",
+            "options": [
+              "سترة",
+              "أحمر",
+              "قبعة",
+              "جوارب"
+            ],
+            "answer": 2,
+            "explanation_ar": "«hat» تعني «قبعة». مثال: That hat is small."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "This ___ is blue.",
+            "answer": "jacket",
+            "explanation_ar": "الكلمة الناقصة «jacket» (سترة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «shoes» mean?",
+            "options": [
+              "قميص",
+              "أزرق",
+              "قبعة",
+              "حذاء"
+            ],
+            "answer": 3,
+            "explanation_ar": "«shoes» تعني «حذاء». مثال: Those shoes are new."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is red.",
+            "answer": "scarf",
+            "explanation_ar": "الكلمة الناقصة «scarf» (وشاح)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «wear» mean?",
+            "options": [
+              "أبيض",
+              "أسود",
+              "يرتدي",
+              "بنطلون"
+            ],
+            "answer": 2,
+            "explanation_ar": "«wear» تعني «يرتدي». مثال: I wear a white shirt."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-14-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-14-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: this / these, that / those; colours",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "This shirt is white. These shirts are white. That scarf is red. Those scarves are red."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "عرفنا في وحدة سابقة **this / that** مع الشيء الواحد. وللجمع (أكثر من واحد) نستخدم:\n\n- **this** (هذا، قريب، واحد) → **these** (هؤلاء، قريب، جمع)\n- **that** (ذلك، بعيد، واحد) → **those** (أولئك، بعيد، جمع)\n\nمثال: **This** shirt is white. = **These** shirts are white. وكذلك **That** scarf → **Those** scarves.\n\nنقول: **These shoes are black.** (is → are مع الجمع). والألوان صفات تأتي **قبل الاسم**: a **red** scarf.\n\n**الخطأ الشائع:** «This shoes». الصحيح: **These shoes** لأن shoes جمع."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "المفرد",
+            "الجمع",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "this",
+              "these",
+              "These socks are white."
+            ],
+            [
+              "that",
+              "those",
+              "Those shoes are black."
+            ],
+            [
+              "is",
+              "are",
+              "This shirt is blue. These shirts are blue."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: shoes / black / are / The",
+            "answer": [
+              "The",
+              "shoes",
+              "are",
+              "black"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The shoes are black"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "These ___ are black.",
+            "answer": "trousers",
+            "explanation_ar": "الكلمة الناقصة «trousers» (بنطلون)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «white» mean?",
+            "options": [
+              "وشاح",
+              "جوارب",
+              "أحمر",
+              "أبيض"
+            ],
+            "answer": 3,
+            "explanation_ar": "«white» تعني «أبيض». مثال: The shirt is white."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: scarves / red / Those / are",
+            "answer": [
+              "Those",
+              "scarves",
+              "are",
+              "red"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Those scarves are red"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is blue.",
+            "answer": "jacket",
+            "explanation_ar": "الكلمة الناقصة «jacket» (سترة)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about clothes and colours. Use this / these: This shirt is ... These shoes are ...",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-14-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "هدى وأمها في متجر الملابس. **استمع:** ما الملابس التي تختارها هدى؟ وما ألوانها؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-14-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Good morning! I need a dress for Eid.",
+              "text_ar": "صباح الخير! أحتاج فستاناً للعيد."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Look at this dress. It is blue.",
+              "text_ar": "انظري إلى هذا الفستان. إنه أزرق."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I like it. What about those shoes?",
+              "text_ar": "أعجبني. وماذا عن تلك الأحذية؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "These shoes are black. Those shoes are white.",
+              "text_ar": "هذه سوداء وتلك بيضاء."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I like the white shoes.",
+              "text_ar": "أحب الأحذية البيضاء."
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "And a scarf, Huda?",
+              "text_ar": "وماذا عن وشاح يا هدى؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, that red scarf is nice.",
+              "text_ar": "نعم، ذلك الوشاح الأحمر جميل."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Thank you. Happy Eid!",
+              "text_ar": "شكراً. عيد مبارك!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mother says: \"And a scarf, Huda?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «And a scarf, Huda?» هو Mother."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «white» mean?",
+            "options": [
+              "قبعة",
+              "أبيض",
+              "أسود",
+              "أزرق"
+            ],
+            "answer": 1,
+            "explanation_ar": "«white» تعني «أبيض». مثال: The shirt is white."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"Look at this dress. It is blue.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Look at this dress. It is blue.» هو Seller."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «face» mean?",
+            "options": [
+              "فستان",
+              "قميص",
+              "وشاح",
+              "وجه"
+            ],
+            "answer": 3,
+            "explanation_ar": "«face» تعني «وجه». مثال: Wash your face."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are in a clothes shop. Say what you want to buy and what colour: I need a ... This ... is ...",
+        "helpful_phrases": [
+          "I need a ...",
+          "This shirt is ...",
+          "These shoes are ...",
+          "I like it."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-14-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-14-L4-s1",
+          "title_ar": "ملابس المدرسة",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Good morning, Salem! This is my new bag.",
+              "text_ar": "صباح الخير يا سالم! هذه حقيبتي الجديدة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "It is nice. I wear a white shirt to school.",
+              "text_ar": "إنها جميلة. أنا أرتدي قميصاً أبيض إلى المدرسة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "And black trousers?",
+              "text_ar": "وبنطلوناً أسود؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes. These are my school clothes.",
+              "text_ar": "نعم. هذه ملابس المدرسة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Those shoes are new, right?",
+              "text_ar": "تلك الأحذية جديدة، أليس كذلك؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, they are new.",
+              "text_ar": "نعم، هي جديدة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "My hat is red.",
+              "text_ar": "قبعتي حمراء."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I like red.",
+              "text_ar": "أحب اللون الأحمر."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «face» mean?",
+            "options": [
+              "قميص",
+              "وشاح",
+              "وجه",
+              "أحمر"
+            ],
+            "answer": 2,
+            "explanation_ar": "«face» تعني «وجه». مثال: Wash your face."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "It is nice. I wear a white ___ to school.",
+            "answer": "shirt",
+            "explanation_ar": "الكلمة الناقصة «shirt» (قميص)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: shoes / are / new, / right / Those",
+            "answer": [
+              "Those",
+              "shoes",
+              "are",
+              "new,",
+              "right"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Those shoes are new, right"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Yes, they are new.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Yes, they are new.» هو Salem."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «black» mean?",
+            "options": [
+              "يرتدي",
+              "أسود",
+              "حذاء",
+              "قبعة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«black» تعني «أسود». مثال: The shoes are black."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-14-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Those ___ are new, right?",
+            "answer": "shoes",
+            "explanation_ar": "الكلمة الناقصة «shoes» (حذاء)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-14-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe the clothes you wear to school and for Eid. Say the colours. Use this / these / that / those at least twice.",
+        "helpful_phrases": [
+          "I wear a ...",
+          "This ... is ...",
+          "These ... are ...",
+          "I like ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-14-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «jacket» mean?",
+        "options": [
+          "يرتدي",
+          "سترة",
+          "حذاء",
+          "أحمر"
+        ],
+        "answer": 1,
+        "explanation_ar": "«jacket» تعني «سترة». مثال: This jacket is blue."
+      },
+      {
+        "id": "A1-14-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "That ___ is beautiful.",
+        "answer": "dress",
+        "explanation_ar": "الكلمة الناقصة «dress» (فستان)."
+      },
+      {
+        "id": "A1-14-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: are / These / school / clothes / Yes. / my",
+        "answer": [
+          "Yes.",
+          "These",
+          "are",
+          "my",
+          "school",
+          "clothes"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Yes. These are my school clothes"
+      },
+      {
+        "id": "A1-14-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «red» mean?",
+        "options": [
+          "قميص",
+          "وشاح",
+          "أبيض",
+          "أحمر"
+        ],
+        "answer": 3,
+        "explanation_ar": "«red» تعني «أحمر». مثال: The scarf is red."
+      },
+      {
+        "id": "A1-14-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "And a ___, Huda?",
+        "answer": "scarf",
+        "explanation_ar": "الكلمة الناقصة «scarf» (وشاح)."
+      },
+      {
+        "id": "A1-14-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Huda says: \"Look at this dress. It is blue.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation_ar": "الذي قال «Look at this dress. It is blue.» هو Seller."
+      },
+      {
+        "id": "A1-14-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «hat» mean?",
+        "options": [
+          "سترة",
+          "أحمر",
+          "فستان",
+          "قبعة"
+        ],
+        "answer": 3,
+        "explanation_ar": "«hat» تعني «قبعة». مثال: That hat is small."
+      },
+      {
+        "id": "A1-14-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "These ___ are white.",
+        "answer": "socks",
+        "explanation_ar": "الكلمة الناقصة «socks» (جوارب)."
+      },
+      {
+        "id": "A1-14-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: Salem! / bag / new / morning, / my / is / This / Good",
+        "answer": [
+          "Good",
+          "morning,",
+          "Salem!",
+          "This",
+          "is",
+          "my",
+          "new",
+          "bag"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Good morning, Salem! This is my new bag"
+      },
+      {
+        "id": "A1-14-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «scarf» mean?",
+        "options": [
+          "أحمر",
+          "وشاح",
+          "سترة",
+          "قميص"
+        ],
+        "answer": 1,
+        "explanation_ar": "«scarf» تعني «وشاح». مثال: That scarf is red."
+      }
+    ]
+  },
+  "stop_ar": "متجر الملابس",
+  "roleplay": {
+    "character_ar": "بائع في متجر الملابس",
+    "scenario_en": "You are a seller in a clothes shop in Yemen before Eid. A customer wants clothes. Show items (shirt, trousers, dress, shoes, socks, hat, jacket, scarf) and say colours (red, blue, white, black). Use this / these / that / those. Use only very simple English.",
+    "opening_en": "Welcome! Look at this blue shirt. Do you like it?"
+  },
+  "context_note": "ملابس نرتديها"
+}

@@ -1,841 +1,698 @@
 {
   "path": "english",
   "code": "A1-04",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 4,
-  "title": "Home and School",
-  "topic": "الفصل والبيت والمدرسة في المكلا",
-  "grammar_point": "there is / there are + a / an + plural nouns",
+  "title": "Inside the Classroom",
+  "topic": "في أول حصة، تسأل الأستاذة هدى طلابها عن الأشياء الموجودة في الفصل، ويجيب الطلاب باستخدام this و that.",
+  "grammar_point": "What is this? It is a ... (this / that)",
   "can_do": [
-    "أصف ما يوجد في فصلي ومدرستي",
-    "أسأل هل يوجد شيء في مكان ما وأفهم الإجابة",
-    "أفهم وصفاً قصيراً لمدرسة"
+    "أسمّي أدوات الفصل بالإنجليزية",
+    "أسأل «ما هذا؟» وأجيب عنه",
+    "أفرّق بين this (القريب) و that (البعيد)"
   ],
   "vocab": [
     {
       "id": "A1-04-v1",
       "word": "classroom",
-      "ipa": "/ˈklɑːsruːm/",
       "part_of_speech": "noun",
-      "meaning_ar": "فصل (غرفة الدراسة)",
-      "example_en": "Our classroom is big."
+      "meaning_ar": "فصل دراسي",
+      "example_en": "Our classroom is clean."
     },
     {
       "id": "A1-04-v2",
-      "word": "desk",
-      "ipa": "/desk/",
+      "word": "book",
       "part_of_speech": "noun",
-      "meaning_ar": "طاولة الطالب / مكتب",
-      "example_en": "There is a book on my desk."
+      "meaning_ar": "كتاب",
+      "example_en": "This is my book."
     },
     {
       "id": "A1-04-v3",
-      "word": "chair",
-      "ipa": "/tʃeə/",
+      "word": "notebook",
       "part_of_speech": "noun",
-      "meaning_ar": "كرسي",
-      "example_en": "There are thirty chairs in the room."
+      "meaning_ar": "دفتر",
+      "example_en": "That is a notebook."
     },
     {
       "id": "A1-04-v4",
-      "word": "board",
-      "ipa": "/bɔːd/",
+      "word": "pen",
       "part_of_speech": "noun",
-      "meaning_ar": "سبورة",
-      "example_en": "The teacher writes on the board."
+      "meaning_ar": "قلم حبر",
+      "example_en": "I have a blue pen."
     },
     {
       "id": "A1-04-v5",
-      "word": "book",
-      "ipa": "/bʊk/",
+      "word": "pencil",
       "part_of_speech": "noun",
-      "meaning_ar": "كتاب",
-      "example_en": "This is my English book."
+      "meaning_ar": "قلم رصاص",
+      "example_en": "This is a pencil."
     },
     {
       "id": "A1-04-v6",
-      "word": "notebook",
-      "ipa": "/ˈnəʊtbʊk/",
+      "word": "bag",
       "part_of_speech": "noun",
-      "meaning_ar": "دفتر",
-      "example_en": "I have a red notebook."
+      "meaning_ar": "حقيبة",
+      "example_en": "My bag is on the chair."
     },
     {
       "id": "A1-04-v7",
-      "word": "pen",
-      "ipa": "/pen/",
+      "word": "desk",
       "part_of_speech": "noun",
-      "meaning_ar": "قلم حبر",
-      "example_en": "Can I use your pen?"
+      "meaning_ar": "مكتب الطالب",
+      "example_en": "That is my desk."
     },
     {
       "id": "A1-04-v8",
-      "word": "pencil",
-      "ipa": "/ˈpensl/",
+      "word": "chair",
       "part_of_speech": "noun",
-      "meaning_ar": "قلم رصاص",
-      "example_en": "There is a pencil in my bag."
+      "meaning_ar": "كرسي",
+      "example_en": "This is a chair."
     },
     {
       "id": "A1-04-v9",
-      "word": "bag",
-      "ipa": "/bæɡ/",
+      "word": "board",
       "part_of_speech": "noun",
-      "meaning_ar": "حقيبة",
-      "example_en": "My bag is heavy."
+      "meaning_ar": "سبّورة",
+      "example_en": "The teacher is at the board."
     },
     {
       "id": "A1-04-v10",
-      "word": "window",
-      "ipa": "/ˈwɪndəʊ/",
+      "word": "door",
       "part_of_speech": "noun",
-      "meaning_ar": "نافذة",
-      "example_en": "There are four windows in our classroom."
+      "meaning_ar": "باب",
+      "example_en": "That is the door."
     },
     {
       "id": "A1-04-v11",
-      "word": "door",
-      "ipa": "/dɔː/",
+      "word": "window",
       "part_of_speech": "noun",
-      "meaning_ar": "باب",
-      "example_en": "The door is open."
-    },
-    {
-      "id": "A1-04-v12",
-      "word": "library",
-      "ipa": "/ˈlaɪbrəri/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مكتبة",
-      "example_en": "There is a small library in our school."
-    },
-    {
-      "id": "A1-04-v13",
-      "word": "playground",
-      "ipa": "/ˈpleɪɡraʊnd/",
-      "part_of_speech": "noun",
-      "meaning_ar": "ساحة / ملعب المدرسة",
-      "example_en": "The students are in the playground."
-    },
-    {
-      "id": "A1-04-v14",
-      "word": "lab",
-      "ipa": "/læb/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مختبر / معمل",
-      "example_en": "There is a science lab in our school."
-    },
-    {
-      "id": "A1-04-v15",
-      "word": "room",
-      "ipa": "/ruːm/",
-      "part_of_speech": "noun",
-      "meaning_ar": "غرفة",
-      "example_en": "There are five rooms in our house in Mukalla."
+      "meaning_ar": "نافذة",
+      "example_en": "The window is open."
     }
   ],
   "lessons": [
     {
-      "id": "A1-04-l1",
+      "id": "A1-04-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "أشياء في المدرسة",
-      "est_minutes": 20,
+      "title": "مفردات: داخل الفصل الدراسي",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "انظر حولك في الفصل وفي البيت: ماذا ترى؟ تعلّم أسماء الأشياء والأماكن في المدرسة والبيت واستمع لنطقها."
+          "markdown_ar": "انظر حولك الآن: ما هي الأشياء التي تراها في غرفتك أو في فصلك؟ كتاب؟ قلم؟ كرسي؟ في هذا الدرس ستسمّي هذه الأشياء بالإنجليزية وتسأل عنها بسؤال مهم جداً: **What is this?** (ما هذا؟). شاهد الفيديو أولاً."
         },
         {
           "type": "video",
           "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين: كلمات المنزل والفصل : الحلقة 4",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
               "classroom",
-              "/ˈklɑːsruːm/",
-              "فصل (غرفة الدراسة)",
-              "Our classroom is big."
-            ],
-            [
-              "desk",
-              "/desk/",
-              "طاولة الطالب / مكتب",
-              "There is a book on my desk."
-            ],
-            [
-              "chair",
-              "/tʃeə/",
-              "كرسي",
-              "There are thirty chairs in the room."
-            ],
-            [
-              "board",
-              "/bɔːd/",
-              "سبورة",
-              "The teacher writes on the board."
+              "فصل دراسي",
+              "Our classroom is clean."
             ],
             [
               "book",
-              "/bʊk/",
               "كتاب",
-              "This is my English book."
+              "This is my book."
             ],
             [
               "notebook",
-              "/ˈnəʊtbʊk/",
               "دفتر",
-              "I have a red notebook."
+              "That is a notebook."
             ],
             [
               "pen",
-              "/pen/",
               "قلم حبر",
-              "Can I use your pen?"
+              "I have a blue pen."
             ],
             [
               "pencil",
-              "/ˈpensl/",
               "قلم رصاص",
-              "There is a pencil in my bag."
+              "This is a pencil."
             ],
             [
               "bag",
-              "/bæɡ/",
               "حقيبة",
-              "My bag is heavy."
+              "My bag is on the chair."
+            ],
+            [
+              "desk",
+              "مكتب الطالب",
+              "That is my desk."
+            ],
+            [
+              "chair",
+              "كرسي",
+              "This is a chair."
+            ],
+            [
+              "board",
+              "سبّورة",
+              "The teacher is at the board."
+            ],
+            [
+              "door",
+              "باب",
+              "That is the door."
             ],
             [
               "window",
-              "/ˈwɪndəʊ/",
               "نافذة",
-              "There are four windows in our classroom."
-            ],
-            [
-              "door",
-              "/dɔː/",
-              "باب",
-              "The door is open."
-            ],
-            [
-              "library",
-              "/ˈlaɪbrəri/",
-              "مكتبة",
-              "There is a small library in our school."
-            ],
-            [
-              "playground",
-              "/ˈpleɪɡraʊnd/",
-              "ساحة / ملعب المدرسة",
-              "The students are in the playground."
-            ],
-            [
-              "lab",
-              "/læb/",
-              "مختبر / معمل",
-              "There is a science lab in our school."
-            ],
-            [
-              "room",
-              "/ruːm/",
-              "غرفة",
-              "There are five rooms in our house in Mukalla."
+              "The window is open."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "classroom. Our classroom is big.\ndesk. There is a book on my desk.\nchair. There are thirty chairs in the room.\nboard. The teacher writes on the board.\nbook. This is my English book.\nnotebook. I have a red notebook.\npen. Can I use your pen?\npencil. There is a pencil in my bag.\nbag. My bag is heavy.\nwindow. There are four windows in our classroom.\ndoor. The door is open.\nlibrary. There is a small library in our school.\nplayground. The students are in the playground.\nlab. There is a science lab in our school.\nroom. There are five rooms in our house in Mukalla."
+          "text_en": "This is my classroom. This is a book. That is a notebook. I have a pen and a pencil. My bag is on the chair. That is my desk. The teacher is at the board. That is the door. This is the window."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-04-e1",
+            "id": "A1-04-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "The teacher writes on the ___.",
+            "prompt": "What does «window» mean?",
             "options": [
-              "door",
-              "board",
-              "bag"
+              "عائلة",
+              "باب",
+              "مكتب الطالب",
+              "نافذة"
             ],
-            "answer": 1,
-            "explanation_ar": "المعلم يكتب على السبورة board."
+            "answer": 3,
+            "explanation_ar": "«window» تعني «نافذة». مثال: The window is open."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-04-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "We read books in the ___.",
-            "options": [
-              "library",
-              "playground",
-              "window"
-            ],
-            "answer": 0,
-            "explanation_ar": "نقرأ الكتب في المكتبة library."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e3",
+            "id": "A1-04-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "I write with a ___. (قلم رصاص)",
+            "prompt": "I have a blue ___.",
+            "answer": "pen",
+            "explanation_ar": "الكلمة الناقصة «pen» (قلم حبر)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «door» mean?",
+            "options": [
+              "قلم حبر",
+              "باب",
+              "فصل دراسي",
+              "نافذة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«door» تعني «باب». مثال: That is the door."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "This is a ___.",
             "answer": "pencil",
-            "explanation_ar": "قلم الرصاص = pencil."
+            "explanation_ar": "الكلمة الناقصة «pencil» (قلم رصاص)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pen» mean?",
+            "options": [
+              "باب",
+              "أب",
+              "سبّورة",
+              "قلم حبر"
+            ],
+            "answer": 3,
+            "explanation_ar": "«pen» تعني «قلم حبر». مثال: I have a blue pen."
           }
         },
         {
           "type": "game",
-          "id": "A1-04-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g4",
-          "game": "pronounce"
+          "id": "A1-04-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-04-l2",
+      "id": "A1-04-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "there is / there are",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "نستخدم **there is** و **there are** لنقول إن شيئاً **موجود** في مكان («يوجد»).\n\n- **There is** + اسم مفرد: There is **a** board.\n- **There are** + اسم جمع: There are **thirty** chairs.\n- المختصر: **There's** a book."
-        },
-        {
-          "type": "video",
-          "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
-        },
-        {
-          "type": "table",
-          "headers": [
-            "الحالة",
-            "المفرد",
-            "الجمع"
-          ],
-          "rows": [
-            [
-              "إثبات",
-              "There is a lab.",
-              "There are two labs."
-            ],
-            [
-              "نفي",
-              "There isn't a library.",
-              "There aren't any windows."
-            ],
-            [
-              "سؤال",
-              "Is there a lab?",
-              "Are there any books?"
-            ],
-            [
-              "إجابة",
-              "Yes, there is. / No, there isn't.",
-              "Yes, there are. / No, there aren't."
-            ]
-          ]
-        },
-        {
-          "type": "text",
-          "markdown_ar": "**a أم an؟** نستخدم **an** قبل الكلمة التي تبدأ بصوت حرف علة (a, e, i, o, u): **an** English book, **an** office. وغير ذلك **a**: **a** desk, **a** pen.\n\n**الجمع:** نضيف **s** غالباً: book ← books. وبعد s و sh و ch و x نضيف **es**: class ← classes. وبعض الكلمات شاذة: man ← men, woman ← women, child ← children."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "There ___ a big window in our classroom.",
-            "options": [
-              "is",
-              "are",
-              "am"
-            ],
-            "answer": 0,
-            "explanation_ar": "window مفرد فنستخدم there is."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "There ___ forty students in my class.",
-            "options": [
-              "is",
-              "are",
-              "be"
-            ],
-            "answer": 1,
-            "explanation_ar": "forty students جمع فنستخدم there are."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "I have ___ English notebook.",
-            "options": [
-              "a",
-              "an",
-              "—"
-            ],
-            "answer": 1,
-            "explanation_ar": "English تبدأ بصوت حرف علة فنستخدم an."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "___ there a library in your school? — Yes, there is.",
-            "answer": "Is",
-            "explanation_ar": "السؤال عن مفرد يبدأ بـ Is there."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "جمع كلمة class:",
-            "options": [
-              "classs",
-              "classes",
-              "class's"
-            ],
-            "answer": 1,
-            "explanation_ar": "بعد s نضيف es: classes."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-04-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "مدرسة بلال الجديدة",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**بلال** انتقل إلى مدرسة جديدة في **المكلا**. استمع إلى حديثه مع صديقه **عمر**."
-        },
-        {
-          "type": "video",
-          "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
-        },
-        {
-          "type": "audio",
-          "text_en": "Omar: Hi, Bilal. How is your new school in Mukalla?\nBilal: It's great! It's big and it's near the sea.\nOmar: Is there a library?\nBilal: Yes, there is. There are a lot of books in English and Arabic.\nOmar: Are there any computers?\nBilal: Yes, there are ten computers in the lab. But there isn't a playground for football.\nOmar: Oh no! How many students are there in your class?\nBilal: There are thirty-five students."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e9",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "There is a library in Bilal's school.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 0,
-            "explanation_ar": "قال: Yes, there is."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How many computers are there in the lab?",
-            "options": [
-              "five",
-              "ten",
-              "thirty-five"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: there are ten computers in the lab."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "There is a football playground.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: there isn't a playground for football."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-04-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "مدرسة الفجر",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ وصف طالب لمدرسته في **المكلا**، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
-        },
-        {
-          "type": "reading",
-          "text_en": "Al-Fajr School is in Mukalla. It is an old school, but it is clean and nice. There are twelve classrooms and there is a big library. In my classroom, there are thirty desks and thirty chairs. There is a board and there are four windows. There isn't a computer in my classroom, but there is a computer lab on the first floor. There is a small playground. We play football there at break time. I like my school because my teachers are kind and my friends are there.",
-          "word_count": 88
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e12",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "How many classrooms are there?",
-            "options": [
-              "four",
-              "twelve",
-              "thirty"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: There are twelve classrooms."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e13",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "There is a computer in the writer's classroom.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: There isn't a computer in my classroom."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e14",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "Where is the computer lab?",
-            "options": [
-              "on the first floor",
-              "in the playground",
-              "in the library"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: on the first floor."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-04-e15",
-            "skill": "reading",
-            "kind": "fill_blank",
-            "prompt": "The students play football in the ___.",
-            "answer": "playground",
-            "explanation_ar": "في النص: There is a small playground. We play football there."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-04-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "صف فصلك",
+      "title": "قاعدة: What is this? It is a ... (this / that)",
       "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "صِف فصلك أو مدرستك لصديق في مدينة أخرى. قل ما **يوجد** وما **لا يوجد**، واستعمل there is و there are مع الأعداد."
+          "type": "audio",
+          "text_en": "What is this? It is a book. What is that? It is a door. This is my desk. That is the board."
         },
         {
-          "type": "video",
-          "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
+          "type": "text",
+          "markdown_ar": "عندما نشير إلى شيء **قريب منا** نقول **this** (هذا / هذه). وعندما يكون **بعيداً** نقول **that** (ذلك / تلك).\n\n- **This** is a pen. = هذا قلم (في يدي أو أمامي).\n- **That** is a board. = تلك سبّورة (في آخر الفصل).\n\nلنسأل نقول: **What is this?** ونجيب: **It is a pen.** (هو قلم). لاحظ أن الجواب يبدأ بـ **It** وليس بـ This.\n\n**الخطأ الشائع:** أن نقول «This is pen» بدون a. الصحيح: **This is a pen**، لأنه شيء واحد."
         },
         {
           "type": "table",
           "headers": [
-            "لتقول",
-            "العبارة"
+            "الجملة",
+            "المعنى",
+            "متى؟"
           ],
           "rows": [
             [
-              "يوجد (مفرد)",
-              "There is a…"
+              "This is a book.",
+              "هذا كتاب.",
+              "شيء قريب"
             ],
             [
-              "يوجد (جمع)",
-              "There are … students / desks"
+              "That is a door.",
+              "تلك باب.",
+              "شيء بعيد"
             ],
             [
-              "لا يوجد",
-              "There isn't a… / There aren't any…"
+              "What is this?",
+              "ما هذا؟",
+              "سؤال عن شيء قريب"
+            ],
+            [
+              "It is a pen.",
+              "إنه قلم.",
+              "الجواب"
             ]
           ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Describe your classroom or your school to a friend in another city. Say what there is and what there isn't.",
-        "helpful_phrases": [
-          "In my classroom, there is…",
-          "There are … desks.",
-          "There isn't a…",
-          "My school is…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "there is / there are",
-          "school vocabulary"
-        ]
-      }
-    },
-    {
-      "id": "A1-04-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "رسالة عن مدرستك",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب رسالة قصيرة إلى صديق (30 إلى 70 كلمة) تصف فيها مدرستك. اقرأ المثال أولاً.\n\n**تذكّر:** there is + مفرد، there are + جمع، و a / an قبل المفرد."
         },
         {
-          "type": "video",
-          "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: It / door / What / that? / is / is / a",
+            "answer": [
+              "What",
+              "is",
+              "that?",
+              "It",
+              "is",
+              "a",
+              "door"
+            ],
+            "explanation_ar": "الترتيب الصحيح: What is that? It is a door"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "Hi Rami,\nMy school is in Seiyun. It is not very big. There are eight classrooms and there is a small library. There isn't a lab, but there is a computer room. There are forty students in my class. My teachers are very good.\nBye,\nNasser",
-          "word_count": 46
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "What is that? It is a ___.",
+            "answer": "door",
+            "explanation_ar": "الكلمة الناقصة «door» (باب)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «father» mean?",
+            "options": [
+              "نافذة",
+              "كرسي",
+              "قلم حبر",
+              "أب"
+            ],
+            "answer": 3,
+            "explanation_ar": "«father» تعني «أب». مثال: He is my father."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: book / is / This / my",
+            "answer": [
+              "This",
+              "is",
+              "my",
+              "book"
+            ],
+            "explanation_ar": "الترتيب الصحيح: This is my book"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "That is a ___.",
+            "answer": "notebook",
+            "explanation_ar": "الكلمة الناقصة «notebook» (دفتر)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write a short message to a friend about your school. Use there is, there are, there isn't and there aren't.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 3 sentences about things in your classroom. Use: This is a ... That is a ... It is a ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "there is / there are",
-          "a / an",
-          "plural nouns"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-04-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-04-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **There is** + مفرد / **There are** + جمع.\n- **Is there…? Are there any…?**\n- **a** قبل الصوت الساكن، **an** قبل صوت حرف العلة.\n- الجمع: books, classes, children."
-        },
-        {
-          "type": "video",
-          "youtube_id": "m8VUaW1b_z8",
-          "video_title": "كلمات المنزل والفصل — الحلقة 4",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 657,
-          "optional": true,
-          "approx_size_mb": 44
+          "markdown_ar": "الأستاذة هدى تسأل طارق عن الأشياء في الفصل. **استمع:** ما هو الشيء القريب؟ وما هو الشيء البعيد؟"
         },
         {
           "type": "story",
-          "id": "A1-04-s1",
-          "title_ar": "الحلقة 4: مدرسة ريم في الديس",
+          "id": "A1-04-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Reem",
-              "text_en": "This is my school in Al-Dees.",
-              "text_ar": "هذه مدرستي في الديس."
+              "speaker": "Ms. Huda",
+              "text_en": "Good morning, Tariq. What is this?",
+              "text_ar": "صباح الخير يا طارق. ما هذا؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Is there a library?",
-              "text_ar": "هل توجد مكتبة؟"
+              "speaker": "Tariq",
+              "text_en": "It is a book.",
+              "text_ar": "إنه كتاب."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Yes, there is. And there are two labs.",
-              "text_ar": "نعم. ويوجد مختبران."
+              "speaker": "Ms. Huda",
+              "text_en": "Good! And what is that?",
+              "text_ar": "جيد! وما ذلك؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "There isn't a lab in my old school.",
-              "text_ar": "لا يوجد مختبر في مدرستي القديمة."
+              "speaker": "Tariq",
+              "text_en": "That is the board.",
+              "text_ar": "تلك هي السبّورة."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Come on! Let's go to the library.",
-              "text_ar": "هيا! لنذهب إلى المكتبة."
+              "speaker": "Ms. Huda",
+              "text_en": "Is this your pen?",
+              "text_ar": "هل هذا قلمك؟"
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "No, it is a pencil. My pen is in my bag.",
+              "text_ar": "لا، إنه قلم رصاص. قلمي في حقيبتي."
+            },
+            {
+              "speaker": "Ms. Huda",
+              "text_en": "Open the window, please.",
+              "text_ar": "افتح النافذة من فضلك."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Yes, Ms. Huda.",
+              "text_ar": "حاضر يا أستاذة هدى."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-04-e16",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "___ there any students in the lab?",
+            "id": "A1-04-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Ms. Huda says: \"It is a book.\"",
             "options": [
-              "Is",
-              "Are",
-              "Am"
+              "True",
+              "False"
             ],
             "answer": 1,
-            "explanation_ar": "students جمع فنستخدم Are there."
+            "explanation_ar": "الذي قال «It is a book.» هو Tariq."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-04-e17",
-            "skill": "grammar",
+            "id": "A1-04-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "There is ___ office near the library.",
+            "prompt": "What does «pen» mean?",
             "options": [
-              "a",
-              "an",
-              "two"
+              "مكتب الطالب",
+              "سبّورة",
+              "قلم حبر",
+              "قلم رصاص"
             ],
-            "answer": 1,
-            "explanation_ar": "office تبدأ بحرف علة فنستخدم an."
+            "answer": 2,
+            "explanation_ar": "«pen» تعني «قلم حبر». مثال: I have a blue pen."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-04-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-04-e18",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "There aren't ___ computers in my classroom.",
-            "answer": "any",
-            "explanation_ar": "في النفي مع الجمع نستخدم any."
+            "id": "A1-04-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Open the window, please.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Open the window, please.» هو Ms. Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bag» mean?",
+            "options": [
+              "حقيبة",
+              "فصل دراسي",
+              "مكتب الطالب",
+              "دفتر"
+            ],
+            "answer": 0,
+            "explanation_ar": "«bag» تعني «حقيبة». مثال: My bag is on the chair."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Point to things around you. Say what they are: This is a ... That is a ... Say at least four sentences.",
+        "helpful_phrases": [
+          "This is a ...",
+          "That is a ...",
+          "What is this?",
+          "It is a ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-04-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-04-L4-s1",
+          "title_ar": "الحقيبة المفقودة",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "Mona, is this your bag?",
+              "text_ar": "يا منى، هل هذه حقيبتك؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "No, it is not my bag.",
+              "text_ar": "لا، ليست حقيبتي."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Is that your bag on the chair?",
+              "text_ar": "هل تلك حقيبتك على الكرسي؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, that is my bag!",
+              "text_ar": "نعم، تلك حقيبتي!"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "What is in it?",
+              "text_ar": "ماذا فيها؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "A book, a notebook and a pen.",
+              "text_ar": "كتاب ودفتر وقلم."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Good morning, Ms. Huda!",
+              "text_ar": "صباح الخير يا أستاذة هدى!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Hello, Ms. Huda!",
+              "text_ar": "مرحباً يا أستاذة هدى!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bag» mean?",
+            "options": [
+              "دفتر",
+              "كرسي",
+              "مكتب الطالب",
+              "حقيبة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«bag» تعني «حقيبة». مثال: My bag is on the chair."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Is that your ___ on the chair?",
+            "answer": "bag",
+            "explanation_ar": "الكلمة الناقصة «bag» (حقيبة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: This / a / pencil / is",
+            "answer": [
+              "This",
+              "is",
+              "a",
+              "pencil"
+            ],
+            "explanation_ar": "الترتيب الصحيح: This is a pencil"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"Hello, Ms. Huda!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Hello, Ms. Huda!» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «chair» mean?",
+            "options": [
+              "قلم رصاص",
+              "كرسي",
+              "دفتر",
+              "باب"
+            ],
+            "answer": 1,
+            "explanation_ar": "«chair» تعني «كرسي». مثال: This is a chair."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-04-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "This is a ___.",
+            "answer": "chair",
+            "explanation_ar": "الكلمة الناقصة «chair» (كرسي)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-04-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Show your friend your classroom. Say what five things are: This is a ... That is a ... Ask one question: What is this?",
+        "helpful_phrases": [
+          "This is a ...",
+          "That is the ...",
+          "What is this?",
+          "It is a ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -843,131 +700,136 @@
     "questions": [
       {
         "id": "A1-04-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "There ___ a library in our school.",
+        "prompt": "What does «chair» mean?",
         "options": [
-          "is",
-          "are",
-          "am"
+          "كرسي",
+          "كتاب",
+          "فصل دراسي",
+          "قلم حبر"
         ],
         "answer": 0,
-        "explanation_ar": "library مفرد فنستخدم there is."
+        "explanation_ar": "«chair» تعني «كرسي». مثال: This is a chair."
       },
       {
         "id": "A1-04-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "There ___ twenty desks in the classroom.",
-        "options": [
-          "is",
-          "are",
-          "isn't"
-        ],
-        "answer": 1,
-        "explanation_ar": "twenty desks جمع فنستخدم there are."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I have a blue ___.",
+        "answer": "pen",
+        "explanation_ar": "الكلمة الناقصة «pen» (قلم حبر)."
       },
       {
         "id": "A1-04-q3",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "I have ___ orange bag.",
-        "options": [
-          "a",
-          "an",
-          "—"
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: the / the / That / This / window / is / is / door.",
+        "answer": [
+          "That",
+          "is",
+          "the",
+          "door.",
+          "This",
+          "is",
+          "the",
+          "window"
         ],
-        "answer": 1,
-        "explanation_ar": "orange تبدأ بحرف علة فنستخدم an."
+        "explanation_ar": "الترتيب الصحيح: That is the door. This is the window"
       },
       {
         "id": "A1-04-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "Are there any books on the desk? — Yes, there ___.",
-        "answer": "are",
-        "explanation_ar": "الإجابة القصيرة: Yes, there are."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «door» mean?",
+        "options": [
+          "باب",
+          "دفتر",
+          "حقيبة",
+          "فصل دراسي"
+        ],
+        "answer": 0,
+        "explanation_ar": "«door» تعني «باب». مثال: That is the door."
       },
       {
         "id": "A1-04-q5",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "We do science experiments in the ___.",
-        "options": [
-          "lab",
-          "library",
-          "playground"
-        ],
-        "answer": 0,
-        "explanation_ar": "التجارب العلمية في المختبر lab."
+        "kind": "fill_blank",
+        "prompt": "My ___ is on the chair.",
+        "answer": "bag",
+        "explanation_ar": "الكلمة الناقصة «bag» (حقيبة)."
       },
       {
         "id": "A1-04-q6",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "جمع كلمة child:",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Ms. Huda says: \"Is that your bag on the chair?\"",
         "options": [
-          "childs",
-          "childes",
-          "children"
+          "True",
+          "False"
         ],
-        "answer": 2,
-        "explanation_ar": "child جمعها شاذ: children."
+        "answer": 1,
+        "explanation_ar": "الذي قال «Is that your bag on the chair?» هو Salem."
       },
       {
         "id": "A1-04-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): a / there / board / is",
-        "answer": [
-          "There",
-          "is",
-          "a",
-          "board"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «pencil» mean?",
+        "options": [
+          "مكتب الطالب",
+          "دفتر",
+          "فصل دراسي",
+          "قلم رصاص"
         ],
-        "explanation_ar": "There is + a + الاسم المفرد."
+        "answer": 3,
+        "explanation_ar": "«pencil» تعني «قلم رصاص». مثال: This is a pencil."
       },
       {
         "id": "A1-04-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "There are a pen on the desk.",
-          "There is a pen on the desk.",
-          "There is pens on the desk."
-        ],
-        "answer": 1,
-        "explanation_ar": "a pen مفرد فنستخدم There is."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Our ___ is clean.",
+        "answer": "classroom",
+        "explanation_ar": "الكلمة الناقصة «classroom» (فصل دراسي)."
       },
       {
         "id": "A1-04-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «There are 3 windows and 1 door in the room.» How many windows are there?",
-        "options": [
-          "one",
-          "three",
-          "four"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: pen / notebook / book, / and / A / a / a",
+        "answer": [
+          "A",
+          "book,",
+          "a",
+          "notebook",
+          "and",
+          "a",
+          "pen"
         ],
-        "answer": 1,
-        "explanation_ar": "3 windows = ثلاث نوافذ."
+        "explanation_ar": "الترتيب الصحيح: A book, a notebook and a pen"
       },
       {
         "id": "A1-04-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "Open the ___, please. It's hot in the classroom. (نافذة)",
-        "answer": "window",
-        "explanation_ar": "النافذة = window."
+        "kind": "mcq",
+        "prompt": "What does «bag» mean?",
+        "options": [
+          "كتاب",
+          "باب",
+          "حقيبة",
+          "فصل دراسي"
+        ],
+        "answer": 2,
+        "explanation_ar": "«bag» تعني «حقيبة». مثال: My bag is on the chair."
       }
     ]
   },
-  "context_note": "مدارس في المكلا وسيئون؛ مدرسة قرب البحر في المكلا.",
-  "stop_ar": "الديس",
+  "stop_ar": "الفصل الدراسي",
   "roleplay": {
-    "character_ar": "أمين مكتبة مدرسة الديس",
-    "scenario_en": "You are the school librarian in Al-Dees, Mukalla. Ask the student what there is in their classroom and school.",
-    "opening_en": "Hello! Is there a library in your school?"
-  }
+    "character_ar": "الأستاذة هدى في الفصل",
+    "scenario_en": "You are Ms. Huda, an English teacher in a school in Yemen. Point to things in the classroom and ask the student: What is this? Correct kindly. Use only very simple English (book, pen, pencil, bag, desk, chair, board, door, window, this, that).",
+    "opening_en": "Good morning! Look at the board. What is this?"
+  },
+  "context_note": "داخل الفصل الدراسي"
 }

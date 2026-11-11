@@ -1,0 +1,843 @@
+{
+  "path": "english",
+  "code": "A1-23",
+  "version": 1,
+  "level": "A1",
+  "position": 23,
+  "title": "Moving Around Town",
+  "topic": "في فرزة سيارات الأجرة يسأل طارق عن وسيلة الوصول إلى السوق: بالباص أم بالتاكسي أم بالدراجة النارية؟",
+  "grammar_point": "go by + transport / How do you go?",
+  "can_do": [
+    "أسمّي وسائل النقل بالإنجليزية",
+    "أسأل «كيف تذهب؟» وأجيب بـ by",
+    "أطلب سيارة أجرة وأسأل عن السعر"
+  ],
+  "vocab": [
+    {
+      "id": "A1-23-v1",
+      "word": "car",
+      "part_of_speech": "noun",
+      "meaning_ar": "سيارة",
+      "example_en": "My father has a car."
+    },
+    {
+      "id": "A1-23-v2",
+      "word": "bus",
+      "part_of_speech": "noun",
+      "meaning_ar": "حافلة",
+      "example_en": "I go to school by bus."
+    },
+    {
+      "id": "A1-23-v3",
+      "word": "minibus",
+      "part_of_speech": "noun",
+      "meaning_ar": "دبّاب (باص صغير)",
+      "example_en": "The minibus is full."
+    },
+    {
+      "id": "A1-23-v4",
+      "word": "taxi",
+      "part_of_speech": "noun",
+      "meaning_ar": "سيارة أجرة",
+      "example_en": "We go to the market by taxi."
+    },
+    {
+      "id": "A1-23-v5",
+      "word": "motorbike",
+      "part_of_speech": "noun",
+      "meaning_ar": "دراجة نارية",
+      "example_en": "He goes by motorbike."
+    },
+    {
+      "id": "A1-23-v6",
+      "word": "bicycle",
+      "part_of_speech": "noun",
+      "meaning_ar": "دراجة هوائية",
+      "example_en": "I go to the park by bicycle."
+    },
+    {
+      "id": "A1-23-v7",
+      "word": "truck",
+      "part_of_speech": "noun",
+      "meaning_ar": "شاحنة",
+      "example_en": "The truck is big."
+    },
+    {
+      "id": "A1-23-v8",
+      "word": "plane",
+      "part_of_speech": "noun",
+      "meaning_ar": "طائرة",
+      "example_en": "We go to Cairo by plane."
+    },
+    {
+      "id": "A1-23-v9",
+      "word": "boat",
+      "part_of_speech": "noun",
+      "meaning_ar": "قارب",
+      "example_en": "The fisherman goes by boat."
+    },
+    {
+      "id": "A1-23-v10",
+      "word": "road",
+      "part_of_speech": "noun",
+      "meaning_ar": "طريق",
+      "example_en": "The road is long."
+    },
+    {
+      "id": "A1-23-v11",
+      "word": "ticket",
+      "part_of_speech": "noun",
+      "meaning_ar": "تذكرة",
+      "example_en": "I need a ticket."
+    },
+    {
+      "id": "A1-23-v12",
+      "word": "go",
+      "part_of_speech": "verb",
+      "meaning_ar": "يذهب",
+      "example_en": "How do you go to school?"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-23-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: وسائل النقل والمواصلات",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "كيف تذهب إلى المدرسة؟ مشياً؟ بالباص؟ بالدباب؟ في اليمن تتنوع وسائل النقل: الحافلات الصغيرة (الدبّابات) والتاكسي والدراجة النارية. في هذا الدرس ستقول بالإنجليزية كيف تذهب وإلى أين."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HF1XhS5Tsok",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 23",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "car",
+              "سيارة",
+              "My father has a car."
+            ],
+            [
+              "bus",
+              "حافلة",
+              "I go to school by bus."
+            ],
+            [
+              "minibus",
+              "دبّاب (باص صغير)",
+              "The minibus is full."
+            ],
+            [
+              "taxi",
+              "سيارة أجرة",
+              "We go to the market by taxi."
+            ],
+            [
+              "motorbike",
+              "دراجة نارية",
+              "He goes by motorbike."
+            ],
+            [
+              "bicycle",
+              "دراجة هوائية",
+              "I go to the park by bicycle."
+            ],
+            [
+              "truck",
+              "شاحنة",
+              "The truck is big."
+            ],
+            [
+              "plane",
+              "طائرة",
+              "We go to Cairo by plane."
+            ],
+            [
+              "boat",
+              "قارب",
+              "The fisherman goes by boat."
+            ],
+            [
+              "road",
+              "طريق",
+              "The road is long."
+            ],
+            [
+              "ticket",
+              "تذكرة",
+              "I need a ticket."
+            ],
+            [
+              "go",
+              "يذهب",
+              "How do you go to school?"
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "How do you go to school? I go to school by bus. We go to the market by taxi. He goes by motorbike. I go to the park by bicycle. The minibus is full. We go to Cairo by plane. The road is long. I need a ticket."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «truck» mean?",
+            "options": [
+              "طائرة",
+              "دبّاب (باص صغير)",
+              "شاحنة",
+              "دراجة هوائية"
+            ],
+            "answer": 2,
+            "explanation_ar": "«truck» تعني «شاحنة». مثال: The truck is big."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is big.",
+            "answer": "truck",
+            "explanation_ar": "الكلمة الناقصة «truck» (شاحنة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «minibus» mean?",
+            "options": [
+              "طائرة",
+              "دبّاب (باص صغير)",
+              "دراجة هوائية",
+              "حافلة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«minibus» تعني «دبّاب (باص صغير)». مثال: The minibus is full."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is long.",
+            "answer": "road",
+            "explanation_ar": "الكلمة الناقصة «road» (طريق)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «motorbike» mean?",
+            "options": [
+              "سيارة",
+              "دراجة نارية",
+              "مشمس",
+              "الطقس"
+            ],
+            "answer": 1,
+            "explanation_ar": "«motorbike» تعني «دراجة نارية». مثال: He goes by motorbike."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-23-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-23-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: go by + transport / How do you go?",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "I go to school by bus. We go by taxi. How do you go to the market? They go by minibus."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنقول **كيف** نذهب نستخدم **by** + وسيلة النقل (بدون a ولا the):\n\n- I go **by** bus. = أذهب بالحافلة.\n- We go **by** taxi. = نذهب بسيارة أجرة.\n\nولنسأل: **How do you go** to school? (كيف تذهب إلى المدرسة؟)\n\nواستثناء مهم: إذا ذهبنا **مشياً** نقول: **on foot** (I go to school **on foot**).\n\nمع **he / she** يتغير الفعل: **He goes** by motorbike. (سنتعلمه بتوسّع في الوحدة القادمة.)\n\n**الخطأ الشائع:** «I go by a bus». الصحيح بدون a: **I go by bus**."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "السؤال",
+            "الجواب",
+            "ملاحظة"
+          ],
+          "rows": [
+            [
+              "How do you go to school?",
+              "I go by bus.",
+              "by + وسيلة"
+            ],
+            [
+              "How do they go?",
+              "They go by taxi.",
+              "بدون a"
+            ],
+            [
+              "How do you go to the park?",
+              "I go on foot.",
+              "مشياً"
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: bicycle / by / I / park / go / the / to",
+            "answer": [
+              "I",
+              "go",
+              "to",
+              "the",
+              "park",
+              "by",
+              "bicycle"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I go to the park by bicycle"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My father has a ___.",
+            "answer": "car",
+            "explanation_ar": "الكلمة الناقصة «car» (سيارة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «truck» mean?",
+            "options": [
+              "تذكرة",
+              "طائرة",
+              "طريق",
+              "شاحنة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«truck» تعني «شاحنة». مثال: The truck is big."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: by / We / taxi / go",
+            "answer": [
+              "We",
+              "go",
+              "by",
+              "taxi"
+            ],
+            "explanation_ar": "الترتيب الصحيح: We go by taxi"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I need a ___.",
+            "answer": "ticket",
+            "explanation_ar": "الكلمة الناقصة «ticket» (تذكرة)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about how you go to school, to the market and to another city.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-23-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "طارق في فرزة سيارات الأجرة. **استمع:** كيف سيذهب إلى السوق؟ وما سعر التذكرة؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-23-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Tariq",
+              "text_en": "Excuse me, how do I go to the market?",
+              "text_ar": "عفواً، كيف أذهب إلى السوق؟"
+            },
+            {
+              "speaker": "Driver",
+              "text_en": "You go by minibus. It is cheap.",
+              "text_ar": "تذهب بالدبّاب. هو رخيص."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "How much is a ticket?",
+              "text_ar": "بكم التذكرة؟"
+            },
+            {
+              "speaker": "Driver",
+              "text_en": "It is one hundred riyals.",
+              "text_ar": "بمئة ريال."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Do you go by taxi?",
+              "text_ar": "هل تذهب بالتاكسي؟"
+            },
+            {
+              "speaker": "Driver",
+              "text_en": "Yes, I go by taxi. But the taxi is expensive.",
+              "text_ar": "نعم، أنا أذهب بالتاكسي. لكنه غالٍ."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "OK. I go by minibus.",
+              "text_ar": "حسناً. سأذهب بالدبّاب."
+            },
+            {
+              "speaker": "Driver",
+              "text_en": "Good. The road is long. Have a nice day!",
+              "text_ar": "جيد. الطريق طويل. يوم سعيد!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"You go by minibus. It is cheap.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «You go by minibus. It is cheap.» هو Driver."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «go» mean?",
+            "options": [
+              "قارب",
+              "يذهب",
+              "دبّاب (باص صغير)",
+              "حافلة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«go» تعني «يذهب». مثال: How do you go to school?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Excuse me, how do I go to the market?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Excuse me, how do I go to the market?» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «motorbike» mean?",
+            "options": [
+              "دراجة نارية",
+              "دراجة هوائية",
+              "شاحنة",
+              "سيارة أجرة"
+            ],
+            "answer": 0,
+            "explanation_ar": "«motorbike» تعني «دراجة نارية». مثال: He goes by motorbike."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell us how you go to school, how your father goes to work and how you go to another city.",
+        "helpful_phrases": [
+          "I go by bus.",
+          "We go on foot.",
+          "How do you go?",
+          "It is cheap."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-23-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-23-L4-s1",
+          "title_ar": "رحلة إلى القاهرة",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Mona, how do you go to Cairo?",
+              "text_ar": "يا منى، كيف تذهبين إلى القاهرة؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "I go by plane.",
+              "text_ar": "أذهب بالطائرة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I go to school by bus.",
+              "text_ar": "وأنا أذهب إلى المدرسة بالحافلة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "My brother goes by bicycle.",
+              "text_ar": "وأخي يذهب بالدراجة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is it a long road?",
+              "text_ar": "هل الطريق طويل؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, it is. I need a ticket.",
+              "text_ar": "نعم. وأحتاج تذكرة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Have a nice trip!",
+              "text_ar": "رحلة سعيدة!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Thank you!",
+              "text_ar": "شكراً!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «car» mean?",
+            "options": [
+              "تذكرة",
+              "يذهب",
+              "دبّاب (باص صغير)",
+              "سيارة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«car» تعني «سيارة». مثال: My father has a car."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is full.",
+            "answer": "minibus",
+            "explanation_ar": "الكلمة الناقصة «minibus» (دبّاب (باص صغير))."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: I / go / by / to / school / bus",
+            "answer": [
+              "I",
+              "go",
+              "to",
+              "school",
+              "by",
+              "bus"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I go to school by bus"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"Mona, how do you go to Cairo?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Mona, how do you go to Cairo?» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «go» mean?",
+            "options": [
+              "قارب",
+              "يذهب",
+              "طريق",
+              "تذكرة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«go» تعني «يذهب». مثال: How do you go to school?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-23-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Mona, how do you ___ to Cairo?",
+            "answer": "go",
+            "explanation_ar": "الكلمة الناقصة «go» (يذهب)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-23-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend how you go to five places: school, the market, the mosque, another city and the park. Use by and on foot.",
+        "helpful_phrases": [
+          "I go by ...",
+          "We go on foot.",
+          "How do you go ...?",
+          "It is cheap / expensive."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-23-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «go» mean?",
+        "options": [
+          "دبّاب (باص صغير)",
+          "شاحنة",
+          "طريق",
+          "يذهب"
+        ],
+        "answer": 3,
+        "explanation_ar": "«go» تعني «يذهب». مثال: How do you go to school?"
+      },
+      {
+        "id": "A1-23-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "He goes by ___.",
+        "answer": "motorbike",
+        "explanation_ar": "الكلمة الناقصة «motorbike» (دراجة نارية)."
+      },
+      {
+        "id": "A1-23-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: sunny / today / It / is",
+        "answer": [
+          "It",
+          "is",
+          "sunny",
+          "today"
+        ],
+        "explanation_ar": "الترتيب الصحيح: It is sunny today"
+      },
+      {
+        "id": "A1-23-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «taxi» mean?",
+        "options": [
+          "قارب",
+          "حافلة",
+          "سيارة أجرة",
+          "دراجة هوائية"
+        ],
+        "answer": 2,
+        "explanation_ar": "«taxi» تعني «سيارة أجرة». مثال: We go to the market by taxi."
+      },
+      {
+        "id": "A1-23-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The ___ is long. I need a ticket.",
+        "answer": "road",
+        "explanation_ar": "الكلمة الناقصة «road» (طريق)."
+      },
+      {
+        "id": "A1-23-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Huda says: \"I go to school by bus.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation_ar": "الذي قال «I go to school by bus.» هو Huda."
+      },
+      {
+        "id": "A1-23-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «car» mean?",
+        "options": [
+          "دبّاب (باص صغير)",
+          "سيارة أجرة",
+          "شاحنة",
+          "سيارة"
+        ],
+        "answer": 3,
+        "explanation_ar": "«car» تعني «سيارة». مثال: My father has a car."
+      },
+      {
+        "id": "A1-23-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Excuse me, how do I ___ to the market?",
+        "answer": "go",
+        "explanation_ar": "الكلمة الناقصة «go» (يذهب)."
+      },
+      {
+        "id": "A1-23-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: to / go / the / market / do / me, / how / I / Excuse",
+        "answer": [
+          "Excuse",
+          "me,",
+          "how",
+          "do",
+          "I",
+          "go",
+          "to",
+          "the",
+          "market"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Excuse me, how do I go to the market"
+      },
+      {
+        "id": "A1-23-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «bus» mean?",
+        "options": [
+          "دبّاب (باص صغير)",
+          "قارب",
+          "حافلة",
+          "تذكرة"
+        ],
+        "answer": 2,
+        "explanation_ar": "«bus» تعني «حافلة». مثال: I go to school by bus."
+      }
+    ]
+  },
+  "stop_ar": "فرزة سيارات الأجرة",
+  "roleplay": {
+    "character_ar": "سائق سيارة الأجرة في الفرزة",
+    "scenario_en": "You are a taxi driver at a taxi stand in Yemen. A passenger wants to go somewhere. Ask where he or she goes and say how: by taxi, minibus, bus, motorbike. Say the price of a ticket in simple numbers. Use only very simple English.",
+    "opening_en": "Good morning! Where do you go? By taxi?"
+  },
+  "context_note": "وسائل النقل والمواصلات"
+}

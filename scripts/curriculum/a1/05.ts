@@ -1,0 +1,87 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-05",
+  position: 5,
+  title_en: "People at the Market",
+  title_ar: "أشخاص في السوق",
+  stop_ar: "السوق الشعبي",
+  situation_ar: "يذهب سالم مع أبيه إلى السوق الشعبي ويتعرف على الباعة والمهن المختلفة، ويعدّ الناس حوله بصيغة الجمع.",
+  grammar_en: "plural nouns (-s, -es, men / women / children)",
+  can_do: ["أسمّي مهن السوق بالإنجليزية", "أحوّل الاسم المفرد إلى جمع", "أصف الناس في السوق بجمل بسيطة"],
+  video: { id: "gBhK2m_CdQc", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين : تكملة كلمات الوظائف : الحلقة 5", checked: true },
+  words: [
+    ["seller", "noun", "بائع", "The seller is happy."],
+    ["customer", "noun", "زبون", "A customer is at the shop."],
+    ["baker", "noun", "خبّاز", "The baker is at the bakery."],
+    ["butcher", "noun", "جزّار", "The butcher has a big shop."],
+    ["tailor", "noun", "خيّاط", "A tailor is in the market."],
+    ["fisherman", "noun", "صيّاد سمك", "The fisherman is from Hodeidah."],
+    ["mechanic", "noun", "ميكانيكي", "My uncle is a mechanic."],
+    ["man", "noun", "رجل", "A man is at the shop."],
+    ["woman", "noun", "امرأة", "A woman is at the shop."],
+    ["child", "noun", "طفل", "A child is with his mother."],
+  ],
+  warmup_ar:
+    "السوق الشعبي مكان مليء بالناس: بائع ينادي، وخبّاز يخبز، وأطفال مع أمهاتهم. كم شخصاً تراه عادةً في السوق؟ واحد أم كثيرون؟ في هذا الدرس نتعلم كيف نتحدث عن **شخص واحد** وعن **أكثر من شخص** بالإنجليزية.",
+  in_context: [
+    "A seller is at the market.",
+    "A customer is at the shop.",
+    "The baker is at the bakery.",
+    "The butcher has a big shop.",
+    "A tailor and a mechanic are at the market.",
+    "The fisherman is from Hodeidah.",
+    "A man, a woman and a child are at the shop.",
+  ],
+  notice: ["A seller is here. Sellers are here.", "A customer is here. Customers are here.", "A man is here. Men are here.", "A child is here. Children are here."],
+  rule_ar:
+    "**المفرد** يعني واحداً (a seller). **الجمع** يعني أكثر من واحد (sellers). القاعدة الأساسية: نضيف **s** في آخر الكلمة:\n\n- a seller → seller**s**\n- a customer → customer**s**\n\nإذا انتهت الكلمة بـ **s أو sh أو ch أو x** نضيف **es**: bus → bus**es**, box → box**es**.\n\nوبعض الكلمات **شاذة** (لها جمع خاص) ويجب حفظها:\n- man → **men**\n- woman → **women**\n- child → **children**\n\n**الخطأ الشائع:** أن نقول «two man» أو «three child». الصحيح: **two men**, **three children**. ومع الجمع نستخدم **are** وليس is.",
+  form: {
+    headers: ["المفرد", "الجمع", "القاعدة"],
+    rows: [
+      ["a seller", "sellers", "+ s"],
+      ["a customer", "customers", "+ s"],
+      ["a bus", "buses", "+ es"],
+      ["a man", "men", "شاذ"],
+      ["a woman", "women", "شاذ"],
+      ["a child", "children", "شاذ"],
+    ],
+  },
+  write_prompt: "Write 3 sentences about people at a market. Use one plural: Two men are ... Three children are ...",
+  before_ar: "سالم وأبوه في السوق. **استمع:** من هم الأشخاص الذين يراهم سالم؟ وكم عددهم؟",
+  dialogue: [
+    ["Salem", "Look, Father! There are many people at the market.", "انظر يا أبي! أناس كثيرون في السوق."],
+    ["Father", "Yes. The baker is there.", "نعم. الخبّاز هناك."],
+    ["Salem", "And the butcher has many customers.", "والجزّار عنده زبائن كثيرون."],
+    ["Father", "Two men and a woman are at his shop.", "رجلان وامرأة عند دكانه."],
+    ["Salem", "The children are with their mothers.", "الأطفال مع أمهاتهم."],
+    ["Father", "Look at the tailor. He is a good tailor.", "انظر إلى الخيّاط. إنه خيّاط ماهر."],
+    ["Salem", "My uncle is a mechanic. His shop is here.", "عمي ميكانيكي. محله هنا."],
+    ["Father", "Good. Let us go to the baker.", "جيد. لنذهب إلى الخبّاز."],
+  ],
+  speak: {
+    prompt: "Describe a market you know. Say who is there: sellers, customers, men, women and children. Use plural words.",
+    phrases: ["Sellers are ...", "A man is ...", "Women are ...", "Children are ..."],
+  },
+  story_title_ar: "يوم في سوق الحديدة",
+  story: [
+    ["Mona", "Good morning, Salem!", "صباح الخير يا سالم!"],
+    ["Salem", "Hello, Mona. Look at the fishermen.", "مرحباً يا منى. انظري إلى الصيّادين."],
+    ["Mona", "They are from Hodeidah.", "هم من الحديدة."],
+    ["Salem", "Customers are at their shops.", "الزبائن عند محلاتهم."],
+    ["Mona", "Women and children are here too.", "النساء والأطفال هنا أيضاً."],
+    ["Salem", "A baker is at the bakery.", "الخبّاز في المخبز."],
+    ["Mona", "Is the baker a good man?", "هل الخبّاز رجل طيب؟"],
+    ["Salem", "Yes, he is a very good man.", "نعم، هو رجل طيب جداً."],
+  ],
+  task: {
+    prompt: "Tell a friend about the people you see at a market: say what they do and how many they are. Say at least 5 sentences.",
+    phrases: ["A seller is ...", "Two customers are ...", "Women and men are ...", "Children are ..."],
+  },
+  roleplay: {
+    character_ar: "عمّ سالم صاحب الدكان في السوق",
+    scenario_en: "You are Salem's uncle, a shopkeeper in a Yemeni market. Talk about the people at the market: sellers, customers, baker, butcher, tailor, men, women, children. Use only very simple English and use plural words.",
+    opening_en: "Welcome to the market! Look, there are many people here. Who is at the bakery?",
+  },
+};
+export default unit;

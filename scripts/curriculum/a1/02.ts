@@ -1,0 +1,86 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-02",
+  position: 2,
+  title_en: "Jobs Around Us",
+  title_ar: "مهن في محيطنا",
+  stop_ar: "مركز التدريب المهني",
+  situation_ar: "يزور طارق مع أستاذه معرض المهن بمركز التدريب ليتعرف على مسميات المهن المختلفة والوظيفة المناسبة لكل شخص.",
+  grammar_en: "a / an with jobs",
+  can_do: ["أسمّي عشر مهن شائعة بالإنجليزية", "أقول ما هي مهنتي ومهنة أحد أقاربي", "أستخدم a و an بشكل صحيح"],
+  video: { id: "AZZCsweJaiw", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين : تعلم الوظائف باللغة الإنجليزية : الحلقة 2", checked: true },
+  words: [
+    ["job", "noun", "وظيفة / مهنة", "What is your job?"],
+    ["teacher", "noun", "معلم", "Mr. Ali is a teacher."],
+    ["doctor", "noun", "طبيب", "She is a doctor."],
+    ["nurse", "noun", "ممرضة / ممرض", "My aunt is a nurse."],
+    ["engineer", "noun", "مهندس", "He is an engineer."],
+    ["farmer", "noun", "مزارع", "My father is a farmer."],
+    ["driver", "noun", "سائق", "He is a taxi driver."],
+    ["cook", "noun", "طبّاخ", "She is a cook."],
+    ["shopkeeper", "noun", "صاحب دكان", "My uncle is a shopkeeper."],
+    ["work", "verb", "يعمل", "I work in a school."],
+  ],
+  warmup_ar:
+    "ما هي مهنة والدك؟ وما هي مهنة الشخص الذي تحب أن تكون مثله؟ في معرض المهن بمركز التدريب ستسمع أسماء المهن بالإنجليزية. شاهد الفيديو، ثم جرّب أن تقول في كل مرة: **He is a ...** أو **She is a ...**",
+  in_context: [
+    "What is your job?",
+    "I am a teacher. I work in a school.",
+    "She is a doctor.",
+    "My aunt is a nurse.",
+    "He is an engineer.",
+    "My father is a farmer.",
+    "He is a taxi driver.",
+    "She is a cook.",
+    "My uncle is a shopkeeper.",
+  ],
+  notice: ["I am a teacher.", "She is a doctor.", "He is an engineer.", "We are teachers."],
+  rule_ar:
+    "في العربية نقول «أنا معلم» بدون كلمة قبل المهنة. أما في الإنجليزية فنضع قبل المهنة المفردة كلمة صغيرة: **a** أو **an** وتعني «واحد».\n\n- نستخدم **a** إذا بدأت الكلمة التالية **بصوت ساكن**: a teacher, a doctor, a farmer, a driver.\n- نستخدم **an** إذا بدأت **بصوت متحرك** (a, e, i, o, u): an engineer, an artist.\n\nالقرار يعتمد على **الصوت** وليس على الحرف فقط. فـ **engineer** تبدأ بصوت «إ» فنقول an engineer.\n\n**الخطأ الشائع:** أن نقول «I am teacher». الصحيح: **I am a teacher**.\n\n**ملاحظة:** مع الجمع لا نستخدم a ولا an: **We are teachers**.",
+  form: {
+    headers: ["الكلمة", "متى؟", "مثال"],
+    rows: [
+      ["a", "قبل صوت ساكن", "a teacher, a doctor, a farmer"],
+      ["an", "قبل صوت متحرك", "an engineer, an artist"],
+      ["بدون a/an", "مع الجمع", "We are teachers."],
+    ],
+  },
+  write_prompt: "Write 2–3 sentences about the jobs of people in your family. Use: My father is a ... My uncle is an ...",
+  before_ar: "طارق في معرض المهن مع أستاذه علي. **استمع:** ما مهنة الأستاذ علي؟ وما مهنة والد طارق؟",
+  dialogue: [
+    ["Tariq", "Look, Mr. Ali! This is a doctor.", "انظر يا أستاذ علي! هذا طبيب."],
+    ["Mr. Ali", "Yes, she is a doctor. She works in a hospital.", "نعم، هي طبيبة. تعمل في مستشفى."],
+    ["Tariq", "What is your job, Mr. Ali?", "ما هي مهنتك يا أستاذ علي؟"],
+    ["Mr. Ali", "I am a teacher. I work in your school.", "أنا معلم. أعمل في مدرستكم."],
+    ["Tariq", "My father is a farmer.", "أبي مزارع."],
+    ["Mr. Ali", "A farmer is a good job.", "المزارع مهنة جيدة."],
+    ["Tariq", "My uncle is an engineer.", "عمي مهندس."],
+    ["Mr. Ali", "Great! You are a good student, Tariq.", "رائع! أنت طالب جيد يا طارق."],
+  ],
+  speak: {
+    prompt: "Tell us about three people you know: say their jobs. Start with: My father is ... My uncle is ... I am ...",
+    phrases: ["My father is a ...", "She is a ...", "He is an ...", "I am a student."],
+  },
+  story_title_ar: "في السوق بعد الدرس",
+  story: [
+    ["Mona", "Good morning, Salem!", "صباح الخير يا سالم!"],
+    ["Salem", "Hello, Mona! What is your father's job?", "مرحباً يا منى! ما هي مهنة والدك؟"],
+    ["Mona", "He is a shopkeeper.", "هو صاحب دكان."],
+    ["Salem", "My father is a driver.", "أبي سائق."],
+    ["Mona", "Is your mother a teacher?", "هل أمك معلمة؟"],
+    ["Salem", "Yes, she is a teacher.", "نعم، هي معلمة."],
+    ["Mona", "My sister is a nurse.", "أختي ممرضة."],
+    ["Salem", "She has a good job.", "عندها مهنة جيدة."],
+  ],
+  task: {
+    prompt: "Tell a friend about the jobs of your family: your father, your mother, your uncle. Use a or an in every sentence.",
+    phrases: ["My father is a ...", "My mother is a ...", "My uncle is an ...", "I work ..."],
+  },
+  roleplay: {
+    character_ar: "الأستاذ علي في معرض المهن",
+    scenario_en: "You are Mr. Ali, a teacher at a vocational training centre in Yemen. A student visits the jobs fair. Ask what his or her job dreams are and what the family's jobs are. Use only very simple English (teacher, doctor, nurse, engineer, farmer, driver, cook, shopkeeper, a / an).",
+    opening_en: "Welcome to the jobs fair! I am a teacher. What is your father's job?",
+  },
+};
+export default unit;

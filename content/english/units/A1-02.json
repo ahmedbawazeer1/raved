@@ -1,815 +1,678 @@
 {
   "path": "english",
   "code": "A1-02",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 2,
-  "title": "Jobs",
-  "topic": "مهن من حضرموت: الصياد ومزارع النخيل والنحّال والبنّاء",
-  "grammar_point": "a / an + jobs + What's your job?",
+  "title": "Jobs Around Us",
+  "topic": "يزور طارق مع أستاذه معرض المهن بمركز التدريب ليتعرف على مسميات المهن المختلفة والوظيفة المناسبة لكل شخص.",
+  "grammar_point": "a / an with jobs",
   "can_do": [
-    "أقول مهنتي ومهن أفراد عائلتي",
-    "أسأل عن مهنة شخص وأفهم الإجابة",
-    "أفهم نصاً قصيراً عن مهن عائلة"
+    "أسمّي عشر مهن شائعة بالإنجليزية",
+    "أقول ما هي مهنتي ومهنة أحد أقاربي",
+    "أستخدم a و an بشكل صحيح"
   ],
   "vocab": [
     {
       "id": "A1-02-v1",
       "word": "job",
-      "ipa": "/dʒɒb/",
       "part_of_speech": "noun",
       "meaning_ar": "وظيفة / مهنة",
-      "example_en": "What's your job?"
+      "example_en": "What is your job?"
     },
     {
       "id": "A1-02-v2",
       "word": "teacher",
-      "ipa": "/ˈtiːtʃə/",
       "part_of_speech": "noun",
-      "meaning_ar": "معلّم",
-      "example_en": "My father is a teacher in Tarim."
+      "meaning_ar": "معلم",
+      "example_en": "Mr. Ali is a teacher."
     },
     {
       "id": "A1-02-v3",
       "word": "doctor",
-      "ipa": "/ˈdɒktə/",
       "part_of_speech": "noun",
       "meaning_ar": "طبيب",
-      "example_en": "She is a doctor at Ibn Sina Hospital."
+      "example_en": "She is a doctor."
     },
     {
       "id": "A1-02-v4",
       "word": "nurse",
-      "ipa": "/nɜːs/",
       "part_of_speech": "noun",
-      "meaning_ar": "ممرض / ممرضة",
+      "meaning_ar": "ممرضة / ممرض",
       "example_en": "My aunt is a nurse."
     },
     {
       "id": "A1-02-v5",
-      "word": "fisherman",
-      "ipa": "/ˈfɪʃəmən/",
+      "word": "engineer",
       "part_of_speech": "noun",
-      "meaning_ar": "صياد سمك",
-      "example_en": "He is a fisherman in Mukalla."
+      "meaning_ar": "مهندس",
+      "example_en": "He is an engineer."
     },
     {
       "id": "A1-02-v6",
       "word": "farmer",
-      "ipa": "/ˈfɑːmə/",
       "part_of_speech": "noun",
       "meaning_ar": "مزارع",
-      "example_en": "My uncle is a date farmer in Wadi Hadramout."
+      "example_en": "My father is a farmer."
     },
     {
       "id": "A1-02-v7",
-      "word": "beekeeper",
-      "ipa": "/ˈbiːkiːpə/",
+      "word": "driver",
       "part_of_speech": "noun",
-      "meaning_ar": "نحّال (مربي نحل)",
-      "example_en": "Ahmed is a beekeeper in Doan."
+      "meaning_ar": "سائق",
+      "example_en": "He is a taxi driver."
     },
     {
       "id": "A1-02-v8",
-      "word": "builder",
-      "ipa": "/ˈbɪldə/",
+      "word": "cook",
       "part_of_speech": "noun",
-      "meaning_ar": "بنّاء",
-      "example_en": "The builder makes mud houses in Shibam."
+      "meaning_ar": "طبّاخ",
+      "example_en": "She is a cook."
     },
     {
       "id": "A1-02-v9",
-      "word": "driver",
-      "ipa": "/ˈdraɪvə/",
+      "word": "shopkeeper",
       "part_of_speech": "noun",
-      "meaning_ar": "سائق",
-      "example_en": "He is a bus driver from Seiyun to Mukalla."
+      "meaning_ar": "صاحب دكان",
+      "example_en": "My uncle is a shopkeeper."
     },
     {
       "id": "A1-02-v10",
-      "word": "engineer",
-      "ipa": "/ˌendʒɪˈnɪə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مهندس",
-      "example_en": "She is an engineer."
-    },
-    {
-      "id": "A1-02-v11",
-      "word": "shopkeeper",
-      "ipa": "/ˈʃɒpkiːpə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "صاحب دكان",
-      "example_en": "The shopkeeper is kind."
-    },
-    {
-      "id": "A1-02-v12",
-      "word": "tailor",
-      "ipa": "/ˈteɪlə/",
-      "part_of_speech": "noun",
-      "meaning_ar": "خيّاط",
-      "example_en": "The tailor makes my school uniform."
+      "word": "work",
+      "part_of_speech": "verb",
+      "meaning_ar": "يعمل",
+      "example_en": "I work in a school."
     }
   ],
   "lessons": [
     {
-      "id": "A1-02-l1",
+      "id": "A1-02-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "مهن من حضرموت",
-      "est_minutes": 20,
+      "title": "مفردات: مهن في محيطنا",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في حضرموت مهن كثيرة: **الصياد** في المكلا والشحر، و**مزارع النخيل** في وادي حضرموت، و**النحّال** في دوعن، و**البنّاء** الذي يبني بيوت الطين في شبام. تعلّم أسماء المهن بالإنجليزية."
+          "markdown_ar": "ما هي مهنة والدك؟ وما هي مهنة الشخص الذي تحب أن تكون مثله؟ في معرض المهن بمركز التدريب ستسمع أسماء المهن بالإنجليزية. شاهد الفيديو، ثم جرّب أن تقول في كل مرة: **He is a ...** أو **She is a ...**"
         },
         {
           "type": "video",
           "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين : تعلم الوظائف باللغة الإنجليزية : الحلقة 2",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
               "job",
-              "/dʒɒb/",
               "وظيفة / مهنة",
-              "What's your job?"
+              "What is your job?"
             ],
             [
               "teacher",
-              "/ˈtiːtʃə/",
-              "معلّم",
-              "My father is a teacher in Tarim."
+              "معلم",
+              "Mr. Ali is a teacher."
             ],
             [
               "doctor",
-              "/ˈdɒktə/",
               "طبيب",
-              "She is a doctor at Ibn Sina Hospital."
+              "She is a doctor."
             ],
             [
               "nurse",
-              "/nɜːs/",
-              "ممرض / ممرضة",
+              "ممرضة / ممرض",
               "My aunt is a nurse."
             ],
             [
-              "fisherman",
-              "/ˈfɪʃəmən/",
-              "صياد سمك",
-              "He is a fisherman in Mukalla."
+              "engineer",
+              "مهندس",
+              "He is an engineer."
             ],
             [
               "farmer",
-              "/ˈfɑːmə/",
               "مزارع",
-              "My uncle is a date farmer in Wadi Hadramout."
-            ],
-            [
-              "beekeeper",
-              "/ˈbiːkiːpə/",
-              "نحّال (مربي نحل)",
-              "Ahmed is a beekeeper in Doan."
-            ],
-            [
-              "builder",
-              "/ˈbɪldə/",
-              "بنّاء",
-              "The builder makes mud houses in Shibam."
+              "My father is a farmer."
             ],
             [
               "driver",
-              "/ˈdraɪvə/",
               "سائق",
-              "He is a bus driver from Seiyun to Mukalla."
+              "He is a taxi driver."
             ],
             [
-              "engineer",
-              "/ˌendʒɪˈnɪə/",
-              "مهندس",
-              "She is an engineer."
+              "cook",
+              "طبّاخ",
+              "She is a cook."
             ],
             [
               "shopkeeper",
-              "/ˈʃɒpkiːpə/",
               "صاحب دكان",
-              "The shopkeeper is kind."
+              "My uncle is a shopkeeper."
             ],
             [
-              "tailor",
-              "/ˈteɪlə/",
-              "خيّاط",
-              "The tailor makes my school uniform."
+              "work",
+              "يعمل",
+              "I work in a school."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "job. What's your job?\nteacher. My father is a teacher in Tarim.\ndoctor. She is a doctor at Ibn Sina Hospital.\nnurse. My aunt is a nurse.\nfisherman. He is a fisherman in Mukalla.\nfarmer. My uncle is a date farmer in Wadi Hadramout.\nbeekeeper. Ahmed is a beekeeper in Doan.\nbuilder. The builder makes mud houses in Shibam.\ndriver. He is a bus driver from Seiyun to Mukalla.\nengineer. She is an engineer.\nshopkeeper. The shopkeeper is kind.\ntailor. The tailor makes my school uniform."
+          "text_en": "What is your job? I am a teacher. I work in a school. She is a doctor. My aunt is a nurse. He is an engineer. My father is a farmer. He is a taxi driver. She is a cook. My uncle is a shopkeeper."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-02-e1",
+            "id": "A1-02-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "A ___ catches fish in the sea.",
+            "prompt": "What does «driver» mean?",
             "options": [
-              "farmer",
-              "fisherman",
-              "tailor"
+              "مهندس",
+              "وظيفة / مهنة",
+              "طبيب",
+              "سائق"
             ],
-            "answer": 1,
-            "explanation_ar": "صياد السمك fisherman."
+            "answer": 3,
+            "explanation_ar": "«driver» تعني «سائق». مثال: He is a taxi driver."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-02-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "A ___ keeps bees and makes honey.",
-            "options": [
-              "beekeeper",
-              "builder",
-              "driver"
-            ],
-            "answer": 0,
-            "explanation_ar": "مربي النحل beekeeper."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e3",
+            "id": "A1-02-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "A ___ makes clothes. (خيّاط)",
-            "answer": "tailor",
-            "explanation_ar": "الخيّاط = tailor."
+            "prompt": "I am a ___. I work in a school.",
+            "answer": "teacher",
+            "explanation_ar": "الكلمة الناقصة «teacher» (معلم)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «good morning» mean?",
+            "options": [
+              "مهندس",
+              "صباح الخير",
+              "وظيفة / مهنة",
+              "ممرضة / ممرض"
+            ],
+            "answer": 1,
+            "explanation_ar": "«good morning» تعني «صباح الخير». مثال: Good morning, Bilal."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My father is a ___.",
+            "answer": "farmer",
+            "explanation_ar": "الكلمة الناقصة «farmer» (مزارع)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «teacher» mean?",
+            "options": [
+              "معلم",
+              "مزارع",
+              "ممرضة / ممرض",
+              "صباح الخير"
+            ],
+            "answer": 0,
+            "explanation_ar": "«teacher» تعني «معلم». مثال: Mr. Ali is a teacher."
           }
         },
         {
           "type": "game",
-          "id": "A1-02-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g4",
-          "game": "pronounce"
+          "id": "A1-02-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-02-l2",
+      "id": "A1-02-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "He's a teacher. — a / an",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "في الإنجليزية نضع **a** أو **an** قبل اسم المهنة المفردة. لا نقول «He is teacher».\n\n- **a** قبل الكلمة التي تبدأ بصوت ساكن: **a** doctor, **a** fisherman.\n- **an** قبل الكلمة التي تبدأ بصوت حرف علة (a, e, i, o, u): **an** engineer, **an** office worker.\n\nفي الجمع لا نضع a: «They are **farmers**.»"
-        },
-        {
-          "type": "video",
-          "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
-        },
-        {
-          "type": "table",
-          "headers": [
-            "السؤال",
-            "الإجابة"
-          ],
-          "rows": [
-            [
-              "What's your job? / What do you do?",
-              "I'm a student."
-            ],
-            [
-              "What's his job?",
-              "He's a fisherman."
-            ],
-            [
-              "What's her job?",
-              "She's an engineer."
-            ],
-            [
-              "Is he a doctor?",
-              "Yes, he is. / No, he isn't. He's a nurse."
-            ],
-            [
-              "What are their jobs?",
-              "They're farmers."
-            ]
-          ]
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My mother is ___ engineer.",
-            "options": [
-              "a",
-              "an",
-              "—"
-            ],
-            "answer": 1,
-            "explanation_ar": "engineer تبدأ بحرف علة فنستخدم an."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "He is ___ beekeeper in Doan.",
-            "options": [
-              "a",
-              "an",
-              "—"
-            ],
-            "answer": 0,
-            "explanation_ar": "beekeeper تبدأ بصوت ساكن فنستخدم a."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "اختر الجملة الصحيحة:",
-            "options": [
-              "She is doctor.",
-              "She is a doctor.",
-              "She a doctor."
-            ],
-            "answer": 1,
-            "explanation_ar": "نحتاج is و a قبل المهنة."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "What's ___ job? — He's a driver.",
-            "answer": "his",
-            "explanation_ar": "نسأل عن مهنته هو: What's his job?"
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "They are ___.",
-            "options": [
-              "a fisherman",
-              "fishermen",
-              "an fishermen"
-            ],
-            "answer": 1,
-            "explanation_ar": "الجمع بلا a: fishermen (جمع fisherman)."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e9",
-            "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن سؤالاً: job / your / what's",
-            "answer": [
-              "What's",
-              "your",
-              "job"
-            ],
-            "explanation_ar": "What's + your + job؟"
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-02-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "صورة عائلة هند",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**هند** تُري صديقتها **سلمى** صورة عائلتها، وتخبرها بمهنة كل شخص. استمع وأجب."
-        },
-        {
-          "type": "video",
-          "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
-        },
-        {
-          "type": "audio",
-          "text_en": "Salma: Who is this in the photo, Hind?\nHind: This is my father. He's a fisherman in Al-Shihr.\nSalma: And this man?\nHind: That's my uncle Saeed. He's a date farmer in Seiyun.\nSalma: Is your mother a teacher?\nHind: No, she isn't. She's a nurse at the hospital in Mukalla.\nSalma: And your brother?\nHind: He's an engineer. He works at the port.\nSalma: Wow! My father is a builder. He builds houses in Shibam."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What is Hind's father's job?",
-            "options": [
-              "farmer",
-              "fisherman",
-              "builder"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: He's a fisherman in Al-Shihr."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Hind's mother is a teacher.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: No, she isn't. She's a nurse."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e12",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "Where does Salma's father build houses?",
-            "options": [
-              "in Shibam",
-              "in Seiyun",
-              "in Al-Shihr"
-            ],
-            "answer": 0,
-            "explanation_ar": "قالت سلمى: He builds houses in Shibam."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-02-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "عائلة من وادي دوعن",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن عائلة تعيش في **وادي دوعن** المشهور بالعسل، ثم أجب عن الأسئلة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
-        },
-        {
-          "type": "reading",
-          "text_en": "Wadi Doan is a beautiful valley in Hadramout. It is famous for its honey. Mr. Abdullah Ba-Obaid is a beekeeper there. His bees make sidr honey. His wife, Fatima, is a teacher at the girls' school. Their son, Khaled, is a driver. He drives a truck from Doan to Mukalla. Their daughter, Nora, is a student. She wants to be a doctor. Mr. Abdullah's brother is a builder. He builds the tall mud houses of the valley. They are a busy family, and they are proud of their work.",
-          "word_count": 89
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What is Mr. Abdullah's job?",
-            "options": [
-              "teacher",
-              "beekeeper",
-              "driver"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: Mr. Abdullah Ba-Obaid is a beekeeper."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e14",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What is Fatima's job?",
-            "options": [
-              "teacher",
-              "doctor",
-              "nurse"
-            ],
-            "answer": 0,
-            "explanation_ar": "في النص: His wife, Fatima, is a teacher."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e15",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "Nora is a doctor.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "نورة طالبة، وتريد أن تصبح طبيبة (She wants to be a doctor)."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e16",
-            "skill": "reading",
-            "kind": "fill_blank",
-            "prompt": "Mr. Abdullah's brother is a ___.",
-            "answer": "builder",
-            "explanation_ar": "في النص: Mr. Abdullah's brother is a builder."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-02-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "مهن عائلتك",
+      "title": "قاعدة: a / an with jobs",
       "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "تحدث عن مهن 3 أو 4 أشخاص من عائلتك أو حيّك. **قل اسم الشخص وقرابته ومهنته**. لا تنسَ a أو an قبل المهنة."
+          "type": "audio",
+          "text_en": "I am a teacher. She is a doctor. He is an engineer. We are teachers."
         },
         {
-          "type": "video",
-          "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
+          "type": "text",
+          "markdown_ar": "في العربية نقول «أنا معلم» بدون كلمة قبل المهنة. أما في الإنجليزية فنضع قبل المهنة المفردة كلمة صغيرة: **a** أو **an** وتعني «واحد».\n\n- نستخدم **a** إذا بدأت الكلمة التالية **بصوت ساكن**: a teacher, a doctor, a farmer, a driver.\n- نستخدم **an** إذا بدأت **بصوت متحرك** (a, e, i, o, u): an engineer, an artist.\n\nالقرار يعتمد على **الصوت** وليس على الحرف فقط. فـ **engineer** تبدأ بصوت «إ» فنقول an engineer.\n\n**الخطأ الشائع:** أن نقول «I am teacher». الصحيح: **I am a teacher**.\n\n**ملاحظة:** مع الجمع لا نستخدم a ولا an: **We are teachers**."
         },
         {
           "type": "table",
           "headers": [
-            "لتقول",
-            "العبارة"
+            "الكلمة",
+            "متى؟",
+            "مثال"
           ],
           "rows": [
             [
-              "أبي",
-              "My father is a…"
+              "a",
+              "قبل صوت ساكن",
+              "a teacher, a doctor, a farmer"
             ],
             [
-              "أمي",
-              "My mother is an… / a…"
+              "an",
+              "قبل صوت متحرك",
+              "an engineer, an artist"
             ],
             [
-              "هم",
-              "My brothers are…"
-            ],
-            [
-              "أنا",
-              "I'm a student. I want to be a…"
+              "بدون a/an",
+              "مع الجمع",
+              "We are teachers."
             ]
           ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Talk about the jobs of three or four people in your family or neighbourhood. Then say what job you want in the future.",
-        "helpful_phrases": [
-          "My father is a…",
-          "My uncle is an…",
-          "They are…",
-          "I'm a student.",
-          "I want to be a…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "a / an with jobs",
-          "jobs vocabulary"
-        ]
-      }
-    },
-    {
-      "id": "A1-02-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "اكتب عن مهن عائلتك",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن مهن أفراد عائلتك. اقرأ المثال أولاً."
         },
         {
-          "type": "video",
-          "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / an / He / engineer",
+            "answer": [
+              "He",
+              "is",
+              "an",
+              "engineer"
+            ],
+            "explanation_ar": "الترتيب الصحيح: He is an engineer"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "My name is Hassan. I am from Ghail Ba Wazir. My father is a farmer. He grows tobacco and vegetables. My mother is a teacher. My sister is a nurse in Mukalla. My two brothers are fishermen in Al-Shihr. I am a student. I want to be an engineer.",
-          "word_count": 49
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "She is a ___.",
+            "answer": "cook",
+            "explanation_ar": "الكلمة الناقصة «cook» (طبّاخ)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «nurse» mean?",
+            "options": [
+              "ممرضة / ممرض",
+              "طبّاخ",
+              "يعمل",
+              "مهندس"
+            ],
+            "answer": 0,
+            "explanation_ar": "«nurse» تعني «ممرضة / ممرض». مثال: My aunt is a nurse."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: are / We / teachers",
+            "answer": [
+              "We",
+              "are",
+              "teachers"
+            ],
+            "explanation_ar": "الترتيب الصحيح: We are teachers"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "What is your ___?",
+            "answer": "job",
+            "explanation_ar": "الكلمة الناقصة «job» (وظيفة / مهنة)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about the jobs of the people in your family. Use a / an, is and are. Say what job you want.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 2–3 sentences about the jobs of people in your family. Use: My father is a ... My uncle is an ...",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "a / an with jobs",
-          "verb to be",
-          "jobs vocabulary"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-02-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-02-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **a** + صوت ساكن، **an** + صوت حرف علة: a doctor, an engineer.\n- الجمع بلا a: They are farmers.\n- **What's your job? What does he do?** ← He's a…\n- المهن: teacher, doctor, nurse, fisherman, farmer, beekeeper, builder, driver, engineer, shopkeeper, tailor."
-        },
-        {
-          "type": "video",
-          "youtube_id": "AZZCsweJaiw",
-          "video_title": "تعلم الوظائف باللغة الإنجليزية — الحلقة 2",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 477,
-          "optional": true,
-          "approx_size_mb": 32
+          "markdown_ar": "طارق في معرض المهن مع أستاذه علي. **استمع:** ما مهنة الأستاذ علي؟ وما مهنة والد طارق؟"
         },
         {
           "type": "story",
-          "id": "A1-02-s1",
-          "title_ar": "الحلقة 2: صياد في الشحر",
+          "id": "A1-02-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Reem",
-              "text_en": "Hamza, this is my uncle Salem. He's a fisherman.",
-              "text_ar": "حمزة، هذا عمي سالم. هو صياد."
+              "speaker": "Tariq",
+              "text_en": "Look, Mr. Ali! This is a doctor.",
+              "text_ar": "انظر يا أستاذ علي! هذا طبيب."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Hello, sir. Is your boat here in Al-Shihr?",
-              "text_ar": "مرحباً يا عم. هل قاربك هنا في الشحر؟"
+              "speaker": "Mr. Ali",
+              "text_en": "Yes, she is a doctor. She works in a hospital.",
+              "text_ar": "نعم، هي طبيبة. تعمل في مستشفى."
             },
             {
-              "speaker": "Salem",
-              "text_en": "Yes, it is. I'm a fisherman, and my son is a driver.",
-              "text_ar": "نعم. أنا صياد، وابني سائق."
+              "speaker": "Tariq",
+              "text_en": "What is your job, Mr. Ali?",
+              "text_ar": "ما هي مهنتك يا أستاذ علي؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "My father is a farmer. He's a date farmer in Seiyun.",
-              "text_ar": "أبي مزارع. هو مزارع نخيل في سيئون."
+              "speaker": "Mr. Ali",
+              "text_en": "I am a teacher. I work in your school.",
+              "text_ar": "أنا معلم. أعمل في مدرستكم."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Fishermen and farmers! Hadramout is full of work.",
-              "text_ar": "صيادون ومزارعون! حضرموت مليئة بالعمل."
+              "speaker": "Tariq",
+              "text_en": "My father is a farmer.",
+              "text_ar": "أبي مزارع."
+            },
+            {
+              "speaker": "Mr. Ali",
+              "text_en": "A farmer is a good job.",
+              "text_ar": "المزارع مهنة جيدة."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "My uncle is an engineer.",
+              "text_ar": "عمي مهندس."
+            },
+            {
+              "speaker": "Mr. Ali",
+              "text_en": "Great! You are a good student, Tariq.",
+              "text_ar": "رائع! أنت طالب جيد يا طارق."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-02-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Is she a nurse? — No, she ___. She's a doctor.",
+            "id": "A1-02-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"My father is a farmer.\"",
             "options": [
-              "is",
-              "isn't",
-              "aren't"
-            ],
-            "answer": 1,
-            "explanation_ar": "الإجابة المنفية: No, she isn't."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-02-e18",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "A ___ builds houses.",
-            "options": [
-              "builder",
-              "tailor",
-              "nurse"
+              "True",
+              "False"
             ],
             "answer": 0,
-            "explanation_ar": "البنّاء builder."
+            "explanation_ar": "الذي قال «My father is a farmer.» هو Tariq."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-02-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-02-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "My brothers ___ drivers.",
-            "answer": "are",
-            "explanation_ar": "الجمع: are."
+            "id": "A1-02-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «good morning» mean?",
+            "options": [
+              "معلم",
+              "مزارع",
+              "سائق",
+              "صباح الخير"
+            ],
+            "answer": 3,
+            "explanation_ar": "«good morning» تعني «صباح الخير». مثال: Good morning, Bilal."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mr. Ali says: \"My uncle is an engineer.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «My uncle is an engineer.» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «nurse» mean?",
+            "options": [
+              "صباح الخير",
+              "ممرضة / ممرض",
+              "مرحباً",
+              "معلم"
+            ],
+            "answer": 1,
+            "explanation_ar": "«nurse» تعني «ممرضة / ممرض». مثال: My aunt is a nurse."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell us about three people you know: say their jobs. Start with: My father is ... My uncle is ... I am ...",
+        "helpful_phrases": [
+          "My father is a ...",
+          "She is a ...",
+          "He is an ...",
+          "I am a student."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-02-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-02-L4-s1",
+          "title_ar": "في السوق بعد الدرس",
+          "panels": [
+            {
+              "speaker": "Mona",
+              "text_en": "Good morning, Salem!",
+              "text_ar": "صباح الخير يا سالم!"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Hello, Mona! What is your father's job?",
+              "text_ar": "مرحباً يا منى! ما هي مهنة والدك؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "He is a shopkeeper.",
+              "text_ar": "هو صاحب دكان."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "My father is a driver.",
+              "text_ar": "أبي سائق."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Is your mother a teacher?",
+              "text_ar": "هل أمك معلمة؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, she is a teacher.",
+              "text_ar": "نعم، هي معلمة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "My sister is a nurse.",
+              "text_ar": "أختي ممرضة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "She has a good job.",
+              "text_ar": "عندها مهنة جيدة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cook» mean?",
+            "options": [
+              "صاحب دكان",
+              "ممرضة / ممرض",
+              "طبيب",
+              "طبّاخ"
+            ],
+            "answer": 3,
+            "explanation_ar": "«cook» تعني «طبّاخ». مثال: She is a cook."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___, Salem!",
+            "answer": "Good morning",
+            "explanation_ar": "الكلمة الناقصة «Good morning» (صباح الخير)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: Mr. / a / is / teacher / Ali",
+            "answer": [
+              "Mr.",
+              "Ali",
+              "is",
+              "a",
+              "teacher"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Mr. Ali is a teacher"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"He is a shopkeeper.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «He is a shopkeeper.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «engineer» mean?",
+            "options": [
+              "طبّاخ",
+              "مهندس",
+              "صاحب دكان",
+              "طبيب"
+            ],
+            "answer": 1,
+            "explanation_ar": "«engineer» تعني «مهندس». مثال: He is an engineer."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-02-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "He is an ___.",
+            "answer": "engineer",
+            "explanation_ar": "الكلمة الناقصة «engineer» (مهندس)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-02-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend about the jobs of your family: your father, your mother, your uncle. Use a or an in every sentence.",
+        "helpful_phrases": [
+          "My father is a ...",
+          "My mother is a ...",
+          "My uncle is an ...",
+          "I work ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -817,132 +680,130 @@
     "questions": [
       {
         "id": "A1-02-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "He is ___ fisherman.",
+        "prompt": "What does «nurse» mean?",
         "options": [
-          "a",
-          "an",
-          "—"
+          "ممرضة / ممرض",
+          "صاحب دكان",
+          "مهندس",
+          "يعمل"
         ],
         "answer": 0,
-        "explanation_ar": "fisherman تبدأ بصوت ساكن: a."
+        "explanation_ar": "«nurse» تعني «ممرضة / ممرض». مثال: My aunt is a nurse."
       },
       {
         "id": "A1-02-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "She is ___ engineer.",
-        "options": [
-          "a",
-          "an",
-          "—"
-        ],
-        "answer": 1,
-        "explanation_ar": "engineer تبدأ بحرف علة: an."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "My sister is a ___.",
+        "answer": "nurse",
+        "explanation_ar": "الكلمة الناقصة «nurse» (ممرضة / ممرض)."
       },
       {
         "id": "A1-02-q3",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "A ___ works in a hospital and helps doctors.",
-        "options": [
-          "nurse",
-          "farmer",
-          "builder"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: engineer / an / is / He",
+        "answer": [
+          "He",
+          "is",
+          "an",
+          "engineer"
         ],
-        "answer": 0,
-        "explanation_ar": "الممرض nurse يعمل في المستشفى."
+        "explanation_ar": "الترتيب الصحيح: He is an engineer"
       },
       {
         "id": "A1-02-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "What's ___ job? — She's a tailor.",
-        "answer": "her",
-        "explanation_ar": "نسأل عن مهنتها هي: What's her job?"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «doctor» mean?",
+        "options": [
+          "سائق",
+          "معلم",
+          "مزارع",
+          "طبيب"
+        ],
+        "answer": 3,
+        "explanation_ar": "«doctor» تعني «طبيب». مثال: She is a doctor."
       },
       {
         "id": "A1-02-q5",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "My father is teacher.",
-          "My father is a teacher.",
-          "My father a teacher."
-        ],
-        "answer": 1,
-        "explanation_ar": "نحتاج is و a قبل المهنة."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "My father is a ___.",
+        "answer": "driver",
+        "explanation_ar": "الكلمة الناقصة «driver» (سائق)."
       },
       {
         "id": "A1-02-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "Sidr honey comes from a ___.",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Mr. Ali says: \"My father is a farmer.\"",
         "options": [
-          "fisherman",
-          "beekeeper",
-          "driver"
+          "True",
+          "False"
         ],
         "answer": 1,
-        "explanation_ar": "العسل من النحّال beekeeper."
+        "explanation_ar": "الذي قال «My father is a farmer.» هو Tariq."
       },
       {
         "id": "A1-02-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «teacher» mean?",
+        "options": [
+          "معلم",
+          "طبّاخ",
+          "صاحب دكان",
+          "وظيفة / مهنة"
+        ],
+        "answer": 0,
+        "explanation_ar": "«teacher» تعني «معلم». مثال: Mr. Ali is a teacher."
+      },
+      {
+        "id": "A1-02-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Hello, Mona! What is your father's ___?",
+        "answer": "job",
+        "explanation_ar": "الكلمة الناقصة «job» (وظيفة / مهنة)."
+      },
+      {
+        "id": "A1-02-q9",
         "skill": "grammar",
         "kind": "order_words",
-        "prompt": "رتب الكلمات (ابدأ بـ My): is / a / my / uncle / farmer",
+        "prompt": "رتب الكلمات: is / My / uncle / an / engineer",
         "answer": [
           "My",
           "uncle",
           "is",
-          "a",
-          "farmer"
+          "an",
+          "engineer"
         ],
-        "explanation_ar": "الفاعل + is + a + المهنة."
-      },
-      {
-        "id": "A1-02-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "They are ___.",
-        "options": [
-          "a farmers",
-          "farmers",
-          "an farmer"
-        ],
-        "answer": 1,
-        "explanation_ar": "الجمع بلا a."
-      },
-      {
-        "id": "A1-02-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Ali drives a bus from Seiyun to Mukalla.» What is Ali's job?",
-        "options": [
-          "He's a driver.",
-          "He's a builder.",
-          "He's a tailor."
-        ],
-        "answer": 0,
-        "explanation_ar": "من يقود الحافلة سائق driver."
+        "explanation_ar": "الترتيب الصحيح: My uncle is an engineer"
       },
       {
         "id": "A1-02-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "A ___ catches fish. (صياد)",
-        "answer": "fisherman",
-        "explanation_ar": "الصياد = fisherman."
+        "kind": "mcq",
+        "prompt": "What does «work» mean?",
+        "options": [
+          "وظيفة / مهنة",
+          "طبيب",
+          "ممرضة / ممرض",
+          "يعمل"
+        ],
+        "answer": 3,
+        "explanation_ar": "«work» تعني «يعمل». مثال: I work in a school."
       }
     ]
   },
-  "context_note": "الصيد في المكلا والشحر، نخيل وادي حضرموت، عسل السدر في دوعن، بيوت الطين في شبام.",
-  "stop_ar": "الشحر",
+  "stop_ar": "مركز التدريب المهني",
   "roleplay": {
-    "character_ar": "العم سالم، صياد في الشحر",
-    "scenario_en": "You are Uncle Salem, a fisherman in Al-Shihr. Talk about jobs: ask the student about the jobs of their family.",
-    "opening_en": "Hello! I'm a fisherman. And you? What's your father's job?"
-  }
+    "character_ar": "الأستاذ علي في معرض المهن",
+    "scenario_en": "You are Mr. Ali, a teacher at a vocational training centre in Yemen. A student visits the jobs fair. Ask what his or her job dreams are and what the family's jobs are. Use only very simple English (teacher, doctor, nurse, engineer, farmer, driver, cook, shopkeeper, a / an).",
+    "opening_en": "Welcome to the jobs fair! I am a teacher. What is your father's job?"
+  },
+  "context_note": "مهن في محيطنا"
 }

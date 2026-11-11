@@ -12,6 +12,8 @@
     "test:watch": "vitest",
     "test:db": "./scripts/test-db.sh",
     "content:check": "tsx scripts/content-check.ts",
+    "curriculum:build": "tsx scripts/curriculum/build.ts",
+    "curriculum:import": "tsx scripts/curriculum/import.ts",
     "test:e2e": "playwright test",
     "placement:seed": "tsx scripts/placement-seed.ts"
   },

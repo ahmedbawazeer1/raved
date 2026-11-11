@@ -1,0 +1,845 @@
+{
+  "path": "english",
+  "code": "A1-19",
+  "version": 1,
+  "level": "A1",
+  "position": 19,
+  "title": "Household Tools We Use",
+  "topic": "يذهب بلال وأبوه إلى متجر الأدوات المنزلية لشراء أدوات لإصلاح البيت، ويسألان البائع: هل عندكم...؟ كم سعره؟",
+  "grammar_point": "I need ... / Do you have ...? / How much is it?",
+  "can_do": [
+    "أسمّي أدوات منزلية شائعة بالإنجليزية",
+    "أطلب ما أحتاجه في متجر",
+    "أسأل عن السعر بـ How much"
+  ],
+  "vocab": [
+    {
+      "id": "A1-19-v1",
+      "word": "tool",
+      "part_of_speech": "noun",
+      "meaning_ar": "أداة",
+      "example_en": "I need a tool."
+    },
+    {
+      "id": "A1-19-v2",
+      "word": "hammer",
+      "part_of_speech": "noun",
+      "meaning_ar": "مطرقة",
+      "example_en": "I need a hammer."
+    },
+    {
+      "id": "A1-19-v3",
+      "word": "screwdriver",
+      "part_of_speech": "noun",
+      "meaning_ar": "مفك",
+      "example_en": "Do you have a screwdriver?"
+    },
+    {
+      "id": "A1-19-v4",
+      "word": "saw",
+      "part_of_speech": "noun",
+      "meaning_ar": "منشار",
+      "example_en": "The saw is expensive."
+    },
+    {
+      "id": "A1-19-v5",
+      "word": "ladder",
+      "part_of_speech": "noun",
+      "meaning_ar": "سلّم",
+      "example_en": "We need a ladder."
+    },
+    {
+      "id": "A1-19-v6",
+      "word": "key",
+      "part_of_speech": "noun",
+      "meaning_ar": "مفتاح",
+      "example_en": "Where is the key?"
+    },
+    {
+      "id": "A1-19-v7",
+      "word": "rope",
+      "part_of_speech": "noun",
+      "meaning_ar": "حبل",
+      "example_en": "The rope is long."
+    },
+    {
+      "id": "A1-19-v8",
+      "word": "bucket",
+      "part_of_speech": "noun",
+      "meaning_ar": "دلو",
+      "example_en": "I need a blue bucket."
+    },
+    {
+      "id": "A1-19-v9",
+      "word": "broom",
+      "part_of_speech": "noun",
+      "meaning_ar": "مكنسة",
+      "example_en": "How much is the broom?"
+    },
+    {
+      "id": "A1-19-v10",
+      "word": "scissors",
+      "part_of_speech": "noun",
+      "meaning_ar": "مقص",
+      "example_en": "Do you have scissors?"
+    },
+    {
+      "id": "A1-19-v11",
+      "word": "torch",
+      "part_of_speech": "noun",
+      "meaning_ar": "كشّاف",
+      "example_en": "I need a torch for the night."
+    },
+    {
+      "id": "A1-19-v12",
+      "word": "battery",
+      "part_of_speech": "noun",
+      "meaning_ar": "بطارية",
+      "example_en": "The torch needs a battery."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-19-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: أدوات منزلية نستخدمها",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "كل بيت يحتاج بين وقت وآخر إلى أدوات: مطرقة لتثبيت مسمار، وكشّاف عندما ينقطع الكهرباء، ودلو للماء. في هذا الدرس ستسمّي هذه الأدوات وتتعلم أن تطلبها من البائع: **I need ...** و **Do you have ...?**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "80tPPnffuMM",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 19",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "tool",
+              "أداة",
+              "I need a tool."
+            ],
+            [
+              "hammer",
+              "مطرقة",
+              "I need a hammer."
+            ],
+            [
+              "screwdriver",
+              "مفك",
+              "Do you have a screwdriver?"
+            ],
+            [
+              "saw",
+              "منشار",
+              "The saw is expensive."
+            ],
+            [
+              "ladder",
+              "سلّم",
+              "We need a ladder."
+            ],
+            [
+              "key",
+              "مفتاح",
+              "Where is the key?"
+            ],
+            [
+              "rope",
+              "حبل",
+              "The rope is long."
+            ],
+            [
+              "bucket",
+              "دلو",
+              "I need a blue bucket."
+            ],
+            [
+              "broom",
+              "مكنسة",
+              "How much is the broom?"
+            ],
+            [
+              "scissors",
+              "مقص",
+              "Do you have scissors?"
+            ],
+            [
+              "torch",
+              "كشّاف",
+              "I need a torch for the night."
+            ],
+            [
+              "battery",
+              "بطارية",
+              "The torch needs a battery."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "I need a hammer and a screwdriver. Do you have a saw? We need a ladder and a rope. Where is the key? I need a blue bucket and a broom. Do you have scissors? I need a torch and a battery for the night. How much is it?"
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «torch» mean?",
+            "options": [
+              "مفتاح",
+              "مقص",
+              "منشار",
+              "كشّاف"
+            ],
+            "answer": 3,
+            "explanation_ar": "«torch» تعني «كشّاف». مثال: I need a torch for the night."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Do you have a ___?",
+            "answer": "screwdriver",
+            "explanation_ar": "الكلمة الناقصة «screwdriver» (مفك)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «saw» mean?",
+            "options": [
+              "مفتاح",
+              "غرفة نوم",
+              "منشار",
+              "مطرقة"
+            ],
+            "answer": 2,
+            "explanation_ar": "«saw» تعني «منشار». مثال: The saw is expensive."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I need a blue ___.",
+            "answer": "bucket",
+            "explanation_ar": "الكلمة الناقصة «bucket» (دلو)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bed» mean?",
+            "options": [
+              "مكنسة",
+              "مقص",
+              "غرفة نوم",
+              "سرير"
+            ],
+            "answer": 3,
+            "explanation_ar": "«bed» تعني «سرير». مثال: The bed is next to the window."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-19-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-19-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: I need ... / Do you have ...? / How much is it?",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "I need a hammer. Do you have a torch? How much is the bucket? We need a ladder."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "في المتجر نحتاج ثلاثة أنماط من الجمل:\n\n1. **نطلب** ما نريد: **I need** a hammer. (أحتاج مطرقة)\n2. **نسأل إن كان متوفراً**: **Do you have** a torch? (هل عندكم كشّاف؟) والجواب: Yes, I do. / No, I don't.\n3. **نسأل عن السعر**: **How much is** the bucket? (بكم الدلو؟) وللجمع: **How much are** the batteries?\n\nمع الأدوات المفردة نستخدم a (a hammer). أما **scissors** فهي جمع دائماً (مقص واحد = a pair of scissors).\n\n**الخطأ الشائع:** «How many is it?». السؤال عن **السعر** هو **How much**، وعن **العدد** هو How many."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الغرض",
+            "الجملة",
+            "الجواب"
+          ],
+          "rows": [
+            [
+              "الطلب",
+              "I need a hammer.",
+              "OK."
+            ],
+            [
+              "السؤال عن التوفر",
+              "Do you have a torch?",
+              "Yes, I do."
+            ],
+            [
+              "السعر",
+              "How much is it?",
+              "It is five hundred riyals."
+            ],
+            [
+              "السعر (جمع)",
+              "How much are the batteries?",
+              "They are cheap."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: Where / key / is / the",
+            "answer": [
+              "Where",
+              "is",
+              "the",
+              "key"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Where is the key"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I need a blue ___.",
+            "answer": "bucket",
+            "explanation_ar": "الكلمة الناقصة «bucket» (دلو)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bedroom» mean?",
+            "options": [
+              "منشار",
+              "مفك",
+              "أداة",
+              "غرفة نوم"
+            ],
+            "answer": 3,
+            "explanation_ar": "«bedroom» تعني «غرفة نوم». مثال: My bedroom is small."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: have / you / Do / scissors",
+            "answer": [
+              "Do",
+              "you",
+              "have",
+              "scissors"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Do you have scissors"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Do you have a ___?",
+            "answer": "screwdriver",
+            "explanation_ar": "الكلمة الناقصة «screwdriver» (مفك)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences you say in a tools shop. Use: I need ... Do you have ...? How much is ...?",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-19-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "بلال وأبوه في متجر الأدوات. **استمع:** ماذا يحتاجان؟ وهل عند البائع كشّاف؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-19-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Bilal",
+              "text_en": "Good morning! I need a hammer, please.",
+              "text_ar": "صباح الخير! أحتاج مطرقة من فضلك."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Here you are. This hammer is new.",
+              "text_ar": "تفضل. هذه المطرقة جديدة."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "Do you have a ladder?",
+              "text_ar": "هل عندكم سلّم؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Yes, I do. It is very long.",
+              "text_ar": "نعم. وهو طويل جداً."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "How much is the ladder?",
+              "text_ar": "بكم السلّم؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "It is expensive. But the rope is cheap.",
+              "text_ar": "غالٍ. لكن الحبل رخيص."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "Do you have a torch and batteries?",
+              "text_ar": "هل عندكم كشّاف وبطاريات؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Yes. We have a good torch. Thank you!",
+              "text_ar": "نعم. عندنا كشّاف جيد. شكراً!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"Yes. We have a good torch. Thank you!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Yes. We have a good torch. Thank you!» هو Seller."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «ladder» mean?",
+            "options": [
+              "منشار",
+              "سلّم",
+              "سرير",
+              "كشّاف"
+            ],
+            "answer": 1,
+            "explanation_ar": "«ladder» تعني «سلّم». مثال: We need a ladder."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Bilal says: \"Here you are. This hammer is new.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Here you are. This hammer is new.» هو Seller."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hammer» mean?",
+            "options": [
+              "سرير",
+              "سلّم",
+              "مقص",
+              "مطرقة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«hammer» تعني «مطرقة». مثال: I need a hammer."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are in a tools shop. Ask for three things and ask the price of one.",
+        "helpful_phrases": [
+          "I need a ...",
+          "Do you have a ...?",
+          "How much is it?",
+          "Thank you."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-19-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-19-L4-s1",
+          "title_ar": "انقطاع الكهرباء",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "The light is off, Mona!",
+              "text_ar": "الكهرباء انقطعت يا منى!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Do you have a torch?",
+              "text_ar": "هل عندك كشّاف؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Yes, I do. But the battery is old.",
+              "text_ar": "نعم. لكن البطارية قديمة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We need a new battery.",
+              "text_ar": "نحتاج بطارية جديدة."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Go to the shop. How much is a battery?",
+              "text_ar": "اذهبي إلى المتجر. بكم البطارية؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "It is cheap. I need a bucket too.",
+              "text_ar": "إنها رخيصة. وأحتاج دلواً أيضاً."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Take the key from the table.",
+              "text_ar": "خذي المفتاح من الطاولة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Thank you, Salem.",
+              "text_ar": "شكراً يا سالم."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «saw» mean?",
+            "options": [
+              "غرفة نوم",
+              "أداة",
+              "منشار",
+              "مطرقة"
+            ],
+            "answer": 2,
+            "explanation_ar": "«saw» تعني «منشار». مثال: The saw is expensive."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Do you have a ___?",
+            "answer": "screwdriver",
+            "explanation_ar": "الكلمة الناقصة «screwdriver» (مفك)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: do. / Yes, / I / old / the / is / battery / But",
+            "answer": [
+              "Yes,",
+              "I",
+              "do.",
+              "But",
+              "the",
+              "battery",
+              "is",
+              "old"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Yes, I do. But the battery is old"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"Yes, I do. But the battery is old.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Yes, I do. But the battery is old.» هو Salem."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bedroom» mean?",
+            "options": [
+              "مقص",
+              "أداة",
+              "غرفة نوم",
+              "سلّم"
+            ],
+            "answer": 2,
+            "explanation_ar": "«bedroom» تعني «غرفة نوم». مثال: My bedroom is small."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-19-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Yes, I do. But the ___ is old.",
+            "answer": "battery",
+            "explanation_ar": "الكلمة الناقصة «battery» (بطارية)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-19-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are at the hardware store. Ask for 3 tools, ask if they have two more, and ask the price of one. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "I need a ...",
+          "Do you have ...?",
+          "How much is ...?",
+          "Thank you."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-19-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «saw» mean?",
+        "options": [
+          "مطرقة",
+          "مكنسة",
+          "منشار",
+          "مقص"
+        ],
+        "answer": 2,
+        "explanation_ar": "«saw» تعني «منشار». مثال: The saw is expensive."
+      },
+      {
+        "id": "A1-19-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "It is cheap. I need a ___ too.",
+        "answer": "bucket",
+        "explanation_ar": "الكلمة الناقصة «bucket» (دلو)."
+      },
+      {
+        "id": "A1-19-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: hammer / a / need / I",
+        "answer": [
+          "I",
+          "need",
+          "a",
+          "hammer"
+        ],
+        "explanation_ar": "الترتيب الصحيح: I need a hammer"
+      },
+      {
+        "id": "A1-19-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «tool» mean?",
+        "options": [
+          "كشّاف",
+          "أداة",
+          "سلّم",
+          "دلو"
+        ],
+        "answer": 1,
+        "explanation_ar": "«tool» تعني «أداة». مثال: I need a tool."
+      },
+      {
+        "id": "A1-19-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I need a ___ and a battery for the night.",
+        "answer": "torch",
+        "explanation_ar": "الكلمة الناقصة «torch» (كشّاف)."
+      },
+      {
+        "id": "A1-19-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Seller says: \"Yes. We have a good torch. Thank you!\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation_ar": "الذي قال «Yes. We have a good torch. Thank you!» هو Seller."
+      },
+      {
+        "id": "A1-19-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «scissors» mean?",
+        "options": [
+          "سلّم",
+          "مقص",
+          "حبل",
+          "مكنسة"
+        ],
+        "answer": 1,
+        "explanation_ar": "«scissors» تعني «مقص». مثال: Do you have scissors?"
+      },
+      {
+        "id": "A1-19-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I need a blue bucket and a ___.",
+        "answer": "broom",
+        "explanation_ar": "الكلمة الناقصة «broom» (مكنسة)."
+      },
+      {
+        "id": "A1-19-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: need / a / a / I / and / hammer / screwdriver",
+        "answer": [
+          "I",
+          "need",
+          "a",
+          "hammer",
+          "and",
+          "a",
+          "screwdriver"
+        ],
+        "explanation_ar": "الترتيب الصحيح: I need a hammer and a screwdriver"
+      },
+      {
+        "id": "A1-19-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «bucket» mean?",
+        "options": [
+          "سلّم",
+          "مكنسة",
+          "دلو",
+          "حبل"
+        ],
+        "answer": 2,
+        "explanation_ar": "«bucket» تعني «دلو». مثال: I need a blue bucket."
+      }
+    ]
+  },
+  "stop_ar": "متجر الأدوات المنزلية",
+  "roleplay": {
+    "character_ar": "بائع في متجر الأدوات المنزلية",
+    "scenario_en": "You are a seller in a household tools shop in Yemen. The customer asks for tools (hammer, screwdriver, saw, ladder, key, rope, bucket, broom, scissors, torch, battery). Answer yes or no and say the price in simple numbers. Use only very simple English.",
+    "opening_en": "Good morning! What do you need?"
+  },
+  "context_note": "أدوات منزلية نستخدمها"
+}

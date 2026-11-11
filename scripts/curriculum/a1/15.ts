@@ -1,0 +1,86 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-15",
+  position: 15,
+  title_en: "How Are You Feeling?",
+  title_ar: "كيف تشعر؟",
+  stop_ar: "ديوان البيت",
+  situation_ar: "في ديوان بيت الجد تجتمع العائلة بعد يوم طويل، ويسأل كل واحد الآخر عن حاله ومشاعره.",
+  grammar_en: "How are you? I am + feeling (very)",
+  can_do: ["أسأل «كيف حالك؟» وأجيب", "أعبّر عن مشاعري بكلمات بسيطة", "أستخدم very لتقوية الصفة"],
+  video: { id: "vLUn6_FMw3w", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 15", checked: false },
+  words: [
+    ["happy", "adjective", "سعيد", "I am happy today."],
+    ["sad", "adjective", "حزين", "She is sad."],
+    ["tired", "adjective", "متعب", "I am tired after school."],
+    ["hungry", "adjective", "جائع", "We are hungry."],
+    ["thirsty", "adjective", "عطشان", "I am thirsty."],
+    ["angry", "adjective", "غاضب", "He is angry."],
+    ["sick", "adjective", "مريض", "My brother is sick."],
+    ["fine", "adjective", "بخير", "I am fine, thank you."],
+    ["very", "adverb", "جداً", "I am very tired."],
+    ["how", "other", "كيف", "How are you?"],
+    ["feel", "verb", "يشعر", "How do you feel?"],
+  ],
+  warmup_ar:
+    "عندما نلتقي بأحد نسأل أول شيء: «كيف حالك؟». الجواب الجميل لا يكون دائماً «الحمد لله». أحياناً نكون متعبين أو جائعين أو سعداء جداً. في هذا الدرس ستتعلم أن تقول كيف تشعر بالإنجليزية.",
+  in_context: [
+    "How are you? I am fine, thank you.",
+    "I am happy today.",
+    "She is sad. He is angry.",
+    "I am very tired after school.",
+    "We are hungry and thirsty.",
+    "My brother is sick.",
+    "How do you feel?",
+  ],
+  notice: ["How are you? I am fine.", "I am very tired.", "He is hungry.", "We are happy."],
+  rule_ar:
+    "لنسأل عن حال شخص نقول: **How are you?** (كيف حالك؟) ونجيب: **I am** + الشعور:\n\n- I am **fine**. = أنا بخير.\n- I am **tired**. = أنا متعب.\n- He is **hungry**. = هو جائع.\n\nنستخدم **very** (جداً) قبل الصفة لنقوّيها: I am **very** tired. (أنا متعب جداً).\n\nالفعل **be** يتغير: I **am**, you **are**, he/she **is**, we/they **are**.\n\n**الخطأ الشائع:** أن نقول «I have hungry» أو «I am have hungry». الصحيح: **I am hungry**.",
+  form: {
+    headers: ["من؟", "be", "مثال"],
+    rows: [
+      ["I", "am", "I am very tired."],
+      ["he / she", "is", "She is happy."],
+      ["we / you / they", "are", "We are hungry."],
+      ["How", "are you", "How are you? I am fine."],
+    ],
+  },
+  write_prompt: "Write 3 sentences about how you feel today and how your family feels. Use: I am ... My mother is ... We are ...",
+  before_ar: "العائلة في ديوان بيت الجد بعد يوم طويل. **استمع:** كيف حال كل واحد؟ ومن هو المتعب جداً؟",
+  dialogue: [
+    ["Grandfather", "Good evening! How are you, Tariq?", "مساء الخير! كيف حالك يا طارق؟"],
+    ["Tariq", "I am fine, thank you. And you?", "أنا بخير، شكراً. وأنت؟"],
+    ["Grandfather", "I am very tired, but happy.", "أنا متعب جداً لكني سعيد."],
+    ["Tariq", "My brother is sick.", "أخي مريض."],
+    ["Grandfather", "Oh, I am sad. How does he feel?", "أنا حزين. كيف يشعر؟"],
+    ["Tariq", "He is very tired and thirsty.", "هو متعب جداً وعطشان."],
+    ["Grandfather", "Give him water. We are all hungry. Let us eat.", "اعطه ماء. نحن كلنا جائعون. لنأكل."],
+    ["Tariq", "Yes, I am hungry too!", "نعم، وأنا جائع أيضاً!"],
+  ],
+  speak: {
+    prompt: "Ask a friend how he or she feels. Then answer: say how you feel today and why.",
+    phrases: ["How are you?", "I am fine.", "I am very ...", "I am tired because ..."],
+  },
+  story_title_ar: "بعد المباراة",
+  story: [
+    ["Bilal", "Hello, Salem! How are you?", "مرحباً يا سالم! كيف حالك؟"],
+    ["Salem", "I am very tired.", "أنا متعب جداً."],
+    ["Bilal", "Are you hungry?", "هل أنت جائع؟"],
+    ["Salem", "Yes, and I am thirsty.", "نعم، وعطشان."],
+    ["Bilal", "I am happy. We win the game.", "أنا سعيد. فزنا في المباراة."],
+    ["Salem", "The other team is sad.", "الفريق الآخر حزين."],
+    ["Bilal", "Come home. We eat together.", "تعال إلى البيت. نأكل معاً."],
+    ["Salem", "Thank you. I am fine now.", "شكراً. أنا بخير الآن."],
+  ],
+  task: {
+    prompt: "Tell a friend how you and three people in your family feel today. Use very and the words happy, sad, tired, hungry, thirsty, angry, sick, fine.",
+    phrases: ["How are you?", "I am very ...", "My ... is ...", "We are ..."],
+  },
+  roleplay: {
+    character_ar: "جدّك في ديوان البيت",
+    scenario_en: "You are a kind grandfather in a Yemeni diwan. Ask your grandchild how he or she feels today, and why. Use only very simple English (happy, sad, tired, hungry, thirsty, angry, sick, fine, very, how).",
+    opening_en: "Good evening, my dear! How are you today?",
+  },
+};
+export default unit;

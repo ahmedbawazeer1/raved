@@ -1,0 +1,839 @@
+{
+  "path": "english",
+  "code": "A1-21",
+  "version": 1,
+  "level": "A1",
+  "position": 21,
+  "title": "School Subjects and Schedule",
+  "topic": "في مكتبة المدرسة يقارن الطلاب جداولهم الأسبوعية ويتحدثون عن موادهم المفضلة وأيام حصصهم.",
+  "grammar_point": "I have English on Sunday / favourite subject",
+  "can_do": [
+    "أسمّي المواد الدراسية بالإنجليزية",
+    "أقول متى عندي كل مادة",
+    "أتحدث عن مادتي المفضلة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-21-v1",
+      "word": "subject",
+      "part_of_speech": "noun",
+      "meaning_ar": "مادة دراسية",
+      "example_en": "What is your favourite subject?"
+    },
+    {
+      "id": "A1-21-v2",
+      "word": "Arabic",
+      "part_of_speech": "noun",
+      "meaning_ar": "اللغة العربية",
+      "example_en": "We have Arabic on Saturday."
+    },
+    {
+      "id": "A1-21-v3",
+      "word": "English",
+      "part_of_speech": "noun",
+      "meaning_ar": "اللغة الإنجليزية",
+      "example_en": "I have English on Sunday."
+    },
+    {
+      "id": "A1-21-v4",
+      "word": "maths",
+      "part_of_speech": "noun",
+      "meaning_ar": "الرياضيات",
+      "example_en": "Maths is difficult."
+    },
+    {
+      "id": "A1-21-v5",
+      "word": "science",
+      "part_of_speech": "noun",
+      "meaning_ar": "العلوم",
+      "example_en": "Science is my favourite subject."
+    },
+    {
+      "id": "A1-21-v6",
+      "word": "history",
+      "part_of_speech": "noun",
+      "meaning_ar": "التاريخ",
+      "example_en": "We have history on Monday."
+    },
+    {
+      "id": "A1-21-v7",
+      "word": "geography",
+      "part_of_speech": "noun",
+      "meaning_ar": "الجغرافيا",
+      "example_en": "Geography is interesting."
+    },
+    {
+      "id": "A1-21-v8",
+      "word": "art",
+      "part_of_speech": "noun",
+      "meaning_ar": "الفنون",
+      "example_en": "She likes art."
+    },
+    {
+      "id": "A1-21-v9",
+      "word": "computer",
+      "part_of_speech": "noun",
+      "meaning_ar": "الحاسوب",
+      "example_en": "I have computer on Tuesday."
+    },
+    {
+      "id": "A1-21-v10",
+      "word": "timetable",
+      "part_of_speech": "noun",
+      "meaning_ar": "الجدول الدراسي",
+      "example_en": "My timetable is on the wall."
+    },
+    {
+      "id": "A1-21-v11",
+      "word": "favourite",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مفضّل",
+      "example_en": "My favourite subject is English."
+    },
+    {
+      "id": "A1-21-v12",
+      "word": "lesson",
+      "part_of_speech": "noun",
+      "meaning_ar": "درس / حصة",
+      "example_en": "I have six lessons a day."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-21-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: المواد الدراسية والجدول الأسبوعي",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "ما أصعب مادة بالنسبة لك؟ وما المادة التي تحبها أكثر؟ كل طالب لديه **جدول** أسبوعي فيه المواد والأيام. في هذا الدرس ستتحدث عن جدولك ومادتك المفضلة بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "v4QDGr_18v4",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 21",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "subject",
+              "مادة دراسية",
+              "What is your favourite subject?"
+            ],
+            [
+              "Arabic",
+              "اللغة العربية",
+              "We have Arabic on Saturday."
+            ],
+            [
+              "English",
+              "اللغة الإنجليزية",
+              "I have English on Sunday."
+            ],
+            [
+              "maths",
+              "الرياضيات",
+              "Maths is difficult."
+            ],
+            [
+              "science",
+              "العلوم",
+              "Science is my favourite subject."
+            ],
+            [
+              "history",
+              "التاريخ",
+              "We have history on Monday."
+            ],
+            [
+              "geography",
+              "الجغرافيا",
+              "Geography is interesting."
+            ],
+            [
+              "art",
+              "الفنون",
+              "She likes art."
+            ],
+            [
+              "computer",
+              "الحاسوب",
+              "I have computer on Tuesday."
+            ],
+            [
+              "timetable",
+              "الجدول الدراسي",
+              "My timetable is on the wall."
+            ],
+            [
+              "favourite",
+              "مفضّل",
+              "My favourite subject is English."
+            ],
+            [
+              "lesson",
+              "درس / حصة",
+              "I have six lessons a day."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "What is your favourite subject? I have English on Sunday. We have Arabic on Saturday. Maths is difficult, but science is my favourite subject. We have history on Monday and geography on Tuesday. She likes art. I have computer on Wednesday. My timetable is on the wall. I have six lessons a day."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Arabic» mean?",
+            "options": [
+              "اللغة العربية",
+              "الفنون",
+              "الجغرافيا",
+              "مفضّل"
+            ],
+            "answer": 0,
+            "explanation_ar": "«Arabic» تعني «اللغة العربية». مثال: We have Arabic on Saturday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We have ___ on Saturday.",
+            "answer": "Arabic",
+            "explanation_ar": "الكلمة الناقصة «Arabic» (اللغة العربية)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «lesson» mean?",
+            "options": [
+              "مفضّل",
+              "التاريخ",
+              "الجغرافيا",
+              "درس / حصة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«lesson» تعني «درس / حصة». مثال: I have six lessons a day."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "My favourite ___ is English.",
+            "answer": "subject",
+            "explanation_ar": "الكلمة الناقصة «subject» (مادة دراسية)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «geography» mean?",
+            "options": [
+              "درس / حصة",
+              "الجغرافيا",
+              "اللغة الإنجليزية",
+              "الرياضيات"
+            ],
+            "answer": 1,
+            "explanation_ar": "«geography» تعني «الجغرافيا». مثال: Geography is interesting."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-21-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-21-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: I have English on Sunday / favourite subject",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "I have English on Sunday. We have maths on Monday. My favourite subject is science. What is your favourite subject?"
+        },
+        {
+          "type": "text",
+          "markdown_ar": "للحديث عن جدولك نستخدم **have** (عندي) مع المادة واليوم:\n\n- **I have** English **on** Sunday. = عندي إنجليزي يوم الأحد.\n- **We have** maths **on** Monday. = عندنا رياضيات يوم الاثنين.\n\nلنتحدث عن المادة **المفضلة** نقول: **My favourite subject is** science. ونسأل: **What is your favourite subject?**\n\nلاحظ: أسماء اللغات تبدأ بحرف كبير (Arabic, English) أما المواد الأخرى فلا (maths, science).\n\n**الخطأ الشائع:** أن نقول «I have in Sunday». الصحيح: **on** Sunday."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الغرض",
+            "الجملة",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "الجدول",
+              "I have + مادة + on + يوم",
+              "I have English on Sunday."
+            ],
+            [
+              "المفضلة",
+              "My favourite subject is ...",
+              "My favourite subject is science."
+            ],
+            [
+              "السؤال",
+              "What is your favourite subject?",
+              "Maths."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: on / computer / have / Tuesday / I",
+            "answer": [
+              "I",
+              "have",
+              "computer",
+              "on",
+              "Tuesday"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I have computer on Tuesday"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ is interesting.",
+            "answer": "Geography",
+            "explanation_ar": "الكلمة الناقصة «Geography» (الجغرافيا)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «maths» mean?",
+            "options": [
+              "اللغة العربية",
+              "اللغة الإنجليزية",
+              "مفضّل",
+              "الرياضيات"
+            ],
+            "answer": 3,
+            "explanation_ar": "«maths» تعني «الرياضيات». مثال: Maths is difficult."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: favourite / is / Science / subject / my",
+            "answer": [
+              "Science",
+              "is",
+              "my",
+              "favourite",
+              "subject"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Science is my favourite subject"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We have ___ on Monday.",
+            "answer": "maths",
+            "explanation_ar": "الكلمة الناقصة «maths» (الرياضيات)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about your timetable: your subjects on two days and your favourite subject.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-21-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "سالم ومنى في مكتبة المدرسة. **استمع:** ما هي المادة المفضلة عند كل منهما؟ ومتى عندهما إنجليزي؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-21-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "Mona, what is your favourite subject?",
+              "text_ar": "يا منى، ما مادتك المفضلة؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "My favourite subject is science. And you?",
+              "text_ar": "مادتي المفضلة العلوم. وأنت؟"
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I like English. I have English on Sunday.",
+              "text_ar": "أحب الإنجليزية. عندي إنجليزي يوم الأحد."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We have maths on Monday.",
+              "text_ar": "عندنا رياضيات يوم الاثنين."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Maths is difficult.",
+              "text_ar": "الرياضيات صعبة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Look at my timetable. I have history on Tuesday.",
+              "text_ar": "انظر إلى جدولي. عندي تاريخ يوم الثلاثاء."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I have geography on Tuesday too.",
+              "text_ar": "وأنا عندي جغرافيا يوم الثلاثاء أيضاً."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We have six lessons a day. Let us study!",
+              "text_ar": "عندنا ست حصص في اليوم. لنذاكر!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"We have maths on Monday.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «We have maths on Monday.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «lesson» mean?",
+            "options": [
+              "مادة دراسية",
+              "درس / حصة",
+              "الجغرافيا",
+              "اللغة العربية"
+            ],
+            "answer": 1,
+            "explanation_ar": "«lesson» تعني «درس / حصة». مثال: I have six lessons a day."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"Look at my timetable. I have history on Tuesday.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Look at my timetable. I have history on Tuesday.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «science» mean?",
+            "options": [
+              "مفضّل",
+              "مستشفى",
+              "العلوم",
+              "الحاسوب"
+            ],
+            "answer": 2,
+            "explanation_ar": "«science» تعني «العلوم». مثال: Science is my favourite subject."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell us about your school week: which subjects you have and on which days, and your favourite subject.",
+        "helpful_phrases": [
+          "I have ... on ...",
+          "My favourite subject is ...",
+          "We have ...",
+          "My timetable"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-21-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-21-L4-s1",
+          "title_ar": "الجدول الجديد",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Look, the new timetable is on the wall!",
+              "text_ar": "انظري، الجدول الجديد على الجدار!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "We have English on Sunday and Wednesday.",
+              "text_ar": "عندنا إنجليزي الأحد والأربعاء."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "I have art on Thursday.",
+              "text_ar": "وعندي فنون يوم الخميس."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Art is my favourite subject.",
+              "text_ar": "الفنون مادتي المفضلة."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is computer on Tuesday?",
+              "text_ar": "هل الحاسوب يوم الثلاثاء؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, it is.",
+              "text_ar": "نعم."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is geography difficult?",
+              "text_ar": "هل الجغرافيا صعبة؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "No, it is interesting.",
+              "text_ar": "لا، هي شيّقة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «geography» mean?",
+            "options": [
+              "مستشفى",
+              "مادة دراسية",
+              "التاريخ",
+              "الجغرافيا"
+            ],
+            "answer": 3,
+            "explanation_ar": "«geography» تعني «الجغرافيا». مثال: Geography is interesting."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "I have ___ on Sunday.",
+            "answer": "English",
+            "explanation_ar": "الكلمة الناقصة «English» (اللغة الإنجليزية)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: on / Sunday / have / English / I",
+            "answer": [
+              "I",
+              "have",
+              "English",
+              "on",
+              "Sunday"
+            ],
+            "explanation_ar": "الترتيب الصحيح: I have English on Sunday"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"Art is my favourite subject.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Art is my favourite subject.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «computer» mean?",
+            "options": [
+              "العلوم",
+              "الحاسوب",
+              "التاريخ",
+              "مستشفى"
+            ],
+            "answer": 1,
+            "explanation_ar": "«computer» تعني «الحاسوب». مثال: I have computer on Tuesday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-21-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Science is my favourite ___.",
+            "answer": "subject",
+            "explanation_ar": "الكلمة الناقصة «subject» (مادة دراسية)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-21-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Explain your timetable to a friend: say four subjects, the days, and your favourite subject. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "I have ... on ...",
+          "My favourite subject is ...",
+          "We have ...",
+          "Maths is ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-21-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «Arabic» mean?",
+        "options": [
+          "الحاسوب",
+          "اللغة العربية",
+          "الرياضيات",
+          "الفنون"
+        ],
+        "answer": 1,
+        "explanation_ar": "«Arabic» تعني «اللغة العربية». مثال: We have Arabic on Saturday."
+      },
+      {
+        "id": "A1-21-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "We have ___ on Monday and geography on Tuesday.",
+        "answer": "history",
+        "explanation_ar": "الكلمة الناقصة «history» (التاريخ)."
+      },
+      {
+        "id": "A1-21-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: lessons / I / day / have / a / six",
+        "answer": [
+          "I",
+          "have",
+          "six",
+          "lessons",
+          "a",
+          "day"
+        ],
+        "explanation_ar": "الترتيب الصحيح: I have six lessons a day"
+      },
+      {
+        "id": "A1-21-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «timetable» mean?",
+        "options": [
+          "الجدول الدراسي",
+          "الرياضيات",
+          "الجغرافيا",
+          "اللغة الإنجليزية"
+        ],
+        "answer": 0,
+        "explanation_ar": "«timetable» تعني «الجدول الدراسي». مثال: My timetable is on the wall."
+      },
+      {
+        "id": "A1-21-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "___ is difficult.",
+        "answer": "Maths",
+        "explanation_ar": "الكلمة الناقصة «Maths» (الرياضيات)."
+      },
+      {
+        "id": "A1-21-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Huda says: \"I have art on Thursday.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation_ar": "الذي قال «I have art on Thursday.» هو Huda."
+      },
+      {
+        "id": "A1-21-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «maths» mean?",
+        "options": [
+          "الفنون",
+          "العلوم",
+          "الرياضيات",
+          "الجغرافيا"
+        ],
+        "answer": 2,
+        "explanation_ar": "«maths» تعني «الرياضيات». مثال: Maths is difficult."
+      },
+      {
+        "id": "A1-21-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Look, the new ___ is on the wall!",
+        "answer": "timetable",
+        "explanation_ar": "الكلمة الناقصة «timetable» (الجدول الدراسي)."
+      },
+      {
+        "id": "A1-21-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: English / on / I / Sunday / have",
+        "answer": [
+          "I",
+          "have",
+          "English",
+          "on",
+          "Sunday"
+        ],
+        "explanation_ar": "الترتيب الصحيح: I have English on Sunday"
+      },
+      {
+        "id": "A1-21-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «geography» mean?",
+        "options": [
+          "الجدول الدراسي",
+          "مفضّل",
+          "الجغرافيا",
+          "اللغة الإنجليزية"
+        ],
+        "answer": 2,
+        "explanation_ar": "«geography» تعني «الجغرافيا». مثال: Geography is interesting."
+      }
+    ]
+  },
+  "stop_ar": "مكتبة المدرسة",
+  "roleplay": {
+    "character_ar": "زميلة في مكتبة المدرسة",
+    "scenario_en": "You are a classmate in the school library in Yemen. Ask the student about the timetable and favourite subject (Arabic, English, maths, science, history, geography, art, computer). Use only very simple English.",
+    "opening_en": "Hello! What is your favourite subject?"
+  },
+  "context_note": "المواد الدراسية والجدول الأسبوعي"
+}

@@ -1,0 +1,88 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-12",
+  position: 12,
+  title_en: "Sports We Play",
+  title_ar: "رياضات نمارسها",
+  stop_ar: "ملعب الحي",
+  situation_ar: "يتجمع شباب الحي في الملعب بعد العصر، ويتحدثون عن الرياضات التي يلعبونها ويحبونها.",
+  grammar_en: "I play / we play (simple present)",
+  can_do: ["أسمّي رياضات شائعة بالإنجليزية", "أقول ما ألعب باستخدام play", "أسأل وأجيب عن الرياضة المفضلة"],
+  video: { id: "QQ66VKPsAag", title: "تعلم كلمات انجليزية عن الرياضة : كورس تعلم اللغة الإنجليزية للمبتدئين كامل مجانا : ١٢", checked: true },
+  words: [
+    ["football", "noun", "كرة القدم", "I play football."],
+    ["basketball", "noun", "كرة السلة", "They play basketball."],
+    ["volleyball", "noun", "الكرة الطائرة", "We play volleyball."],
+    ["swimming", "noun", "السباحة", "I like swimming."],
+    ["team", "noun", "فريق", "We are a good team."],
+    ["player", "noun", "لاعب", "He is a good player."],
+    ["ball", "noun", "كرة", "The ball is new."],
+    ["play", "verb", "يلعب", "We play after school."],
+    ["run", "verb", "يركض", "I run every day."],
+    ["win", "verb", "يفوز", "Our team wins."],
+    ["goal", "noun", "هدف", "I have one goal."],
+    ["game", "noun", "مباراة / لعبة", "The game is at five o'clock."],
+  ],
+  warmup_ar:
+    "كرة القدم هي الرياضة الأولى في اليمن، وفي كل حي ملعب صغير بعد العصر. ما رياضتك المفضلة؟ ومع من تلعب؟ في هذا الدرس ستتعلم كلمات الرياضة، وطريقة أن تقول: **I play football** (أنا ألعب كرة القدم).",
+  in_context: [
+    "I play football after school.",
+    "They play basketball. We play volleyball.",
+    "I like swimming.",
+    "We are a good team.",
+    "He is a good player.",
+    "The ball is new.",
+    "I run every day.",
+    "Our team wins the game. I have one goal.",
+  ],
+  notice: ["I play football.", "We play volleyball.", "They play basketball.", "You play and I run."],
+  rule_ar:
+    "لنتحدث عن شيء نفعله **عادةً** نستخدم **المضارع البسيط**: الفاعل + الفعل.\n\n- **I play** football. = أنا ألعب كرة القدم.\n- **We play** volleyball. = نحن نلعب الكرة الطائرة.\n- **They play** basketball. = هم يلعبون السلة.\n\nمع الرياضات نقول **play** + اسم الرياضة (play football). أما **السباحة** فنقول **I like swimming** أو **I swim**.\n\nللنفي نضع **don't**: I **don't play** basketball.\n\n**الخطأ الشائع:** أن ننسى play ونقول «I football». الصحيح: **I play football**.",
+  form: {
+    headers: ["الفاعل", "الفعل", "مثال"],
+    rows: [
+      ["I", "play", "I play football."],
+      ["you", "play", "You play volleyball."],
+      ["we", "play", "We play after school."],
+      ["they", "play", "They play basketball."],
+    ],
+  },
+  write_prompt: "Write 3 sentences about sports. Use: I play ... We play ... I like ...",
+  before_ar: "بلال وطارق في ملعب الحي بعد العصر. **استمع:** ماذا يلعبان؟ ومن سيفوز؟",
+  dialogue: [
+    ["Bilal", "Tariq, do you play football?", "يا طارق، هل تلعب كرة القدم؟"],
+    ["Tariq", "Yes, I play football every day.", "نعم، ألعب كرة القدم كل يوم."],
+    ["Bilal", "We have a team. We play after school.", "عندنا فريق. نلعب بعد المدرسة."],
+    ["Tariq", "Good! I am a good player.", "جيد! أنا لاعب جيد."],
+    ["Bilal", "The game is at five o'clock.", "المباراة في الخامسة."],
+    ["Tariq", "Is the ball new?", "هل الكرة جديدة؟"],
+    ["Bilal", "Yes, it is. Run, Tariq! Goal!", "نعم. اركض يا طارق! هدف!"],
+    ["Tariq", "We win!", "فزنا!"],
+  ],
+  speak: {
+    prompt: "Tell us about the sports you play and the sports you like. Say who you play with and when.",
+    phrases: ["I play ...", "We play ... after school.", "I like ...", "We win!"],
+  },
+  story_title_ar: "مباراة الحي",
+  story: [
+    ["Salem", "Hello, Bilal! Do you play volleyball?", "مرحباً يا بلال! هل تلعب الكرة الطائرة؟"],
+    ["Bilal", "No, I play football.", "لا، ألعب كرة القدم."],
+    ["Salem", "We play volleyball at the school.", "نحن نلعب الكرة الطائرة في المدرسة."],
+    ["Bilal", "Is your team good?", "هل فريقكم جيد؟"],
+    ["Salem", "Yes, it is. We win every game.", "نعم. نفوز في كل مباراة."],
+    ["Bilal", "I run every day with my team.", "أنا أركض كل يوم مع فريقي."],
+    ["Salem", "Come and play with us!", "تعال والعب معنا!"],
+    ["Bilal", "Thank you, Salem.", "شكراً يا سالم."],
+  ],
+  task: {
+    prompt: "Invite a friend to play your favourite sport. Say what you play, when you play, and who is on your team.",
+    phrases: ["I play ...", "Do you play ...?", "We play at ...", "Come and play!"],
+  },
+  roleplay: {
+    character_ar: "مدرب فريق الحي",
+    scenario_en: "You are the coach of a neighbourhood team in Yemen. Talk to a new player about the sports they play: football, basketball, volleyball, swimming. Ask when he or she plays. Use only very simple English.",
+    opening_en: "Welcome to our team! Do you play football?",
+  },
+};
+export default unit;

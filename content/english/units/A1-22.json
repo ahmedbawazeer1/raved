@@ -1,0 +1,842 @@
+{
+  "path": "english",
+  "code": "A1-22",
+  "version": 1,
+  "level": "A1",
+  "position": 22,
+  "title": "Weather and Seasons",
+  "topic": "على شرفة البيت تتحدث العائلة عن طقس اليوم وعن فصول السنة، وعن الأمطار في المرتفعات والحر في تهامة.",
+  "grammar_point": "It is sunny / What is the weather like?",
+  "can_do": [
+    "أصف الطقس بالإنجليزية",
+    "أسأل «كيف الطقس؟» وأجيب",
+    "أسمّي فصول السنة"
+  ],
+  "vocab": [
+    {
+      "id": "A1-22-v1",
+      "word": "weather",
+      "part_of_speech": "noun",
+      "meaning_ar": "الطقس",
+      "example_en": "What is the weather like?"
+    },
+    {
+      "id": "A1-22-v2",
+      "word": "sunny",
+      "part_of_speech": "adjective",
+      "meaning_ar": "مشمس",
+      "example_en": "It is sunny today."
+    },
+    {
+      "id": "A1-22-v3",
+      "word": "cloudy",
+      "part_of_speech": "adjective",
+      "meaning_ar": "غائم",
+      "example_en": "It is cloudy in Ibb."
+    },
+    {
+      "id": "A1-22-v4",
+      "word": "rainy",
+      "part_of_speech": "adjective",
+      "meaning_ar": "ممطر",
+      "example_en": "It is rainy in summer."
+    },
+    {
+      "id": "A1-22-v5",
+      "word": "windy",
+      "part_of_speech": "adjective",
+      "meaning_ar": "عاصف",
+      "example_en": "It is windy at night."
+    },
+    {
+      "id": "A1-22-v6",
+      "word": "warm",
+      "part_of_speech": "adjective",
+      "meaning_ar": "دافئ",
+      "example_en": "It is warm in Aden."
+    },
+    {
+      "id": "A1-22-v7",
+      "word": "cool",
+      "part_of_speech": "adjective",
+      "meaning_ar": "معتدل البرودة",
+      "example_en": "It is cool in the evening."
+    },
+    {
+      "id": "A1-22-v8",
+      "word": "rain",
+      "part_of_speech": "noun",
+      "meaning_ar": "مطر",
+      "example_en": "I like the rain."
+    },
+    {
+      "id": "A1-22-v9",
+      "word": "sun",
+      "part_of_speech": "noun",
+      "meaning_ar": "شمس",
+      "example_en": "The sun is hot."
+    },
+    {
+      "id": "A1-22-v10",
+      "word": "wind",
+      "part_of_speech": "noun",
+      "meaning_ar": "ريح",
+      "example_en": "The wind is strong."
+    },
+    {
+      "id": "A1-22-v11",
+      "word": "summer",
+      "part_of_speech": "noun",
+      "meaning_ar": "صيف",
+      "example_en": "Summer is hot."
+    },
+    {
+      "id": "A1-22-v12",
+      "word": "winter",
+      "part_of_speech": "noun",
+      "meaning_ar": "شتاء",
+      "example_en": "Winter is cold."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-22-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: الطقس وفصول السنة",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "الطقس في اليمن يختلف من مكان لآخر: حرارة شديدة في تهامة، وأمطار الصيف في إب، وبرد الشتاء في صنعاء. ما حال الطقس اليوم عندك؟ في هذا الدرس ستصفه بالإنجليزية."
+        },
+        {
+          "type": "video",
+          "youtube_id": "HwKM7TBWHe0",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 22",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "weather",
+              "الطقس",
+              "What is the weather like?"
+            ],
+            [
+              "sunny",
+              "مشمس",
+              "It is sunny today."
+            ],
+            [
+              "cloudy",
+              "غائم",
+              "It is cloudy in Ibb."
+            ],
+            [
+              "rainy",
+              "ممطر",
+              "It is rainy in summer."
+            ],
+            [
+              "windy",
+              "عاصف",
+              "It is windy at night."
+            ],
+            [
+              "warm",
+              "دافئ",
+              "It is warm in Aden."
+            ],
+            [
+              "cool",
+              "معتدل البرودة",
+              "It is cool in the evening."
+            ],
+            [
+              "rain",
+              "مطر",
+              "I like the rain."
+            ],
+            [
+              "sun",
+              "شمس",
+              "The sun is hot."
+            ],
+            [
+              "wind",
+              "ريح",
+              "The wind is strong."
+            ],
+            [
+              "summer",
+              "صيف",
+              "Summer is hot."
+            ],
+            [
+              "winter",
+              "شتاء",
+              "Winter is cold."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "What is the weather like today? It is sunny today. It is cloudy in Ibb. It is rainy in summer. I like the rain. It is windy at night. The wind is strong. It is warm in Aden, and cool in the evening. The sun is hot. Summer is hot. Winter is cold."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «Arabic» mean?",
+            "options": [
+              "الطقس",
+              "اللغة العربية",
+              "مادة دراسية",
+              "شتاء"
+            ],
+            "answer": 1,
+            "explanation_ar": "«Arabic» تعني «اللغة العربية». مثال: We have Arabic on Saturday."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "It is ___ at night. The wind is strong.",
+            "answer": "windy",
+            "explanation_ar": "الكلمة الناقصة «windy» (عاصف)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «subject» mean?",
+            "options": [
+              "مادة دراسية",
+              "دافئ",
+              "مطر",
+              "اللغة العربية"
+            ],
+            "answer": 0,
+            "explanation_ar": "«subject» تعني «مادة دراسية». مثال: What is your favourite subject?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "It is ___ in Aden, and cool in the evening.",
+            "answer": "warm",
+            "explanation_ar": "الكلمة الناقصة «warm» (دافئ)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cool» mean?",
+            "options": [
+              "اللغة العربية",
+              "عاصف",
+              "معتدل البرودة",
+              "مشمس"
+            ],
+            "answer": 2,
+            "explanation_ar": "«cool» تعني «معتدل البرودة». مثال: It is cool in the evening."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-22-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-22-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: It is sunny / What is the weather like?",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "It is sunny. It is cloudy and cool. What is the weather like? Winter is cold."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنسأل عن الطقس نقول: **What is the weather like?** (كيف الطقس؟) ونجيب بـ **It is** + الصفة:\n\n- **It is** sunny. = الجو مشمس.\n- **It is** rainy. = ممطر.\n- **It is** windy. = عاصف.\n\nكلمة **It** هنا لا تعني شيئاً محدداً؛ هي فقط تملأ مكان الفاعل لأن الجملة في الإنجليزية لا تكون بدون فاعل.\n\nومع الفصول نقول: **in** summer, **in** winter (وليس on).\n\n**الخطأ الشائع:** «Is sunny today». الصحيح: **It is** sunny today."
+        },
+        {
+          "type": "table",
+          "headers": [
+            "اسم",
+            "صفة",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "sun",
+              "sunny",
+              "It is sunny."
+            ],
+            [
+              "rain",
+              "rainy",
+              "It is rainy."
+            ],
+            [
+              "wind",
+              "windy",
+              "It is windy."
+            ],
+            [
+              "cloud",
+              "cloudy",
+              "It is cloudy."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: in / is / rainy / summer / It",
+            "answer": [
+              "It",
+              "is",
+              "rainy",
+              "in",
+              "summer"
+            ],
+            "explanation_ar": "الترتيب الصحيح: It is rainy in summer"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "___ is cold.",
+            "answer": "Winter",
+            "explanation_ar": "الكلمة الناقصة «Winter» (شتاء)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «subject» mean?",
+            "options": [
+              "اللغة العربية",
+              "مادة دراسية",
+              "غائم",
+              "مطر"
+            ],
+            "answer": 1,
+            "explanation_ar": "«subject» تعني «مادة دراسية». مثال: What is your favourite subject?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / The / sun / hot",
+            "answer": [
+              "The",
+              "sun",
+              "is",
+              "hot"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The sun is hot"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is hot.",
+            "answer": "sun",
+            "explanation_ar": "الكلمة الناقصة «sun» (شمس)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 sentences about the weather in your city in summer and winter.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-22-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "العائلة على الشرفة تتحدث عن الطقس. **استمع:** كيف الطقس اليوم؟ وكيف هو في الصيف؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-22-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Father",
+              "text_en": "What is the weather like today?",
+              "text_ar": "كيف الطقس اليوم؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "It is cloudy and cool.",
+              "text_ar": "غائم ومعتدل البرودة."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "Is it rainy?",
+              "text_ar": "هل هو ممطر؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Not now, but it is windy.",
+              "text_ar": "ليس الآن، لكنه عاصف."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "In summer it is rainy in Ibb.",
+              "text_ar": "في الصيف يمطر في إب."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "And in Aden it is hot and sunny.",
+              "text_ar": "وفي عدن حار ومشمس."
+            },
+            {
+              "speaker": "Father",
+              "text_en": "I like winter. It is cold.",
+              "text_ar": "أنا أحب الشتاء. إنه بارد."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "I like the rain!",
+              "text_ar": "وأنا أحب المطر!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mona says: \"In summer it is rainy in Ibb.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «In summer it is rainy in Ibb.» هو Father."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «summer» mean?",
+            "options": [
+              "ريح",
+              "غائم",
+              "الطقس",
+              "صيف"
+            ],
+            "answer": 3,
+            "explanation_ar": "«summer» تعني «صيف». مثال: Summer is hot."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Father says: \"I like the rain!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «I like the rain!» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «rain» mean?",
+            "options": [
+              "عاصف",
+              "مطر",
+              "معتدل البرودة",
+              "ممطر"
+            ],
+            "answer": 1,
+            "explanation_ar": "«rain» تعني «مطر». مثال: I like the rain."
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe the weather today and in summer and winter in your city. Say what you like.",
+        "helpful_phrases": [
+          "It is sunny.",
+          "It is cold in winter.",
+          "I like the rain.",
+          "What is the weather like?"
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-22-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-22-L4-s1",
+          "title_ar": "يوم ماطر",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "Hello, Bilal! What is the weather like?",
+              "text_ar": "مرحباً يا بلال! كيف الطقس؟"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "It is rainy.",
+              "text_ar": "ممطر."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Is it cold?",
+              "text_ar": "هل هو بارد؟"
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "No, it is cool. It is summer.",
+              "text_ar": "لا، معتدل. نحن في الصيف."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "I like the rain.",
+              "text_ar": "أنا أحب المطر."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "The wind is strong, though.",
+              "text_ar": "لكن الريح قوية."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "Let us stay home today.",
+              "text_ar": "لنبقَ في البيت اليوم."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "OK. Tomorrow it is sunny.",
+              "text_ar": "حسناً. غداً سيكون مشمساً."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cool» mean?",
+            "options": [
+              "عاصف",
+              "صيف",
+              "دافئ",
+              "معتدل البرودة"
+            ],
+            "answer": 3,
+            "explanation_ar": "«cool» تعني «معتدل البرودة». مثال: It is cool in the evening."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Hello, Bilal! What is the ___ like?",
+            "answer": "weather",
+            "explanation_ar": "الكلمة الناقصة «weather» (الطقس)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: at / It / windy / night / is",
+            "answer": [
+              "It",
+              "is",
+              "windy",
+              "at",
+              "night"
+            ],
+            "explanation_ar": "الترتيب الصحيح: It is windy at night"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"OK. Tomorrow it is sunny.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «OK. Tomorrow it is sunny.» هو Bilal."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «windy» mean?",
+            "options": [
+              "دافئ",
+              "عاصف",
+              "شمس",
+              "مادة دراسية"
+            ],
+            "answer": 1,
+            "explanation_ar": "«windy» تعني «عاصف». مثال: It is windy at night."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-22-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "It is ___ today.",
+            "answer": "sunny",
+            "explanation_ar": "الكلمة الناقصة «sunny» (مشمس)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-22-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Tell a friend about the weather: today, in summer, in winter. Say what you like and don't like. Say at least 5 sentences.",
+        "helpful_phrases": [
+          "It is ... today.",
+          "In summer it is ...",
+          "In winter it is ...",
+          "I like ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-22-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «cool» mean?",
+        "options": [
+          "مطر",
+          "معتدل البرودة",
+          "غائم",
+          "عاصف"
+        ],
+        "answer": 1,
+        "explanation_ar": "«cool» تعني «معتدل البرودة». مثال: It is cool in the evening."
+      },
+      {
+        "id": "A1-22-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "I like the ___.",
+        "answer": "rain",
+        "explanation_ar": "الكلمة الناقصة «rain» (مطر)."
+      },
+      {
+        "id": "A1-22-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: cool / is / It / the / in / evening",
+        "answer": [
+          "It",
+          "is",
+          "cool",
+          "in",
+          "the",
+          "evening"
+        ],
+        "explanation_ar": "الترتيب الصحيح: It is cool in the evening"
+      },
+      {
+        "id": "A1-22-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «wind» mean?",
+        "options": [
+          "ممطر",
+          "الطقس",
+          "شتاء",
+          "ريح"
+        ],
+        "answer": 3,
+        "explanation_ar": "«wind» تعني «ريح». مثال: The wind is strong."
+      },
+      {
+        "id": "A1-22-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "What is the ___ like today?",
+        "answer": "weather",
+        "explanation_ar": "الكلمة الناقصة «weather» (الطقس)."
+      },
+      {
+        "id": "A1-22-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Father says: \"OK. Tomorrow it is sunny.\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 1,
+        "explanation_ar": "الذي قال «OK. Tomorrow it is sunny.» هو Bilal."
+      },
+      {
+        "id": "A1-22-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «windy» mean?",
+        "options": [
+          "عاصف",
+          "صيف",
+          "ممطر",
+          "الطقس"
+        ],
+        "answer": 0,
+        "explanation_ar": "«windy» تعني «عاصف». مثال: It is windy at night."
+      },
+      {
+        "id": "A1-22-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The ___ is strong, though.",
+        "answer": "wind",
+        "explanation_ar": "الكلمة الناقصة «wind» (ريح)."
+      },
+      {
+        "id": "A1-22-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: today / sunny / is / It",
+        "answer": [
+          "It",
+          "is",
+          "sunny",
+          "today"
+        ],
+        "explanation_ar": "الترتيب الصحيح: It is sunny today"
+      },
+      {
+        "id": "A1-22-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «summer» mean?",
+        "options": [
+          "شتاء",
+          "شمس",
+          "الطقس",
+          "صيف"
+        ],
+        "answer": 3,
+        "explanation_ar": "«summer» تعني «صيف». مثال: Summer is hot."
+      }
+    ]
+  },
+  "stop_ar": "شرفة المنزل",
+  "roleplay": {
+    "character_ar": "جدّتك على شرفة البيت",
+    "scenario_en": "You are a Yemeni grandmother on the balcony. Ask the child about today's weather and what he or she likes in summer and winter. Use only very simple English (sunny, cloudy, rainy, windy, warm, cool, hot, cold, summer, winter).",
+    "opening_en": "Good morning! What is the weather like today?"
+  },
+  "context_note": "الطقس وفصول السنة"
+}

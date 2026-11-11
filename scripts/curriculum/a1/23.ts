@@ -1,0 +1,87 @@
+import type { Authored } from "../types";
+
+const unit: Authored = {
+  code: "A1-23",
+  position: 23,
+  title_en: "Moving Around Town",
+  title_ar: "وسائل النقل والمواصلات",
+  stop_ar: "فرزة سيارات الأجرة",
+  situation_ar: "في فرزة سيارات الأجرة يسأل طارق عن وسيلة الوصول إلى السوق: بالباص أم بالتاكسي أم بالدراجة النارية؟",
+  grammar_en: "go by + transport / How do you go?",
+  can_do: ["أسمّي وسائل النقل بالإنجليزية", "أسأل «كيف تذهب؟» وأجيب بـ by", "أطلب سيارة أجرة وأسأل عن السعر"],
+  video: { id: "HF1XhS5Tsok", title: "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 23", checked: false },
+  words: [
+    ["car", "noun", "سيارة", "My father has a car."],
+    ["bus", "noun", "حافلة", "I go to school by bus."],
+    ["minibus", "noun", "دبّاب (باص صغير)", "The minibus is full."],
+    ["taxi", "noun", "سيارة أجرة", "We go to the market by taxi."],
+    ["motorbike", "noun", "دراجة نارية", "He goes by motorbike."],
+    ["bicycle", "noun", "دراجة هوائية", "I go to the park by bicycle."],
+    ["truck", "noun", "شاحنة", "The truck is big."],
+    ["plane", "noun", "طائرة", "We go to Cairo by plane."],
+    ["boat", "noun", "قارب", "The fisherman goes by boat."],
+    ["road", "noun", "طريق", "The road is long."],
+    ["ticket", "noun", "تذكرة", "I need a ticket."],
+    ["go", "verb", "يذهب", "How do you go to school?"],
+  ],
+  warmup_ar:
+    "كيف تذهب إلى المدرسة؟ مشياً؟ بالباص؟ بالدباب؟ في اليمن تتنوع وسائل النقل: الحافلات الصغيرة (الدبّابات) والتاكسي والدراجة النارية. في هذا الدرس ستقول بالإنجليزية كيف تذهب وإلى أين.",
+  in_context: [
+    "How do you go to school?",
+    "I go to school by bus.",
+    "We go to the market by taxi.",
+    "He goes by motorbike.",
+    "I go to the park by bicycle.",
+    "The minibus is full.",
+    "We go to Cairo by plane.",
+    "The road is long. I need a ticket.",
+  ],
+  notice: ["I go to school by bus.", "We go by taxi.", "How do you go to the market?", "They go by minibus."],
+  rule_ar:
+    "لنقول **كيف** نذهب نستخدم **by** + وسيلة النقل (بدون a ولا the):\n\n- I go **by** bus. = أذهب بالحافلة.\n- We go **by** taxi. = نذهب بسيارة أجرة.\n\nولنسأل: **How do you go** to school? (كيف تذهب إلى المدرسة؟)\n\nواستثناء مهم: إذا ذهبنا **مشياً** نقول: **on foot** (I go to school **on foot**).\n\nمع **he / she** يتغير الفعل: **He goes** by motorbike. (سنتعلمه بتوسّع في الوحدة القادمة.)\n\n**الخطأ الشائع:** «I go by a bus». الصحيح بدون a: **I go by bus**.",
+  form: {
+    headers: ["السؤال", "الجواب", "ملاحظة"],
+    rows: [
+      ["How do you go to school?", "I go by bus.", "by + وسيلة"],
+      ["How do they go?", "They go by taxi.", "بدون a"],
+      ["How do you go to the park?", "I go on foot.", "مشياً"],
+    ],
+  },
+  write_prompt: "Write 3 sentences about how you go to school, to the market and to another city.",
+  before_ar: "طارق في فرزة سيارات الأجرة. **استمع:** كيف سيذهب إلى السوق؟ وما سعر التذكرة؟",
+  dialogue: [
+    ["Tariq", "Excuse me, how do I go to the market?", "عفواً، كيف أذهب إلى السوق؟"],
+    ["Driver", "You go by minibus. It is cheap.", "تذهب بالدبّاب. هو رخيص."],
+    ["Tariq", "How much is a ticket?", "بكم التذكرة؟"],
+    ["Driver", "It is one hundred riyals.", "بمئة ريال."],
+    ["Tariq", "Do you go by taxi?", "هل تذهب بالتاكسي؟"],
+    ["Driver", "Yes, I go by taxi. But the taxi is expensive.", "نعم، أنا أذهب بالتاكسي. لكنه غالٍ."],
+    ["Tariq", "OK. I go by minibus.", "حسناً. سأذهب بالدبّاب."],
+    ["Driver", "Good. The road is long. Have a nice day!", "جيد. الطريق طويل. يوم سعيد!"],
+  ],
+  speak: {
+    prompt: "Tell us how you go to school, how your father goes to work and how you go to another city.",
+    phrases: ["I go by bus.", "We go on foot.", "How do you go?", "It is cheap."],
+  },
+  story_title_ar: "رحلة إلى القاهرة",
+  story: [
+    ["Huda", "Mona, how do you go to Cairo?", "يا منى، كيف تذهبين إلى القاهرة؟"],
+    ["Mona", "I go by plane.", "أذهب بالطائرة."],
+    ["Huda", "I go to school by bus.", "وأنا أذهب إلى المدرسة بالحافلة."],
+    ["Mona", "My brother goes by bicycle.", "وأخي يذهب بالدراجة."],
+    ["Huda", "Is it a long road?", "هل الطريق طويل؟"],
+    ["Mona", "Yes, it is. I need a ticket.", "نعم. وأحتاج تذكرة."],
+    ["Huda", "Have a nice trip!", "رحلة سعيدة!"],
+    ["Mona", "Thank you!", "شكراً!"],
+  ],
+  task: {
+    prompt: "Tell a friend how you go to five places: school, the market, the mosque, another city and the park. Use by and on foot.",
+    phrases: ["I go by ...", "We go on foot.", "How do you go ...?", "It is cheap / expensive."],
+  },
+  roleplay: {
+    character_ar: "سائق سيارة الأجرة في الفرزة",
+    scenario_en: "You are a taxi driver at a taxi stand in Yemen. A passenger wants to go somewhere. Ask where he or she goes and say how: by taxi, minibus, bus, motorbike. Say the price of a ticket in simple numbers. Use only very simple English.",
+    opening_en: "Good morning! Where do you go? By taxi?",
+  },
+};
+export default unit;

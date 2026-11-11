@@ -1,881 +1,713 @@
 {
   "path": "english",
   "code": "A1-07",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 7,
-  "title": "Opposites",
-  "topic": "صفات حضرموت: الساحل والوادي، شبام القديمة والمكلا الجديدة",
-  "grammar_point": "adjectives: position, no plural, opposites + very",
+  "title": "Things Around the Shop",
+  "topic": "يرافق بلال أمه إلى دكان الحي ليشتريا أغراضاً، ويصفان الأشياء بالصفات المتضادة: كبير وصغير، رخيص وغالٍ، جديد وقديم.",
+  "grammar_point": "adjectives: The bag is big / a big bag",
   "can_do": [
-    "أصف الأماكن والأشياء بصفات بسيطة",
-    "أستعمل الأضداد الشائعة وأضع الصفة في مكانها الصحيح",
-    "أفهم وصفاً قصيراً لمكان"
+    "أصف الأشياء بصفات متضادة",
+    "أضع الصفة في مكانها الصحيح في الجملة",
+    "أسأل عن السعر بصفة cheap و expensive"
   ],
   "vocab": [
     {
       "id": "A1-07-v1",
       "word": "big",
-      "ipa": "/bɪɡ/",
       "part_of_speech": "adjective",
       "meaning_ar": "كبير",
-      "example_en": "Mukalla is a big city."
+      "example_en": "This is a big bag."
     },
     {
       "id": "A1-07-v2",
       "word": "small",
-      "ipa": "/smɔːl/",
       "part_of_speech": "adjective",
       "meaning_ar": "صغير",
-      "example_en": "Our village is small."
+      "example_en": "That is a small bag."
     },
     {
       "id": "A1-07-v3",
-      "word": "tall",
-      "ipa": "/tɔːl/",
+      "word": "new",
       "part_of_speech": "adjective",
-      "meaning_ar": "طويل / عالٍ",
-      "example_en": "The houses in Shibam are tall."
+      "meaning_ar": "جديد",
+      "example_en": "I have a new notebook."
     },
     {
       "id": "A1-07-v4",
-      "word": "short",
-      "ipa": "/ʃɔːt/",
+      "word": "old",
       "part_of_speech": "adjective",
-      "meaning_ar": "قصير",
-      "example_en": "My brother is short."
+      "meaning_ar": "قديم / كبير في السن",
+      "example_en": "My bag is old."
     },
     {
       "id": "A1-07-v5",
-      "word": "old",
-      "ipa": "/əʊld/",
+      "word": "hot",
       "part_of_speech": "adjective",
-      "meaning_ar": "قديم / كبير السن",
-      "example_en": "Shibam is a very old city."
+      "meaning_ar": "حار / ساخن",
+      "example_en": "The tea is hot."
     },
     {
       "id": "A1-07-v6",
-      "word": "new",
-      "ipa": "/njuː/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "جديد",
-      "example_en": "I have a new phone."
-    },
-    {
-      "id": "A1-07-v7",
-      "word": "hot",
-      "ipa": "/hɒt/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "حار",
-      "example_en": "Seiyun is hot in summer."
-    },
-    {
-      "id": "A1-07-v8",
       "word": "cold",
-      "ipa": "/kəʊld/",
       "part_of_speech": "adjective",
       "meaning_ar": "بارد",
       "example_en": "The water is cold."
     },
     {
-      "id": "A1-07-v9",
-      "word": "fast",
-      "ipa": "/fɑːst/",
+      "id": "A1-07-v7",
+      "word": "cheap",
       "part_of_speech": "adjective",
-      "meaning_ar": "سريع",
-      "example_en": "The bus is fast."
+      "meaning_ar": "رخيص",
+      "example_en": "The bread is cheap."
+    },
+    {
+      "id": "A1-07-v8",
+      "word": "expensive",
+      "part_of_speech": "adjective",
+      "meaning_ar": "غالٍ",
+      "example_en": "The phone is expensive."
+    },
+    {
+      "id": "A1-07-v9",
+      "word": "heavy",
+      "part_of_speech": "adjective",
+      "meaning_ar": "ثقيل",
+      "example_en": "The box is heavy."
     },
     {
       "id": "A1-07-v10",
-      "word": "slow",
-      "ipa": "/sləʊ/",
+      "word": "light",
       "part_of_speech": "adjective",
-      "meaning_ar": "بطيء",
-      "example_en": "The turtle is slow."
+      "meaning_ar": "خفيف",
+      "example_en": "My bag is light."
     },
     {
       "id": "A1-07-v11",
-      "word": "easy",
-      "ipa": "/ˈiːzi/",
+      "word": "clean",
       "part_of_speech": "adjective",
-      "meaning_ar": "سهل",
-      "example_en": "This lesson is easy."
+      "meaning_ar": "نظيف",
+      "example_en": "The shop is clean."
     },
     {
       "id": "A1-07-v12",
-      "word": "difficult",
-      "ipa": "/ˈdɪfɪkəlt/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "صعب",
-      "example_en": "The test is difficult."
-    },
-    {
-      "id": "A1-07-v13",
-      "word": "clean",
-      "ipa": "/kliːn/",
-      "part_of_speech": "adjective",
-      "meaning_ar": "نظيف",
-      "example_en": "The beach is clean."
-    },
-    {
-      "id": "A1-07-v14",
       "word": "dirty",
-      "ipa": "/ˈdɜːti/",
       "part_of_speech": "adjective",
-      "meaning_ar": "متّسخ",
-      "example_en": "My shoes are dirty."
-    },
-    {
-      "id": "A1-07-v15",
-      "word": "very",
-      "ipa": "/ˈveri/",
-      "part_of_speech": "adverb",
-      "meaning_ar": "جداً",
-      "example_en": "The honey is very sweet."
+      "meaning_ar": "وسخ",
+      "example_en": "The floor is dirty."
     }
   ],
   "lessons": [
     {
-      "id": "A1-07-l1",
+      "id": "A1-07-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "الصفات وأضدادها",
-      "est_minutes": 25,
+      "title": "مفردات: أشياء في دكان الحي",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "أسهل طريقة لحفظ الصفات أن نحفظها **أزواجاً متضادة**: big / small، hot / cold، old / new. تعلّم الأزواج واستمع لنطقها."
+          "markdown_ar": "في الدكان نسمع الجمل: «هذا غالٍ!» «أريد واحداً أصغر.» «هذا قديم.» كلها **صفات** تصف الأشياء. في الإنجليزية الصفات تأتي في أزواج متضادة، فإذا حفظت واحدة حفظت ضدها. شاهد الفيديو، ثم تعلّم الأزواج."
         },
         {
           "type": "video",
           "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
+          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية : كورس تعلم اللغة الانجليزية للمبتدئين من الصفر : ٧",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
               "big",
-              "/bɪɡ/",
               "كبير",
-              "Mukalla is a big city."
+              "This is a big bag."
             ],
             [
               "small",
-              "/smɔːl/",
               "صغير",
-              "Our village is small."
-            ],
-            [
-              "tall",
-              "/tɔːl/",
-              "طويل / عالٍ",
-              "The houses in Shibam are tall."
-            ],
-            [
-              "short",
-              "/ʃɔːt/",
-              "قصير",
-              "My brother is short."
-            ],
-            [
-              "old",
-              "/əʊld/",
-              "قديم / كبير السن",
-              "Shibam is a very old city."
+              "That is a small bag."
             ],
             [
               "new",
-              "/njuː/",
               "جديد",
-              "I have a new phone."
+              "I have a new notebook."
+            ],
+            [
+              "old",
+              "قديم / كبير في السن",
+              "My bag is old."
             ],
             [
               "hot",
-              "/hɒt/",
-              "حار",
-              "Seiyun is hot in summer."
+              "حار / ساخن",
+              "The tea is hot."
             ],
             [
               "cold",
-              "/kəʊld/",
               "بارد",
               "The water is cold."
             ],
             [
-              "fast",
-              "/fɑːst/",
-              "سريع",
-              "The bus is fast."
+              "cheap",
+              "رخيص",
+              "The bread is cheap."
             ],
             [
-              "slow",
-              "/sləʊ/",
-              "بطيء",
-              "The turtle is slow."
+              "expensive",
+              "غالٍ",
+              "The phone is expensive."
             ],
             [
-              "easy",
-              "/ˈiːzi/",
-              "سهل",
-              "This lesson is easy."
+              "heavy",
+              "ثقيل",
+              "The box is heavy."
             ],
             [
-              "difficult",
-              "/ˈdɪfɪkəlt/",
-              "صعب",
-              "The test is difficult."
+              "light",
+              "خفيف",
+              "My bag is light."
             ],
             [
               "clean",
-              "/kliːn/",
               "نظيف",
-              "The beach is clean."
+              "The shop is clean."
             ],
             [
               "dirty",
-              "/ˈdɜːti/",
-              "متّسخ",
-              "My shoes are dirty."
-            ],
-            [
-              "very",
-              "/ˈveri/",
-              "جداً",
-              "The honey is very sweet."
+              "وسخ",
+              "The floor is dirty."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "big. Mukalla is a big city.\nsmall. Our village is small.\ntall. The houses in Shibam are tall.\nshort. My brother is short.\nold. Shibam is a very old city.\nnew. I have a new phone.\nhot. Seiyun is hot in summer.\ncold. The water is cold.\nfast. The bus is fast.\nslow. The turtle is slow.\neasy. This lesson is easy.\ndifficult. The test is difficult.\nclean. The beach is clean.\ndirty. My shoes are dirty.\nvery. The honey is very sweet."
-        },
-        {
-          "type": "table",
-          "headers": [
-            "الصفة",
-            "ضدها"
-          ],
-          "rows": [
-            [
-              "big",
-              "small"
-            ],
-            [
-              "tall",
-              "short"
-            ],
-            [
-              "old",
-              "new"
-            ],
-            [
-              "hot",
-              "cold"
-            ],
-            [
-              "fast",
-              "slow"
-            ],
-            [
-              "easy",
-              "difficult"
-            ],
-            [
-              "clean",
-              "dirty"
-            ]
-          ]
+          "text_en": "This is a big bag. That is a small bag. I have a new notebook. My bag is old. The tea is hot. The water is cold. The bread is cheap. The phone is expensive. The box is heavy. My bag is light. The shop is clean. The floor is dirty."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e1",
+            "id": "A1-07-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "The opposite of «fast» is:",
+            "prompt": "What does «dirty» mean?",
             "options": [
-              "slow",
-              "short",
-              "small"
+              "وسخ",
+              "كبير",
+              "قديم / كبير في السن",
+              "حار / ساخن"
             ],
             "answer": 0,
-            "explanation_ar": "ضد سريع fast هو بطيء slow."
+            "explanation_ar": "«dirty» تعني «وسخ». مثال: The floor is dirty."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "The opposite of «easy» is:",
-            "options": [
-              "dirty",
-              "difficult",
-              "cold"
-            ],
-            "answer": 1,
-            "explanation_ar": "ضد سهل easy هو صعب difficult."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e3",
+            "id": "A1-07-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "The opposite of «new» is ___.",
-            "answer": "old",
-            "explanation_ar": "ضد جديد new هو قديم old."
+            "prompt": "The tea is ___. The water is cold.",
+            "answer": "hot",
+            "explanation_ar": "الكلمة الناقصة «hot» (حار / ساخن)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «old» mean?",
+            "options": [
+              "صغير",
+              "حار / ساخن",
+              "قديم / كبير في السن",
+              "خروف / غنم"
+            ],
+            "answer": 2,
+            "explanation_ar": "«old» تعني «قديم / كبير في السن». مثال: My bag is old."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "This is a ___ bag.",
+            "answer": "big",
+            "explanation_ar": "الكلمة الناقصة «big» (كبير)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «big» mean?",
+            "options": [
+              "بارد",
+              "غالٍ",
+              "ثقيل",
+              "كبير"
+            ],
+            "answer": 3,
+            "explanation_ar": "«big» تعني «كبير». مثال: This is a big bag."
           }
         },
         {
           "type": "game",
-          "id": "A1-07-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g4",
-          "game": "pronounce"
+          "id": "A1-07-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-07-l2",
+      "id": "A1-07-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "مكان الصفة في الجملة",
-      "est_minutes": 25,
+      "title": "قاعدة: adjectives: The bag is big / a big bag",
+      "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "في العربية تأتي الصفة **بعد** الاسم: «بيت كبير». أما في الإنجليزية فتأتي **قبل** الاسم: «a **big** house».\n\nوتأتي الصفة أيضاً **بعد فعل be**: «The house **is big**.»\n\n**الصفة لا تتغير** مع الجمع ولا مع المؤنث: «**tall** houses» (وليس talls)، «She is **tall**.»"
+          "type": "audio",
+          "text_en": "The bag is big. It is a big bag. The tea is hot. I have a new notebook."
         },
         {
-          "type": "video",
-          "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
+          "type": "text",
+          "markdown_ar": "الصفة تصف الاسم، ولها **مكانان**:\n\n1. **بعد الفعل be**: The bag **is big**. (الحقيبة كبيرة)\n2. **قبل الاسم**: It is a **big** bag. (إنها حقيبة كبيرة)\n\nمهم: الصفة في الإنجليزية **لا تتغير** مع المفرد أو الجمع أو المذكر أو المؤنث: a big bag, big bags, a big house.\n\n**الخطأ الشائع:** في العربية الصفة تأتي **بعد** الاسم (حقيبة كبيرة)، فيقول بعضنا «a bag big». الصحيح: **a big bag** (الصفة قبل الاسم)."
         },
         {
           "type": "table",
           "headers": [
-            "العربية",
-            "الإنجليزية"
+            "بعد be",
+            "قبل الاسم",
+            "ضدها"
           ],
           "rows": [
             [
-              "بيت قديم",
-              "an old house"
+              "The bag is big.",
+              "a big bag",
+              "small"
             ],
             [
-              "بيوت عالية",
-              "tall houses"
+              "The phone is new.",
+              "a new phone",
+              "old"
             ],
             [
-              "الماء بارد",
-              "The water is cold."
+              "The tea is hot.",
+              "hot tea",
+              "cold"
             ],
             [
-              "الدرس سهل جداً",
-              "The lesson is very easy."
+              "The bread is cheap.",
+              "cheap bread",
+              "expensive"
+            ],
+            [
+              "The box is heavy.",
+              "a heavy box",
+              "light"
             ]
           ]
         },
         {
-          "type": "text",
-          "markdown_ar": "**لاحظ:** قبل الصفة التي تبدأ بحرف علة نستخدم **an**: «an **old** city»، «an **easy** test».\n\n**very** تأتي قبل الصفة: «very hot»، «very old»."
-        },
-        {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "«مدينة قديمة» بالإنجليزية:",
-            "options": [
-              "a city old",
-              "an old city",
-              "a old city"
-            ],
-            "answer": 1,
-            "explanation_ar": "الصفة قبل الاسم، و old تبدأ بحرف علة: an old city."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "اختر الجملة الصحيحة:",
-            "options": [
-              "They are talls.",
-              "They are tall.",
-              "They tall are."
-            ],
-            "answer": 1,
-            "explanation_ar": "الصفة لا تأخذ s في الجمع."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "The tea is ___.",
-            "options": [
-              "hot very",
-              "very hot",
-              "a very hot"
-            ],
-            "answer": 1,
-            "explanation_ar": "very قبل الصفة: very hot."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "It's ___ easy test. (a / an)",
-            "answer": "an",
-            "explanation_ar": "easy تبدأ بحرف علة: an easy test."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e8",
+            "id": "A1-07-L2-e4-1",
             "skill": "grammar",
             "kind": "order_words",
-            "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): house / is / a / big / this",
+            "prompt": "رتب الكلمات: The / is / cheap / bread",
+            "answer": [
+              "The",
+              "bread",
+              "is",
+              "cheap"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The bread is cheap"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The bread is ___.",
+            "answer": "cheap",
+            "explanation_ar": "الكلمة الناقصة «cheap» (رخيص)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «expensive» mean?",
+            "options": [
+              "حار / ساخن",
+              "ثقيل",
+              "غالٍ",
+              "كبير"
+            ],
+            "answer": 2,
+            "explanation_ar": "«expensive» تعني «غالٍ». مثال: The phone is expensive."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / big / a / bag / This",
             "answer": [
               "This",
               "is",
               "a",
               "big",
-              "house"
+              "bag"
             ],
-            "explanation_ar": "This is + a + الصفة + الاسم."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-07-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "صورة من شبام",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**آمنة** تُري صديقتها **رغد** صورة لمدينة **شبام**. استمع وانتبه للصفات."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
-        },
-        {
-          "type": "audio",
-          "text_en": "Amna: Look at this photo, Raghad! It's Shibam.\nRaghad: Wow! The houses are very tall.\nAmna: Yes. They are old mud houses. Some houses are five hundred years old.\nRaghad: Is Shibam a big city?\nAmna: No, it isn't. It's small, but it's very famous.\nRaghad: Is it hot there?\nAmna: Yes, it's very hot in summer, but the nights in winter are cold.\nRaghad: I want to visit it. Is the road from Mukalla long?\nAmna: Yes, it's long. It's about five hours by car."
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e9",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What are the houses in Shibam like?",
-            "options": [
-              "small and new",
-              "tall and old",
-              "short and new"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: The houses are very tall… They are old mud houses."
+            "explanation_ar": "الترتيب الصحيح: This is a big bag"
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e10",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Shibam is a big city.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: No, it isn't. It's small."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e11",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How long is the trip from Mukalla?",
-            "options": [
-              "about one hour",
-              "about five hours",
-              "about ten hours"
-            ],
-            "answer": 1,
-            "explanation_ar": "قالت: It's about five hours by car."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-07-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "الساحل والوادي",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "حضرموت قسمان مختلفان: **الساحل** و**الوادي**. اقرأ النص وانتبه للصفات، ثم أجب."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
-        },
-        {
-          "type": "reading",
-          "text_en": "Hadramout is a big region in the east of Yemen. It has two very different parts: the coast and the valley. On the coast, there are cities like Mukalla and Al-Shihr. The weather there is hot and humid, and the sea is blue and beautiful. The valley is far from the sea. Seiyun, Shibam and Tarim are in the valley. The weather is dry. It is very hot in summer, but it is cold at night in winter. In the valley, there are old mud houses and tall palm trees. The streets in old Tarim are narrow and quiet. Mukalla is a busy city with new buildings and fast cars, but the valley is calm and slow.",
-          "word_count": 117
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e12",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "What is the weather like on the coast?",
-            "options": [
-              "dry and cold",
-              "hot and humid",
-              "cold and rainy"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: The weather there is hot and humid."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "Which city is in the valley?",
-            "options": [
-              "Mukalla",
-              "Al-Shihr",
-              "Tarim"
-            ],
-            "answer": 2,
-            "explanation_ar": "في النص: Seiyun, Shibam and Tarim are in the valley."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e14",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "The streets in old Tarim are wide and noisy.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: The streets in old Tarim are narrow and quiet."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-07-e15",
-            "skill": "reading",
+            "id": "A1-07-L2-e4-5",
+            "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "Mukalla has new buildings and ___ cars.",
-            "answer": "fast",
-            "explanation_ar": "في النص: new buildings and fast cars."
+            "prompt": "The phone is ___.",
+            "answer": "expensive",
+            "explanation_ar": "الكلمة الناقصة «expensive» (غالٍ)."
           }
-        }
-      ]
-    },
-    {
-      "id": "A1-07-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "صِف مدينتك",
-      "est_minutes": 15,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "صِف مدينتك أو قريتك في حضرموت بخمس صفات على الأقل: **هل هي كبيرة أم صغيرة؟ قديمة أم جديدة؟ كيف الطقس؟ كيف الشوارع والبيوت؟**"
-        },
-        {
-          "type": "video",
-          "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
-        },
-        {
-          "type": "table",
-          "headers": [
-            "لتقول",
-            "العبارة"
-          ],
-          "rows": [
-            [
-              "مدينتي",
-              "My city is… / It isn't…"
-            ],
-            [
-              "البيوت",
-              "The houses are…"
-            ],
-            [
-              "الطقس",
-              "The weather is very…"
-            ],
-            [
-              "أحبها لأن",
-              "I like it because it's…"
-            ]
-          ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Describe your city or village using at least five adjectives: size, old or new, weather, streets and houses.",
-        "helpful_phrases": [
-          "My city is…",
-          "It isn't…",
-          "The houses are very…",
-          "The weather is…",
-          "I like it because…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "adjectives (position)",
-          "opposites",
-          "very"
-        ]
-      }
-    },
-    {
-      "id": "A1-07-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "قارن بين مكانين",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة (40 إلى 80 كلمة) تصف فيها مكانين في حضرموت باستعمال الصفات المتضادة. اقرأ المثال أولاً."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
-        },
-        {
-          "type": "reading",
-          "text_en": "I live in Al-Shihr. It is a small and old city on the coast. The weather is hot and the sea is very beautiful. My grandmother lives in Tarim. Tarim is in the valley. It is quiet and the streets are narrow. The mosques are old and very beautiful. In winter, the nights in Tarim are cold, but in Al-Shihr they are warm.",
-          "word_count": 63
         }
       ],
       "writing_task": {
-        "prompt_en": "Describe two places in Hadramout. Use adjectives and opposites (big / small, old / new, hot / cold) and very.",
-        "min_words": 40,
-        "max_words": 80,
+        "prompt_en": "Write 3 sentences about things in a shop. Use opposite adjectives: big / small, cheap / expensive, new / old.",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "adjective position",
-          "opposites",
-          "a / an before adjectives"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-07-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-07-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- الصفة **قبل** الاسم: a tall house. و**بعد** be: The house is tall.\n- الصفة لا تأخذ s: tall houses.\n- **an** قبل الصفة التي تبدأ بحرف علة: an old city.\n- **very** + صفة: very hot.\n- الأضداد: big/small, tall/short, old/new, hot/cold, fast/slow, easy/difficult, clean/dirty."
-        },
-        {
-          "type": "video",
-          "youtube_id": "gZBAXCRrl_U",
-          "video_title": "تعلم الصفات المضادة في اللغة الإنجليزية — الحلقة 7",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 991,
-          "optional": true,
-          "approx_size_mb": 66
+          "markdown_ar": "بلال وأمه في دكان الحي. **استمع:** ما هي الأشياء التي يصفانها؟ وأيها غالٍ؟"
         },
         {
           "type": "story",
-          "id": "A1-07-s1",
-          "title_ar": "الحلقة 7: ناطحات سحاب شبام",
+          "id": "A1-07-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Hamza",
-              "text_en": "Welcome to Shibam! The houses are very tall.",
-              "text_ar": "أهلاً بكِ في شبام! البيوت عالية جداً."
+              "speaker": "Bilal",
+              "text_en": "Mother, look at this bag. It is big.",
+              "text_ar": "يا أمي، انظري إلى هذه الحقيبة. إنها كبيرة."
             },
             {
-              "speaker": "Reem",
-              "text_en": "They are old, but they are beautiful.",
-              "text_ar": "إنها قديمة، لكنها جميلة."
+              "speaker": "Mother",
+              "text_en": "Yes, but it is expensive.",
+              "text_ar": "نعم، لكنها غالية."
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Is Mukalla old?",
-              "text_ar": "هل المكلا قديمة؟"
+              "speaker": "Bilal",
+              "text_en": "That small bag is cheap.",
+              "text_ar": "تلك الحقيبة الصغيرة رخيصة."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Some parts are old, but Mukalla is a big, busy city.",
-              "text_ar": "بعض أجزائها قديمة، لكن المكلا مدينة كبيرة ومزدحمة."
+              "speaker": "Mother",
+              "text_en": "Is it new?",
+              "text_ar": "هل هي جديدة؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Shibam is small and quiet. I like it!",
-              "text_ar": "شبام صغيرة وهادئة. أحبها!"
+              "speaker": "Shopkeeper",
+              "text_en": "Yes, it is a new bag. It is light.",
+              "text_ar": "نعم، هي حقيبة جديدة. وهي خفيفة."
+            },
+            {
+              "speaker": "Bilal",
+              "text_en": "My old bag is heavy.",
+              "text_ar": "حقيبتي القديمة ثقيلة."
+            },
+            {
+              "speaker": "Mother",
+              "text_en": "OK, we take the small bag.",
+              "text_ar": "حسناً، نأخذ الحقيبة الصغيرة."
+            },
+            {
+              "speaker": "Shopkeeper",
+              "text_en": "Thank you. Your shop is clean, good.",
+              "text_ar": "شكراً لكم."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e16",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "The opposite of «clean» is:",
+            "id": "A1-07-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Mother says: \"OK, we take the small bag.\"",
             "options": [
-              "dirty",
-              "cold",
-              "new"
+              "True",
+              "False"
             ],
             "answer": 0,
-            "explanation_ar": "ضد نظيف clean هو متّسخ dirty."
+            "explanation_ar": "الذي قال «OK, we take the small bag.» هو Mother."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e17",
-            "skill": "grammar",
+            "id": "A1-07-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "«سيارات سريعة» بالإنجليزية:",
+            "prompt": "What does «big» mean?",
             "options": [
-              "fasts cars",
-              "fast cars",
-              "cars fast"
+              "صغير",
+              "كبير",
+              "خفيف",
+              "حار / ساخن"
             ],
             "answer": 1,
-            "explanation_ar": "الصفة قبل الاسم ولا تأخذ s."
+            "explanation_ar": "«big» تعني «كبير». مثال: This is a big bag."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-07-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-07-e18",
+            "id": "A1-07-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Bilal says: \"Is it new?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Is it new?» هو Mother."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L3-e3-4",
             "skill": "vocab",
-            "kind": "fill_blank",
-            "prompt": "The opposite of «tall» is ___.",
-            "answer": "short",
-            "explanation_ar": "ضد طويل tall هو قصير short."
+            "kind": "mcq",
+            "prompt": "What does «dirty» mean?",
+            "options": [
+              "وسخ",
+              "حار / ساخن",
+              "قديم / كبير في السن",
+              "بارد"
+            ],
+            "answer": 0,
+            "explanation_ar": "«dirty» تعني «وسخ». مثال: The floor is dirty."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Describe two things you have at home (a bag, a phone, a book). Use opposite adjectives: It is big. That is small.",
+        "helpful_phrases": [
+          "It is big.",
+          "It is new.",
+          "It is cheap.",
+          "It is heavy."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-07-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-07-L4-s1",
+          "title_ar": "الدكان الجديد",
+          "panels": [
+            {
+              "speaker": "Salem",
+              "text_en": "Mona, look! A new shop is in our street.",
+              "text_ar": "يا منى، انظري! دكان جديد في شارعنا."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "It is big and clean.",
+              "text_ar": "إنه كبير ونظيف."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "The bread is hot.",
+              "text_ar": "الخبز ساخن."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "And the water is cold.",
+              "text_ar": "والماء بارد."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "The fruit is cheap.",
+              "text_ar": "الفاكهة رخيصة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "The phones are expensive.",
+              "text_ar": "الجوالات غالية."
+            },
+            {
+              "speaker": "Salem",
+              "text_en": "My old bag is heavy.",
+              "text_ar": "حقيبتي القديمة ثقيلة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Take a new light bag.",
+              "text_ar": "خذ حقيبة جديدة خفيفة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «hot» mean?",
+            "options": [
+              "غالٍ",
+              "كبير",
+              "جديد",
+              "حار / ساخن"
+            ],
+            "answer": 3,
+            "explanation_ar": "«hot» تعني «حار / ساخن». مثال: The tea is hot."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Mona, look! A ___ shop is in our street.",
+            "answer": "new",
+            "explanation_ar": "الكلمة الناقصة «new» (جديد)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: The / hot / bread / is",
+            "answer": [
+              "The",
+              "bread",
+              "is",
+              "hot"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The bread is hot"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Salem says: \"And the water is cold.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «And the water is cold.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cold» mean?",
+            "options": [
+              "كبير",
+              "بارد",
+              "ثقيل",
+              "جديد"
+            ],
+            "answer": 1,
+            "explanation_ar": "«cold» تعني «بارد». مثال: The water is cold."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-07-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The water is ___.",
+            "answer": "cold",
+            "explanation_ar": "الكلمة الناقصة «cold» (بارد)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-07-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are in a shop. Describe five things to a friend using adjectives (big, small, cheap, expensive, new, old, hot, cold).",
+        "helpful_phrases": [
+          "It is a ... bag.",
+          "The ... is expensive.",
+          "It is cheap.",
+          "The shop is clean."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -885,130 +717,126 @@
         "id": "A1-07-q1",
         "skill": "vocab",
         "kind": "mcq",
-        "prompt": "The opposite of «hot» is:",
+        "prompt": "What does «big» mean?",
         "options": [
-          "cold",
-          "old",
-          "slow"
+          "كبير",
+          "وسخ",
+          "حار / ساخن",
+          "خفيف"
         ],
         "answer": 0,
-        "explanation_ar": "ضد حار hot هو بارد cold."
+        "explanation_ar": "«big» تعني «كبير». مثال: This is a big bag."
       },
       {
         "id": "A1-07-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "«بيت جديد» بالإنجليزية:",
-        "options": [
-          "a house new",
-          "a new house",
-          "an new house"
-        ],
-        "answer": 1,
-        "explanation_ar": "الصفة قبل الاسم، و new تبدأ بصوت ساكن: a new house."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "It is ___ and clean.",
+        "answer": "big",
+        "explanation_ar": "الكلمة الناقصة «big» (كبير)."
       },
       {
         "id": "A1-07-q3",
         "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "The palm trees are talls.",
-          "The palm trees are tall.",
-          "The palm trees tall are."
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: big / The / bag / is",
+        "answer": [
+          "The",
+          "bag",
+          "is",
+          "big"
         ],
-        "answer": 1,
-        "explanation_ar": "الصفة لا تأخذ s."
+        "explanation_ar": "الترتيب الصحيح: The bag is big"
       },
       {
         "id": "A1-07-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "Tarim is ___ old city. (a / an)",
-        "answer": "an",
-        "explanation_ar": "old تبدأ بحرف علة: an old city."
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «cheap» mean?",
+        "options": [
+          "جديد",
+          "بارد",
+          "حار / ساخن",
+          "رخيص"
+        ],
+        "answer": 3,
+        "explanation_ar": "«cheap» تعني «رخيص». مثال: The bread is cheap."
       },
       {
         "id": "A1-07-q5",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "The test is ___.",
-        "options": [
-          "difficult very",
-          "very difficult",
-          "a very difficult"
-        ],
-        "answer": 1,
-        "explanation_ar": "very قبل الصفة."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The shop is ___.",
+        "answer": "clean",
+        "explanation_ar": "الكلمة الناقصة «clean» (نظيف)."
       },
       {
         "id": "A1-07-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "The turtle isn't fast. It's ___.",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Salem says: \"My old bag is heavy.\"",
         "options": [
-          "slow",
-          "short",
-          "small"
+          "True",
+          "False"
         ],
         "answer": 0,
-        "explanation_ar": "ضد fast هو slow."
+        "explanation_ar": "الذي قال «My old bag is heavy.» هو Salem."
       },
       {
         "id": "A1-07-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن جملة خبرية (ليست سؤالاً): is / a / city / Mukalla / big",
-        "answer": [
-          "Mukalla",
-          "is",
-          "a",
-          "big",
-          "city"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «heavy» mean?",
+        "options": [
+          "ثقيل",
+          "كبير",
+          "بارد",
+          "خفيف"
         ],
-        "explanation_ar": "الاسم + is + a + الصفة + city."
+        "answer": 0,
+        "explanation_ar": "«heavy» تعني «ثقيل». مثال: The box is heavy."
       },
       {
         "id": "A1-07-q8",
         "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "This homework is not difficult. It's ___.",
-        "options": [
-          "easy",
-          "dirty",
-          "old"
-        ],
-        "answer": 0,
-        "explanation_ar": "ضد difficult هو easy."
+        "kind": "fill_blank",
+        "prompt": "And the water is ___.",
+        "answer": "cold",
+        "explanation_ar": "الكلمة الناقصة «cold» (بارد)."
       },
       {
         "id": "A1-07-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Seiyun is in the valley. It's hot and dry.» What is the weather like in Seiyun?",
-        "options": [
-          "cold and rainy",
-          "hot and dry",
-          "warm and humid"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: new / it / Is",
+        "answer": [
+          "Is",
+          "it",
+          "new"
         ],
-        "answer": 1,
-        "explanation_ar": "It's hot and dry."
+        "explanation_ar": "الترتيب الصحيح: Is it new"
       },
       {
         "id": "A1-07-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "My shoes aren't clean. They're ___.",
-        "answer": "dirty",
-        "explanation_ar": "ضد clean هو dirty."
+        "kind": "mcq",
+        "prompt": "What does «dirty» mean?",
+        "options": [
+          "قديم / كبير في السن",
+          "وسخ",
+          "صغير",
+          "جديد"
+        ],
+        "answer": 1,
+        "explanation_ar": "«dirty» تعني «وسخ». مثال: The floor is dirty."
       }
     ]
   },
-  "context_note": "شبام ذات البيوت الطينية العالية، الساحل والوادي، تريم وشوارعها الضيقة، المكلا والشحر.",
-  "stop_ar": "شبام",
+  "stop_ar": "دكان الحي",
   "roleplay": {
-    "character_ar": "مرشد سياحي في شبام",
-    "scenario_en": "You are a tour guide in Shibam. Ask the student to describe their city using adjectives (big, small, old, new, hot, cold).",
-    "opening_en": "Welcome to Shibam! The houses are tall and old. Is your city big or small?"
-  }
+    "character_ar": "صاحب دكان الحي",
+    "scenario_en": "You are a shopkeeper in a Yemeni neighbourhood shop. A customer asks about things in your shop. Describe them with simple adjectives (big, small, new, old, hot, cold, cheap, expensive, heavy, light, clean, dirty).",
+    "opening_en": "Welcome to my shop! This bag is big and new. Do you like it?"
+  },
+  "context_note": "أشياء في دكان الحي"
 }

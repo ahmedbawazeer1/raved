@@ -1,856 +1,685 @@
 {
   "path": "english",
   "code": "A1-06",
-  "version": 7,
+  "version": 1,
   "level": "A1",
   "position": 6,
-  "title": "Animals",
-  "topic": "حيوانات حضرموت: الجمال والنحل وسلاحف شرمة",
-  "grammar_point": "have / has + plural nouns (regular and irregular)",
+  "title": "Animals on the Farm",
+  "topic": "يزور طارق مزرعة جدّه في القرية مع أخيه الصغير، ويسألان عن الحيوانات: هل هذا جمل؟ هل هذه أغنام؟",
+  "grammar_point": "Is it ...? / Are they ...? (yes / no questions with be)",
   "can_do": [
-    "أسمّي حيوانات شائعة وأقول ما عند عائلتي منها",
-    "أسأل هل يملك شخص حيواناً وأفهم الإجابة",
-    "أفهم نصاً قصيراً عن حيوانات في حضرموت"
+    "أسمّي حيوانات المزرعة بالإنجليزية",
+    "أسأل أسئلة نعم/لا بـ Is و Are",
+    "أجيب بـ Yes, it is / No, it isn't"
   ],
   "vocab": [
     {
       "id": "A1-06-v1",
-      "word": "animal",
-      "ipa": "/ˈænɪml/",
+      "word": "cow",
       "part_of_speech": "noun",
-      "meaning_ar": "حيوان",
-      "example_en": "The camel is a strong animal."
+      "meaning_ar": "بقرة",
+      "example_en": "The cow is brown."
     },
     {
       "id": "A1-06-v2",
-      "word": "camel",
-      "ipa": "/ˈkæml/",
+      "word": "sheep",
       "part_of_speech": "noun",
-      "meaning_ar": "جمل",
-      "example_en": "My grandfather has three camels."
+      "meaning_ar": "خروف / غنم",
+      "example_en": "The sheep are in the field."
     },
     {
       "id": "A1-06-v3",
       "word": "goat",
-      "ipa": "/ɡəʊt/",
       "part_of_speech": "noun",
       "meaning_ar": "ماعز",
-      "example_en": "We have five goats."
+      "example_en": "The goat is small."
     },
     {
       "id": "A1-06-v4",
-      "word": "sheep",
-      "ipa": "/ʃiːp/",
+      "word": "camel",
       "part_of_speech": "noun",
-      "meaning_ar": "خروف / غنم",
-      "example_en": "There are ten sheep on the farm."
+      "meaning_ar": "جمل",
+      "example_en": "The camel is big."
     },
     {
       "id": "A1-06-v5",
-      "word": "cow",
-      "ipa": "/kaʊ/",
+      "word": "donkey",
       "part_of_speech": "noun",
-      "meaning_ar": "بقرة",
-      "example_en": "Our cow gives us milk."
+      "meaning_ar": "حمار",
+      "example_en": "The donkey is with my grandfather."
     },
     {
       "id": "A1-06-v6",
-      "word": "donkey",
-      "ipa": "/ˈdɒŋki/",
+      "word": "horse",
       "part_of_speech": "noun",
-      "meaning_ar": "حمار",
-      "example_en": "The donkey carries water."
+      "meaning_ar": "حصان",
+      "example_en": "Is it a horse?"
     },
     {
       "id": "A1-06-v7",
       "word": "chicken",
-      "ipa": "/ˈtʃɪkɪn/",
       "part_of_speech": "noun",
       "meaning_ar": "دجاجة",
-      "example_en": "We have six chickens."
+      "example_en": "A chicken is in the yard."
     },
     {
       "id": "A1-06-v8",
-      "word": "cat",
-      "ipa": "/kæt/",
+      "word": "bird",
       "part_of_speech": "noun",
-      "meaning_ar": "قطة",
-      "example_en": "My cat is white."
+      "meaning_ar": "طائر",
+      "example_en": "The bird is on the tree."
     },
     {
       "id": "A1-06-v9",
-      "word": "bird",
-      "ipa": "/bɜːd/",
+      "word": "cat",
       "part_of_speech": "noun",
-      "meaning_ar": "طائر",
-      "example_en": "There are many birds in the palm trees."
+      "meaning_ar": "قطة",
+      "example_en": "The cat is at home."
     },
     {
       "id": "A1-06-v10",
-      "word": "bee",
-      "ipa": "/biː/",
+      "word": "dog",
       "part_of_speech": "noun",
-      "meaning_ar": "نحلة",
-      "example_en": "Bees make honey."
-    },
-    {
-      "id": "A1-06-v11",
-      "word": "fish",
-      "ipa": "/fɪʃ/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سمكة / سمك",
-      "example_en": "The fishermen catch a lot of fish."
-    },
-    {
-      "id": "A1-06-v12",
-      "word": "turtle",
-      "ipa": "/ˈtɜːtl/",
-      "part_of_speech": "noun",
-      "meaning_ar": "سلحفاة",
-      "example_en": "Sea turtles come to the beach at Sharma."
-    },
-    {
-      "id": "A1-06-v13",
-      "word": "farm",
-      "ipa": "/fɑːm/",
-      "part_of_speech": "noun",
-      "meaning_ar": "مزرعة",
-      "example_en": "My uncle has a farm in Wadi Hadramout."
-    },
-    {
-      "id": "A1-06-v14",
-      "word": "have / has",
-      "ipa": "/hæv/ /hæz/",
-      "part_of_speech": "verb",
-      "meaning_ar": "يملك / عنده",
-      "example_en": "She has a cat."
+      "meaning_ar": "كلب",
+      "example_en": "The dog is at the door."
     }
   ],
   "lessons": [
     {
-      "id": "A1-06-l1",
+      "id": "A1-06-L1",
       "position": 1,
       "skill": "vocab",
-      "title": "حيوانات حضرموت",
-      "est_minutes": 20,
+      "title": "مفردات: حيوانات في المزرعة",
+      "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "في حضرموت حيوانات كثيرة: **الجمال** في الصحراء، و**الماعز والغنم** في القرى، و**النحل** في دوعن، و**السلاحف البحرية** التي تأتي إلى شاطئ **شرمة** لتضع بيضها. تعلّم أسماءها بالإنجليزية."
+          "markdown_ar": "في القرى اليمنية تجد الماعز والأبقار والحمير حول البيوت. عندما نرى حيواناً من بعيد نسأل: «هل هذا جمل؟» ونجيب: «نعم» أو «لا». في هذا الدرس ستسأل وتجيب بالإنجليزية. شاهد الفيديو، ثم تعلّم أسماء الحيوانات."
         },
         {
           "type": "video",
           "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
+          "video_title": "تعلم اللغة الإنجليزية للمبتدئين : الدرس السادس : مفردات عن الحيوانات",
           "channel": "ZAmericanEnglish",
           "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
+          "optional": false
         },
         {
           "type": "table",
           "headers": [
             "الكلمة",
-            "النطق",
             "المعنى",
             "مثال"
           ],
           "rows": [
             [
-              "animal",
-              "/ˈænɪml/",
-              "حيوان",
-              "The camel is a strong animal."
+              "cow",
+              "بقرة",
+              "The cow is brown."
             ],
             [
-              "camel",
-              "/ˈkæml/",
-              "جمل",
-              "My grandfather has three camels."
+              "sheep",
+              "خروف / غنم",
+              "The sheep are in the field."
             ],
             [
               "goat",
-              "/ɡəʊt/",
               "ماعز",
-              "We have five goats."
+              "The goat is small."
             ],
             [
-              "sheep",
-              "/ʃiːp/",
-              "خروف / غنم",
-              "There are ten sheep on the farm."
-            ],
-            [
-              "cow",
-              "/kaʊ/",
-              "بقرة",
-              "Our cow gives us milk."
+              "camel",
+              "جمل",
+              "The camel is big."
             ],
             [
               "donkey",
-              "/ˈdɒŋki/",
               "حمار",
-              "The donkey carries water."
+              "The donkey is with my grandfather."
+            ],
+            [
+              "horse",
+              "حصان",
+              "Is it a horse?"
             ],
             [
               "chicken",
-              "/ˈtʃɪkɪn/",
               "دجاجة",
-              "We have six chickens."
-            ],
-            [
-              "cat",
-              "/kæt/",
-              "قطة",
-              "My cat is white."
+              "A chicken is in the yard."
             ],
             [
               "bird",
-              "/bɜːd/",
               "طائر",
-              "There are many birds in the palm trees."
+              "The bird is on the tree."
             ],
             [
-              "bee",
-              "/biː/",
-              "نحلة",
-              "Bees make honey."
+              "cat",
+              "قطة",
+              "The cat is at home."
             ],
             [
-              "fish",
-              "/fɪʃ/",
-              "سمكة / سمك",
-              "The fishermen catch a lot of fish."
-            ],
-            [
-              "turtle",
-              "/ˈtɜːtl/",
-              "سلحفاة",
-              "Sea turtles come to the beach at Sharma."
-            ],
-            [
-              "farm",
-              "/fɑːm/",
-              "مزرعة",
-              "My uncle has a farm in Wadi Hadramout."
-            ],
-            [
-              "have / has",
-              "/hæv/ /hæz/",
-              "يملك / عنده",
-              "She has a cat."
+              "dog",
+              "كلب",
+              "The dog is at the door."
             ]
           ]
         },
         {
           "type": "audio",
-          "text_en": "animal. The camel is a strong animal.\ncamel. My grandfather has three camels.\ngoat. We have five goats.\nsheep. There are ten sheep on the farm.\ncow. Our cow gives us milk.\ndonkey. The donkey carries water.\nchicken. We have six chickens.\ncat. My cat is white.\nbird. There are many birds in the palm trees.\nbee. Bees make honey.\nfish. The fishermen catch a lot of fish.\nturtle. Sea turtles come to the beach at Sharma.\nfarm. My uncle has a farm in Wadi Hadramout.\nhave / has. She has a cat."
+          "text_en": "This is a cow. The cow is brown. The goat is small. The camel is big. The donkey is with my grandfather. A chicken is in the yard. The bird is on the tree. The cat is at home. The dog is at the door. The sheep are in the field."
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-06-e1",
+            "id": "A1-06-L1-e5-1",
             "skill": "vocab",
             "kind": "mcq",
-            "prompt": "___ make honey.",
+            "prompt": "What does «customer» mean?",
             "options": [
-              "Cats",
-              "Bees",
-              "Goats"
+              "ماعز",
+              "بائع",
+              "دجاجة",
+              "زبون"
             ],
-            "answer": 1,
-            "explanation_ar": "النحل bees يصنع العسل."
+            "answer": 3,
+            "explanation_ar": "«customer» تعني «زبون». مثال: A customer is at the shop."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-06-e2",
-            "skill": "vocab",
-            "kind": "mcq",
-            "prompt": "This animal lives in the desert and carries people. It's a ___.",
-            "options": [
-              "camel",
-              "fish",
-              "turtle"
-            ],
-            "answer": 0,
-            "explanation_ar": "الجمل camel حيوان الصحراء."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e3",
+            "id": "A1-06-L1-e5-2",
             "skill": "vocab",
             "kind": "fill_blank",
-            "prompt": "The ___ gives us milk. (بقرة)",
+            "prompt": "This is a ___. The cow is brown.",
             "answer": "cow",
-            "explanation_ar": "البقرة = cow."
+            "explanation_ar": "الكلمة الناقصة «cow» (بقرة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «chicken» mean?",
+            "options": [
+              "بقرة",
+              "دجاجة",
+              "خروف / غنم",
+              "ماعز"
+            ],
+            "answer": 1,
+            "explanation_ar": "«chicken» تعني «دجاجة». مثال: A chicken is in the yard."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is big.",
+            "answer": "camel",
+            "explanation_ar": "الكلمة الناقصة «camel» (جمل)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «dog» mean?",
+            "options": [
+              "بقرة",
+              "كلب",
+              "ماعز",
+              "دجاجة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«dog» تعني «كلب». مثال: The dog is at the door."
           }
         },
         {
           "type": "game",
-          "id": "A1-06-g1",
-          "game": "flashcards"
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g2",
-          "game": "match"
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g3",
-          "game": "listen"
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g4",
-          "game": "pronounce"
+          "id": "A1-06-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
         }
       ]
     },
     {
-      "id": "A1-06-l2",
+      "id": "A1-06-L2",
       "position": 2,
       "skill": "grammar",
-      "title": "have / has + الجمع",
-      "est_minutes": 30,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "نستخدم **have** و **has** بمعنى «عنده / يملك»:\n\n- **I, you, we, they** + **have**: I **have** a cat. / They **have** goats.\n- **he, she, it** + **has**: He **has** a camel. / My aunt **has** a farm.\n\n**النفي:** don't have / doesn't have: «We **don't have** a cow.» «She **doesn't have** a cat.»\n\n**السؤال:** Do you have…? / Does he have…? ← Yes, I do. / No, he doesn't."
-        },
-        {
-          "type": "video",
-          "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
-        },
-        {
-          "type": "table",
-          "headers": [
-            "المفرد",
-            "الجمع",
-            "ملاحظة"
-          ],
-          "rows": [
-            [
-              "a camel",
-              "camels",
-              "نضيف s"
-            ],
-            [
-              "a fox",
-              "foxes",
-              "بعد x و s و sh و ch نضيف es"
-            ],
-            [
-              "a donkey",
-              "donkeys",
-              "متحرك + y ← ys"
-            ],
-            [
-              "a sheep",
-              "sheep",
-              "لا يتغير"
-            ],
-            [
-              "a fish",
-              "fish",
-              "لا يتغير عادة"
-            ],
-            [
-              "a mouse",
-              "mice",
-              "شاذ"
-            ]
-          ]
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e4",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "My grandfather ___ three camels.",
-            "options": [
-              "have",
-              "has",
-              "having"
-            ],
-            "answer": 1,
-            "explanation_ar": "مع he (my grandfather) نستخدم has."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e5",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "We ___ a cat and two chickens.",
-            "options": [
-              "have",
-              "has",
-              "is"
-            ],
-            "answer": 0,
-            "explanation_ar": "مع we نستخدم have."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e6",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "جمع كلمة sheep:",
-            "options": [
-              "sheeps",
-              "sheep",
-              "sheepes"
-            ],
-            "answer": 1,
-            "explanation_ar": "sheep لا يتغير في الجمع."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e7",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "She ___ have a dog. (لا)",
-            "answer": "doesn't",
-            "explanation_ar": "النفي مع she: doesn't have."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e8",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "___ you have a farm? — Yes, we do.",
-            "options": [
-              "Do",
-              "Does",
-              "Are"
-            ],
-            "answer": 0,
-            "explanation_ar": "السؤال مع you: Do you have…?"
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e9",
-            "skill": "grammar",
-            "kind": "order_words",
-            "prompt": "رتب الكلمات (ابدأ بـ My): has / my / uncle / goats / ten",
-            "answer": [
-              "My",
-              "uncle",
-              "has",
-              "ten",
-              "goats"
-            ],
-            "explanation_ar": "الفاعل + has + العدد + الاسم الجمع."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-06-l3",
-      "position": 3,
-      "skill": "listening",
-      "title": "حيوانات ماجد ورامي",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "**ماجد** من قرية قرب سيئون، و**رامي** من المكلا. استمع إليهما يتحدثان عن حيواناتهما."
-        },
-        {
-          "type": "video",
-          "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
-        },
-        {
-          "type": "audio",
-          "text_en": "Rami: Do you have animals at home, Majed?\nMajed: Yes, we do. We live in a village near Seiyun. We have six goats and ten chickens.\nRami: Do you have a camel?\nMajed: No, we don't. But my grandfather has two camels. He lives in the desert near Thamud.\nRami: Wow! I live in Mukalla. We don't have goats, but we have a cat. Her name is Lulu.\nMajed: Do you go to the sea?\nRami: Yes. In spring, we sometimes see big turtles on the beach at Sharma.\nMajed: Turtles? That's amazing!"
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e10",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "How many goats does Majed's family have?",
-            "options": [
-              "two",
-              "six",
-              "ten"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: We have six goats and ten chickens."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e11",
-            "skill": "listening",
-            "kind": "true_false",
-            "prompt": "Majed's family has a camel.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: No, we don't. جده هو الذي عنده جملان."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e12",
-            "skill": "listening",
-            "kind": "mcq",
-            "prompt": "What animal does Rami have?",
-            "options": [
-              "a goat",
-              "a cat",
-              "a camel"
-            ],
-            "answer": 1,
-            "explanation_ar": "قال: we have a cat. Her name is Lulu."
-          }
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g5",
-          "game": "dictation"
-        }
-      ]
-    },
-    {
-      "id": "A1-06-l4",
-      "position": 4,
-      "skill": "reading",
-      "title": "سلاحف شاطئ شرمة",
-      "est_minutes": 20,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اقرأ عن **السلاحف البحرية** في شاطئ **شرمة** شرق المكلا، ثم أجب عن الأسئلة. ستجد أفعالاً جديدة؛ ركّز على المعلومات المطلوبة."
-        },
-        {
-          "type": "video",
-          "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
-        },
-        {
-          "type": "reading",
-          "text_en": "Every year, between January and June, something special happens at Sharma beach, east of Mukalla. Big green sea turtles come out of the sea at night. Each turtle digs a hole in the sand and lays about one hundred eggs. Then she goes back to the sea. After two months, the baby turtles come out of the eggs and walk to the water. The baby turtles are very small and many animals eat them, like birds and crabs. Local people and volunteers protect the beach. They don't use lights near the turtles, and they don't touch the eggs. Sharma is one of the most important places for turtles in the Arabian Sea.",
-          "word_count": 112
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e13",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "When do the turtles come out of the sea?",
-            "options": [
-              "in the morning",
-              "at night",
-              "at lunch time"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: come out of the sea at night."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e14",
-            "skill": "reading",
-            "kind": "mcq",
-            "prompt": "How many eggs does each turtle lay?",
-            "options": [
-              "about ten",
-              "about one hundred",
-              "about one thousand"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: lays about one hundred eggs."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e15",
-            "skill": "reading",
-            "kind": "true_false",
-            "prompt": "People use lights near the turtles.",
-            "options": [
-              "True",
-              "False"
-            ],
-            "answer": 1,
-            "explanation_ar": "في النص: They don't use lights near the turtles."
-          }
-        },
-        {
-          "type": "exercise",
-          "exercise": {
-            "id": "A1-06-e16",
-            "skill": "reading",
-            "kind": "fill_blank",
-            "prompt": "Birds and crabs eat the baby ___.",
-            "answer": "turtles",
-            "explanation_ar": "في النص: many animals eat them (the baby turtles)."
-          }
-        }
-      ]
-    },
-    {
-      "id": "A1-06-l5",
-      "position": 5,
-      "skill": "speaking",
-      "title": "حيوانات تعرفها",
+      "title": "قاعدة: Is it ...? / Are they ...? (yes / no questions with be)",
       "est_minutes": 15,
       "blocks": [
         {
-          "type": "text",
-          "markdown_ar": "تحدث عن الحيوانات في بيتك أو قريتك أو عند أقاربك: **ماذا عندكم؟ كم عددها؟ ومن عنده جمال أو نحل؟** استعمل have و has والجمع."
+          "type": "audio",
+          "text_en": "Is it a goat? Yes, it is. Is it a cow? No, it is not. Are they sheep? Yes, they are. Are they horses? No, they are not."
         },
         {
-          "type": "video",
-          "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
+          "type": "text",
+          "markdown_ar": "لنسأل سؤال «نعم/لا» بالإنجليزية **نقدّم الفعل be** على الفاعل:\n\n- It **is** a goat. → **Is** it a goat? (هل هو ماعز؟)\n- They **are** sheep. → **Are** they sheep? (هل هم غنم؟)\n\nنجيب إجابة قصيرة:\n- **Yes, it is.** / **No, it isn't.** (it is not)\n- **Yes, they are.** / **No, they aren't.** (they are not)\n\n**الخطأ الشائع:** أن نرفع النغمة فقط ونقول «It is a goat?». الصحيح تقديم الفعل: **Is it a goat?**\n\n**ملاحظة:** كلمة sheep مفرد وجمع بنفس الشكل: one sheep, two sheep."
         },
         {
           "type": "table",
           "headers": [
-            "لتقول",
-            "العبارة"
+            "الجملة الخبرية",
+            "السؤال",
+            "الجواب"
           ],
           "rows": [
             [
-              "عندنا",
-              "We have…"
+              "It is a goat.",
+              "Is it a goat?",
+              "Yes, it is."
             ],
             [
-              "ليس عندنا",
-              "We don't have…"
+              "It is not a cow.",
+              "Is it a cow?",
+              "No, it isn't."
             ],
             [
-              "عنده",
-              "My uncle has…"
+              "They are sheep.",
+              "Are they sheep?",
+              "Yes, they are."
             ],
             [
-              "أحب",
-              "My favourite animal is the… because…"
+              "They are not horses.",
+              "Are they horses?",
+              "No, they aren't."
             ]
           ]
-        }
-      ],
-      "speaking_task": {
-        "prompt_en": "Talk about the animals in your home, village or your relatives' farm: what animals, how many, and your favourite animal.",
-        "helpful_phrases": [
-          "We have…",
-          "We don't have…",
-          "My grandfather has…",
-          "There are … goats.",
-          "My favourite animal is…"
-        ],
-        "prep_seconds": 30,
-        "max_seconds": 60,
-        "rubric_focus": [
-          "have / has",
-          "plural nouns",
-          "animals vocabulary"
-        ]
-      }
-    },
-    {
-      "id": "A1-06-l6",
-      "position": 6,
-      "skill": "writing",
-      "title": "اكتب عن حيوان تحبه",
-      "est_minutes": 25,
-      "blocks": [
-        {
-          "type": "text",
-          "markdown_ar": "اكتب فقرة (30 إلى 70 كلمة) عن الحيوانات عند عائلتك أو عن حيوانك المفضل. اقرأ المثال أولاً."
         },
         {
-          "type": "video",
-          "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: small / goat / The / is",
+            "answer": [
+              "The",
+              "goat",
+              "is",
+              "small"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The goat is small"
+          }
         },
         {
-          "type": "reading",
-          "text_en": "My uncle Awadh has a farm in Wadi Doan. He has two cows, fifteen goats and a donkey. He also has a lot of bees. His bees make sidr honey. I love the camels, but my uncle doesn't have camels. My cousin has a white cat. Her name is Qamar.",
-          "word_count": 50
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is with my grandfather.",
+            "answer": "donkey",
+            "explanation_ar": "الكلمة الناقصة «donkey» (حمار)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «sheep» mean?",
+            "options": [
+              "زبون",
+              "كلب",
+              "خروف / غنم",
+              "بائع"
+            ],
+            "answer": 2,
+            "explanation_ar": "«sheep» تعني «خروف / غنم». مثال: The sheep are in the field."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: brown / cow / is / The",
+            "answer": [
+              "The",
+              "cow",
+              "is",
+              "brown"
+            ],
+            "explanation_ar": "الترتيب الصحيح: The cow is brown"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is at the door.",
+            "answer": "dog",
+            "explanation_ar": "الكلمة الناقصة «dog» (كلب)."
+          }
         }
       ],
       "writing_task": {
-        "prompt_en": "Write about the animals in your family or your favourite animal. Use have, has, don't have and plural nouns.",
-        "min_words": 30,
-        "max_words": 70,
+        "prompt_en": "Write 3 questions about animals and give short answers. Example: Is it a camel? Yes, it is.",
+        "min_words": 12,
+        "max_words": 50,
         "rubric_focus": [
-          "have / has",
-          "plural nouns"
+          "correct form",
+          "everyday words"
         ]
       }
     },
     {
-      "id": "A1-06-l7",
-      "position": 7,
-      "skill": "review",
-      "title": "مراجعة الوحدة",
+      "id": "A1-06-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
       "est_minutes": 15,
       "blocks": [
         {
           "type": "text",
-          "markdown_ar": "راجع قبل الاختبار:\n\n- **I / you / we / they have**، **he / she / it has**.\n- النفي **don't have / doesn't have**، والسؤال **Do you have…? Does she have…?**\n- الجمع: camels, foxes, donkeys، والشاذ: sheep, fish, mice."
-        },
-        {
-          "type": "video",
-          "youtube_id": "Th9S81mblxo",
-          "video_title": "مفردات عن الحيوانات — الحلقة 6",
-          "channel": "ZAmericanEnglish",
-          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
-          "duration_sec": 502,
-          "optional": true,
-          "approx_size_mb": 33
+          "markdown_ar": "طارق وأخوه الصغير في مزرعة جدّهم. **استمع:** أي الحيوانات يرونها؟ وبماذا يجيب الجد؟"
         },
         {
           "type": "story",
-          "id": "A1-06-s1",
-          "title_ar": "الحلقة 6: سلاحف شرمة",
+          "id": "A1-06-L3-s2",
+          "title_ar": "الحوار",
           "panels": [
             {
-              "speaker": "Reem",
-              "text_en": "Hamza, look! A big turtle on the sand!",
-              "text_ar": "حمزة، انظر! سلحفاة كبيرة على الرمل!"
+              "speaker": "Tariq",
+              "text_en": "Grandfather, is it a cow?",
+              "text_ar": "يا جدي، هل هذه بقرة؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "Wow! Does it have eggs?",
-              "text_ar": "واو! هل معها بيض؟"
+              "speaker": "Grandfather",
+              "text_en": "Yes, it is. The cow is brown.",
+              "text_ar": "نعم. البقرة بنيّة."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Yes, it has about one hundred eggs.",
-              "text_ar": "نعم، معها حوالي مئة بيضة."
+              "speaker": "Tariq",
+              "text_en": "Are they goats?",
+              "text_ar": "هل هم ماعز؟"
             },
             {
-              "speaker": "Hamza",
-              "text_en": "We don't have turtles in Seiyun. We have camels and goats.",
-              "text_ar": "ليس عندنا سلاحف في سيئون. عندنا جمال وماعز."
+              "speaker": "Grandfather",
+              "text_en": "No, they aren't. They are sheep.",
+              "text_ar": "لا، بل هم أغنام."
             },
             {
-              "speaker": "Reem",
-              "text_en": "Shh! Don't use your phone light. Turtles don't like it.",
-              "text_ar": "اششش! لا تستعمل ضوء هاتفك. السلاحف لا تحبه."
+              "speaker": "Tariq",
+              "text_en": "Is that a camel?",
+              "text_ar": "هل ذلك جمل؟"
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Yes, it is. The camel is big.",
+              "text_ar": "نعم. الجمل كبير."
+            },
+            {
+              "speaker": "Tariq",
+              "text_en": "Is the dog your dog?",
+              "text_ar": "هل الكلب كلبك؟"
+            },
+            {
+              "speaker": "Grandfather",
+              "text_en": "Yes, it is. He is a good dog.",
+              "text_ar": "نعم. إنه كلب جيد."
             }
           ]
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-06-e17",
-            "skill": "grammar",
-            "kind": "mcq",
-            "prompt": "Does your uncle have bees? — Yes, he ___.",
+            "id": "A1-06-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Is the dog your dog?\"",
             "options": [
-              "do",
-              "does",
-              "has"
+              "True",
+              "False"
             ],
-            "answer": 1,
-            "explanation_ar": "الإجابة القصيرة مع he: Yes, he does."
+            "answer": 0,
+            "explanation_ar": "الذي قال «Is the dog your dog?» هو Tariq."
           }
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-06-e18",
-            "skill": "grammar",
+            "id": "A1-06-L3-e3-2",
+            "skill": "vocab",
             "kind": "mcq",
-            "prompt": "جمع كلمة donkey:",
+            "prompt": "What does «cat» mean?",
             "options": [
-              "donkies",
-              "donkeys",
-              "donkey"
+              "بقرة",
+              "خروف / غنم",
+              "قطة",
+              "ماعز"
             ],
-            "answer": 1,
-            "explanation_ar": "متحرك + y ← ys: donkeys."
+            "answer": 2,
+            "explanation_ar": "«cat» تعني «قطة». مثال: The cat is at home."
           }
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g6",
-          "game": "memory"
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g7",
-          "game": "swipe"
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g8",
-          "game": "spell"
-        },
-        {
-          "type": "game",
-          "id": "A1-06-g9",
-          "game": "speed"
         },
         {
           "type": "exercise",
           "exercise": {
-            "id": "A1-06-e19",
-            "skill": "grammar",
-            "kind": "fill_blank",
-            "prompt": "They ___ two camels and a cow.",
-            "answer": "have",
-            "explanation_ar": "مع they نستخدم have."
+            "id": "A1-06-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Tariq says: \"Is that a camel?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Is that a camel?» هو Tariq."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «dog» mean?",
+            "options": [
+              "طائر",
+              "جمل",
+              "كلب",
+              "زبون"
+            ],
+            "answer": 2,
+            "explanation_ar": "«dog» تعني «كلب». مثال: The dog is at the door."
           }
         }
-      ]
+      ],
+      "speaking_task": {
+        "prompt_en": "Ask your friend four yes/no questions about animals. Then answer two questions. Use Is it ...? Are they ...?",
+        "helpful_phrases": [
+          "Is it a ...?",
+          "Are they ...?",
+          "Yes, it is.",
+          "No, it isn't."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-06-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-06-L4-s1",
+          "title_ar": "حيوان في الحقل",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Mona, look! Is it a horse?",
+              "text_ar": "يا منى، انظري! هل هذا حصان؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "No, it isn't. It is a donkey.",
+              "text_ar": "لا، إنه حمار."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Are the birds on the tree?",
+              "text_ar": "هل الطيور على الشجرة؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, they are.",
+              "text_ar": "نعم، هي كذلك."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Is the cat at home?",
+              "text_ar": "هل القطة في البيت؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, it is, with my brother.",
+              "text_ar": "نعم، مع أخي."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Are the chickens in the yard?",
+              "text_ar": "هل الدجاج في الفناء؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "No, they aren't. They are in the farm.",
+              "text_ar": "لا، هم في المزرعة."
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «bird» mean?",
+            "options": [
+              "طائر",
+              "كلب",
+              "ماعز",
+              "قطة"
+            ],
+            "answer": 0,
+            "explanation_ar": "«bird» تعني «طائر». مثال: The bird is on the tree."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is at the door.",
+            "answer": "dog",
+            "explanation_ar": "الكلمة الناقصة «dog» (كلب)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: Yes, / brother / with / my / is, / it",
+            "answer": [
+              "Yes,",
+              "it",
+              "is,",
+              "with",
+              "my",
+              "brother"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Yes, it is, with my brother"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"Are the birds on the tree?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Are the birds on the tree?» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «cow» mean?",
+            "options": [
+              "حمار",
+              "بقرة",
+              "طائر",
+              "ماعز"
+            ],
+            "answer": 1,
+            "explanation_ar": "«cow» تعني «بقرة». مثال: The cow is brown."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-06-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ are in the field.",
+            "answer": "sheep",
+            "explanation_ar": "الكلمة الناقصة «sheep» (خروف / غنم)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-06-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "You are at a farm. Ask your friend 4 questions about animals (Is it ...? Are they ...?) and answer with Yes or No.",
+        "helpful_phrases": [
+          "Is it a ...?",
+          "Are they ...?",
+          "Yes, it is.",
+          "No, they aren't."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
     }
   ],
   "quiz": {
@@ -858,132 +687,133 @@
     "questions": [
       {
         "id": "A1-06-q1",
-        "skill": "grammar",
+        "skill": "vocab",
         "kind": "mcq",
-        "prompt": "She ___ a white cat.",
+        "prompt": "What does «bird» mean?",
         "options": [
-          "have",
-          "has",
-          "is"
+          "ماعز",
+          "حمار",
+          "طائر",
+          "بقرة"
         ],
-        "answer": 1,
-        "explanation_ar": "مع she نستخدم has."
+        "answer": 2,
+        "explanation_ar": "«bird» تعني «طائر». مثال: The bird is on the tree."
       },
       {
         "id": "A1-06-q2",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "We ___ have a camel.",
-        "options": [
-          "doesn't",
-          "don't",
-          "aren't"
-        ],
-        "answer": 1,
-        "explanation_ar": "النفي مع we: don't have."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The ___ is on the tree.",
+        "answer": "bird",
+        "explanation_ar": "الكلمة الناقصة «bird» (طائر)."
       },
       {
         "id": "A1-06-q3",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "Sea ___ lay their eggs at Sharma beach.",
-        "options": [
-          "turtles",
-          "camels",
-          "goats"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: it / horse / Mona, / Is / look! / a",
+        "answer": [
+          "Mona,",
+          "look!",
+          "Is",
+          "it",
+          "a",
+          "horse"
         ],
-        "answer": 0,
-        "explanation_ar": "السلاحف البحرية sea turtles."
+        "explanation_ar": "الترتيب الصحيح: Mona, look! Is it a horse"
       },
       {
         "id": "A1-06-q4",
-        "skill": "grammar",
-        "kind": "fill_blank",
-        "prompt": "___ he have goats? — No, he doesn't.",
-        "answer": "Does",
-        "explanation_ar": "السؤال مع he: Does he have…?"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «sheep» mean?",
+        "options": [
+          "خروف / غنم",
+          "حمار",
+          "قطة",
+          "بقرة"
+        ],
+        "answer": 0,
+        "explanation_ar": "«sheep» تعني «خروف / غنم». مثال: The sheep are in the field."
       },
       {
         "id": "A1-06-q5",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "جمع كلمة fox:",
-        "options": [
-          "foxs",
-          "foxes",
-          "foxies"
-        ],
-        "answer": 1,
-        "explanation_ar": "بعد x نضيف es: foxes."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "A ___ is in the yard.",
+        "answer": "chicken",
+        "explanation_ar": "الكلمة الناقصة «chicken» (دجاجة)."
       },
       {
         "id": "A1-06-q6",
-        "skill": "vocab",
-        "kind": "mcq",
-        "prompt": "This animal makes honey:",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Mona says: \"Yes, it is, with my brother.\"",
         "options": [
-          "bee",
-          "bird",
-          "cow"
+          "True",
+          "False"
         ],
         "answer": 0,
-        "explanation_ar": "النحلة bee تصنع العسل."
+        "explanation_ar": "الذي قال «Yes, it is, with my brother.» هو Mona."
       },
       {
         "id": "A1-06-q7",
-        "skill": "grammar",
-        "kind": "order_words",
-        "prompt": "رتب الكلمات لتكوّن سؤالاً: a / you / do / have / cat",
-        "answer": [
-          "Do",
-          "you",
-          "have",
-          "a",
-          "cat"
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «chicken» mean?",
+        "options": [
+          "خروف / غنم",
+          "جمل",
+          "دجاجة",
+          "كلب"
         ],
-        "explanation_ar": "Do + you + have + الاسم؟"
+        "answer": 2,
+        "explanation_ar": "«chicken» تعني «دجاجة». مثال: A chicken is in the yard."
       },
       {
         "id": "A1-06-q8",
-        "skill": "grammar",
-        "kind": "mcq",
-        "prompt": "اختر الجملة الصحيحة:",
-        "options": [
-          "There are ten sheeps.",
-          "There are ten sheep.",
-          "There is ten sheep."
-        ],
-        "answer": 1,
-        "explanation_ar": "sheep لا يتغير في الجمع، ومع الجمع there are."
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "This is a ___. The cow is brown.",
+        "answer": "cow",
+        "explanation_ar": "الكلمة الناقصة «cow» (بقرة)."
       },
       {
         "id": "A1-06-q9",
-        "skill": "reading",
-        "kind": "mcq",
-        "prompt": "Read: «Salem has three goats and his sister has two cats.» How many cats does his sister have?",
-        "options": [
-          "two",
-          "three",
-          "five"
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: The / bird / the / is / on / tree",
+        "answer": [
+          "The",
+          "bird",
+          "is",
+          "on",
+          "the",
+          "tree"
         ],
-        "answer": 0,
-        "explanation_ar": "his sister has two cats."
+        "explanation_ar": "الترتيب الصحيح: The bird is on the tree"
       },
       {
         "id": "A1-06-q10",
         "skill": "vocab",
-        "kind": "fill_blank",
-        "prompt": "The ___ carries water in the village. (حمار)",
-        "answer": "donkey",
-        "explanation_ar": "الحمار = donkey."
+        "kind": "mcq",
+        "prompt": "What does «dog» mean?",
+        "options": [
+          "دجاجة",
+          "طائر",
+          "حمار",
+          "كلب"
+        ],
+        "answer": 3,
+        "explanation_ar": "«dog» تعني «كلب». مثال: The dog is at the door."
       }
     ]
   },
-  "context_note": "السلاحف البحرية في شاطئ شرمة، جمال صحراء ثمود، نحل دوعن، مزارع وادي حضرموت.",
-  "stop_ar": "شرمة",
+  "stop_ar": "مزرعة القرية",
   "roleplay": {
-    "character_ar": "حارس شاطئ شرمة",
-    "scenario_en": "You are a volunteer who protects sea turtles at Sharma beach. Ask the student about animals they have or like.",
-    "opening_en": "Welcome to Sharma! Do you have animals at home?"
-  }
+    "character_ar": "الجدّ في المزرعة",
+    "scenario_en": "You are a Yemeni grandfather on a farm. Your grandchild asks about the animals (cow, sheep, goat, camel, donkey, horse, chicken, bird, cat, dog). Answer with yes/no questions and short answers. Use only very simple English.",
+    "opening_en": "Welcome to the farm! Look at the animals. Is it a cow?"
+  },
+  "context_note": "حيوانات في المزرعة"
 }

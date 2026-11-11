@@ -1,0 +1,810 @@
+{
+  "path": "english",
+  "code": "A1-16",
+  "version": 1,
+  "level": "A1",
+  "position": 16,
+  "title": "Fruits We Like",
+  "topic": "تشتري منى وأخوها فواكه من محل الفواكه الطازجة، ويسألهما البائع عن الفاكهة التي يحبانها.",
+  "grammar_point": "Do you like ...? Yes, I do. / No, I don't.",
+  "can_do": [
+    "أسمّي عشر فواكه بالإنجليزية",
+    "أسأل «هل تحب؟» بـ Do you like",
+    "أجيب بـ Yes, I do / No, I don't"
+  ],
+  "vocab": [
+    {
+      "id": "A1-16-v1",
+      "word": "fruit",
+      "part_of_speech": "noun",
+      "meaning_ar": "فاكهة",
+      "example_en": "I like fruit."
+    },
+    {
+      "id": "A1-16-v2",
+      "word": "apple",
+      "part_of_speech": "noun",
+      "meaning_ar": "تفاحة",
+      "example_en": "I eat an apple every day."
+    },
+    {
+      "id": "A1-16-v3",
+      "word": "banana",
+      "part_of_speech": "noun",
+      "meaning_ar": "موزة",
+      "example_en": "Do you like bananas?"
+    },
+    {
+      "id": "A1-16-v4",
+      "word": "orange",
+      "part_of_speech": "noun",
+      "meaning_ar": "برتقالة",
+      "example_en": "The orange is sweet."
+    },
+    {
+      "id": "A1-16-v5",
+      "word": "grapes",
+      "part_of_speech": "noun",
+      "meaning_ar": "عنب",
+      "example_en": "I like grapes."
+    },
+    {
+      "id": "A1-16-v6",
+      "word": "mango",
+      "part_of_speech": "noun",
+      "meaning_ar": "مانجو",
+      "example_en": "Mango is my favourite fruit."
+    },
+    {
+      "id": "A1-16-v7",
+      "word": "watermelon",
+      "part_of_speech": "noun",
+      "meaning_ar": "بطيخ",
+      "example_en": "We eat watermelon in summer."
+    },
+    {
+      "id": "A1-16-v8",
+      "word": "pomegranate",
+      "part_of_speech": "noun",
+      "meaning_ar": "رمّان",
+      "example_en": "Pomegranates are red."
+    },
+    {
+      "id": "A1-16-v9",
+      "word": "dates",
+      "part_of_speech": "noun",
+      "meaning_ar": "تمر",
+      "example_en": "We eat dates in Ramadan."
+    },
+    {
+      "id": "A1-16-v10",
+      "word": "lemon",
+      "part_of_speech": "noun",
+      "meaning_ar": "ليمون",
+      "example_en": "The lemon is sour."
+    }
+  ],
+  "lessons": [
+    {
+      "id": "A1-16-L1",
+      "position": 1,
+      "skill": "vocab",
+      "title": "مفردات: فواكه نحبها",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "اليمن بلد الفواكه الجميلة: العنب في صنعاء، والرمان، والمانجو في تهامة، والتمر في حضرموت. ما فاكهتك المفضلة؟ في هذا الدرس ستسمّي الفواكه وتسأل زميلك: **Do you like ...?**"
+        },
+        {
+          "type": "video",
+          "youtube_id": "NDuK8lpN-mI",
+          "video_title": "كورس شامل لتعلم اللغة الانجليزية من الصفر للمبتدئين كورس كامل من البداية الى الاحتراف : الحلقة 16",
+          "channel": "ZAmericanEnglish",
+          "channel_url": "https://www.youtube.com/@ZAmericanEnglish",
+          "optional": false,
+          "needs_check": true
+        },
+        {
+          "type": "table",
+          "headers": [
+            "الكلمة",
+            "المعنى",
+            "مثال"
+          ],
+          "rows": [
+            [
+              "fruit",
+              "فاكهة",
+              "I like fruit."
+            ],
+            [
+              "apple",
+              "تفاحة",
+              "I eat an apple every day."
+            ],
+            [
+              "banana",
+              "موزة",
+              "Do you like bananas?"
+            ],
+            [
+              "orange",
+              "برتقالة",
+              "The orange is sweet."
+            ],
+            [
+              "grapes",
+              "عنب",
+              "I like grapes."
+            ],
+            [
+              "mango",
+              "مانجو",
+              "Mango is my favourite fruit."
+            ],
+            [
+              "watermelon",
+              "بطيخ",
+              "We eat watermelon in summer."
+            ],
+            [
+              "pomegranate",
+              "رمّان",
+              "Pomegranates are red."
+            ],
+            [
+              "dates",
+              "تمر",
+              "We eat dates in Ramadan."
+            ],
+            [
+              "lemon",
+              "ليمون",
+              "The lemon is sour."
+            ]
+          ]
+        },
+        {
+          "type": "audio",
+          "text_en": "I like fruit. I eat an apple every day. Do you like bananas? Yes, I do. The orange is sweet, but the lemon is sour. I like grapes and mango. We eat watermelon in summer. Pomegranates are red. We eat dates in Ramadan."
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L1-e5-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «banana» mean?",
+            "options": [
+              "سعيد",
+              "مانجو",
+              "موزة",
+              "فاكهة"
+            ],
+            "answer": 2,
+            "explanation_ar": "«banana» تعني «موزة». مثال: Do you like bananas?"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L1-e5-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We eat ___ in summer.",
+            "answer": "watermelon",
+            "explanation_ar": "الكلمة الناقصة «watermelon» (بطيخ)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L1-e5-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «dates» mean?",
+            "options": [
+              "ليمون",
+              "رمّان",
+              "عنب",
+              "تمر"
+            ],
+            "answer": 3,
+            "explanation_ar": "«dates» تعني «تمر». مثال: We eat dates in Ramadan."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L1-e5-4",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Mango is my favourite ___.",
+            "answer": "fruit",
+            "explanation_ar": "الكلمة الناقصة «fruit» (فاكهة)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L1-e5-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pomegranate» mean?",
+            "options": [
+              "رمّان",
+              "موزة",
+              "بطيخ",
+              "عنب"
+            ],
+            "answer": 0,
+            "explanation_ar": "«pomegranate» تعني «رمّان». مثال: Pomegranates are red."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-16-L1-g6",
+          "game": "listen",
+          "title_ar": "العب"
+        }
+      ]
+    },
+    {
+      "id": "A1-16-L2",
+      "position": 2,
+      "skill": "grammar",
+      "title": "قاعدة: Do you like ...? Yes, I do. / No, I don't.",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "audio",
+          "text_en": "Do you like grapes? Yes, I do. Do you like lemons? No, I don't. Do they like mango? Yes, they do. Do we like dates? Yes, we do."
+        },
+        {
+          "type": "text",
+          "markdown_ar": "لنسأل «هل تحب...؟» نضع **Do** في **أول** الجملة:\n\n- You like grapes. → **Do** you like grapes? (هل تحب العنب؟)\n\nونجيب إجابة قصيرة:\n- **Yes, I do.** (نعم أحب)\n- **No, I don't.** (لا، لا أحب)\n\nمع they و we: **Do they** like mango? **Yes, they do.** **Do we** like dates? **Yes, we do.**\n\n**الخطأ الشائع:** أن نجيب «Yes, I like» أو «Yes, I am». الجواب القصير يرد بـ **do**: **Yes, I do.**"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "السؤال",
+            "نعم",
+            "لا"
+          ],
+          "rows": [
+            [
+              "Do you like apples?",
+              "Yes, I do.",
+              "No, I don't."
+            ],
+            [
+              "Do they like mango?",
+              "Yes, they do.",
+              "No, they don't."
+            ],
+            [
+              "Do we like dates?",
+              "Yes, we do.",
+              "No, we don't."
+            ]
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L2-e4-1",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: in / watermelon / summer / We / eat",
+            "answer": [
+              "We",
+              "eat",
+              "watermelon",
+              "in",
+              "summer"
+            ],
+            "explanation_ar": "الترتيب الصحيح: We eat watermelon in summer"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L2-e4-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "Do you like ___? Yes, I do.",
+            "answer": "grapes",
+            "explanation_ar": "الكلمة الناقصة «grapes» (عنب)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L2-e4-3",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «sad» mean?",
+            "options": [
+              "تمر",
+              "بطيخ",
+              "حزين",
+              "سعيد"
+            ],
+            "answer": 2,
+            "explanation_ar": "«sad» تعني «حزين». مثال: She is sad."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L2-e4-4",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: is / favourite / my / Mango / fruit",
+            "answer": [
+              "Mango",
+              "is",
+              "my",
+              "favourite",
+              "fruit"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Mango is my favourite fruit"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L2-e4-5",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "We eat ___ in summer.",
+            "answer": "watermelon",
+            "explanation_ar": "الكلمة الناقصة «watermelon» (بطيخ)."
+          }
+        }
+      ],
+      "writing_task": {
+        "prompt_en": "Write 3 questions with Do you like ...? Then answer: Yes, I do. / No, I don't.",
+        "min_words": 12,
+        "max_words": 50,
+        "rubric_focus": [
+          "correct form",
+          "everyday words"
+        ]
+      }
+    },
+    {
+      "id": "A1-16-L3",
+      "position": 3,
+      "skill": "listening",
+      "title": "حوار",
+      "est_minutes": 15,
+      "blocks": [
+        {
+          "type": "text",
+          "markdown_ar": "منى وأخوها في محل الفواكه. **استمع:** ما الفاكهة التي يحبها كل منهما؟ وأيها لا يحب؟"
+        },
+        {
+          "type": "story",
+          "id": "A1-16-L3-s2",
+          "title_ar": "الحوار",
+          "panels": [
+            {
+              "speaker": "Seller",
+              "text_en": "Good morning! The fruit is fresh.",
+              "text_ar": "صباح الخير! الفاكهة طازجة."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Good morning! Do you have mango?",
+              "text_ar": "صباح الخير! هل عندكم مانجو؟"
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Yes, I do. Do you like mango?",
+              "text_ar": "نعم. هل تحبين المانجو؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Yes, I do. My brother likes grapes.",
+              "text_ar": "نعم. وأخي يحب العنب."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Do you like pomegranates, boy?",
+              "text_ar": "هل تحب الرمّان يا ولد؟"
+            },
+            {
+              "speaker": "Brother",
+              "text_en": "Yes, I do. And dates.",
+              "text_ar": "نعم. والتمر."
+            },
+            {
+              "speaker": "Seller",
+              "text_en": "Do you like lemons?",
+              "text_ar": "هل تحبون الليمون؟"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "No, we don't. Thank you!",
+              "text_ar": "لا. شكراً لك!"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L3-e3-1",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"Yes, I do. My brother likes grapes.\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Yes, I do. My brother likes grapes.» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L3-e3-2",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «pomegranate» mean?",
+            "options": [
+              "تفاحة",
+              "رمّان",
+              "تمر",
+              "سعيد"
+            ],
+            "answer": 1,
+            "explanation_ar": "«pomegranate» تعني «رمّان». مثال: Pomegranates are red."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L3-e3-3",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Seller says: \"Good morning! Do you have mango?\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 1,
+            "explanation_ar": "الذي قال «Good morning! Do you have mango?» هو Mona."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L3-e3-4",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «banana» mean?",
+            "options": [
+              "موزة",
+              "تفاحة",
+              "رمّان",
+              "برتقالة"
+            ],
+            "answer": 0,
+            "explanation_ar": "«banana» تعني «موزة». مثال: Do you like bananas?"
+          }
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Ask your friend three questions: Do you like ...? Then answer two questions about your favourite fruit.",
+        "helpful_phrases": [
+          "Do you like ...?",
+          "Yes, I do.",
+          "No, I don't.",
+          "My favourite fruit is ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "clear pronunciation",
+          "complete sentences"
+        ]
+      }
+    },
+    {
+      "id": "A1-16-L4",
+      "position": 4,
+      "skill": "review",
+      "title": "مراجعة الوحدة",
+      "est_minutes": 18,
+      "blocks": [
+        {
+          "type": "story",
+          "id": "A1-16-L4-s1",
+          "title_ar": "سلة الفاكهة",
+          "panels": [
+            {
+              "speaker": "Huda",
+              "text_en": "Mona, look at the fruit basket!",
+              "text_ar": "يا منى، انظري إلى سلة الفاكهة!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Do you like apples?",
+              "text_ar": "هل تحبين التفاح؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, I do. And bananas.",
+              "text_ar": "نعم. والموز."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Do you like oranges?",
+              "text_ar": "هل تحبين البرتقال؟"
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "No, I don't. They are sour.",
+              "text_ar": "لا. إنه حامض."
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "The watermelon is sweet.",
+              "text_ar": "البطيخ حلو."
+            },
+            {
+              "speaker": "Huda",
+              "text_en": "Yes, we like watermelon!",
+              "text_ar": "نعم، نحن نحب البطيخ!"
+            },
+            {
+              "speaker": "Mona",
+              "text_en": "Do we have dates?",
+              "text_ar": "هل عندنا تمر؟"
+            }
+          ]
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L4-e2-1",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «orange» mean?",
+            "options": [
+              "سعيد",
+              "برتقالة",
+              "موزة",
+              "تفاحة"
+            ],
+            "answer": 1,
+            "explanation_ar": "«orange» تعني «برتقالة». مثال: The orange is sweet."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L4-e2-2",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is sour.",
+            "answer": "lemon",
+            "explanation_ar": "الكلمة الناقصة «lemon» (ليمون)."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L4-e2-3",
+            "skill": "grammar",
+            "kind": "order_words",
+            "prompt": "رتب الكلمات: dates / Do / have / we",
+            "answer": [
+              "Do",
+              "we",
+              "have",
+              "dates"
+            ],
+            "explanation_ar": "الترتيب الصحيح: Do we have dates"
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L4-e2-4",
+            "skill": "listening",
+            "kind": "true_false",
+            "prompt": "Huda says: \"Yes, we like watermelon!\"",
+            "options": [
+              "True",
+              "False"
+            ],
+            "answer": 0,
+            "explanation_ar": "الذي قال «Yes, we like watermelon!» هو Huda."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L4-e2-5",
+            "skill": "vocab",
+            "kind": "mcq",
+            "prompt": "What does «dates» mean?",
+            "options": [
+              "ليمون",
+              "مانجو",
+              "تمر",
+              "فاكهة"
+            ],
+            "answer": 2,
+            "explanation_ar": "«dates» تعني «تمر». مثال: We eat dates in Ramadan."
+          }
+        },
+        {
+          "type": "exercise",
+          "exercise": {
+            "id": "A1-16-L4-e2-6",
+            "skill": "vocab",
+            "kind": "fill_blank",
+            "prompt": "The ___ is sweet.",
+            "answer": "watermelon",
+            "explanation_ar": "الكلمة الناقصة «watermelon» (بطيخ)."
+          }
+        },
+        {
+          "type": "game",
+          "id": "A1-16-L4-g3",
+          "game": "memory",
+          "title_ar": "تحدي السرعة"
+        }
+      ],
+      "speaking_task": {
+        "prompt_en": "Ask a friend 5 questions about fruit: Do you like ...? Then say what you like and don't like.",
+        "helpful_phrases": [
+          "Do you like ...?",
+          "Yes, I do.",
+          "No, I don't.",
+          "I like ..."
+        ],
+        "prep_seconds": 30,
+        "max_seconds": 60,
+        "rubric_focus": [
+          "task completed",
+          "correct grammar"
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "pass_percent": 70,
+    "questions": [
+      {
+        "id": "A1-16-q1",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «grapes» mean?",
+        "options": [
+          "ليمون",
+          "تمر",
+          "رمّان",
+          "عنب"
+        ],
+        "answer": 3,
+        "explanation_ar": "«grapes» تعني «عنب». مثال: I like grapes."
+      },
+      {
+        "id": "A1-16-q2",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Good morning! Do you have ___?",
+        "answer": "mango",
+        "explanation_ar": "الكلمة الناقصة «mango» (مانجو)."
+      },
+      {
+        "id": "A1-16-q3",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: is / sweet / The / orange",
+        "answer": [
+          "The",
+          "orange",
+          "is",
+          "sweet"
+        ],
+        "explanation_ar": "الترتيب الصحيح: The orange is sweet"
+      },
+      {
+        "id": "A1-16-q4",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «dates» mean?",
+        "options": [
+          "تفاحة",
+          "ليمون",
+          "عنب",
+          "تمر"
+        ],
+        "answer": 3,
+        "explanation_ar": "«dates» تعني «تمر». مثال: We eat dates in Ramadan."
+      },
+      {
+        "id": "A1-16-q5",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "The ___ is sweet.",
+        "answer": "orange",
+        "explanation_ar": "الكلمة الناقصة «orange» (برتقالة)."
+      },
+      {
+        "id": "A1-16-q6",
+        "skill": "listening",
+        "kind": "true_false",
+        "prompt": "Mona says: \"Do you like oranges?\"",
+        "options": [
+          "True",
+          "False"
+        ],
+        "answer": 0,
+        "explanation_ar": "الذي قال «Do you like oranges?» هو Mona."
+      },
+      {
+        "id": "A1-16-q7",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «banana» mean?",
+        "options": [
+          "موزة",
+          "برتقالة",
+          "تمر",
+          "بطيخ"
+        ],
+        "answer": 0,
+        "explanation_ar": "«banana» تعني «موزة». مثال: Do you like bananas?"
+      },
+      {
+        "id": "A1-16-q8",
+        "skill": "vocab",
+        "kind": "fill_blank",
+        "prompt": "Do you like ___? Yes, I do.",
+        "answer": "grapes",
+        "explanation_ar": "الكلمة الناقصة «grapes» (عنب)."
+      },
+      {
+        "id": "A1-16-q9",
+        "skill": "grammar",
+        "kind": "order_words",
+        "prompt": "رتب الكلمات: are / Pomegranates / red",
+        "answer": [
+          "Pomegranates",
+          "are",
+          "red"
+        ],
+        "explanation_ar": "الترتيب الصحيح: Pomegranates are red"
+      },
+      {
+        "id": "A1-16-q10",
+        "skill": "vocab",
+        "kind": "mcq",
+        "prompt": "What does «lemon» mean?",
+        "options": [
+          "تمر",
+          "برتقالة",
+          "ليمون",
+          "موزة"
+        ],
+        "answer": 2,
+        "explanation_ar": "«lemon» تعني «ليمون». مثال: The lemon is sour."
+      }
+    ]
+  },
+  "stop_ar": "محل الفواكه الطازجة",
+  "roleplay": {
+    "character_ar": "بائع الفواكه الطازجة",
+    "scenario_en": "You are a fruit seller in a Yemeni market. Ask the customer: Do you like ...? about different fruits (apple, banana, orange, grapes, mango, watermelon, pomegranate, dates, lemon). Use only very simple English.",
+    "opening_en": "Good morning! Fresh fruit! Do you like mango?"
+  },
+  "context_note": "فواكه نحبها"
+}
