@@ -13,7 +13,7 @@ export default async function StudentLayout({ children }: { children: React.Reac
       <ArtDefs />
       <Splash />
       <StudentNav learnHref={path ? `/student/${path.slug}` : "/paths"} />
-      <div className="flex min-w-0 flex-1 flex-col pb-[92px] md:pb-0">
+      <div className="flex min-w-0 flex-1 flex-col pb-[var(--bn)] md:pb-0">
         <OfflineBanner />
         {children}
       </div>

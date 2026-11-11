@@ -2,8 +2,46 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, Dumbbell, Home, Languages, User } from "lucide-react";
 import { cn } from "@/lib/utils";
+
+/** The tab icons of the flows library: a drop (today), a book, cards, a target, a person. */
+const icon = (paths: React.ReactNode) =>
+  function TabIcon({ className, strokeWidth = 2 }: { className?: string; strokeWidth?: number }) {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+        aria-hidden="true"
+      >
+        {paths}
+      </svg>
+    );
+  };
+const Home = icon(<path d="M12 3C12 3 5 12 5 15.5a7 7 0 0 0 14 0C19 12 12 3 12 3Z" />);
+const BookOpen = icon(<path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z" />);
+const Languages = icon(
+  <>
+    <rect x="4" y="6" width="12" height="15" rx="3" />
+    <path d="M8 3h9a3 3 0 0 1 3 3v12" />
+  </>,
+);
+const Dumbbell = icon(
+  <>
+    <circle cx="12" cy="12" r="8" />
+    <circle cx="12" cy="12" r="3.5" />
+  </>,
+);
+const User = icon(
+  <>
+    <circle cx="12" cy="8" r="4" />
+    <path d="M4 21c1.5-4.5 14.5-4.5 16 0" />
+  </>,
+);
 
 const TABS = [
   { href: "/student", label: "اليوم", icon: Home, match: (p: string) => p === "/student" },
@@ -26,7 +64,7 @@ export function StudentNav({ learnHref }: { learnHref: string }) {
     <>
       <nav
         aria-label="التنقل الرئيسي"
-        className="fixed inset-x-2.5 bottom-[max(10px,env(safe-area-inset-bottom))] z-20 flex h-[64px] justify-around rounded-3xl border border-border bg-card/85 shadow-[0_10px_30px_-12px_rgba(0,0,0,.35)] backdrop-blur-md md:hidden"
+        className="fixed inset-x-0 bottom-0 z-20 grid h-[var(--bn)] grid-cols-5 border-t border-border bg-card pb-[env(safe-area-inset-bottom)] md:hidden"
       >
         {tabs.map(({ href, label, icon: Icon, match }) => {
           const active = match(pathname);
@@ -36,17 +74,11 @@ export function StudentNav({ learnHref }: { learnHref: string }) {
               href={href}
               aria-current={active ? "page" : undefined}
               className={cn(
-                "relative flex min-h-12 min-w-[60px] flex-col items-center justify-center gap-0.5 text-[11px] font-semibold no-underline",
-                active
-                  ? "text-primary after:absolute after:bottom-1 after:size-1.5 after:rounded-full after:bg-current"
-                  : "text-muted-foreground hover:text-foreground",
+                "flex min-h-12 flex-col items-center justify-center gap-0.5 text-[10.5px] font-semibold no-underline",
+                active ? "text-primary" : "text-muted-foreground hover:text-foreground",
               )}
             >
-              <Icon
-                className={cn("size-6 transition-transform", active && "-translate-y-0.5 scale-110 motion-safe:animate-[tab-hop_.35s_ease-out]")}
-                strokeWidth={active ? 2.4 : 2}
-                aria-hidden="true"
-              />
+              <Icon className={cn("size-6", active && "motion-safe:animate-[tab-hop_.35s_ease-out]")} strokeWidth={active ? 2.4 : 2} />
               {label}
             </Link>
           );
@@ -69,7 +101,7 @@ export function StudentNav({ learnHref }: { learnHref: string }) {
                 active ? "bg-primary-tint font-semibold text-primary-hover" : "text-subtle hover:bg-background hover:text-foreground",
               )}
             >
-              <Icon className="size-5" aria-hidden="true" />
+              <Icon className="size-5" />
               {label}
             </Link>
           );
