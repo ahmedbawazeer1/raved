@@ -1,3 +1,4 @@
+import { APK_URL, useNewerBuild } from "@/lib/build-update";
 import { useEffect } from "react";
 import { Linking, View } from "react-native";
 import { Stack } from "expo-router";
@@ -41,6 +42,7 @@ export default function RootLayout() {
 function Gate() {
   const { loading } = useSession();
   const { update, config } = useAppConfig();
+  const newerBuild = useNewerBuild();
 
   useEffect(() => {
     if (!loading) SplashScreen.hideAsync();
@@ -63,6 +65,22 @@ function Gate() {
       {config.notice_ar ? (
         <View style={{ backgroundColor: colors.warningTint, paddingTop: 44, paddingBottom: 8, paddingHorizontal: 16 }}>
           <Text style={{ color: colors.warning, fontSize: 14 }}>{config.notice_ar}</Text>
+        </View>
+      ) : null}
+      {newerBuild ? (
+        <View
+          style={{
+            backgroundColor: colors.primaryTint,
+            paddingTop: config.notice_ar ? 8 : 44,
+            paddingBottom: 8,
+            paddingHorizontal: 16,
+            flexDirection: "row",
+            alignItems: "center",
+            gap: 12,
+          }}
+        >
+          <Text style={{ flex: 1, fontSize: 14, fontWeight: "700" }}>تحديث جديد لرفد متاح. يأخذ دقيقة، وتقدمك محفوظ.</Text>
+          <Button title="حدّث الآن" onPress={() => Linking.openURL(APK_URL)} />
         </View>
       ) : null}
       <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: colors.bg } }} />
