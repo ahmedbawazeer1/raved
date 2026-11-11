@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useMemo, useRef, useSyncExternalStore } from "react";
+import { useEffect, useId, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { safeId } from "@shared/art/paint";
@@ -25,22 +25,39 @@ function readSeen(): Record<string, number> {
  * locked = stone), the student's avatar on a golden leaf boat, and Rafed on the bank. When a new unit
  * opens since the last visit, the boat sails to it.
  */
-export function RiverMap({ units, pathSlug, levelCode, stage = 3 }: { units: UnitView[]; pathSlug: string; levelCode: string; stage?: RafedStage }) {
+export function RiverMap({
+  units,
+  pathSlug,
+  levelCode,
+  stage = 3,
+  variant = "card",
+}: {
+  units: UnitView[];
+  pathSlug: string;
+  levelCode: string;
+  stage?: RafedStage;
+  /** "card": a titled section (the learn page). "stage": fills its parent and scrolls to today's unit («اليوم»). */
+  variant?: "card" | "stage";
+}) {
   const prefs = useSyncExternalStore(prefsStore.subscribe, prefsStore.getSnapshot, prefsStore.getServerSnapshot);
   const world = worldFor(levelCode);
   const id = "m" + safeId(useId());
   const key = units.map((u) => `${u.position}:${u.state}`).join();
+  // Stage: the screen's height in map units, so a short river stretches to fill it.
+  const [minH, setMinH] = useState(0);
   const { markup, layout } = useMemo(
     () =>
       riverMarkup({
         world,
         id,
         avatar: prefs.avatar,
+        minHeight: minH,
         nodes: key.split(",").map((k) => ({ state: k.split(":")[1] as NodeState, label: `الوحدة ${k.split(":")[0]}` })),
       }),
-    [world, key, prefs.avatar, id],
+    [world, key, prefs.avatar, id, minH],
   );
   const svg = useRef<SVGSVGElement>(null);
+  const scroller = useRef<HTMLDivElement>(null);
   const nowIndex = units.findIndex((u) => u.state === "now");
 
   useEffect(() => {
@@ -108,6 +125,61 @@ export function RiverMap({ units, pathSlug, levelCode, stage = 3 }: { units: Uni
     };
   }, [markup, layout, nowIndex, pathSlug, levelCode]);
 
+  useEffect(() => {
+    const sc = scroller.current;
+    if (variant !== "stage" || !sc) return;
+    const measure = () => setMinH(Math.round((sc.clientHeight / Math.min(sc.clientWidth, 520)) * 360));
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(sc);
+    return () => ro.disconnect();
+  }, [variant]);
+
+  // Stage: open on today's unit, a little below the middle of the screen (the cards float on top).
+  useEffect(() => {
+    const sc = scroller.current;
+    const el = svg.current;
+    if (variant !== "stage" || !sc || !el) return;
+    const k = el.clientWidth / layout.width;
+    const y = (layout.points[Math.max(0, nowIndex)]?.y ?? 0) * k;
+    sc.scrollTop = Math.max(0, y - sc.clientHeight * 0.58);
+  }, [variant, layout, nowIndex]);
+
+  const links = units.map((u, i) => {
+    const { x, y } = layout.points[i];
+    const label = `الوحدة ${u.position}: ${u.title}${u.state === "done" ? " · مكتملة" : u.state === "now" ? " · دورك الآن" : u.state === "locked" ? " · مقفلة" : ""}`;
+    const style = { left: `${(x / layout.width) * 100}%`, top: `${(y / layout.height) * 100}%` };
+    const cls = "absolute size-[20%] -translate-x-1/2 -translate-y-1/2 rounded-full";
+    return u.state === "locked" ? (
+      <span key={u.id} role="img" aria-label={label} className={cls} style={style} />
+    ) : (
+      <Link key={u.id} href={`/student/${pathSlug}/unit/${u.id}`} aria-label={label} className={`${cls} focus-visible:outline-accent`} style={style} />
+    );
+  });
+
+  if (variant === "stage")
+    return (
+      <div
+        ref={scroller}
+        role="region"
+        aria-label={`خريطة ${world.name}`}
+        className="absolute inset-0 overflow-y-auto overscroll-contain"
+        style={{ background: world.sky }}
+      >
+        <div className="relative mx-auto max-w-[520px]">
+          <svg
+            ref={svg}
+            viewBox={`0 0 ${layout.width} ${layout.height}`}
+            className="block h-auto w-full"
+            aria-hidden="true"
+            // Fixed internal markup (validated avatar config, no free text).
+            dangerouslySetInnerHTML={{ __html: markup }}
+          />
+          {links}
+        </div>
+      </div>
+    );
+
   return (
     <section aria-label={`خريطة ${world.name}`} className="flex flex-col gap-2">
       <div className="flex items-center justify-between rounded-2xl rounded-es-md px-4 py-2 text-white shadow-sm" style={{ background: world.band }}>
@@ -130,17 +202,7 @@ export function RiverMap({ units, pathSlug, levelCode, stage = 3 }: { units: Uni
           // Fixed internal markup (validated avatar config, no free text).
           dangerouslySetInnerHTML={{ __html: markup }}
         />
-        {units.map((u, i) => {
-          const { x, y } = layout.points[i];
-          const label = `الوحدة ${u.position}: ${u.title}${u.state === "done" ? " · مكتملة" : u.state === "now" ? " · دورك الآن" : u.state === "locked" ? " · مقفلة" : ""}`;
-          const style = { left: `${(x / layout.width) * 100}%`, top: `${(y / layout.height) * 100}%` };
-          const cls = "absolute size-[20%] -translate-x-1/2 -translate-y-1/2 rounded-full";
-          return u.state === "locked" ? (
-            <span key={u.id} role="img" aria-label={label} className={cls} style={style} />
-          ) : (
-            <Link key={u.id} href={`/student/${pathSlug}/unit/${u.id}`} aria-label={label} className={`${cls} focus-visible:outline-accent`} style={style} />
-          );
-        })}
+        {links}
         <div className="pointer-events-none absolute bottom-3 start-2">
           <Rafed stage={stage} size={70} />
         </div>

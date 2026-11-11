@@ -115,10 +115,15 @@ const W = 360,
   STEP = 124,
   BOTTOM = 150;
 
-export function riverLayout(count: number): RiverLayout {
+/** `minHeight`: a screen taller than the map (few units): the river stretches so it always fills it. */
+export function riverLayout(count: number, minHeight = 0): RiverLayout {
   const n = Math.max(1, count);
-  const points = Array.from({ length: n }, (_, i) => ({ x: Math.round(180 + 78 * Math.sin(i * 1.05 + 0.4)), y: TOP + i * STEP }));
-  const height = TOP + (n - 1) * STEP + BOTTOM;
+  const natural = TOP + (n - 1) * STEP + BOTTOM;
+  const height = Math.max(natural, Math.round(minHeight));
+  // Spread the pads over the extra height (a lone pad sits in the middle).
+  const step = n > 1 ? Math.min(STEP * 2, STEP + (height - natural) / (n - 1)) : STEP;
+  const top = n > 1 ? TOP + Math.max(0, height - (TOP + (n - 1) * step + BOTTOM)) / 2 : Math.max(TOP, height * 0.45);
+  const points = Array.from({ length: n }, (_, i) => ({ x: Math.round(180 + 78 * Math.sin(i * 1.05 + 0.4)), y: Math.round(top + i * step) }));
   // A smooth curve through the spring, every pad and the dam (Catmull-Rom → cubic Bézier).
   const all = [{ x: 180, y: 20 }, ...points, { x: 180, y: height - 40 }];
   let d = `M${all[0].x} ${all[0].y}`;
@@ -151,11 +156,13 @@ export interface RiverOptions {
   id?: string;
   /** Text labels under the pads. */
   labels?: boolean;
+  /** Stretch the river to at least this height (in map units, width 360). */
+  minHeight?: number;
 }
 
 /** The full map markup for viewBox `0 0 360 ${layout.height}`. */
-export function riverMarkup({ world, nodes, avatar, id = "rv", labels = true }: RiverOptions): { markup: string; layout: RiverLayout } {
-  const L = riverLayout(nodes.length),
+export function riverMarkup({ world, nodes, avatar, id = "rv", labels = true, minHeight = 0 }: RiverOptions): { markup: string; layout: RiverLayout } {
+  const L = riverLayout(nodes.length, minHeight),
     P = paint(id),
     r = rand(nodes.length * 7 + world.id.length);
   const sceneryFor = (y: number, x: number, k: number) => {

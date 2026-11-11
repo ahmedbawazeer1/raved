@@ -405,3 +405,13 @@
     transform: translateX(-50%);
   }
 }
+
+/* Height of the student's bottom tab bar (phones), including the home-indicator area. */
+:root {
+  --bn: calc(66px + env(safe-area-inset-bottom));
+}
+@media (min-width: 768px) {
+  :root {
+    --bn: 0px;
+  }
+}
