@@ -92,16 +92,17 @@ export function TodayStage({
   useEffect(() => {
     const el = root.current;
     if (!el || calmMotion()) return;
-    const q = (s: string) => el.querySelectorAll(s);
-    const t = gsap
-      .timeline()
-      .from(q(".ts-hud"), { y: -30, opacity: 0, duration: 0.4 })
-      .from(q(".ts-green"), { y: -60, opacity: 0, duration: 0.5, ease: "back.out(1.5)" }, 0.25)
-      .from(q(".ts-water"), { y: -80, opacity: 0, duration: 0.5, ease: "back.out(1.6)" }, 0.5)
-      .from(q(".ts-more"), { scale: 0, duration: 0.4, ease: "back.out(2.5)" }, 0.8);
-    return () => {
-      t.kill();
-    };
+    // A context reverts the inline styles on cleanup, so a re-run (React strict mode) never freezes the cards hidden.
+    const ctx = gsap.context(() => {
+      const q = (s: string) => el.querySelectorAll(s);
+      gsap
+        .timeline()
+        .from(q(".ts-hud"), { y: -30, opacity: 0, duration: 0.4 })
+        .from(q(".ts-green"), { y: -60, opacity: 0, duration: 0.5, ease: "back.out(1.5)" }, 0.25)
+        .from(q(".ts-water"), { y: -80, opacity: 0, duration: 0.5, ease: "back.out(1.6)" }, 0.5)
+        .from(q(".ts-more"), { scale: 0, duration: 0.4, ease: "back.out(2.5)" }, 0.8);
+    }, el);
+    return () => ctx.revert();
   }, []);
 
   useEffect(() => {
@@ -112,11 +113,11 @@ export function TodayStage({
   }, [open]);
 
   return (
-    <div ref={root} className="flex h-[calc(100dvh-var(--bn))] flex-col md:h-dvh">
+    <div ref={root} className="flex h-[calc(100dvh-var(--bn))] flex-col md:h-dvh md:bg-(--sky)" style={{ "--sky": world.sky } as React.CSSProperties}>
       <h1 className="sr-only">اليوم</h1>
       <nav
         aria-label="إنجازاتك"
-        className="ts-hud mx-auto flex w-full max-w-[520px] flex-none items-center justify-between gap-2 bg-background px-4 pt-[max(8px,env(safe-area-inset-top))] pb-2 md:pt-3"
+        className="ts-hud mx-auto flex w-full max-w-[520px] flex-none items-center justify-between gap-2 bg-background px-4 pt-[max(8px,env(safe-area-inset-top))] pb-2 md:bg-transparent md:pt-3"
       >
         <Link href="/student/progress#badges" className={chip} aria-label={`${drops} قطرة`}>
           <Drop />
@@ -132,7 +133,7 @@ export function TodayStage({
         </Link>
       </nav>
 
-      <div className="relative min-h-0 flex-1 md:mx-auto md:mb-4 md:w-full md:max-w-[520px] md:overflow-hidden md:rounded-3xl md:border-2 md:border-border">
+      <div className="relative min-h-0 flex-1">
         <RiverMap units={units} pathSlug={pathSlug} levelCode={levelCode} stage={stage} variant="stage" />
 
         {/* Today's unit */}
