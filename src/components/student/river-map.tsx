@@ -45,6 +45,8 @@ export function RiverMap({
   const key = units.map((u) => `${u.position}:${u.state}`).join();
   // Stage: the screen's height in map units, so a short river stretches to fill it.
   const [minH, setMinH] = useState(0);
+  // Stage: a little meadow above the spring when today's unit is near the top, so it clears the floating cards.
+  const [pad, setPad] = useState(0);
   const { markup, layout } = useMemo(
     () =>
       riverMarkup({
@@ -142,8 +144,12 @@ export function RiverMap({
     if (variant !== "stage" || !sc || !el) return;
     const k = el.clientWidth / layout.width;
     const y = (layout.points[Math.max(0, nowIndex)]?.y ?? 0) * k;
-    sc.scrollTop = Math.max(0, y - sc.clientHeight * 0.58);
-  }, [variant, layout, nowIndex]);
+    const want = sc.clientHeight * 0.58;
+    // Never let today's unit hide under the floating cards (about 250px from the top).
+    const room = Math.max(0, Math.round(250 - y));
+    setPad(room);
+    sc.scrollTop = Math.max(0, y + room - want);
+  }, [variant, layout, nowIndex, minH]);
 
   const links = units.map((u, i) => {
     const { x, y } = layout.points[i];
@@ -166,16 +172,19 @@ export function RiverMap({
         className="absolute inset-0 overflow-y-auto overscroll-contain"
         style={{ background: world.sky }}
       >
-        <div className="relative mx-auto max-w-[520px]">
-          <svg
-            ref={svg}
-            viewBox={`0 0 ${layout.width} ${layout.height}`}
-            className="block h-auto w-full"
-            aria-hidden="true"
-            // Fixed internal markup (validated avatar config, no free text).
-            dangerouslySetInnerHTML={{ __html: markup }}
-          />
-          {links}
+        <div className="mx-auto max-w-[520px] md:[mask-image:linear-gradient(to_right,transparent,#000_14%,#000_86%,transparent)] md:[-webkit-mask-image:linear-gradient(to_right,transparent,#000_14%,#000_86%,transparent)]">
+          <div style={{ height: pad }} aria-hidden="true" />
+          <div className="relative">
+            <svg
+              ref={svg}
+              viewBox={`0 0 ${layout.width} ${layout.height}`}
+              className="block h-auto w-full"
+              aria-hidden="true"
+              // Fixed internal markup (validated avatar config, no free text).
+              dangerouslySetInnerHTML={{ __html: markup }}
+            />
+            {links}
+          </div>
         </div>
       </div>
     );
