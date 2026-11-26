@@ -1,5 +1,6 @@
 import Ajv2020, { type ErrorObject } from "ajv/dist/2020";
 import schema from "../../../content/schema/unit.schema.json";
+import { isNativeVideoUrl } from "@shared/content/videos";
 import type { PackageQuestion, UnitPackage } from "./types";
 
 /** Package size limit without video (docs/OFFLINE.md). */
@@ -121,6 +122,7 @@ export function validateUnitPackage(input: unknown, opts: { fileName?: string } 
         case "video":
           if (!block.youtube_id || !YOUTUBE_ID.test(block.youtube_id)) add("error", `${bp}.youtube_id`, "معرّف فيديو يوتيوب غير صالح (11 حرفاً).");
           else if (PLACEHOLDER_ID.test(block.youtube_id) || block.needs_check) add("warning", bp, "فيديو يحتاج تحققاً قبل النشر (needs_check).");
+          if (block.video_url !== undefined && !isNativeVideoUrl(block.video_url)) add("error", `${bp}.video_url`, "رابط الفيديو غير مسموح (يجب أن يكون ملف mp4 على موقع VOA الرسمي عبر https).");
           if (!block.approx_size_mb) add("warning", `${bp}.approx_size_mb`, "أضف حجم الفيديو التقريبي ليعرفه الطالب.");
           (block.checkpoints ?? []).forEach((c, ci) => {
             const cp = `${bp}.checkpoints[${ci}]`;

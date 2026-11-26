@@ -18,6 +18,12 @@ export interface TextBlock {
 export interface VideoBlock {
   type: "video";
   youtube_id?: string;
+  /**
+   * A video file played by our own player (no YouTube): VOA Learning English lessons (public domain).
+   * Then `youtube_id` is a stable key of 11 characters made from the source, e.g. "voa_5781390", so the
+   * watch tracking and the database work unchanged. Only hosts in shared/content/videos.ts are allowed.
+   */
+  video_url?: string;
   video_title?: string;
   channel?: string;
   channel_url?: string;

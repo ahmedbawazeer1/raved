@@ -26,10 +26,11 @@ export interface VideoStatus {
  * a page on our website (src/app/embed/youtube) so YouTube sees a normal https page with a real origin;
  * an inline page inside the app can get "Sign in to confirm you're not a bot".
  */
-function playerUrl(id: string, start: number, end: number | undefined): string {
-  const q = new URLSearchParams({ v: id, start: String(start) });
+function playerUrl(block: VideoBlock, id: string, start: number, end: number | undefined): string {
+  // A video file (VOA Learning English) plays in our own page; everything else is YouTube's player.
+  const q = new URLSearchParams(block.video_url ? { u: block.video_url, start: String(start) } : { v: id, start: String(start) });
   if (end) q.set("end", String(end));
-  return `${WEB_URL}/embed/youtube?${q.toString()}`;
+  return `${WEB_URL}/embed/${block.video_url ? "video" : "youtube"}?${q.toString()}`;
 }
 
 /** A normal mobile Chrome user agent: Android's WebView adds "; wv", which YouTube treats with suspicion. */
@@ -127,7 +128,7 @@ export function LessonVideo({
       <View style={{ aspectRatio: 16 / 9, borderRadius: radius.lg, overflow: "hidden", backgroundColor: "#000" }}>
         <YouTubeView
           ref={web}
-          source={{ uri: playerUrl(id, start, block.end_sec) }}
+          source={{ uri: playerUrl(block, id, start, block.end_sec) }}
           userAgent={CHROME_UA}
           onMessage={onMessage}
           thirdPartyCookiesEnabled
