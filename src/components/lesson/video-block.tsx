@@ -11,6 +11,7 @@ import { VIDEO_DONE } from "@/lib/gamification/events";
 import { addSecond, parseRanges, videoDone, watchedPercent, watchedSeconds, type WatchRanges } from "@/lib/gamification/watch";
 import { canSeek, checkpointsFor, dueCheckpoint, formatTime, frontierOf, rangesGradient, rewindTarget, type Checkpoint } from "@/lib/lesson/player";
 import { fx } from "@/lib/fx";
+import { nativePlayerApi } from "@/lib/lesson/native-player";
 import { speak } from "@/lib/tts";
 import type { GameWord } from "@/lib/games/logic";
 import type { VideoBlock as VideoBlockData } from "@/lib/content/types";
@@ -151,12 +152,15 @@ export function VideoBlock({
       }
     };
 
-    loadYouTubeApi().then((YT) => {
+    // A video file (VOA) plays in our own element behind the same interface; everything else is YouTube.
+    const api: Promise<YtNamespace> = block.video_url ? Promise.resolve(nativePlayerApi() as unknown as YtNamespace) : loadYouTubeApi();
+    api.then((YT) => {
       if (cancelled || !holder.current) return;
       const target = document.createElement("div");
       holder.current.appendChild(target);
       player = new YT.Player(target, {
         videoId: id,
+        videoUrl: block.video_url,
         host: "https://www.youtube-nocookie.com",
         width: "100%",
         height: "100%",
@@ -214,7 +218,7 @@ export function VideoBlock({
       player?.destroy();
       playerRef.current = null;
     };
-  }, [open, id, key, part, block.start_sec, block.end_sec, tracking, duration, checkpoints, offset]);
+  }, [open, id, key, part, block.start_sec, block.end_sec, block.video_url, tracking, duration, checkpoints, offset]);
 
   const flash = (msg: string) => {
     setToast(msg);
@@ -293,14 +297,14 @@ export function VideoBlock({
               <Play className="size-5" aria-hidden="true" />
             </span>
             <span className="flex-1 text-sm">
-              <span className="block font-semibold">فيديو إضافي من يوتيوب</span>
+              <span className="block font-semibold">{block.video_url ? "فيديو إضافي" : "فيديو إضافي من يوتيوب"}</span>
               {meta && <span className="block text-xs text-muted-foreground">{meta}</span>}
             </span>
             <Badge tone="muted">اختياري</Badge>
           </button>
         ) : (
           <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
-            <div ref={holder} className="absolute inset-0 [&_iframe]:size-full" title={block.video_title ?? "فيديو"} />
+            <div ref={holder} className="absolute inset-0 [&_iframe]:size-full [&_video]:size-full" title={block.video_title ?? "فيديو"} />
           </div>
         )}
       </div>
@@ -356,12 +360,12 @@ export function VideoBlock({
             <Play className="size-5 fill-current" aria-hidden="true" />
             {done ? "شاهد مرة أخرى" : percent > 0 ? `أكمل المشاهدة (${percent}%)` : "شاهد الفيديو"}
           </button>
-          <p className="text-[11px] text-primary-tint">لا يُحمَّل الفيديو إلا بعد الضغط · المصدر: {block.channel ?? "يوتيوب"}</p>
+          <p className="text-[11px] text-primary-tint">لا يُحمَّل الفيديو إلا بعد الضغط · المصدر: {block.channel ?? (block.video_url ? "VOA" : "يوتيوب")}</p>
         </div>
       ) : (
         <div ref={stage} className="flex flex-col gap-2 overflow-hidden rounded-3xl bg-black p-1.5 [&:fullscreen]:justify-center">
           <div className="relative aspect-video overflow-hidden rounded-2xl bg-black">
-            <div ref={holder} className="absolute inset-0 [&_iframe]:size-full" title={block.video_title ?? "فيديو الدرس"} />
+            <div ref={holder} className="absolute inset-0 [&_iframe]:size-full [&_video]:size-full" title={block.video_title ?? "فيديو الدرس"} />
             {toast && (
               <p role="status" className="absolute inset-x-0 top-2 mx-auto w-max max-w-[90%] rounded-full bg-foreground/90 px-3 py-1 text-xs text-white">
                 {toast}

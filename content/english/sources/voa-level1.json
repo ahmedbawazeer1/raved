@@ -1,0 +1,508 @@
+{
+ "source": "VOA Learning English — Let's Learn English, Level 1",
+ "channel": "VOA Learning English",
+ "license": "Public domain (Voice of America, US government work); third-party material inside a lesson is not covered",
+ "note": "key = value of youtube_id in a lesson video block; video_url = the file our own player plays",
+ "lessons": [
+  {
+   "lesson": 1,
+   "key": "voa_5781394",
+   "title": "Welcome!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-1-welcome-/5781394.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/5/5f/5f00c78a-0f84-41e6-949d-bd808bcadf50_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/5/5f/5f00c78a-0f84-41e6-949d-bd808bcadf50_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 26.9
+  },
+  {
+   "lesson": 2,
+   "key": "voa_5781390",
+   "title": "Hello, I'm Anna!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-2-hello-i-m-anna-/5781390.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/4/42/4298a2ba-d665-4b1c-aaa1-502bbcb9b88d_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/4/42/4298a2ba-d665-4b1c-aaa1-502bbcb9b88d_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 30.6
+  },
+  {
+   "lesson": 3,
+   "key": "voa_5781387",
+   "title": "I'm Here!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-3-i-m-here-/5781387.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0d/0d8a07f4-87eb-469e-8e2b-3f641f360aae_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0d/0d8a07f4-87eb-469e-8e2b-3f641f360aae_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 30.7
+  },
+  {
+   "lesson": 4,
+   "key": "voa_5781382",
+   "title": "What Is It?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-4-what-is-it-/5781382.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/a9/a9ab6a3b-b774-4449-9876-07654a31f3c4_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/a9/a9ab6a3b-b774-4449-9876-07654a31f3c4_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 36.8
+  },
+  {
+   "lesson": 5,
+   "key": "voa_5781380",
+   "title": "Where Are You?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-5-where-are-you-/5781380.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0c/0cd0aa06-3ab2-4083-bb81-d53d0754aea2_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0c/0cd0aa06-3ab2-4083-bb81-d53d0754aea2_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 31.8
+  },
+  {
+   "lesson": 6,
+   "key": "voa_5781378",
+   "title": "Where Is the Gym?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-6-where-is-the-gym-/5781378.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/11/11171870-8eee-4a24-bef4-41af1b6898a0_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/11/11171870-8eee-4a24-bef4-41af1b6898a0_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 31.2
+  },
+  {
+   "lesson": 7,
+   "key": "voa_5781372",
+   "title": "What Are You Doing?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-7-what-are-you-doing-/5781372.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/69/690103ea-ce31-4425-97c1-65af2fff6ffd_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/69/690103ea-ce31-4425-97c1-65af2fff6ffd_240p.mp4",
+   "duration_sec": 299,
+   "size_mb_480p": 32.3
+  },
+  {
+   "lesson": 8,
+   "key": "voa_5781370",
+   "title": "Are You Busy?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-8-are-you-busy-/5781370.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/d/da/daba2df2-95ca-4c88-923f-0b967553558a_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/d/da/daba2df2-95ca-4c88-923f-0b967553558a_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 31.3
+  },
+  {
+   "lesson": 9,
+   "key": "voa_5781346",
+   "title": "Is It Cold?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-9-is-it-cold-/5781346.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/a1/a134ed92-a3e1-4e8e-abed-0c5ac229acba_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/a1/a134ed92-a3e1-4e8e-abed-0c5ac229acba_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 35.5
+  },
+  {
+   "lesson": 10,
+   "key": "voa_5781340",
+   "title": "Come Over to My Place",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-10-come-over-to-my-place/5781340.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b3/b34664a8-fabc-4541-8be9-438f0d466626_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b3/b34664a8-fabc-4541-8be9-438f0d466626_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 33.4
+  },
+  {
+   "lesson": 11,
+   "key": "voa_5781342",
+   "title": "This Is My Neighborhood",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-11-this-is-my-neighborhood/5781342.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/12/1249bcfa-481d-498d-a387-a577c59adba9_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/12/1249bcfa-481d-498d-a387-a577c59adba9_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 50.2
+  },
+  {
+   "lesson": 12,
+   "key": "voa_5780976",
+   "title": "Meet My Family",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-12-meet-my-family/5780976.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b7/b7fedcc7-4bb0-4cf7-b596-ccd2a5e03041_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b7/b7fedcc7-4bb0-4cf7-b596-ccd2a5e03041_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 36.6
+  },
+  {
+   "lesson": 13,
+   "key": "voa_5780971",
+   "title": "Happy Birthday, William Shakespeare!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-13-happy-birthday-shakespeare-/5780971.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/7/73/73103ed5-8133-4a1a-9219-cfef86973f25_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/7/73/73103ed5-8133-4a1a-9219-cfef86973f25_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 45.8
+  },
+  {
+   "lesson": 14,
+   "key": "voa_5780974",
+   "title": "How About This?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-14-how-about-this-/5780974.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/3/3d/3d8d63a8-2984-4469-9737-d34b0d519506_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/3/3d/3d8d63a8-2984-4469-9737-d34b0d519506_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 39.3
+  },
+  {
+   "lesson": 15,
+   "key": "voa_5780968",
+   "title": "I Love People Watching!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-15-i-love-people-watching-/5780968.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b0/b07eac5a-cc3a-4f3e-821c-ecae337b5415_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b0/b07eac5a-cc3a-4f3e-821c-ecae337b5415_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 45.6
+  },
+  {
+   "lesson": 16,
+   "key": "voa_5780964",
+   "title": "Where Are You From?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-16-where-are-you-from-/5780964.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/d/dd/ddc153c2-e1b2-4d09-b8ba-67172e1f88fe_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/d/dd/ddc153c2-e1b2-4d09-b8ba-67172e1f88fe_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 45.4
+  },
+  {
+   "lesson": 17,
+   "key": "voa_5780966",
+   "title": "Are You Free on Friday?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-17-are-you-free-on-friday-/5780966.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/f/fb/fbb85647-eaa9-4ca4-801e-c4c085593d89_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/f/fb/fbb85647-eaa9-4ca4-801e-c4c085593d89_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 35.0
+  },
+  {
+   "lesson": 18,
+   "key": "voa_5780959",
+   "title": "She Always Does That",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-18-she-always-does-that/5780959.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/aa/aa81937e-fc02-4d62-9f34-e8b432538615_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/aa/aa81937e-fc02-4d62-9f34-e8b432538615_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 32.7
+  },
+  {
+   "lesson": 19,
+   "key": "voa_5780960",
+   "title": "When Do I Start?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-19-when-do-i-start-/5780960.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/8/87/87817c7f-1ceb-47ae-9e56-c90081179223_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/8/87/87817c7f-1ceb-47ae-9e56-c90081179223_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 33.7
+  },
+  {
+   "lesson": 20,
+   "key": "voa_5780954",
+   "title": "What Can You Do?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-20-what-can-you-do-/5780954.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/7/71/718a1e4c-2092-458b-a29c-0780d2daaf0f_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/7/71/718a1e4c-2092-458b-a29c-0780d2daaf0f_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 39.2
+  },
+  {
+   "lesson": 21,
+   "key": "voa_5789593",
+   "title": "Can You Come to the Party?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-21-can-you-come-to-the-party-/5789593.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/3/38/38946ff6-eee8-4acc-a3fc-759121fd6313_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/3/38/38946ff6-eee8-4acc-a3fc-759121fd6313_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 29.8
+  },
+  {
+   "lesson": 22,
+   "key": "voa_5780945",
+   "title": "Next Summer…",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-22-next-summer-/5780945.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/6f/6f09d624-a8a7-4ce8-a972-1a7bfed06679_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/6f/6f09d624-a8a7-4ce8-a972-1a7bfed06679_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 38.3
+  },
+  {
+   "lesson": 23,
+   "key": "voa_5780946",
+   "title": "What Do You Want?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-23-what-do-you-want-/5780946.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/e/e7/e7759765-b3e3-4624-a927-0cc2326eb311_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/e/e7/e7759765-b3e3-4624-a927-0cc2326eb311_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 52.3
+  },
+  {
+   "lesson": 24,
+   "key": "voa_5780940",
+   "title": "Yesterday Was Amazing!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-24-yesterday-was-amazing-/5780940.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/2/24/240be8a1-701d-4fd2-b6f0-5fa9dda5d188_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/2/24/240be8a1-701d-4fd2-b6f0-5fa9dda5d188_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 43.0
+  },
+  {
+   "lesson": 25,
+   "key": "voa_5780939",
+   "title": "Watch Out!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-25-watch-out-/5780939.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/3/35/35095de1-0ff5-48bf-815c-5dab66a55a2f_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/3/35/35095de1-0ff5-48bf-815c-5dab66a55a2f_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 40.1
+  },
+  {
+   "lesson": 26,
+   "key": "voa_5780937",
+   "title": "This Game Is Fun!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-26-this-game-is-fun-/5780937.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b9/b9ddf673-07ec-4557-b33d-37cf6315e3e3_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b9/b9ddf673-07ec-4557-b33d-37cf6315e3e3_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 39.6
+  },
+  {
+   "lesson": 27,
+   "key": "voa_5780932",
+   "title": "I Can't Come In",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-27-i-can-t-come-in/5780932.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/00/0025af70-3442-45fb-8417-f12d5592761a_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/00/0025af70-3442-45fb-8417-f12d5592761a_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 34.5
+  },
+  {
+   "lesson": 28,
+   "key": "voa_5780930",
+   "title": "I Passed It!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-28-i-passed-it-/5780930.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/d/d2/d2a1c2bf-0655-4eab-b4dc-60e15cd64ed9_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/d/d2/d2a1c2bf-0655-4eab-b4dc-60e15cd64ed9_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 38.3
+  },
+  {
+   "lesson": 29,
+   "key": "voa_5780928",
+   "title": "A Long Time Ago…",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-29-a-long-time-ago-/5780928.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/4/44/4448c192-ea38-4ddd-a68b-dc1adf515180_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/4/44/4448c192-ea38-4ddd-a68b-dc1adf515180_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 48.2
+  },
+  {
+   "lesson": 30,
+   "key": "voa_5780927",
+   "title": "Rolling on the River",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-30-how-much-is-it-/5780927.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/c/cc/cc4d97ac-b23a-4c71-a915-205f1bac86fc_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/c/cc/cc4d97ac-b23a-4c71-a915-205f1bac86fc_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 50.5
+  },
+  {
+   "lesson": 31,
+   "key": "voa_5780923",
+   "title": "Take Me Out to the Ball Game!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-31-take-me-out-to-the-ball-game-/5780923.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/2/2f/2f34a0bc-9aad-45d3-b918-748706bad539_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/2/2f/2f34a0bc-9aad-45d3-b918-748706bad539_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 48.9
+  },
+  {
+   "lesson": 32,
+   "key": "voa_5780922",
+   "title": "Welcome to the Treehouse!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-32-welcome-to-the-treehouse-/5780922.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/8/8e/8e1a9678-e224-4d51-b9ac-fa05d9991d16_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/8/8e/8e1a9678-e224-4d51-b9ac-fa05d9991d16_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 35.6
+  },
+  {
+   "lesson": 33,
+   "key": "voa_5780920",
+   "title": "America's Sport",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-33-america-s-sport/5780920.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0c/0c930ce2-1638-4d5d-a528-a4390e235a16_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0c/0c930ce2-1638-4d5d-a528-a4390e235a16_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 35.2
+  },
+  {
+   "lesson": 35,
+   "key": "voa_5780912",
+   "title": "Let's Make Dinner!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-35-let-s-make-dinner-/5780912.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/9/96/961080a9-4397-411e-a79f-dfa874e4c5ca_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/9/96/961080a9-4397-411e-a79f-dfa874e4c5ca_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 37.2
+  },
+  {
+   "lesson": 36,
+   "key": "voa_5780911",
+   "title": "I Can Fix This!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-36-i-can-fix-this-/5780911.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/6f/6f867a3f-a8f1-4a89-b18c-892f85e60d35_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/6f/6f867a3f-a8f1-4a89-b18c-892f85e60d35_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 32.7
+  },
+  {
+   "lesson": 37,
+   "key": "voa_5780902",
+   "title": "Let's Agree to Disagree!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-37-let-s-agree-to-disagree-/5780902.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/4/46/4619beb2-18dd-45cb-a55a-42989d3beeec_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/4/46/4619beb2-18dd-45cb-a55a-42989d3beeec_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 53.8
+  },
+  {
+   "lesson": 38,
+   "key": "voa_5780900",
+   "title": "She's My Best Friend!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-38-she-s-my-best-friend-/5780900.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/1d/1d74e0d6-82c0-4782-bebd-e5bbd65a8057_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/1d/1d74e0d6-82c0-4782-bebd-e5bbd65a8057_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 39.5
+  },
+  {
+   "lesson": 39,
+   "key": "voa_5780898",
+   "title": "It's Unbelieveable!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-39-it-s-unbelieveable-/5780898.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/08/088b68c0-58b8-46dc-9796-d6c542e3d44e_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/08/088b68c0-58b8-46dc-9796-d6c542e3d44e_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 40.5
+  },
+  {
+   "lesson": 40,
+   "key": "voa_5780896",
+   "title": "The Woods Are Alive",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-40-the-woods-are-alive/5780896.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/ac/ac4d5f85-718e-433f-a4e6-989e842db20a_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/ac/ac4d5f85-718e-433f-a4e6-989e842db20a_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 25.4
+  },
+  {
+   "lesson": 41,
+   "key": "voa_5780890",
+   "title": "Teamwork Works Best With a Team",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-41-teamwork-works-best-with-a-team/5780890.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/bb/bb252e9e-dc85-4281-9e24-133f65290c88_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/bb/bb252e9e-dc85-4281-9e24-133f65290c88_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 34.2
+  },
+  {
+   "lesson": 42,
+   "key": "voa_5780888",
+   "title": "I Was Minding My Own Business",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-42-i-was-minding-my-own-business/5780888.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/e/e7/e7e1cf42-37e1-440d-b1fa-de80ec67283d_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/e/e7/e7e1cf42-37e1-440d-b1fa-de80ec67283d_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 41.7
+  },
+  {
+   "lesson": 43,
+   "key": "voa_5780884",
+   "title": "Time for Plan B",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-43-time-for-plan-b/5780884.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/9/9b/9b044a43-6f81-4c9d-9724-f48a5e1a6da7_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/9/9b/9b044a43-6f81-4c9d-9724-f48a5e1a6da7_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 46.6
+  },
+  {
+   "lesson": 44,
+   "key": "voa_5780880",
+   "title": "Making Healthy Choices",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-44-making-healthy-choices/5780880.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/1b/1b5c7537-8259-49ea-870c-abec2a1b94d1_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/1/1b/1b5c7537-8259-49ea-870c-abec2a1b94d1_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 45.8
+  },
+  {
+   "lesson": 45,
+   "key": "voa_5780877",
+   "title": "This Land is Your Land",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-45-this-land-is-your-land/5780877.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/64/646ddd6d-a051-4cd9-b694-21a0f69a073a_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/64/646ddd6d-a051-4cd9-b694-21a0f69a073a_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 44.6
+  },
+  {
+   "lesson": 47,
+   "key": "voa_5780867",
+   "title": "How Can I Help?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-47-how-can-i-help-/5780867.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/5/5c/5cb0595a-5299-4b58-bdcc-b8541b468cf3_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/5/5c/5cb0595a-5299-4b58-bdcc-b8541b468cf3_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 35.9
+  },
+  {
+   "lesson": 48,
+   "key": "voa_5780864",
+   "title": "Have You Ever?",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-48-have-you-ever-/5780864.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0a/0a211e31-97d1-4192-b60d-4de9a153000e_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/0/0a/0a211e31-97d1-4192-b60d-4de9a153000e_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 54.9
+  },
+  {
+   "lesson": 49,
+   "key": "voa_5780859",
+   "title": "Operation Spy!",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-49-operation-spy-/5780859.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/a4/a49eae09-d90d-4d8e-a62c-0a718b8f32be_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/a/a4/a49eae09-d90d-4d8e-a62c-0a718b8f32be_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 30.3
+  },
+  {
+   "lesson": 50,
+   "key": "voa_5780856",
+   "title": "Back to School",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-50-back-to-school/5780856.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b7/b76551c9-f6b7-4a36-b8b8-013060087617_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/b/b7/b76551c9-f6b7-4a36-b8b8-013060087617_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 36.0
+  },
+  {
+   "lesson": 51,
+   "key": "voa_5780853",
+   "title": "A Good Habit",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-51-a-good-habit/5780853.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/8/89/89e2abe4-1e50-4a83-b771-b3623fffb590_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/8/89/89e2abe4-1e50-4a83-b771-b3623fffb590_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 48.9
+  },
+  {
+   "lesson": 52,
+   "key": "voa_5780794",
+   "title": "Taking Chances",
+   "page": "https://learningenglish.voanews.com/a/let-s-learn-english---level-1---lesson-52-taking-chances/5780794.html",
+   "video_url": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/6d/6dfd5f69-746e-45bd-86b1-1dba49c23a48_480p.mp4",
+   "video_url_240p": "https://voa-video.voanews.eu/pangeavideo/2021/02/6/6d/6dfd5f69-746e-45bd-86b1-1dba49c23a48_240p.mp4",
+   "duration_sec": 300,
+   "size_mb_480p": 33.8
+  }
+ ]
+}

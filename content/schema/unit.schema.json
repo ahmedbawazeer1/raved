@@ -243,6 +243,11 @@
           "type": "string",
           "pattern": "^[A-Za-z0-9_-]{11}$"
         },
+        "video_url": {
+          "type": "string",
+          "pattern": "^https://voa-video\\.voanews\\.eu/.+\\.mp4$",
+          "description": "a video file played by our own player (VOA Learning English, public domain); youtube_id is then a stable key such as voa_5781390"
+        },
         "video_title": {
           "type": "string"
         },
