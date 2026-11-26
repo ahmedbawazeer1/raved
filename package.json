@@ -14,6 +14,7 @@
     "content:check": "tsx scripts/content-check.ts",
     "curriculum:build": "tsx scripts/curriculum/build.ts",
     "curriculum:import": "tsx scripts/curriculum/import.ts",
+    "curriculum:catalog": "tsx scripts/curriculum/catalog.ts",
     "test:e2e": "playwright test",
     "placement:seed": "tsx scripts/placement-seed.ts"
   },
